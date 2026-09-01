@@ -615,3 +615,332 @@ This fixture checks that an implementation correctly handles:
 
 No brute-force verifier, solver, branch routine, or other implementation output was used
 to construct or validate the expected fixture values.
+
+---
+
+## ORACLE-003 — Direct H2 endpoint with compact multiplicity
+
+**Classification:** `BRANCH_ORACLE`
+
+**Source obligations:** `prop:endpoints`, `alg:global`
+
+### Purpose
+
+This oracle fixes the expected result of the direct H2 endpoint mechanism.
+
+H2 is not solved through the four transformed branch solvers. The global algorithm
+checks it directly by finding a vertex \(v\) satisfying
+
+\[
+f(v)=1
+\]
+
+and
+
+\[
+d_q(v)\ge2.
+\]
+
+For such a singleton shore, the H2 endpoint uses selected boundary total
+
+\[
+x=2
+\]
+
+and has exact mathematical value
+
+\[
+2.
+\]
+
+This fixture is deliberately compact: the two selected copies lie on one support edge
+whose multiplicity is \(2\).
+
+### Instance
+
+Let
+
+\[
+V=\{0,1\}.
+\]
+
+There is one support edge in canonical order,
+
+\[
+e_0=\{0,1\},
+\]
+
+with compact multiplicity
+
+\[
+q_0=2.
+\]
+
+Thus
+
+\[
+q=(2).
+\]
+
+Let
+
+\[
+f=(1,2).
+\]
+
+The multiplicity-weighted degrees are
+
+\[
+d_q(0)=d_q(1)=2.
+\]
+
+Therefore the active hypothesis holds componentwise:
+
+\[
+f(0)=1\le2=d_q(0)
+\]
+
+and
+
+\[
+f(1)=2\le2=d_q(1).
+\]
+
+The total multiplicity is
+
+\[
+Q=2.
+\]
+
+### Identification of the H2 shore
+
+Vertex \(0\) satisfies
+
+\[
+f(0)=1
+\]
+
+and
+
+\[
+d_q(0)=2.
+\]
+
+Therefore the singleton shore
+
+\[
+U=\{0\}
+\]
+
+satisfies the H2 condition.
+
+Vertex \(1\) is not an H2 vertex because
+
+\[
+f(1)=2.
+\]
+
+Thus the H2 vertex is unique in this fixture.
+
+For
+
+\[
+U=\{0\},
+\]
+
+the unique support edge crosses the shore.
+
+Because its multiplicity is \(2\),
+
+\[
+b_q(U)=2.
+\]
+
+In the endpoint notation,
+
+\[
+s=f(U)=1,
+\qquad
+b=b_q(U)=2.
+\]
+
+Hence the H2 side conditions
+
+\[
+s=1,
+\qquad
+b\ge2
+\]
+
+hold.
+
+### H2 endpoint reconstruction
+
+The H2 selected boundary total is
+
+\[
+x=2.
+\]
+
+Since the only crossing support edge has
+
+\[
+q_0=2,
+\]
+
+the two incident copies are represented compactly by
+
+\[
+y_0=2.
+\]
+
+Thus the dense compact vector is
+
+\[
+y=(2).
+\]
+
+Its sparse exported representation is
+
+\[
+[[0,2]].
+\]
+
+The selected boundary total is
+
+\[
+Y(y)=2.
+\]
+
+This reconstruction exercises the H2 case in which two selected copies lie on a single
+support edge with multiplicity at least \(2\).
+
+### Admissibility
+
+We have
+
+\[
+f(U)+Y(y)=1+2=3.
+\]
+
+This total is odd and at least \(3\).
+
+Therefore
+
+\[
+(U,y)
+\]
+
+is an admissible compact pair.
+
+### Exact H2 value
+
+Because \(U\) is a singleton,
+
+\[
+e_q(U)=0.
+\]
+
+The raw numerator is
+
+\[
+N=2(e_q(U)+Y(y))
+  =2(0+2)
+  =4.
+\]
+
+The raw denominator is
+
+\[
+D=f(U)+Y(y)-1
+  =1+2-1
+  =2.
+\]
+
+Therefore the raw exact value is
+
+\[
+(N,D)=(4,2).
+\]
+
+Its mathematical ratio is
+
+\[
+\frac ND=\frac42=2.
+\]
+
+This agrees with the H2 endpoint identity
+
+\[
+R_{H2}(U)=2.
+\]
+
+The raw pair is intentionally not gcd-reduced.
+
+### Machine-facing branch fixture
+
+- shore: `[0]`
+- dense_y: `(2,)`
+- sparse_y: `[[0, 2]]`
+- raw_value: `(4, 2)`
+- mathematical_ratio: `2`
+- endpoint: `H2`
+
+### Compact-multiplicity significance
+
+The support graph contains only one support edge.
+
+The value
+
+\[
+q_0=2
+\]
+
+does not represent one indivisible weighted edge. It represents two individually
+selectable copies encoded by one compact multiplicity.
+
+Therefore selecting two copies is represented by
+
+\[
+y_0=2.
+\]
+
+An implementation that incorrectly treats the support edge as one indivisible object
+would be unable to reconstruct this H2 witness correctly.
+
+### Scope of the oracle claim
+
+This is a `BRANCH_ORACLE`.
+
+It establishes the exact H2 endpoint witness and value for the specified shore.
+
+It does not use or require a proof that \(2\) is the global optimum of the complete
+ExactFrac instance.
+
+Any later global-optimum claim must be established independently by the appropriate
+global oracle or verifier.
+
+### What this oracle protects
+
+This oracle checks that an implementation correctly handles:
+
+1. the direct H2 endpoint condition \(f(v)=1\) and \(d_q(v)\ge2\);
+2. the distinction between the H2 direct scan and the four transformed branch solvers;
+3. compact multiplicity greater than one on a single support edge;
+4. selection of two individually selectable copies from one compact multiplicity;
+5. canonical implicit `edge_ref`;
+6. dense internal \(y=(2)\);
+7. sparse exported \(y=[[0,2]]\);
+8. boundary-only support of the compact count vector;
+9. exact parity and lower-bound admissibility;
+10. the exact H2 identity \(R_{H2}=2\);
+11. raw unreduced exact value `(4, 2)`;
+12. preservation of `BRANCH_ORACLE` scope rather than silently promoting the fixture to
+    a global-optimum claim.
+
+### Oracle status
+
+**Hand-derived before implementation.**
+
+No brute-force verifier, solver, global algorithm, or other implementation output was
+used to establish the expected H2 witness or value.
