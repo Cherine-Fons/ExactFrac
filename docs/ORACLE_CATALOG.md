@@ -944,3 +944,306 @@ This oracle checks that an implementation correctly handles:
 
 No brute-force verifier, solver, global algorithm, or other implementation output was
 used to establish the expected H2 witness or value.
+
+---
+
+## ORACLE-004 — Two distinct global maximizers
+
+**Classification:** `GLOBAL_ORACLE`
+
+**Primary obligation:** independent global-tie fixture for brute-verifier B9
+
+### Purpose
+
+This oracle establishes a complete compact instance with more than one distinct global
+maximizing witness.
+
+It protects the distinction between:
+
+- the exact global optimum value;
+- one deterministic witness returned by an implementation;
+- the set of all mathematically valid maximizing witnesses.
+
+Witness identity is not part of the mathematical optimum contract when multiple
+maximizers exist.
+
+### Instance
+
+Let
+
+\[
+V=\{0,1\}.
+\]
+
+There is one support edge in canonical order,
+
+\[
+e_0=\{0,1\},
+\]
+
+with compact multiplicity
+
+\[
+q_0=2.
+\]
+
+Thus
+
+\[
+q=(2).
+\]
+
+Let
+
+\[
+f=(1,1).
+\]
+
+The multiplicity-weighted degrees are
+
+\[
+d_q(0)=d_q(1)=2.
+\]
+
+Therefore the active hypothesis holds:
+
+\[
+f(0)=1\le2=d_q(0)
+\]
+
+and
+
+\[
+f(1)=1\le2=d_q(1).
+\]
+
+The total multiplicity is
+
+\[
+Q=2>1.
+\]
+
+### Exhaustion of all nonempty shores
+
+There are exactly three nonempty shores:
+
+\[
+\{0\},
+\qquad
+\{1\},
+\qquad
+\{0,1\}.
+\]
+
+#### Shore \(U=\{0\}\)
+
+The unique support edge crosses the shore.
+
+Therefore
+
+\[
+y_0\in\{0,1,2\}.
+\]
+
+Since
+
+\[
+f(U)=1,
+\]
+
+the admissibility total is
+
+\[
+f(U)+Y(y)=1+y_0.
+\]
+
+For \(y_0=0\),
+
+\[
+f(U)+Y(y)=1,
+\]
+
+which is odd but below \(3\).
+
+For \(y_0=1\),
+
+\[
+f(U)+Y(y)=2,
+\]
+
+which is even and below \(3\).
+
+For \(y_0=2\),
+
+\[
+f(U)+Y(y)=3,
+\]
+
+which is odd and at least \(3\).
+
+Thus the unique admissible compact selection for this shore is
+
+\[
+y=(2).
+\]
+
+Because the shore is a singleton,
+
+\[
+e_q(U)=0.
+\]
+
+Hence the raw witness-attaining value is
+
+\[
+N=2(e_q(U)+Y(y))
+ =2(0+2)
+ =4,
+\]
+
+and
+
+\[
+D=f(U)+Y(y)-1
+ =1+2-1
+ =2.
+\]
+
+Therefore
+
+\[
+(N,D)=(4,2)
+\]
+
+and the mathematical ratio is
+
+\[
+\frac{4}{2}=2.
+\]
+
+#### Shore \(U=\{1\}\)
+
+This case is symmetric.
+
+Again the unique admissible boundary selection is
+
+\[
+y=(2),
+\]
+
+with raw value
+
+\[
+(N,D)=(4,2)
+\]
+
+and mathematical ratio
+
+\[
+2.
+\]
+
+#### Shore \(U=\{0,1\}\)
+
+The support edge is internal, so the boundary is empty.
+
+Therefore necessarily
+
+\[
+Y(y)=0.
+\]
+
+Also,
+
+\[
+f(U)=1+1=2.
+\]
+
+Hence
+
+\[
+f(U)+Y(y)=2.
+\]
+
+This is even and below \(3\).
+
+Therefore no admissible compact pair uses the whole-vertex shore.
+
+### Global conclusion
+
+Every nonempty shore and every possible compact boundary count has been exhausted.
+
+The admissible family consists exactly of the two witnesses
+
+\[
+(\{0\},(2))
+\]
+
+and
+
+\[
+(\{1\},(2)).
+\]
+
+Both attain mathematical value
+
+\[
+2.
+\]
+
+Therefore the exact global optimum is
+
+\[
+\boxed{2}.
+\]
+
+Both witnesses have the raw witness-attaining value
+
+\[
+(4,2).
+\]
+
+Thus the global optimum has at least two distinct maximizing witnesses.
+
+### Machine-facing expected result
+
+Global mathematical value:
+
+- ratio: `2`
+
+Maximizing witness A:
+
+- shore: `[0]`
+- dense_y: `(2,)`
+- raw_value: `(4, 2)`
+
+Maximizing witness B:
+
+- shore: `[1]`
+- dense_y: `(2,)`
+- raw_value: `(4, 2)`
+
+The mathematical contract does not prefer either witness.
+
+A deterministic brute implementation using increasing shore-mask order may return
+witness A first, but that is an implementation convention rather than a uniqueness claim.
+
+### What this oracle protects
+
+This oracle checks:
+
+1. complete exhaustion of all nonempty shores;
+2. compact multiplicity \(q_0=2\) as two individually selectable copies;
+3. exact parity and lower-bound admissibility;
+4. exact raw witness-value formulas;
+5. exact global value \(2\);
+6. existence of at least two distinct global maximizing witnesses;
+7. the rule that correct global value does not imply unique witness identity;
+8. deterministic implementation choice must not be mistaken for mathematical preference.
+
+### Oracle status
+
+**Hand-derived before the B9 test that consumes it.**
+
+No brute-verifier output, solver output, or other implementation result was used to
+establish the expected global value or the existence of the two maximizing witnesses.
