@@ -1,22 +1,24 @@
-# ExactFrac Pre-Registered Test Plan
+# ExactFrac Prospectively Specified Test Plan
 
-Status: PRE-IMPLEMENTATION ENGINEERING TEST SPECIFICATION
+Status: LIVING PROSPECTIVE ENGINEERING TEST SPECIFICATION
 
-This document records implementation, regression, adversarial, and isolation tests
-before the corresponding code is written.
+This living document records implementation, regression, adversarial, and isolation
+tests. Each obligation is added before the corresponding implementation unit is written;
+historical sections remain as evidence after their code lands.
 
 It is not a mathematical authority.
 
-Mathematical authority remains with the frozen V2.1 source pinned by `SPEC_LOCK.md` and
-the mathematical requirements summarized by `CONTRACT.md`.
+Mathematical authority remains with the current frozen source pinned by `SPEC_LOCK.md`
+and the mathematical requirements summarized by `CONTRACT.md`.
 
 `ORACLE_CATALOG.md` contains independently hand-derived expected answers.
 
 `CONFORMANCE.md` maps theorem obligations to the tests that actually discharge them as
 those tests land.
 
-This test plan serves a different purpose: it pre-registers what correct implementation
-behavior must be challenged before implementation choices can influence the tests.
+This test plan serves a different purpose: it prospectively specifies what correct
+implementation behavior must be challenged before implementation choices can influence
+the tests.
 
 ---
 
@@ -844,17 +846,242 @@ begin.
 
 ---
 
-## 15. Pre-registration status
+## 15. Prospective-specification history
 
-This test plan was written after the three seed mathematical oracles and before
-implementation of the independent brute verifier.
+The original version of this test plan was committed as `e88861b` after the three seed
+mathematical oracles and before implementation of the independent brute verifier.
 
-At the time of this version:
+At that historical version:
 
-- no ExactFrac verifier implementation exists;
-- no ExactFrac solver implementation exists;
-- no branch oracle implementation exists;
-- no production certificate verifier exists.
+- no ExactFrac verifier implementation existed;
+- no ExactFrac solver implementation existed;
+- no branch oracle implementation existed;
+- no production certificate verifier existed.
 
-Therefore the behavioral expectations above were fixed before the corresponding code was
+Those verifier expectations were therefore fixed before the corresponding code was
 available to influence them.
+
+The independent brute verifier subsequently landed in commit `ffcb0cf`.
+
+The Stage-2A obligations below are added by the V2.2 repository-authority activation unit
+before any flow-specific oracle, `tests/test_flow.py`, or `exactfrac/flow.py` exists.
+
+At the time of this V2.2 revision:
+
+- the independent brute verifier exists and is green;
+- no flow-specific oracle has been committed;
+- no flow test file exists;
+- no flow implementation exists;
+- no sign-routing, atomic-family, parity-cut, branch, or global solver implementation
+  exists.
+
+Thus Sections 16 and 17 are prospectively specified for the exact directed minimum-cut
+primitive. Expected numerical answers and deterministic traces must still be hand-derived
+and committed before the tests that consume them.
+
+---
+
+## 16. Stage-2A prospective exact-flow test family
+
+These obligations apply to the required in-repo Edmonds–Karp backend in
+`exactfrac/flow.py` and its tests in `tests/test_flow.py`.
+
+Before any flow test body is written, the numerical fixtures and expected answers must be
+derived independently and committed to `ORACLE_CATALOG.md`. They are local primitive
+fixtures, not `GLOBAL_ORACLE` claims about a complete ExactFrac optimization instance.
+
+### FL1 — exact directed-network input domain
+
+The tested backend accepts a finite directed network with distinct in-range source and
+sink vertices and exact nonnegative integer arc capacities.
+
+Expected:
+
+- `E = 0` is valid;
+- negative capacities are rejected;
+- floating-point, `Fraction`, Boolean, and other non-`int` capacity objects are rejected;
+- endpoint indices outside the vertex universe are rejected;
+- the backend does not invent a reverse-capacity arc merely because a forward arc exists.
+
+The exact loop and repeated-directed-pair normalization boundary must be ruled and recorded
+before the RED tests are written. No flow implementation may precede that ruling.
+
+### FL2 — zero-arc totalization
+
+For `N >= 2`, distinct source and sink, and `E = 0`, expected:
+
+- construction and solve succeed;
+- exact minimum value `0`;
+- returned source shore is exactly `{s}`;
+- the source shore is the inclusionwise-minimal minimum source shore;
+- `augmentations == 0`;
+- `bfs_scans == 0`;
+- no empty-set maximum is evaluated;
+- the zero-safe convention gives `u_max = 0` and `l = 0`.
+
+The operation carrier is `O(N)`, which is the `E = 0` specialization of
+`O(N + NE^2)`.
+
+### FL3 — positive-arc known-answer network
+
+At least one hand-derived network with `E >= 1` must fix:
+
+- exact maximum-flow/minimum-cut value;
+- exact returned inclusionwise-minimal source shore;
+- a deterministic shortest-augmenting-path trace under the fixed adjacency order;
+- exact `augmentations` and `bfs_scans` values for that fixture.
+
+The returned cut capacity, recomputed from the original directed arcs, must equal the
+reported value.
+
+### FL4 — positive arc set with all capacities zero
+
+Use `E >= 1` with every arc capacity equal to zero.
+
+Expected:
+
+- exact value `0`;
+- returned source shore `{s}`;
+- zero augmentations;
+- deterministic search counters;
+- the case is not silently treated as `E = 0`, because arcs are present even though no
+  positive residual capacity exists.
+
+### FL5 — positive arcs but no residual source-to-sink path
+
+Use a positive-capacity network in which vertices other than `s` are residual-reachable
+from the source but `t` is not.
+
+Expected:
+
+- exact flow value `0`;
+- returned source shore is the complete residual-reachable set, not automatically `{s}`;
+- the cut capacity of that shore is zero;
+- the result is deterministic.
+
+### FL6 — inclusionwise-minimal minimum source shore
+
+Use a fixture with multiple distinct minimum source shores.
+
+Independently enumerate all source-containing, sink-avoiding shores and prove the complete
+minimum-cut family.
+
+Expected:
+
+- exact minimum value;
+- returned source shore is minimum;
+- returned source shore is contained in every other minimum source shore;
+- the backend does not return an arbitrary larger minimum shore.
+
+### FL7 — directed-cut semantics
+
+A directed cut counts an arc exactly when its tail lies in the source shore and its head
+lies outside.
+
+Tests must distinguish an arc `(u,v)` from `(v,u)` and fail any implementation that
+silently treats the network as undirected.
+
+### FL8 — reverse-residual cancellation
+
+Include a deterministic positive-capacity fixture whose correct maximum flow requires the
+residual reverse arcs created by earlier augmentations.
+
+Expected:
+
+- the final exact value matches independent cut enumeration;
+- residual reverse capacity is usable;
+- no original reverse-capacity arc is fabricated;
+- the deterministic trace reaches the correct maximum rather than getting trapped by an
+  earlier augmenting-path choice.
+
+### FL9 — independent tiny-network cut enumeration
+
+For every tiny flow fixture, independently enumerate every shore `S` satisfying
+`s in S` and `t not in S` and compute
+
+`sum(u_a for arc a=(u,v) with u in S and v not in S)`.
+
+Expected:
+
+- backend value equals the exact enumerated minimum;
+- backend source shore belongs to the enumerated minimizing family;
+- backend source shore is the inclusionwise-minimal member of that family.
+
+The comparator must not call the flow implementation or reuse its residual graph.
+
+### FL10 — deterministic counters and result
+
+For a fixed canonical network and fixed backend:
+
+- repeated runs return identical value;
+- repeated runs return identical source shore;
+- repeated runs return identical `augmentations`;
+- repeated runs return identical `bfs_scans`;
+- no wall-clock value participates in deterministic equality.
+
+Counter meanings are the DESIGN R9 definitions:
+
+- `augmentations` counts successful residual `s`--`t` path augmentations;
+- `bfs_scans` counts residual-adjacency entries inspected by all breadth-first searches,
+  including the final no-path/reachability search.
+
+### FL11 — exact arithmetic and zero-safe generated-number bound
+
+No flow correctness decision may use floating point, tolerance, or `Fraction`.
+
+For arc set `A`, define
+
+`u_max = max({0} union {u_a : a in A})`
+
+and
+
+`l = ceil(log2(u_max + 1))`.
+
+The tests independently check, including at `E = 0`,
+
+`1 + sum(u_a) <= (E + 1)(u_max + 1) <= (E + 1)2^l`.
+
+Every instrumented generated flow value or residual capacity `z` must satisfy
+
+`log2(1 + z) <= l + ceil(log2(E + 1))`.
+
+No public backend result is required to expose mutable residual-network objects merely to
+perform this test.
+
+### FL12 — support-controlled magnitude regression
+
+Use the hand-proved one-arc family containing only `s -> t` with capacity `2^b` while the
+network support remains fixed.
+
+Expected for every tested `b`:
+
+- exact minimum value `2^b`;
+- source shore `{s}`;
+- exactly one augmentation;
+- identical structural search counters under the fixed implementation path;
+- integer bit lengths grow with `b`.
+
+This flat counter trace is claimed only for this family-specific invariant path. It is a
+regression test against unit-by-unit capacity expansion, not a finite proof of strong
+polynomiality and not a claim that all support-controlled families have identical traces.
+
+---
+
+## 17. Stage-2A completion gate — Edmonds–Karp backend
+
+Before `exactfrac/flow.py` counts as complete:
+
+1. the flow input/normalization boundary is ruled before implementation;
+2. every required flow fixture is independently derived and committed before its test;
+3. `tests/test_flow.py` is written and observed RED before `exactfrac/flow.py` exists;
+4. every applicable FL1–FL12 test is implemented and green;
+5. the backend returns exact value and the required source shore through the R9 interface;
+6. the zero-arc result and uniform `O(N + NE^2)` carrier are represented faithfully;
+7. the implementation uses only exact integer arithmetic and standard-library code;
+8. deterministic counter semantics are tested;
+9. the `lem:ek` CONFORMANCE row is promoted from `planned` to `green` only in the atomic
+   code/test/conformance unit;
+10. the full repository test suite and Ruff checks pass.
+
+No sign-routing, atomic-family, parity-cut, branch, or global-solver claim is earned merely
+because the ordinary directed minimum-cut backend is green.

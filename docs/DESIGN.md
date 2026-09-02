@@ -81,6 +81,24 @@ R9  Max-flow sits behind an interface returning `MinCutResult(value, source_shor
     minimal minimum source shore when the parity reduction needs it (`thm:GR` uses
     inclusionwise minimal lattice minimizers); augmentation and search counters; no
     backend objects leak upward. First and required backend: the in-repo Edmonds–Karp.
+
+    V2.2 zero-arc totalization: `E = 0` is a valid ordinary-cut instance, not malformed
+    input. The backend returns exact value `0` and the inclusionwise-minimal minimum source
+    shore `{s}`, with zero augmentations and zero residual-adjacency scans. The uniform
+    arithmetic/comparison-operation carrier is `O(N + NE^2)`; for `E >= 1`, the
+    Edmonds–Karp augmenting-path work remains `O(NE^2)`, and residual source-shore
+    recovery costs `O(N + E)`.
+
+    Reference-counter semantics: `augmentations` counts successful residual `s`--`t`
+    path augmentations. `bfs_scans` counts directed residual-adjacency entries inspected
+    across all breadth-first searches, including the final no-augmenting-path/reachability
+    search. Vertex-record initialization is charged to the `O(N)` carrier and is not an
+    arc scan.
+
+    Zero-safe number-size carrier: for arc set `A`, define
+    `u_max = max({0} union {u_a : a in A})` and
+    `l = ceil(log2(u_max + 1))`. Every generated flow value or residual capacity `z`
+    satisfies `log2(1 + z) <= l + ceil(log2(E + 1))`.
 R10 Determinism: no algorithmic path iterates over a Python `set`; all enumeration
     orders are fixed and documented; generators take explicit seeds.
 R11 Every commit is one unit; every unit has its test before its code is considered done.
