@@ -360,6 +360,102 @@ Expected:
 - both construct the same canonical support-edge list;
 - the same implicit `edge_ref` values result.
 
+### I10 — production exception taxonomy and validation precedence
+
+For the production graph-instance layer, malformed input and unsupported active-regime
+input are different states.
+
+Expected:
+
+- `InvalidInstance` and `UnsupportedInstance` are distinct sibling subclasses of
+  `ValueError`;
+- malformed type, shape, format, endpoint, loop, order, multiplicity, `f`, label, and
+  empty-support conditions raise exactly `InvalidInstance`;
+- only a structurally valid instance with some `f[v] > d_q[v]` raises exactly
+  `UnsupportedInstance`;
+- malformed validation precedes the active check, so malformed input is never relabeled
+  unsupported;
+- a structurally valid graph with an isolated vertex and positive `f` is an
+  `UnsupportedInstance` seed;
+- the sealed flow layer's local `TypeError`/`ValueError` boundary is unchanged.
+
+Tests that distinguish these cases must check the exact exception class (for example,
+`type(exc.value) is InvalidInstance`), not merely `pytest.raises(ValueError)`.
+
+### I11 — exact Python domain and compact multiplicity model
+
+For `Instance(...)` and `Instance.from_records(...)`, exercise exact-type and shape
+boundaries before normalization or the active check.
+
+Expected:
+
+- numeric instance data has exact built-in type `int`; reject `bool`, integer subclasses,
+  floats, `Fraction`, and implicit coercion;
+- Python edge/record containers, edge/raw records, and `f` are exact tuples;
+- every edge record has exactly three entries `(u, v, q_e)`;
+- reject a fourth edge-weight field and every real/rational or other non-integer `q_e`;
+- `q_e <= 0` is invalid;
+- `f(v) <= 0` is invalid;
+- compact multiplicity remains a count of individually selectable unit copies and is never
+  expanded into explicit copies.
+
+### I12 — canonical constructor versus raw normalization
+
+Provide one hand-derived mathematical instance in canonical form and in several reversed,
+repeated, and permuted raw-record forms.
+
+Expected:
+
+- `Instance(...)` accepts only the canonical edge_ref-ordered form and rejects reversed,
+  repeated, or out-of-order edge triples rather than repairing them;
+- `Instance.from_records(...)` validates raw records, rejects loops, normalizes endpoint
+  orientation, aggregates repeated unordered pairs by exact addition, and sorts the
+  resulting support edges lexicographically;
+- all equivalent raw orders produce the same canonical `Instance` and edge_ref sequence;
+- the hand-derived `m`, `support_edges`, `q`, `Q`, and `d_q` values are exact;
+- no independently mutable derived graph state exists.
+
+### I13 — strict versioned instance-object round trip
+
+Expected:
+
+- `to_dict()` emits the `exactfrac-instance/1` object described in DESIGN §9;
+- edges, `f`, and optional labels are JSON-ready lists while the canonical Python object
+  remains immutable;
+- `Instance.from_dict(instance.to_dict()) == instance`;
+- `from_dict` validates canonical edge order and rejects rather than repairs reversed,
+  repeated, or out-of-order serialized edges;
+- unknown keys, missing keys, a wrong format value, a wrong outer type, or wrong serialized
+  container types raise exactly `InvalidInstance`;
+- JSON text/file I/O is outside this unit.
+
+### I14 — labels are nonalgorithmic metadata
+
+Construct otherwise identical instances with labels absent and present.
+
+Expected:
+
+- labels are absent or an exact tuple of pairwise distinct exact `str` or exact `int`
+  values aligned to dense vertex order;
+- reject `bool`, duplicates, wrong length, and all other label types;
+- labels survive the object-level dictionary round trip;
+- labels do not change `edges`, `q`, `f`, `Q`, `d_q`, or any edge_ref;
+- raw edge endpoints remain dense integer indices;
+- no graph-representation behavior depends on label values.
+
+### I15 — production module surface, immutability, and isolation
+
+Expected:
+
+- `exactfrac.instance.__all__` is exactly `Edge`, `Instance`, `InvalidInstance`, and
+  `UnsupportedInstance`;
+- `exactfrac.__init__` remains export-free in this unit;
+- `Instance` is frozen and slotted;
+- its authoritative fields are `n`, `edges`, `f`, and optional `labels`;
+- production instance code imports nothing from `exactfrac_verify`;
+- no shore, family, witness, arithmetic, argmin, sign-routing, parity-cut, branch, or global
+  solver API is introduced by this unit.
+
 ---
 
 ## 5. Shore-representation test family
@@ -1085,3 +1181,32 @@ Before `exactfrac/flow.py` counts as complete:
 
 No sign-routing, atomic-family, parity-cut, branch, or global-solver claim is earned merely
 because the ordinary directed minimum-cut backend is green.
+
+## 18. Post-Stage-2A production graph-instance completion gate
+
+This unit consumes the still-unimplemented instance obligations I1--I9 and the supplemental
+production obligations I10--I15 above. It does not consume or modify the historical
+shore-representation obligations S1--S6.
+
+Before `tests/test_instance.py` exists:
+
+1. hand-derived production-instance fixtures are added to `docs/ORACLE_CATALOG.md`;
+2. those fixtures cover canonical construction, raw aggregation/orientation/order,
+   malformed-versus-unsupported separation, exact derived values, serialization, labels,
+   and deterministic edge_ref identity;
+3. no `exactfrac/instance.py` implementation output is used to establish any expected
+   fixture value.
+
+Then, in order:
+
+4. `tests/test_instance.py` is written against those fixtures and this TEST_PLAN;
+5. the intended RED state is observed while `exactfrac.instance` does not yet exist;
+6. only then is `exactfrac/instance.py` implemented;
+7. I1--I15, targeted tests, the full suite, Ruff with cache disabled, and an independent
+   normalization/isolation audit are green;
+8. the completed implementation unit adds the appropriate `def:instance` and
+   `lem:aggregation` CONFORMANCE evidence; no CONFORMANCE promotion occurs before GREEN;
+9. the instance code, its tests, and its CONFORMANCE update land as one atomic
+   implementation commit after the earlier oracle-only commit.
+
+The graph-instance unit does not implement shore helpers or any downstream solver layer.

@@ -170,6 +170,71 @@ R13 Toolchain: minimum Python 3.11; pyproject.toml declares requires-python = ">
          the instance is usable, and canonical edge order is validated before any
          certificate edge_ref is resolved.
 
+4.1A Production graph-instance API and error boundary  (RULED — adopted 2026-09-03)
+    1. Unit ownership and public surface. `exactfrac.instance` owns only canonical compact-
+       instance construction, raw-record normalization, strict canonical object
+       deserialization, derived graph data, and the active check. Its module-level `__all__`
+       is exactly `Edge`, `Instance`, `InvalidInstance`, and `UnsupportedInstance`; `Edge` is
+       the alias `tuple[int, int, int]`. `exactfrac.__init__` remains export-free in this
+       unit, and production code imports nothing from `exactfrac_verify`. Shore
+       representation and shore helpers remain the separate §4.2 unit and are not
+       implemented here.
+    2. Canonical object. `Instance` is frozen and slotted. Its authoritative stored fields
+       are `n`, `edges`, `f`, and optional `labels`. `edges` is an immutable tuple of
+       canonical `(u, v, q_e)` triples in edge_ref order. Read-only derived properties expose
+       `m`, `support_edges`, `q`, `Q`, and `d_q`; there is no separately mutable support-edge
+       list, multiplicity vector, total multiplicity, or degree vector. Optional `labels` is
+       the canonical index-to-label metadata tuple; no second authoritative reverse map is
+       stored. Derived data is computed from the authoritative fields and cannot diverge.
+    3. Exact Python domain and excluded weight models. Every numeric instance datum (`n`,
+       endpoints, multiplicities, and `f` values) has exact built-in type `int`; `bool`,
+       integer subclasses, floats, `Fraction`, and implicit `int(...)` coercion are rejected.
+       Each edge datum is exactly `(u, v, q_e)`. There is no edge-weight field and no real-
+       or rational-weight input mode: `q_e` is a positive integer count of individually
+       selectable unit copies, not an indivisible edge weight. The Python constructors
+       require exact tuples for the edge/record container, every edge/raw record, and `f`.
+       Optional `labels` is `None` or an exact tuple of length `n`; each label has exact
+       built-in type `str` or exact built-in type `int`, `bool` is rejected, and labels are
+       pairwise distinct. Labels are I/O metadata aligned to dense index order and are never
+       algorithmic.
+    4. Constructor boundary. `Instance(n, edges, f, labels=None)` is canonical-only: it
+       validates RI1--RI7 and rejects reversed, repeated, or out-of-order edge triples rather
+       than repairing them. `Instance.from_records(n, records, f, labels=None)` is the sole
+       raw normalization entry point: it validates every raw record, rejects loops and
+       nonpositive multiplicities, orients endpoints with `u < v`, aggregates repeated
+       unordered endpoint pairs by exact addition, and sorts the result lexicographically.
+       Raw endpoints are dense indices. Any future label-keyed adapter must translate to
+       dense indices before this boundary and requires a separate ruling.
+    5. Versioned external object representation. `Instance.to_dict()` emits the JSON-ready
+       `exactfrac-instance/1` object of §9 with keys `format`, `n`, `edges`, `f`, and optional
+       `labels`; edges are lists `[u, v, q_e]` in canonical edge_ref order, while `f` and
+       labels are lists. `Instance.from_dict(data)` accepts only an exact `dict` with exactly
+       those required keys plus optional `labels`; its edge container, edge records, `f`, and
+       labels are exact lists. It validates the canonical representation and never reorders,
+       aggregates, reorients, or silently discards serialized records. Unknown or missing
+       keys, a wrong format tag, or a noncanonical edge list are invalid. JSON text/file I/O
+       remains outside this unit.
+    6. Error taxonomy and validation order. `InvalidInstance` and `UnsupportedInstance` are
+       distinct sibling subclasses of `ValueError`; neither subclasses the other. Malformed
+       type, container, shape, format, endpoint, loop, ordering, multiplicity, `f`, label, or
+       empty-support conditions raise `InvalidInstance`. This production boundary
+       intentionally translates its type/shape failures into `InvalidInstance`; it does not
+       copy the sealed flow primitive's internal `TypeError`/`ValueError` split. Only a
+       structurally valid canonical instance with some `f[v] > d_q[v]` raises
+       `UnsupportedInstance`. In particular, a structurally valid graph may contain an
+       isolated vertex, but positive `f` then makes the instance unsupported by the active
+       hypothesis. Each entry point validates outer representation/format, `n`, `f`, labels,
+       edge records, and canonical order or raw normalization before computing `Q` and
+       `d_q`; the active check is last. Exception prose is diagnostic, not stable API.
+    7. Preprocessing carrier. For `r` raw records, `from_records` follows
+       `lem:aggregation`: endpoint normalization, sorting/grouping, and aggregation use
+       `O(r log(r+1))` comparisons and `O(r)` additions (or `O(r)` operations when already
+       grouped). This optional raw preprocessing is outside the main theorem's canonical-
+       instance operation bound. No multiplicity is expanded into unit copies.
+    8. Unit boundary. This ruling does not implement §4.2 shores, §4.3 atomic families,
+       §4.4 witnesses/certificates, §4.5 arithmetic helpers, §4.6 argmin policy, sign routing,
+       parity-cut reduction, branch logic, or the global solver.
+
 4.2 Shore representation  (RULED — adopted 2026-08-31)
     Every shore U (a subset of {0..n-1}) is internally a nonnegative Python int, with
     bit v set iff v is in U. Serialization stays the §9 sorted-index-list form (§9
