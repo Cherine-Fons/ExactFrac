@@ -3976,3 +3976,1207 @@ These fixtures establish only finite-universe shore representation and strict li
 serialization. They do not implement or discharge graph-dependent shore sums, atomic
 families, witnesses, certificates, rational-pair helpers, argmin policy, cut reductions,
 branch algorithms, or global optimization.
+
+---
+
+## Atomic-family oracle unit — source and scope
+
+The following fixtures govern the production atomic-family unit before
+`tests/test_families.py` or `exactfrac/families.py` exists.
+
+Repository authority at derivation time:
+
+```text
+4b0e13fb95b3fdff9ff50b503fce8dcbde947f9a
+docs: rule production atomic-family interface
+```
+
+Canonical mathematical authority:
+
+```text
+ExactFrac_Mathematical_Specification_v2_2_CANONICAL_2026-09-02.zip
+SHA-256: 400c4e23a7683571f7181b98bc009954d431f4ac355a247fb22327a609b4f9ce
+
+Theorem_B_Strongly_Polynomial_Proof_ExactFrac_Spec_v2_2.tex
+SHA-256: 4cceb9984bc6d24b78f0eeff1f9014650fc490de2210e748f0fcae85d1ffcaa6
+```
+
+The expected masks, descriptor sequences, nonemptiness values, branch-domain values, and
+counts below are derived from:
+
+- the literal atomic-family definition;
+- the literal `prop:branch-transform` domains;
+- `prop:domain-decomp`;
+- the active compact-instance data;
+- the deterministic implementation order fixed in DESIGN §4.3A.
+
+No output from a production `exactfrac.families` implementation was used.
+
+For compact machine-facing notation, write
+
+```text
+AF(T, pi, I, O)
+```
+
+for the descriptor with fields `(T, pi, I, O)`. Decimal integers are shore masks. Set
+columns show the represented dense vertex subsets.
+
+These fixtures establish local representation, decomposition, and finite equality facts.
+They do not assert a branch optimum or a global ExactFrac optimum unless an oracle is
+separately classified at that strength.
+
+---
+
+## ORACLE-023 — Atomic-family nonemptiness and exact descriptor semantics
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.3 and §4.3A.2--§4.3A.4; TEST_PLAN F1--F6.
+
+### Mathematical family
+
+For an ambient finite vertex universe and a descriptor
+
+```text
+AF(T, pi, I, O)
+```
+
+the represented family is
+
+$$
+\mathcal F(T,\pi;I,O)
+=
+\left\{
+U:
+I\subseteq U,\;
+U\cap O=\varnothing,\;
+|U\cap T|\equiv\pi\pmod 2
+\right\}.
+$$
+
+The descriptor is nonempty exactly when
+
+$$
+I\cap O=\varnothing
+$$
+
+and either
+
+$$
+T\setminus(I\cup O)\ne\varnothing
+$$
+
+or
+
+$$
+|I\cap T|\equiv\pi\pmod 2.
+$$
+
+`I & O != 0` is therefore an accepted descriptor state whose represented family is empty.
+It is not malformed input.
+
+### Direct hand cases
+
+| Case | Descriptor | T | I | O | Free terminals | Forced parity | `is_nonempty` |
+|---|---|---|---|---|---|---:|---|
+| free terminal, pi=0 | `AF(5, 0, 1, 2)` | `{0, 2}` | `{0}` | `{1}` | `{2}` | 1 | `True` |
+| free terminal, pi=1 | `AF(5, 1, 1, 2)` | `{0, 2}` | `{0}` | `{1}` | `{2}` | 1 | `True` |
+| forced odd parity accepted | `AF(5, 1, 1, 4)` | `{0, 2}` | `{0}` | `{2}` | `∅` | 1 | `True` |
+| forced odd parity rejected | `AF(5, 0, 1, 4)` | `{0, 2}` | `{0}` | `{2}` | `∅` | 1 | `False` |
+| overlap, pi=0 | `AF(5, 0, 3, 2)` | `{0, 2}` | `{0, 1}` | `{1}` | `{2}` | 1 | `False` |
+| overlap, pi=1 | `AF(5, 1, 3, 2)` | `{0, 2}` | `{0, 1}` | `{1}` | `{2}` | 1 | `False` |
+| no terminal, pi=0 | `AF(0, 0, 2, 1)` | `∅` | `{1}` | `{0}` | `∅` | 0 | `True` |
+| no terminal, pi=1 | `AF(0, 1, 2, 1)` | `∅` | `{1}` | `{0}` | `∅` | 0 | `False` |
+| high terminal bit, pi=0 | `AF(1 << 100, 0, 0, 0)` | `{100}` | `∅` | `∅` | `{100}` | 0 | `True` |
+| high terminal bit, pi=1 | `AF(1 << 100, 1, 0, 0)` | `{100}` | `∅` | `∅` | `{100}` | 0 | `True` |
+
+The high-bit cases are valid direct descriptors because `AtomicFamily` stores no ambient
+`n`. Direct construction therefore validates exact nonnegative mask type, not
+universe-relative high bits. Universe-relative range validation belongs to
+`enumerate_atomic_families(instance)`.
+
+### Exhaustive finite family
+
+For each
+
+```text
+n in (1, 2, 3, 4)
+```
+
+exhaust every exact mask triple
+
+```text
+0 <= T, I, O < 1 << n
+```
+
+and both
+
+```text
+pi in (0, 1).
+```
+
+For each descriptor, independently enumerate every
+
+```text
+0 <= U < 1 << n
+```
+
+and determine whether at least one `U` satisfies the three family conditions.
+
+The number of descriptors for one `n` is
+
+$$
+2\cdot 8^n.
+$$
+
+Among descriptors with disjoint `I` and `O`, there are `6^n` triples `(T,I,O)`. There are
+`5^n` such triples with no free terminal. Hence the exact nonempty count is
+
+$$
+2\cdot 6^n-5^n.
+$$
+
+The overlap-empty count is
+
+$$
+2(8^n-6^n),
+$$
+
+and the disjoint wrong-forced-parity empty count is
+
+$$
+5^n.
+$$
+
+The exact totals are:
+
+| n | All descriptors | Nonempty | Empty | Overlap-empty | Disjoint parity-empty |
+|:---:|---:|---:|---:|---:|---:|
+| 1 | 16 | 7 | 9 | 4 | 5 |
+| 2 | 128 | 47 | 81 | 56 | 25 |
+| 3 | 1024 | 307 | 717 | 592 | 125 |
+| 4 | 8192 | 1967 | 6225 | 5600 | 625 |
+
+Across `n = 1,2,3,4`:
+
+```text
+all descriptors:                     9360
+nonempty descriptors:                2328
+empty descriptors:                   7032
+empty because I & O != 0:            6252
+disjoint/no-free wrong-parity empty:  780
+```
+
+For every one of the 9,360 descriptors, the source-definition existence result and the
+closed nonemptiness predicate must agree exactly.
+
+### Object-state expectations
+
+`AtomicFamily` has authoritative fields exactly:
+
+```text
+T
+pi
+I
+O
+```
+
+`is_nonempty` is derived from those fields. There is no separately mutable or authoritative:
+
+```text
+empty
+infeasible
+feasible
+free_terminal
+```
+
+field.
+
+### Oracle status
+
+**Derived before any production atomic-family test or implementation.**
+
+The exhaustive family checks the logical equivalence defining nonemptiness; it does not
+claim that any branch decomposition or optimizer has been implemented.
+
+---
+
+## ORACLE-024 — Sparse active instance with empty transformed branch domains
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `prop:branch-transform`; `prop:domain-decomp`; DESIGN §4.3A.1 and
+§4.3A.5--§4.3A.11; TEST_PLAN F3--F10.
+
+### Instance
+
+Reuse the valid active ORACLE-001 instance:
+
+```text
+n = 2
+edges = ((0, 1, 1),)
+f = (1, 1)
+labels = None
+```
+
+The canonical support data are:
+
+```text
+m = 1
+q = (1,)
+Q = 1
+d_q = (1, 1)
+```
+
+The graph-derived sets and masks are:
+
+| Object | Vertex set | Mask |
+|---|---|---:|
+| `T_plus` | `{}` | 0 |
+| `T_f` | `{0, 1}` | 3 |
+| `P` | `{}` | 0 |
+| `A` | `{}` | 0 |
+| `W` | `{0, 1}` | 3 |
+
+Indeed, `f(v)+d_q(v)=2` is even at both vertices, while both `f` values are odd.
+
+### Exact four-branch descriptor result
+
+The exact returned four-tuple is:
+
+```text
+D0_families = (
+    AF(0, 1, 0, 0),
+)
+
+D1_families = ()
+
+D2_families = ()
+
+D3_families = (
+    AF(3, 0, 1, 2),
+    AF(3, 0, 2, 1),
+)
+```
+
+All three generated descriptors are empty:
+
+- `AF(0,1,0,0)` has no free terminal and forced parity 0 rather than 1;
+- `AF(3,0,1,2)` forces one odd terminal in and the other out;
+- `AF(3,0,2,1)` is symmetric.
+
+They remain present in their ruled positions.
+
+### Exact count
+
+The exact descriptor count is
+
+$$
+R_{\mathrm{actual}}
+=
+1+2|P|m+|A|+\binom{|W|}{3}+2m
+=
+1+0+0+0+2
+=
+3.
+$$
+
+The source upper bound is
+
+$$
+R
+=
+1+2mn+n+\binom n3+2m
+=
+1+4+2+0+2
+=
+9.
+$$
+
+Therefore:
+
+```text
+R_actual = 3
+R = 9
+R_actual < R
+```
+
+This fixture prevents the source upper bound from being mistaken for an exact per-instance
+return count.
+
+### Literal `prop:branch-transform` domains
+
+| Mask | Shore | s | e | b | d | d-s | D0 | D1 | D2 | D3 |
+|---:|---|---:|---:|---:|---:|---:|:---:|:---:|:---:|:---:|
+| 1 | `{0}` | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 2 | `{1}` | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 3 | `{0, 1}` | 2 | 1 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+
+Thus:
+
+```text
+D0 domain masks = []
+D1 domain masks = []
+D2 domain masks = []
+D3 domain masks = []
+```
+
+The union of the generated atomic families is also empty in each branch. Therefore the
+literal source domain and generated family union are exactly equal for all four branches.
+
+### Oracle status
+
+**Derived from ORACLE-001 and the source equations before production family code existed.**
+
+This fixture covers `P` empty, `A` empty, fewer than three vertices in `W`, naturally empty
+descriptors, and strict retention of those descriptors.
+
+---
+
+## ORACLE-025 — Rich deterministic atomic-family enumeration
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `prop:domain-decomp`; `eq:Rcount`; `alg:global` line 1; DESIGN
+§4.3A.1 and §4.3A.5--§4.3A.10; TEST_PLAN F7--F9.
+
+### Canonical active instance
+
+```text
+n = 5
+
+edges = (
+    (0, 2, 2),
+    (1, 2, 2),
+    (2, 4, 1),
+    (3, 4, 1),
+)
+
+f = (1, 1, 1, 1, 2)
+labels = None
+```
+
+Canonical `edge_ref` order is:
+
+```text
+edge_ref 0 -> (0, 2, 2)
+edge_ref 1 -> (1, 2, 2)
+edge_ref 2 -> (2, 4, 1)
+edge_ref 3 -> (3, 4, 1)
+```
+
+The exact derived graph values are:
+
+```text
+m = 4
+q = (2, 2, 1, 1)
+Q = 6
+d_q = (2, 2, 5, 1, 2)
+```
+
+The active inequalities are:
+
+```text
+1 <= 2
+1 <= 2
+1 <= 5
+1 <= 1
+2 <= 2
+```
+
+### Exact derived sets and masks
+
+| Object | Definition | Vertex set | Mask |
+|---|---|---|---:|
+| `T_plus` | `f[v] + d_q[v]` odd | `{0, 1}` | 3 |
+| `T_f` | `f[v]` odd | `{0, 1, 2, 3}` | 15 |
+| `P` | `d_q[v] > f[v]` | `{0, 1, 2}` | 7 |
+| `A` | `f[v] >= 2` | `{4}` | 16 |
+| `W` | `f[v] == 1` | `{0, 1, 2, 3}` | 15 |
+
+The masks are derived from dense vertex order and the already aggregated canonical
+instance.
+
+### D0 sequence
+
+| Index | Descriptor | I set | O set | Status |
+|---|---|---|---|---|
+| 0 | `AF(3, 1, 0, 0)` | `∅` | `∅` | nonempty: free terminal |
+
+Thus:
+
+```text
+D0_families = (
+    AF(3, 1, 0, 0),
+)
+```
+
+### D1 sequence
+
+The outer order is `p = 0,1,2`. The middle order is canonical `edge_ref = 0,1,2,3`.
+Within each edge, the source-displayed orientation is emitted before its reverse.
+
+| Index | Source | Descriptor | I set | O set | Status |
+|---:|---|---|---|---|---|
+| 0 | `p=0`, `edge_ref=0`, 0-in/2-out | `AF(3, 0, 1, 4)` | `{0}` | `{2}` | nonempty: free terminal |
+| 1 | `p=0`, `edge_ref=0`, 2-in/0-out | `AF(3, 0, 5, 1)` | `{0, 2}` | `{0}` | empty: `I & O != 0` |
+| 2 | `p=0`, `edge_ref=1`, 1-in/2-out | `AF(3, 0, 3, 4)` | `{0, 1}` | `{2}` | nonempty: forced parity `0` |
+| 3 | `p=0`, `edge_ref=1`, 2-in/1-out | `AF(3, 0, 5, 2)` | `{0, 2}` | `{1}` | empty: forced parity `1` |
+| 4 | `p=0`, `edge_ref=2`, 2-in/4-out | `AF(3, 0, 5, 16)` | `{0, 2}` | `{4}` | nonempty: free terminal |
+| 5 | `p=0`, `edge_ref=2`, 4-in/2-out | `AF(3, 0, 17, 4)` | `{0, 4}` | `{2}` | nonempty: free terminal |
+| 6 | `p=0`, `edge_ref=3`, 3-in/4-out | `AF(3, 0, 9, 16)` | `{0, 3}` | `{4}` | nonempty: free terminal |
+| 7 | `p=0`, `edge_ref=3`, 4-in/3-out | `AF(3, 0, 17, 8)` | `{0, 4}` | `{3}` | nonempty: free terminal |
+| 8 | `p=1`, `edge_ref=0`, 0-in/2-out | `AF(3, 0, 3, 4)` | `{0, 1}` | `{2}` | nonempty: forced parity `0`; duplicate retained (same as index 2) |
+| 9 | `p=1`, `edge_ref=0`, 2-in/0-out | `AF(3, 0, 6, 1)` | `{1, 2}` | `{0}` | empty: forced parity `1` |
+| 10 | `p=1`, `edge_ref=1`, 1-in/2-out | `AF(3, 0, 2, 4)` | `{1}` | `{2}` | nonempty: free terminal |
+| 11 | `p=1`, `edge_ref=1`, 2-in/1-out | `AF(3, 0, 6, 2)` | `{1, 2}` | `{1}` | empty: `I & O != 0` |
+| 12 | `p=1`, `edge_ref=2`, 2-in/4-out | `AF(3, 0, 6, 16)` | `{1, 2}` | `{4}` | nonempty: free terminal |
+| 13 | `p=1`, `edge_ref=2`, 4-in/2-out | `AF(3, 0, 18, 4)` | `{1, 4}` | `{2}` | nonempty: free terminal |
+| 14 | `p=1`, `edge_ref=3`, 3-in/4-out | `AF(3, 0, 10, 16)` | `{1, 3}` | `{4}` | nonempty: free terminal |
+| 15 | `p=1`, `edge_ref=3`, 4-in/3-out | `AF(3, 0, 18, 8)` | `{1, 4}` | `{3}` | nonempty: free terminal |
+| 16 | `p=2`, `edge_ref=0`, 0-in/2-out | `AF(3, 0, 5, 4)` | `{0, 2}` | `{2}` | empty: `I & O != 0` |
+| 17 | `p=2`, `edge_ref=0`, 2-in/0-out | `AF(3, 0, 4, 1)` | `{2}` | `{0}` | nonempty: free terminal |
+| 18 | `p=2`, `edge_ref=1`, 1-in/2-out | `AF(3, 0, 6, 4)` | `{1, 2}` | `{2}` | empty: `I & O != 0` |
+| 19 | `p=2`, `edge_ref=1`, 2-in/1-out | `AF(3, 0, 4, 2)` | `{2}` | `{1}` | nonempty: free terminal |
+| 20 | `p=2`, `edge_ref=2`, 2-in/4-out | `AF(3, 0, 4, 16)` | `{2}` | `{4}` | nonempty: free terminal |
+| 21 | `p=2`, `edge_ref=2`, 4-in/2-out | `AF(3, 0, 20, 4)` | `{2, 4}` | `{2}` | empty: `I & O != 0` |
+| 22 | `p=2`, `edge_ref=3`, 3-in/4-out | `AF(3, 0, 12, 16)` | `{2, 3}` | `{4}` | nonempty: free terminal |
+| 23 | `p=2`, `edge_ref=3`, 4-in/3-out | `AF(3, 0, 20, 8)` | `{2, 4}` | `{3}` | nonempty: free terminal |
+
+The exact D1 empty indices are:
+
+```text
+1, 3, 9, 11, 16, 18, 21
+```
+
+Their causes are:
+
+```text
+I & O overlap:       1, 11, 16, 18, 21
+forced parity empty: 3, 9
+```
+
+The exact duplicate is:
+
+```text
+D1[2] == D1[8] == AF(3, 0, 3, 4)
+```
+
+Both occurrences remain in the tuple.
+
+### D2 sequence
+
+The `A` singleton block precedes the lexicographic `W` triple block.
+
+| Index | Source | Descriptor | I set | O set | Status |
+|---:|---|---|---|---|---|
+| 0 | `A singleton a=4` | `AF(15, 1, 16, 0)` | `{4}` | `∅` | nonempty: free terminal |
+| 1 | `W triple (0, 1, 2)` | `AF(15, 1, 7, 0)` | `{0, 1, 2}` | `∅` | nonempty: free terminal |
+| 2 | `W triple (0, 1, 3)` | `AF(15, 1, 11, 0)` | `{0, 1, 3}` | `∅` | nonempty: free terminal |
+| 3 | `W triple (0, 2, 3)` | `AF(15, 1, 13, 0)` | `{0, 2, 3}` | `∅` | nonempty: free terminal |
+| 4 | `W triple (1, 2, 3)` | `AF(15, 1, 14, 0)` | `{1, 2, 3}` | `∅` | nonempty: free terminal |
+
+Thus:
+
+```text
+D2_families = (
+    AF(15, 1, 16, 0),
+    AF(15, 1, 7, 0),
+    AF(15, 1, 11, 0),
+    AF(15, 1, 13, 0),
+    AF(15, 1, 14, 0),
+)
+```
+
+### D3 sequence
+
+Canonical `edge_ref` order and displayed orientation order are retained.
+
+| Index | Source | Descriptor | I set | O set | Status |
+|---:|---|---|---|---|---|
+| 0 | `edge_ref=0`, 0-in/2-out | `AF(15, 0, 1, 4)` | `{0}` | `{2}` | nonempty: free terminal |
+| 1 | `edge_ref=0`, 2-in/0-out | `AF(15, 0, 4, 1)` | `{2}` | `{0}` | nonempty: free terminal |
+| 2 | `edge_ref=1`, 1-in/2-out | `AF(15, 0, 2, 4)` | `{1}` | `{2}` | nonempty: free terminal |
+| 3 | `edge_ref=1`, 2-in/1-out | `AF(15, 0, 4, 2)` | `{2}` | `{1}` | nonempty: free terminal |
+| 4 | `edge_ref=2`, 2-in/4-out | `AF(15, 0, 4, 16)` | `{2}` | `{4}` | nonempty: free terminal |
+| 5 | `edge_ref=2`, 4-in/2-out | `AF(15, 0, 16, 4)` | `{4}` | `{2}` | nonempty: free terminal |
+| 6 | `edge_ref=3`, 3-in/4-out | `AF(15, 0, 8, 16)` | `{3}` | `{4}` | nonempty: free terminal |
+| 7 | `edge_ref=3`, 4-in/3-out | `AF(15, 0, 16, 8)` | `{4}` | `{3}` | nonempty: free terminal |
+
+Thus:
+
+```text
+D3_families = (
+    AF(15, 0, 1, 4),
+    AF(15, 0, 4, 1),
+    AF(15, 0, 2, 4),
+    AF(15, 0, 4, 2),
+    AF(15, 0, 4, 16),
+    AF(15, 0, 16, 4),
+    AF(15, 0, 8, 16),
+    AF(15, 0, 16, 8),
+)
+```
+
+### Exact tuple sizes and count
+
+```text
+len(D0_families) = 1
+len(D1_families) = 24
+len(D2_families) = 5
+len(D3_families) = 8
+```
+
+Hence:
+
+$$
+R_{\mathrm{actual}}
+=
+1+24+5+8
+=
+38.
+$$
+
+The formula gives:
+
+$$
+1+2|P|m+|A|+\binom{|W|}{3}+2m
+=
+1+2(3)(4)+1+4+8
+=
+38.
+$$
+
+The source upper bound is:
+
+$$
+R
+=
+1+2mn+n+\binom n3+2m
+=
+1+40+5+10+8
+=
+64.
+$$
+
+Therefore:
+
+```text
+R_actual = 38
+R = 64
+R_actual < R
+```
+
+### Retention requirements
+
+The exact sequence retains:
+
+- all seven empty D1 descriptors;
+- both copies of the duplicate descriptor;
+- all overlapping mathematical family coverage;
+- the displayed branch, vertex, edge, orientation, singleton, and triple order.
+
+No descriptor is deleted because it is empty, repeated, or overlaps another family.
+
+### Oracle status
+
+**Hand-derived from the canonical instance and deterministic ruling before family tests or
+implementation.**
+
+---
+
+## ORACLE-026 — Literal branch-domain equality for the rich fixture
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `prop:branch-transform`; `prop:domain-decomp`; TEST_PLAN F4 and F10.
+
+### Independent quantities
+
+For every nonempty shore `U`, compute directly:
+
+$$
+s=f(U),\qquad
+e=e_q(U),\qquad
+b=b_q(U),\qquad
+d=2e+b.
+$$
+
+Then apply only the literal source conditions:
+
+```text
+D0: s+b is odd
+D1: s+b is even, b >= 1, d-s > 0
+D2: s is odd, s >= 3
+D3: s is even, b >= 1
+```
+
+The comparator does not use `T_plus`, `T_f`, `P`, `A`, `W`, or a family union to decide
+source-domain membership.
+
+### Complete nonempty-shore table
+
+| Mask | Shore | `s` | `e` | `b` | `d=2e+b` | `d-s` | D0 | D1 | D2 | D3 |
+|---:|---|---:|---:|---:|---:|---:|:---:|:---:|:---:|:---:|
+| 1 | `{0}` | 1 | 0 | 2 | 2 | 1 | 1 | 0 | 0 | 0 |
+| 2 | `{1}` | 1 | 0 | 2 | 2 | 1 | 1 | 0 | 0 | 0 |
+| 3 | `{0, 1}` | 2 | 0 | 4 | 4 | 2 | 0 | 1 | 0 | 1 |
+| 4 | `{2}` | 1 | 0 | 5 | 5 | 4 | 0 | 1 | 0 | 0 |
+| 5 | `{0, 2}` | 2 | 2 | 3 | 7 | 5 | 1 | 0 | 0 | 1 |
+| 6 | `{1, 2}` | 2 | 2 | 3 | 7 | 5 | 1 | 0 | 0 | 1 |
+| 7 | `{0, 1, 2}` | 3 | 4 | 1 | 9 | 6 | 0 | 1 | 1 | 0 |
+| 8 | `{3}` | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 9 | `{0, 3}` | 2 | 0 | 3 | 3 | 1 | 1 | 0 | 0 | 1 |
+| 10 | `{1, 3}` | 2 | 0 | 3 | 3 | 1 | 1 | 0 | 0 | 1 |
+| 11 | `{0, 1, 3}` | 3 | 0 | 5 | 5 | 2 | 0 | 1 | 1 | 0 |
+| 12 | `{2, 3}` | 2 | 0 | 6 | 6 | 4 | 0 | 1 | 0 | 1 |
+| 13 | `{0, 2, 3}` | 3 | 2 | 4 | 8 | 5 | 1 | 0 | 1 | 0 |
+| 14 | `{1, 2, 3}` | 3 | 2 | 4 | 8 | 5 | 1 | 0 | 1 | 0 |
+| 15 | `{0, 1, 2, 3}` | 4 | 4 | 2 | 10 | 6 | 0 | 1 | 0 | 1 |
+| 16 | `{4}` | 2 | 0 | 2 | 2 | 0 | 0 | 0 | 0 | 1 |
+| 17 | `{0, 4}` | 3 | 0 | 4 | 4 | 1 | 1 | 0 | 1 | 0 |
+| 18 | `{1, 4}` | 3 | 0 | 4 | 4 | 1 | 1 | 0 | 1 | 0 |
+| 19 | `{0, 1, 4}` | 4 | 0 | 6 | 6 | 2 | 0 | 1 | 0 | 1 |
+| 20 | `{2, 4}` | 3 | 1 | 5 | 7 | 4 | 0 | 1 | 1 | 0 |
+| 21 | `{0, 2, 4}` | 4 | 3 | 3 | 9 | 5 | 1 | 0 | 0 | 1 |
+| 22 | `{1, 2, 4}` | 4 | 3 | 3 | 9 | 5 | 1 | 0 | 0 | 1 |
+| 23 | `{0, 1, 2, 4}` | 5 | 5 | 1 | 11 | 6 | 0 | 1 | 1 | 0 |
+| 24 | `{3, 4}` | 3 | 1 | 1 | 3 | 0 | 0 | 0 | 1 | 0 |
+| 25 | `{0, 3, 4}` | 4 | 1 | 3 | 5 | 1 | 1 | 0 | 0 | 1 |
+| 26 | `{1, 3, 4}` | 4 | 1 | 3 | 5 | 1 | 1 | 0 | 0 | 1 |
+| 27 | `{0, 1, 3, 4}` | 5 | 1 | 5 | 7 | 2 | 0 | 1 | 1 | 0 |
+| 28 | `{2, 3, 4}` | 4 | 2 | 4 | 8 | 4 | 0 | 1 | 0 | 1 |
+| 29 | `{0, 2, 3, 4}` | 5 | 4 | 2 | 10 | 5 | 1 | 0 | 1 | 0 |
+| 30 | `{1, 2, 3, 4}` | 5 | 4 | 2 | 10 | 5 | 1 | 0 | 1 | 0 |
+| 31 | `{0, 1, 2, 3, 4}` | 6 | 6 | 0 | 12 | 6 | 0 | 0 | 0 | 0 |
+
+### Exact literal domain sets
+
+```text
+D0 = [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22, 25, 26, 29, 30]
+
+D1 = [3, 4, 7, 11, 12, 15, 19, 20, 23, 27, 28]
+
+D2 = [7, 11, 13, 14, 17, 18, 20, 23, 24, 27, 29, 30]
+
+D3 = [3, 5, 6, 9, 10, 12, 15, 16, 19, 21, 22, 25, 26, 28]
+```
+
+Their exact sizes are:
+
+```text
+|D0| = 16
+|D1| = 11
+|D2| = 12
+|D3| = 14
+```
+
+### Generated-family union sets
+
+Evaluating the descriptors fixed in ORACLE-025 gives:
+
+```text
+union(D0_families) = [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22, 25, 26, 29, 30]
+
+union(D1_families) = [3, 4, 7, 11, 12, 15, 19, 20, 23, 27, 28]
+
+union(D2_families) = [7, 11, 13, 14, 17, 18, 20, 23, 24, 27, 29, 30]
+
+union(D3_families) = [3, 5, 6, 9, 10, 12, 15, 16, 19, 21, 22, 25, 26, 28]
+```
+
+Therefore, branch by branch:
+
+$$
+D_j
+=
+\bigcup_{F\in\mathscr F_j}F
+\qquad
+(j=0,1,2,3).
+$$
+
+For this fixture, the empty-shore mask `0` satisfies no descriptor in any generated branch
+tuple, so the family-union side excludes `0` through the descriptors themselves rather than
+through an external nonempty-shore prefilter.
+
+### Cover multiplicities
+
+The number after each mask is the number of distinct tuple positions whose descriptor
+contains that shore.
+
+```text
+D0:
+1:1, 2:1, 5:1, 6:1, 9:1, 10:1, 13:1, 14:1,
+17:1, 18:1, 21:1, 22:1, 25:1, 26:1, 29:1, 30:1
+
+D1:
+3:4, 4:3, 7:3, 11:6, 12:4, 15:6,
+19:8, 20:3, 23:3, 27:6, 28:2
+
+D2:
+7:1, 11:1, 13:1, 14:1, 17:1, 18:1,
+20:1, 23:2, 24:1, 27:2, 29:2, 30:2
+
+D3:
+3:2, 5:2, 6:2, 9:2, 10:2, 12:4, 15:2,
+16:2, 19:4, 21:2, 22:2, 25:2, 26:2, 28:2
+```
+
+Thus equality of the union with the source domain does not imply a partition. D1, D2, and
+D3 have substantial overlap.
+
+### Automatic-side-condition evidence
+
+On this complete finite fixture:
+
+```text
+minimum s+b on D0 = 3
+minimum s+b on D1 = 4
+minimum s on D2   = 3
+```
+
+Therefore the literal equality also exercises the proof’s automatic endpoint and
+lower-bound claims. This finite table is executable oracle evidence; the universal claim
+remains supplied by the mathematical proof.
+
+### Oracle status
+
+**Derived by complete nonempty-shore enumeration from `prop:branch-transform` before family
+implementation.**
+
+No branch-domain condition was reconstructed from the family decomposition.
+
+---
+
+## ORACLE-027 — Classification-controlled magnitude and label invariance
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.3A.1, §4.3A.5--§4.3A.12; TEST_PLAN F7--F11.
+
+### Instance family
+
+For an exact positive even integer `L`, define:
+
+```text
+n = 3
+
+edges = (
+    (0, 1, L),
+    (0, 2, L),
+    (1, 2, L),
+)
+
+f = (1, L, L)
+```
+
+Use the two values:
+
+```text
+L_small = 2
+L_large = 1 << 4096
+```
+
+and test each with labels absent and with:
+
+```text
+labels = ("v0", "v1", "v2")
+```
+
+For either `L`:
+
+```text
+m = 3
+Q = 3L
+d_q = (2L, 2L, 2L)
+```
+
+Since `L` is even:
+
+| Object | Vertex set | Mask |
+|---|---|---:|
+| `T_plus` | `{0}` | 1 |
+| `T_f` | `{0}` | 1 |
+| `P` | `{0, 1, 2}` | 7 |
+| `A` | `{1, 2}` | 6 |
+| `W` | `{0}` | 1 |
+
+### Exact descriptor result
+
+All four instance variants produce the same descriptor tuples.
+
+```text
+D0_families = (
+    AF(1, 1, 0, 0),
+)
+```
+
+D1 is the exact nested-order sequence:
+
+```text
+for p in (0, 1, 2):
+    for (u, v) in ((0, 1), (0, 2), (1, 2)):
+        emit AF(1, 0, (1 << p) | (1 << u), 1 << v)
+        emit AF(1, 0, (1 << p) | (1 << v), 1 << u)
+```
+
+D2 is:
+
+```text
+D2_families = (
+    AF(1, 1, 2, 0),
+    AF(1, 1, 4, 0),
+)
+```
+
+D3 is:
+
+```text
+D3_families = (
+    AF(1, 0, 1, 2),
+    AF(1, 0, 2, 1),
+    AF(1, 0, 1, 4),
+    AF(1, 0, 4, 1),
+    AF(1, 0, 2, 4),
+    AF(1, 0, 4, 2),
+)
+```
+
+The exact tuple lengths are:
+
+```text
+1, 18, 2, 6
+```
+
+and:
+
+$$
+R_{\mathrm{actual}}
+=
+1+18+2+6
+=
+27.
+$$
+
+The source upper bound is:
+
+$$
+R=1+18+3+1+6=29.
+$$
+
+### Magnitude and labels
+
+```text
+L_large.bit_length() = 4097
+```
+
+Despite the large exact multiplicities and capacities:
+
+- the derived classification masks are unchanged;
+- the exact descriptor values, order, and count are unchanged;
+- labels do not affect any result;
+- no loop count depends on `L`;
+- no multiplicity is expanded into copies.
+
+This is a support-and-classification-controlled regression. It does not claim that
+arbitrary magnitude changes preserve the five derived masks.
+
+### Oracle status
+
+**Derived from parity and comparison of the displayed formulas before implementation.**
+
+---
+
+## ORACLE-028 — Atomic-family exact rejection matrix
+
+**Classification:** `NEGATIVE`
+
+**Source obligations:** DESIGN §4.3A.2--§4.3A.4; TEST_PLAN F5--F6.
+
+### Exact exception class
+
+Every malformed public input in this oracle raises:
+
+```text
+ValueError
+```
+
+with:
+
+```python
+type(exc) is ValueError
+```
+
+The following do not discharge the oracle:
+
+```text
+TypeError
+InvalidInstance
+UnsupportedInstance
+any ValueError subclass
+```
+
+Exception prose is diagnostic and is not compared.
+
+### Adversarial helper types
+
+Tests may define:
+
+```python
+class IntSubclass(int):
+    pass
+
+
+class InstanceSubclass(Instance):
+    pass
+
+
+class CoercibleInteger:
+    def __int__(self) -> int:
+        return 1
+
+    def __index__(self) -> int:
+        return 1
+```
+
+No value is accepted through implicit coercion.
+
+### Invalid mask fields
+
+For each field in:
+
+```text
+T
+I
+O
+```
+
+the following values are invalid:
+
+```text
+-1
+True
+False
+1.0
+Fraction(1, 1)
+IntSubclass(1)
+"1"
+None
+CoercibleInteger()
+```
+
+The other descriptor fields are held at valid controls while one target field is varied.
+
+### Invalid parity field
+
+The following `pi` values are invalid:
+
+```text
+-1
+2
+True
+False
+0.0
+1.0
+Fraction(0, 1)
+Fraction(1, 1)
+IntSubclass(0)
+IntSubclass(1)
+"0"
+None
+CoercibleInteger()
+```
+
+Valid controls are exact built-in integers:
+
+```text
+0
+1
+```
+
+### Valid overlap and high-bit controls
+
+The following are valid direct descriptor constructions:
+
+```text
+AF(1, 0, 1, 1)
+AF(1 << 100, 0, 0, 0)
+AF(0, 0, 1 << 100, 0)
+AF(0, 0, 0, 1 << 100)
+```
+
+The first has `I & O != 0` and constructs successfully with `is_nonempty == False`.
+
+The high-bit cases construct successfully because a direct descriptor stores no universe
+size. They do not authorize `enumerate_atomic_families(instance)` to generate
+out-of-range masks.
+
+### Invalid enumerator arguments
+
+`enumerate_atomic_families(value)` raises exact built-in `ValueError` for:
+
+```text
+None
+object()
+{}
+a valid serialized instance dict
+a valid InstanceSubclass object
+a verifier-side BruteInstance object
+```
+
+The enumerator requires an exact production `Instance`; it does not deserialize, coerce,
+or accept subclasses.
+
+### Oracle status
+
+**Ruled before production family tests or implementation.**
+
+---
+
+## ORACLE-029 — Atomic-family module surface, isolation, and complexity boundary
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.3A.2, §4.3A.12--§4.3A.13; TEST_PLAN F5 and F12; R3, R4,
+and D1.
+
+### Public surface
+
+The module-level export sequence is exactly the Ruff-sorted tuple:
+
+```python
+(
+    "AtomicFamily",
+    "enumerate_atomic_families",
+)
+```
+
+The package root does not re-export either name.
+
+`AtomicFamily` is:
+
+- frozen;
+- slotted;
+- immutable;
+- hashable;
+- defined by fields exactly `T`, `pi`, `I`, `O`.
+
+The module exposes no public family-membership wrapper and no downstream solver API.
+
+### Import boundary
+
+Production family source may import only standard-library modules plus:
+
+```text
+exactfrac.instance
+exactfrac.shore
+```
+
+A fresh-process import of `exactfrac.families` must not import:
+
+```text
+exactfrac_verify
+exactfrac_verify.*
+```
+
+The module consumes `Instance`; the verifier never consumes production family code.
+
+### Exactness and deterministic source discipline
+
+Static checks must find no:
+
+- import of or from `fractions`;
+- reference or call to `Fraction`;
+- float literal;
+- call to `float`;
+- true-division operator;
+- tolerance comparison such as `isclose`;
+- output or control-flow order derived from iteration over a Python `set`;
+- loop over a multiplicity or capacity value;
+- expansion of compact multiplicities into explicit copy objects.
+
+The source may use deterministic:
+
+- dense `range(instance.n)` order;
+- canonical `instance.edges` order;
+- lexicographic `itertools.combinations` order;
+- list accumulation followed by tuple conversion.
+
+### Responsibility boundary
+
+The module defines no implementation of:
+
+```text
+f(U)
+e_q(U)
+b_q(U)
+d_q(U)
+sign routing
+parity-cut reduction
+ExactBranchMin
+SolveBranchStandard
+SolveBranchAccelerated
+Witness
+ExactValue
+certificate verification
+StrongCompactMSPD
+```
+
+It prepares family descriptors only.
+
+### Structural operation carrier
+
+For one valid canonical instance, the expected structural carrier is:
+
+```text
+O(n)     derived-mask work
+O(m)     canonical support traversal overhead
+O(R_actual) descriptor construction
+```
+
+for total:
+
+```text
+O(n + m + R_actual)
+```
+
+where:
+
+$$
+R_{\mathrm{actual}}
+=
+1+2|P|m+|A|+\binom{|W|}{3}+2m.
+$$
+
+ORACLE-027 fixes a case in which the numerical bit lengths grow to 4097 while the
+descriptor count remains 27.
+
+### Oracle status
+
+**Architecture and source-boundary fixture established before implementation.**
+
+---
+
+## Production atomic-family oracle coverage matrix
+
+| TEST_PLAN obligation | Pre-implementation oracle evidence |
+|---|---|
+| F1 — overlap means empty | ORACLE-023 and ORACLE-028 |
+| F2 — free terminal | ORACLE-023 exhaustive nonemptiness family |
+| F3 — forced parity | ORACLE-023 exhaustive nonemptiness family |
+| F4 — cover, not partition | ORACLE-024 and ORACLE-026 |
+| F5 — public surface and immutable descriptor | ORACLE-023, ORACLE-028, ORACLE-029 |
+| F6 — exact descriptor domain and one nonemptiness predicate | ORACLE-023 and ORACLE-028 |
+| F7 — graph-derived masks | ORACLE-024, ORACLE-025, ORACLE-027 |
+| F8 — four-branch shape and order | ORACLE-024, ORACLE-025, ORACLE-027 |
+| F9 — count, empty retention, no deduplication | ORACLE-024, ORACLE-025, ORACLE-027 |
+| F10 — independent literal branch-domain equality | ORACLE-024 and ORACLE-026 |
+| F11 — deterministic repetition and magnitude independence | ORACLE-027 |
+| F12 — isolation, exactness, source discipline | ORACLE-029 |
+| `prop:domain-decomp` | ORACLE-024 sparse equality and ORACLE-026 complete rich equality |
+| R3 — no `Fraction` in solver path | ORACLE-029 |
+| R4 — no floating point in correctness path | ORACLE-029 |
+| D1 — no algorithmic iteration over Python `set` | ORACLE-029 |
+
+These fixtures do not implement sign routing, parity-cut reduction, `ExactBranchMin`,
+branch iteration, witnesses, certificates, or global optimization.
