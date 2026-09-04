@@ -502,6 +502,98 @@ Internal bitmask
 
 must return the identical shore.
 
+### S7 — production public surface and plain error boundary
+
+Expected:
+
+- `exactfrac.shore.__all__` is exactly `Shore`, `full_mask`, `validate_shore`,
+  `shore_from_list`, `shore_to_list`, and `shore_complement`;
+- `Shore` is the alias `int`;
+- `exactfrac.__init__` remains export-free in this unit;
+- every malformed public input raises the exact built-in class `ValueError`, not
+  `TypeError`, `InvalidInstance`, or `UnsupportedInstance`;
+- exception messages are not asserted as stable API.
+
+### S8 — exact universe, empty shore, and full shore boundaries
+
+Expected:
+
+- `n` must have exact built-in type `int` and satisfy `n >= 1`;
+- `full_mask(n) == (1 << n) - 1`;
+- `0` is a valid empty shore;
+- `full_mask(n)` is a valid complete shore;
+- nonemptiness is not imposed by the generic shore layer;
+- negative masks and masks above `full_mask(n)` are rejected;
+- `bool`, integer subclasses, floats, `Fraction`, and coercible non-integers are rejected
+  as `n` or shore values.
+
+### S9 — strict canonical list decoding and detached encoding
+
+Expected:
+
+- `shore_from_list(n, vertices)` requires an exact built-in list;
+- every member is an exact built-in integer in `0..n-1`;
+- member indices are strictly increasing;
+- the decoder rejects duplicates, descending or unsorted input, tuples, list subclasses,
+  `bool`, out-of-range members, and implicit coercion rather than repairing them;
+- `[]` decodes to `0`;
+- `shore_to_list(n, U)` returns a fresh exact built-in list in increasing order;
+- mutating an emitted list cannot alter the integer shore.
+
+### S10 — exhaustive finite-universe identities
+
+For every shore in each exhaustively tested small universe and for selected pairs `U,T`,
+verify:
+
+- membership agrees with the represented subset;
+- `U.bit_count()` is the exact cardinality;
+- `U | T` and `U & T` represent union and intersection;
+- `(U & T).bit_count() & 1` is the exact intersection parity;
+- `shore_complement(n, U) == full_mask(n) ^ U`;
+- complement is an involution;
+- `U & shore_complement(n, U) == 0`;
+- `U | shore_complement(n, U) == full_mask(n)`;
+- validating bare `~U` fails.
+
+### Production shore coverage interpretation
+
+The historical obligations S1--S3 describe the semantics of the chosen integer-bitmask
+representation on already validated masks. Their tests are executable documentation and
+regression checks of Python integer operations; they do not claim that `exactfrac.shore`
+provides separate membership, cardinality, or parity wrapper functions. S4--S6 are the
+direct public-helper obligations for relative complement, range validation, and strict
+serialization. S7--S12 add the production API, typing, isolation, exactness, and complexity
+boundaries around those helpers.
+
+| Obligation group | What the tests discharge |
+|---|---|
+| S1--S3 | representation-level identities on already validated integer masks |
+| S4--S6 | direct `exactfrac.shore` validation, complement, and serialization behavior |
+| S7--S12 | production surface, exact typing, isolation, deterministic source discipline, and complexity boundaries |
+
+### S11 — module isolation and responsibility boundary
+
+Expected:
+
+- production shore code is standard-library only;
+- importing `exactfrac.shore` imports no `exactfrac_verify` module;
+- the module does not import `exactfrac.instance`;
+- it exposes no graph-dependent `f(U)`, `e_q(U)`, `b_q(U)`, or `d_q(U)` helper;
+- it introduces no family, witness, certificate, rational-pair, argmin, sign-routing,
+  parity-cut, branch, or global-solver API.
+
+### S12 — exactness, deterministic source discipline, and large universe
+
+Expected:
+
+- the source contains no `Fraction`, float literal, `float(...)`, true division, or
+  tolerance comparison;
+- no algorithmic ordering is derived from iteration over a Python `set`;
+- for `n = 4096`, the mask with members `0`, `2048`, and `4095` round-trips exactly;
+- `full_mask(4096).bit_length() == 4096`;
+- the implementation does not enumerate all `2^n` shores or iterate once per numeric mask
+  value merely to validate, complement, encode, or decode one shore.
+
 ---
 
 ## 6. Compact-witness representation test family
@@ -1210,3 +1302,36 @@ Then, in order:
    implementation commit after the earlier oracle-only commit.
 
 The graph-instance unit does not implement shore helpers or any downstream solver layer.
+
+## 19. Production shore-representation completion gate
+
+This unit consumes the historical shore obligations S1--S6 and the supplemental production
+obligations S7--S12 above. It does not consume or modify the witness obligations W1--W7 or
+any later solver obligation.
+
+Before `tests/test_shore.py` exists:
+
+1. `exactfrac.shore` ownership, public surface, error boundary, and strict list schema are
+   ruled and committed;
+2. hand-derived shore fixtures are added to `docs/ORACLE_CATALOG.md`, covering empty and
+   full shores, mixed masks, membership, cardinality, parity, relative complement, strict
+   serialization, malformed inputs, and the large-universe compactness case;
+3. no `exactfrac/shore.py` implementation output is used to establish any expected fixture
+   value.
+
+Then, in order:
+
+4. `tests/test_shore.py` is written against those fixtures and this TEST_PLAN;
+5. the intended RED state is observed while `exactfrac.shore` does not yet exist;
+6. only then is `exactfrac/shore.py` implemented;
+7. S1--S12, targeted tests, the full suite, Ruff with cache disabled, and an independent
+   exhaustive small-universe/isolation audit are green;
+8. the completed unit adds a concise shore-representation engineering seam note to
+   `docs/CONFORMANCE.md`; no governing-source theorem label is invented merely for this
+   software representation layer, and no note is added before GREEN;
+9. shore code, its tests, and the CONFORMANCE seam note land as one atomic implementation
+   commit after the earlier shore-oracle commit.
+
+The shore unit does not implement graph-dependent shore sums, atomic families, witnesses,
+certificates, exact rational-pair helpers, argmin policy, cut reductions, branch logic, or
+the global solver.

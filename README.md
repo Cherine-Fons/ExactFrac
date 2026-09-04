@@ -135,6 +135,11 @@ Key repository-facing control documents are:
 - `docs/TEST_PLAN.md`.
 
 `GOVERNING_SHA256SUMS.txt` records the authenticated governing-document baseline.
+Verify that baseline against the five blobs at activation commit
+`900e15ee93ccfeda42ba36a355f1f1a6c9c43869` by hashing each
+`git show 900e15ee93ccfeda42ba36a355f1f1a6c9c43869:<path>` stream in manifest order;
+do not check it against the evolving worktree, where later controlled governing-document
+changes are expected to differ.
 
 ## Release discipline
 

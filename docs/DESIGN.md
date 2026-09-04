@@ -107,11 +107,24 @@ R12 Language rule: outputs are a certified fractional lower bound with a witness
 R13 Toolchain: minimum Python 3.11; pyproject.toml declares requires-python = ">=3.11".
     int.bit_count() is used with NO compatibility fallback. The release gate (§12) tests
     the minimum supported interpreter (3.11) as well as the development interpreter.
+R14 Governing-checksum baseline (adopted Sep 4, 2026):
+    `GOVERNING_SHA256SUMS.txt` authenticates the five governing-document files exactly as
+    they existed at V2.2 activation commit `900e15ee93ccfeda42ba36a355f1f1a6c9c43869`.
+    It is an immutable baseline inventory, not a rolling manifest. Verify the baseline
+    against the activation blobs by hashing each `git show
+    900e15ee93ccfeda42ba36a355f1f1a6c9c43869:<path>` stream in manifest order and
+    comparing those lines with `GOVERNING_SHA256SUMS.txt`, not against the evolving
+    worktree, where later controlled governing-document changes are expected to differ.
+    Later controlled changes to DESIGN, TEST_PLAN, or CONFORMANCE are authenticated by
+    their Git parent/tree/blob identities, exact diffs, tests, and audit records. Do not
+    refresh the baseline checksum file merely because a later unit changes one of those
+    documents.
 
 ## 3. Package layout
 
     exactfrac/            solver (stdlib only)
       instance.py         canonical instance, aggregation, active check
+      shore.py            finite-universe shore masks and strict list serialization
       families.py         atomic families F(T, pi; I, O); enumeration per branch
       flow.py             Edmonds–Karp reference backend behind the MaxFlow interface
       oracle.py           ExactBranchMin
@@ -257,6 +270,60 @@ R13 Toolchain: minimum Python 3.11; pyproject.toml declares requires-python = ">
       policy remains governed by §4.6.
     Toolchain note: bit_count() requires Python >= 3.10; minimum interpreter is pinned to
     3.11 with no fallback (R13).
+
+4.2A Production shore API and error boundary  (RULED — adopted 2026-09-04)
+    1. Unit ownership and public surface. `exactfrac.shore` owns only finite-universe shore-
+       mask construction, validation, strict sorted-index-list encoding/decoding, and
+       universe-relative complement. Its module-level `__all__` is exactly `Shore`,
+       `full_mask`, `validate_shore`, `shore_from_list`, `shore_to_list`, and
+       `shore_complement`; `Shore` is the alias `int`. `exactfrac.__init__` remains export-
+       free in this unit. The module is graph-independent: it imports neither
+       `exactfrac.instance` nor `exactfrac_verify`. Membership, union, intersection,
+       cardinality, and intersection parity remain the transparent integer operations
+       ruled in §4.2 rather than acquiring redundant public wrappers.
+    2. Universe and exact Python domain. Every public helper is parameterized by an
+       ExactFrac vertex count `n` having exact built-in type `int` and satisfying `n >= 1`;
+       `bool`, integer subclasses, floats, `Fraction`, and implicit `int(...)` coercion are
+       rejected. `full_mask(n)` returns exactly `(1 << n) - 1`. A shore value has exact
+       built-in type `int`. `validate_shore(n, U)` requires `0 <= U <= full_mask(n)` and
+       returns the unchanged integer `U`; negative integers and masks with any bit outside
+       `0..n-1` are invalid.
+    3. Empty and full shores. `0` is the valid representation of the empty shore, and
+       `full_mask(n)` is the valid representation of the complete vertex shore. Generic
+       shore validity does not impose nonemptiness. Any later witness, family, cut, or
+       optimization boundary that requires a nonempty or proper shore owns that additional
+       predicate and must not redefine the underlying subset representation.
+    4. Strict list serialization. `shore_to_list(n, U)` validates `n` and `U`, then returns
+       a fresh exact built-in list of member indices in strictly increasing order.
+       `shore_from_list(n, vertices)` accepts only an exact built-in list; every entry has
+       exact built-in type `int`, lies in `0..n-1`, and is strictly greater than its
+       predecessor. The empty list decodes to `0`. Duplicate, decreasing, unsorted,
+       out-of-range, or non-integer entries are rejected rather than sorted, deduplicated,
+       or coerced. Serialized shores use dense indices, never optional instance labels.
+    5. Complement and inline operations. `shore_complement(n, U)` validates its inputs and
+       returns exactly `full_mask(n) ^ U`. Bare Python `~U` is never accepted as a shore.
+       On already validated shore values, membership is `bool(U & (1 << v))`, union and
+       intersection are `U | W` and `U & W`, cardinality is `U.bit_count()`, and the parity
+       of `|U intersect T|` is `(U & T).bit_count() & 1`. Integer mask order is permitted
+       only where another unit explicitly fixes an enumeration order; it is not a new
+       mathematical tie-break.
+    6. Error taxonomy and validation order. Every malformed `n`, shore value, serialized
+       container, or serialized member raises the exact built-in class `ValueError`; this
+       unit introduces no shore-specific exception and does not reuse `InvalidInstance` or
+       `UnsupportedInstance`. Exception prose is diagnostic and not a stable API. Helpers
+       validate `n` first; mask-consuming helpers then validate `U`; list decoding then
+       validates the exact outer list and its entries in encounter order.
+    7. Complexity, exactness, and determinism. `full_mask`, `validate_shore`, and
+       `shore_complement` use a fixed number of exact integer/bit operations.
+       `shore_from_list` uses `O(k)` operations for a list of length `k`; `shore_to_list`
+       uses `O(n)` bit tests. No helper enumerates all `2^n` shores or iterates once per
+       numeric mask value. The module uses no `Fraction`, floating point, true division,
+       tolerance logic, or algorithmic iteration over a Python `set`.
+    8. Unit boundary. This unit does not compute graph-dependent quantities such as
+       `f(U)`, `e_q(U)`, `b_q(U)`, or `d_q(U)` and does not import `Instance`. It does not
+       implement atomic families, witnesses, certificates, §4.5 rational-pair arithmetic,
+       argmin policy, sign routing, parity-cut reduction, branch logic, or the global
+       solver. Those responsibilities remain with their separately ruled consumers.
 
 4.3 Atomic family  (RULED — adopted 2026-08-31)
     1. Representation: an immutable/frozen AtomicFamily carrying (T, pi, I, O), with
