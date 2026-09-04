@@ -2388,3 +2388,779 @@ do not settle the deferred external instance-construction exception taxonomy.
 
 All Stage-2A entries above are local flow-primitive fixtures. None is a claim about the
 global optimum of a complete compact ExactFrac instance.
+
+---
+
+## Post-Stage-2A production graph-instance oracle ruling
+
+**Governing obligations:** DESIGN §4.1 and §4.1A; TEST_PLAN I1--I15 and §18;
+canonical-source `def:instance`, `ass:active`, and `lem:aggregation`.
+
+These fixtures are fixed after the production graph-instance authority commit
+`61a96d12299f14e857b28d9a1e1be4078fba3aa4` and before either
+`tests/test_instance.py` or `exactfrac/instance.py` exists.
+
+They govern only production graph representation, normalization, strict object-level
+serialization, error classification, immutability, compactness, and module isolation. They
+make no claim about the modified set-pair-density optimum, any branch value, any shore
+operation, or any downstream solver component.
+
+The machine-facing exception expectations below use exact classes:
+
+- malformed or noncanonical graph-instance data: exact `InvalidInstance`;
+- structurally valid data outside the active regime: exact `UnsupportedInstance`.
+
+Because both classes are sibling subclasses of `ValueError`, a test that merely catches
+`ValueError` does not discharge the class distinction.
+
+---
+
+## ORACLE-013 — Canonical active graph instance and exact derived data
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `def:instance`; `ass:active`; DESIGN §4.1 and §4.1A;
+TEST_PLAN I1, I10--I12, I15.
+
+### Canonical instance
+
+Let
+
+```text
+n = 4
+edges = (
+    (0, 1, 5),
+    (0, 3, 2),
+    (1, 2, 4),
+    (2, 3, 3),
+)
+f = (2, 4, 6, 5)
+labels = None
+```
+
+The vertex set is exactly `0,1,2,3`. Every edge has canonical orientation `u < v`, the
+support pairs are strictly lexicographically increasing, every multiplicity is positive,
+and the support is nonempty and loopless.
+
+### Exact edge references and derived values
+
+Canonical tuple position gives:
+
+| `edge_ref` | Canonical edge |
+|---:|---|
+| `0` | `(0, 1, 5)` |
+| `1` | `(0, 3, 2)` |
+| `2` | `(1, 2, 4)` |
+| `3` | `(2, 3, 3)` |
+
+Therefore
+
+```text
+m = 4
+support_edges = ((0, 1), (0, 3), (1, 2), (2, 3))
+q = (5, 2, 4, 3)
+Q = 14
+```
+
+The multiplicity degree at each vertex is obtained by adding the multiplicity of every
+incident support edge:
+
+\[
+d_q(0)=5+2=7,
+\]
+
+\[
+d_q(1)=5+4=9,
+\]
+
+\[
+d_q(2)=4+3=7,
+\]
+
+\[
+d_q(3)=2+3=5.
+\]
+
+Hence
+
+```text
+d_q = (7, 9, 7, 5)
+```
+
+and the active inequalities are
+
+\[
+2\le7,
+\qquad
+4\le9,
+\qquad
+6\le7,
+\qquad
+5\le5.
+\]
+
+The instance is therefore structurally valid and active.
+
+### Machine-facing expected object
+
+```text
+n = 4
+edges = ((0, 1, 5), (0, 3, 2), (1, 2, 4), (2, 3, 3))
+f = (2, 4, 6, 5)
+labels = None
+m = 4
+support_edges = ((0, 1), (0, 3), (1, 2), (2, 3))
+q = (5, 2, 4, 3)
+Q = 14
+d_q = (7, 9, 7, 5)
+```
+
+The authoritative stored fields remain `n`, `edges`, `f`, and `labels`; the remaining
+values are derived and cannot be independently mutated.
+
+### Oracle status
+
+**Hand-derived before any production graph-instance test or implementation.**
+
+No `exactfrac.instance` output was used to establish the canonical order, edge references,
+total multiplicity, degree tuple, or active status.
+
+---
+
+## ORACLE-014 — Raw aggregation, endpoint orientation, and deterministic edge references
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `lem:aggregation`; DESIGN §4.1A.4 and §4.1A.7;
+TEST_PLAN I2, I3, I9, I11, I12.
+
+### Target canonical instance
+
+The target is the ORACLE-013 instance:
+
+```text
+((0, 1, 5), (0, 3, 2), (1, 2, 4), (2, 3, 3))
+```
+
+with `n = 4`, `f = (2, 4, 6, 5)`, and total multiplicity `Q = 14`.
+
+### Raw form A
+
+```text
+raw_a = (
+    (3, 2, 1),
+    (1, 0, 2),
+    (2, 1, 4),
+    (0, 3, 2),
+    (0, 1, 3),
+    (2, 3, 2),
+)
+```
+
+Endpoint orientation produces:
+
+```text
+(2, 3, 1)
+(0, 1, 2)
+(1, 2, 4)
+(0, 3, 2)
+(0, 1, 3)
+(2, 3, 2)
+```
+
+The repeated unordered pairs aggregate as
+
+\[
+q_{01}=2+3=5,
+\qquad
+q_{23}=1+2=3.
+\]
+
+The other group totals are
+
+\[
+q_{03}=2,
+\qquad
+q_{12}=4.
+\]
+
+Sorting the four resulting support pairs gives exactly the target canonical tuple.
+
+The raw total is
+
+\[
+1+2+4+2+3+2=14,
+\]
+
+so aggregation preserves `Q`.
+
+### Raw form B
+
+```text
+raw_b = (
+    (1, 2, 1),
+    (3, 0, 2),
+    (0, 1, 3),
+    (3, 2, 2),
+    (2, 1, 3),
+    (1, 0, 2),
+    (2, 3, 1),
+)
+```
+
+Here
+
+\[
+q_{12}=1+3=4,
+\qquad
+q_{01}=3+2=5,
+\qquad
+q_{23}=2+1=3,
+\qquad
+q_{03}=2.
+\]
+
+Again the total multiplicity is
+
+\[
+1+2+3+2+3+2+1=14.
+\]
+
+After orientation, aggregation, and sorting, `raw_b` yields the same target canonical
+instance.
+
+### Deterministic normalization result
+
+Each of the following must produce the complete ORACLE-013 canonical object:
+
+```text
+Instance.from_records(4, raw_a, (2, 4, 6, 5))
+Instance.from_records(4, tuple(reversed(raw_a)), (2, 4, 6, 5))
+Instance.from_records(4, raw_b, (2, 4, 6, 5))
+```
+
+In every case:
+
+```text
+edge_ref 0 = (0, 1, 5)
+edge_ref 1 = (0, 3, 2)
+edge_ref 2 = (1, 2, 4)
+edge_ref 3 = (2, 3, 3)
+```
+
+and
+
+```text
+m = 4
+q = (5, 2, 4, 3)
+Q = 14
+d_q = (7, 9, 7, 5)
+```
+
+The canonical constructor does not perform this repair. Supplying any reversed, repeated,
+or out-of-order raw form directly to `Instance(...)` is an exact `InvalidInstance` case.
+
+### Compactness requirement
+
+Normalization sums multiplicities by group. It does not materialize five separate copies
+of `(0,1)`, four separate copies of `(1,2)`, or any other unit-copy expansion.
+
+### Oracle status
+
+**Hand-derived before any production graph-instance test or implementation.**
+
+The group sums, canonical order, and derived values were established from the raw records
+and `lem:aggregation`, not from an instance normalizer.
+
+---
+
+## ORACLE-015 — Strict versioned serialization and nonalgorithmic labels
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.1A.2, §4.1A.3, §4.1A.5, and §9;
+TEST_PLAN I13--I15.
+
+### Unlabeled canonical object
+
+Use ORACLE-013 with `labels = None`.
+
+Its exact JSON-ready object representation is:
+
+```python
+{
+    "format": "exactfrac-instance/1",
+    "n": 4,
+    "edges": [
+        [0, 1, 5],
+        [0, 3, 2],
+        [1, 2, 4],
+        [2, 3, 3],
+    ],
+    "f": [2, 4, 6, 5],
+}
+```
+
+The optional `labels` key is absent.
+
+Strict object-level deserialization of this dictionary must reconstruct the exact
+ORACLE-013 canonical instance.
+
+### Labeled canonical object
+
+Let
+
+```text
+labels = ("north", 17, "south", 23)
+```
+
+Every label is an exact built-in `str` or exact built-in `int`, the labels are pairwise
+distinct, and the tuple is aligned with dense vertex order `0,1,2,3`.
+
+The exact JSON-ready object is:
+
+```python
+{
+    "format": "exactfrac-instance/1",
+    "n": 4,
+    "edges": [
+        [0, 1, 5],
+        [0, 3, 2],
+        [1, 2, 4],
+        [2, 3, 3],
+    ],
+    "f": [2, 4, 6, 5],
+    "labels": ["north", 17, "south", 23],
+}
+```
+
+Strict deserialization must reconstruct:
+
+```text
+labels = ("north", 17, "south", 23)
+```
+
+while preserving all mathematical graph data.
+
+### Label-independence comparison
+
+The labeled and unlabeled instances have the same:
+
+```text
+n
+edges
+f
+m
+support_edges
+q
+Q
+d_q
+edge_ref sequence
+```
+
+Their only governed difference is the `labels` field and the corresponding optional
+serialized key.
+
+No constructor, normalization result, edge reference, degree, or active-condition result
+may depend on the label values.
+
+### Strict deserialization boundary
+
+`Instance.from_dict(...)` validates a canonical external object. It does not:
+
+- reorient reversed serialized edges;
+- aggregate repeated serialized edges;
+- sort out-of-order serialized edges;
+- ignore unknown keys;
+- supply missing keys;
+- accept a wrong format tag;
+- accept tuple containers where the schema requires exact lists.
+
+Those cases belong to ORACLE-016 and raise exact `InvalidInstance`.
+
+### Oracle status
+
+**Hand-derived before any production graph-instance test or implementation.**
+
+The serialized forms were written directly from the ruled schema and the ORACLE-013
+canonical data. No serializer or deserializer output established them.
+
+---
+
+## ORACLE-016 — Malformed production graph-instance rejection matrix
+
+**Classification:** `NEGATIVE`
+
+**Source obligations:** `def:instance`; DESIGN §4.1 and §4.1A.3--§4.1A.6;
+TEST_PLAN I4--I7, I10, I11, I13, I14.
+
+### Exact exception contract
+
+Every case in this oracle raises an exception whose exact type is:
+
+```text
+InvalidInstance
+```
+
+The expected result is not merely “some `ValueError`.”
+
+For type-adversarial tests, define a representative subclass:
+
+```python
+class IntSubclass(int):
+    pass
+```
+
+### Canonical-constructor rejection seeds
+
+Unless a different value is shown, use the valid control data:
+
+```text
+n = 2
+edges = ((0, 1, 2),)
+f = (1, 1)
+labels = None
+```
+
+The following are exact `InvalidInstance` cases:
+
+| Category | Representative input |
+|---|---|
+| nonexact `n` | `n=True`, `n=2.0`, `n=IntSubclass(2)` |
+| invalid `n` value | `n=0`, `n=-1` |
+| wrong edge container | `edges=[(0, 1, 2)]` |
+| wrong edge-record container | `edges=([0, 1, 2],)` |
+| short edge record | `edges=((0, 1),)` |
+| fourth weight field | `edges=((0, 1, 2, 99),)` |
+| negative endpoint | `edges=((-1, 1, 2),)` |
+| out-of-range endpoint | `edges=((0, 2, 2),)` with `n=2` |
+| nonexact endpoint | endpoint `True`, `1.0`, `Fraction(1, 1)`, or `IntSubclass(1)` |
+| loop | `edges=((0, 0, 2),)` |
+| reversed canonical edge | `edges=((1, 0, 2),)` |
+| repeated canonical pair | `edges=((0, 1, 1), (0, 1, 1))` |
+| out-of-order canonical tuple | `edges=((1, 2, 1), (0, 1, 1))`, `n=3`, `f=(1, 1, 1)` |
+| zero multiplicity | `edges=((0, 1, 0),)` |
+| negative multiplicity | `edges=((0, 1, -1),)` |
+| nonexact multiplicity | `True`, `1.0`, `Fraction(1, 1)`, `IntSubclass(1)`, or a string |
+| empty support | `edges=()` |
+| wrong `f` container | `f=[1, 1]` |
+| wrong `f` length | `f=(1,)` or `f=(1, 1, 1)` when `n=2` |
+| nonpositive `f` | `f=(0, 1)` or `f=(-1, 1)` |
+| nonexact `f` entry | `True`, `1.0`, `Fraction(1, 1)`, `IntSubclass(1)`, or a string |
+| wrong label container | `labels=["a", "b"]` |
+| wrong label length | `labels=("a",)` |
+| duplicate labels | `labels=("a", "a")` |
+| invalid label type | label `True`, `1.0`, `Fraction(1, 1)`, tuple, or other object |
+
+The out-of-order three-vertex seed is structurally active if its edges are sorted:
+
+```text
+sorted edges = ((0, 1, 1), (1, 2, 1))
+d_q = (1, 2, 1)
+f = (1, 1, 1)
+```
+
+Therefore its canonical-constructor rejection isolates ordering rather than active failure.
+
+### Raw-normalization rejection seeds
+
+`Instance.from_records(...)` also raises exact `InvalidInstance` for:
+
+- a non-tuple outer record container;
+- a non-tuple individual record;
+- wrong record arity;
+- a loop;
+- an out-of-range or nonexact endpoint;
+- zero, negative, or nonexact multiplicity;
+- malformed `n`, `f`, or labels.
+
+Unlike reversed endpoints, loops are rejected and are not silently discarded.
+
+### Strict-deserialization rejection seeds
+
+Starting from the valid ORACLE-015 serialized object, each of the following raises exact
+`InvalidInstance`:
+
+- outer object is not an exact `dict`;
+- a `dict` subclass is supplied;
+- `format` is missing;
+- `n`, `edges`, or `f` is missing;
+- an unknown key is present;
+- `format` is not exactly `exactfrac-instance/1`;
+- `edges` is a tuple rather than an exact list;
+- a serialized edge record is a tuple rather than an exact list;
+- `f` is a tuple rather than an exact list;
+- present `labels` is `None` or a tuple rather than an exact list;
+- a serialized edge is reversed;
+- serialized support pairs repeat;
+- serialized edges are out of canonical order;
+- any serialized numeric or label value violates the exact domain.
+
+Strict deserialization does not repair any of these conditions.
+
+### Oracle status
+
+**Ruled before any production graph-instance test or implementation.**
+
+The rejection matrix is derived from the production API boundary. It does not report
+behavior observed from `exactfrac.instance`.
+
+---
+
+## ORACLE-017 — Unsupported active regime and malformed-before-active precedence
+
+**Classification:** `NEGATIVE`
+
+**Source obligations:** `ass:active`; DESIGN §4.1.7 and §4.1A.6;
+TEST_PLAN I8 and I10.
+
+### Unsupported seed A — nonisolated degree-capacity failure
+
+```text
+n = 2
+edges = ((0, 1, 2),)
+f = (3, 1)
+labels = None
+```
+
+The support is nonempty, loopless, simple, canonically ordered, and has positive
+multiplicity.
+
+The exact degrees are:
+
+```text
+d_q = (2, 2)
+```
+
+Vertex `0` violates the active condition:
+
+\[
+f(0)=3>2=d_q(0).
+\]
+
+Expected exact exception:
+
+```text
+UnsupportedInstance
+```
+
+### Unsupported seed B — isolated vertex
+
+```text
+n = 3
+edges = ((0, 1, 2),)
+f = (1, 1, 1)
+labels = None
+```
+
+The graph representation is structurally valid. Vertex `2` is isolated, so
+
+```text
+d_q = (2, 2, 0)
+```
+
+and
+
+\[
+f(2)=1>0=d_q(2).
+\]
+
+Expected exact exception:
+
+```text
+UnsupportedInstance
+```
+
+The isolated vertex is not itself malformed. The instance is rejected only because it is
+outside the active theorem regime.
+
+### Valid active empty-family control
+
+The existing ORACLE-001 graph data are:
+
+```text
+n = 2
+edges = ((0, 1, 1),)
+f = (1, 1)
+```
+
+Here
+
+```text
+d_q = (1, 1)
+```
+
+so construction succeeds and raises neither production exception. The fact that the later
+admissible optimization family is empty is not an instance-construction error.
+
+### Malformed-before-active precedence seeds
+
+Each following case has data that would also lead to an active-regime problem after a
+hypothetical repair, but malformed validation must win first:
+
+| Entry point and seed | Exact expected class |
+|---|---|
+| `Instance(3, ((1, 0, 2),), (1, 1, 1))` — reversed canonical edge plus isolated vertex | `InvalidInstance` |
+| `Instance.from_records(3, ((0, 0, 2),), (1, 1, 1))` — loop plus isolated vertices | `InvalidInstance` |
+| `Instance(2, ((0, 1, 0),), (3, 1))` — zero multiplicity plus apparent active failure | `InvalidInstance` |
+| `Instance.from_dict(...)` with a wrong format tag and the data of unsupported seed A | `InvalidInstance` |
+
+No malformed case may be relabeled `UnsupportedInstance` merely because an active check
+would also fail.
+
+### Oracle status
+
+**Hand-derived and ruled before any production graph-instance test or implementation.**
+
+The degree vectors and active violations were calculated directly from the canonical edge
+data. No constructor output established the exception classes.
+
+---
+
+## ORACLE-018 — Module surface, immutability, isolation, and compact magnitude
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `def:instance`; DESIGN §4.1A.1--§4.1A.3 and §4.1A.8;
+TEST_PLAN I11 and I15.
+
+### Exact public surface
+
+The production module-level export sequence is exactly:
+
+```text
+Edge
+Instance
+InvalidInstance
+UnsupportedInstance
+```
+
+Equivalently, tests may compare:
+
+```python
+tuple(exactfrac.instance.__all__) == (
+    "Edge",
+    "Instance",
+    "InvalidInstance",
+    "UnsupportedInstance",
+)
+```
+
+The package root does not re-export those names in this unit.
+
+The graph-instance module exposes no shore-helper or downstream solver API. In particular,
+this unit does not introduce public names for:
+
+```text
+validate_shore
+shore_from_list
+shore_to_list
+shore_complement
+AtomicFamily
+Witness
+ExactBranchMin
+SolveBranchStandard
+SolveBranchAccelerated
+StrongCompactMSPD
+```
+
+The absence list is a scope guard, not a complete forecast of every future symbol.
+
+### Frozen and slotted canonical object
+
+The authoritative stored-state names are exactly:
+
+```text
+n
+edges
+f
+labels
+```
+
+The authority requires a frozen and slotted object but does not require one particular
+Python implementation technique for achieving that contract. Assignments to the stored
+fields after construction are rejected, and the tuple-backed `edges`, `f`, and optional
+`labels` values are not list-mutable.
+
+Derived properties do not create independently mutable graph state.
+
+The graph-instance object has no graph-owned `full_mask` field or property in this unit;
+shore-universe operations remain deferred to the separate shore layer.
+
+### Compact enormous-multiplicity fixture
+
+Let
+
+```text
+B = 1 << 4096
+n = 2
+edges = ((0, 1, B),)
+f = (1, 1)
+labels = None
+```
+
+Then
+
+```text
+m = 1
+support_edges = ((0, 1),)
+q = (B,)
+Q = B
+d_q = (B, B)
+```
+
+The active condition holds because `1 <= B` at both vertices.
+
+The object contains exactly one support-edge record and one multiplicity integer. It does
+not contain `B` unit-copy records and performs no iteration once per represented copy.
+
+The multiplicity bit length is
+
+```text
+B.bit_length() = 4097
+```
+
+while the structural support size remains `m = 1`.
+
+### Isolation boundary
+
+Static and fresh-process checks must establish that importing `exactfrac.instance` does not
+import any `exactfrac_verify` module.
+
+Source inspection must also show that this unit does not import or implement shore,
+family, witness, arithmetic, argmin, sign-routing, parity-cut, branch, or global-solver
+machinery.
+
+### Oracle status
+
+**Ruled before any production graph-instance test or implementation.**
+
+The public surface, immutable field model, compact large-multiplicity result, and isolation
+expectations come from the committed graph-instance authority rather than implementation
+inspection.
+
+---
+
+## Production graph-instance oracle coverage matrix
+
+| TEST_PLAN obligation | Pre-implementation oracle evidence |
+|---|---|
+| I1 — valid canonical instance | ORACLE-013 |
+| I2 — repeated endpoint records | ORACLE-014 |
+| I3 — reversed endpoint orientation | ORACLE-014 |
+| I4 — loop | ORACLE-016 |
+| I5 — empty support | ORACLE-016 |
+| I6 — nonpositive multiplicity | ORACLE-016 |
+| I7 — nonpositive `f` value | ORACLE-016 |
+| I8 — active-condition failure | ORACLE-017 |
+| I9 — deterministic canonical edge order | ORACLE-014 |
+| I10 — exception taxonomy and validation precedence | ORACLE-016 and ORACLE-017 |
+| I11 — exact Python domain and compact multiplicity | ORACLE-016 and ORACLE-018 |
+| I12 — canonical constructor versus raw normalization | ORACLE-013 and ORACLE-014 |
+| I13 — strict versioned object round trip | ORACLE-015 and ORACLE-016 |
+| I14 — labels are nonalgorithmic metadata | ORACLE-015 and ORACLE-016 |
+| I15 — module surface, immutability, and isolation | ORACLE-018 |
+
+These fixtures establish only graph-instance behavior. They do not discharge any shore,
+witness, family, arithmetic, cut-reduction, branch, certificate, or global-optimization
+obligation.
