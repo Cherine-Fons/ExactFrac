@@ -812,6 +812,190 @@ A shore may occur in more than one atomic family.
 
 Overlap must not change the global residual minimum.
 
+### F5 — production public surface and immutable descriptor
+
+Expected:
+
+- `exactfrac.families.__all__` is exactly the Ruff-sorted sequence `AtomicFamily`,
+  `enumerate_atomic_families`;
+- `exactfrac.__init__` remains export-free in this unit;
+- `AtomicFamily` is frozen, slotted, immutable, and hashable;
+- its authoritative fields are exactly `T`, `pi`, `I`, and `O`;
+- the module introduces no custom exception and malformed public input raises exact
+  built-in `ValueError`;
+- `I & O != 0` remains valid descriptor state and does not raise.
+
+### F6 — exact descriptor domain and one nonemptiness predicate
+
+Reject `bool`, integer subclasses, floats, `Fraction`, negative masks, invalid parity, and
+implicit coercion for direct descriptor fields.
+
+For exhaustive small universes, compare `AtomicFamily.is_nonempty` with independent
+enumeration of all valid shores satisfying
+
+\[
+I\subseteq U,\qquad U\cap O=\varnothing,\qquad |U\cap T|\equiv\pi\pmod2.
+\]
+
+Expected:
+
+- overlap `I & O != 0` always gives `False`;
+- any free terminal in `T \ (I \cup O)` makes both parity choices nonempty;
+- with no free terminal, nonemptiness is exactly the forced parity of `I & T`;
+- no mutable empty/infeasible flag exists.
+
+### F7 — graph-derived masks on the aggregated instance
+
+For hand-derived active compact instances, independently compute
+
+\[
+T_+=\{v:f(v)+d_q(v)\text{ odd}\},\qquad
+T_f=\{v:f(v)\text{ odd}\},
+\]
+
+\[
+P=\{v:d_q(v)>f(v)\},\qquad
+A=\{v:f(v)\ge2\},\qquad
+W=\{v:f(v)=1\}.
+\]
+
+Expected:
+
+- generated families carry exactly the corresponding terminal mask;
+- D1 forced-in first coordinates traverse exactly the vertices of `P`;
+- the D2 singleton block traverses exactly `A`;
+- the D2 triple block is generated from exactly the three-subsets of `W`;
+- labels do not affect any mask, descriptor, count, or order;
+- no raw records are re-aggregated in this unit.
+
+### F8 — exact four-branch return shape and enumeration order
+
+Expected:
+
+- `enumerate_atomic_families(instance)` returns one exact tuple of length four in branch
+  order `0,1,2,3`;
+- each branch component is an exact tuple;
+- D0 contains its one descriptor;
+- D1 order is increasing `p`, then canonical `edge_ref`, then the `u-in/v-out` orientation
+  before the reverse orientation;
+- D2 lists increasing `A` singletons before lexicographic increasing triples from `W`;
+- D3 uses canonical `edge_ref` order and the `u-in/v-out` orientation before the reverse;
+- identical calls return equal tuples with identical order.
+
+### F9 — exact count, empty-descriptor retention, and no deduplication
+
+For every test instance, verify
+
+\[
+R_{\mathrm{actual}}
+=
+1+2|P|m+|A|+\binom{|W|}{3}+2m
+\]
+
+and
+
+\[
+R_{\mathrm{actual}}
+\le
+1+2mn+n+\binom n3+2m.
+\]
+
+Expected:
+
+- descriptors with `I & O != 0` remain in their ruled positions;
+- duplicate descriptors remain present when the displayed source unions generate them;
+- family overlap is not deduplicated through a set or any other order-changing container;
+- the source expression with `n` is tested as an upper bound, not as the exact returned
+  count for every instance.
+
+### F10 — `prop:domain-decomp` equality against `prop:branch-transform`
+
+Use several tiny active instances, including cases with:
+
+- `P` empty and nonempty;
+- `A` empty and nonempty;
+- fewer than three and at least three vertices in `W`;
+- descriptor overlap;
+- naturally generated empty descriptors.
+
+Enumerate nonempty shores through the independent brute-verifier layer. The independent
+side of the comparison must implement the branch domains literally from
+`prop:branch-transform`; it must not derive a domain from `T_+`, `T_f`, `P`, `A`, `W`, an
+atomic-family union, or the production family-membership predicate.
+
+For each nonempty shore `U`, independently compute the fixed-shore quantities
+
+\[
+s:=f(U),\qquad e:=e_q(U),\qquad b:=b_q(U),\qquad d:=d_q(U)=2e+b
+\]
+
+and then apply exactly the source definitions
+
+\[
+D_0:\ s+b\text{ odd},
+\]
+
+\[
+D_1:\ s+b\text{ even},\ b\ge1,\ d-s>0,
+\]
+
+\[
+D_2:\ s\text{ odd},\ s\ge3,
+\]
+
+\[
+D_3:\ s\text{ even},\ b\ge1.
+\]
+
+Do not replace `d-s > 0` by membership in `P`, replace `b >= 1` by the existence of a
+crossing support edge, replace `s >= 3` by the `A`/`W` decomposition, or add a family-side
+prefilter to the comparator. Those equivalences belong to the proof of
+`prop:domain-decomp` and are precisely what the equality test is meant to challenge.
+
+For each branch, compare the independently evaluated `prop:branch-transform` domain with
+the union of shores satisfying the generated atomic-family descriptors.
+
+Expected:
+
+- equality of the two shore sets for every branch and test instance;
+- every source-domain shore is covered;
+- no covered shore lies outside the literal source branch domain;
+- the tested equality provides finite executable evidence for the proof's automatic
+  side-condition claims, including the nonempty-shore convention, the exclusion of the
+  impossible `D_0` endpoint `s+b = 1`, the automatic `D_1` lower endpoint, and the `D_2`
+  lower bound;
+- a shore may satisfy multiple descriptors;
+- no preferred descriptor or partition claim is inferred.
+
+### F11 — deterministic repetition and magnitude independence
+
+Use otherwise identical canonical instances whose large exact `q` and `f` values preserve
+the same `T_+`, `T_f`, `P`, `A`, and `W` classifications.
+
+Expected:
+
+- the exact descriptor tuples, order, and count remain unchanged;
+- construction does not iterate once per multiplicity or capacity unit;
+- optional labels do not change results;
+- repeated calls are byte-for-byte structurally equal.
+
+This is a support-and-classification-controlled regression, not a claim that arbitrary
+changes in numerical magnitudes preserve the derived masks.
+
+### F12 — isolation, exactness, and source discipline
+
+Expected:
+
+- production family code imports only standard-library modules plus
+  `exactfrac.instance` and `exactfrac.shore`;
+- importing `exactfrac.families` imports no `exactfrac_verify` module;
+- the source contains no `Fraction`, float literal, `float(...)`, true division, or
+  tolerance comparison;
+- no output order or control-flow order is derived from iterating a Python `set`;
+- no multiplicity is expanded into explicit copies;
+- the module defines no sign-routing, parity-cut, residual-argmin, branch-iteration,
+  witness, certificate, or global-solver API.
+
 ---
 
 ## 9. Future residual-argmin tests
@@ -1335,3 +1519,44 @@ Then, in order:
 The shore unit does not implement graph-dependent shore sums, atomic families, witnesses,
 certificates, exact rational-pair helpers, argmin policy, cut reductions, branch logic, or
 the global solver.
+
+## 20. Production atomic-family completion gate
+
+This unit consumes the historical obligations F1--F4 and the supplemental production
+obligations F5--F12 above. It does not consume or modify the residual-argmin obligations
+A1--A5, witness obligations W1--W7, or any cut-reduction or branch-solver obligation.
+
+Before `tests/test_families.py` exists:
+
+1. the canonical V2.2 source statements fixing the nonempty-shore abbreviations
+   `s`, `e`, `b`, and `d`, defining the four `prop:branch-transform` domains, defining
+   `T_+`, `T_f`, `F(T,pi;I,O)`, `P`, `A`, and `W`, stating `prop:domain-decomp` and its
+   proof, giving the bound `R`, and specifying `alg:global` line 1 are authenticated and
+   read directly;
+2. the production public surface, exact descriptor domain, one nonemptiness predicate,
+   derived-mask ownership, exact four-branch return shape, and deterministic enumeration
+   order are ruled and committed;
+3. hand-derived family fixtures are added to `docs/ORACLE_CATALOG.md`, covering derived
+   masks, every branch sequence, exact actual count versus the source upper bound,
+   overlapping and empty descriptors, exhaustive nonemptiness, and tiny-instance equality
+   against branch domains evaluated independently from `prop:branch-transform`;
+4. no `exactfrac/families.py` implementation output is used to establish any expected
+   fixture value.
+
+Then, in order:
+
+5. `tests/test_families.py` is written against the committed authority, family oracles, and
+   F1--F12;
+6. the intended RED state is observed while `exactfrac.families` does not yet exist;
+7. only then is `exactfrac/families.py` implemented;
+8. F1--F12, targeted tests, the full suite, Ruff with cache disabled, and an independent
+   exhaustive nonemptiness/domain-coverage/isolation audit are green;
+9. `prop:domain-decomp` is promoted from `planned` to `green` only after the generated
+   branch unions agree exactly with the literal `prop:branch-transform` domains computed
+   independently on the declared tiny active corpus;
+10. family code, its tests, and its CONFORMANCE update land as one atomic implementation
+    commit after the earlier family-oracle commit.
+
+The atomic-family unit does not implement sign routing, parity-cut reduction,
+`ExactBranchMin`, Standard or Accelerated branch iteration, witness reconstruction,
+certificate verification, or the global solver.

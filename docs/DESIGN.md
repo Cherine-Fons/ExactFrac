@@ -353,6 +353,99 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
     Conformance: agreement of this predicate with V2.1's family definition is discharged
     by prop:domain-decomp (tests/test_families.py::test_cover) against the brute verifier.
 
+4.3A Production atomic-family API and deterministic decomposition
+     (RULED — adopted 2026-09-04)
+    1. Source binding and ownership. `exactfrac.families` is the first production consumer of
+       the graph-dependent sets in `prop:domain-decomp`. It consumes an already validated,
+       already aggregated `Instance` and the §4.2 shore representation. It computes the masks
+         T_plus = {v : f[v] + d_q[v] is odd},
+         T_f    = {v : f[v] is odd},
+         P      = {v : d_q[v] > f[v]},
+         A      = {v : f[v] >= 2},
+         W      = {v : f[v] == 1}
+       from dense vertex order and `Instance.f` / `Instance.d_q`; labels are ignored. This is
+       the production realization of `alg:global` line 1 on the aggregated support graph.
+    2. Public surface. The module-level `__all__` is the Ruff-sorted sequence
+       `AtomicFamily`, `enumerate_atomic_families`. `exactfrac.__init__` remains export-free
+       in this unit. `AtomicFamily` is a frozen, slotted, immutable and hashable descriptor
+       with authoritative fields exactly `T`, `pi`, `I`, and `O`. The function
+       `enumerate_atomic_families(instance)` returns all four branch decompositions at once.
+    3. Descriptor domain and errors. `T`, `I`, and `O` have exact built-in type `int` and are
+       nonnegative; `pi` has exact built-in type `int` and belongs to `{0,1}`. `bool`,
+       integer subclasses, floats, `Fraction`, and coercion are rejected. Malformed
+       descriptors and a nonexact `Instance` argument raise exact built-in `ValueError`;
+       this unit introduces no family-specific exception. Because an `AtomicFamily` stores
+       no universe size, its direct constructor checks nonnegativity but cannot check a high
+       bit against `n`; `enumerate_atomic_families` constructs and range-validates every
+       generated mask against the consumed instance universe.
+    4. Overlap and nonemptiness. `I & O != 0` is accepted descriptor state and denotes the
+       empty family; it is never raised as malformed. `AtomicFamily.is_nonempty` is the one
+       derived Boolean predicate and is true exactly when
+         I & O == 0
+       and either
+         T \ (I union O) is nonempty,
+       or
+         (I & T).bit_count() & 1 == pi.
+       The free-terminal mask is computed by finite mask operations without treating bare
+       Python `~` as a shore. No mutable `empty`, `infeasible`, or cached-authority flag is
+       stored.
+    5. Return shape. `enumerate_atomic_families(instance)` returns an exact built-in
+       four-tuple `(D0_families, D1_families, D2_families, D3_families)` in branch order
+       `j = 0,1,2,3`. Every component is an exact tuple of `AtomicFamily` values. Returning
+       all four tuples in one call permits `alg:global` to compute the derived masks and the
+       complete deterministic decomposition once and pass one immutable branch tuple to
+       each later branch solve.
+    6. D0 order. Branch 0 contains exactly
+         AtomicFamily(T_plus, 1, 0, 0).
+    7. D1 order. Traverse `p` through `P` in increasing dense vertex order. For each `p`,
+       traverse support edges `uv` in canonical `edge_ref` order. For each edge, emit first
+         F(T_plus, 0; {p,u}, {v})
+       and then
+         F(T_plus, 0; {p,v}, {u}).
+       Mask unions collapse repeated forced-in vertices naturally. If `p` equals the
+       forced-out endpoint, the resulting `I & O != 0` descriptor is retained as an empty
+       family.
+    8. D2 order. First traverse `a` through `A` in increasing dense vertex order and emit
+         F(T_f, 1; {a}, empty).
+       Then traverse the three-element subsets `{u,v,w}` of `W` in lexicographic increasing
+       vertex-tuple order and emit
+         F(T_f, 1; {u,v,w}, empty).
+       The singleton block precedes the triple block exactly as displayed in
+       `prop:domain-decomp`.
+    9. D3 order. Traverse support edges `uv` in canonical `edge_ref` order. For each edge,
+       emit first
+         F(T_f, 0; {u}, {v})
+       and then
+         F(T_f, 0; {v}, {u}).
+    10. Count, overlap, and no deduplication. The exact number of descriptors returned is
+          R_actual = 1 + 2*|P|*m + |A| + binom(|W|,3) + 2*m.
+        The source quantity
+          R = 1 + 2*m*n + n + binom(n,3) + 2*m
+        is an upper bound, not an assertion that every instance returns exactly `R`
+        descriptors. Empty descriptors, repeated descriptors, and overlapping family
+        coverage are retained in the fixed sequence; no set-based deduplication, emptiness
+        filtering, or order-changing normalization occurs in this unit.
+    11. Coverage semantics. For a validated shore `U`, membership in a descriptor is the
+        mathematical predicate
+          (U & I) == I,
+          (U & O) == 0,
+          (U & T).bit_count() & 1 == pi.
+        This predicate is used by independent tests to compare the union of generated
+        families with each source branch domain. It is not added as another public wrapper
+        in this unit because the production residual oracle consumes descriptors through
+        cut reduction rather than enumerating their shores.
+    12. Complexity, exactness, and determinism. Derived masks use `O(n)` exact operations.
+        Descriptor construction uses `O(R_actual)` fixed-order operations after the
+        canonical support scan, for total `O(n + m + R_actual)` operations. The module never
+        expands multiplicities, iterates once per copy, or lets `q`/`f` magnitude control an
+        iteration count. It uses no `Fraction`, floating point, true division, tolerance
+        logic, or output order derived from Python `set` iteration.
+    13. Unit boundary. This unit does not evaluate `f(U)`, `e_q(U)`, `b_q(U)`, `d_q(U)`,
+        branch residuals, or exact quotients. It does not implement sign routing,
+        parity-cut reduction, `ExactBranchMin`, branch iteration, witness reconstruction,
+        certificate logic, or the global solver. It prepares the immutable family
+        descriptors that those later units consume.
+
 4.4 Witness and certificate representation  (RULED — adopted 2026-08-31)
     1. Witness vs value are SEPARATE. The mathematical Witness is exactly (U, y),
        matching V2.1's compact witness (U*, y*). The exact quotient (N, D) is the
