@@ -58,6 +58,24 @@ done until its row exists and its test is green.
   `tests/test_instance.py::test_instance_source_does_not_derive_algorithmic_order_from_set_iteration`,
   and `tests/test_instance.py::test_instance_source_and_fresh_import_are_verifier_isolated`.
 
+## Shore-representation implementation note
+
+- Shore representation is an engineering/data-representation seam rather than a separately
+  labeled governing-source theorem. No new theorem-label row is created solely for this
+  unit. `tests/test_shore.py` supplies executable evidence for TEST_PLAN S1--S12.
+- Historical S1--S3 document the semantics of validated integer masks. S4--S12 exercise the
+  actual `exactfrac.shore` validation, strict sorted-list serialization, universe-relative
+  complement, exact plain-`ValueError` boundary, public surface, compact large-universe
+  behavior, and graph-independent responsibility boundary.
+- TEST_PLAN R3, R4, D1, and import isolation remain cross-cutting engineering obligations,
+  not separate theorem rows. Their direct checks are
+  `tests/test_shore.py::test_oracle_022_correctness_path_contains_no_fraction_float_or_true_division`,
+  `tests/test_shore.py::test_oracle_022_source_does_not_derive_order_from_set_iteration`,
+  and `tests/test_shore.py::test_oracle_022_fresh_process_import_isolation`.
+- The separate handoff audit supplies reproducible implementation evidence over 510 valid
+  masks, 87,380 ordered mask pairs, and 20,000 random large-universe cases. This finite
+  audit does not prove a universal theorem and is not a production solver dependency.
+
 ## V2.2 authority-activation note
 
 - V2.2 changes only the zero-arc totalization and zero-safe complexity carrier attached to
