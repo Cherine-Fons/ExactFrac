@@ -9,6 +9,8 @@ done until its row exists and its test is green.
 | prop:expanded-equivalence | compact objective equals the expanded-copy objective | tests/test_verify_brute.py::test_compact_expanded_agree | green |
 | lem:empty | Q = 1 single edge, f ≡ 1 → ((0,1), Empty) | tests/test_verify_brute.py::test_oracle_001_brute_owned_empty_state | green |
 | lem:unit | constructive unit witness is admissible with ratio ≥ 1 | tests/test_verify_brute.py::test_oracle_002_witness_is_admissible_and_preserves_raw_value | green |
+| def:instance | finite nonempty loopless compact support; positive integer multiplicities and f; exact n, m, Q, and d_q data | tests/test_instance.py::test_oracle_013_canonical_active_instance_and_exact_derived_data; tests/test_instance.py::test_canonical_constructor_rejects_exact_oracle_016_cases | green |
+| lem:aggregation | repeated unordered raw records are oriented, grouped, and summed exactly into one canonical support edge without explicit-copy expansion | tests/test_instance.py::test_oracle_014_raw_forms_normalize_to_oracle_013; tests/test_instance.py::test_every_permutation_of_raw_a_has_the_same_canonical_result; tests/test_instance.py::test_reversed_and_repeated_raw_pairs_aggregate_by_exact_addition; tests/test_instance.py::test_enormous_multiplicity_remains_one_compact_support_record | green |
 | prop:domain-decomp | atomic families cover each branch domain | tests/test_families.py::test_cover | planned |
 | lem:ek | zero-arc totalization; exact minimum and inclusionwise-minimal source shore; O(NE) augmentations and uniform O(N+NE^2) operations | tests/test_flow.py (TEST_PLAN FL1-FL12) | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
@@ -22,8 +24,9 @@ done until its row exists and its test is green.
 - The `lem:empty` row above discharges the definition-level ORACLE-001 empty-family
   behavior owned by the independent brute verifier: exact value `(0,1)` with no
   manufactured witness. Production input construction and the
-  malformed-vs-`UnsupportedInstance` distinction remain deferred to the
-  `exactfrac.instance` unit under TEST_PLAN E1/I8.
+  malformed-vs-`UnsupportedInstance` distinction are now discharged separately by the
+  `def:instance` row and `tests/test_instance.py`; this does not enlarge the
+  `lem:empty` claim.
 - B9 multiple-global-maximizer coverage is an engineering verification obligation rather
   than a separate governing-source theorem-label row. Its independently hand-derived source fixture is
   ORACLE-004, committed before the consuming test in commit `083949f`; its green test is
@@ -33,6 +36,27 @@ done until its row exists and its test is green.
   equivalence is a mathematical theorem supplied by the governing source; finite testing
   does not prove that proposition. Broader exhaustive tiny-domain cross-validation may
   strengthen empirical coverage later without changing the theorem's status.
+
+## Graph-instance implementation notes
+
+- The `def:instance` row records executable evidence for the production representation of
+  finite nonempty loopless compact support with positive integer multiplicities and `f`,
+  together with exact canonical and derived data. The active-regime behavior under
+  `ass:active` is exercised by
+  `tests/test_instance.py::test_oracle_017_structurally_valid_active_failures_are_exact_unsupported`
+  and
+  `tests/test_instance.py::test_oracle_017_malformed_validation_precedes_active_check`; no
+  separate theorem-discharge row is created for an assumption.
+- The `lem:aggregation` row records deterministic endpoint orientation, grouping, exact
+  multiplicity summation, canonical order, and compact non-expansion in the production
+  preprocessor. The governing lemma supplies the universal preservation of `e_q(U)`,
+  `b_q(U)`, `d_q(v)`, compact admissible totals, and objective value; finite tests provide
+  executable implementation evidence rather than a proof of the lemma.
+- TEST_PLAN R3, R4, D1, and verifier isolation are cross-cutting engineering obligations,
+  not separate governing-source theorem labels. Their green tests are
+  `tests/test_instance.py::test_instance_correctness_path_contains_no_fraction_float_or_true_division`,
+  `tests/test_instance.py::test_instance_source_does_not_derive_algorithmic_order_from_set_iteration`,
+  and `tests/test_instance.py::test_instance_source_and_fresh_import_are_verifier_isolated`.
 
 ## V2.2 authority-activation note
 
