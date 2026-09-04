@@ -3177,3 +3177,802 @@ inspection.
 These fixtures establish only graph-instance behavior. They do not implement or discharge
 the later shore, witness, family, §4.5 raw-pair rational-arithmetic helper, cut-reduction,
 branch, certificate, or global-optimization layers.
+
+---
+
+## Post-graph-instance production shore oracle ruling
+
+**Governing obligations:** DESIGN §4.2 and §4.2A; TEST_PLAN S1--S12 and §19;
+cross-cutting TEST_PLAN R3, R4, and D1.
+
+These fixtures are fixed after the production shore-interface authority commit
+`9d71ff1f0d433281142441695edffcffc29aa9a2` and before either
+`tests/test_shore.py` or `exactfrac/shore.py` exists.
+
+They govern only finite-universe shore-mask representation, exact validation, strict
+sorted-index-list serialization, universe-relative complement, compactness, deterministic
+source discipline, and module isolation. They do not compute graph-dependent quantities
+such as `f(U)`, `e_q(U)`, `b_q(U)`, or `d_q(U)` and make no claim about any ExactFrac branch
+or global optimum.
+
+No governing-source theorem label is invented for this software representation seam.
+S1--S3 are representation-level identities for already validated Python integer masks;
+they do not require redundant public wrapper functions. S4--S6 and S7--S12 govern the
+actual `exactfrac.shore` helper boundary.
+
+Every malformed public input below has the exact expected exception class:
+
+```text
+ValueError
+```
+
+The expected class is the built-in `ValueError` itself, not `TypeError`, `InvalidInstance`,
+`UnsupportedInstance`, or a shore-specific subclass. Exception prose is not part of the
+oracle.
+
+---
+
+## ORACLE-019 — Empty, full, and mixed shores in a five-vertex universe
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.2 and §4.2A.2--§4.2A.6; TEST_PLAN S1--S9.
+
+### Five-vertex universe
+
+Let
+
+```text
+n = 5
+full = (1 << 5) - 1 = 31 = 0b11111
+```
+
+The dense vertex universe is exactly
+
+```text
+0, 1, 2, 3, 4
+```
+
+Define the mixed shore
+
+```text
+U = 21 = 0b10101
+```
+
+so that
+
+```text
+members(U) = [0, 2, 4]
+```
+
+and define
+
+```text
+T = 14 = 0b01110
+```
+
+so that
+
+```text
+members(T) = [1, 2, 3]
+```
+
+### Exact membership and cardinality
+
+For `U`, the membership values in vertex order are
+
+```text
+v = 0: True
+v = 1: False
+v = 2: True
+v = 3: False
+v = 4: True
+```
+
+Equivalently,
+
+```text
+(bool(U & (1 << v)) for v in range(5))
+= (True, False, True, False, True)
+```
+
+The exact cardinalities are
+
+```text
+U.bit_count() = 3
+T.bit_count() = 3
+```
+
+### Exact union, intersection, and parity
+
+The intersection is
+
+```text
+U & T = 4 = 0b00100
+members(U & T) = [2]
+```
+
+Hence
+
+```text
+(U & T).bit_count() = 1
+(U & T).bit_count() & 1 = 1
+```
+
+which agrees with the hand-derived odd parity of
+
+\[
+|U\cap T|=1.
+\]
+
+The union is
+
+```text
+U | T = 31 = full
+members(U | T) = [0, 1, 2, 3, 4]
+```
+
+### Exact universe-relative complement
+
+The complement of `U` relative to the five-vertex universe is
+
+```text
+C = full ^ U
+  = 31 ^ 21
+  = 10
+  = 0b01010
+```
+
+Therefore
+
+```text
+members(C) = [1, 3]
+C.bit_count() = 2
+```
+
+and the complement identities are
+
+```text
+U & C = 0
+U | C = 31
+full ^ C = U
+```
+
+The intersection parity with the complement is even:
+
+```text
+(U & C).bit_count() & 1 = 0
+```
+
+Bare Python complement is not a valid finite-universe shore:
+
+```text
+~U = -22
+```
+
+so passing `~U` to a mask-consuming shore helper must raise exact built-in `ValueError`.
+
+### Empty and full shore boundaries
+
+The empty shore is
+
+```text
+E = 0 = 0b00000
+members(E) = []
+E.bit_count() = 0
+shore_complement(5, E) = 31
+```
+
+The complete shore is
+
+```text
+F = 31 = 0b11111
+members(F) = [0, 1, 2, 3, 4]
+F.bit_count() = 5
+shore_complement(5, F) = 0
+```
+
+Both `E` and `F` are valid generic shore representations. Nonemptiness and properness are
+consumer-owned predicates and are not imposed by `validate_shore`.
+
+### Strict sorted-list serialization
+
+The exact encoding and decoding results are
+
+| Shore | Integer mask | Encoded list | Decoded mask |
+|---|---:|---|---:|
+| empty | `0` | `[]` | `0` |
+| mixed `U` | `21` | `[0, 2, 4]` | `21` |
+| complement `C` | `10` | `[1, 3]` | `10` |
+| full | `31` | `[0, 1, 2, 3, 4]` | `31` |
+
+Every emitted list is a fresh exact built-in `list`. Mutating that list cannot change the
+integer shore from which it was derived.
+
+### One-vertex edge universe
+
+For the smallest valid universe,
+
+```text
+n = 1
+full_mask(1) = 1
+```
+
+and the complete shore table is
+
+| Shore | Mask | Encoded list | Complement |
+|---|---:|---|---:|
+| empty | `0` | `[]` | `1` |
+| full | `1` | `[0]` | `0` |
+
+This confirms that `n = 1` is valid and that the generic shore layer permits both shores.
+
+### Machine-facing expected results
+
+```text
+full_mask(5) = 31
+validate_shore(5, 0) = 0
+validate_shore(5, 21) = 21
+validate_shore(5, 31) = 31
+shore_to_list(5, 0) = []
+shore_to_list(5, 21) = [0, 2, 4]
+shore_to_list(5, 10) = [1, 3]
+shore_to_list(5, 31) = [0, 1, 2, 3, 4]
+shore_from_list(5, []) = 0
+shore_from_list(5, [0, 2, 4]) = 21
+shore_from_list(5, [1, 3]) = 10
+shore_from_list(5, [0, 1, 2, 3, 4]) = 31
+shore_complement(5, 0) = 31
+shore_complement(5, 21) = 10
+shore_complement(5, 10) = 21
+shore_complement(5, 31) = 0
+```
+
+### Oracle status
+
+**Hand-derived before any production shore test or implementation.**
+
+All masks, membership values, cardinalities, parity values, complements, and serialized
+lists above follow directly from the five-bit and one-bit representations.
+
+---
+
+## ORACLE-020 — Exhaustive small-universe shore identity family
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN §4.2 and §4.2A.3--§4.2A.5; TEST_PLAN S1--S6 and S10.
+
+### Exhaustive family
+
+For every
+
+```text
+n in (1, 2, 3, 4, 5, 6, 7)
+```
+
+let
+
+\[
+M_n=(1\ll n)-1.
+\]
+
+For every valid mask
+
+\[
+0\le U\le M_n,
+\]
+
+define its independently specified sorted member list by
+
+```text
+members_n(U) = [v for v in range(n) if U & (1 << v)]
+```
+
+and for every ordered pair of valid masks `U,T`, use the exact integer expressions below.
+
+The family contains
+
+\[
+\sum_{n=1}^{7}2^n=254
+\]
+
+valid single-shore cases and
+
+\[
+\sum_{n=1}^{7}4^n=21844
+\]
+
+ordered two-shore cases.
+
+### Single-shore identities
+
+For every one of the 254 valid masks:
+
+```text
+full_mask(n) = M_n
+validate_shore(n, U) = U
+shore_to_list(n, U) = members_n(U)
+shore_from_list(n, members_n(U)) = U
+U.bit_count() = len(members_n(U))
+shore_complement(n, U) = M_n ^ U
+shore_complement(n, shore_complement(n, U)) = U
+U & shore_complement(n, U) = 0
+U | shore_complement(n, U) = M_n
+```
+
+The encoded member list is strictly increasing because `range(n)` is traversed in increasing
+vertex order.
+
+Calling `shore_to_list(n, U)` twice must produce equal built-in lists that are distinct
+mutable output objects. Mutating one emitted list does not alter `U` and does not alter the
+next encoding of `U`.
+
+For every valid `U`, Python's bare complement satisfies
+
+\[
+\mathord{\sim}U=-U-1<0,
+\]
+
+so `validate_shore(n, ~U)`, `shore_to_list(n, ~U)`, and
+`shore_complement(n, ~U)` each raise exact built-in `ValueError`.
+
+### Two-shore identities
+
+For every one of the 21,844 ordered pairs `(U,T)`:
+
+```text
+members_n(U | T)
+= sorted union of members_n(U) and members_n(T)
+
+members_n(U & T)
+= sorted intersection of members_n(U) and members_n(T)
+
+(U & T).bit_count()
+= len(set(members_n(U)) intersect set(members_n(T)))
+
+(U & T).bit_count() & 1
+= len(set(members_n(U)) intersect set(members_n(T))) & 1
+```
+
+The sets in the mathematical comparator above describe unordered membership only. They do
+not authorize the production module to derive output order from Python set iteration.
+
+For every vertex `v` in `0..n-1`:
+
+```text
+bool(U & (1 << v)) == (v in members_n(U))
+bool(T & (1 << v)) == (v in members_n(T))
+```
+
+### Boundary coverage inside the family
+
+For each tested `n`, the family includes:
+
+```text
+U = 0
+U = M_n
+T = 0
+T = M_n
+```
+
+Therefore empty/full membership, cardinality, union, intersection, parity, complement, and
+serialization are not separate assumptions; they are exhaustively included.
+
+### Interpretation
+
+S1--S3 are validated here as representation-level identities for Python integer masks.
+They are not evidence for nonexistent `contains`, `cardinality`, or `intersection_parity`
+wrapper functions.
+
+S4--S6 are exercised through the actual public helpers:
+
+```text
+validate_shore
+shore_complement
+shore_to_list
+shore_from_list
+```
+
+### Oracle status
+
+**The family and exact expected formulas were fixed before any shore test or implementation.**
+
+The values are determined by finite binary-set semantics, not by observing a future
+`exactfrac.shore` module.
+
+---
+
+## ORACLE-021 — Shore-layer exact rejection matrix
+
+**Classification:** `NEGATIVE`
+
+**Source obligations:** DESIGN §4.2A.2, §4.2A.4, and §4.2A.6; TEST_PLAN S5 and S7--S9.
+
+### Exact exception class
+
+Every rejection in this oracle must raise
+
+```text
+ValueError
+```
+
+with
+
+```python
+type(exc) is ValueError
+```
+
+The following do not discharge the oracle:
+
+```text
+TypeError
+InvalidInstance
+UnsupportedInstance
+any ValueError subclass
+```
+
+Exception messages are diagnostic and are not compared.
+
+### Adversarial helper types
+
+Tests may define the exact subclasses
+
+```python
+class IntSubclass(int):
+    pass
+
+
+class ListSubclass(list):
+    pass
+```
+
+The subclasses remain invalid even when their contained numerical or list values otherwise
+match a valid built-in object.
+
+### Invalid universe sizes
+
+For every public helper, `n` is invalid when it is any of:
+
+```text
+0
+-1
+True
+False
+1.0
+Fraction(1, 1)
+IntSubclass(1)
+"1"
+None
+```
+
+Representative calls are:
+
+```text
+full_mask(bad_n)
+validate_shore(bad_n, 0)
+shore_to_list(bad_n, 0)
+shore_from_list(bad_n, [])
+shore_complement(bad_n, 0)
+```
+
+Each raises exact built-in `ValueError` before a result is produced.
+
+### Invalid shore masks
+
+Fix
+
+```text
+n = 5
+full_mask(5) = 31
+```
+
+Each of the following is invalid as a shore value for every mask-consuming helper:
+
+| Seed | Reason |
+|---|---|
+| `-1` | negative mask |
+| `32` | bit outside `0..4` |
+| `1 << 100` | high out-of-universe bit |
+| `True` | exact type is `bool`, not `int` |
+| `False` | exact type is `bool`, not `int` |
+| `21.0` | float |
+| `Fraction(21, 1)` | non-`int` exact rational object |
+| `IntSubclass(21)` | integer subclass |
+| `"21"` | string |
+| `None` | unrelated object |
+
+Representative calls are:
+
+```text
+validate_shore(5, bad_U)
+shore_to_list(5, bad_U)
+shore_complement(5, bad_U)
+```
+
+Each raises exact built-in `ValueError`.
+
+### Bare-complement rejection
+
+For the valid masks
+
+```text
+0, 1, 10, 21, 31
+```
+
+bare Python complement gives
+
+```text
+~0  = -1
+~1  = -2
+~10 = -11
+~21 = -22
+~31 = -32
+```
+
+Every one is invalid when supplied to a mask-consuming helper.
+
+### Invalid serialized outer containers
+
+For `n = 5`, `shore_from_list` rejects each nonexact-list outer object:
+
+```text
+()
+(0, 2, 4)
+range(3)
+"024"
+None
+ListSubclass([0, 2, 4])
+iter([0, 2, 4])
+```
+
+It does not coerce any of them into a built-in list.
+
+### Invalid serialized members
+
+Each of the following exact-list inputs is rejected:
+
+| Input | Reason |
+|---|---|
+| `[True]` | Boolean member |
+| `[1.0]` | float member |
+| `[Fraction(1, 1)]` | non-`int` exact rational member |
+| `[IntSubclass(1)]` | integer-subclass member |
+| `["1"]` | string member |
+| `[None]` | unrelated member |
+| `[-1]` | negative member |
+| `[5]` | member outside `0..4` |
+| `[0, 0]` | duplicate |
+| `[0, 2, 2]` | later duplicate |
+| `[2, 1]` | decreasing order |
+| `[0, 3, 2]` | unsorted order |
+
+No invalid sequence is sorted, deduplicated, truncated, or coerced.
+
+### Valid strict-decoding controls
+
+The following remain valid controls:
+
+```text
+shore_from_list(5, []) = 0
+shore_from_list(5, [0]) = 1
+shore_from_list(5, [0, 2, 4]) = 21
+shore_from_list(5, [0, 1, 2, 3, 4]) = 31
+```
+
+These controls distinguish strict validation from a decoder that rejects every list.
+
+### Validation order boundary
+
+Every helper validates `n` first. Mask-consuming helpers then validate `U`.
+`shore_from_list` then validates the exact outer list and visits entries in encounter order.
+
+Tests may use noncoercible or protocol-hostile objects to ensure malformed data is rejected
+rather than converted or consumed through an unintended protocol. They must not assert
+exception prose to infer order.
+
+### Oracle status
+
+**Ruled before any production shore test or implementation.**
+
+The rejection classes and seeds come from the committed shore API boundary, not from a
+future implementation's observed exceptions.
+
+---
+
+## ORACLE-022 — Shore module surface, isolation, and 4096-vertex compactness
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN R10, §4.2A.1, §4.2A.7, and §4.2A.8;
+TEST_PLAN S7, S11, S12, R3, R4, and D1.
+
+### Exact public surface
+
+The module-level export sequence is exactly:
+
+```text
+Shore
+full_mask
+validate_shore
+shore_from_list
+shore_to_list
+shore_complement
+```
+
+Equivalently:
+
+```python
+tuple(exactfrac.shore.__all__) == (
+    "Shore",
+    "full_mask",
+    "validate_shore",
+    "shore_from_list",
+    "shore_to_list",
+    "shore_complement",
+)
+```
+
+The alias is exactly:
+
+```python
+Shore is int
+```
+
+The package root does not re-export these names in this unit.
+
+Membership, union, intersection, cardinality, and intersection parity remain direct integer
+operations and do not appear as additional public wrappers.
+
+### Graph-independent isolation boundary
+
+Static and fresh-process checks must establish that importing `exactfrac.shore` imports no:
+
+```text
+exactfrac.instance
+exactfrac_verify
+exactfrac_verify.*
+```
+
+The module exposes no graph-dependent helper for:
+
+```text
+f(U)
+e_q(U)
+b_q(U)
+d_q(U)
+```
+
+and no public or private definition implementing:
+
+```text
+AtomicFamily
+Witness
+ExactValue
+ExactBranchMin
+SolveBranchStandard
+SolveBranchAccelerated
+StrongCompactMSPD
+```
+
+The absence list is a scope guard, not a complete forecast of every future symbol.
+
+### Exactness and deterministic source discipline
+
+Static source checks must find no:
+
+- import of or from `fractions`;
+- reference or call to `Fraction`;
+- float literal;
+- call to `float`;
+- true-division operator;
+- tolerance-based comparison such as `isclose`;
+- algorithmic ordering derived from iteration over a Python `set`.
+
+Set construction and membership checks are not needed by this minimal module, but the
+cross-cutting rule remains that no output order or control-flow order may be derived from
+set iteration.
+
+### Large-universe fixture
+
+Let
+
+```text
+n = 4096
+M = (1 << 4096) - 1
+U = (1 << 0) | (1 << 2048) | (1 << 4095)
+vertices = [0, 2048, 4095]
+C = M ^ U
+```
+
+Then the exact properties are:
+
+```text
+full_mask(4096) = M
+M.bit_length() = 4096
+U.bit_count() = 3
+U.bit_length() = 4096
+shore_to_list(4096, U) = [0, 2048, 4095]
+shore_from_list(4096, [0, 2048, 4095]) = U
+shore_complement(4096, U) = C
+C.bit_count() = 4093
+C.bit_length() = 4095
+U & C = 0
+U | C = M
+shore_complement(4096, C) = U
+```
+
+The full-shore encoding is specified compactly as
+
+```text
+shore_to_list(4096, M) = list(range(4096))
+```
+
+and has length `4096`.
+
+The complement encoding is
+
+```text
+[v for v in range(4096) if v not in (0, 2048, 4095)]
+```
+
+and has length `4093`.
+
+### Structural complexity interpretation
+
+For this fixture:
+
+- `full_mask` constructs one integer mask from `n`;
+- `validate_shore` validates one integer mask;
+- `shore_complement` performs universe-relative integer complement;
+- `shore_from_list` visits the three supplied member indices;
+- `shore_to_list` may test the 4096 vertex positions.
+
+No operation enumerates the
+
+\[
+2^{4096}
+\]
+
+possible shore values or loops once per numeric mask value.
+
+The finite fixture is a regression against magnitude-domain enumeration. It is not a
+wall-clock benchmark and does not by itself prove an asymptotic complexity theorem.
+
+### Oracle status
+
+**Hand-derived and ruled before any production shore test or implementation.**
+
+The large mask, member list, bit lengths, complement cardinality, public surface, and
+isolation expectations follow from the committed authority rather than source inspection of
+`exactfrac.shore`.
+
+---
+
+## Production shore oracle coverage matrix
+
+| TEST_PLAN obligation | Pre-implementation oracle evidence |
+|---|---|
+| S1 — membership | ORACLE-019 and exhaustive ORACLE-020 representation identities |
+| S2 — cardinality | ORACLE-019 and exhaustive ORACLE-020 representation identities |
+| S3 — intersection parity | ORACLE-019 and exhaustive ORACLE-020 representation identities |
+| S4 — relative complement | ORACLE-019 and ORACLE-020 |
+| S5 — out-of-range bits | ORACLE-021 |
+| S6 — serialization round trip | ORACLE-019 and ORACLE-020 |
+| S7 — public surface and plain error boundary | ORACLE-021 and ORACLE-022 |
+| S8 — exact universe, empty shore, and full shore | ORACLE-019, ORACLE-020, and ORACLE-021 |
+| S9 — strict canonical list decoding and detached encoding | ORACLE-019, ORACLE-020, and ORACLE-021 |
+| S10 — exhaustive finite-universe identities | ORACLE-020 |
+| S11 — module isolation and responsibility boundary | ORACLE-022 |
+| S12 — exactness, deterministic source discipline, and large universe | ORACLE-022 |
+| R3 — no `Fraction` in solver path | ORACLE-022 exactness boundary |
+| R4 — no floating point in correctness path | ORACLE-022 exactness boundary |
+| D1 — no algorithmic iteration over Python `set` | ORACLE-022 deterministic-source boundary |
+
+The S1--S3 rows record executable representation identities for already validated masks;
+they do not claim that `exactfrac.shore` exposes membership, cardinality, or parity wrappers.
+
+These fixtures establish only finite-universe shore representation and strict list
+serialization. They do not implement or discharge graph-dependent shore sums, atomic
+families, witnesses, certificates, rational-pair helpers, argmin policy, cut reductions,
+branch algorithms, or global optimization.
