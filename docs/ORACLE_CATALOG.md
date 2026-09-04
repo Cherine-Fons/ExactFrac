@@ -3021,8 +3021,8 @@ data. No constructor output established the exception classes.
 
 **Classification:** `LOCAL_CONTRACT_FIXTURE`
 
-**Source obligations:** `def:instance`; DESIGN §4.1A.1--§4.1A.3 and §4.1A.8;
-TEST_PLAN I11 and I15.
+**Source obligations:** `def:instance`; DESIGN R10, §4.1A.1--§4.1A.3, §4.1A.8,
+and §4.5.3; TEST_PLAN I11, I15, R3, R4, and D1.
 
 ### Exact public surface
 
@@ -3128,8 +3128,18 @@ Static and fresh-process checks must establish that importing `exactfrac.instanc
 import any `exactfrac_verify` module.
 
 Source inspection must also show that this unit does not import or implement shore,
-family, witness, arithmetic, argmin, sign-routing, parity-cut, branch, or global-solver
-machinery.
+family, witness, §4.5 raw-pair rational arithmetic, argmin, sign-routing, parity-cut,
+branch, or global-solver machinery.
+
+The cross-cutting production obligations TEST_PLAN R3--R4 and D1 apply to this module.
+Consistently with DESIGN §4.5.3, which expressly names `instance` in the production
+`Fraction` prohibition, static source checks must find no import of or from `fractions`,
+no reference or call to `Fraction`, no float literal, no call to `float`, no true-division
+operator, and no tolerance-based comparison. Static inspection must also establish that
+no algorithmic enumeration derives its order from iteration over a Python `set`. Set
+construction and membership tests are permitted; no output order or control-flow order may
+be derived from iterating a set. These are source-level checks in the manner of the sealed
+flow exactness test, not conclusions drawn from observed outputs.
 
 ### Oracle status
 
@@ -3160,7 +3170,10 @@ inspection.
 | I13 — strict versioned object round trip | ORACLE-015 and ORACLE-016 |
 | I14 — labels are nonalgorithmic metadata | ORACLE-015 and ORACLE-016 |
 | I15 — module surface, immutability, and isolation | ORACLE-018 |
+| R3 — no `Fraction` in solver path | ORACLE-018 isolation boundary |
+| R4 — no floating point in correctness path | ORACLE-018 isolation boundary |
+| D1 — no algorithmic iteration over Python `set` | ORACLE-018 isolation boundary |
 
-These fixtures establish only graph-instance behavior. They do not discharge any shore,
-witness, family, arithmetic, cut-reduction, branch, certificate, or global-optimization
-obligation.
+These fixtures establish only graph-instance behavior. They do not implement or discharge
+the later shore, witness, family, §4.5 raw-pair rational-arithmetic helper, cut-reduction,
+branch, certificate, or global-optimization layers.
