@@ -5180,3 +5180,1310 @@ descriptor count remains 27.
 
 These fixtures do not implement sign routing, parity-cut reduction, `ExactBranchMin`,
 branch iteration, witnesses, certificates, or global optimization.
+
+
+---
+
+## Unit 08 oracle authority and chronology
+
+ORACLE-030 through ORACLE-037 are prospective fixtures for the production Witness and
+ExactValue unit. They are governed by DESIGN section 4.4A and TEST_PLAN W8--W20 at commit
+`4ad6eaa14d1ae1dd2881416769fa5e88d984a8f6`, together with the canonical V2.2 definitions
+`def:instance`, `eq:degree-identity`, `def:parameter`, `eq:compact-density`, and the exact
+output contract. This addition changes no pre-existing catalogue byte or classification.
+
+All numerical expectations below follow from the written input data and displayed
+mathematical formulas. A separate AI-authored, definition-level handoff audit recomputes
+the arithmetic and the finite corpus without importing any production module. That audit
+is supporting executable evidence, not a human external review or the future witness
+implementation. The production module `exactfrac/witness.py` and its consuming test module
+`tests/test_witness.py` remain absent at oracle adoption.
+
+Unless otherwise stated, numerical fixture tables use `(s,e,b,d)` to mean
+`(f(U),e_q(U),b_q(U),d_q(U))`, and the dense vector has one entry for each canonical support
+edge, including zero entries off the boundary. A listed raw pair is unreduced.
+
+No new fixture below asserts a global optimum. ORACLE-001 and ORACLE-004 retain their
+existing global claims; ORACLE-002 remains local and its competitor is not newly promoted
+to a global optimum. No new theorem or production comparison interface is introduced.
+
+---
+
+## ORACLE-030 — Raw records, structural equality, and constructor-only controls
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.4A.2--4.4A.5 and 4.4A.12--4.4A.13; TEST_PLAN W8--W10.
+These are representation rulings, not claims that arbitrary records are attained values.
+
+### Exact records and literal preservation
+
+`ExactValue` has dataclass fields/slots exactly `N`, `D`, in that order. Both fields have
+exact built-in type int; `D > 0`. The following are accepted constructor records, stored
+literally: `(2,2)`, `(1,1)`, `(0,2)`, `(0,1)`, `(-2,2)`, `(-1,1)`, `(12,8)`, `(3,2)`,
+`(3,10)`, and `(2,3)`. The signed numerator records do not claim an attaining witness.
+
+| Left raw pair | Right raw pair | Structural equality | Numerical equality, test side only |
+|---|---|---|---|
+| `(2,2)` | `(1,1)` | false | true: `2*1 == 1*2` |
+| `(0,2)` | `(0,1)` | false | true: `0*1 == 0*2` |
+| `(-2,2)` | `(-1,1)` | false | true: `-2*1 == -1*2` |
+| `(12,8)` | `(3,2)` | false | true: `12*2 == 3*8` |
+| `(2,2)` | `(2,2)` | true | true |
+| `(3,10)` | `(2,3)` | false | false: `3*3 != 2*10` |
+
+The last row also exposes lexicographic ordering as wrong for rational comparison:
+`3 > 2`, but `3*3 < 2*10`. No production ordering/comparison operation is added in Unit 08.
+Tests may use exact test-side Fraction or cross-products to establish these numerical
+facts; they must not infer a missing production comparator from them.
+
+Independently constructed equal raw records must compare equal and hash equally. Unequal
+records remain distinct dictionary/set keys even if hashes collide. Do not require unequal
+hash integers, store literal hash values, or claim cross-process hash stability. Testing
+record hashability may use a test-side set; this is not permission for production
+algorithmic set iteration.
+
+`Witness` has fields/slots exactly `U`, `y`, in that order, with exact positive int U and
+an exact tuple of nonnegative exact ints. Accepted constructor-only controls are
+`Witness(1, ())`, `Witness(1 << 100, ())`, and `Witness(3, (0,2,0,1,1,0))`.
+The first two demonstrate absence of an instance from the constructor, not validity for
+any chosen instance. Repeated construction with identical fields gives equal records and
+equal hashes. Distinct U or y values produce structurally unequal records.
+
+Both classes are frozen and slotted with no instance __dict__, attached Instance, n, m,
+value/cache, or empty flag. No generated ordering exists. Mutating a field or adding an
+attribute must fail without changing state; the error type follows dataclass/Python
+behavior, not the malformed-data ValueError contract. Positional calls and the exact
+ruled keywords (`N`, `D`, `U`, `y`) have the same meaning. No new constructor or method is
+implied by this fixture. Adversarial constructor inputs are fixed in ORACLE-034.
+
+---
+
+## ORACLE-031 — Mixed graph-shore sums for every mask of a four-vertex universe
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `def:instance`, `eq:degree-identity`; DESIGN 4.4A.6--4.4A.7;
+TEST_PLAN W11 and W19.
+
+### Canonical active instance MIXED
+
+```text
+n = 4
+edges = ((0,1,2), (0,2,3), (0,3,1), (1,2,4), (1,3,2), (2,3,5))
+f = (2,3,4,5)
+q = (2,3,1,4,2,5)
+Q = 17
+d_q = (6,8,12,8)
+```
+
+The degree sums are `2+3+1=6`, `2+4+2=8`, `3+4+5=12`, `1+2+5=8`.
+Thus the active inequalities are `2<=6`, `3<=8`, `4<=12`, `5<=8`.
+Canonical edge_ref values are 0 through 5 in the displayed order.
+
+For each mask, sum f over its member vertices, sum multiplicity separately over internal
+and crossing support edges, and independently sum vertex degrees over its member vertices.
+Each table row is the direct evaluation of those definitions, not a production output.
+
+| U mask | s | e | b | d |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 2 | 0 | 6 | 6 |
+| 2 | 3 | 0 | 8 | 8 |
+| 3 | 5 | 2 | 10 | 14 |
+| 4 | 4 | 0 | 12 | 12 |
+| 5 | 6 | 3 | 12 | 18 |
+| 6 | 7 | 4 | 12 | 20 |
+| 7 | 9 | 9 | 8 | 26 |
+| 8 | 5 | 0 | 8 | 8 |
+| 9 | 7 | 1 | 12 | 14 |
+| 10 | 8 | 2 | 12 | 16 |
+| 11 | 10 | 5 | 12 | 22 |
+| 12 | 9 | 5 | 10 | 20 |
+| 13 | 11 | 9 | 8 | 26 |
+| 14 | 12 | 11 | 6 | 28 |
+| 15 | 14 | 17 | 0 | 34 |
+
+For example, U=3 means `{0,1}`. Edge 0 is internal, edge 5 is external, and edges
+1,2,3,4 cross. Therefore `s=2+3=5`, `e=2`, `b=3+1+4+2=10`, and `d=6+8=14=2*2+10`.
+This single mask exercises all three support-edge roles.
+
+For U=0 the four sums are zero. For U=15, `s=14`, `e=Q=17`, `b=0`, and `d=2Q=34`.
+Every row must satisfy `d=2e+b`. Generic sum helpers accept all sixteen masks, without a
+witness-admissibility filter. They return exact ints. Applying any valid distinct labels
+must not change these values; label-specific controls appear in ORACLE-035.
+
+---
+
+## ORACLE-032 — Strict literal dense/sparse conversion and detached representations
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.4.3 and 4.4A.6--4.4A.8; TEST_PLAN W12--W13 and the
+representation portions of historical W1--W6.
+
+Use MIXED from ORACLE-031, with U=3 unless a different mask is shown.
+The allowable nonzero dense positions are exactly 1,2,3,4.
+
+| U | Exact dense tuple | Exact canonical sparse list |
+|---|---|---|
+| 3 | `(0,2,0,1,1,0)` | `[[1,2],[3,1],[4,1]]` |
+| 3 | `(0,2,0,0,0,0)` | `[[1,2]]` |
+| 3 | `(0,3,1,4,2,0)` | `[[1,3],[2,1],[3,4],[4,2]]` |
+| 3 | `(0,0,0,0,0,0)` | `[]` |
+| 0 | `(0,0,0,0,0,0)` | `[]` |
+| 15 | `(0,0,0,0,0,0)` | `[]` |
+
+Each coordinate is an individually selectable number of copies; for example, count 2 at
+edge_ref 1 is legal although q[1]=3. Requiring zero-or-all q would reject a legal partial
+selection. Sparse decoding inserts zero at every missing ref and returns an exact tuple
+of length six. Exports are exact lists of fresh exact two-element lists, in increasing
+edge_ref order. Check every direction against the literal table, not just against another
+converter. Then check both round trips without changing their prescribed normal form.
+
+For U=0 or U=15 the boundary is empty; only the all-zero selection is legal. Nonempty
+sparse input or any positive dense count is rejected there. `[]` on U=3 denotes no selected
+boundary copies, not absence of a shore or an Empty result.
+
+### Conversion is not full admissibility
+
+Still at MIXED U=3, the dense vector `(0,1,0,0,0,0)` and sparse `[[1,1]]` convert
+successfully. Its total is `s+Y=5+1=6`, which is even although it is at least three.
+Both `validate_witness` and `witness_value` reject that witness. Conversion must not use
+the validator's parity/lower-bound guard as a hidden prefilter.
+
+MIXED U=15 with all-zero y also converts successfully but has even total 14. The two
+converter docstrings must accurately state that conversion checks representation only.
+
+### Detachment and failure nonmutation
+
+Starting from dense `(0,2,0,1,1,0)`, produce two exports and require that each is literally
+`[[1,2],[3,1],[4,1]]`, with distinct outer objects and corresponding nested list objects.
+Change the first export's first count to 99 and remove its last entry. The dense tuple,
+any existing Witness containing it, the second export, and a subsequent export remain
+unchanged. Decode a fresh canonical sparse list, then mutate that source list: the decoded
+tuple remains the original six counts. The mutation value 99 is only a detachment probe,
+not an accepted input to a conversion. Failed conversions leave the instance and supplied
+containers byte/value-equivalent to their pre-call state. Rejection fixtures are ORACLE-034.
+
+---
+
+## ORACLE-033 — Admissibility, unreduced attainment, and zero versus Empty
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `def:parameter`, `eq:compact-density`; DESIGN 4.4A.9--4.4A.12;
+TEST_PLAN W14--W16. Prior oracle classifications are preserved.
+
+### Exact reuse of already catalogued witnesses
+
+O002 means the unchanged ORACLE-002 instance: n=3, edges
+`((0,1,1),(0,2,1),(1,2,1))`, f=(1,1,2).
+Its constructive witness uses mask 4, not the integer index 2; its competitor uses mask 3.
+O004 means the unchanged ORACLE-004 instance: n=2, edge `(0,1,2)`, f=(1,1).
+Both catalogued singleton maximizers use dense y=(2,). The present unit evaluates these
+fixed witnesses; it does not implement their construction or prove the optimization again.
+
+### New local ZERO instance
+
+```text
+n = 2
+edges = ((0,1,3),)
+f = (3,3)
+d_q = (3,3)
+Q = 3
+U = 1  (the subset {0})
+y = (0,)
+sparse_y = []
+```
+
+The active condition holds with equality at both vertices. The unique edge crosses U, but
+selecting zero copies is legal. Thus `s=3`, `e=0`, `b=3`, `d=3`, `Y=0`, and total=3.
+The pair is admissible, and its literal raw value is `(0,2)` from `2*(0+0)` and `3+0-1`.
+This is a local zero-valued attaining witness, not a maximizing-witness claim.
+
+The validator returns None; that is its success return value, not a missing witness.
+The evaluator returns `ExactValue(0,2)`. The Witness object remains present and unchanged.
+Never infer Empty from N==0, zero rational value, or sparse []. Never normalize (0,2) to (0,1).
+
+### Exact accepted-witness table
+
+The sums column is `(s,e,b,d)`. Every listed total is odd and at least three, every dense
+coordinate is in bounds, and nonboundary coordinates are zero. Each raw value is derived
+by `N=2*(e+Y)` and `D=s+Y-1`.
+
+| ID | Instance | U | Dense y | Sparse y | Sums | Y | Total | Raw (N,D) |
+|---|---|---|---|---|---|---|---|---|
+| unit-witness | O002 | 4 | (0, 1, 0) | [[1, 1]] | (2, 0, 2, 2) | 1 | 3 | (2, 2) |
+| unit-competitor | O002 | 3 | (0, 1, 0) | [[1, 1]] | (2, 1, 2, 4) | 1 | 3 | (4, 2) |
+| tie-left | O004 | 1 | (2,) | [[0, 2]] | (1, 0, 2, 2) | 2 | 3 | (4, 2) |
+| tie-right | O004 | 2 | (2,) | [[0, 2]] | (1, 0, 2, 2) | 2 | 3 | (4, 2) |
+| zero-not-empty | ZERO | 1 | (0,) | [] | (3, 0, 3, 3) | 0 | 3 | (0, 2) |
+| mixed-partial | MIXED | 3 | (0, 2, 0, 1, 1, 0) | [[1, 2], [3, 1], [4, 1]] | (5, 2, 10, 14) | 4 | 9 | (12, 8) |
+| mixed-no-selected-copies | MIXED | 3 | (0, 0, 0, 0, 0, 0) | [] | (5, 2, 10, 14) | 0 | 5 | (4, 4) |
+| mixed-all-boundary-copies | MIXED | 3 | (0, 3, 1, 4, 2, 0) | [[1, 3], [2, 1], [3, 4], [4, 2]] | (5, 2, 10, 14) | 10 | 15 | (24, 14) |
+
+In MIXED's partial case, `Y=2+1+1=4`, so `N=2*(2+4)=12` and `D=5+4-1=8`.
+Selecting none gives `(4,4)`, not `(1,1)`. Selecting all boundary copies gives Y=10 and
+raw `(24,14)`. This unit accepts all three admissible selections regardless of which has
+the largest ratio. The validator's success is exactly None, never True or a replacement
+record; the evaluator returns only the separate ExactValue, not a new Witness/result.
+
+O002's two rows remain local witness/competitor evaluations. O004's two distinct Witness
+records have equal ExactValue records `(4,2)`; equal output records do not imply a unique
+witness. No global claim is attached to the new MIXED or ZERO rows.
+
+### Independently isolated last guards
+
+| Guard | Fixture | U | y | Y | s+Y | Conversion | Validator/evaluator |
+|---|---|---|---|---|---|---|---|
+| parity only | MIXED | 3 | `(0,1,0,0,0,0)` | 1 | 6 | succeeds | exact ValueError |
+| lower bound only | O004 | 1 | `(0,)` | 0 | 1 | succeeds | exact ValueError |
+| whole-shore parity | MIXED | 15 | `(0,0,0,0,0,0)` | 0 | 14 | succeeds | exact ValueError |
+
+The lower-bound seed is odd and satisfies every earlier guard. The parity-only seed
+already satisfies total>=3. A failure on one cannot be credited to the other guard.
+
+### Genuine empty-family control from ORACLE-001
+
+O001 is the existing n=2, edge `(0,1,1)`, f=(1,1) instance. At either singleton, legal
+counts 0 and 1 give totals 1 and 2. The full shore has only count 0 and total 2.
+No nonempty shore admits a valid witness. U=0 and the full shore still permit generic
+all-zero conversions. The future empty-result convention is `(0,1)` and no witness;
+this oracle introduces no Empty checker, result class, or certificate envelope in Unit 08.
+Passing None to validate_witness/witness_value is malformed input, not successful empty
+certification. Witness(0,()) is rejected by the constructor.
+
+---
+
+## ORACLE-034 — Exact rejection matrix and validation-order controls
+
+**Classification:** `NEGATIVE`
+
+**Source obligations:** DESIGN 4.4A.3--4.4A.4, 4.4A.6, 4.4A.8--4.4A.10, 4.4A.13;
+TEST_PLAN W9--W10, W12--W14, and W17.
+
+Every malformed-data case below raises exact built-in ValueError through the supported
+public signature. Future tests assert `type(exc.value) is ValueError`; accepting subclasses
+alone is insufficient. Wrong Python call arity and frozen-record mutation are excluded
+from this ValueError matrix. No exception-message wording is fixed.
+
+### Adversarial type vocabulary
+
+For each applicable integer position, substitute each of: True, False, 1.0,
+Fraction(1,1), a direct int subclass instance with value 1, "1", None, and an object
+with __int__/__index__ that would produce 1 if called. Test a poison conversion variant
+whose __int__/__index__ raises AssertionError: rejection must occur without conversion.
+Use a numerically in-range value in the malformed type to isolate exact-type validation.
+
+For exact tuple positions use list, tuple subclass, range, iterator/generator, string,
+and None controls. For exact list positions use tuple, list subclass, iterator/generator,
+string, and None controls. Record subclasses and duck-typed objects are nonexact records,
+even if their attributes appear valid. No consumption/coercion of rejected iterators is
+required or permitted merely to make their shape acceptable.
+
+### Constructor matrix
+
+| Boundary | Invalid variation | Valid constructor-only control |
+|---|---|---|
+| Witness U | 0, -1, or every malformed int type | 1; 1<<100 |
+| Witness y outer | every nonexact tuple container | (); (0,); (0,2,0,1,1,0) |
+| Witness y coordinate | -1 or every malformed int type, in each tested coordinate | 0 and positive exact counts |
+| ExactValue N | every malformed int type | negative, zero, positive exact int |
+| ExactValue D | 0, -1, or every malformed int type | 1 and larger exact ints |
+
+Constructing Witness(1,()) or Witness(1<<100,()) is allowed as shape. Validating either
+against MIXED rejects it (wrong length or outside-universe shore). A constructor cannot
+silently impose an unseen instance or fix its m. No InvalidInstance/UnsupportedInstance
+exception is substituted for Unit 08 malformed-data ValueError.
+
+### Instance-keyed and record boundaries
+
+Each of the four sums, the two converters, validate_witness, and witness_value rejects a
+nonexact Instance: None, a serialized dictionary, an Instance subclass, a verifier-side
+instance, or a duck-typed object. This check precedes U or payload work. No normally
+validated Instance is deliberately corrupted by bypassing its constructor for these tests.
+The full validator/evaluator likewise rejects None, a tuple, a dictionary, a Witness
+subclass, or a duck-typed witness where an exact Witness is required.
+
+For the four sums and two converters, use MIXED and bare U values -1 and 16, plus every
+malformed int type. Masks 0 and 15 are accepted. No high bits are truncated.
+
+### Dense embedding matrix (MIXED, U=3)
+
+| Invalid dense input | Isolated reason |
+|---|---|
+| exact tuples of length 5 and 7 | length must be m=6 |
+| nonexact tuple container | container type |
+| `(0,-1,0,0,0,0)` | negative coordinate |
+| `(0,4,0,0,0,0)` | edge 1 exceeds q[1]=3 |
+| `(1,0,0,1,0,0)` | internal edge 0 has positive count, within q[0] |
+| `(0,1,0,0,0,1)` | external edge 5 has positive count, within q[5] |
+| any coordinate replaced by malformed integer type | exact coordinate type |
+
+For bound/boundary cases all coordinates have correct built-in types and nonnegativity.
+The first overbound example has odd total 9; both nonboundary examples have odd total 7.
+They cannot be explained away as parity or lower-bound failures. The converter rejects
+before zero omission. The validator and evaluator reject the same graph-invalid
+shape-valid Witness objects; they must not allow evaluation to bypass validation.
+
+At U=0 and U=15, any positive coordinate (for example `(1,0,0,0,0,0)`) is a nonboundary
+violation; all-zero input is valid for conversion. A full-shore Witness can be constructed,
+but MIXED's full-shore admissibility fails parity as in ORACLE-033.
+
+### Sparse decoding matrix (MIXED, U=3)
+
+| Invalid sparse input | Isolated reason |
+|---|---|
+| nonexact outer list | outer type |
+| `[()]`, `[(1,1)]`, record list subclass | record must be exact list |
+| `[[]]`, `[[1]]`, `[[1,1,1]]` | record arity must be two |
+| `[[bad,1]]` or `[[1,bad]]` for each malformed int type | exact ref/count types |
+| `[[-1,1]]`, `[[6,1]]` | ref outside [0,6) |
+| `[[1,1],[1,1]]` | duplicate ref; no merging |
+| `[[3,1],[1,1]]` | descending refs; no sorting |
+| `[[1,0]]`, `[[1,-1]]` | count must be positive; no dropping zeros |
+| `[[1,4]]` | count exceeds q[1]=3 |
+| `[[0,1]]`, `[[5,1]]` | internal/external ref is not crossing |
+
+Every ref mentioned as an accepted counterpart refers to the fixed canonical instance,
+not a reaggregated or reordered interpretation. On rejection the source list is unchanged.
+Duplicate positive records may not be silently summed; even a resulting in-range sum would
+not repair the invalid representation.
+
+### Guard order is not inferred merely from an exception class
+
+The single-defect cases establish each guard's rejection when its predecessors pass.
+Since all ordinary data failures share ValueError, two-invalid-input examples alone do
+not prove which guard ran first. Future static inspection must compare the actual order
+with DESIGN 4.4A.10. Hostile rejected objects with attribute/iteration/conversion hooks
+that raise AssertionError can additionally expose premature payload inspection: with a
+nonexact instance the production function must reject the instance before touching the
+other data; similarly it must reject a nonexact Witness before reading its fields.
+Do not add message-string assertions or fabricate a bypass-construction API to infer order.
+
+These are prospective rejection expectations; no Unit 08 production errors have been
+executed or verified at catalogue adoption because the module does not yet exist.
+
+---
+
+## ORACLE-035 — Exact 4097-bit counts, large f, labels, and support-controlled work
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** compact-copy meaning in `def:instance`, `eq:compact-density`;
+DESIGN 4.4A.7--4.4A.8, 4.4A.11, 4.4A.15; TEST_PLAN W19.
+
+Let `k` be one of the fixed test parameters `(1,2,8,64,4096)` and set `L=1<<k`.
+For every k here L is even. Use n=2 and one canonical edge `(0,1,L+1)`.
+Both degrees equal L+1, Q=L+1, and the support size remains m=1.
+
+### Small f and a partial boundary count
+
+Choose f=(1,1), U=1, y=(L,), and sparse_y=[[0,L]]. The selected count is strictly less
+than q=L+1, so it is a legal partial count. The four sums are `(1,0,L+1,L+1)`.
+Total is L+1, odd and at least three. The unreduced raw output is `(2*L,L)`.
+No output may become `(2,1)` by reduction.
+
+At k=1 the literal small control is edge `(0,1,3)`, f=(1,1), y=(2,), raw `(4,2)`.
+At k=4096, y[0], D, and q each have 4097 bits; N has 4098 bits.
+
+### Large f on the same support
+
+Instead choose f=(L+1,L+1), still active with equality at each endpoint.
+At U=1 and y=(L,), the four sums are `(L+1,0,L+1,L+1)`, total=2*L+1,
+and raw output `(2*L,2*L)`. Preserve both fields; do not reduce to `(1,1)`.
+At the same U with y=(0,), total=L+1 and raw output `(0,L)`; the zero-valued witness
+still exists, with sparse []. At k=1 this zero row is exactly the ZERO fixture of
+ORACLE-033. The full-shore sums in either f regime are `(sum(f),L+1,0,2*(L+1))`.
+
+At k=4096, the large-f accepted-count row has N and D of bit length 4098; the zero row
+has N==0 and D of bit length 4097. These are algebraic consequences of L=2^k, not a
+runtime asymptotic cutoff or a numeric bound imposed on production.
+
+### Labels and scans
+
+For every fixed instance compare labels=None, the tuple of strings `("left","right")`,
+and the exact-int tuple `(10,20)`. For MIXED additionally compare labels=None,
+`("a","b","c","d")`, and `(10,20,30,40)` against the complete sum table and conversion
+rows. Labels do not change any output or validation decision.
+
+The production loops must remain bounded by n, m, or encoded malformed-payload length as
+ruled, never by q, f, Q, Y, N, D, or a count's bit length in place of structural scans.
+The test-side parameter sweep and tiny exhaustive enumeration are not production loops.
+No wall-clock flatness, exact machine-time ratio, universal strong-polynomial proof, or
+invented telemetry counter is asserted. Huge counts are never expanded in this fixture.
+
+---
+
+## ORACLE-036 — Declared tiny admissibility corpus with independently counted decisions
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** `def:instance`, `ass:active`, `def:parameter`, `eq:compact-density`;
+DESIGN 4.4A.7--4.4A.11; TEST_PLAN W20. This is a finite definition-level corpus, not a
+new theorem or a global optimum claim.
+
+### Corpus definition
+
+For n in (2,3), list every unordered pair of dense vertices in lexicographic order.
+Assign each pair a number in {0,1,2}; omit records assigned 0, retain 1 or 2 as the
+positive multiplicity. Discard choices with an isolated vertex. For each remaining
+canonical support/multiplicity instance enumerate every f with 1 <= f[v] <= d_q[v].
+Each (n,edges,f) tuple occurs once. No labels are attached for the count calculation.
+
+For each instance, enumerate every mask U in [0,2^n), including zero for generic sums and
+conversions. Legal dense selections have zero off the boundary and coordinates in
+[0,q_e] on it. The nonempty-mask subcorpus alone is the domain of Witness admissibility.
+
+### Counts derived without production witness code
+
+For a fixed U, let
+
+$$
+B_U(t)=\prod_{e\in\delta(U)}(1+t+\cdots+t^{q_e}),\qquad
+L_U=B_U(1)=\prod_{e\in\delta(U)}(q_e+1).
+$$
+
+The empty product equals one, so empty boundaries still have one legal selection.
+Let Delta_U=B_U(-1). It equals one if every crossing q_e is even and zero otherwise.
+The number of selections with s+Y odd is
+
+$$
+P_U=\frac{L_U+(-1)^{s+1}\,\Delta_U}{2}.
+$$
+
+For nonempty U we have s>=1. Among the odd totals, the only one below three is total=1,
+which happens exactly when s=1 and all counts are zero. Therefore
+
+$$
+A_U=P_U-\mathbf 1_{s=1},\qquad
+E_U=L_U-P_U,\qquad
+H_U=\mathbf 1_{s=1}.
+$$
+
+Here A_U counts admissible selections, E_U parity failures, and H_U odd lower-bound
+failures after parity passes. No class overlaps these latter two rejection counts.
+An admissible zero-valued selection has e=0, Y=0, and odd s>=3; there is one such zero
+selection for each shore meeting those conditions.
+
+Sum these products over the explicitly bounded supports, capacities, and shores above:
+
+| Corpus | Instances | All shores | Nonempty shores | Generic selections including U=0 | Nonempty selections | Admissible | Parity rejected | Odd lower-bound rejected | Zero-valued admissible |
+|---|---|---|---|---|---|---|---|---|---|
+| n=2 | 5 | 20 | 15 | 38 | 33 | 10 | 17 | 6 | 0 |
+| n=3 | 324 | 2592 | 2268 | 12888 | 12564 | 5907 | 6294 | 363 | 249 |
+| total | 329 | 2612 | 2283 | 12926 | 12597 | 5917 | 6311 | 369 | 249 |
+
+In particular `12597 = 5917 + 6311 + 369` and `12926 = 12597 + 329`.
+U=0 contributes exactly one all-zero generic selection per instance and is never counted
+as a candidate Witness. This corpus contains 249 zero-valued admissible witnesses; their
+presence is expected from the same source definition, not inferred Empty behavior.
+
+### Independent future comparison and current oracle audit
+
+The handoff oracle audit recomputes these totals both by the displayed parity-product
+identities and by literal subset/count enumeration. For the latter it builds each small
+shore as a Python set and inspects internal and crossing edges directly. It independently
+enumerates subsets of the tiny individual boundary copies and projects them to dense
+counts, checking that this set equals the compact count product. Distinct expanded subsets
+may project to the same count vector; they must be deduplicated only in this independent
+cross-model comparison, not incorrectly counted as distinct compact witnesses.
+
+No production module is imported or used to establish the expected answers. For later
+W20 tests, compare production acceptance and rejection in both directions, literal raw
+pairs on every accepted witness, direct graph sums on every mask, and both conversion
+outputs on each legal embedding. The independently implemented expected side must not call
+production validators, conversion functions, or shore-sum helpers. Add ORACLE-034 malformed
+inputs separately, since legal-only enumeration cannot expose malformed-input acceptance.
+Report these finite corpus totals separately from pytest's collected-test count. Run loops
+inside a manageable set of tests with identifying failure messages; no future pytest test
+count is claimed here. The corpus supplies regression evidence, not a universal proof.
+
+---
+
+## ORACLE-037 — Witness module surface, exactness, isolation, and deferred boundaries
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.4A.1--4.4A.2 and 4.4A.13--4.4A.15; the explicit witness
+addition in DESIGN 4.5.3; TEST_PLAN W8 and W18--W20.
+
+The exact module-level export tuple is:
+
+```text
+("ExactValue", "Witness", "dense_y_to_sparse", "shore_b_q", "shore_d_q",
+ "shore_e_q", "shore_f", "sparse_y_to_dense", "validate_witness", "witness_value")
+```
+
+The signature/keyword contract is exactly DESIGN 4.4A.2. Imports are limited to dataclasses,
+.instance, .shore, and optional future annotations. Direct source inspection must establish
+no executable use/import of Fraction, float, true division, tolerances, gcd, reduction,
+normalization, algorithmic set iteration, or downstream/verifier machinery. Naming a
+forbidden technique in a comment/docstring is not an executable use. Structural record
+comparisons and integer bounds are allowed; a ban on rational ordering is not a ban on
+ordinary integer validation comparisons.
+
+A fresh-process check must verify the imported module path and compare loaded modules
+before and after importing exactfrac.witness. It must not newly import exactfrac_verify,
+exactfrac.families, exactfrac.flow, exactfrac.oracle, exactfrac.branch, exactfrac.solve, or
+exactfrac.certificate. Attribute transitive imports accurately: dependencies required by
+an allowed standard-library module are not falsely reported as direct imports written by
+witness.py. Direct forbidden imports remain forbidden regardless of startup state. The
+production package root gains no exports, and the verifier's no-production-import boundary
+is independently preserved.
+
+No new Empty singleton, SolveResult, certificate envelope, numerical comparison operator,
+Unit 09 arithmetic API, branch/endpoint reconstruction, JSON I/O, certificate verifier,
+telemetry, or global-optimization routine is introduced. A later CONFORMANCE engineering
+note may cite representation/raw-evaluation coverage only after implementation GREEN;
+it may not promote theorem rows or close historical W7's complete serialized-certificate
+obligation. Full Unit 08 closure still follows TEST_PLAN section 22.
+
+---
+
+## Production Unit 08 witness oracle coverage matrix
+
+| TEST_PLAN obligation | Prospective oracle evidence |
+|---|---|
+| W8 — public surface, frozen/slotted records, ownership | ORACLE-030, ORACLE-037 |
+| W9 — structural Witness constructor | ORACLE-030, ORACLE-034 |
+| W10 — ExactValue structural versus rational equality | ORACLE-030, ORACLE-034 |
+| W11 — graph-shore sums for all masks | ORACLE-031, ORACLE-035, ORACLE-036 |
+| W12 — literal dense-to-sparse output and detachment | ORACLE-032, ORACLE-034 |
+| W13 — strict sparse decoding and both round trips | ORACLE-032, ORACLE-034 |
+| W14 — full admissibility and isolated guards | ORACLE-033, ORACLE-034, ORACLE-036 |
+| W15 — unreduced raw evaluation, separate records | ORACLE-033, ORACLE-035, ORACLE-036 |
+| W16 — zero-valued witness distinct from Empty | ORACLE-033 with unchanged ORACLE-001 |
+| W17 — exact ValueError and precedence | ORACLE-034; constructor controls ORACLE-030 |
+| W18 — source exactness and fresh-process isolation | ORACLE-037 |
+| W19 — labels, compact scans, large integer exactness | ORACLE-031, ORACLE-032, ORACLE-035 |
+| W20 — independent finite acceptance/evaluation audit | ORACLE-036 plus ORACLE-034 malformed cases |
+| Historical W1--W4 production representation portions | ORACLE-032--ORACLE-034, ORACLE-036 |
+| Historical W5--W6 production representation conversions | ORACLE-032 and ORACLE-034 |
+| Historical W7 raw-evaluation portion only | ORACLE-033 and ORACLE-035; full serialization deferred |
+| R3/R4 exact arithmetic path; no production set iteration | ORACLE-037, with explicit witness policy basis |
+
+## Unit 08 numerical fixture payload for independent audit
+
+The following JSON is an exact private audit-data mirror of the numeric fixtures and
+corpus totals above. JSON arrays representing dense vectors are converted to exact tuples
+by future test setup, not accepted as constructor inputs by implication. This is NOT a
+new production file format, certificate schema, or source of mathematical truth independent
+of the definitions/derivations above. Its separate handoff copy must agree byte-for-byte
+with this block; the audit checks that agreement before arithmetic. Huge values use the
+symbolic parameter k fixed in ORACLE-035 rather than thousand-digit decimal literals.
+
+<!-- BEGIN_UNIT08_NUMERIC_FIXTURES -->
+```json
+{
+  "format": "exactfrac-unit08-oracle-audit-fixtures/1",
+  "scope": "Private oracle-audit input; not an instance/certificate/result production schema.",
+  "authority_commit": "4ad6eaa14d1ae1dd2881416769fa5e88d984a8f6",
+  "instances": {
+    "O001": {
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "f": [
+        1,
+        1
+      ]
+    },
+    "O002": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "f": [
+        1,
+        1,
+        2
+      ]
+    },
+    "O004": {
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "f": [
+        1,
+        1
+      ]
+    },
+    "ZERO": {
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "f": [
+        3,
+        3
+      ]
+    },
+    "MIXED": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          5
+        ]
+      ],
+      "f": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "mixed_degrees": [
+    6,
+    8,
+    12,
+    8
+  ],
+  "mixed_Q": 17,
+  "mixed_sum_columns": [
+    "U",
+    "s",
+    "e",
+    "b",
+    "d"
+  ],
+  "mixed_sum_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      6,
+      6
+    ],
+    [
+      2,
+      3,
+      0,
+      8,
+      8
+    ],
+    [
+      3,
+      5,
+      2,
+      10,
+      14
+    ],
+    [
+      4,
+      4,
+      0,
+      12,
+      12
+    ],
+    [
+      5,
+      6,
+      3,
+      12,
+      18
+    ],
+    [
+      6,
+      7,
+      4,
+      12,
+      20
+    ],
+    [
+      7,
+      9,
+      9,
+      8,
+      26
+    ],
+    [
+      8,
+      5,
+      0,
+      8,
+      8
+    ],
+    [
+      9,
+      7,
+      1,
+      12,
+      14
+    ],
+    [
+      10,
+      8,
+      2,
+      12,
+      16
+    ],
+    [
+      11,
+      10,
+      5,
+      12,
+      22
+    ],
+    [
+      12,
+      9,
+      5,
+      10,
+      20
+    ],
+    [
+      13,
+      11,
+      9,
+      8,
+      26
+    ],
+    [
+      14,
+      12,
+      11,
+      6,
+      28
+    ],
+    [
+      15,
+      14,
+      17,
+      0,
+      34
+    ]
+  ],
+  "accepted_witnesses": [
+    {
+      "id": "unit-witness",
+      "instance": "O002",
+      "U": 4,
+      "y": [
+        0,
+        1,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          1
+        ]
+      ],
+      "sums": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "Y": 1,
+      "total": 3,
+      "raw": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "unit-competitor",
+      "instance": "O002",
+      "U": 3,
+      "y": [
+        0,
+        1,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          1
+        ]
+      ],
+      "sums": [
+        2,
+        1,
+        2,
+        4
+      ],
+      "Y": 1,
+      "total": 3,
+      "raw": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "tie-left",
+      "instance": "O004",
+      "U": 1,
+      "y": [
+        2
+      ],
+      "sparse": [
+        [
+          0,
+          2
+        ]
+      ],
+      "sums": [
+        1,
+        0,
+        2,
+        2
+      ],
+      "Y": 2,
+      "total": 3,
+      "raw": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "tie-right",
+      "instance": "O004",
+      "U": 2,
+      "y": [
+        2
+      ],
+      "sparse": [
+        [
+          0,
+          2
+        ]
+      ],
+      "sums": [
+        1,
+        0,
+        2,
+        2
+      ],
+      "Y": 2,
+      "total": 3,
+      "raw": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "zero-not-empty",
+      "instance": "ZERO",
+      "U": 1,
+      "y": [
+        0
+      ],
+      "sparse": [],
+      "sums": [
+        3,
+        0,
+        3,
+        3
+      ],
+      "Y": 0,
+      "total": 3,
+      "raw": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "mixed-partial",
+      "instance": "MIXED",
+      "U": 3,
+      "y": [
+        0,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "sums": [
+        5,
+        2,
+        10,
+        14
+      ],
+      "Y": 4,
+      "total": 9,
+      "raw": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "mixed-no-selected-copies",
+      "instance": "MIXED",
+      "U": 3,
+      "y": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": [],
+      "sums": [
+        5,
+        2,
+        10,
+        14
+      ],
+      "Y": 0,
+      "total": 5,
+      "raw": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "mixed-all-boundary-copies",
+      "instance": "MIXED",
+      "U": 3,
+      "y": [
+        0,
+        3,
+        1,
+        4,
+        2,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "sums": [
+        5,
+        2,
+        10,
+        14
+      ],
+      "Y": 10,
+      "total": 15,
+      "raw": [
+        24,
+        14
+      ]
+    }
+  ],
+  "inadmissible_boundary_selections": [
+    {
+      "id": "parity-only",
+      "instance": "MIXED",
+      "U": 3,
+      "y": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          1
+        ]
+      ],
+      "s": 5,
+      "Y": 1,
+      "total": 6,
+      "reason": "even total; lower bound satisfied"
+    },
+    {
+      "id": "lower-only",
+      "instance": "O004",
+      "U": 1,
+      "y": [
+        0
+      ],
+      "sparse": [],
+      "s": 1,
+      "Y": 0,
+      "total": 1,
+      "reason": "odd total below three"
+    },
+    {
+      "id": "whole-shore-parity",
+      "instance": "MIXED",
+      "U": 15,
+      "y": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": [],
+      "s": 14,
+      "Y": 0,
+      "total": 14,
+      "reason": "even total; empty boundary is representable"
+    }
+  ],
+  "generic_conversion_controls": [
+    {
+      "id": "empty-subset",
+      "instance": "MIXED",
+      "U": 0,
+      "y": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": []
+    },
+    {
+      "id": "full-subset",
+      "instance": "MIXED",
+      "U": 15,
+      "y": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": []
+    },
+    {
+      "id": "one-partial-copy-count",
+      "instance": "MIXED",
+      "U": 3,
+      "y": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sparse": [
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "raw_record_pairs": [
+    {
+      "left": [
+        2,
+        2
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "structurally_equal": false,
+      "numerically_equal": true
+    },
+    {
+      "left": [
+        0,
+        2
+      ],
+      "right": [
+        0,
+        1
+      ],
+      "structurally_equal": false,
+      "numerically_equal": true
+    },
+    {
+      "left": [
+        -2,
+        2
+      ],
+      "right": [
+        -1,
+        1
+      ],
+      "structurally_equal": false,
+      "numerically_equal": true
+    },
+    {
+      "left": [
+        12,
+        8
+      ],
+      "right": [
+        3,
+        2
+      ],
+      "structurally_equal": false,
+      "numerically_equal": true
+    },
+    {
+      "left": [
+        2,
+        2
+      ],
+      "right": [
+        2,
+        2
+      ],
+      "structurally_equal": true,
+      "numerically_equal": true
+    },
+    {
+      "left": [
+        3,
+        10
+      ],
+      "right": [
+        2,
+        3
+      ],
+      "structurally_equal": false,
+      "numerically_equal": false
+    }
+  ],
+  "large_exponents": [
+    1,
+    2,
+    8,
+    64,
+    4096
+  ],
+  "corpus": {
+    "by_n": {
+      "2": {
+        "instances": 5,
+        "all_shores": 20,
+        "nonempty_shores": 15,
+        "generic_selections": 38,
+        "nonempty_selections": 33,
+        "admissible": 10,
+        "parity_rejected": 17,
+        "lower_rejected": 6,
+        "zero_value_admissible": 0
+      },
+      "3": {
+        "instances": 324,
+        "all_shores": 2592,
+        "nonempty_shores": 2268,
+        "generic_selections": 12888,
+        "nonempty_selections": 12564,
+        "admissible": 5907,
+        "parity_rejected": 6294,
+        "lower_rejected": 363,
+        "zero_value_admissible": 249
+      }
+    },
+    "total": {
+      "instances": 329,
+      "all_shores": 2612,
+      "nonempty_shores": 2283,
+      "generic_selections": 12926,
+      "nonempty_selections": 12597,
+      "admissible": 5917,
+      "parity_rejected": 6311,
+      "lower_rejected": 369,
+      "zero_value_admissible": 249
+    }
+  }
+}
+```
+<!-- END_UNIT08_NUMERIC_FIXTURES -->
+
+**Unit 08 oracle status:** definition/authority-derived, independently recomputed before
+production implementation. Existing catalogue bytes and oracle classifications unchanged.
+No Unit 08 production or consuming test module exists at this oracle-only checkpoint.
