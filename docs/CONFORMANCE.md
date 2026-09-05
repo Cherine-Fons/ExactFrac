@@ -11,7 +11,7 @@ done until its row exists and its test is green.
 | lem:unit | constructive unit witness is admissible with ratio ≥ 1 | tests/test_verify_brute.py::test_oracle_002_witness_is_admissible_and_preserves_raw_value | green |
 | def:instance | finite nonempty loopless compact support; positive integer multiplicities and f; exact n, m, Q, and d_q data | tests/test_instance.py::test_oracle_013_canonical_active_instance_and_exact_derived_data; tests/test_instance.py::test_canonical_constructor_rejects_exact_oracle_016_cases | green |
 | lem:aggregation | repeated unordered raw records are oriented, grouped, and summed exactly into one canonical support edge without explicit-copy expansion | tests/test_instance.py::test_oracle_014_raw_forms_normalize_to_oracle_013; tests/test_instance.py::test_every_permutation_of_raw_a_has_the_same_canonical_result; tests/test_instance.py::test_reversed_and_repeated_raw_pairs_aggregate_by_exact_addition; tests/test_instance.py::test_enormous_multiplicity_remains_one_compact_support_record | green |
-| prop:domain-decomp | atomic families cover each branch domain | tests/test_families.py::test_cover | planned |
+| prop:domain-decomp | each generated atomic-family union equals its literal `prop:branch-transform` domain; overlap is allowed and no partition claim is made | tests/test_families.py::test_cover; tests/test_families.py::test_oracle_026_rich_cover_multiplicities_preserve_overlap | green |
 | lem:ek | zero-arc totalization; exact minimum and inclusionwise-minimal source shore; O(NE) augmentations and uniform O(N+NE^2) operations | tests/test_flow.py (TEST_PLAN FL1-FL12) | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
 | prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | planned |
@@ -75,6 +75,33 @@ done until its row exists and its test is green.
 - The separate handoff audit supplies reproducible implementation evidence over 510 valid
   masks, 87,380 ordered mask pairs, and 20,000 random large-universe cases. This finite
   audit does not prove a universal theorem and is not a production solver dependency.
+
+## Atomic-family implementation notes
+
+- The `prop:domain-decomp` row records executable conformance for the production
+  atomic-family decomposition. `tests/test_families.py::test_cover` enumerates nonempty
+  shores through the independent brute-verifier layer, computes the fixed-shore quantities
+  `s`, `e`, `b`, and `d = 2e + b` directly, applies the four literal
+  `prop:branch-transform` domain conditions, and requires exact branch-by-branch set
+  equality with the unions of the generated descriptors.
+- The comparator does not reconstruct a source domain from `T_+`, `T_f`, `P`, `A`, `W`,
+  an atomic-family union, or the production family-membership predicate. The family-union
+  side evaluates every valid shore mask including `0`; mask `0` is excluded by the
+  descriptors themselves rather than by an external nonempty-shore prefilter.
+- Equality is a cover statement, not a partition statement.
+  `tests/test_families.py::test_oracle_026_rich_cover_multiplicities_preserve_overlap`
+  verifies that one shore may satisfy several descriptor positions while the union still
+  equals the literal branch domain.
+- TEST_PLAN F5--F12 additionally exercise the exact public surface, frozen and slotted
+  descriptor state, the derived nonemptiness predicate, deterministic D0--D3 order, exact
+  descriptor counts, retained empty and duplicate descriptors, exact plain-`ValueError`
+  rejection, label independence, classification-controlled magnitude independence,
+  source exactness, and verifier isolation. These are cross-cutting engineering
+  obligations rather than additional governing-source theorem rows.
+- The separate handoff audit checks all 9,360 small-universe descriptor states, the exact
+  2,328 / 7,032 nonempty/empty split, 881 independently generated active instances, and
+  16,010 literal branch-domain membership decisions. This finite executable evidence does
+  not replace the universal proof of `prop:domain-decomp` in the governing source.
 
 ## V2.2 authority-activation note
 
