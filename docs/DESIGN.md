@@ -125,6 +125,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
     exactfrac/            solver (stdlib only)
       instance.py         canonical instance, aggregation, active check
       shore.py            finite-universe shore masks and strict list serialization
+      witness.py          Witness, ExactValue, shore sums, validation, dense/sparse counts
       families.py         atomic families F(T, pi; I, O); enumeration per branch
       flow.py             Edmonds–Karp reference backend behind the MaxFlow interface
       oracle.py           ExactBranchMin
@@ -495,6 +496,162 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        source of mathematical truth.
     (§9 external schema is preserved; sparse-y canonicalization is tightened per item 3.)
 
+4.4A Production Witness and ExactValue interface  (RULED upon controlled adoption, 2026-09-05)
+    1. Ownership and dependency direction. `exactfrac.witness` owns the immutable Witness
+       and ExactValue records, graph-dependent shore sums, dense/sparse boundary-count
+       conversions, production admissibility validation, and raw witness-value evaluation.
+       It consumes the already-canonical `Instance` and the existing shore interface; it
+       does not repeat aggregation or instance construction. Later solver components and
+       `certificate.py` may consume this lower-level module. `certificate.py` retains full
+       certificate construction and serialization; `exactfrac_verify.check` remains a
+       separately implemented independent checker. No closed implementation is reopened by
+       this ruling. The new DESIGN section-3 layout entry and the explicit addition of
+       `witness` to section 4.5.3 are the only amendments to pre-existing DESIGN lines.
+    2. Exact public surface. Module `__all__` is the following exact tuple, in this order:
+         ("ExactValue", "Witness", "dense_y_to_sparse", "shore_b_q", "shore_d_q",
+          "shore_e_q", "shore_f", "sparse_y_to_dense", "validate_witness", "witness_value").
+       The public signatures, including keyword names and return types, are:
+         ExactValue(N: int, D: int)
+         Witness(U: int, y: tuple[int, ...])
+         shore_f(instance: Instance, U: int) -> int
+         shore_e_q(instance: Instance, U: int) -> int
+         shore_b_q(instance: Instance, U: int) -> int
+         shore_d_q(instance: Instance, U: int) -> int
+         dense_y_to_sparse(instance: Instance, U: int, y: tuple[int, ...]) -> list[list[int]]
+         sparse_y_to_dense(instance: Instance, U: int, entries: list[list[int]]) -> tuple[int, ...]
+         validate_witness(instance: Instance, witness: Witness) -> None
+         witness_value(instance: Instance, witness: Witness) -> ExactValue
+       These constructors/functions accept positional or the shown keyword arguments; no
+       hidden mode flags or alternative public constructors are introduced. Package-root
+       `exactfrac.__init__` remains export-free. Internal helpers are not public API.
+    3. Witness record. `Witness` is a frozen, slotted, hashable dataclass, with structural
+       equality, no generated ordering, and fields/slots exactly `U`, `y` in that order.
+       `U` must be an exact built-in int strictly greater than zero. `y` must be an exact
+       tuple whose entries are exact built-in nonnegative ints. No coercion or mutable
+       container is accepted. The constructor has no instance: it cannot establish the
+       finite-universe upper bound, `len(y) == m`, multiplicity bounds, boundary support,
+       or admissibility. A high-bit positive U and an empty tuple y are valid constructor
+       shapes, not assertions of validity for any particular instance. Store no n, m,
+       Instance, N, D, empty flag, or separate length/value/cache field inside Witness.
+    4. ExactValue record. `ExactValue` is a frozen, slotted, hashable dataclass with fields/
+       slots exactly `N`, `D` in that order and no generated ordering. Both fields must be
+       exact built-in ints, and D must be strictly positive. Signed N is allowed at this
+       representation boundary; constructing the record is not a claim of attainment.
+       Reject D <= 0 rather than repairing its sign. Preserve both supplied integers
+       literally: no gcd reduction, rescaling, zero normalization, or conversion to float
+       or Fraction. There is no implicit conversion to/from the arithmetic carrier of
+       Unit 09 and no arithmetic operator, numerical-comparison method, or empty predicate.
+    5. Two equality relations. ExactValue is an immutable record of the exact stored fields
+       (N, D). Record equality is structural, and hashing is based on those stored fields
+       consistently with structural equality. Neither operation reduces, rescales, or
+       normalizes the quotient. Consequently ExactValue(2, 2) and ExactValue(1, 1) are
+       unequal records representing equal rational values. DESIGN section 4.5 numerical
+       equality and ordering remain the explicit cross-multiplication relations of Unit
+       09; solver numerical decisions must not substitute structural equality or
+       lexicographic field ordering. This is an explicit Python representation ruling,
+       not a change to the source's numerical comparisons. Equal records must have equal
+       hashes; unequal records need not have unequal hashes, and hash integers are not
+       serialized or treated as cross-process identifiers. Structural equality is chosen
+       deliberately, not justified by a claim that every numerical hash requires a gcd.
+    6. Instance and shore boundary. Every instance-keyed public function first requires
+       `type(instance) is Instance`. It consumes a normally constructed canonical active
+       production Instance, not serialized/raw data, an Instance subclass, a verifier
+       instance, or a duck-typed object. It neither repairs nor reaggregates that instance.
+       All bare-U arguments require exact built-in int masks satisfying
+       `0 <= U <= (1 << instance.n) - 1`. The four sums and the two conversion helpers
+       accept U == 0 as well as the full shore. They operate on graph subsets/boundary
+       selections, not necessarily admissible witnesses. Witness construction and full
+       witness validation separately exclude U == 0. Invalid masks are never truncated.
+    7. Graph-shore sums. Own the source def:instance quantities here:
+         shore_f(instance, U)   = sum(f[v] for v in U);
+         shore_e_q(instance, U) = sum(q_e for edges with both endpoints in U);
+         shore_b_q(instance, U) = sum(q_e for edges with exactly one endpoint in U);
+         shore_d_q(instance, U) = sum(d_q[v] for v in U)
+                                = 2*shore_e_q(instance, U) + shore_b_q(instance, U).
+       Outputs are exact built-in ints. For U == 0 all four outputs are zero; the full
+       shore has e_q(V) == Q, b_q(V) == 0, and d_q(V) == 2*Q. Use increasing dense indices
+       and canonical support-edge order. Internal reuse is allowed; no second authoritative
+       graph state or mutable cache is introduced. Optional labels have no effect.
+    8. Boundary-selection conversion. Both conversion helpers validate the finite-universe
+       shore and the exact boundary-count embedding, but do NOT assert the parity/lower-
+       bound admissibility conditions or attainment. Their docstrings must say so.
+       `dense_y_to_sparse` requires an exact tuple of length m with exact nonnegative int
+       counts; every count is at most its q_e and every noncrossing count is zero. It
+       returns an exact list of fresh exact two-element lists [edge_ref, count], omitting
+       zero coordinates and emitting the positive ones in canonical increasing edge_ref
+       order. Zero omission applies only after validation; invalid records are not dropped.
+       `sparse_y_to_dense` requires an exact list of exact two-element lists. Every ref and
+       count is an exact built-in int; refs are in [0,m), strictly increasing and unique;
+       counts satisfy 1 <= count <= q[ref], and every referenced edge crosses U. Missing
+       refs decode to zero in an exact length-m tuple. Reject, never sort, merge, repair,
+       coerce, or discard malformed input. Do not mutate inputs; each export and its nested
+       lists are detached from prior exports and from record state. The empty sparse list
+       denotes the all-zero dense selection, not an Empty result. In particular, U == 0
+       and U == V each admit only the all-zero boundary selection.
+    9. Full production admissibility. `validate_witness` requires an exact Witness and
+       checks its field shape, finite-universe nonempty shore, and boundary-count embedding
+       against the consumed instance. It then computes Y(y) from that valid selection,
+       sets total = f(U) + Y(y), requires total odd, and requires total >= 3. Return None
+       on success; return neither a normalized record nor a truth flag. Failure raises
+       exact built-in ValueError. The constructor and conversions are not substitutes
+       for this full instance-aware check. A structurally valid but inadmissible selection
+       may round-trip through conversion and must still fail validate_witness.
+    10. Validation precedence. Public functions validate the instance type before their
+        other data. The witness validator/evaluator next requires an exact Witness, then
+        validates U, the exact tuple and length of y, and every coordinate's exact type
+        and nonnegativity; then bound/boundary constraints in canonical edge_ref order;
+        then odd total; then total >= 3. Bare-U functions check U before the remaining
+        payload. Sparse decoding checks the outer list, then each record in supplied order
+        for exact list/arity, exact int fields, in-range/strictly increasing ref, positive
+        bounded count, and crossing support, before constructing the dense output. No
+        malformed datum is silently coerced or mislabeled as an empty mathematical family.
+        Tests isolate guards without depending on exception-message prose.
+    11. Raw evaluation. `witness_value` enforces the same complete admissibility conditions
+        as validate_witness before evaluating eq:compact-density. For the valid witness:
+          Y = sum(y),  N = 2*(e_q(U) + Y),  D = f(U) + Y - 1.
+        Return ExactValue(N, D), preserving these raw formula values. Do not reduce the
+        result, force N positive, infer optimality, or test whether the witness is an
+        endpoint/global maximizer. Value and witness remain separate records. Negative-N
+        records may be constructed directly, but cannot be produced by this evaluator on
+        admissible witnesses because e_q(U) and Y are nonnegative. No field of either
+        input record or the instance is changed by evaluation or validation.
+    12. Zero value and absence of a witness. A zero-valued admissible witness is allowed;
+        N == 0 never implies an empty admissible family or authorizes dropping the witness.
+        Later result carriers use Witness | None: None means no witness payload. A genuine
+        Empty result remains ((0,1), Empty), represented at that later boundary by raw
+        ExactValue(0, 1) and no witness. No Witness(0, ()), fake count vector, new Empty
+        record/singleton, SolveResult, or certificate envelope is implemented in this unit.
+        Empty-result certification remains instance-dependent (lem:empty under the active
+        hypothesis) and is not inferred from a raw value, sparse [], or None alone.
+    13. Errors and independence. Malformed data supplied through the supported signatures
+        raises exact built-in ValueError; reject bool and int/container/record subclasses
+        wherever the corresponding exact built-in/record type is required. No new exception
+        class or blanket conversion of arbitrary Python errors is introduced. Wrong call
+        arity and attempted frozen-record mutation retain Python/dataclass behavior. This
+        production validator establishes admissibility, not global optimality. The later
+        exactfrac_verify.check must independently reimplement admissibility and attainment
+        checks and must not import this module or any other production helper.
+    14. Exactness and imports. Runtime imports from this module are limited to
+        `dataclasses`, `.instance`, `.shore`, and optional future annotations. In particular
+        it imports nothing from exactfrac_verify, families, flow, oracle, branch, solve,
+        certificate, fractions, decimal, or math. The module's correctness path contains
+        no Fraction use, float literal/conversion/arithmetic, true division, tolerance,
+        gcd/reduction/normalization routine, or algorithmic iteration over a Python set.
+        Existing instance/shore behavior and package-root exports are unchanged.
+    15. Compact work and separate arithmetic. Graph sums, witness validation/evaluation,
+        and conversions on valid input use O(n+m) structural integer/arithmetic/comparison
+        operations and at most O(n+m) auxiliary storage; actual bit-operation time may grow
+        with integer encoding length. Constructor work may depend on the supplied tuple
+        length, and malformed-container checks may inspect their encoded record counts.
+        No loop is controlled by q_e, f[v], Q, Y, N, D, or by their values/bit-lengths in
+        place of the structural scans; no explicit-copy or all-shore enumeration occurs.
+        Unit 09 owns general rational-pair comparison/arithmetic. Units 15/17/18 own witness
+        reconstruction, full certificate assembly/serialization, and independent checking.
+        This unit implements none of those algorithms, JSON text/file I/O, result-level
+        Empty certification, or telemetry; it invents no new theorem row. Historical
+        TEST_PLAN W1--W7 are unchanged: representation and raw evaluation are tested here,
+        while W7's full serialized-certificate obligation is not declared complete here.
+
 4.5 Exact arithmetic  (RULED — adopted 2026-08-31)
     1. Production rational representation: raw integer (A, B) pairs throughout -- A a
        Python int, B a Python int with B > 0, NO automatic gcd reduction, denominator
@@ -514,7 +671,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        on the integer numerator (never divide to decide <0, ==0, >0). Aligns with the
        frozen contract Bc_j - Ah_j.
     3. Fraction policy: fractions.Fraction is PROHIBITED from the solver arithmetic path
-       (instance, families, flow, oracle, branch, solve, certificate). Fraction is
+       (instance, families, flow, oracle, branch, solve, certificate, witness). Fraction is
        permitted only in the independent verifier and tests as an independent correctness
        oracle. CLI may display the raw value as N/D; no normalization needed. This is
        implementation discipline (Fraction's automatic gcd would add arithmetic absent

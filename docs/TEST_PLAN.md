@@ -1560,3 +1560,258 @@ Then, in order:
 The atomic-family unit does not implement sign routing, parity-cut reduction,
 `ExactBranchMin`, Standard or Accelerated branch iteration, witness reconstruction,
 certificate verification, or the global solver.
+
+## 21. Unit 08 production Witness and ExactValue supplemental obligations
+
+This section is appended after the complete previously committed TEST_PLAN. Sections 1--20,
+including the historical compact-witness section 6 (W1--W7) and the brute-verifier gate in
+section 14, remain byte-for-byte unchanged. The new obligations below apply to
+`exactfrac/witness.py` and `tests/test_witness.py` under DESIGN section 4.4A. They do not
+rewrite the evidence used to close `exactfrac_verify.brute`.
+
+Mathematical basis: the V2.2 source's `def:instance`, `eq:degree-identity`, `def:parameter`,
+`eq:compact-density`, and exact-output/reduction boundary, together with DESIGN sections
+4.4, 4.4A, 4.5, and 9. Module ownership, exact Python classes, public function names,
+record equality, validation order, and error classes are software rulings, not new theorems.
+
+### W8 — exact public surface and representation ownership
+
+Require the exact DESIGN 4.4A.2 `__all__` tuple and the named constructors/functions with
+their ruled positional/keyword interface. Package root gains no re-exports. `witness.py`
+consumes the existing production Instance/shore interfaces; no existing implementation,
+verifier, or certificate module is changed merely to supply these records.
+
+Both records are frozen, slotted dataclasses without generated ordering. Witness has only
+U and y as fields/slots; ExactValue has only N and D. Require no per-record __dict__, value
+inside Witness, attached Instance/n/m, duplicate length, mutable cache, or empty flag.
+Assignments to fields and additional attributes must fail without changing state; do not
+require frozen-dataclass mutation errors to be the public-data ValueError class.
+
+### W9 — Witness constructor is structural, not instance-aware
+
+Require exact built-in positive-int U, exact tuple y, and exact nonnegative-int coordinates.
+Reject U == 0, negative U, list/generator/sequence input, bool, float, Fraction, int/tuple
+subclasses, and coercible objects without coercion. Attribute names and positional field
+order are exactly U, y. Include valid high-bit U and empty-tuple constructor controls:
+they establish only shape and must not be advertised as valid witnesses for an instance.
+
+Distinct records with identical fields compare equal and have equal hashes. Construction
+or comparison must not mutate fields or add an associated value. Do not use tuple length
+alone as a stored substitute for the instance's canonical m.
+
+### W10 — ExactValue raw-record identity is distinct from rational equality
+
+Require exact built-in integer N and D with D > 0. Accept signed and zero N at this record
+boundary; reject bool, subclasses, coercible values, and D <= 0. Do not repair a negative
+denominator. Pin exact preservation of nonreduced and zero-numerator pairs.
+
+Compare different raw records that represent the same rational value: their record
+inequality must be preserved while an independent test-side Fraction/cross-product check
+establishes numerical equality. The production module implements no numerical comparator,
+arithmetic operator, generated lexicographic ordering, gcd, or implicit normalization.
+Equal raw records must hash equally. Do not assert unequal hashes for unequal records or
+persist literal hash integers. Numerical comparison remains Unit 09, not a hidden part of
+this representation unit.
+
+### W11 — four graph-shore sums against direct independent definitions
+
+For tiny canonical active instances, enumerate every valid shore including mask 0 and the
+full shore. Independently compute f(U), e_q(U), b_q(U), and d_q(U) from canonical records,
+without calling any production witness helper on the expected-value side. Check all four
+public sums and d_q(U) == 2*e_q(U) + b_q(U).
+
+Include internal, crossing, and external support edges; singleton/full/empty shores; large
+multiplicities; and differing vertex capacities. Check zero sums at U == 0 and full-shore
+e_q == Q, b_q == 0, d_q == 2*Q. Instance/mask type/range rejection is tested separately.
+Do not restrict these generic sum tests to admissible witnesses or only nonempty shores.
+
+### W12 — dense-to-sparse exact export and detached state
+
+Use independently fixed canonical edge_ref positions and hand-derived sparse output, not
+only a round trip. Check exact outer/nested list types, two-element records, positive
+counts only, strictly increasing refs, and omission of zero coordinates after validation.
+Reject wrong tuple length/type, wrong coordinate type, negative or over-capacity counts,
+and positive nonboundary counts; no invalid datum is silently omitted.
+
+Empty/full shores accept only the all-zero selection and emit []. All-zero selections on
+other shores also emit []; this output is not evidence of an Empty result. Check repeated
+exports are detached: changing either the outer or a nested exported list leaves the
+Witness/tuple and subsequent exports unchanged. The supplied instance and dense tuple
+remain unchanged on both success and failure.
+
+### W13 — sparse-to-dense strict decoding, round trips, and no repair
+
+Accept only an exact list of exact length-two lists [edge_ref, count]. Reject wrong
+containers/subclasses/arity, wrong integer types, negative/out-of-range refs, duplicate
+refs, descending order, zero/negative/over-capacity counts, and noncrossing references.
+All nonzero counts remain individually selectable copy counts, not indivisible weights.
+
+Verify missing refs decode to zeros in an exact length-m tuple. Check both directions:
+dense -> canonical sparse -> identical dense and canonical sparse -> dense -> identical
+sparse. Also compare each direction with its independent literal expected result. Confirm
+inputs remain unmodified even on rejection, and later mutation of source lists does not
+change a previously decoded tuple. Do not normalize, aggregate, sort, or coerce malformed
+sparse input into an acceptable representation.
+
+### W14 — full admissibility validator and guard isolation
+
+`validate_witness(instance, witness)` returns None exactly for a compact admissible witness
+at that canonical active instance. Test the exact instance/Witness boundary, valid nonempty
+finite-universe U, exact tuple shape and length m, coordinate types/nonnegativity, count
+bounds, nonboundary forced zero, odd total f(U)+Y(y), and total >= 3.
+
+Exercise each guard with preceding conditions satisfied. In particular, a parity seed has
+total >= 3 but even; a lower-bound seed has odd total below 3. Include a structurally valid
+boundary selection that converts successfully but fails full admissibility. Shape-valid
+high-bit U and wrong-length y constructed independently of an instance must fail here.
+Validation must not replace invalid input with a repaired witness or infer Empty from a
+failure. The evaluator must reject the same inadmissible inputs rather than bypass guards.
+
+### W15 — raw evaluation and separate value/witness records
+
+For each independently catalogued admissible witness, recompute Y(y), internal multiplicity,
+and f(U) directly. Require an exact ExactValue with N == 2*(e_q(U)+Y(y)) and
+D == f(U)+Y(y)-1, not merely an equal reduced rational number. Validate D > 0 and unchanged
+Witness/Instance fields. Evaluation returns a value only; it neither stores N,D inside the
+Witness nor returns a new result/certificate object.
+
+Reuse ORACLE-002's local constructive witness and competitor and ORACLE-004's two distinct
+maximizers, preserving their existing classifications. Equivalent mathematical values may
+come from different raw records or different witnesses; neither record equality nor one
+chosen witness is a uniqueness/optimality theorem.
+
+### W16 — zero-valued admissible witness is not an empty-family result
+
+Before the consuming test is written, catalogue the active two-vertex instance with one
+edge (0,1,3), f=(3,3), and Witness(U=1, y=(0,)). Independently derive s=3, e=0, b=3, d=3,
+Y=0, odd admissibility total 3, and raw value (0,2). Treat this as a local admissible-witness
+fixture, not a claimed maximizing witness. The validator must accept it; evaluation must
+return ExactValue(0,2), with no reduction to (0,1) and no replacement of the witness by None.
+Its sparse representation [] denotes zero selected copies, not absence of a witness.
+
+Reuse ORACLE-001 to distinguish a true empty admissible family. Boundary selections can be
+encoded/decoded at that instance, but no admissible witness exists. The new unit creates no
+result-level Empty checker. Its records/conversions must not turn a zero numerator, [], or
+None into proof of emptiness. DESIGN's later-result convention remains value (0,1) and no
+witness for a verified Empty case; no dummy Witness(0,()) or new Empty export is introduced.
+
+### W17 — exact rejection taxonomy and deterministic validation precedence
+
+All malformed-data tests use exact built-in ValueError assertions, not only subclass-
+accepting pytest.raises(ValueError). Exercise bool, float, Fraction, exact-type subclasses,
+None, strings, and conversion-protocol objects in each applicable public-data position.
+Reject production Instance/Witness subclasses and verifier/duck-typed instances as inputs.
+Constructors validate only what they know; instance-keyed functions validate the consumed
+instance type first. For the full validator, representation errors precede graph-dependent
+constraints, which precede parity and the lower bound. Sparse errors are checked in supplied
+record order as ruled. Never pin diagnostic message wording as stable API.
+
+The test scope does not convert wrong Python call arity, attempted frozen-field mutation,
+or deliberate bypass of the validated Instance constructor into a new data-validation API.
+
+### W18 — static exactness and fresh-process isolation
+
+Source inspection verifies the DESIGN 4.4A.14 import boundary, the explicit section 4.5.3
+Fraction prohibition including witness, no float/Fraction/true-division/tolerance/gcd or
+normalization correctness path, no numerical comparison operators on ExactValue, and no
+algorithmic set iteration. Comments/docstrings naming forbidden techniques are not
+executable uses. Approved representation comparisons are not forbidden numerical quotient
+comparisons; coordinate and denominator validity checks still require integer comparisons.
+
+In a fresh subprocess, verify import resolves to the candidate production module and does
+not load exactfrac_verify or downstream family/flow/oracle/branch/solve/certificate modules
+as side effects. Distinguish modules already present at interpreter startup from imports
+caused by the candidate. The independent verifier remains unchanged and imports no solver
+module; production validation is not reused as its independent correctness path.
+
+### W19 — deterministic compact work, labels, and large integers
+
+Changing only optional labels must not change any sum, converted counts, raw value, or
+validation outcome. Repeated operations return identical mathematical/representation
+results and do not mutate any input. Canonical edge_ref order, not a set iteration order,
+controls exported sparse records.
+
+Independently derive a constant-support fixture with a count of 1 << 4096 and raw outputs
+before its test is written. Ensure every operation remains exact and retains the raw
+numerator/denominator and count bits. Inspect loops and use an independent support-
+controlled sweep to detect unit-copy expansion or iterations bounded by q, f, Q, Y, N, or D.
+Do not assert flat wall-clock time, invented asymptotic numeric thresholds, or global strong
+polynomiality from a finite sweep. Big-int bit-operation time is not a structural scan count.
+
+### W20 — independent tiny-instance acceptance and evaluation audit
+
+For a declared finite corpus of active tiny instances, independently enumerate nonempty
+shores and all legal boundary selections via the brute layer/definition. Build the expected
+admissibility decision directly from f(U)+Y(y) and the source bounds, not by calling the
+production validator, conversions, or graph-sum helpers. Compare production acceptance in
+both directions (no false acceptances or false rejections), and for accepted witnesses
+compare the raw formula pair and test-side exact rational value.
+
+Independently enumerate all valid masks including 0 for the generic sums and conversions;
+keep that domain distinct from the nonempty witness domain. Add malformed and noncanonical
+representations separately so legal-only enumeration does not hide validation defects.
+Run exhaustive cases inside a manageable number of test functions with identifying failure
+messages, not thousands of collected pytest items. Report actual corpus/count totals and
+verify repository nonmutation; finite evidence does not replace the source proof.
+
+### Historical obligation coverage boundary
+
+| Historical obligation | Unit 08 production evidence | Still outside this unit |
+|---|---|---|
+| W1: length m | W12--W14 and instance-aware validation | Full certificate envelope/checker |
+| W2: integer counts | W9, W12--W14, W17 | Independent checker remains separate |
+| W3: count bounds | W12--W14 and W20 | Independent checker remains separate |
+| W4: nonboundary zero | W11--W14 and W20 | Independent checker remains separate |
+| W5: sparse export | W12--W13 strict representation conversion | Certificate-format assembly and JSON I/O |
+| W6: sparse/dense round trip | W12--W13 literal output and round-trip checks | Full certificate round trip |
+| W7: raw witness-attaining value | W15--W16 raw evaluation and preservation | W7's serialized-certificate raw-pair identity |
+
+This mapping does not alter historical W1--W7 or retroactively change the brute-verifier
+gate. No claim that full certificate serialization or independent certificate checking is
+green follows from Unit 08 completion.
+
+## 22. Unit 08 completion gate — production Witness and ExactValue
+
+Before tests/test_witness.py or exactfrac/witness.py exists:
+
+1. authenticate and read the pinned V2.2 compact-object/value definitions and the current
+   committed DESIGN/CONTRACT/TEST_PLAN representation requirements;
+2. commit the documentation-only authority: DESIGN's layout addition, section 4.4A, and
+   the explicit witness addition to section 4.5.3; append this section and section 21
+   without changing any prior TEST_PLAN byte;
+3. derive and commit the new witness/value/conversion/rejection oracle entries, reusing
+   prior oracle fixtures without changing their scope. Catalogue the zero-valued witness,
+   raw-record comparison controls, strict conversion outputs, isolated guards, and large-
+   integer fixture before the corresponding tests. No production output establishes an
+   expected answer, and round trips alone do not define a canonical external form.
+
+Then, in order:
+
+4. write tests/test_witness.py against that committed authority/catalogue. Before applying
+   its candidate, run the live repository Ruff configuration on its review copy through
+   stdin under the target path; syntax/lint must pass. Observe the intended collection
+   ModuleNotFoundError for exactfrac.witness while the production module is absent; the
+   previously completed suites must remain green;
+5. only then implement exactfrac/witness.py. Preflight its review copy with live Ruff before
+   application; preserve the recorded test bytes unless a separately authorized repair
+   establishes a genuine test defect;
+6. require all W8--W20 obligations, mapped production portions of W1--W7, targeted and full
+   tests, Ruff with --no-cache, and an independent tiny admissibility/value/conversion/
+   isolation audit to pass. Record actual test and audit counts rather than invented totals;
+7. add a narrowly scoped engineering CONFORMANCE note and test mapping only after GREEN.
+   Preserve existing theorem rows, including lem:empty. Do not invent a theorem label or
+   declare certificate serialization, independent checking, reconstruction, or global
+   optimality verification complete;
+8. stage exactly docs/CONFORMANCE.md, exactfrac/witness.py, and tests/test_witness.py for the
+   atomic implementation unit after the earlier authority and oracle commits. Reproduce
+   the staged tree in isolation, check candidate byte identities, commit, verify the
+   committed payload, push normally, and establish remote/local identity and a clean state;
+9. at full Unit 08 closure, supply the private BUILD_NOTES and LEARNING_NOTES append entries
+   as two complete self-contained four-backtick Markdown blocks. Neither private note is
+   staged or committed.
+
+The Unit 08 authority commit changes only docs/DESIGN.md and docs/TEST_PLAN.md. The locked
+mathematical source, SPEC_LOCK, CONTRACT, immutable GOVERNING_SHA256SUMS activation baseline,
+existing oracle catalogue, CONFORMANCE, existing implementation/test files, and private
+notes remain untouched by that authority commit. This gate creates no Unit 09 arithmetic,
+branch/endpoint witness reconstruction, certificate envelope, independent checker, or CLI.
