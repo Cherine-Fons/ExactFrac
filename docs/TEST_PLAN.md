@@ -1815,3 +1815,198 @@ mathematical source, SPEC_LOCK, CONTRACT, immutable GOVERNING_SHA256SUMS activat
 existing oracle catalogue, CONFORMANCE, existing implementation/test files, and private
 notes remain untouched by that authority commit. This gate creates no Unit 09 arithmetic,
 branch/endpoint witness reconstruction, certificate envelope, independent checker, or CLI.
+
+## 23. Unit 09 production raw rational-pair supplemental obligations
+
+This section is appended after the complete previously committed TEST_PLAN. All bytes of
+sections 1--22, including historical arithmetic R1--R5 and the Unit 08 obligations/gate,
+remain unchanged. These new RP obligations govern `exactfrac/rational.py` and
+`tests/test_rational.py` under DESIGN section 4.5A. Source basis: section 4.5's raw formulas;
+alg:branch-min and eq:value-supergradient; alg:standard-branch and lem:standard-bits;
+alg:branch and lem:bitgrowth; alg:global and cor:gcd. Software names, tuple boundaries,
+errors, and ownership are prospective implementation rulings, not new mathematical results.
+
+### RP1 — scalar ownership and exact public interface
+
+Pin RawPair as the tuple[int, int] alias and the exact sorted __all__ from DESIGN 4.5A.2.
+Check public argument order, keyword names, positional/keyword behavior, and return types.
+No new rational-number class, implicit ExactValue coercion, operator overload, cache,
+package-root re-export, or dependency on another production/verifier module is permitted.
+Use importlib to load the not-yet-existing module in the RED candidate without suppressing
+its ModuleNotFoundError. Prior test names, data, and implementation files stay untouched.
+The plain tuple carrier deliberately has no runtime provenance tag: do not require nominal
+rejection of an otherwise valid two-int tuple because a caller used it for another role.
+Role-specific names and explicit scalar construction/extraction are caller-review obligations.
+
+### RP2 — strict denominator positivity and literal pair preservation
+
+Catalogue exact successful factory outputs for positive denominators with positive,
+negative, and zero numerators, common factors, unit denominators, and cancellation controls.
+Preserve both entries literally, including (0,B) with B > 1; no gcd or zero normalization.
+The factory raises exact built-in ValueError for zero or negative denominators, for every
+numerator sign; it must not negate either operand to turn rejected input into a valid pair.
+Every pair-consuming function also rejects nonpositive denominators even where its final
+formula could avoid reading the denominator. ExactValue's existing strict guard is unchanged.
+
+### RP3 — exact rejection matrix and validation-before-arithmetic
+
+For all applicable arguments, cover exact tuple shape/length, exact int fields, and
+positive-denominator requirements. Reject bool, int/tuple subclasses, floats, Fraction,
+lists, arbitrary sequences/iterators, None, ExactValue/Witness records, and coercible
+objects rather than coercing or iterating them. Exercise invalid c/h scalar types for the
+residual helper and zero/negative denominators for make_pair. Assert type(exc.value) is ValueError,
+not merely a superclass match, and no input mutation. Objects with raising conversion,
+comparison, iteration, or arithmetic methods should be rejected before invoking those
+methods. Check the ruled validation order by source inspection and guard-isolated cases;
+exception-message wording and arbitrary wrong-call-arity errors are not stable contracts.
+
+### RP4 — mathematical comparison independent of raw-record identity
+
+Use committed fixtures for negative, zero, and positive pairs; unequal field pairs with
+equal rational value; same numerators/different denominators; close huge rational values;
+and cases in which tuple lexicographic order gives the wrong numerical order. Require
+compare_pairs to return exact built-in -1/0/1 matching independent Fraction comparison.
+Test reflexivity, antisymmetry, transitivity, and invariance under separately multiplying
+both fields of either operand by a positive factor. Tuple/ExactValue record equality is
+not changed or used to define expected numerical equality. Do not assert collision-free
+hashes or fixed hash integers. A numerical tie returns 0 without choosing a representative.
+
+### RP5 — exact sign without normalization or empty-state inference
+
+Cover negative, zero, and positive numerators with small and huge positive denominators.
+Require exact built-in int returns, including for zero. Confirm validation still rejects
+malformed/nonpositive denominators. Zero-valued nonempty witnesses from Unit 08 remain
+witnesses when their value fields are supplied to this scalar sign/comparison interface;
+no Empty result, None replacement, or rewrite of their raw ExactValue pair is allowed.
+
+### RP6 — literal add-one and Newton reset boundary
+
+Catalogue exact (A+B,B) outputs for pair_add_one, including A == -B and unreduced inputs.
+Do not accept merely an equivalent Fraction as the expected output: zero must preserve B,
+and the denominator must be the supplied denominator rather than a newly accumulated one.
+Document the source distinction: Standard begins at (c+h,h); Accelerated begins at (c,h).
+On synthetic sequences, a fresh standard point is a fresh (c,h), not the algebraically
+expanded delta - r/g representation. This unit tests scalar building blocks only; actual
+branch initialization, feasibility, and reset control flow are later integration gates.
+
+### RP7 — literal reflected look-ahead with fixed argument roles
+
+For newton=(A,B) and current=(C,D), require exactly (2*A*D-C*B,B*D). Include an asymmetric
+case distinguishing 2*newton-current from 2*current-newton; equal denominators; equivalent
+but differently encoded pairs; zero cancellation; negative output; and large signed input.
+Independently check the represented value with Fraction, but assert the literal raw tuple
+separately. Special-case reduction, zero normalization, swapping arguments, or returning an
+existing equivalent operand must fail the test. No acceptance/rejection branch is run here.
+
+### RP8 — exact scalar residual and parameter-dependent scaling
+
+For parameter=(A,B), independently verify residual_numerator == B*c-A*h and
+Fraction(result,B) == Fraction(c,1)-Fraction(A,B)*Fraction(h,1). c and h are arbitrary
+exact signed ints at this scalar boundary; include h==0 and h<0 controls without claiming
+these are feasible branch denominators. Isolate negative/zero/positive residuals with
+h>0 too. If (A,B) is replaced by (k*A,k*B), k>0, the raw residual is multiplied by k,
+not invariant; its represented rational value and sign are invariant. Include a fixture
+showing that comparing raw residual numerators across different denominators is invalid.
+Do not label this helper an optimizer, an F_j oracle, or a graph-shift correction routine.
+
+### RP9 — explicit ExactValue bridge with Unit 08 bytes preserved
+
+Use exact existing value records and extract their N,D fields into raw tuples at the test
+call site. Numerically equal distinct records compare as 0 without becoming structurally
+equal or mutating either record. Supplying an ExactValue directly to a RawPair consumer
+raises exact ValueError. Constructing ExactValue from a valid pair preserves its fields
+and establishes no attainment. Keep witness_value as the owner of witness-derived raw
+quotients. Do not add numerical methods, imports, or API aliases to the closed witness
+module. Tests may import both layers; production rational.py imports neither witness.py
+nor any other project module, and the independent verifier imports no production helper.
+
+### RP10 — finite independent arithmetic corpus
+
+Before tests exist, define and commit bounded integer/pair domains and the precise
+quantifiers for exhaustive unary, binary, residual, and selected composition checks.
+Compute expected rational values by independent Fraction arithmetic and expected raw
+outputs from separately justified formulas, not production outputs. Add fixed numerical
+fixtures that can expose a copied-sign or operand-order error in a test-local formula.
+Record actual domain sizes and totals. Execute the finite corpus inside a small number
+of ordinary tests with diagnostic inputs on failure, not thousands of pytest parameters.
+No finite corpus proves branch termination or the universal complexity theorems.
+
+### RP11 — exactness, dependency isolation, and bounded primitive work
+
+Inspect the production AST for float constants, float/Fraction conversions, division,
+floor division, remainder/reduction, tolerance logic, unexpected imports, recursion, and
+magnitude-driven iteration. Cover direct, named, comprehended, and derived set iteration
+rather than only set literals; fixed-size validation is permitted only with a constant
+bound. A fresh process importing exactfrac.rational must load no other exactfrac submodule
+and no exactfrac_verify module; distinguish preloaded stdlib modules from dependencies
+introduced by the import. Inspect source/import hooks for forbidden direct imports rather
+than claiming that sys.modules alone proves absence of every possible runtime technique.
+Mutate representative prohibited source constructs in audit-only controls where useful to
+show that the static check actually detects them; no production file is altered for that.
+
+### RP12 — large integers, literal recurrence growth, and completion limits
+
+Catalogue very large signed numerators and positive denominators, including distinctions
+that a floating-point conversion would lose. Check exact raw formulas and output types
+without timing thresholds, resource cutoffs, or implementation-provided expected values.
+For reflected recurrence experiments, keep each supplied standard-point operand within a
+declared fixed input-size envelope while varying the current iterate as the source does.
+Test literal denominator products and cancellation preservation. Do not generalize the
+source's linear bit-growth recurrence to two arbitrarily growing operands; do not assert
+constant bit time from constant structural work. Local raw-formula conformance does not
+complete TEST_PLAN R5's later algorithm-counter experiments or the two source bit lemmas.
+
+### Historical arithmetic coverage boundary
+
+| Existing obligation | Unit 09 evidence | Still outside this unit |
+|---|---|---|
+| R1: positive denominators | RP2--RP3 validate/produce positive-denominator RawPair | Every later algorithm's maintained-state checks |
+| R2: numerical equality | RP4 and RP9 explicit cross-product comparison | Tie handling and candidate selection in callers |
+| R3: no Fraction in solver path | RP11 production rational.py checks | Repository-wide enforcement as later modules land |
+| R4: no floating correctness decisions | RP4--RP8 and RP11--RP12 | Later cut/oracle/branch/global correctness paths |
+| R5: operation counts versus bit lengths | RP11--RP12 primitive work and recurrence fixtures | Full Standard/Accelerated instrumentation and bounds |
+
+No historical section or obligation is rewritten. Existing Witness/ExactValue representation,
+raw-attainment, and independent-checker boundaries remain in force.
+
+## 24. Unit 09 completion gate — production raw rational-pair primitives
+
+Before tests/test_rational.py or exactfrac/rational.py exists:
+
+1. authenticate the current Unit 08 commit and read the pinned source's exact residual,
+   Standard initialization/update, Accelerated reflection/reset, and bit-growth passages;
+2. adopt a documentation-only authority commit: the DESIGN layout addition, section 4.5A,
+   explicit rational addition to the Fraction-prohibited module enumeration, and these
+   appended TEST_PLAN sections 23--24. Preserve all prior TEST_PLAN bytes and every other
+   historical DESIGN byte except the two precisely named layout/policy line amendments;
+3. derive and commit the scalar arithmetic, rejection, literal-update, cancellation,
+   cross-encoding residual-scaling, ExactValue-bridge, and large-integer oracle fixtures.
+   Catalogue the finite audit domains and totals before their consuming tests. Expected
+   answers are source/definition-derived, never copied from production execution.
+
+Then, in order:
+
+4. write tests/test_rational.py against the committed authority and oracles. Syntax and
+   live Ruff stdin preflight under the intended target path precede applying the candidate;
+   establish intended ModuleNotFoundError for exactfrac.rational while it is absent;
+   all 388 previously completed tests remain green, and neither private notes file changes;
+5. implement only exactfrac/rational.py after RED. Run live Ruff on the full review copy
+   before application. Preserve frozen test bytes except for separately adjudicated defects;
+6. require RP1--RP12, targeted and full tests, full Ruff, independent exact arithmetic
+   corpus, static exactness/import isolation, and unchanged closed-module bytes to pass.
+   Bind actual counts, candidate identities, and runnable audit artifacts to the result;
+7. append an engineering CONFORMANCE note only after GREEN, preserving every existing
+   theorem row/status. Do not promote source bit-growth or algorithm-correctness claims
+   merely because the scalar arithmetic functions passed finite checks;
+8. stage exactly docs/CONFORMANCE.md, exactfrac/rational.py, and tests/test_rational.py;
+   reproduce that exact staged tree in isolation, verify the import origin and byte
+   identities, commit atomically after the earlier authority/oracle commits, push normally,
+   and establish synchronized remote/local refs and a clean worktree/index;
+9. at full closure provide two private append entries in complete self-contained
+   four-backtick Markdown blocks: BUILD_NOTES and LEARNING_NOTES. Never stage either file.
+
+This authority changes only docs/DESIGN.md and docs/TEST_PLAN.md. It does not change the
+canonical mathematical source, SPEC_LOCK, CONTRACT, immutable GOVERNING_SHA256SUMS baseline,
+oracle catalogue, CONFORMANCE, pyproject, existing code/tests, or local private notes. No
+Unit 10 reduction, branch coefficient construction, branch solver, global selector,
+certificate layer, arbitrary general-purpose fraction API, or telemetry is implemented here.

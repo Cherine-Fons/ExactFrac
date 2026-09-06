@@ -125,6 +125,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
     exactfrac/            solver (stdlib only)
       instance.py         canonical instance, aggregation, active check
       shore.py            finite-universe shore masks and strict list serialization
+      rational.py         raw scalar pairs, exact comparisons, prescribed update arithmetic
       witness.py          Witness, ExactValue, shore sums, validation, dense/sparse counts
       families.py         atomic families F(T, pi; I, O); enumeration per branch
       flow.py             Edmonds–Karp reference backend behind the MaxFlow interface
@@ -671,7 +672,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        on the integer numerator (never divide to decide <0, ==0, >0). Aligns with the
        frozen contract Bc_j - Ah_j.
     3. Fraction policy: fractions.Fraction is PROHIBITED from the solver arithmetic path
-       (instance, families, flow, oracle, branch, solve, certificate, witness). Fraction is
+       (instance, families, flow, oracle, branch, solve, certificate, witness, rational). Fraction is
        permitted only in the independent verifier and tests as an independent correctness
        oracle. CLI may display the raw value as N/D; no normalization needed. This is
        implementation discipline (Fraction's automatic gcd would add arithmetic absent
@@ -699,6 +700,132 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        quotient of §4.4. V2.1 cor:gcd permits optional Euclidean reduction only as
        separate polynomial-bit postprocessing, excluded from the strong-operation bound;
        v1 does not perform it in the solver.
+
+4.5A Production raw rational-pair primitives
+     (RULED upon controlled adoption, 2026-09-06)
+    1. Ownership. `exactfrac.rational` is a graph-independent scalar arithmetic layer for
+       the exact operations already prescribed by section 4.5. It owns no Instance,
+       Witness, ExactValue, branch, cut, optimizer, certificate, or telemetry object. Its
+       only permitted import is optional future annotations; it imports no other production
+       module, verifier, fractions, decimal, math, or third-party package. Closed modules
+       and package-root exports are unchanged. Consumers explicitly extract scalar fields
+       when crossing from a record to arithmetic; no dependency on the witness layer is
+       introduced. The section-3 layout addition and the addition of `rational` to section
+       4.5.3's enumeration are the only edits to previously existing DESIGN lines.
+    2. Exact public surface. `RawPair` is the alias `tuple[int, int]`, not a new class or
+       validating constructor. A valid carrier is an exact tuple of length two, containing
+       exact built-in ints (A, B), with B > 0. The numerator may be signed or zero. Store
+       no reduced form, cached products, bit lengths, graph data, or Empty sentinel.
+       Module __all__ is exactly this tuple, in the following sorted order:
+         ("RawPair", "compare_pairs", "make_pair", "pair_add_one", "pair_reflect",
+          "pair_sign", "residual_numerator", "validate_pair").
+       Public signatures, including positional/keyword argument names, are:
+         make_pair(numerator: int, denominator: int) -> RawPair
+         validate_pair(pair: RawPair) -> None
+         compare_pairs(left: RawPair, right: RawPair) -> int
+         pair_sign(pair: RawPair) -> int
+         pair_add_one(pair: RawPair) -> RawPair
+         pair_reflect(newton: RawPair, current: RawPair) -> RawPair
+         residual_numerator(parameter: RawPair, c: int, h: int) -> int
+       No hidden flags, alternative public constructors, mixed-carrier overloads, or
+       package-root re-exports are introduced. Exact tuples may be assembled by a caller,
+       but every public consumer validates them; the type alias alone validates nothing.
+       The untagged tuple carrier is deliberate: validation checks shape and numeric
+       domain, not provenance. Callers use role-specific names such as parameter_pair,
+       newton_pair, current_pair, and value_pair, construct/extract their scalar entries
+       explicitly, and never infer rational intent merely from a two-int tuple's shape.
+       A numerically valid edge/count/shore tuple cannot be distinguished at this boundary;
+       preventing that category error remains a caller and integration-review obligation.
+    3. Strict pair construction. `make_pair` requires exact built-in ints and
+       denominator > 0; otherwise it raises exact built-in ValueError. On success return
+       (numerator, denominator) literally. Never flip signs, remove common factors, or
+       normalize a zero numerator to denominator one. Section 4.5.1's positive-denominator
+       wording is a representation invariant enforced here by rejection, not sign repair.
+       Every pair-consuming public function likewise rejects B <= 0 rather than repairing
+       it. No int(...) coercion, list/sequence conversion, truncation, Fraction conversion,
+       or numerical-size cutoff is permitted.
+    4. Validation and errors. `validate_pair` checks, in order, exact tuple type, length
+       two, exact int numerator, exact int denominator, then denominator positivity, and
+       returns None on success. `make_pair` checks numerator type, denominator type, then
+       denominator positivity before constructing the pair. Two-pair functions validate their
+       first shown argument completely before their second; `residual_numerator` validates
+       parameter completely, then c, then h as exact built-in ints before arithmetic.
+       Invalid data supplied through these signatures raises exact built-in ValueError;
+       no custom exception and no broad interception of arbitrary Python errors. Reject
+       bool, int/tuple subclasses, floats, Fraction, lists, iterators, None, ExactValue,
+       Witness, and duck-typed numeric/sequence objects where exact ints/tuples are required.
+       Wrong call arity retains Python behavior. Messages are diagnostic, not stable API.
+    5. Structural versus numerical equality. RawPair is an ordinary immutable tuple, so
+       Python tuple equality and hashing describe stored fields; neither is a numerical
+       rational-equivalence operation. ExactValue's existing structural equality/hash and
+       rejection of nonpositive denominators remain unchanged. `compare_pairs` is the
+       explicit numerical comparison: for left=(A,B), right=(C,D), compare A*D with C*B
+       and return the exact built-in int -1, 0, or 1. Numerically equal pairs return 0 even
+       when their fields differ. Never compare tuples lexicographically, divide, reduce,
+       or use hash identity as a numerical decision. Equal values do not select a preferred
+       record, witness, family, or h value; later callers retain their governed tie policy.
+    6. Sign. `pair_sign((A,B))` returns the exact built-in int -1, 0, or 1 according to A.
+       B must still be validated even though B > 0 makes the sign depend only on A. No
+       positive-numerator requirement, negative-value clamp, tolerance, or float conversion
+       is introduced. Zero is an ordinary rational value, never an Empty-state decision.
+    7. Literal update operations. For pair=(A,B), `pair_add_one` returns exactly (A+B,B).
+       For newton=(A,B), current=(C,D), `pair_reflect` returns exactly
+       (2*A*D-C*B, B*D), representing 2*newton-current. Do not reverse the argument roles,
+       reduce, cancel common factors, replace zero by (0,1), or shortcut equal numerical
+       inputs to one operand. Return the exact tuple prescribed by the formula, including
+       on cancellation and equal-denominator inputs. Negative reflected points are valid
+       arithmetic results and are not clipped or rejected merely for being negative.
+    8. Source algorithm boundary. A standard Newton point is freshly formed from (c,h),
+       with h > 0 established by its branch-domain owner. Standard initialization is
+       pair_add_one((c,h)) == (c+h,h); accelerated initialization is (c,h) WITHOUT the +1.
+       At a continuing accelerated step, newton in pair_reflect is a freshly formed
+       c_j(U)/h_j(U) point, while current is the stored iterate. A failed look-ahead resets
+       the later branch loop to the queried standard point, not to a re-encoded expression
+       involving the prior denominator. These are integration requirements inherited from
+       alg:standard-branch/alg:branch, not implemented control flow in this scalar unit.
+       In particular, make_pair(c,h) rejects h <= 0 and never repairs a violated
+       denominator invariant. Positive denominator validation does not establish source
+       provenance or replace the branch owner's proof that its h_j(U) is valid.
+    9. Residual numerator. For parameter=(A,B), return the exact built-in int B*c-A*h.
+       c and h may each be signed or zero at this graph-independent linear-form boundary.
+       The scalar function does not establish that they came from a feasible branch shore.
+       A branch consumer must separately establish h_j(U) > 0 whenever h_j is used as a
+       denominator; accepting an arbitrary scalar h here does not relax prop:branch-transform.
+       This function does not return F_j, find a minimizer, subtract graph shifts, or choose
+       a shore. The represented rational residual is (B*c-A*h)/B; B > 0 makes its sign and
+       zero status exactly those of the returned numerator. Different raw encodings of the
+       same parameter can scale this numerator: compare raw residuals directly only for
+       the SAME parameter pair; across denominators use explicit rational comparison.
+    10. ExactValue bridge. Unit 08's ExactValue remains a distinct record, never an alias
+        for RawPair and never implicitly accepted by these functions. A caller comparing
+        two value records explicitly supplies (left.N,left.D) and (right.N,right.D) to
+        compare_pairs. This copies fields without changing either record or dividing.
+        A caller deliberately creating ExactValue from an already valid pair may pass its
+        two entries to the existing constructor; that creates only a record, not proof of
+        witness admissibility, raw attainment, or optimality. Witness-attaining output is
+        still computed by witness_value, not fabricated from an equivalent arithmetic pair.
+        No conversion adapter imports or edits witness.py in this unit.
+    11. Exactness, work, and number growth. The source of rational.py uses only the above
+        exact integer formulas, fixed-size tuple access, type/shape tests, and comparisons.
+        No float literal/conversion/arithmetic, Fraction, decimal, math, gcd, floor/true
+        division, remainder-based reduction, tolerance, unordered set iteration, explicit
+        copies, recursion, or magnitude/bit-length-driven loop is allowed. On valid input
+        each public call uses a bounded constant number of integer arithmetic/comparison
+        operations and O(1) integer objects; integer bit sizes and actual bit time can grow.
+        Do not assert constant byte memory, constant wall-clock time, or a production
+        asymptotic bit-length cutoff. `pair_reflect` preserves the exact recurrence to which
+        lem:bitgrowth applies when the newton operand has input-bounded encoding length.
+        No polynomial bound for arbitrary compositions with two growing operands is claimed.
+    12. Completion and conformance boundary. Unit 09 supplies these arithmetic primitives,
+        not algorithm-level termination, argmin tie-breaking, residual minimization,
+        sign-routing, branch-value reconstruction, certificate verification, or telemetry.
+        TEST_PLAN's historical R1--R5 and all previous sections remain unchanged. Add new
+        prospective obligations and a gate at its end. After tests, independent arithmetic
+        checks, and source inspection pass, append a narrow engineering
+        CONFORMANCE note without promoting lem:standard-bits, lem:bitgrowth, branch, or
+        global theorem rows. Their algorithm-level obligations remain with later units.
+        The complete three-file staged tree must then pass isolated verification before
+        the implementation commit, in the order fixed by TEST_PLAN section 24.
 
 4.6 Argmin policy  (RULED — adopted 2026-08-31)
     Separation: theorem = any exact residual argmin; implementation = first-encountered
