@@ -6937,3 +6937,1042 @@ argmin, global-solve, certificate, or telemetry obligations.
 **Unit 09 oracle status:** authority-derived and independently recomputed before
 `tests/test_rational.py` or `exactfrac/rational.py` exists. No Unit 09 production output is
 used to establish these expected values.
+
+---
+
+## ORACLE-046 — Sign-routing records, exact shape, and fixed active instances
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.1--4.7.5, 4.7.8; TEST_PLAN SR1--SR3, SR11.
+Authority commit: `4af674e70155c632b6ddf3e9ee36109854f227af`.
+
+The Unit 10 fixtures are registered before any `tests/test_sign_routing.py` or
+`exactfrac/sign_routing.py` exists. They do not call max-flow or optimize a branch.
+The source is the V2.2 sign-routing lemma, its proof and directed conversion, and the
+literal c_j/h_j table in prop:branch-transform. Prospective Python representation choices
+are those of the adopted DESIGN 4.7, not new requirements invented by an implementation.
+
+### Accepted standalone coefficient record shapes
+
+For `SignRoutingCoefficients(a, gamma, constant)`, exact built-in integers and an exact tuple
+are required. The following records are valid even when their gamma length does not fit a
+particular instance. Empty gamma is accepted here and rejected only by a builder whose
+instance dimension does not match.
+
+<!-- UNIT10:COEFFICIENT_SHAPES:BEGIN -->
+| a | gamma | constant |
+|---:|---|---:|
+| 0 | `()` | -7 |
+| 0 | `(0, 0)` | 5 |
+| 2 | `(3, -4, 0, 5)` | -7 |
+<!-- UNIT10:COEFFICIENT_SHAPES:END -->
+
+The stored fields/slots are exactly `(a, gamma, constant)`. Equal records hash equally;
+unequal records are not required to have different hashes. Do not pin cross-process hash
+integers. Frozen/slotted state has no __dict__ or generated ordering and no extra cached
+Instance, degree, parameter, branch, or negative-shift field. Valid shape is not branch
+provenance. Numeric magnitude has no upper cutoff.
+
+### Accepted standalone network record shapes
+
+`SignRoutedNetwork(vertex_count, arcs, negative_shift, constant)` stores those four fields,
+not redundant terminal fields. Properties are exactly
+`(node_count, source, sink) = (vertex_count+2, vertex_count, vertex_count+1)`.
+
+<!-- UNIT10:NETWORK_SHAPES:BEGIN -->
+| vertex_count | arcs (exact tuple notation) | negative_shift | constant | node_count, source, sink |
+|---:|---|---:|---:|---|
+| 1 | `()` | 7 | -2 | `(3, 1, 2)` |
+| 1 | `((0, 2, 5), (0, 2, 2), (2, 0, 1), (1, 0, 0))` | 11 | -4 | `(3, 1, 2)` |
+<!-- UNIT10:NETWORK_SHAPES:END -->
+
+The second record deliberately retains repeated directed pairs, their supplied order,
+asymmetric capacities, and a zero-capacity arc. It is a valid scalar/network representation,
+not a claim that it came from sign routing. The constructor must not sort, aggregate,
+create opposite arcs, delete zeros, or infer coefficients. The empty-arc record is valid,
+whereas the actual builder on an active Instance always emits 2(m+n)>0 original arcs.
+Mutation/frozen-assignment and wrong-arity behavior are ordinary Python behavior, not part
+of the malformed-data exact-ValueError matrix below.
+
+### Fixed canonical active instances
+
+RICH is exactly ORACLE-025; MIXED is exactly ORACLE-031. EQUALITY and TRIANGLE are new tiny
+local fixtures, not a new input model. All records below have labels=None initially.
+
+<!-- UNIT10:INSTANCES:BEGIN -->
+| Name | n | Canonical `(u,v,q)` records | f |
+|---|---:|---|---|
+| EQUALITY | 2 | `((0, 1, 3),)` | `(3, 3)` |
+| MIXED | 4 | `((0, 1, 2), (0, 2, 3), (0, 3, 1), (1, 2, 4), (1, 3, 2), (2, 3, 5))` | `(2, 3, 4, 5)` |
+| RICH | 5 | `((0, 2, 2), (1, 2, 2), (2, 4, 1), (3, 4, 1))` | `(1, 1, 1, 1, 2)` |
+| TRIANGLE | 3 | `((0, 1, 1), (0, 2, 1), (1, 2, 1))` | `(1, 1, 1)` |
+<!-- UNIT10:INSTANCES:END -->
+
+Derive degrees from endpoint incidences, not from a production property:
+
+```text
+RICH:     m=4, Q=6,  d_q=(2,2,5,1,2)
+MIXED:    m=6, Q=17, d_q=(6,8,12,8)
+EQUALITY: m=1, Q=3,  d_q=(3,3)=f
+TRIANGLE: m=3, Q=3,  d_q=(2,2,2)
+```
+
+Thus each f_v is positive and at most its degree. The support tuples are in canonical
+edge_ref order; these fixtures do not authorize raw-instance repair or new normalization.
+
+---
+
+## ORACLE-047 — Four-branch coefficient rows, including negative parameters in every branch
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.6--4.7.7; TEST_PLAN SR4, SR7, SR10.
+
+The ten literal raw parameter encodings, in the prescribed fixture order, are:
+
+```text
+(-3,1), (-2,1), (-1,2), (-2,4), (0,1), (0,3), (1,1), (2,1), (3,2), (6,4)
+```
+
+Equal-value encodings remain separate rows; no reduction is performed. For s=f(U), b=b_q(U),
+d=d_q(U), the independent source expressions are
+
+```text
+(c0,h0) = (s+b-1, d+1-s)
+(c1,h1) = (s+b-2, d-s)
+(c2,h2) = (b-d,   s-1)
+(c3,h3) = (b-d-2, s)
+```
+
+With parameter (A,B), the coefficient table is derived by expansion of B*c_j-A*h_j:
+
+```text
+j=0: a=B; gamma_v=(A+B)*f_v-A*d_v; constant=-(A+B)
+j=1: a=B; gamma_v=(A+B)*f_v-A*d_v; constant=-2*B
+j=2: a=B; gamma_v=-B*d_v-A*f_v;    constant=A
+j=3: a=B; gamma_v=-B*d_v-A*f_v;    constant=-2*B
+```
+
+Every following gamma tuple is indexed by increasing original vertex index. C_minus is a
+separate expected builder output, not an extra stored coefficient-record field. The 120
+rows specify all four branches on all ten parameters for RICH, MIXED, and EQUALITY.
+
+<!-- UNIT10:BRANCHES:BEGIN -->
+| Instance | Parameter `(A,B)` | j | a | gamma | constant | C_minus |
+|---|---|---:|---:|---|---:|---:|
+| RICH | `(-3, 1)` | 0 | 1 | `(4, 4, 13, 1, 2)` | 2 | 0 |
+| RICH | `(-3, 1)` | 1 | 1 | `(4, 4, 13, 1, 2)` | -2 | 0 |
+| RICH | `(-3, 1)` | 2 | 1 | `(1, 1, -2, 2, 4)` | -3 | 2 |
+| RICH | `(-3, 1)` | 3 | 1 | `(1, 1, -2, 2, 4)` | -2 | 2 |
+| RICH | `(-2, 1)` | 0 | 1 | `(3, 3, 9, 1, 2)` | 1 | 0 |
+| RICH | `(-2, 1)` | 1 | 1 | `(3, 3, 9, 1, 2)` | -2 | 0 |
+| RICH | `(-2, 1)` | 2 | 1 | `(0, 0, -3, 1, 2)` | -2 | 3 |
+| RICH | `(-2, 1)` | 3 | 1 | `(0, 0, -3, 1, 2)` | -2 | 3 |
+| RICH | `(-1, 2)` | 0 | 2 | `(3, 3, 6, 2, 4)` | -1 | 0 |
+| RICH | `(-1, 2)` | 1 | 2 | `(3, 3, 6, 2, 4)` | -4 | 0 |
+| RICH | `(-1, 2)` | 2 | 2 | `(-3, -3, -9, -1, -2)` | -1 | 18 |
+| RICH | `(-1, 2)` | 3 | 2 | `(-3, -3, -9, -1, -2)` | -4 | 18 |
+| RICH | `(-2, 4)` | 0 | 4 | `(6, 6, 12, 4, 8)` | -2 | 0 |
+| RICH | `(-2, 4)` | 1 | 4 | `(6, 6, 12, 4, 8)` | -8 | 0 |
+| RICH | `(-2, 4)` | 2 | 4 | `(-6, -6, -18, -2, -4)` | -2 | 36 |
+| RICH | `(-2, 4)` | 3 | 4 | `(-6, -6, -18, -2, -4)` | -8 | 36 |
+| RICH | `(0, 1)` | 0 | 1 | `(1, 1, 1, 1, 2)` | -1 | 0 |
+| RICH | `(0, 1)` | 1 | 1 | `(1, 1, 1, 1, 2)` | -2 | 0 |
+| RICH | `(0, 1)` | 2 | 1 | `(-2, -2, -5, -1, -2)` | 0 | 12 |
+| RICH | `(0, 1)` | 3 | 1 | `(-2, -2, -5, -1, -2)` | -2 | 12 |
+| RICH | `(0, 3)` | 0 | 3 | `(3, 3, 3, 3, 6)` | -3 | 0 |
+| RICH | `(0, 3)` | 1 | 3 | `(3, 3, 3, 3, 6)` | -6 | 0 |
+| RICH | `(0, 3)` | 2 | 3 | `(-6, -6, -15, -3, -6)` | 0 | 36 |
+| RICH | `(0, 3)` | 3 | 3 | `(-6, -6, -15, -3, -6)` | -6 | 36 |
+| RICH | `(1, 1)` | 0 | 1 | `(0, 0, -3, 1, 2)` | -2 | 3 |
+| RICH | `(1, 1)` | 1 | 1 | `(0, 0, -3, 1, 2)` | -2 | 3 |
+| RICH | `(1, 1)` | 2 | 1 | `(-3, -3, -6, -2, -4)` | 1 | 18 |
+| RICH | `(1, 1)` | 3 | 1 | `(-3, -3, -6, -2, -4)` | -2 | 18 |
+| RICH | `(2, 1)` | 0 | 1 | `(-1, -1, -7, 1, 2)` | -3 | 9 |
+| RICH | `(2, 1)` | 1 | 1 | `(-1, -1, -7, 1, 2)` | -2 | 9 |
+| RICH | `(2, 1)` | 2 | 1 | `(-4, -4, -7, -3, -6)` | 2 | 24 |
+| RICH | `(2, 1)` | 3 | 1 | `(-4, -4, -7, -3, -6)` | -2 | 24 |
+| RICH | `(3, 2)` | 0 | 2 | `(-1, -1, -10, 2, 4)` | -5 | 12 |
+| RICH | `(3, 2)` | 1 | 2 | `(-1, -1, -10, 2, 4)` | -4 | 12 |
+| RICH | `(3, 2)` | 2 | 2 | `(-7, -7, -13, -5, -10)` | 3 | 42 |
+| RICH | `(3, 2)` | 3 | 2 | `(-7, -7, -13, -5, -10)` | -4 | 42 |
+| RICH | `(6, 4)` | 0 | 4 | `(-2, -2, -20, 4, 8)` | -10 | 24 |
+| RICH | `(6, 4)` | 1 | 4 | `(-2, -2, -20, 4, 8)` | -8 | 24 |
+| RICH | `(6, 4)` | 2 | 4 | `(-14, -14, -26, -10, -20)` | 6 | 84 |
+| RICH | `(6, 4)` | 3 | 4 | `(-14, -14, -26, -10, -20)` | -8 | 84 |
+| MIXED | `(-3, 1)` | 0 | 1 | `(14, 18, 28, 14)` | 2 | 0 |
+| MIXED | `(-3, 1)` | 1 | 1 | `(14, 18, 28, 14)` | -2 | 0 |
+| MIXED | `(-3, 1)` | 2 | 1 | `(0, 1, 0, 7)` | -3 | 0 |
+| MIXED | `(-3, 1)` | 3 | 1 | `(0, 1, 0, 7)` | -2 | 0 |
+| MIXED | `(-2, 1)` | 0 | 1 | `(10, 13, 20, 11)` | 1 | 0 |
+| MIXED | `(-2, 1)` | 1 | 1 | `(10, 13, 20, 11)` | -2 | 0 |
+| MIXED | `(-2, 1)` | 2 | 1 | `(-2, -2, -4, 2)` | -2 | 8 |
+| MIXED | `(-2, 1)` | 3 | 1 | `(-2, -2, -4, 2)` | -2 | 8 |
+| MIXED | `(-1, 2)` | 0 | 2 | `(8, 11, 16, 13)` | -1 | 0 |
+| MIXED | `(-1, 2)` | 1 | 2 | `(8, 11, 16, 13)` | -4 | 0 |
+| MIXED | `(-1, 2)` | 2 | 2 | `(-10, -13, -20, -11)` | -1 | 54 |
+| MIXED | `(-1, 2)` | 3 | 2 | `(-10, -13, -20, -11)` | -4 | 54 |
+| MIXED | `(-2, 4)` | 0 | 4 | `(16, 22, 32, 26)` | -2 | 0 |
+| MIXED | `(-2, 4)` | 1 | 4 | `(16, 22, 32, 26)` | -8 | 0 |
+| MIXED | `(-2, 4)` | 2 | 4 | `(-20, -26, -40, -22)` | -2 | 108 |
+| MIXED | `(-2, 4)` | 3 | 4 | `(-20, -26, -40, -22)` | -8 | 108 |
+| MIXED | `(0, 1)` | 0 | 1 | `(2, 3, 4, 5)` | -1 | 0 |
+| MIXED | `(0, 1)` | 1 | 1 | `(2, 3, 4, 5)` | -2 | 0 |
+| MIXED | `(0, 1)` | 2 | 1 | `(-6, -8, -12, -8)` | 0 | 34 |
+| MIXED | `(0, 1)` | 3 | 1 | `(-6, -8, -12, -8)` | -2 | 34 |
+| MIXED | `(0, 3)` | 0 | 3 | `(6, 9, 12, 15)` | -3 | 0 |
+| MIXED | `(0, 3)` | 1 | 3 | `(6, 9, 12, 15)` | -6 | 0 |
+| MIXED | `(0, 3)` | 2 | 3 | `(-18, -24, -36, -24)` | 0 | 102 |
+| MIXED | `(0, 3)` | 3 | 3 | `(-18, -24, -36, -24)` | -6 | 102 |
+| MIXED | `(1, 1)` | 0 | 1 | `(-2, -2, -4, 2)` | -2 | 8 |
+| MIXED | `(1, 1)` | 1 | 1 | `(-2, -2, -4, 2)` | -2 | 8 |
+| MIXED | `(1, 1)` | 2 | 1 | `(-8, -11, -16, -13)` | 1 | 48 |
+| MIXED | `(1, 1)` | 3 | 1 | `(-8, -11, -16, -13)` | -2 | 48 |
+| MIXED | `(2, 1)` | 0 | 1 | `(-6, -7, -12, -1)` | -3 | 26 |
+| MIXED | `(2, 1)` | 1 | 1 | `(-6, -7, -12, -1)` | -2 | 26 |
+| MIXED | `(2, 1)` | 2 | 1 | `(-10, -14, -20, -18)` | 2 | 62 |
+| MIXED | `(2, 1)` | 3 | 1 | `(-10, -14, -20, -18)` | -2 | 62 |
+| MIXED | `(3, 2)` | 0 | 2 | `(-8, -9, -16, 1)` | -5 | 33 |
+| MIXED | `(3, 2)` | 1 | 2 | `(-8, -9, -16, 1)` | -4 | 33 |
+| MIXED | `(3, 2)` | 2 | 2 | `(-18, -25, -36, -31)` | 3 | 110 |
+| MIXED | `(3, 2)` | 3 | 2 | `(-18, -25, -36, -31)` | -4 | 110 |
+| MIXED | `(6, 4)` | 0 | 4 | `(-16, -18, -32, 2)` | -10 | 66 |
+| MIXED | `(6, 4)` | 1 | 4 | `(-16, -18, -32, 2)` | -8 | 66 |
+| MIXED | `(6, 4)` | 2 | 4 | `(-36, -50, -72, -62)` | 6 | 220 |
+| MIXED | `(6, 4)` | 3 | 4 | `(-36, -50, -72, -62)` | -8 | 220 |
+| EQUALITY | `(-3, 1)` | 0 | 1 | `(3, 3)` | 2 | 0 |
+| EQUALITY | `(-3, 1)` | 1 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(-3, 1)` | 2 | 1 | `(6, 6)` | -3 | 0 |
+| EQUALITY | `(-3, 1)` | 3 | 1 | `(6, 6)` | -2 | 0 |
+| EQUALITY | `(-2, 1)` | 0 | 1 | `(3, 3)` | 1 | 0 |
+| EQUALITY | `(-2, 1)` | 1 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(-2, 1)` | 2 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(-2, 1)` | 3 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(-1, 2)` | 0 | 2 | `(6, 6)` | -1 | 0 |
+| EQUALITY | `(-1, 2)` | 1 | 2 | `(6, 6)` | -4 | 0 |
+| EQUALITY | `(-1, 2)` | 2 | 2 | `(-3, -3)` | -1 | 6 |
+| EQUALITY | `(-1, 2)` | 3 | 2 | `(-3, -3)` | -4 | 6 |
+| EQUALITY | `(-2, 4)` | 0 | 4 | `(12, 12)` | -2 | 0 |
+| EQUALITY | `(-2, 4)` | 1 | 4 | `(12, 12)` | -8 | 0 |
+| EQUALITY | `(-2, 4)` | 2 | 4 | `(-6, -6)` | -2 | 12 |
+| EQUALITY | `(-2, 4)` | 3 | 4 | `(-6, -6)` | -8 | 12 |
+| EQUALITY | `(0, 1)` | 0 | 1 | `(3, 3)` | -1 | 0 |
+| EQUALITY | `(0, 1)` | 1 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(0, 1)` | 2 | 1 | `(-3, -3)` | 0 | 6 |
+| EQUALITY | `(0, 1)` | 3 | 1 | `(-3, -3)` | -2 | 6 |
+| EQUALITY | `(0, 3)` | 0 | 3 | `(9, 9)` | -3 | 0 |
+| EQUALITY | `(0, 3)` | 1 | 3 | `(9, 9)` | -6 | 0 |
+| EQUALITY | `(0, 3)` | 2 | 3 | `(-9, -9)` | 0 | 18 |
+| EQUALITY | `(0, 3)` | 3 | 3 | `(-9, -9)` | -6 | 18 |
+| EQUALITY | `(1, 1)` | 0 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(1, 1)` | 1 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(1, 1)` | 2 | 1 | `(-6, -6)` | 1 | 12 |
+| EQUALITY | `(1, 1)` | 3 | 1 | `(-6, -6)` | -2 | 12 |
+| EQUALITY | `(2, 1)` | 0 | 1 | `(3, 3)` | -3 | 0 |
+| EQUALITY | `(2, 1)` | 1 | 1 | `(3, 3)` | -2 | 0 |
+| EQUALITY | `(2, 1)` | 2 | 1 | `(-9, -9)` | 2 | 18 |
+| EQUALITY | `(2, 1)` | 3 | 1 | `(-9, -9)` | -2 | 18 |
+| EQUALITY | `(3, 2)` | 0 | 2 | `(6, 6)` | -5 | 0 |
+| EQUALITY | `(3, 2)` | 1 | 2 | `(6, 6)` | -4 | 0 |
+| EQUALITY | `(3, 2)` | 2 | 2 | `(-15, -15)` | 3 | 30 |
+| EQUALITY | `(3, 2)` | 3 | 2 | `(-15, -15)` | -4 | 30 |
+| EQUALITY | `(6, 4)` | 0 | 4 | `(12, 12)` | -10 | 0 |
+| EQUALITY | `(6, 4)` | 1 | 4 | `(12, 12)` | -8 | 0 |
+| EQUALITY | `(6, 4)` | 2 | 4 | `(-30, -30)` | 6 | 60 |
+| EQUALITY | `(6, 4)` | 3 | 4 | `(-30, -30)` | -8 | 60 |
+<!-- UNIT10:BRANCHES:END -->
+
+### Sign anchors that must not be weakened
+
+At (0,1), branches 0/1 have gamma=f and C_minus=0; branches 2/3 have gamma=-d_q and
+C_minus=2Q. Thus RICH has C_minus=12 and MIXED has C_minus=34 in branches 2/3.
+
+For A<0 and active input, gamma in branches 0/1 can be rewritten as
+`B*f_v+(-A)*(d_v-f_v)>0`; these branches have only positive sink spokes. They are not
+permitted to skip negative-A tests merely because this algebra guarantees positivity.
+
+At RICH (-2,1), branches 0/1 have `(3,3,9,1,2)` and C_minus=0, while branches 2/3 have
+`(0,0,-3,1,2)` and C_minus=3. This tests all three coefficient signs in the latter family.
+At RICH (-3,1), branches 2/3 share `(1,1,-2,2,4)` and shift 2 but have distinct constants
+-3 and -2. The (-2,1) coincidence of those constants must not hide a branch error.
+
+For EQUALITY, branches 0/1 have gamma=B*f for every signed A. The coefficient routine must
+obtain the degree tuple once before the increasing-vertex scan; a correct numerical row
+alone does not establish that structural-work requirement. It is also inspected in SR15.
+
+---
+
+## ORACLE-048 — Complete original arc tuples and directly derived cut tables
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.8--4.7.11; TEST_PLAN SR5--SR6, SR8, SR12.
+
+Each support edge emits both original directions before any spokes, in edge_ref order.
+Spokes follow increasing original vertex order. Nonnegative gamma, including zero, emits
+v->sink then sink->v. Negative gamma emits source->v then v->source. The two directions
+have equal capacity. They are original capacity arcs, not residual reverse entries.
+All eight lists below are exact tuple fixtures, including zeros and order.
+
+```text
+EQUALITY: source=2, sink=3, node_count=4,  original arc records=6
+MIXED:    source=4, sink=5, node_count=6,  original arc records=20
+RICH:     source=5, sink=6, node_count=7,  original arc records=18
+```
+
+For each U, X_U={source} union U. A directed arc contributes only if its tail lies in X_U
+and its head lies outside. Opposite directions of a crossing pair are not both counted.
+The following scalar tables are independently derived from input edges and coefficients:
+`Psi=a*b_q(U)+sum_U gamma`; `cut=Psi+C_minus`; `recovered=Psi+constant`.
+A separate direct crossing count over each literal arc list must give the same cut column.
+The eight fixtures contain 128 explicit all-shore rows.
+
+<!-- UNIT10:NETWORKS:BEGIN -->
+### N1 — EQUALITY
+
+`(a, gamma, constant) = (2, (-4, 5), -3)`
+`negative_shift = 4`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 1, 6),
+    (1, 0, 6),
+    (2, 0, 4),
+    (0, 2, 4),
+    (1, 3, 5),
+    (3, 1, 5),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 4 | -3 |
+| 1 | 2 | 6 | -1 |
+| 2 | 11 | 15 | 8 |
+| 3 | 1 | 5 | -2 |
+
+### N2 — EQUALITY
+
+`(a, gamma, constant) = (0, (-4, 5), 7)`
+`negative_shift = 4`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 1, 0),
+    (1, 0, 0),
+    (2, 0, 4),
+    (0, 2, 4),
+    (1, 3, 5),
+    (3, 1, 5),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 4 | 7 |
+| 1 | -4 | 0 | 3 |
+| 2 | 5 | 9 | 12 |
+| 3 | 1 | 5 | 8 |
+
+### N3 — EQUALITY
+
+`(a, gamma, constant) = (2, (0, 0), -7)`
+`negative_shift = 0`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 1, 6),
+    (1, 0, 6),
+    (0, 3, 0),
+    (3, 0, 0),
+    (1, 3, 0),
+    (3, 1, 0),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | -7 |
+| 1 | 6 | 6 | -1 |
+| 2 | 6 | 6 | -1 |
+| 3 | 0 | 0 | -7 |
+
+### N4 — EQUALITY
+
+`(a, gamma, constant) = (0, (0, 0), 5)`
+`negative_shift = 0`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 1, 0),
+    (1, 0, 0),
+    (0, 3, 0),
+    (3, 0, 0),
+    (1, 3, 0),
+    (3, 1, 0),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 5 |
+| 1 | 0 | 0 | 5 |
+| 2 | 0 | 0 | 5 |
+| 3 | 0 | 0 | 5 |
+
+### N5 — MIXED
+
+`(a, gamma, constant) = (2, (3, -4, 0, 5), -7)`
+`negative_shift = 4`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 1, 4),
+    (1, 0, 4),
+    (0, 2, 6),
+    (2, 0, 6),
+    (0, 3, 2),
+    (3, 0, 2),
+    (1, 2, 8),
+    (2, 1, 8),
+    (1, 3, 4),
+    (3, 1, 4),
+    (2, 3, 10),
+    (3, 2, 10),
+    (0, 5, 3),
+    (5, 0, 3),
+    (4, 1, 4),
+    (1, 4, 4),
+    (2, 5, 0),
+    (5, 2, 0),
+    (3, 5, 5),
+    (5, 3, 5),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 4 | -7 |
+| 1 | 15 | 19 | 8 |
+| 2 | 12 | 16 | 5 |
+| 3 | 19 | 23 | 12 |
+| 4 | 24 | 28 | 17 |
+| 5 | 27 | 31 | 20 |
+| 6 | 20 | 24 | 13 |
+| 7 | 15 | 19 | 8 |
+| 8 | 21 | 25 | 14 |
+| 9 | 32 | 36 | 25 |
+| 10 | 25 | 29 | 18 |
+| 11 | 28 | 32 | 21 |
+| 12 | 25 | 29 | 18 |
+| 13 | 24 | 28 | 17 |
+| 14 | 13 | 17 | 6 |
+| 15 | 4 | 8 | -3 |
+
+### N6 — RICH
+
+`(a, gamma, constant) = (1, (4, 4, 13, 1, 2), 2)`
+`negative_shift = 0`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 2, 2),
+    (2, 0, 2),
+    (1, 2, 2),
+    (2, 1, 2),
+    (2, 4, 1),
+    (4, 2, 1),
+    (3, 4, 1),
+    (4, 3, 1),
+    (0, 6, 4),
+    (6, 0, 4),
+    (1, 6, 4),
+    (6, 1, 4),
+    (2, 6, 13),
+    (6, 2, 13),
+    (3, 6, 1),
+    (6, 3, 1),
+    (4, 6, 2),
+    (6, 4, 2),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 2 |
+| 1 | 6 | 6 | 8 |
+| 2 | 6 | 6 | 8 |
+| 3 | 12 | 12 | 14 |
+| 4 | 18 | 18 | 20 |
+| 5 | 20 | 20 | 22 |
+| 6 | 20 | 20 | 22 |
+| 7 | 22 | 22 | 24 |
+| 8 | 2 | 2 | 4 |
+| 9 | 8 | 8 | 10 |
+| 10 | 8 | 8 | 10 |
+| 11 | 14 | 14 | 16 |
+| 12 | 20 | 20 | 22 |
+| 13 | 22 | 22 | 24 |
+| 14 | 22 | 22 | 24 |
+| 15 | 24 | 24 | 26 |
+| 16 | 4 | 4 | 6 |
+| 17 | 10 | 10 | 12 |
+| 18 | 10 | 10 | 12 |
+| 19 | 16 | 16 | 18 |
+| 20 | 20 | 20 | 22 |
+| 21 | 22 | 22 | 24 |
+| 22 | 22 | 22 | 24 |
+| 23 | 24 | 24 | 26 |
+| 24 | 4 | 4 | 6 |
+| 25 | 10 | 10 | 12 |
+| 26 | 10 | 10 | 12 |
+| 27 | 16 | 16 | 18 |
+| 28 | 20 | 20 | 22 |
+| 29 | 22 | 22 | 24 |
+| 30 | 22 | 22 | 24 |
+| 31 | 24 | 24 | 26 |
+
+### N7 — RICH
+
+`(a, gamma, constant) = (1, (0, 0, -3, 1, 2), -2)`
+`negative_shift = 3`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 2, 2),
+    (2, 0, 2),
+    (1, 2, 2),
+    (2, 1, 2),
+    (2, 4, 1),
+    (4, 2, 1),
+    (3, 4, 1),
+    (4, 3, 1),
+    (0, 6, 0),
+    (6, 0, 0),
+    (1, 6, 0),
+    (6, 1, 0),
+    (5, 2, 3),
+    (2, 5, 3),
+    (3, 6, 1),
+    (6, 3, 1),
+    (4, 6, 2),
+    (6, 4, 2),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 3 | -2 |
+| 1 | 2 | 5 | 0 |
+| 2 | 2 | 5 | 0 |
+| 3 | 4 | 7 | 2 |
+| 4 | 2 | 5 | 0 |
+| 5 | 0 | 3 | -2 |
+| 6 | 0 | 3 | -2 |
+| 7 | -2 | 1 | -4 |
+| 8 | 2 | 5 | 0 |
+| 9 | 4 | 7 | 2 |
+| 10 | 4 | 7 | 2 |
+| 11 | 6 | 9 | 4 |
+| 12 | 4 | 7 | 2 |
+| 13 | 2 | 5 | 0 |
+| 14 | 2 | 5 | 0 |
+| 15 | 0 | 3 | -2 |
+| 16 | 4 | 7 | 2 |
+| 17 | 6 | 9 | 4 |
+| 18 | 6 | 9 | 4 |
+| 19 | 8 | 11 | 6 |
+| 20 | 4 | 7 | 2 |
+| 21 | 2 | 5 | 0 |
+| 22 | 2 | 5 | 0 |
+| 23 | 0 | 3 | -2 |
+| 24 | 4 | 7 | 2 |
+| 25 | 6 | 9 | 4 |
+| 26 | 6 | 9 | 4 |
+| 27 | 8 | 11 | 6 |
+| 28 | 4 | 7 | 2 |
+| 29 | 2 | 5 | 0 |
+| 30 | 2 | 5 | 0 |
+| 31 | 0 | 3 | -2 |
+
+### N8 — RICH
+
+`(a, gamma, constant) = (1, (-2, -2, -5, -1, -2), 0)`
+`negative_shift = 12`
+
+Exact original arc tuple:
+
+```text
+(
+    (0, 2, 2),
+    (2, 0, 2),
+    (1, 2, 2),
+    (2, 1, 2),
+    (2, 4, 1),
+    (4, 2, 1),
+    (3, 4, 1),
+    (4, 3, 1),
+    (5, 0, 2),
+    (0, 5, 2),
+    (5, 1, 2),
+    (1, 5, 2),
+    (5, 2, 5),
+    (2, 5, 5),
+    (5, 3, 1),
+    (3, 5, 1),
+    (5, 4, 2),
+    (4, 5, 2),
+)
+```
+
+| U mask | Psi(U) | Directed cut | Recovered objective |
+|---:|---:|---:|---:|
+| 0 | 0 | 12 | 0 |
+| 1 | 0 | 12 | 0 |
+| 2 | 0 | 12 | 0 |
+| 3 | 0 | 12 | 0 |
+| 4 | 0 | 12 | 0 |
+| 5 | -4 | 8 | -4 |
+| 6 | -4 | 8 | -4 |
+| 7 | -8 | 4 | -8 |
+| 8 | 0 | 12 | 0 |
+| 9 | 0 | 12 | 0 |
+| 10 | 0 | 12 | 0 |
+| 11 | 0 | 12 | 0 |
+| 12 | 0 | 12 | 0 |
+| 13 | -4 | 8 | -4 |
+| 14 | -4 | 8 | -4 |
+| 15 | -8 | 4 | -8 |
+| 16 | 0 | 12 | 0 |
+| 17 | 0 | 12 | 0 |
+| 18 | 0 | 12 | 0 |
+| 19 | 0 | 12 | 0 |
+| 20 | -2 | 10 | -2 |
+| 21 | -6 | 6 | -6 |
+| 22 | -6 | 6 | -6 |
+| 23 | -10 | 2 | -10 |
+| 24 | -2 | 10 | -2 |
+| 25 | -2 | 10 | -2 |
+| 26 | -2 | 10 | -2 |
+| 27 | -2 | 10 | -2 |
+| 28 | -4 | 8 | -4 |
+| 29 | -8 | 4 | -8 |
+| 30 | -8 | 4 | -8 |
+| 31 | -12 | 0 | -12 |
+
+<!-- UNIT10:NETWORKS:END -->
+
+N2 retains its zero support arcs; N3 retains zero sink-spoke pairs; N4 retains all six arcs
+although every capacity is zero. No case becomes an empty original arc list. For N5, keep
+gamma and a fixed and separately use constants -7, 0, and 11. Its arcs and C_minus=4 must
+remain identical; only the copied constant and recovered objectives change. These two
+additional constant variants do not count as extra rows in the eight-list fixture total.
+
+For label independence, construct RICH with metadata `('v0','v1','v2','v3','v4')` and with
+`(90,'one',-7,'three',42)`, each alongside its labels=None control. All are distinct valid
+labels. Every branch coefficient and network result must be identical to its unlabeled
+control. Labels never alter canonical indices, gamma order, or arc endpoints.
+
+---
+
+## ORACLE-049 — All-shore coefficient and routing identities without domain filters
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.7, 4.7.11; TEST_PLAN SR7--SR9, SR13.
+
+For every fixed branch row in ORACLE-047, enumerate U=0 through (1<<n)-1. There are
+40*(32+16+4)=2080 anchor branch/parameter/shore evaluations. Test the named functions
+`test_branch_coefficient_identity` and `test_sign_routing_identity` against definitions,
+not against one another's production results.
+
+Independent coefficient side:
+
+1. sum f_v over member vertices for s;
+2. count crossing input-edge multiplicity for b;
+3. sum input-edge incidences in U for d (an internal edge contributes twice);
+4. substitute the source (c_j,h_j) expressions in ORACLE-047;
+5. compute B*c_j-A*h_j directly, with no production residual helper.
+
+The production side supplies a,gamma,constant. Require the independent residual to equal
+`a*b+sum_U gamma+constant`. Do not use a production degree property or production shore-sum
+helper in the expected side. As a second derivation of each fixed coefficient, the constant
+is the polynomial residual at U=0, and
+
+`gamma_v = residual({v}) - residual(empty) - B*b_q({v})`.
+
+Independent routing side: derive Psi and C_minus from supplied generic coefficients and
+input-edge crossings; count directed crossings in the actual emitted original arc tuple.
+Require `cut=Psi+C_minus` and `recover_objective(network,cut)=Psi+constant`.
+For branch coefficients the final value must equal the independently computed source
+residual. No max-flow/min-cut invocation or shared construction code supplies an expected
+answer. The private audit's reference graph is a mathematical verification object, not an
+implementation being approved or a fixture learned from production.
+
+U=0 and U=V are included. Cut(empty-source shore)=C_minus;
+cut(full-original shore)=sum of positive gamma. Outside D_j, all these residual expressions
+are polynomial extensions only. No branch membership, positive h_j, witness, quotient, or
+Empty result is asserted. Never send off-domain h_j to a positive-denominator factory.
+
+---
+
+## ORACLE-050 — Separate shift recovery and a restricted-family counterexample
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.10--4.7.11; TEST_PLAN SR9.
+
+For a normally constructed network record, recovery subtracts negative_shift and then adds
+constant. Scalar control rows (no claim that cut_value is attained by those arbitrary arcs):
+
+<!-- UNIT10:RECOVERY:BEGIN -->
+| cut_value | negative_shift | constant | recovered integer |
+|---:|---:|---:|---:|
+| 0 | 7 | -2 | -9 |
+| 10 | 7 | -2 | 1 |
+| 0 | 0 | 5 | 5 |
+| 4 | 4 | -3 | -3 |
+| 6 | 4 | -3 | -1 |
+| 0 | 0 | 0 | 0 |
+<!-- UNIT10:RECOVERY:END -->
+
+In particular, the valid empty-arc network record of ORACLE-046 with shift 7 and constant -2
+returns -9 when cut_value=0. Constructor validity is not a sign-routing certificate, and
+recovery does not attempt a provenance/minimality check. Negative recovered values are valid.
+
+For N1 from ORACLE-048, its complete cuts are `[4,6,15,5]` at masks `[0,1,2,3]`.
+Its recovered objectives are `[-3,-1,8,-2]`. Fix the nonempty allowed family `{1,2}`:
+
+```text
+All masks:       cut minimum=4, unique argmin={0}, objective minimum=-3
+Family {1,2}:    cut minimum=6, unique argmin={1}, objective minimum=-1
+Shift recovery: 6 - 4 + (-3) = -1
+```
+
+This is an arbitrary explicit family allowed by the lemma, not an assertion that it is a
+particular generated branch family. It proves why an unrestricted cut minimum cannot replace
+a constrained one. Both sides of the minimization identity must use the SAME allowed
+family. The cut minima here are obtained by exhaustive table inspection, never a backend.
+No Infeasible carrier, empty-family decision, contraction, or parity anchor is introduced.
+
+---
+
+## ORACLE-051 — Exact malformed-input matrix and validation-order boundaries
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.3--4.7.5; TEST_PLAN SR2--SR3, SR11.
+
+Every row below expects the exact built-in ValueError class when the prospective public
+implementation exists. These are DECLARED pre-code oracle obligations, not executed
+production rejection tests. Exception messages are not pinned.
+
+Notation: Coeff means SignRoutingCoefficients; GOOD_COEFF is Coeff(1,(0,0),0), suitable for
+EQUALITY. EMPTY_RECORD is SignRoutedNetwork(1,(),7,-2). IntSubclass and TupleSubclass mean
+proper subclasses with otherwise valid values. InstanceSubclass, CoeffSubclass, and
+NetworkSubclass mean normally initialized proper subclass instances; VerifierInstance is
+an object from the independent verifier, not production Instance. Hostile() denotes an
+object whose numeric/coercion/iteration/comparison hooks raise if called. Reject its exact
+type without invoking those hooks. Do not forge frozen records to bypass constructors.
+
+<!-- UNIT10:REJECTIONS:BEGIN -->
+| ID | API | Positional arguments (Python notation) | First failing guard | Exception |
+|---|---|---|---|---|
+| R01 | `SignRoutingCoefficients` | `(-1, (), 0)` | a: exact int and nonnegative | `ValueError` |
+| R02 | `SignRoutingCoefficients` | `(True, (), 0)` | a: exact int and nonnegative | `ValueError` |
+| R03 | `SignRoutingCoefficients` | `(IntSubclass(1), (), 0)` | a: exact int and nonnegative | `ValueError` |
+| R04 | `SignRoutingCoefficients` | `(0, [1], 0)` | gamma: exact tuple | `ValueError` |
+| R05 | `SignRoutingCoefficients` | `(0, TupleSubclass((1,)), 0)` | gamma: exact tuple | `ValueError` |
+| R06 | `SignRoutingCoefficients` | `(0, iter((1,)), 0)` | gamma: exact tuple | `ValueError` |
+| R07 | `SignRoutingCoefficients` | `(0, (True,), 0)` | gamma entry: exact int | `ValueError` |
+| R08 | `SignRoutingCoefficients` | `(0, (IntSubclass(1),), 0)` | gamma entry: exact int | `ValueError` |
+| R09 | `SignRoutingCoefficients` | `(0, (1.0,), 0)` | gamma entry: exact int | `ValueError` |
+| R10 | `SignRoutingCoefficients` | `(0, (Fraction(1,1),), 0)` | gamma entry: exact int | `ValueError` |
+| R11 | `SignRoutingCoefficients` | `(0, (Hostile(),), 0)` | gamma entry: exact int | `ValueError` |
+| R12 | `SignRoutingCoefficients` | `(0, (), False)` | constant: exact int | `ValueError` |
+| R13 | `SignRoutingCoefficients` | `(0, (), 0.0)` | constant: exact int | `ValueError` |
+| R14 | `SignRoutingCoefficients` | `(0, (), Hostile())` | constant: exact int | `ValueError` |
+| R15 | `SignRoutedNetwork` | `(0, (), 0, 0)` | vertex_count: exact int >=1 | `ValueError` |
+| R16 | `SignRoutedNetwork` | `(True, (), 0, 0)` | vertex_count: exact int >=1 | `ValueError` |
+| R17 | `SignRoutedNetwork` | `(IntSubclass(1), (), 0, 0)` | vertex_count: exact int >=1 | `ValueError` |
+| R18 | `SignRoutedNetwork` | `(1, [], 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R19 | `SignRoutedNetwork` | `(1, TupleSubclass(()), 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R20 | `SignRoutedNetwork` | `(1, iter(()), 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R21 | `SignRoutedNetwork` | `(1, ([0,1,2],), 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R22 | `SignRoutedNetwork` | `(1, ((0,1),), 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R23 | `SignRoutedNetwork` | `(1, ((0,1,2,3),), 0, 0)` | arcs / arc: exact tuple and triple shape | `ValueError` |
+| R24 | `SignRoutedNetwork` | `(1, ((True,1,0),), 0, 0)` | arc fields: exact ints tail then head then capacity | `ValueError` |
+| R25 | `SignRoutedNetwork` | `(1, ((0,False,0),), 0, 0)` | arc fields: exact ints tail then head then capacity | `ValueError` |
+| R26 | `SignRoutedNetwork` | `(1, ((0,1,True),), 0, 0)` | arc fields: exact ints tail then head then capacity | `ValueError` |
+| R27 | `SignRoutedNetwork` | `(1, ((0,1,1.0),), 0, 0)` | arc fields: exact ints tail then head then capacity | `ValueError` |
+| R28 | `SignRoutedNetwork` | `(1, ((0,1,Hostile()),), 0, 0)` | arc fields: exact ints tail then head then capacity | `ValueError` |
+| R29 | `SignRoutedNetwork` | `(1, ((-1,1,0),), 0, 0)` | endpoint range, loop exclusion, then nonnegative capacity | `ValueError` |
+| R30 | `SignRoutedNetwork` | `(1, ((0,3,0),), 0, 0)` | endpoint range, loop exclusion, then nonnegative capacity | `ValueError` |
+| R31 | `SignRoutedNetwork` | `(1, ((0,0,0),), 0, 0)` | endpoint range, loop exclusion, then nonnegative capacity | `ValueError` |
+| R32 | `SignRoutedNetwork` | `(1, ((0,1,-1),), 0, 0)` | endpoint range, loop exclusion, then nonnegative capacity | `ValueError` |
+| R33 | `SignRoutedNetwork` | `(1, (), -1, 0)` | negative_shift: exact int >=0 | `ValueError` |
+| R34 | `SignRoutedNetwork` | `(1, (), True, 0)` | negative_shift: exact int >=0 | `ValueError` |
+| R35 | `SignRoutedNetwork` | `(1, (), Hostile(), 0)` | negative_shift: exact int >=0 | `ValueError` |
+| R36 | `SignRoutedNetwork` | `(1, (), 0, False)` | constant: exact int | `ValueError` |
+| R37 | `SignRoutedNetwork` | `(1, (), 0, Fraction(0,1))` | constant: exact int | `ValueError` |
+| R38 | `SignRoutedNetwork` | `(1, (), 0, Hostile())` | constant: exact int | `ValueError` |
+| R39 | `branch_coefficients` | `(None, 0, (0,1))` | instance: exact production Instance | `ValueError` |
+| R40 | `branch_coefficients` | `(InstanceSubclass, 0, (0,1))` | instance: exact production Instance | `ValueError` |
+| R41 | `branch_coefficients` | `(VerifierInstance, 0, (0,1))` | instance: exact production Instance | `ValueError` |
+| R42 | `branch_coefficients` | `(Hostile(), 0, (0,1))` | instance: exact production Instance | `ValueError` |
+| R43 | `build_sign_routed_network` | `(None, GOOD_COEFF)` | instance: exact production Instance | `ValueError` |
+| R44 | `build_sign_routed_network` | `(InstanceSubclass, GOOD_COEFF)` | instance: exact production Instance | `ValueError` |
+| R45 | `build_sign_routed_network` | `(VerifierInstance, GOOD_COEFF)` | instance: exact production Instance | `ValueError` |
+| R46 | `build_sign_routed_network` | `(Hostile(), GOOD_COEFF)` | instance: exact production Instance | `ValueError` |
+| R47 | `branch_coefficients` | `(EQUALITY, -1, (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R48 | `branch_coefficients` | `(EQUALITY, 4, (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R49 | `branch_coefficients` | `(EQUALITY, True, (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R50 | `branch_coefficients` | `(EQUALITY, IntSubclass(0), (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R51 | `branch_coefficients` | `(EQUALITY, "0", (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R52 | `branch_coefficients` | `(EQUALITY, Hostile(), (0,1))` | branch: exact int in 0..3 | `ValueError` |
+| R53 | `branch_coefficients` | `(EQUALITY, 0, [0,1])` | parameter: closed validate_pair | `ValueError` |
+| R54 | `branch_coefficients` | `(EQUALITY, 0, (0,))` | parameter: closed validate_pair | `ValueError` |
+| R55 | `branch_coefficients` | `(EQUALITY, 0, (0,1,2))` | parameter: closed validate_pair | `ValueError` |
+| R56 | `branch_coefficients` | `(EQUALITY, 0, TupleSubclass((0,1)))` | parameter: closed validate_pair | `ValueError` |
+| R57 | `branch_coefficients` | `(EQUALITY, 0, (True,1))` | parameter: closed validate_pair | `ValueError` |
+| R58 | `branch_coefficients` | `(EQUALITY, 0, (0,False))` | parameter: closed validate_pair | `ValueError` |
+| R59 | `branch_coefficients` | `(EQUALITY, 0, (IntSubclass(0),1))` | parameter: closed validate_pair | `ValueError` |
+| R60 | `branch_coefficients` | `(EQUALITY, 0, (0,0))` | parameter: closed validate_pair | `ValueError` |
+| R61 | `branch_coefficients` | `(EQUALITY, 0, (0,-1))` | parameter: closed validate_pair | `ValueError` |
+| R62 | `branch_coefficients` | `(EQUALITY, 0, (0,1.0))` | parameter: closed validate_pair | `ValueError` |
+| R63 | `branch_coefficients` | `(EQUALITY, 0, (Fraction(0,1),1))` | parameter: closed validate_pair | `ValueError` |
+| R64 | `branch_coefficients` | `(EQUALITY, 0, iter((0,1)))` | parameter: closed validate_pair | `ValueError` |
+| R65 | `branch_coefficients` | `(EQUALITY, 0, ExactValue(0,1))` | parameter: closed validate_pair | `ValueError` |
+| R66 | `branch_coefficients` | `(EQUALITY, 0, Hostile())` | parameter: closed validate_pair | `ValueError` |
+| R67 | `build_sign_routed_network` | `(EQUALITY, None)` | coefficients: exact SignRoutingCoefficients | `ValueError` |
+| R68 | `build_sign_routed_network` | `(EQUALITY, CoeffSubclass)` | coefficients: exact SignRoutingCoefficients | `ValueError` |
+| R69 | `build_sign_routed_network` | `(EQUALITY, Hostile())` | coefficients: exact SignRoutingCoefficients | `ValueError` |
+| R70 | `build_sign_routed_network` | `(EQUALITY, Coeff(1, (), 0))` | len(gamma) == instance.n | `ValueError` |
+| R71 | `build_sign_routed_network` | `(EQUALITY, Coeff(1, (0,), 0))` | len(gamma) == instance.n | `ValueError` |
+| R72 | `build_sign_routed_network` | `(EQUALITY, Coeff(1, (0,0,0), 0))` | len(gamma) == instance.n | `ValueError` |
+| R73 | `recover_objective` | `(None, 0)` | network: exact SignRoutedNetwork | `ValueError` |
+| R74 | `recover_objective` | `(NetworkSubclass, 0)` | network: exact SignRoutedNetwork | `ValueError` |
+| R75 | `recover_objective` | `(Hostile(), 0)` | network: exact SignRoutedNetwork | `ValueError` |
+| R76 | `recover_objective` | `(EMPTY_RECORD, -1)` | cut_value: exact int >=0 | `ValueError` |
+| R77 | `recover_objective` | `(EMPTY_RECORD, True)` | cut_value: exact int >=0 | `ValueError` |
+| R78 | `recover_objective` | `(EMPTY_RECORD, IntSubclass(0))` | cut_value: exact int >=0 | `ValueError` |
+| R79 | `recover_objective` | `(EMPTY_RECORD, 0.0)` | cut_value: exact int >=0 | `ValueError` |
+| R80 | `recover_objective` | `(EMPTY_RECORD, Fraction(0,1))` | cut_value: exact int >=0 | `ValueError` |
+| R81 | `recover_objective` | `(EMPTY_RECORD, Hostile())` | cut_value: exact int >=0 | `ValueError` |
+<!-- UNIT10:REJECTIONS:END -->
+
+The 81 listed rows are a minimum explicit matrix, not an exhaustive inventory of malformed
+Python objects. Applicable scalar/container subclasses and hostile objects should also be
+placed at each corresponding boundary in tests. No `isinstance(...,int)` shortcut may accept
+bool. Wrong call arity and attempted frozen mutation are deliberately outside this matrix.
+
+Guard order is independently fixed by the authority: coefficient a -> gamma tuple and entries
+-> constant; network vertex_count -> entire arcs -> negative_shift -> constant. Inside each
+arc: shape -> exact tail/head/capacity types -> endpoint ranges -> no loop -> nonnegative
+capacity. branch_coefficients: exact Instance -> branch -> closed validate_pair -> graph
+arithmetic. Builder: exact Instance -> exact coefficient record -> gamma length -> arcs.
+Recovery: exact network record -> exact nonnegative cut_value -> shift arithmetic.
+
+Guard-isolated rows pass all earlier guards. Source review and hostile-object probes verify
+order; it cannot be inferred solely from catching ValueError. Invalid input is never
+normalized, sorted, aggregated, coerced, silently discarded, or converted to a feasible one.
+
+---
+
+## ORACLE-052 — Precommitted finite identity corpus and exact counts
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.14; TEST_PLAN SR7--SR9, SR13.
+
+### Active-instance corpus
+
+Enumerate n in (2,3). List all unordered vertex pairs in lexicographic order. For each pair,
+choose q in (0,1,2), with 0 meaning absent support. Omit graphs with a degree-zero vertex.
+For every remaining support, independently choose each f_v from 1 through d_q(v), inclusive.
+Store positive edges in pair order. This fixes 5 n=2 instances and 324 n=3 instances, for 329
+distinct canonical active instances. Iterate parameter pairs in the ten-row order of
+ORACLE-047 and branch j=0,1,2,3. For every combination enumerate all 2^n shores.
+
+There are 2612 base instance/shores, 13160 branch coefficient/network cases, and 104480
+branch/parameter/shore evaluations. Each evaluation verifies both the coefficient and cut
+identities and shift recovery. It is not reported as three independent corpus members.
+
+### Generic-coefficient corpus
+
+Use EQUALITY (n=2) and TRIANGLE (n=3) from ORACLE-046. Independently choose
+`a in (0,2)`, every gamma entry in `(-2,0,3)`, and `constant in (-3,0,5)`.
+Thus 2*3*(3^2+3^3)=216 networks and 2*3*(3^2*2^2+3^3*2^3)=1512 all-shore evaluations
+cover arbitrary signs, zero-support capacity, all-zero gamma, and constant independence.
+These are in addition to, not replacements for, the named branch anchors and literal lists.
+
+<!-- UNIT10:COUNTS:BEGIN -->
+| Fixed audit domain/count | Expected |
+|---|---:|
+| `anchor_branch_records` | 120 |
+| `anchor_branch_shore_evaluations` | 2080 |
+| `base_shores` | 2612 |
+| `branch_records` | 13160 |
+| `branch_shore_evaluations` | 104480 |
+| `generic_records` | 216 |
+| `generic_shore_evaluations` | 1512 |
+| `instances` | 329 |
+| `literal_network_records` | 8 |
+| `literal_network_shores` | 128 |
+| `n2_instances` | 5 |
+| `n3_instances` | 324 |
+| `rejection_declarations` | 81 |
+<!-- UNIT10:COUNTS:END -->
+
+Counts bind these finite domains only. They are not a proof of asymptotic performance or a
+reason to skip a source hypothesis. Label variants, scalar-shape/recovery checks, constant
+twins, and the symbolic/scaling controls below are supplemental and not folded into the
+listed branch/generic all-shore totals. The handoff audit recomputes both domains and counts;
+future tests must independently check production outputs against these fixed expectations.
+
+---
+
+## ORACLE-053 — Positive scaling and huge signed exact integers
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.6, 4.7.9--4.7.13; TEST_PLAN SR10, SR14--SR15.
+
+### Classification-controlled scaling
+
+Use k=2^r for r in (0,1,8,64,4096). On RICH, for EVERY branch compare the fixed
+parameter (-3,1) with (-3*k,k). All a,gamma,constant, arc capacities, C_minus, and raw
+recovered residuals scale by k. Original endpoints, direction, order, signs and zero
+classification remain unchanged. Expected values come from the independent unscaled
+oracle row times k, never from an unscaled production result. This gives 20 scaled
+branch networks and 640 all-shore evaluations.
+
+Apply componentwise scaling to generic N5 as well: scale a, every gamma entry, and constant.
+The same identity gives five scaled generic networks and 80 all-shore evaluations. For all
+cases keep source/sink/node count and raw arc length unchanged. This says nothing about
+endpoint invariance for arbitrary unrelated parameter changes, which may change signs.
+
+### Huge multiplicities AND raw parameter entries
+
+For L=2^r, r in (1,8,64,4096), use n=2, edge (0,1,L), f=(L,L) and
+parameter `(A,B)=(-L,L+1)`. This is an active equality instance. Derive:
+
+```text
+All branches: a=L+1; support capacities=L*(L+1); six original arcs.
+j=0: gamma=(L*(L+1), L*(L+1)), C_minus=0,  constant=-1
+j=1: gamma=(L*(L+1), L*(L+1)), C_minus=0,  constant=-2*(L+1)
+j=2: gamma=(-L,-L),           C_minus=2L, constant=-L
+j=3: gamma=(-L,-L),           C_minus=2L, constant=-2*(L+1)
+```
+
+At r=4096, L and both raw parameter entries have 4097-bit-class magnitude; capacities can
+have longer encodings. This tests exact arithmetic and literal preservation, not a maximum
+permitted bit length. All four shore masks and all four branches are checked at each L,
+for 16 huge branch networks and 64 all-shore evaluations.
+
+For a generic mixed/zero-sign control on TRIANGLE, take
+`a=L, gamma=(-L,0,L+3), constant=-(L+7)`. C_minus=L, original arc count=12;
+empty-source cut=L and full-original cut=L+3. Every mask is checked for each L, adding
+four huge generic networks and 32 evaluations. The zero spoke must remain present.
+
+No float conversion, reduction, numeric cutoff, timing threshold, capacity-sized loop,
+explicit unit-copy expansion, or synthetic infinity is introduced by these fixtures.
+
+---
+
+## ORACLE-054 — Determinism, field ownership, and source-inspection controls
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.1--4.7.5, 4.7.12--4.7.14; TEST_PLAN SR1--SR3, SR11--SR12, SR15.
+
+Require exact field/slot sequences and properties from ORACLE-046. Repeated identical inputs
+produce structurally equal records and identical arc sequences. Hash equality follows record
+equality; no cross-process hash identity is promised. Inputs and output tuples are immutable;
+no external mutable alias or authoritative duplicated shift/terminal/degree field is added.
+
+Import/export contract is the exact sorted tuple:
+
+```text
+("SignRoutedNetwork", "SignRoutingCoefficients", "branch_coefficients",
+ "build_sign_routed_network", "recover_objective")
+```
+
+Both constructors and the three functions accept the positional and exact keyword names
+from DESIGN 4.7.2. No public Arc class, backend flag, coercing adapter, serialization layer,
+cut evaluator, or minimizer exists here. The fresh import may load only dataclasses,
+Instance, RawPair/validate_pair, their allowed closed dependencies, and optional future
+annotations; it must not newly import flow, families, witness, oracle, branch, solve,
+certificate, or exactfrac_verify. Package-root exports remain unchanged.
+
+Static/source obligations are not established merely by the numeric tables: reject float
+constants/conversion, Fraction/decimal/math/reduction, true/floor division, remainder,
+coercion, tolerance, recursion, synthetic infinity, algorithmic set iteration, flow calls,
+all-shore production enumeration, and magnitude/bit-length loop bounds. Obtain d_q once
+before scanning vertices, not once for each vertex. Constructor validation scans record
+lengths; branch coefficients and builder have O(n+m) structural work including record
+validation. Recovery and terminal properties are O(1) integer operations on valid records.
+None of these claims asserts constant bit cost or wall-clock time.
+
+The closed backend sorts/aggregates its own directed input. Its inclusionwise-minimal
+minimum source shore is unique for a fixed ordinary-cut problem. Raw emission order is
+specified for reproducible construction, not to create new tie-breaking freedoms. Tests
+must not call flow here or assert that input permutations change that extremal source shore.
+
+---
+
+## ORACLE-055 — Coverage ledger and deferred minimization/certificate boundaries
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Authority:** DESIGN 4.7.14; TEST_PLAN SR16 and Unit 10 completion gate, section 26.
+
+| Prospective TEST_PLAN obligation | Oracle evidence |
+|---|---|
+| SR1 interface/dependencies | ORACLE-046, ORACLE-054 |
+| SR2 coefficient record | ORACLE-046, ORACLE-051 |
+| SR3 network record/properties | ORACLE-046, ORACLE-051 |
+| SR4 branch coefficients | ORACLE-047 |
+| SR5 support arcs/terminals | ORACLE-048 |
+| SR6 signed/zero/all-zero spokes | ORACLE-048, ORACLE-052 |
+| SR7 coefficient identity | ORACLE-047, ORACLE-049, ORACLE-052 |
+| SR8 generic routing identity | ORACLE-048--ORACLE-049, ORACLE-052 |
+| SR9 recovery/restricted families | ORACLE-050 |
+| SR10 zero/negative/equality | ORACLE-047, ORACLE-053 |
+| SR11 rejection/validation order | ORACLE-051, ORACLE-054 |
+| SR12 deterministic order/labels | ORACLE-048, ORACLE-054 |
+| SR13 precommitted corpus | ORACLE-052 |
+| SR14 huge/scaled integers | ORACLE-053 |
+| SR15 source and work boundaries | ORACLE-054 |
+| SR16 conformance boundary | ORACLE-055 |
+
+The identities hold on every tested shore of the chosen production-domain inputs. No
+cut/minimizer, active-set membership, admissible witness, attaining quotient, or optimality
+certificate follows merely from constructing a coefficient/network record or shifting an
+integer. The same-family minimum correspondence is demonstrated only by explicit finite
+shore enumeration; the operational optimizer is deferred.
+
+Unit 10 may promote only the narrowly worded operational-domain lem:sign-routing cut-identity
+row at its later implementation GREEN checkpoint, plus a coefficient/representation seam
+note. This oracle-only commit does not change any CONFORMANCE row. prop:branch-transform's
+ratio claims, parity anchoring/contraction/GR reduction, thm:branch-oracle, branch/global
+correctness, telemetry, and algorithm-level bit-growth remain later obligations.
+
+**Unit 10 oracle status:** source/authority-derived and independently audited before the
+consuming test or production sign-routing module exists. No production sign-routing output,
+minimum-cut solver, or flow result established these expected values.
