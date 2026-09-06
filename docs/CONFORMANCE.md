@@ -166,3 +166,71 @@ done until its row exists and its test is green.
   assembly/JSON I/O, independent `exactfrac_verify.check`, result-level Empty certification,
   and global optimality verification are not declared complete. The later checker must
   reimplement its checks independently and must not import the production validator.
+
+## Unit 09 raw rational-pair implementation note
+
+- This is an engineering arithmetic seam under DESIGN sections 4.5--4.5A and TEST_PLAN
+  sections 23--24, with source-derived fixtures ORACLE-038--045. It adds no theorem label
+  and changes no existing theorem row or status. The historical Unit 08 note's deferred
+  numerical comparison/arithmetic now has the Unit 09 evidence below; its other deferred
+  responsibilities remain outside this unit.
+- `exactfrac.rational` owns the untagged `RawPair = tuple[int, int]` carrier and seven
+  scalar operations. `make_pair` preserves exact integer inputs literally and rejects
+  nonpositive denominators; every consumer validates exact tuple shape, exact built-in
+  integer fields, and denominator positivity before arithmetic. No sign repair, coercion,
+  gcd reduction, or normalization of zero to `(0,1)` occurs. An otherwise valid tuple's
+  semantic provenance remains a caller responsibility, not a runtime type guarantee.
+- `compare_pairs` uses cross products; `pair_sign` validates the complete pair before
+  returning its numerator's sign. Both return exact built-in integers in {-1, 0, 1}.
+  Literal updates are `(A+B,B)` and `(2*A*D-C*B,B*D)`, with reflection arguments ordered
+  as newton then current. Raw common factors and cancellation denominators are retained.
+- `residual_numerator((A,B),c,h)` returns the exact integer `B*c-A*h`; scalar c and h may
+  be signed or zero. This is not residual minimization or a proof of branch feasibility.
+  A branch caller must establish h_j(U) > 0 when using it as a denominator. Raw residuals
+  are compared directly only at the same parameter pair; different encodings can scale
+  their numerators, so cross-denominator ordering requires explicit rational comparison.
+- Unit 08 `ExactValue` records retain their structural equality/hash and raw fields.
+  Callers explicitly extract `(N,D)`; no implicit adapter or witness-layer dependency is
+  added. Numerical equality, a zero sign, or construction of a value record establishes
+  neither Empty, witness admissibility, raw attainment, nor global optimality.
+- The frozen 22 tests in `tests/test_rational.py` provide the following principal RP1--RP12
+  evidence. These mappings are engineering coverage, not additional theorem-discharge rows.
+
+| Production obligation | Principal tests in `tests/test_rational.py` |
+|---|---|
+| RP1: scalar surface, signatures, deliberate untagged carrier | `test_rp1_public_surface_alias_and_signatures`; `test_rp1_untagged_tuple_carrier_is_deliberate` |
+| RP2--RP3: strict construction, exact types/errors, validation before arithmetic | `test_rp2_make_pair_literal_outputs_and_strict_denominators`; `test_rp2_make_pair_exact_scalar_types_and_validation_order`; `test_rp3_validate_pair_success_and_rejection_matrix`; `test_rp3_residual_scalar_exact_types` |
+| RP4--RP5: numerical comparison, scaling, exact sign, complete validation | `test_rp4_comparison_oracle_and_exact_output_type`; `test_rp4_comparison_scale_invariance_and_huge_close_values`; `test_rp5_pair_sign_oracle_and_complete_validation` |
+| RP6: literal add-one and denominator preservation | `test_rp6_pair_add_one_literal_oracle`; `test_rp6_pair_add_one_large_cancellation_preserves_denominator` |
+| RP7: literal reflection, fixed argument roles, bounded-newton recurrence | `test_rp7_pair_reflect_literal_oracle_and_roles`; `test_rp7_fixed_newton_recurrence_preserves_raw_growth`; `test_rp7_large_symbolic_reflection` |
+| RP8: scalar residual, encoding scale, cross-denominator hazard | `test_rp8_residual_oracle_sign_and_scaling_hazard`; `test_rp8_large_symbolic_residual` |
+| RP9: explicit ExactValue bridge; closed Unit 08 semantics | `test_rp9_explicit_exactvalue_bridge_preserves_unit08_semantics` |
+| RP10: independently expected bounded arithmetic corpus | `test_rp10_finite_independent_arithmetic_corpus` |
+| RP11--RP12: source exactness, import isolation, bounded work, large raw values | `test_rp11_source_exactness_and_dependency_isolation`; `test_rp11_no_recursion_dynamic_range_or_set_iteration`; `test_rp11_fresh_process_import_isolation_and_package_root`; `test_rp12_large_integer_outputs_remain_exact_raw_pairs` |
+
+- The separate handoff arithmetic audit does not import the production test module and
+  uses independent Fraction comparisons and separately justified literal raw formulas.
+  It checks 2,401 bounded core evaluations, 320 supplementary exact-ValueError/hostile-object
+  calls, 6,272 scaled comparisons, and 21,952 transitivity triples. It also checks signatures,
+  validation-phase order, large integers, raw cancellation, fixed-newton recurrence,
+  residual scaling, and fresh-process import isolation. Ten in-memory prohibited-source
+  controls are rejected without modifying production files.
+- Before this documentation note, the live gate bound unchanged implementation R1, frozen
+  test R2, and all 26 prior base files to 22 targeted tests, 410 full repository tests,
+  full repository Ruff, and the independent arithmetic audit passing. This append-only
+  note deliberately changes CONFORMANCE alone; it does not rewrite those earlier records
+  or assert that their pre-note base-file manifest describes the post-note repository.
+- Source inspection of this candidate finds no loops or recursive call cycles and only
+  the permitted optional future-annotations import. The primitive work is a bounded
+  number of integer operations and objects, not constant bit time or constant byte memory.
+  The literal reflection recurrence is tested with bounded/fixed newton operands; no
+  bound for arbitrary compositions with two growing operands is inferred.
+- Historical arithmetic R1--R5 are unchanged. In particular, algorithm-level R5 telemetry
+  and Standard/Accelerated bit-growth experiments remain deferred. No lem:standard-bits,
+  lem:bitgrowth, branch, or global theorem row is promoted. These finite checks are not
+  universal proofs, timing guarantees, or branch-termination certificates.
+- Unit 10 sign routing, branch coefficients/residual minimization, actual branch
+  initialization/reset/acceptance and tie handling, global solve, certificate assembly,
+  serialization, independent certificate checking, and telemetry remain downstream.
+  The complete three-file staged tree still requires isolated verification and atomic
+  commit/remote closure under TEST_PLAN section 24 before Unit 09 is closed.
