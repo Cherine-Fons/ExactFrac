@@ -6487,3 +6487,453 @@ symbolic parameter k fixed in ORACLE-035 rather than thousand-digit decimal lite
 **Unit 08 oracle status:** definition/authority-derived, independently recomputed before
 production implementation. Existing catalogue bytes and oracle classifications unchanged.
 No Unit 08 production or consuming test module exists at this oracle-only checkpoint.
+---
+
+## ORACLE-038 — RawPair carrier, strict factory, and exact rejection boundary
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.1--4.5A.4; TEST_PLAN RP1--RP3.
+
+This fixture governs the scalar carrier before `exactfrac.rational` exists. `RawPair` is the
+plain type alias `tuple[int, int]`; it is deliberately not a runtime-tagged rational-number
+class. A valid pair is an exact built-in tuple of length two, with exact built-in integer
+entries `(A,B)` and `B > 0`.
+
+### Literal successful factory outputs
+
+`make_pair` must return the two supplied integer fields literally for every valid row:
+
+| numerator | denominator | exact output |
+|---|---|---|
+| `0` | `1` | `(0,1)` |
+| `0` | `7` | `(0,7)` |
+| `6` | `8` | `(6,8)` |
+| `-6` | `8` | `(-6,8)` |
+| `7` | `1` | `(7,1)` |
+| `-7` | `1` | `(-7,1)` |
+
+Common factors are retained. Zero is not rewritten to `(0,1)`. There is no sign-repair path.
+
+For each numerator in `{-3,-2,-1,0,1,2,3}`, denominators `0`, `-1`, and `-3` are rejected
+with exact built-in `ValueError`; neither operand is negated. Thus the bounded denominator
+rejection subcorpus contains exactly `7*3 = 21` cases.
+
+### Representation/type rejection controls
+
+Each applicable public pair consumer rejects, before arithmetic:
+
+- list `[1,2]`, one-tuple `(1,)`, three-tuple `(1,2,3)`;
+- a tuple subclass containing otherwise valid fields;
+- `True` or `False` in either field;
+- an int subclass in either field;
+- float and `fractions.Fraction` fields;
+- `None`, iterators/generators, and duck-typed sequence/numeric objects;
+- a Unit 08 `ExactValue` or `Witness` object supplied directly instead of an exact tuple;
+- any exact tuple whose denominator is zero or negative.
+
+`make_pair` separately rejects non-exact integer numerator/denominator arguments and every
+nonpositive denominator. The exact exception type is built-in `ValueError`.
+
+The deliberate carrier limitation is also fixed here: a different program role may happen
+to use a two-int tuple with positive second entry, and this scalar boundary cannot infer
+that provenance. Future callers must use role-specific names and explicit extraction/
+construction discipline; no nominal provenance check is expected from Unit 09.
+
+---
+
+## ORACLE-039 — Mathematical comparison and exact sign without record normalization
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.5--4.5A.6; TEST_PLAN RP4--RP5.
+
+Every comparison below is derived from cross multiplication. The raw tuples remain unchanged.
+
+| left | right | `A*D` | `C*B` | exact compare |
+|---|---|---:|---:|---:|
+| `(2,2)` | `(1,1)` | 2 | 2 | `0` |
+| `(0,2)` | `(0,1)` | 0 | 0 | `0` |
+| `(-2,2)` | `(-1,1)` | -2 | -2 | `0` |
+| `(12,8)` | `(3,2)` | 24 | 24 | `0` |
+| `(3,10)` | `(2,3)` | 9 | 20 | `-1` |
+| `(2,3)` | `(3,10)` | 20 | 9 | `1` |
+| `(1,3)` | `(1,2)` | 2 | 3 | `-1` |
+| `(-1,3)` | `(-1,2)` | -2 | -3 | `1` |
+| `(5,7)` | `(4,5)` | 25 | 28 | `-1` |
+| `(-5,7)` | `(-4,5)` | -25 | -28 | `1` |
+
+The `(3,10)` versus `(2,3)` row explicitly catches lexicographic tuple comparison:
+`3 > 2` as first fields, while `3/10 < 2/3`.
+
+For every positive integer scale `k`, replacing either operand `(A,B)` by `(k*A,k*B)`
+must preserve the comparison result. This is a numerical invariance, not permission to
+normalize the stored pair.
+
+### Huge close-value fixture
+
+For `L = 2^k`, with `k in {1,2,8,64,4096}` and therefore `L > 1`, compare
+
+```text
+left  = (L+1, L)
+right = (L,   L-1)
+```
+
+because
+
+```text
+(L+1)*(L-1) = L^2 - 1
+L*L         = L^2
+```
+
+so the exact comparison is always `-1`. This exposes any float conversion at large `k`.
+
+### Exact sign table
+
+`pair_sign((A,B))` depends on the numerator only after validating the complete pair:
+
+| pair | exact sign |
+|---|---:|
+| `(-9,1)` | `-1` |
+| `(-1,4097)` | `-1` |
+| `(0,1)` | `0` |
+| `(0,4097)` | `0` |
+| `(1,4097)` | `1` |
+| `(9,1)` | `1` |
+
+Zero is an ordinary rational value. No Empty state, `None`, or `(0,1)` rewrite follows from
+a zero sign.
+
+---
+
+## ORACLE-040 — Literal add-one arithmetic and initialization boundary
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.7--4.5A.8; TEST_PLAN RP6.
+
+For pair `(A,B)`, the output is literally `(A+B,B)`:
+
+| input pair | exact output |
+|---|---|
+| `(-5,7)` | `(2,7)` |
+| `(-7,7)` | `(0,7)` |
+| `(6,8)` | `(14,8)` |
+| `(0,5)` | `(5,5)` |
+| `(11,6)` | `(17,6)` |
+
+The cancellation row `(-7,7) -> (0,7)` must not become `(0,1)`. The unreduced row
+`(6,8) -> (14,8)` must not become `(7,4)`.
+
+For the source-level branch initialization control with fresh scalar point `(c,h)=(11,6)`:
+
+```text
+standard initialization    = pair_add_one((11,6)) = (17,6)
+accelerated initialization = (11,6)
+```
+
+The present oracle fixes only these scalar values. It does not implement branch feasibility,
+query order, early return, look-ahead acceptance, or reset control flow.
+
+For `L=2^k`, `k in {1,2,8,64,4096}`, the literal cancellation control
+
+```text
+pair_add_one((-L,L)) = (0,L)
+```
+
+preserves the supplied denominator exactly.
+
+---
+
+## ORACLE-041 — Literal reflected look-ahead and bounded-operand recurrence
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.7--4.5A.8 and 4.5A.11--4.5A.12; TEST_PLAN RP7 and RP12.
+
+For `newton=(A,B)` and `current=(C,D)`, derive the exact raw output
+
+```text
+(2*A*D - C*B, B*D)
+```
+
+without reduction or argument reversal.
+
+| newton | current | exact raw output | represented value |
+|---|---|---|---|
+| `(3,5)` | `(2,7)` | `(32,35)` | `32/35` |
+| `(2,7)` | `(3,5)` | `(-1,35)` | `-1/35` |
+| `(5,6)` | `(1,6)` | `(54,36)` | `3/2` |
+| `(2,4)` | `(3,6)` | `(12,24)` | `1/2` |
+| `(1,3)` | `(2,3)` | `(0,9)` | `0` |
+| `(1,5)` | `(1,2)` | `(-1,10)` | `-1/10` |
+
+The first two rows distinguish `2*newton-current` from `2*current-newton`.
+The equivalent-input row `(2,4),(3,6)` must return `(12,24)`, not either operand.
+The zero row must retain denominator 9.
+
+### Fixed-newton recurrence fixture
+
+Keep the newton operand fixed at `(3,5)` and start current at `(1,2)`. Repeated literal
+reflection gives:
+
+| step | current raw pair | mathematical value |
+|---:|---|---|
+| 0 | `(1,2)` | `1/2` |
+| 1 | `(7,10)` | `7/10` |
+| 2 | `(25,50)` | `1/2` |
+| 3 | `(175,250)` | `7/10` |
+| 4 | `(625,1250)` | `1/2` |
+
+Each denominator is the previous denominator multiplied by 5. The raw fields therefore
+grow even though the represented values alternate. This is a literal arithmetic recurrence,
+not a claim that these are successful source-algorithm look-aheads or that arbitrary
+two-growing-operand compositions satisfy a particular bit bound.
+
+### Large symbolic row
+
+For `L=2^k`, `k in {1,2,8,64,4096}`:
+
+```text
+newton  = (L+1, L)
+current = (L+2, L+1)
+output  = (L^2 + 2*L + 2, L*(L+1))
+```
+
+obtained by direct expansion of the ruled formula.
+
+---
+
+## ORACLE-042 — Residual numerator, sign preservation, and denominator-scaling hazard
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.9; TEST_PLAN RP8.
+
+For parameter `(A,B)`, the exact scalar residual numerator is
+
+```text
+B*c - A*h
+```
+
+and represents residual `(B*c-A*h)/B`.
+
+| parameter | c | h | raw numerator | represented residual |
+|---|---:|---:|---:|---|
+| `(2,3)` | 7 | 5 | 11 | `11/3` |
+| `(2,3)` | 4 | 6 | 0 | `0` |
+| `(2,3)` | 3 | 5 | -1 | `-1/3` |
+| `(2,3)` | -4 | 0 | -12 | `-4` |
+| `(2,3)` | 2 | -3 | 12 | `4` |
+
+The `h==0` and `h<0` rows exercise only this graph-independent linear form; they do not
+claim branch feasibility.
+
+### Same rational parameter, scaled raw numerator
+
+Using the same `c=7,h=5`:
+
+```text
+parameter (2,3) -> raw residual 11
+parameter (4,6) -> raw residual 22
+```
+
+The second parameter is exactly twice the raw encoding of the first, so the raw numerator
+also doubles. Both represented residuals are `11/3`, and their signs agree.
+
+### Raw cross-denominator comparison is invalid
+
+Consider two different parameter encodings and scalar inputs:
+
+```text
+P1=(1,3), c1=1, h1=1 -> raw numerator 2, residual 2/3
+P2=(7,10), c2=1, h2=1 -> raw numerator 3, residual 3/10
+```
+
+Raw integers satisfy `2 < 3`, while exact rational residuals satisfy `2/3 > 3/10`.
+Therefore raw residual numerators from different denominators may not be globally ordered
+as integers. Direct raw comparison is valid only under the same parameter pair.
+
+For `L=2^k`, parameter `(L+1,L)`, `c=L+2`, `h=L+3` gives exactly
+
+```text
+L*(L+2) - (L+1)*(L+3) = -2*L - 3.
+```
+
+---
+
+## ORACLE-043 — Explicit ExactValue bridge and layer separation
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.1--4.5A.2 and 4.5A.10; TEST_PLAN RP9.
+
+Reuse the closed Unit 08 structural records from ORACLE-030. The arithmetic layer does not
+import them and does not accept them implicitly.
+
+At a test/integration call site:
+
+```text
+ExactValue(2,2) -> explicit raw tuple (2,2)
+ExactValue(1,1) -> explicit raw tuple (1,1)
+```
+
+and `compare_pairs((2,2),(1,1))` has numerical result 0, while the two `ExactValue`
+records remain structurally unequal and byte/state unchanged.
+
+Similarly, `ExactValue(0,2)` from the zero-valued nonempty witness remains a distinct
+record. Explicit extraction `(0,2)` has sign 0 and compares numerically equal to `(0,1)`,
+but neither operation turns the original witness into Empty.
+
+Supplying an `ExactValue` object itself to any RawPair consumer is malformed at this layer
+and raises exact built-in `ValueError`.
+
+Conversely, starting from an already valid arithmetic pair such as `(12,8)`, a caller may
+deliberately construct `ExactValue(12,8)`. That creates a structural record only; it does
+not prove witness admissibility, attainment, or optimality. `witness_value` remains the
+owner of witness-derived values.
+
+---
+
+## ORACLE-044 — Finite independent scalar arithmetic corpus
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.2--4.5A.11; TEST_PLAN RP10.
+
+The bounded corpus is declared before any production rational module or consuming test exists.
+
+### Domains
+
+```text
+NUMERATORS = (-3,-2,-1,0,1,2,3)
+DENOMINATORS = (1,2,3,4)
+VALID_PAIRS = {(A,B): A in NUMERATORS, B in DENOMINATORS}
+SCALARS = (-2,-1,0,1,2)
+INVALID_DENOMINATORS = (0,-1,-3)
+```
+
+Therefore:
+
+```text
+valid raw pairs                         = 7*4       = 28
+distinct mathematical Fraction values  = 19
+factory nonpositive-denominator rows   = 7*3       = 21
+ordered pair comparisons               = 28^2      = 784
+ordered pair reflections               = 28^2      = 784
+residual evaluations                    = 28*5*5    = 700
+```
+
+The independent expected side uses exact `Fraction` only in the verifier/test layer and
+separately checks literal raw formulas for update operations.
+
+### Exact aggregate counts
+
+Over every valid pair:
+
+| unary statistic | negative | zero | positive |
+|---|---:|---:|---:|
+| `pair_sign` | 12 | 4 | 12 |
+| numerator of literal `pair_add_one` output | 3 | 3 | 22 |
+
+Over all 784 ordered comparisons:
+
+| compare result | count |
+|---:|---:|
+| `-1` | 364 |
+| `0` | 56 |
+| `1` | 364 |
+
+Over all 784 literal reflections, classified by raw output numerator:
+
+| reflected sign | count |
+|---:|---:|
+| negative | 370 |
+| zero | 44 |
+| positive | 370 |
+
+Over all 700 residual evaluations:
+
+| residual-numerator sign | count |
+|---:|---:|
+| negative | 310 |
+| zero | 80 |
+| positive | 310 |
+
+The core corpus therefore contains 28 successful factory rows, 21 denominator-rejection
+factory rows, 28 validation rows, 28 sign rows, 28 add-one rows, 784 comparisons,
+784 reflections, and 700 residual rows: `2401` explicitly bounded evaluations before
+additional exact-type rejection controls.
+
+For each comparison, independently check `Fraction(left) ? Fraction(right)`. For each
+add-one row, check the exact tuple `(A+B,B)` separately from `Fraction(A,B)+1`. For every
+reflection, check the literal tuple separately from `2*Fraction(newton)-Fraction(current)`.
+For every residual, check both the raw integer `B*c-A*h` and `Fraction(result,B)`.
+The aggregate counts above are independently recomputed by the handoff audit and are not
+learned from production outputs.
+
+No finite corpus proves algorithm termination or the universal strong-polynomiality claims.
+
+---
+
+## ORACLE-045 — Rational module surface, exactness, isolation, and deferred boundaries
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`
+
+**Source obligations:** DESIGN 4.5A.1--4.5A.2 and 4.5A.11--4.5A.12; TEST_PLAN RP1,
+RP11--RP12.
+
+The exact module export tuple is:
+
+```text
+("RawPair", "compare_pairs", "make_pair", "pair_add_one", "pair_reflect",
+ "pair_sign", "residual_numerator", "validate_pair")
+```
+
+The public signatures and argument-role names are exactly those ruled in DESIGN 4.5A.2.
+
+The production module has no project imports and no verifier imports. Direct source/AST
+inspection must reject executable use of:
+
+- float constants or float conversion/arithmetic;
+- `fractions.Fraction`, decimal, math, gcd/reduction helpers;
+- true or floor division, remainder-based reduction, tolerance logic;
+- recursion;
+- magnitude/bit-length-driven iteration;
+- direct, named, comprehended, or derived algorithmic set iteration;
+- downstream graph, branch, solve, certificate, telemetry, or verifier machinery.
+
+Each valid public operation has a bounded constant number of structural checks and exact
+integer arithmetic/comparison operations. This is a structural-operation statement only:
+integer bit sizes and actual bit-operation time may grow with the operands.
+
+A fresh process importing `exactfrac.rational` must not newly import any other
+`exactfrac.*` submodule or any `exactfrac_verify` module. The package root gains no exports.
+
+The huge fixtures in ORACLE-039--ORACLE-042 are exactness/recurrence controls, not timing
+thresholds or asserted production bit-length ceilings. Unit 09 does not close the
+algorithm-level `lem:standard-bits`, `lem:bitgrowth`, branch termination, sign-routing,
+argmin, global-solve, certificate, or telemetry obligations.
+
+---
+
+## Production Unit 09 raw rational-pair oracle coverage matrix
+
+| TEST_PLAN obligation | Prospective oracle evidence |
+|---|---|
+| RP1 — scalar ownership and exact public interface | ORACLE-038, ORACLE-045 |
+| RP2 — strict denominator positivity and literal preservation | ORACLE-038, ORACLE-040 |
+| RP3 — exact rejection matrix and validation-before-arithmetic | ORACLE-038 |
+| RP4 — mathematical comparison independent of raw identity | ORACLE-039, ORACLE-044 |
+| RP5 — exact sign without normalization/Empty inference | ORACLE-039, ORACLE-043 |
+| RP6 — literal add-one and initialization boundary | ORACLE-040, ORACLE-044 |
+| RP7 — literal reflected look-ahead and fixed roles | ORACLE-041, ORACLE-044 |
+| RP8 — exact residual and parameter-dependent scaling | ORACLE-042, ORACLE-044 |
+| RP9 — explicit ExactValue bridge | ORACLE-043 |
+| RP10 — finite independent arithmetic corpus | ORACLE-044 |
+| RP11 — exactness, isolation, bounded primitive work | ORACLE-045 |
+| RP12 — large integers and literal recurrence growth | ORACLE-039--ORACLE-042, ORACLE-045 |
+
+**Unit 09 oracle status:** authority-derived and independently recomputed before
+`tests/test_rational.py` or `exactfrac/rational.py` exists. No Unit 09 production output is
+used to establish these expected values.
