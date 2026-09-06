@@ -128,6 +128,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
       rational.py         raw scalar pairs, exact comparisons, prescribed update arithmetic
       witness.py          Witness, ExactValue, shore sums, validation, dense/sparse counts
       families.py         atomic families F(T, pi; I, O); enumeration per branch
+      sign_routing.py     branch coefficients, nonnegative cut construction, explicit shifts
       flow.py             Edmonds–Karp reference backend behind the MaxFlow interface
       oracle.py           ExactBranchMin
       branch.py           SolveBranchStandard, SolveBranchAccelerated
@@ -672,7 +673,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        on the integer numerator (never divide to decide <0, ==0, >0). Aligns with the
        frozen contract Bc_j - Ah_j.
     3. Fraction policy: fractions.Fraction is PROHIBITED from the solver arithmetic path
-       (instance, families, flow, oracle, branch, solve, certificate, witness, rational). Fraction is
+       (instance, families, flow, oracle, branch, solve, certificate, witness, rational, sign_routing). Fraction is
        permitted only in the independent verifier and tests as an independent correctness
        oracle. CLI may display the raw value as N/D; no normalization needed. This is
        implementation discipline (Fraction's automatic gcd would add arithmetic absent
@@ -872,6 +873,174 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
     6. No witness-equality requirement: correctness is exact value + admissible attaining
        witness, not witness identity (consistent with the Standard-vs-Accelerated rule).
        Multiple optimal witnesses are legitimate.
+
+4.7 Production branch coefficients and sign-routing
+    (RULED upon controlled adoption, 2026-09-06)
+    1. Ownership. `exactfrac.sign_routing` constructs the uncontracted nonnegative cut
+       representation of lem:sign-routing and the four integer coefficient forms prescribed
+       by prop:branch-transform and eq:param0--eq:param3. It performs no cut minimization.
+       Its only imports are dataclasses, .instance (Instance), .rational (RawPair and
+       validate_pair), and optional future annotations. In particular it imports no flow,
+       families, witness, oracle, branch, solve, certificate, verifier, math, or fractions.
+       No closed module or package-root export changes. The section-3 layout entry and
+       explicit addition of sign_routing to section 4.5.3 are the only amendments to
+       pre-existing DESIGN lines. The mathematical source and its contract are unchanged.
+    2. Exact public surface. The module __all__ is exactly the sorted tuple
+         ("SignRoutedNetwork", "SignRoutingCoefficients", "branch_coefficients",
+          "build_sign_routed_network", "recover_objective").
+       Public signatures, accepting positional or the shown keyword arguments, are:
+         SignRoutingCoefficients(a: int, gamma: tuple[int, ...], constant: int)
+         SignRoutedNetwork(vertex_count: int, arcs: tuple[tuple[int, int, int], ...],
+                           negative_shift: int, constant: int)
+         branch_coefficients(instance: Instance, branch: int, parameter: RawPair)
+             -> SignRoutingCoefficients
+         build_sign_routed_network(instance: Instance, coefficients: SignRoutingCoefficients)
+             -> SignRoutedNetwork
+         recover_objective(network: SignRoutedNetwork, cut_value: int) -> int
+       No hidden mode, backend selection, optional normalization, branch selector alias,
+       separate public Arc class, or implicit record conversion is introduced.
+    3. Coefficient record. SignRoutingCoefficients is a frozen, slotted, structurally
+       hashable dataclass with exactly the stored fields (a, gamma, constant), in that order,
+       and no generated ordering. Validate a as an exact built-in int with a >= 0, then
+       gamma as an exact tuple whose entries are exact signed built-in ints, then constant
+       as an exact signed built-in int. Preserve all values literally; gamma may contain
+       zeros or be empty as a standalone shape. The instance-aware builder, not this record,
+       requires len(gamma) == instance.n. Store no Instance, branch, parameter, Q, degree
+       cache, or independent copy of a derived shift in this record. Valid construction
+       asserts scalar representation only, not provenance from a branch or instance.
+    4. Network record. SignRoutedNetwork is a frozen, slotted, structurally hashable
+       dataclass with exactly the stored fields (vertex_count, arcs, negative_shift,
+       constant), in that order, and no generated ordering. vertex_count is the original
+       vertex count, an exact built-in int >= 1, not the enlarged network's node count.
+       Read-only properties node_count, source, sink return vertex_count+2, vertex_count,
+       vertex_count+1 respectively; store no second authoritative terminal/node count.
+       Validate vertex_count first, then arcs completely, then negative_shift as an exact
+       built-in int >= 0, then constant as an exact signed built-in int. arcs is an exact
+       tuple of exact triples (tail, head, capacity). Per triple: check shape, exact integer
+       types in that order, endpoint range 0 <= endpoint < node_count, tail != head, then
+       capacity >= 0. Retain zero-capacity records, supplied order, and repeated directed
+       pairs; do not sort, aggregate, repair, discard, or synthesize arcs in the constructor.
+       An empty arc tuple is structurally valid, but the builder below never emits one
+       for a production Instance. This record is not an independent certificate that its
+       arcs and shifts realize any particular coefficients/Instance. That semantic promise
+       belongs to build_sign_routed_network and the two identity tests, not to arbitrary
+       caller-constructed records. Direct construction is not a contracted-network adapter.
+    5. Consumer validation. Instance-keyed functions first require type(instance) is
+       Instance and consume a normally constructed canonical active instance. They neither
+       reaggregate it nor repeat its active check. branch_coefficients next checks exact
+       int branch in (0,1,2,3), then calls the closed validate_pair on parameter before any
+       graph-dependent coefficient arithmetic. build_sign_routed_network next requires
+       type(coefficients) is SignRoutingCoefficients and matching gamma length before
+       constructing any arcs; it accepts arbitrary valid coefficients, not only branch
+       outputs. recover_objective first requires type(network) is SignRoutedNetwork, then
+       exact built-in int cut_value >= 0, before shift arithmetic. These consumers rely on
+       normally constructed immutable records, not objects forged by bypassing constructors.
+       Malformed data through these signatures raises exact built-in ValueError. Reject
+       bool, numeric/container/record subclasses, floats, Fraction, coercible objects,
+       generators, and duck-typed replacements where exact types are required. Do not
+       invoke their coercion/arithmetic methods or blanket-catch arbitrary exceptions.
+       Wrong call arity and attempted frozen-record mutation retain Python behavior.
+    6. Branch coefficient table. Write parameter=(A,B), with exact A and B > 0, and let
+       f_v=instance.f[v], d_v=d_q(v). Obtain the complete degree tuple once before scanning
+       vertices in increasing order. The sole production table is:
+         branch   a    gamma[v]                       constant (kappa)
+         0        B    (A+B)*f_v - A*d_v               -(A+B)
+         1        B    (A+B)*f_v - A*d_v               -2*B
+         2        B    -B*d_v - A*f_v                  A
+         3        B    -B*d_v - A*f_v                  -2*B
+       Return the literal coefficient record, without rational reduction or rescaling.
+       A may be negative or zero. The shared gamma formulas for 0/1 and 2/3 do not permit
+       their different constants to be merged. No U, family, parity, denominator h_j(U),
+       witness, or branch-feasibility check occurs at this coefficient-construction step.
+    7. Coefficient identity. For s=f(U), b=b_q(U), d=d_q(U), the literal source forms are
+         c_0=s+b-1,   h_0=d+1-s;
+         c_1=s+b-2,   h_1=d-s;
+         c_2=b-d,     h_2=s-1;
+         c_3=b-d-2,   h_3=s.
+       The returned coefficients satisfy, for every U subset of V,
+         B*c_j(U)-A*h_j(U) = a*b_q(U) + sum(gamma[v] for v in U) + constant.
+       Outside D_j this is an identity of polynomial extensions of the source expressions,
+       not a claim of branch admissibility or positivity of h_j(U). Tests include U=0 and
+       U=V without passing their h_j to the positive-denominator RawPair constructor.
+    8. Generic construction and terminal identity. The builder supports all a >= 0 and
+       signed gamma vectors of the matching size, with any signed constant, on the
+       production Instance domain. The broader lemma does not require an active graph;
+       this API deliberately consumes the already-closed active Instance rather than
+       adding another graph-input/normalization API. Original vertices keep indices
+       0..n-1; source=n, sink=n+1, node_count=n+2. The symbols source/sink are not the
+       fixed-shore scalar s=f(U). No anchor p, contraction, terminal parity, or forced
+       membership is processed in this unit.
+    9. Literal arc emission. In canonical edge_ref order, each instance edge (u,v,q_e)
+       emits (u,v,a*q_e), immediately followed by (v,u,a*q_e). Then, in increasing vertex
+       order, gamma[v] >= 0 emits (v,sink,gamma[v]) followed by (sink,v,gamma[v]); gamma[v]
+       < 0 emits (source,v,-gamma[v]) followed by (v,source,-gamma[v]). Every undirected
+       support edge AND spoke is represented by two opposite original capacity arcs, per
+       the source's undirected-to-directed conversion. Do not divide their capacities by
+       two or confuse an opposite original arc with a flow backend's residual reverse arc.
+       Retain gamma[v] == 0 as two zero-capacity sink-spoke arcs. When a == 0, retain both
+       zero-capacity support arcs too. Thus the uncontracted builder emits exactly
+       2*(instance.m+instance.n) original arc records and n+2 vertices, independently of
+       the signs/zeros of coefficients. This sharpens the source's upper bound only for
+       this explicitly ruled uncontracted representation, not for later contracted graphs.
+    10. Separate shift and constant. While constructing spokes compute exactly
+          C_minus = sum(-gamma[v] for v with gamma[v] < 0).
+        Store it as network.negative_shift and copy coefficients.constant literally into
+        network.constant. They remain distinct named integers. The branch constant is not
+        an arc capacity, no direct source-sink arc is introduced for it, and the builder
+        never folds constant into C_minus or redefines either field as a net offset.
+        There is no external mutation of these fields or authoritative duplicate shift.
+    11. Cut identity and recovery. A corresponding source shore is X_U={source} union U,
+        encoded by U | (1 << source), with sink outside. A directed cut counts only arcs
+        whose tail lies in X_U and head lies outside. Each symmetric arc pair contributes
+        its capacity exactly once when its underlying edge crosses. Hence
+          cut_capacity(X_U) = a*b_q(U) + sum(gamma[v] for v in U) + negative_shift,
+        and recover_objective(network, cut_value) returns the exact signed built-in int
+          cut_value - network.negative_shift + network.constant.
+        Negative recovered values are valid. The routine only removes these known shifts:
+        it does not verify that cut_value is a cut of this network or a minimum, determine
+        a source shore, evaluate c_j/h_j, or certify feasibility/attainment/optimality.
+        For a nonempty permitted family, minimization is equivalent over that SAME family;
+        an unrestricted minimum cut is not a substitute for its forced/parity constraints.
+        Unit 12 must still reconstruct U and independently re-evaluate the source raw
+        residual before global candidate comparison as required by CONTRACT/alg:branch-min.
+    12. Determinism and downstream boundary. The emitted raw arc order is fixed for
+        reproducible construction/fixtures. The closed flow backend separately sorts and
+        aggregates its own input and supplies the unique inclusionwise-minimal minimum
+        source shore of the fixed ordinary-cut problem. Do not claim that varying raw arc
+        order provides alternative such extremal shores, or add a new within-cut tie rule.
+        Section 4.6's first-encountered rule concerns candidates across families. No flow
+        call, contraction, loop deletion/parallel aggregation for contractions, parity
+        anchor, terminal-set toggle, GR parity minimization, or minimizer selection occurs
+        in sign_routing.py. Units 11/12 own those transformations/integration separately.
+    13. Exactness and structural work. Constructors preserve raw integer values and use
+        exact type/shape/range checks only. Coefficient validation scans O(len(gamma));
+        network-record validation scans O(len(arcs)); derived terminal properties and
+        recover_objective use O(1) integer operations on valid records. branch_coefficients
+        uses O(n+m) integer operations, with d_q obtained once, not once per vertex.
+        build_sign_routed_network uses O(n+m) operations and O(n+m) integer records, including
+        immutable result validation. Loop bounds are structural vertex/edge/record counts,
+        never capacities, coefficient magnitudes, Q, or operand bit lengths. No explicit
+        copies, all-shore production enumeration, unbounded recursion, algorithmic Python
+        set iteration, float literal/conversion/arithmetic, Fraction, decimal, math, gcd,
+        division, remainder reduction, tolerance, or synthetic infinite capacity is used.
+        Actual integer bit costs grow with input encoding lengths; no constant byte-memory
+        or wall-clock claim, numeric cutoff, or asymptotic assertion is installed in code.
+        Telemetry and the full branch-oracle complexity carriers are later obligations.
+    14. Independent evidence and completion. Hand-derive and commit coefficient, arc,
+        shift, zero/sign, malformed-input, all-shore, label, and huge-integer oracle cases
+        before their tests or production code. The coefficient comparator computes s,b,d
+        directly from instance records and applies the source c_j,h_j table, not production
+        branch_coefficients or a family-derived domain. The cut comparator counts crossings
+        in the actual emitted original arcs, without calling flow or sharing construction
+        code. Freeze a bounded independent corpus and counts before consuming tests.
+        After GREEN and a separate definition-level audit, add a narrowly worded
+        lem:sign-routing CONFORMANCE row for the operational-domain cut identity, plus an
+        engineering note for coefficient/representation obligations. Preserve every existing
+        theorem row/status; do not promote prop:branch-transform's ratio theorem, the
+        parity reduction, thm:branch-oracle, branch/global correctness, or bit-growth rows.
+        Finite tests are executable evidence, not a universal proof or a min-cut certificate.
+        Isolate the complete code/test/CONFORMANCE staged tree before its atomic commit,
+        in the order fixed by the appended TEST_PLAN Unit 10 gate.
 
 ## 5. Algorithm map (by label)
 

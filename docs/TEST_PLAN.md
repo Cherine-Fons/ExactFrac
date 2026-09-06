@@ -2010,3 +2010,237 @@ canonical mathematical source, SPEC_LOCK, CONTRACT, immutable GOVERNING_SHA256SU
 oracle catalogue, CONFORMANCE, pyproject, existing code/tests, or local private notes. No
 Unit 10 reduction, branch coefficient construction, branch solver, global selector,
 certificate layer, arbitrary general-purpose fraction API, or telemetry is implemented here.
+
+## 25. Unit 10 production sign-routing supplemental obligations
+
+This section is appended after all previously committed TEST_PLAN bytes, including sections
+23--24 for Unit 09. It governs `exactfrac/sign_routing.py` and `tests/test_sign_routing.py`
+under DESIGN 4.7. Mathematical sources: prop:branch-transform's c_j/h_j table;
+eq:param0--eq:param3; lem:sign-routing and eq:sign-routing; the two-opposite-arcs conversion;
+alg:branch-min and thm:branch-oracle. Source identities are distinct from prospective API,
+record, emission-order, zero-retention, and error rulings. None of these tests may import or
+call the flow backend to establish the expected sign-routing identities.
+
+### SR1 — exact public interface and dependencies
+
+Pin the exact sorted __all__, all signatures and keyword names from DESIGN 4.7.2, and the
+two frozen/slotted records. Require the exact two record types and exact built-in scalar/
+tuple result types; do not add other constructors, public Arc types, mode flags, or root
+exports. Use importlib for the not-yet-existing module without suppressing its intended
+ModuleNotFoundError. Allowed production imports are only dataclasses, .instance, .rational,
+and optional future annotations. Static and fresh-process checks distinguish those allowed
+closed dependencies from forbidden flow, families, witness, oracle, branch, solve,
+certificate, exactfrac_verify, fractions, decimal, math, and third-party imports.
+
+### SR2 — coefficient record representation and strictness
+
+Pin fields/slots (a, gamma, constant), structural equality/hash consistency, immutability,
+and no generated ordering or __dict__. Cover a==0, a>0, mixed/zero/all-negative gamma,
+signed constants, empty gamma as standalone shape, and huge exact integers. Reject negative
+a and wrong exact types/containers/entries with exact ValueError, without coercion. A
+coefficient record has no attached instance or cached degree/shift. Test independence from
+external mutable inputs by rejecting lists rather than copying/repairing them. Matching
+vertex count is a builder guard, not a coefficient-constructor claim.
+
+### SR3 — network record representation is not a semantic certificate
+
+Pin fields/slots (vertex_count, arcs, negative_shift, constant), structural equality/hash,
+frozen state, and the properties source=vertex_count, sink=vertex_count+1,
+node_count=vertex_count+2. Reject malformed exact types, vertex_count<1, invalid arc shape,
+noninteger fields, out-of-range endpoints, loops, negative capacities/negative_shift, and
+nonscalar constant, with exact ValueError. Zero capacities and an empty arc tuple are valid
+record shapes. Retain ordered repeated directed pairs without aggregation or synthesis;
+no constructor sort, zero deletion, or mutation is allowed. Do not require the constructor
+to certify that arbitrary supplied arcs/shift came from a particular Instance/coefficient
+record. Semantic consistency is established for builder outputs by SR5--SR9. The result
+record is not the future contracted-network representation.
+
+### SR4 — hand-derived four-branch coefficients
+
+Commit exact a, gamma tuple, and constant for each branch and selected raw parameters before
+writing the test. Test the table literally, including distinct constants in branches 0/1
+and 2/3, while shared gamma families remain equal. Include negative, zero, positive, unit-
+and nonunit-denominator parameters, unreduced equal-value parameters, and huge signed A.
+branch is an exact int in 0..3; parameter is the closed strict RawPair. Use MIXED from
+ORACLE-031 and the rich five-vertex instance from ORACLE-025, plus an active d_q==f control.
+Expected degrees and coefficients are derived from the fixed records, not production
+properties/functions. No branch domain is required merely to build its coefficient form.
+
+### SR5 — symmetric support-edge arcs and explicit terminal numbering
+
+For generic a>=0, commit the complete emitted arc tuple on tiny canonical instances. In
+edge_ref order, require (u,v,a*q_e) then (v,u,a*q_e); support arcs precede all spoke arcs.
+No multiplicity expansion, endpoint relabeling, capacity halving, dictionary-derived order,
+or extra source-sink constant edge is allowed. Original indices remain unchanged and the
+auxiliary vertices are exactly source=n and sink=n+1. The directed cut evaluator in tests
+counts tail-inside/head-outside, never both directions of a crossing pair and never flow
+residual entries. Check all returned container, endpoint, and capacity types exactly.
+
+### SR6 — positive, negative, zero, and all-zero spokes
+
+Commit complete spoke tuples in increasing original-vertex order. Positive/zero gamma
+uses both v->sink and sink->v arcs of gamma; negative gamma uses both source->v and
+v->source arcs of -gamma. Retain zero-gamma sink spokes and a==0 support arcs. Every builder
+output has n+2 nodes and exactly 2*(m+n) original directed arc records, including the fully
+zero-capacity case. All-zero capacities are not an empty original arc set. Compare exact
+negative_shift with the independently derived sum of negative magnitudes; constant never
+changes arcs or negative_shift. Test zero, positive, negative, and huge constants.
+
+### SR7 — coefficient identity on every shore, including empty/full
+
+Name the coverage test `test_branch_coefficient_identity`. On the independently fixed tiny
+corpus, enumerate every U from 0 through (1<<n)-1. Directly recompute s from f entries, b
+from crossing support-edge multiplicities, and d from endpoint incidences in the input
+records. Do not import production shore-sum functions, use instance.d_q as the expected
+side, or reconstruct branch domains from families. Compute the source pairs independently:
+(c0,h0)=(s+b-1,d+1-s); (c1,h1)=(s+b-2,d-s); (c2,h2)=(b-d,s-1);
+(c3,h3)=(b-d-2,s). For every branch/parameter/mask, assert
+B*c_j-A*h_j == a*b + sum(gamma[v] for v in U) + constant using the actual returned
+coefficients on the right. Compute the left directly rather than using the production
+rational residual helper as the expected oracle. These all-mask tests concern polynomial
+extensions outside D_j; they assert no branch feasibility, nonempty shore, or h_j>0 there.
+Do not filter masks or pass off-domain h_j as a RawPair denominator.
+
+### SR8 — generic sign-routing identity without a minimum-cut call
+
+Name the identity test `test_sign_routing_identity`. For every generic coefficient case and
+all valid U, build the network and count crossing capacities from its actual arc tuple with
+X_U=U|(1<<source), excluding sink. Independently derive Psi(U)=a*b_q(U)+sum gamma over U
+from input records and supplied coefficients, and C_minus from supplied gamma. Require
+cut_capacity(X_U) == Psi(U)+C_minus, independently of coefficients.constant. Test empty
+and full shores explicitly: their cut capacities are respectively C_minus and the sum of
+positive gamma entries. Include asymmetric shores and positive support edges so a doubled
+undirected cut or omitted/opposite spoke is detected. No max-flow, min-cut, production
+cut-evaluation helper, or copied construction routine supplies the expected cut value.
+
+### SR9 — recovery with separate signs and restricted-family boundary
+
+For each branch case and all shores, require recover_objective(network, cut_capacity)
+== B*c_j-A*h_j independently. Check negative recovered values, constant==0, nonzero
+negative_shift, and branches with opposite constant signs. Direct scalar controls verify
+cut_value-negative_shift+constant and validation of nonnegative exact-int cut_value.
+The helper establishes neither a cut identity for an arbitrary caller-built record nor
+minimality or branch membership. Include a hand-derived tiny nonempty restricted shore
+family whose minimum differs from the unrestricted one: test equality of shifted minima
+over that SAME family by exhaustive cut counting, not by invoking a flow solver. Empty
+family handling, forced contractions, parity, and Infeasible are outside this unit.
+
+### SR10 — zero parameter, negative parameters, and active equality controls
+
+At A=0,B=1, branches 0/1 have gamma=f and C_minus=0; branches 2/3 have gamma=-d_q and
+C_minus=2Q. Under the active domain, branches 2/3 have strictly negative gamma for A>=0;
+check this conditional assertion without rejecting A<0. Include A<0 cases with gamma of
+all three signs and exact zero thresholds; the ORACLE-025 instance at (-2,1) is one such
+anchor. Include d_q==f, where gamma for branches 0/1 remains B*f for arbitrary signed A.
+Generic a==0 is supported even though branch-derived a=B is strictly positive. Catalogue
+all numerical anchor values before their tests and distinguish them from domain membership.
+
+### SR11 — exact rejection matrix and validation before construction
+
+Cover invalid Instance/coefficient/network types, bool and record subclasses, branch values
+outside 0..3, every malformed RawPair class already rejected by Unit 09, mismatched gamma
+length, malformed arc records, and invalid recovery cut values. Use exact ValueError, not
+just a superclass match. Verify specified field/argument validation order by source review
+and guard-isolated tests; raising conversion, iterator, comparison, and arithmetic objects
+must be rejected before their hooks run. Invalid constructor records are not silently fixed.
+Do not test reflective bypass of frozen constructors as an ordinary supported input path.
+No public consumer mutates the input Instance, coefficient record, network, or tuples.
+
+### SR12 — deterministic raw emission and label independence
+
+Repeated calls with identical authoritative inputs produce structurally identical records
+and exact arc order. Valid relabelings of Instance metadata do not change results. The
+builder preserves canonical edge_ref and increasing vertex order rather than relying on
+set iteration. A generic constant-only change leaves arcs and negative_shift identical.
+Input-order normalization belongs to Instance/flow, not this builder. Do not demand that
+permuting a fixed network's input arcs changes its inclusionwise-minimal min-cut shore:
+that unique extremal-shore contract is separate from this raw-output ordering contract.
+
+### SR13 — finite independent corpus fixed before tests
+
+Register finite active-instance, parameter, generic-a/gamma/constant, all-shore, and
+restricted-family domains and their exact evaluation counts before tests exist. Include
+MIXED, ORACLE-025, d_q==f, zero-support-capacity, all-zero network, nonzero shift, and
+same-gamma/different-constant cases. Derive expected coefficient/arc/shift/recovery records
+without production output; run a separate definition-level audit without production flow
+or shared construction logic. Tests must compare actual production outputs with those
+independent values, not merely one production operation with another. A corpus count is
+finite evidence, not a theorem, resource promise, or reason to skip a source condition.
+
+### SR14 — large integers and classification-controlled scaling
+
+Freeze huge-integer controls including 4097-bit-class multiplicities, signed coefficients,
+and raw parameter entries; test exact output fields and types without float/timing cutoffs.
+For positive integer k, scaling parameter (A,B) to (k*A,k*B) scales all branch coefficients,
+constant, capacities, negative_shift, and recovered raw residuals by k, while vertex/arc
+positions and coefficient signs stay fixed. For generic forms the same law holds when
+(a,gamma,constant) is scaled componentwise. Derive expected scaled values independently.
+Do not claim raw residual magnitude invariance, or fixed source/sink spoke endpoints when
+unrelated parameter changes actually change gamma signs. No magnitude or bit-length limit
+is added to the API.
+
+### SR15 — source exactness, dependency isolation, and structural operation count
+
+Inspect imports, AST, and call structure for forbidden numerical operations, float constants,
+coercion, reduction, synthetic infinity, recursion, explicit copies, all-shore enumeration,
+set-valued iteration, flow calls, and magnitude-controlled loops. Allowed loops are over
+canonical support edges, vertex indices, gamma entries, or supplied arc records. Obtain
+d_q once, outside the per-vertex loop; reject designs that rescan all edges per vertex.
+Inspect the O(n+m) construction carrier including output-record validation, and O(1)
+recovery/derived-terminal properties; do not install a numeric asymptotic bound or assert
+constant wall-clock time/byte memory. Fresh import may load only the allowed closed
+instance/rational dependencies. Keep package-root and all closed implementation/test bytes
+unchanged. In-memory prohibited-source audit controls may be used without mutating files.
+
+### SR16 — theorem and downstream completion boundaries
+
+The narrowly worded new lem:sign-routing row is authorized only at GREEN, mapped to
+test_sign_routing_identity on production-domain inputs. test_branch_coefficient_identity
+and the representation/rejection/order checks receive an engineering seam note, not a
+new proof of prop:branch-transform's ratio claims. Preserve every existing CONFORMANCE
+row/status. Do not mark parity-anchor/GR reduction, branch residual minimization,
+argmin policy, Standard/Accelerated control flow, global solve, certificate work, or
+algorithm-level bit-growth/telemetry complete. Neither a network nor its shifted scalar
+value is an independent certificate of admissibility, attainment, or global optimality.
+
+## 26. Unit 10 completion gate — branch coefficients and sign-routing
+
+Before `tests/test_sign_routing.py` or `exactfrac/sign_routing.py` exists:
+
+1. Authenticate the completed Unit 09 commit/tree/clean remote state and read the pinned
+   source table, residual expansions, sign-routing lemma/proof, directed conversion, and
+   branch-oracle shift-handling/count passages. Read the closed flow/instance/rational
+   contracts without reopening their implementations.
+2. Adopt a documentation-only authority commit with the new DESIGN layout line, explicit
+   sign_routing addition to the Fraction-prohibited module list, section 4.7, and appended
+   TEST_PLAN sections 25--26. Preserve the complete old TEST_PLAN prefix and all historical
+   DESIGN bytes except the named layout/policy amendments. No oracle/CONFORMANCE/code/
+   pyproject/baseline-manifest/private-note change is part of that authority commit.
+3. Derive, audit, and commit the numerical/structural fixtures and finite corpus counts to
+   ORACLE_CATALOG before their consuming test file. Keep all earlier oracle bytes intact.
+
+Then, in order:
+
+4. Write only tests/test_sign_routing.py against the adopted authority and oracles; syntax
+   and live Ruff stdin checks under the intended path precede application. Observe the
+   intended ModuleNotFoundError for exactfrac.sign_routing while production is absent;
+   all 410 earlier tests remain green. Do not alter private notes or unrelated files.
+5. Implement only exactfrac/sign_routing.py after RED, live-Ruff-preflighting its complete
+   review copy before application. Keep the frozen test unchanged except for separately
+   adjudicated defects; do not use source normalization to accommodate an erroneous test.
+6. Require SR1--SR16, targeted/full tests, full repository Ruff, independent all-shore and
+   coefficient/shift audits, source exactness, import isolation, and closed-file nonmutation
+   to pass. Bind actual fixture counts, exact file identities, and runnable audit evidence.
+7. Add only the narrowly scoped lem:sign-routing CONFORMANCE row and engineering seam note
+   authorized above, after GREEN. Preserve every existing row/status and avoid claims of
+   min-cut, parity, branch, global, or certificate correctness beyond this unit.
+8. Stage exactly docs/CONFORMANCE.md, exactfrac/sign_routing.py, tests/test_sign_routing.py;
+   export and test the exact staged tree in isolation, check project import origins and
+   byte nonmutation, commit atomically after the authority/oracle commits, push normally,
+   and verify synchronized local/remote refs and a clean worktree/index.
+9. At unit closure provide exactly two self-contained four-backtick Markdown append blocks
+   for private BUILD_NOTES and LEARNING_NOTES; neither notes file is staged.
+
+No flow backend execution is required to verify the Unit 10 identities. Forced memberships,
+contraction, parity anchor, terminal parity/toggling, and parity-constrained minimization
+remain Unit 11/12 work, with separate authority/oracle/tests-first gates.
