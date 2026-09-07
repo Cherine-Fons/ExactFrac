@@ -13,6 +13,7 @@ done until its row exists and its test is green.
 | lem:aggregation | repeated unordered raw records are oriented, grouped, and summed exactly into one canonical support edge without explicit-copy expansion | tests/test_instance.py::test_oracle_014_raw_forms_normalize_to_oracle_013; tests/test_instance.py::test_every_permutation_of_raw_a_has_the_same_canonical_result; tests/test_instance.py::test_reversed_and_repeated_raw_pairs_aggregate_by_exact_addition; tests/test_instance.py::test_enormous_multiplicity_remains_one_compact_support_record | green |
 | prop:domain-decomp | each generated atomic-family union equals its literal `prop:branch-transform` domain; overlap is allowed and no partition claim is made | tests/test_families.py::test_cover; tests/test_families.py::test_oracle_026_rich_cover_multiplicities_preserve_overlap | green |
 | lem:ek | zero-arc totalization; exact minimum and inclusionwise-minimal source shore; O(NE) augmentations and uniform O(N+NE^2) operations | tests/test_flow.py (TEST_PLAN FL1-FL12) | green |
+| lem:sign-routing | on production Instance inputs, the uncontracted nonnegative cut representation satisfies cut_capacity(X_U) = a*b_q(U) + sum_U gamma + C_minus; no minimization claim | tests/test_sign_routing.py::test_sign_routing_identity | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
 | prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | planned |
 | prop:branch-correct | accelerated loop terminates with the exact branch optimum | tests/test_branch.py::test_accelerated | planned |
@@ -234,3 +235,83 @@ done until its row exists and its test is green.
   serialization, independent certificate checking, and telemetry remain downstream.
   The complete three-file staged tree still requires isolated verification and atomic
   commit/remote closure under TEST_PLAN section 24 before Unit 09 is closed.
+
+## Unit 10 branch-coefficient and sign-routing implementation note
+
+- The new `lem:sign-routing` row is the narrow operational-domain cut-identity row
+  authorized by DESIGN 4.7.14 and TEST_PLAN SR16/section 26. It records executable
+  evidence for canonical active `Instance` inputs, generic `a >= 0`, and signed gamma.
+  It does not extend this API to the lemma's broader graph domain. The governing source
+  supplies the universal proof; finite tests do not prove the lemma or certify a minimum.
+  Every earlier theorem row and status is preserved unchanged.
+- `exactfrac.sign_routing` owns the two frozen/slotted structural records and the functions
+  `branch_coefficients`, `build_sign_routed_network`, and `recover_objective`. Constructor
+  validity establishes representation, not provenance from a graph or branch. Exact
+  built-in types and plain ValueError guard the ruled boundaries; raw tuple order, repeated
+  arc records, zero capacities, and signed constants are not normalized or silently repaired.
+- The single branch coefficient table is tested against source c_j/h_j expressions with
+  s, b, and d independently recomputed from original input records. It obtains d_q once,
+  then scans vertices in increasing order. For parameter (A,B), B > 0, the identity is
+  `B*c_j(U)-A*h_j(U) = a*b_q(U)+sum_U gamma+constant`. Empty and full masks are included;
+  outside D_j this is a polynomial-extension identity, not feasibility or h_j(U) > 0.
+- Every support edge and every spoke has two opposite ORIGINAL directed capacity arcs.
+  Support pairs follow edge_ref order; spoke pairs follow increasing vertex order.
+  Zero gamma retains its two sink spokes; a == 0 retains both zero support arcs. The
+  uncontracted builder emits exactly `2*(m+n)` arcs with source=n, sink=n+1, node_count=n+2.
+  A directed cut counts only tail-inside/head-outside, not both directions or residual arcs.
+- The generic cut identity is `cut_capacity(X_U) = a*b_q(U)+sum_U gamma+C_minus`.
+  The nonnegative `negative_shift=C_minus` and signed `constant` stay separate; recovery is
+  `cut_value-negative_shift+constant`. A constant-only change does not alter arcs or shift.
+  The scalar helper neither validates cut provenance nor chooses a shore or minimum.
+  Minimum correspondence requires the SAME nonempty permitted family; the registered
+  counterexample rejects substitution of an unrestricted cut for a constrained minimum.
+- The frozen R2 test file provides the following 29 principal checks against ORACLE-046--055.
+  Except for the explicitly scoped lemma row above, this mapping is engineering evidence.
+  Expected literals are transcribed from the committed human-readable catalogue, with
+  definition-derived comparison routines; the consuming tests do not read private JSON.
+
+| Production obligation | Principal tests in `tests/test_sign_routing.py` |
+|---|---|
+| SR1--SR3: exact surface, structural records, raw preservation, terminal properties | `test_public_surface_signatures_and_exact_annotations`; `test_coefficient_record_raw_shape_and_structural_identity`; `test_network_record_preserves_order_repetitions_zeros_and_empty_shape`; `test_record_immutability_no_ordering_or_extra_stored_fields`; `test_keyword_calls_and_wrong_arity_boundary` |
+| SR4/SR7/SR13: literal branch coefficients and independent all-shore residual expansion | `test_literal_four_branch_coefficient_rows_and_anchor_shores`; `test_branch_coefficient_identity` |
+| SR5--SR6/SR8/SR13: exact original arcs, cut identity, zeros and fixed dimensions | `test_literal_original_arc_tuples_and_all_shore_cut_tables`; `test_sign_routing_identity`; `test_zero_support_zero_spokes_and_all_zero_network_are_not_empty` |
+| SR9: separate recovery signs, restricted-family boundary, constant-work scalar helper | `test_scalar_recovery_separate_signs_without_cut_or_provenance_claim`; `test_restricted_family_minimum_is_not_the_unrestricted_minimum`; `test_recovery_does_not_rescan_arcs_or_certify_network` |
+| SR10/SR12: zero/negative parameters, active equality, constants, labels and repeatability | `test_zero_negative_parameters_active_equality_and_distinct_constants`; `test_constant_only_variants_preserve_literal_arcs_and_negative_shift`; `test_labels_and_repetition_never_change_raw_results_or_input_records` |
+| SR11/SR15: exact errors, hostile objects, validation before graph work, once-only degree access | `test_declared_exact_valueerror_matrix`; `test_supplementary_wrong_scalar_types_at_each_numeric_boundary`; `test_validation_precedes_graph_dependent_work`; `test_closed_pair_validation_occurs_before_degree_access`; `test_degree_tuple_is_obtained_once_per_branch_call` |
+| SR14: independent positive scaling and large unreduced integer records | `test_positive_branch_scaling_uses_independent_expected_values`; `test_positive_generic_scaling_from_literal_network_n5`; `test_huge_multiplicities_and_unreduced_parameter_entries`; `test_huge_generic_mixed_zero_signs_and_standalone_records` |
+| SR15: static exactness, transitive loop boundaries, source controls and import isolation | `test_source_exactness_dependency_and_structural_loop_controls`; `test_source_recovery_and_terminal_properties_have_no_transitive_loops`; `test_in_memory_prohibited_source_controls`; `test_fresh_process_import_isolation_and_export_free_package_root` |
+
+- The test suite exercises the 81 precommitted exact-ValueError declarations, 120 literal
+  branch anchors/2,080 shores, eight literal network tuples/128 shore rows, and the finite
+  core: 329 active instances, 2,612 base masks, 13,160 branch/parameter cases, and 104,480
+  branch-shore evaluations. Generic forms add 216 cases/1,512 shores. Negative A is checked
+  in all four branches; RICH at (-2,1) exercises mixed zero/sign coefficients in 2/3, while
+  (-3,1) distinguishes their constants. Under active input, negative A in 0/1 gives
+  strictly positive gamma. No parameter sign restriction is imposed by this sanity check.
+- The separate handoff implementation audit derives expectations from the definitions,
+  without importing the consuming test, verifier, flow, or private fixture JSON. It checks
+  the core and anchor/generic cases independently, plus 122 supplementary rejection/hostile-
+  object calls and 36 large-integer/raw-scaling cases. Ordered original arcs, zero positions,
+  separate shifts/constants, and the restricted-family counterexample pass. The 122 calls
+  are separate from, not a replacement for, the test file's 81 rejection declarations.
+- Before this documentation change, the live gate pinned implementation R1, frozen test
+  R2, and all 28 base files to 29 targeted tests, 439 full-suite tests, live source preflight,
+  full repository Ruff, and the independent implementation audit passing. It also checked
+  source/import isolation and byte nonmutation. The 28-base-file statement describes that
+  PRE-NOTE state; this authorized CONFORMANCE change does not rewrite or reinterpret it.
+- Source review checks O(n+m) integer-operation construction including record validation,
+  and O(1) integer-operation recovery/terminal properties. Numerical encoding lengths still
+  affect bit costs. Positive raw scaling scales coefficients, capacities, shifts, constants,
+  and recovered residuals; it preserves positions/signs, not raw magnitudes. No timing,
+  constant-byte-memory, unrestricted-composition, or algorithm-level bit-growth claim follows.
+- No sign-routing identity test or separate implementation audit calls flow or minimization.
+  Full-suite execution still runs the previously closed flow tests. This unit does not
+  implement forced contractions, parity anchors or terminal toggles, parity minimization,
+  family argmin selection, or the branch oracle's independent raw-residual re-evaluation.
+- Historical Unit 09 deferrals of sign routing and branch-coefficient construction receive
+  this Unit 10 evidence; residual minimization and every other downstream obligation remain
+  deferred. Do not promote prop:branch-transform's ratio theorem, thm:branch-oracle,
+  parity/GR, branch/global correctness, certificate work, bit-growth rows, or telemetry.
+  A constructed network or recovered scalar certifies neither admissibility, attainment,
+  nor global optimality. The complete three-file staged tree still requires isolated
+  verification, atomic commit, and remote closure under TEST_PLAN section 26.
