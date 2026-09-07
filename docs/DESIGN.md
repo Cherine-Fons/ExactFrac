@@ -129,6 +129,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
       witness.py          Witness, ExactValue, shore sums, validation, dense/sparse counts
       families.py         atomic families F(T, pi; I, O); enumeration per branch
       sign_routing.py     branch coefficients, nonnegative cut construction, explicit shifts
+      parity_cut.py       forced contraction, parity anchoring, exact parity-cut minimization
       flow.py             Edmonds–Karp reference backend behind the MaxFlow interface
       oracle.py           ExactBranchMin
       branch.py           SolveBranchStandard, SolveBranchAccelerated
@@ -673,7 +674,7 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
        on the integer numerator (never divide to decide <0, ==0, >0). Aligns with the
        frozen contract Bc_j - Ah_j.
     3. Fraction policy: fractions.Fraction is PROHIBITED from the solver arithmetic path
-       (instance, families, flow, oracle, branch, solve, certificate, witness, rational, sign_routing). Fraction is
+       (instance, families, flow, oracle, branch, solve, certificate, witness, rational, sign_routing, parity_cut). Fraction is
        permitted only in the independent verifier and tests as an independent correctness
        oracle. CLI may display the raw value as N/D; no normalization needed. This is
        implementation discipline (Fraction's automatic gcd would add arithmetic absent
@@ -1041,6 +1042,235 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         Finite tests are executable evidence, not a universal proof or a min-cut certificate.
         Isolate the complete code/test/CONFORMANCE staged tree before its atomic commit,
         in the order fixed by the appended TEST_PLAN Unit 10 gate.
+
+4.8 Production atomic-family parity-cut reduction
+    (RULED by the Unit 11 authority commit; subordinate to the pinned mathematical source)
+
+    1. Ownership and source. exactfrac/parity_cut.py owns forced contraction, parity-anchor
+       bookkeeping, lifting between its two explicit vertex universes, and the thm:GR
+       ordinary-cut specialization. It consumes the closed AtomicFamily, SignRoutedNetwork,
+       finite-shore validator, and exact minimum_cut contracts. Source: the forced-membership
+       paragraph following lem:sign-routing, lem:parity-anchor and proof, thm:GR and proof,
+       lem:ek including E=0, and alg:branch-min's reconstruction/shift step. The cited primary
+       Goemans--Ramakrishnan Theorem 2/Corollary 3 (p.502) and Section 5 (p.511) supply the
+       two-element restricted-lattice enumeration; Section 3.1.1 (p.507) supplies its cut
+       specialization. The source uses least ordinary lattice minimizers, not arbitrary
+       tied ordinary cuts. Its no-perturbation implementation is residual reachability as
+       required by the already-closed flow backend. The choices of records, vertex order,
+       compatible-pair order, zero handling, and diagnostics below are engineering rulings.
+       This unit does not implement ExactBranchMin or change the mathematical specification.
+
+    2. Public surface. The exact sorted tuple __all__ is:
+           ("ParityCutProblem", "ParityCutResult", "ParityCutStats",
+            "lift_source_shore", "minimum_parity_cut", "reduce_atomic_family")
+       Public record constructors and signatures, with these positional/keyword names:
+           ParityCutProblem(vertex_count: int, classes: tuple[int, ...],
+                            arcs: tuple[tuple[int, int, int], ...], terminal_mask: int)
+           ParityCutResult(cut_value: int, source_shore: int)
+           ParityCutStats(mincut_calls: int, flow_augmentations: int,
+                          flow_bfs_scans: int, flow_peak_generated_value: int)
+           reduce_atomic_family(network: SignRoutedNetwork, family: AtomicFamily)
+               -> ParityCutProblem | None
+           lift_source_shore(problem: ParityCutProblem, source_shore: int) -> int
+           minimum_parity_cut(problem: ParityCutProblem)
+               -> tuple[ParityCutResult | None, ParityCutStats]
+       All three records are frozen/slotted dataclasses, structural equality/hash, no order.
+       No fields have default values. The minimum-parity result and diagnostics are separate;
+       no counters are put in ParityCutResult. No package-root exports are added.
+
+    3. Two vertex universes, never implicit. ParityCutProblem.vertex_count is the number n
+       of ORIGINAL nonterminal vertices. It is an exact built-in int >=1, matching the
+       standalone SignRoutedNetwork domain; production Instances happen to have n>=2.
+       Original vertices are 0..n-1, original source is n, original sink is n+1, and an
+       optional zero-cost anchor is n+2. classes is an exact tuple of at least two exact
+       positive int masks over this augmented original universe. Its index is a REDUCED
+       vertex; its value is that reduced vertex's original preimage mask. Specifically:
+       - classes[0] contains bit n, no bit n+1, and optionally the anchor bit n+2;
+       - classes[1] contains bit n+1, no bit n, and never the anchor bit;
+       - every later class is one original-vertex singleton, ordered by increasing vertex;
+       - classes are pairwise disjoint and cover all bits 0..n+1 exactly once, with only
+         the optional bit n+2 additionally permitted, and only in classes[0].
+       No other high bit, missing original vertex, repeated class member, or alternate class
+       order is valid. Original vertices in classes[0]/classes[1] are the forced sides.
+       Derive read-only properties source=0, sink=1, node_count=len(classes). They are not
+       redundant stored fields. Do not identify original vertex 0 with reduced source 0.
+
+    4. Problem-record validity. Validate n first, then the complete classes representation,
+       then the complete arcs representation, then terminal_mask. arcs is an exact tuple of
+       exact triples (tail, head, capacity). Validate all three entries' exact int types
+       before their numeric comparisons, require endpoints in 0..node_count-1, tail!=head,
+       capacity>=0, and strictly increasing (tail,head) keys. Thus arcs has no parallel
+       directed pairs or loops; capacities of encountered zero pairs are retained.
+       An empty arcs tuple is valid. No symmetry requirement is imposed: nonnegative directed
+       cut functions also meet the invoked submodularity hypothesis, and a normally built
+       standalone SignRoutedNetwork may be directed. The builder-generated symmetric case
+       remains a special case. terminal_mask is an exact nonnegative int with no bits outside
+       node_count and with EVEN bit_count, including zero. Both source and sink may be
+       terminals. Constructor inputs are checked, not repaired, reordered, or normalized.
+       Shape/partition validity is not proof that a record arose from any particular family.
+
+    5. Result/diagnostic validity. ParityCutResult checks exact int cut_value>=0 first,
+       then exact int source_shore>=0 with reduced source bit 0 present and sink bit 1 absent.
+       Without a problem it cannot check the upper universe bound, terminal parity, attained
+       cut value, or optimality. Those are minimum_parity_cut's output guarantees.
+       ParityCutStats checks exact int nonnegativity of its four fields in declaration order.
+       It does not infer an audit claim from arbitrary caller-supplied counters.
+
+    6. Errors and validation precedence. Public data violations raise the exact built-in
+       ValueError, not a new exception or a subclass. Wrong call arity retains normal Python
+       behavior. Do not coerce bool, numeric/container subclasses, generators, or duck-typed
+       substitutes. reduce_atomic_family validates exact SignRoutedNetwork type, then exact
+       AtomicFamily type, then calls the closed validate_shore on family.T, family.I, family.O
+       in that order using network.vertex_count. It does this before deciding family emptiness
+       or scanning capacities. Use family.is_nonempty as the closed logical predicate; do not
+       duplicate its formula. An out-of-universe mask is invalid, whereas a well-shaped family
+       with overlapping I/O or impossible parity is valid but infeasible and returns None.
+       lift_source_shore validates exact ParityCutProblem type, then the reduced finite mask,
+       then source-present/sink-absent geometry. minimum_parity_cut first validates exact
+       ParityCutProblem type. Normally constructed frozen records are trusted after type checks;
+       constructor-bypassing forgeries are outside this contract. Do not catch arbitrary backend
+       failures and turn them into None or ValueError; they are not family infeasibility.
+
+    7. Forced contraction and canonical original preimages. For a feasible atomic family,
+       form classes[0] from I and original source, classes[1] from O and original sink;
+       if pi=0, also put the new isolated anchor in classes[0]. The remaining original vertices
+       are singleton classes in increasing order. Build one old-to-reduced index map, including
+       the optional anchor. This is contraction, never a finite 'infinity' edge, a big-M
+       constraint, or a numeric perturbation. No anchor edge is introduced: its only roles are
+       a forced-inside preimage bit and one base-terminal token. pi=1 uses no anchor at all.
+       Every valid source/sink reduced shore has a unique corresponding original shore meeting
+       the forced memberships, and conversely. Original empty/full shores are allowed when
+       the family allows them. Family feasibility is not witness admissibility.
+
+    8. Capacity transport. Map each supplied original directed arc through the contraction.
+       Discard an arc iff its mapped endpoints coincide. Sum capacities of equal ordered
+       endpoint pairs by exact integer addition and emit one triple per encountered nonloop
+       pair in increasing (tail,head) order. A pair whose sum is zero is still emitted.
+       Sort mapped nonloop records and aggregate equal adjacent keys, or an equivalent method
+       with the stated deterministic output and O(E_in log(E_in+1)) comparison carrier.
+       Do not invent zero pairs that never occurred, divide symmetric arcs by two, mix an
+       original reverse arc with a residual reverse entry, or absorb constants into capacities.
+       The same transport rule applies to further two-element contractions in item 12.
+       Contraction adds no cut-value shift. The source network's negative_shift and constant
+       are neither changed nor stored in ParityCutProblem; the caller retains that network.
+
+    9. Terminal transport and the sink toggle. Start with base_terminal_mask=family.T for
+       pi=1; for pi=0, add the anchor bit n+2. A reduced vertex is terminal exactly when its
+       class contains an ODD number of these base terminals. This is XOR aggregation, not
+       Boolean presence/OR: two terminal tokens in one class cancel modulo two.
+       If the resulting reduced terminal mask has odd bit_count, toggle reduced sink bit 1
+       by XOR. Toggle even if sink is already a terminal, in which case the toggle removes it.
+       Otherwise leave the mask unchanged. Its total cardinality is now even. Sink is outside
+       every source shore, so this last toggle does not change source-shore intersection parity.
+       For every corresponding pair X,U, odd |X intersect terminal_mask| is equivalent to
+       |U intersect family.T| mod 2 == family.pi; cut capacities also agree.
+       Feasible family inputs yield a nonzero final terminal mask. None is returned for the
+       infeasible families in item 6, not an empty/fake problem or an arbitrary zero shore.
+
+    10. Lifting is a conversion, not an optimization check. lift_source_shore unions the
+        preimage masks of the selected reduced vertices, then intersects with (1<<n)-1.
+        This strips both fixed terminals and any anchor. Return an exact built-in int, possibly
+        0 or the full original mask. The function accepts source/sink reduced shores of EITHER
+        terminal parity. It does not check oddness, compute a cut, or certify feasibility under
+        a supplied family. Returned minimum_parity_cut shores carry the oddness guarantee;
+        generic lifting tests must still cover the even shores without requesting a min-cut.
+
+    11. Exact parity-cut objective. minimum_parity_cut minimizes the sum of ORIGINAL directed
+        arc capacities leaving X over all reduced masks X with source in X, sink outside X,
+        and odd |X intersect terminal_mask|. The value is unshifted and nonnegative. The result
+        shore is in the problem's REDUCED universe, not the original-vertex universe and not
+        the temporary vertex universe of a pair-restricted call. Return (None, zero stats)
+        immediately for terminal_mask==0; this is infeasible, not malformed. For even nonzero
+        terminal_mask this full source/sink lattice contains an odd shore, independently of
+        capacities: there is a free terminal whose inclusion can be toggled, or T={source,sink}.
+        Do not infer infeasibility from E=0, zero cut value, all-zero capacities, disconnectedness,
+        or an ordinary least minimum shore having the wrong parity.
+
+    12. Goemans--Ramakrishnan specialization. For nonzero terminal_mask enumerate every pair
+        (a,b) of reduced vertices with a!=sink, b!=source, a!=b. Use increasing a, then increasing
+        b; the first pair is (source,sink). For each pair, further contract source with a and
+        sink with b. Temporary source and sink are again 0 and 1; other problem vertices remain
+        singleton classes in increasing problem-vertex order. Build the temporary-to-problem
+        class masks and map arcs by item 8. Invoke the closed minimum_cut exactly once on this
+        ordinary nonnegative network. Its inclusionwise-minimal minimum source shore is a
+        load-bearing requirement, not merely a deterministic choice. Lift that shore to the
+        BASE PROBLEM'S reduced universe, then test oddness using problem.terminal_mask there.
+        Retain it iff odd and it improves the incumbent value strictly; the first valid candidate
+        initializes the incumbent. Equal values never replace it. Return the chosen cut value
+        literally and its base reduced mask. No zero-valued early success return, duplicate-pair
+        elimination, or skipped compatible pair is permitted in this reference implementation.
+        Incompatible pairs are excluded without invoking flow. No terminal reanchoring is needed
+        inside an ordinary pair query; parity is filtered AFTER lifting to problem coordinates.
+        The source/sink lattice excludes the full ground set and the empty set, so GR's explicit
+        {empty,full} candidates are irrelevant here. Its remaining pair candidates suffice by
+        Theorem 2, which is stronger than a mere existence of some tied ordinary minimizer.
+        The selected parity minimizer need only be exact and deterministically first encountered;
+        do not claim it is the inclusionwise-minimal parity minimizer. No secondary key by
+        cardinality, mask, denominator, family, or witness is added to cut-value comparison.
+
+    13. Ordinary backend and diagnostics. Each ordinary query uses minimum_cut and consumes
+        its MinCutResult and FlowStats without changing the closed backend or exposing its
+        internal residual objects. For N=problem.node_count, a nonzero terminal mask uses
+        Q=N*N-3*N+3 compatible-pair calls, including the N=2 case Q=1. The terminal_mask==0
+        shortcut uses zero calls. ParityCutStats.mincut_calls counts actual invocations;
+        flow_augmentations and flow_bfs_scans are exact sums of those backend counters;
+        flow_peak_generated_value is their maximum peak_generated_value, or zero for no calls.
+        This peak is FLOW-ONLY, not the largest coefficient, contraction sum, mask, or integer
+        generated anywhere in the reduction. Stats never affect candidate selection, acceptance,
+        infeasibility, or certificate fields. Do not add clocks, environmental metadata, or
+        algorithm-wide bit-growth telemetry here. Later branch/SolveStats integration remains
+        separate. Zero-arc calls still count as calls; their closed backend arc-scan and
+        augmentation counts are zero, with nonzero vertex-initialization work in the carrier.
+
+    14. Exactness, dependencies, and finite universes. Permitted imports are optional future
+        annotations, dataclasses.dataclass, and the specific closed symbols from families,
+        sign_routing, shore, and flow used above. Do not import a verifier, test, oracle, branch,
+        solve, certificate, external graph library, JSON, or private handoff artifact. Transitive
+        closed-module imports do not authorize new direct dependencies. No Fraction, float
+        literals/conversions, division, gcd reduction, tolerance, epsilon, capacity-based big-M,
+        randomness, recursion, or all-shore/all-subset enumeration is permitted in production.
+        Bit masks stay finite; use explicit universes, not bare complement as a shore.
+        Iteration ranges depend on n,N,arc records,classes,or compatible vertex pairs, never on
+        capacity magnitudes. No algorithmic iteration over sets. Temporary sets/dicts, if used
+        for membership/aggregation, must not determine an unsorted output or candidate order.
+        Do not change previously closed code, tests, package __init__ files, or toolchain policy.
+        Section 4.5.3's prohibited arithmetic-path module list explicitly gains parity_cut.
+
+    15. Structural-work and bit-growth carriers. Let E_in be the number of supplied network
+        arc records, and N,E the final reduced problem vertex/arc counts. Constructor/initial
+        contraction/lifting work is bounded by O(n+E_in log(E_in+1)) for reduction, O(n+N+E)
+        for general problem validation, O(N) integer operations for lifting, and O(1) for
+        result/stats validation and derived properties. Sequential pair processing uses
+        O(N+E log(E+1)) normalization/lifting work per ordinary call, plus closed flow work
+        O(N+NE^2). Thus a nonzero-T solve has a zero-safe O(N^3*(1+E^2)) carrier; empty T
+        returns in O(1) after the normally validated problem type check. Do not copy all N^2
+        temporary graphs/candidates into memory: process one at a time with O(N+E) auxiliary
+        integer records. The original preimage map has O(n+N) integer records. These are
+        integer-operation/record bounds, not constant bit-memory or elapsed-time claims.
+        Contraction capacities are sums of subsets of original directed records, bounded by
+        S=sum(input capacities), with S=0 for no arcs. No multiplying capacity by another
+        capacity or artificial feasibility bound occurs. Flow/record/mask quantities therefore
+        have polynomial bit length in the input encodings; masks include O(n) vertex bits.
+        Graph sizes remain N<=n+3 and E<=E_in; on Unit 10 builder outputs E_in=2(m+n).
+        Combining these bounds into thm:branch-oracle is Unit 12 work, not a new Unit 11 claim.
+
+    16. Evidence and completion. Register contraction classes, transported terminal masks,
+        retained-zero/aggregated arcs, lifted shores, infeasible cases, and GR exact results/
+        pair orders/call counts in ORACLE_CATALOG before consuming tests. Test correspondences
+        on all tiny source/sink shores; compare parity minima with an independent literal
+        directed-cut enumeration, not the production reducer or the backend's chosen result.
+        Separately verify that each ordinary call returns the intersection of all its minimum
+        shores on the small fixtures; arbitrary tied ordinary cuts are not a sufficient oracle.
+        Freeze corpus domains/counts and hostile-type expectations before production code.
+        After GREEN and independent auditing add narrowly scoped lem:parity-anchor and thm:GR
+        CONFORMANCE rows, mapped to test_parity_anchor_correspondence and
+        test_minimum_parity_cut respectively, plus an engineering note for contracts/stats.
+        Preserve every previous row/status; do not promote thm:branch-oracle, branch/global
+        correctness, source ratio/witness claims, certificate work, or outer bit-growth theorems.
+        Unit 12 still owns retaining the Unit 10 network, lifting to original U, recovering
+        shifts once, and independently re-evaluating B*c_j(U)-A*h_j(U) before comparisons.
+        No Unit 11 record is an independent admissibility, attainment, or optimality certificate.
+        Follow the tests-first and atomic closure order in the appended Unit 11 completion gate.
 
 ## 5. Algorithm map (by label)
 

@@ -2244,3 +2244,274 @@ Then, in order:
 No flow backend execution is required to verify the Unit 10 identities. Forced memberships,
 contraction, parity anchor, terminal parity/toggling, and parity-constrained minimization
 remain Unit 11/12 work, with separate authority/oracle/tests-first gates.
+
+## 27. Unit 11 atomic-family parity-cut obligations
+
+This supplement preserves the complete existing TEST_PLAN, including all historical
+cut/argmin obligations, Unit 10 SR1--SR16, and all previous gates. It governs only
+`exactfrac/parity_cut.py` and `tests/test_parity_cut.py` under DESIGN 4.8. The mathematical
+basis is the pinned source's forced-contraction paragraph, lem:parity-anchor, thm:GR, and
+lem:ek; the ordinary pair enumeration is made explicit by the cited primary paper's
+Theorem 2, Corollary 3, and Section 5. Record source-stated facts separately from new
+engineering choices. No source or previous ruling is silently replaced by a different
+parity-cut algorithm.
+
+### PC1 — exact public surface and disjoint data/diagnostic records
+
+Pin the exact sorted __all__, constructor/function signatures, keyword names, annotations,
+and read-only properties of DESIGN 4.8.2--5. Require frozen, slotted, structurally hashable
+records without generated ordering or defaults. Verify separately returned result/stats;
+no counter field belongs to ParityCutResult. Package root remains export-free. Instances,
+families, network records, inputs, and closed code are not mutated by any new entry point.
+
+### PC2 — original-preimage partition and explicit reduced coordinates
+
+Register and check canonical classes for no forces, only-I, only-O, mixed forces, and all
+original vertices forced. Include standalone n=1 as well as production n>=2. Require source
+class first, sink class second, then increasing original singleton classes; an optional
+anchor belongs only to the source class. Check complete coverage, disjointness, finite
+universe, and exact types. Reject missing source/sink, swapped fixed classes, repeated or
+omitted original members, a free multi-member class, out-of-order free classes, anchor in
+another class, high bits, bool/subclass masks, and wrong outer containers. Constructor
+failure rows must satisfy earlier guards to isolate each target failure.
+
+### PC3 — canonical capacity and terminal-mask record guards
+
+Register valid empty, zero, directed-asymmetric, and symmetric arc tuples. Standalone
+ParityCutProblem rejects unsorted or duplicate ordered pairs instead of repairing them;
+input SignRoutedNetwork may retain such raw pairs and reduction handles them. Require exact
+arc tuple/triple/int types before endpoint/capacity arithmetic, valid distinct endpoints,
+and nonnegative capacities. Problem terminal mask must be exact, in-range, and even; zero,
+source-containing, sink-containing, and source-and-sink-containing masks are legal.
+Require exact ValueError for malformed results/stats too. Result shape validation must not
+be misrepresented as verification of parity, cut attainment, upper mask bound, or optimality.
+
+### PC4 — reduction validation precedes logical infeasibility and graph access
+
+Use hostile substitutes and controlled monkeypatches to prove network type then family
+type then T/I/O range validation happen before the closed family predicate or capacity
+scan. Include logically empty, out-of-universe families: range errors take precedence.
+A well-shaped overlap I&O or parity-impossible family returns None, without flow or graph
+construction. Spy on/use the closed AtomicFamily.is_nonempty contract; inspect the source
+against duplicating its emptiness formula. Do not blanket-catch backend exceptions and
+reclassify internal errors as None. Include rejection of verifier-instance and duck-typed
+substitutes without invoking their iteration/conversion/arithmetic hooks.
+
+### PC5 — literal contraction arcs, order, loops, parallels, and zeros
+
+Hand-derive networks where source/inside and sink/outside contraction removes several
+loops and combines distinct original arcs into the same directed pair. Fix the complete
+emitted arc tuple, not just a cut value or multiset. Verify increasing (tail,head) order,
+exact summation of each surviving pair, preservation of zero-sum encountered pairs, and
+absence of invented pairs. Two opposite original arcs remain distinct ordered pairs;
+never halve capacities or confuse them with residual reverse entries. Include repeated
+and permuted raw input records with the same directed capacity function. Equivalent raw
+orders normalize identically under the ruled contraction, without changing input bytes.
+
+### PC6 — zero-cost anchor and XOR contraction of terminal tokens
+
+Fix pi=0 and pi=1 variants of the same raw network/family. pi=0 contributes exactly one
+isolated anchor preimage bit to the source class; pi=1 contributes none. No constraint
+edge or finite infinity is introduced. Fix examples with zero, one, two, and three base
+terminal tokens in a source, sink, or other class. In particular, two terminals in one
+class cancel, while three leave one terminal bit. The expected contracted terminal mask
+must come from counted preimages, not production output or OR of terminal memberships.
+
+### PC7 — sink symmetric-difference toggle, including removal
+
+Register both initially odd and even contracted terminal counts and both states of sink
+membership. Odd cardinality toggles sink bit 1, including removal when already present;
+even cardinality changes nothing. Source tokens are retained. Independently check that
+sink toggling changes total parity but not |X intersect T| for every source/sink shore X.
+Use an all-forced case producing a source token and an existing sink token, and a case
+where terminal tokens cancel completely. Do not confuse even terminal-set cardinality
+with even source-shore intersection parity: the target intersection is odd.
+
+### PC8 — complete parity/forcing/cut correspondence
+
+Implement `test_parity_anchor_correspondence`. For preregistered tiny networks and all
+valid T,pi,I,O descriptors in the chosen bounded domain, enumerate all compatible original
+shores independently, and enumerate all reduced source/sink shores independently. Prove
+by tests the one-to-one mapping, forced membership, parity equivalence, and exact cut-value
+agreement. Include empty and full original U where permitted, infeasible descriptors,
+zero-capacity networks, and all-forced domains. Count actual cases and compare to the
+precommitted totals. This test must not invoke minimum_parity_cut or flow to establish the
+expected mapping or the expected capacities.
+
+### PC9 — strict original-shore lifting without a parity precondition
+
+For every fixed contraction fixture, check every reduced source/sink mask, including both
+terminal intersection parities. The expected original U is the independent preimage union
+intersected with the original full mask. Verify removal of source/sink/anchor bits and
+return of exact int, including 0/full. Reject negative, out-of-universe, bool/subclass,
+source-missing, and sink-included masks. Lifting never reads capacities or certifies a
+cut value. A returned ParityCutResult still requires this conversion before Unit 12 uses
+its shore as an original graph subset.
+
+### PC10 — infeasible parity set versus zero-valued feasible minimum
+
+For a valid problem with terminal_mask=0, require (None, zero stats) and zero backend calls.
+Register even nonzero terminal masks with/without free terminals; all have a feasible odd
+source/sink shore. Empty arc tuples, nonempty all-zero tuples, disconnected graphs, and
+zero minimum values are not infeasibility. Cover N=2 with T=0 and T={0,1}. On all-forced
+atomic families the closed predicate still decides feasibility before reduction. Do not
+introduce a fake zero mask/result, artificial infinity, NaN, or Empty witness payload.
+
+### PC11 — exact GR pair order and temporary-to-problem lifting
+
+Freeze explicit compatible-pair sequences for N=2,3,4 (and a larger control), and require
+increasing a then b, excluding a==sink, b==source, a==b only. Include (source,sink) first.
+Record exact temporary contraction maps/arcs in examples where a or b is already fixed,
+where both are free, and where temporary and problem vertex numbers differ. Observe one
+ordinary call per compatible pair even after a zero-valued or tied incumbent is found.
+Check parity only on the lifted BASE-problem shore; never interpret a temporary mask
+against problem.terminal_mask. No second anchor/toggle or parity constraint is imposed
+inside an ordinary call. Verify Q=N*N-3*N+3 actual calls for every valid nonzero T.
+
+### PC12 — inclusionwise-minimal ordinary minimizers are load-bearing
+
+For small ordinary subqueries independently enumerate all source/sink shores, calculate
+all exact directed cut values, and intersect all minimizers. The real closed backend's
+returned source shore must equal that intersection. Register a tie-rich zero-capacity
+example with at least four free terminals: there are even arbitrary tied minima in every
+compatible restriction although odd shores exist. Explain why arbitrary tie selection can
+miss the parity optimum; do not use such a backend as an admissible alternative. An
+in-memory wrong-backend control should make the consumer/audit fail without changing any
+closed source. No epsilon, cardinality perturbation, max-denominator scalarization, or
+capacity-gap argument is permitted to supply minimality.
+
+### PC13 — independent exact parity minimum and output contract
+
+Implement `test_minimum_parity_cut`. Over a bounded preregistered graph/terminal corpus,
+independently enumerate all base-problem masks, filter source/sink membership and odd
+terminal intersection, and sum original directed outgoing capacities. Compare the returned
+minimum value, parity, finite mask, and attained capacity with these expected values. For
+multiple optima accept exactly the first parity-valid candidate of the separately fixed GR
+pair order when testing determinism; value and feasibility comparisons alone must not
+invent a global lexicographic or inclusionwise-minimal parity-shore contract. Include an
+ordinary minimum of wrong parity where the correct parity minimum costs strictly more.
+No test expected value may be seeded from production solver/reducer/flow output.
+
+### PC14 — deterministic ties and no early-exit shortcuts
+
+Fix tied optima reached at multiple pair positions, repeat calls, reorder raw network arcs
+before reduction, and change only original labels before Unit 10 construction. Pin the
+same result and diagnostic data where the canonical problem is unchanged. Observe every
+compatible pair on zero/tied graphs. Neither set iteration, mask sorting, cardinality,
+branch denominators, nor stats may decide which equal-valued candidate replaces another:
+strict improvement only, first valid candidate wins. A negative control that chooses the
+last tie or returns early at zero must be rejected by the deterministic/call-count tests.
+
+### PC15 — stats are exact backend aggregates and remain separate
+
+Independently observe ordinary calls (including zero-arc ones), sum their augmentations
+and bfs_scans, and take the maximum of their peak_generated_value values. Compare all
+four ParityCutStats fields; no-flow returns all zero fields. Explicitly distinguish the
+FLOW-ONLY peak from coefficients, normalized capacities, masks, total-cut sums, and the
+later global peak_integer_bits counter. Stats are not result/certificate fields and must
+never affect selection. A spying backend forwards to the real closed minimum_cut; it is
+not the source of expected parity minima. Do not change closed FlowStats conventions.
+
+### PC16 — directed/symmetric domains, scaling, and zero-safe work
+
+Test asymmetric nonnegative directed problems as well as networks produced by Unit 10's
+two-opposite-arcs representation. Hand-fix positive integer scaling cases: capacities and
+minimum values scale, the least ordinary shores and chosen parity shore are unchanged,
+and compatible-pair counts do not depend on magnitudes. Include very large binary
+capacities and a zero-arc problem, with no float conversion, magnitude-driven loop, gcd
+normalization, or test time limit. Actual backend diagnostics need not be claimed flat on
+arbitrary unrelated families. Freeze the bounded corpus counts before consuming tests.
+
+### PC17 — retained shifts and family restrictions at the integration boundary
+
+Compose the closed Unit 10 construction with reduction, parity minimization, and lifting
+on hand-derived tiny instances. Preserve the original SignRoutedNetwork for scalar
+recovery; independently recompute c_j,h_j from raw instance records and evaluate B*c_j-A*h_j
+on the lifted original shore. Check cut_value-negative_shift+constant equals that raw
+residual exactly and minimizes over the SAME specified feasible family. Include a strictly
+worse constrained minimum than the unrestricted cut and two networks with identical arcs
+but different constants/shifts: parity result/stats are unchanged; recovered scalars differ.
+This is a local seam test, not implementation or approval of the full ExactBranchMin loop.
+
+### PC18 — dependency isolation, exact-source checks, and work carriers
+
+Static checks enforce DESIGN 4.8.14's direct imports, exact arithmetic, no recursion,
+no all-shore enumeration, no magnitude-driven ranges, and deterministic sorted output.
+Detect float Constant nodes, true division, Fraction/gcd/epsilon/big-M shortcuts, direct or
+named/comprehended set iteration, downstream/verifier/test/private-file imports, and
+modified package roots. Inspect both the constructor and the per-pair path when checking
+O(N+E) workspace and O(N^3*(1+E^2)) work: a constant-time recovery claim must not conceal
+repeated graph construction or full network validation. Bound actual constructor work by
+its input dimensions, not a hard-coded size. Fresh-process import may load the authorized
+closed dependency graph, including flow and families, but no verifier/test/oracle/branch/
+solve/certificate. Tests may import independent check machinery without making it a
+production dependency. Preserve every closed implementation/test byte.
+
+### PC19 — input nonmutation, independent audit, and source-level controls
+
+Hash input tuples, records, all closed base files, and frozen tests before/after all gates.
+An independent definition-level audit uses its own enumerations and cut-value evaluator,
+not this consuming test module. Exercise controlled source mutations for XOR-to-OR,
+sink-toggle removal, anchor omission, coordinate mixing, opposite-arc loss, wrong first
+candidate, arbitrary ordinary tie selection, fake infeasibility, early zero return, and
+stats misaggregation. These are in-memory/disposable controls, never changes to live source.
+Pin real observed counts and limitations. A finite pass is executable conformance evidence,
+not a replacement for the source proof or an independent optimality certificate.
+
+### PC20 — narrowly scoped CONFORMANCE and downstream boundaries
+
+After GREEN only, add lem:parity-anchor mapped to test_parity_anchor_correspondence for
+atomic-family/cut correspondence on the supported network domain, and thm:GR mapped to
+test_minimum_parity_cut for the exact reference parity-cut minimizer using closed least
+ordinary cuts. Preserve lem:ek, lem:sign-routing, and every existing row/status. Record the
+other PC obligations in an engineering seam note. Do not mark complete thm:branch-oracle,
+family enumeration integration, source ratio/endpoint claims, Standard/Accelerated/global
+correctness, certificates, or outer bit-growth/experiment obligations. None/zero-result
+handling is local parity infeasibility, not the global Empty admissible-family result.
+
+## 28. Unit 11 completion gate — forced contraction and exact parity cuts
+
+Before `tests/test_parity_cut.py` or `exactfrac/parity_cut.py` exists:
+
+1. Authenticate the completed Unit 10 commit/tree, current clean synchronized state, pinned
+   source, and closed families/sign-routing/shore/flow contracts. Read the cited primary GR
+   construction, including its least-minimizer requirement, and distinguish it from the
+   source's no-perturbation cut implementation. Authenticate archives, source bytes, and
+   any existing ordinary-cut artifacts used in the intake.
+2. Adopt a documentation-only authority commit containing only the parity_cut layout line,
+   explicit Fraction-policy enumeration amendment, DESIGN section 4.8, and appended
+   TEST_PLAN sections 27--28. Preserve the full previous TEST_PLAN prefix and all other
+   DESIGN bytes. No ORACLE_CATALOG, CONFORMANCE, source, test, pyproject, private notes,
+   canonical mathematical package, or governing-baseline checksum change is authorized.
+3. Derive, independently audit, and commit the Unit 11 numerical/structural oracles with
+   explicit contraction/preimage/terminal/arc/result expectations, bounded corpus domains
+   and counts, and rejection declarations. Keep all previous catalogue bytes intact.
+   Repository consuming tests must not rely on the private handoff directory or JSON there.
+
+Then, in order:
+
+4. Write only tests/test_parity_cut.py from adopted authority and committed oracles. Syntax
+   and live repository Ruff stdin checks under that target path precede application.
+   Observe intended ModuleNotFoundError for exactfrac.parity_cut while it is absent;
+   all 439 earlier tests remain green. A preflight failure is not a successful RED record.
+5. Implement only exactfrac/parity_cut.py after RED. Run live Ruff on its entire review
+   copy before applying it; preserve frozen tests unless a defect is separately adjudicated.
+   Do not repair forbidden behavior by changing closed flow/families/sign-routing code.
+6. Require PC1--PC20, targeted/full pytest, full repository Ruff, independent cut/constraint/
+   parity/correspondence audits, import isolation, and exact byte nonmutation to pass.
+   Audit returned original/reduced/temporary coordinates and actual ordinary-call counters
+   explicitly. Bind the real candidate, test, corpus, and all evidence hashes.
+7. Only after GREEN add the two narrowly scoped rows and engineering note in PC20.
+   Preserve previous CONFORMANCE statuses. Do not reinterpret a saved base-file-nonmutation
+   audit as covering a later authorized CONFORMANCE change.
+8. Stage exactly docs/CONFORMANCE.md, exactfrac/parity_cut.py, tests/test_parity_cut.py.
+   Export the complete staged tree, check real import origins and bytes, run targeted/full
+   tests and Ruff in isolation, then commit atomically after the separate authority/oracle
+   commits. Push normally and authenticate direct remote/local refs and clean state.
+9. At full unit closure provide exactly two self-contained four-backtick Markdown append
+   blocks for private BUILD_NOTES and LEARNING_NOTES. Do not stage those notes. Unit 12
+   starts only from the closed Unit 11 identity, with its own source/intake gate.
+
+This authority establishes no runtime implementation merely by being committed. Source
+intake calculations and private mathematical controls are not the later committed oracle
+corpus, a tests-first record, or production completion evidence.
