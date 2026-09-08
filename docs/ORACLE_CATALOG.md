@@ -7976,3 +7976,964 @@ correctness, telemetry, and algorithm-level bit-growth remain later obligations.
 **Unit 10 oracle status:** source/authority-derived and independently audited before the
 consuming test or production sign-routing module exists. No production sign-routing output,
 minimum-cut solver, or flow result established these expected values.
+
+
+---
+
+## ORACLE-056 — Unit 11 record boundaries and rejection declarations
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`; invalid-input rows: `NEGATIVE / REJECTION`.
+
+**Source/authority:** DESIGN 4.8.2--6; TEST_PLAN PC1--PC4, PC9, PC10, PC18--PC19.
+The interface and strict Python shapes are engineering rulings. They do not enlarge the
+pinned compact-instance mathematical domain or constitute an independent certificate.
+
+All tables below are the committed expected-data authority. The companion JSON is a
+private transcription used for independent auditing; it is not embedded here and is not
+a dependency permitted in repository tests. The package ledger authenticates identities;
+the separate audit compares every literal table with the companion and independently
+recomputes numerical expectations. Later tests must carry their own versioned literal
+expectations or read these committed tables without accessing private handoff paths.
+
+### Notation and pre-code status
+
+`n` is original nonterminal vertex count, original source is `n`, original sink is `n+1`,
+and the optional parity anchor is `n+2`. Problem source and sink are reduced vertices
+0 and 1. `classes[v]` is the original preimage of reduced vertex v. A pair query introduces
+its own temporary vertices; its returned mask must be lifted back to problem coordinates
+before parity is tested. Numeric masks in distinct columns have distinct universes.
+
+An atomic descriptor is `(T, pi, I, O)`. Raw-network `shift` means the existing Unit 10
+`negative_shift`, not a new offset. All cut values here sum ORIGINAL directed arcs leaving
+a source shore; two opposite original arcs are not two charges for the same crossing.
+
+Record boundaries are expressed as future constructor/function calls. Symbols:
+
+```python
+SN = SignRoutedNetwork(1, (), 0, 0)
+F = AtomicFamily(1, 1, 0, 0)
+P = ParityCutProblem(1, (2, 4, 1), (), 6)
+```
+
+`IntSubclass`, `TupleSubclass`, `NetworkSubclass`, `FamilySubclass`, and `ProblemSubclass`
+mean proper subclasses of the corresponding closed/new type, constructed with otherwise
+valid fields. `Hostile()` is a non-domain object whose conversion, iteration, attribute,
+comparison, and arithmetic hooks raise if called. `Fraction` appears only in rejection
+inputs on the test side. All `RJ` rows require **type(error) is ValueError** from the new
+public boundary. Wrong call arity is not included; normal Python TypeError remains normal.
+No Unit 11 public implementation exists at the oracle stage. These rows declare expected
+behavior; they are not assertions that the absent production constructors were executed.
+
+All logically earlier constructor guards are satisfied unless the row explicitly tests
+precedence. Classes are validated before arcs; arcs before terminal mask. Reduction must
+reject out-of-range family masks before interpreting overlap or parity infeasibility.
+
+### Fixture table: VALID_RECORDS
+
+| id | call | assertion |
+| --- | --- | --- |
+| `'V01'` | `'ParityCutProblem(1,(2,4,1),(),0)'` | `'valid: source=0, sink=1, node_count=3; empty T is not malformed'` |
+| `'V02'` | `'ParityCutProblem(1,(10,4,1),(),3)'` | `'valid: anchored source class; no anchor capacity required'` |
+| `'V03'` | `'ParityCutProblem(1,(3,4),(),3)'` | `'valid: N=2, original vertex forced inside'` |
+| `'V04'` | `'ParityCutProblem(1,(2,5),(),3)'` | `'valid: N=2, original vertex forced outside'` |
+| `'V05'` | `'ParityCutProblem(2,(4,8,1,2),((0,2,0),(2,0,0)),12)'` | `'valid: zero capacities remain original records'` |
+| `'V06'` | `'ParityCutProblem(1,(2,4,1),((1,0,9),),3)'` | `'valid: asymmetric directed arc'` |
+| `'V07'` | `'ParityCutProblem(1,(2,4,1),(),5)'` | `'valid: even T includes source without sink'` |
+| `'V08'` | `'ParityCutProblem(1,(2,4,1),(),6)'` | `'valid: even T includes sink without source'` |
+| `'V09'` | `'ParityCutResult(0,1)'` | `'valid shape; not an optimality certificate'` |
+| `'V10'` | `'ParityCutResult(7,1048577)'` | `'valid shape; without problem no upper-universe check'` |
+| `'V11'` | `'ParityCutStats(0,0,0,0)'` | `'valid shape'` |
+| `'V12'` | `'ParityCutStats(0,7,9,10)'` | `'valid shape only; arbitrary counters do not certify execution'` |
+| `'V13'` | `'lift_source_shore(P,1)'` | `'returns 0 even though reduced T-intersection is even'` |
+| `'V14'` | `'lift_source_shore(P,5)'` | `'returns 1; strips reduced source original preimage'` |
+
+### Fixture table: REJECTIONS
+
+| id | phase | call | expected | reason |
+| --- | --- | --- | --- | --- |
+| `'RJ001'` | `'problem.n'` | `'ParityCutProblem(True, (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ002'` | `'problem.n'` | `'ParityCutProblem(1.0, (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ003'` | `'problem.n'` | `'ParityCutProblem(Fraction(1,1), (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ004'` | `'problem.n'` | `'ParityCutProblem(IntSubclass(1), (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ005'` | `'problem.n'` | `'ParityCutProblem(0, (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ006'` | `'problem.n'` | `'ParityCutProblem(-1, (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ007'` | `'problem.n'` | `'ParityCutProblem(None, (2,4,1), (), 0)'` | `'ValueError'` | `'n must be exact int >= 1'` |
+| `'RJ008'` | `'problem.classes'` | `'ParityCutProblem(1, [2,4,1], (), 0)'` | `'ValueError'` | `'outer list'` |
+| `'RJ009'` | `'problem.classes'` | `'ParityCutProblem(1, TupleSubclass((2,4,1)), (), 0)'` | `'ValueError'` | `'tuple subclass'` |
+| `'RJ010'` | `'problem.classes'` | `'ParityCutProblem(1, iter((2,4,1)), (), 0)'` | `'ValueError'` | `'iterator'` |
+| `'RJ011'` | `'problem.classes'` | `'ParityCutProblem(1, (), (), 0)'` | `'ValueError'` | `'too few classes'` |
+| `'RJ012'` | `'problem.classes'` | `'ParityCutProblem(1, (7,), (), 0)'` | `'ValueError'` | `'too few classes'` |
+| `'RJ013'` | `'problem.classes'` | `'ParityCutProblem(1, (True,4,1), (), 0)'` | `'ValueError'` | `'bool class'` |
+| `'RJ014'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,IntSubclass(1)), (), 0)'` | `'ValueError'` | `'int subclass'` |
+| `'RJ015'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,0), (), 0)'` | `'ValueError'` | `'zero class'` |
+| `'RJ016'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,-1), (), 0)'` | `'ValueError'` | `'negative class'` |
+| `'RJ017'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,1.0), (), 0)'` | `'ValueError'` | `'float class'` |
+| `'RJ018'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,16), (), 0)'` | `'ValueError'` | `'high bit'` |
+| `'RJ019'` | `'problem.classes'` | `'ParityCutProblem(1, (1,4,2), (), 0)'` | `'ValueError'` | `'missing source from first class'` |
+| `'RJ020'` | `'problem.classes'` | `'ParityCutProblem(1, (6,1), (), 0)'` | `'ValueError'` | `'source class includes sink'` |
+| `'RJ021'` | `'problem.classes'` | `'ParityCutProblem(1, (2,5,1), (), 0)'` | `'ValueError'` | `'repeated original member'` |
+| `'RJ022'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4), (), 0)'` | `'ValueError'` | `'missing original'` |
+| `'RJ023'` | `'problem.classes'` | `'ParityCutProblem(1, (4,2,1), (), 0)'` | `'ValueError'` | `'fixed classes swapped'` |
+| `'RJ024'` | `'problem.classes'` | `'ParityCutProblem(1, (2,12,1), (), 0)'` | `'ValueError'` | `'anchor in sink'` |
+| `'RJ025'` | `'problem.classes'` | `'ParityCutProblem(1, (2,4,9), (), 0)'` | `'ValueError'` | `'anchor in free class'` |
+| `'RJ026'` | `'problem.classes'` | `'ParityCutProblem(1, (10,4,9), (), 0)'` | `'ValueError'` | `'repeated anchor'` |
+| `'RJ027'` | `'problem.classes'` | `'ParityCutProblem(2, (4,8,3), (), 0)'` | `'ValueError'` | `'free multi-member class'` |
+| `'RJ028'` | `'problem.classes'` | `'ParityCutProblem(2, (4,8,2,1), (), 0)'` | `'ValueError'` | `'free singleton order'` |
+| `'RJ029'` | `'problem.classes'` | `'ParityCutProblem(2, (5,8,1,2), (), 0)'` | `'ValueError'` | `'repeated forced original'` |
+| `'RJ030'` | `'problem.classes'` | `'ParityCutProblem(2, (4,8,1,1), (), 0)'` | `'ValueError'` | `'duplicate singleton'` |
+| `'RJ031'` | `'problem.classes'` | `'ParityCutProblem(2, (4,8,1), (), 0)'` | `'ValueError'` | `'missing second original'` |
+| `'RJ032'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), [], 0)'` | `'ValueError'` | `'outer list'` |
+| `'RJ033'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), TupleSubclass(()), 0)'` | `'ValueError'` | `'outer tuple subclass'` |
+| `'RJ034'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), iter(()), 0)'` | `'ValueError'` | `'outer iterator'` |
+| `'RJ035'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ([0,1,0],), 0)'` | `'ValueError'` | `'list arc'` |
+| `'RJ036'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), (TupleSubclass((0,1,0)),), 0)'` | `'ValueError'` | `'arc subclass'` |
+| `'RJ037'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1),), 0)'` | `'ValueError'` | `'short arc'` |
+| `'RJ038'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,0,0),), 0)'` | `'ValueError'` | `'long arc'` |
+| `'RJ039'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((True,1,0),), 0)'` | `'ValueError'` | `'bool tail'` |
+| `'RJ040'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,False,0),), 0)'` | `'ValueError'` | `'bool head'` |
+| `'RJ041'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,False),), 0)'` | `'ValueError'` | `'bool capacity'` |
+| `'RJ042'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((IntSubclass(0),1,0),), 0)'` | `'ValueError'` | `'tail subclass'` |
+| `'RJ043'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,IntSubclass(1),0),), 0)'` | `'ValueError'` | `'head subclass'` |
+| `'RJ044'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,IntSubclass(0)),), 0)'` | `'ValueError'` | `'capacity subclass'` |
+| `'RJ045'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,0.0),), 0)'` | `'ValueError'` | `'float capacity'` |
+| `'RJ046'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,Fraction(0,1)),), 0)'` | `'ValueError'` | `'Fraction capacity'` |
+| `'RJ047'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((-1,1,0),), 0)'` | `'ValueError'` | `'negative tail'` |
+| `'RJ048'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,-1,0),), 0)'` | `'ValueError'` | `'negative head'` |
+| `'RJ049'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((3,1,0),), 0)'` | `'ValueError'` | `'high tail'` |
+| `'RJ050'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,3,0),), 0)'` | `'ValueError'` | `'high head'` |
+| `'RJ051'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,0,0),), 0)'` | `'ValueError'` | `'loop even if zero'` |
+| `'RJ052'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,-1),), 0)'` | `'ValueError'` | `'negative capacity'` |
+| `'RJ053'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,2,1),(0,1,2)), 0)'` | `'ValueError'` | `'unsorted'` |
+| `'RJ054'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,0),(0,1,0)), 0)'` | `'ValueError'` | `'duplicate zero pair'` |
+| `'RJ055'` | `'problem.arcs'` | `'ParityCutProblem(1, (2,4,1), ((0,1,1),(0,1,2)), 0)'` | `'ValueError'` | `'parallel records'` |
+| `'RJ056'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), True)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ057'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), -1)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ058'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), 1.0)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ059'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), Fraction(0,1))'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ060'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), IntSubclass(0))'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ061'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), 8)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ062'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), 1)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ063'` | `'problem.terminal_mask'` | `'ParityCutProblem(1, (2,4,1), (), None)'` | `'ValueError'` | `'terminal must be exact finite mask with even cardinality'` |
+| `'RJ064'` | `'result.cut_value'` | `'ParityCutResult(True,1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ065'` | `'result.cut_value'` | `'ParityCutResult(-1,1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ066'` | `'result.cut_value'` | `'ParityCutResult(1.0,1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ067'` | `'result.cut_value'` | `'ParityCutResult(Fraction(0,1),1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ068'` | `'result.cut_value'` | `'ParityCutResult(IntSubclass(0),1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ069'` | `'result.cut_value'` | `'ParityCutResult(None,1)'` | `'ValueError'` | `'cut value exact int >= 0'` |
+| `'RJ070'` | `'result.source_shore'` | `'ParityCutResult(0,False)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ071'` | `'result.source_shore'` | `'ParityCutResult(0,-1)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ072'` | `'result.source_shore'` | `'ParityCutResult(0,1.0)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ073'` | `'result.source_shore'` | `'ParityCutResult(0,IntSubclass(1))'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ074'` | `'result.source_shore'` | `'ParityCutResult(0,0)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ075'` | `'result.source_shore'` | `'ParityCutResult(0,2)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ076'` | `'result.source_shore'` | `'ParityCutResult(0,3)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ077'` | `'result.source_shore'` | `'ParityCutResult(0,6)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ078'` | `'result.source_shore'` | `'ParityCutResult(0,None)'` | `'ValueError'` | `'exact nonnegative mask, source present and sink absent'` |
+| `'RJ079'` | `'stats.mincut_calls'` | `'ParityCutStats(False,0,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ080'` | `'stats.mincut_calls'` | `'ParityCutStats(-1,0,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ081'` | `'stats.mincut_calls'` | `'ParityCutStats(1.0,0,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ082'` | `'stats.mincut_calls'` | `'ParityCutStats(IntSubclass(0),0,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ083'` | `'stats.flow_augmentations'` | `'ParityCutStats(0,False,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ084'` | `'stats.flow_augmentations'` | `'ParityCutStats(0,-1,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ085'` | `'stats.flow_augmentations'` | `'ParityCutStats(0,1.0,0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ086'` | `'stats.flow_augmentations'` | `'ParityCutStats(0,IntSubclass(0),0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ087'` | `'stats.flow_bfs_scans'` | `'ParityCutStats(0,0,False,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ088'` | `'stats.flow_bfs_scans'` | `'ParityCutStats(0,0,-1,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ089'` | `'stats.flow_bfs_scans'` | `'ParityCutStats(0,0,1.0,0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ090'` | `'stats.flow_bfs_scans'` | `'ParityCutStats(0,0,IntSubclass(0),0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ091'` | `'stats.flow_peak_generated_value'` | `'ParityCutStats(0,0,0,False)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ092'` | `'stats.flow_peak_generated_value'` | `'ParityCutStats(0,0,0,-1)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ093'` | `'stats.flow_peak_generated_value'` | `'ParityCutStats(0,0,0,1.0)'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ094'` | `'stats.flow_peak_generated_value'` | `'ParityCutStats(0,0,0,IntSubclass(0))'` | `'ValueError'` | `'field exact int >= 0 in declaration order'` |
+| `'RJ095'` | `'reduce.boundary'` | `'reduce_atomic_family(None,F)'` | `'ValueError'` | `'wrong network'` |
+| `'RJ096'` | `'reduce.boundary'` | `'reduce_atomic_family(Hostile(),F)'` | `'ValueError'` | `'hostile network'` |
+| `'RJ097'` | `'reduce.boundary'` | `'reduce_atomic_family(NetworkSubclass(1,(),0,0),F)'` | `'ValueError'` | `'network subclass'` |
+| `'RJ098'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,None)'` | `'ValueError'` | `'wrong family'` |
+| `'RJ099'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,Hostile())'` | `'ValueError'` | `'hostile family'` |
+| `'RJ100'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,FamilySubclass(1,1,0,0))'` | `'ValueError'` | `'family subclass'` |
+| `'RJ101'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(2,1,0,0))'` | `'ValueError'` | `'T high bit'` |
+| `'RJ102'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(0,0,2,0))'` | `'ValueError'` | `'I high bit'` |
+| `'RJ103'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(0,0,0,2))'` | `'ValueError'` | `'O high bit'` |
+| `'RJ104'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(2,0,1,1))'` | `'ValueError'` | `'T range before overlap infeasibility'` |
+| `'RJ105'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(0,1,2,0))'` | `'ValueError'` | `'I range before parity infeasibility'` |
+| `'RJ106'` | `'reduce.boundary'` | `'reduce_atomic_family(SN,AtomicFamily(0,1,0,2))'` | `'ValueError'` | `'O range before parity infeasibility'` |
+| `'RJ107'` | `'consumer.problem_type'` | `'lift_source_shore(None,1)'` | `'ValueError'` | `'wrong problem'` |
+| `'RJ108'` | `'consumer.problem_type'` | `'lift_source_shore(Hostile(),1)'` | `'ValueError'` | `'hostile problem'` |
+| `'RJ109'` | `'consumer.problem_type'` | `'minimum_parity_cut(None)'` | `'ValueError'` | `'wrong problem'` |
+| `'RJ110'` | `'consumer.problem_type'` | `'minimum_parity_cut(Hostile())'` | `'ValueError'` | `'hostile problem'` |
+| `'RJ111'` | `'consumer.problem_type'` | `'minimum_parity_cut(ProblemSubclass(1,(2,4,1),(),6))'` | `'ValueError'` | `'problem subclass'` |
+| `'RJ112'` | `'lift.mask'` | `'lift_source_shore(P,True)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ113'` | `'lift.mask'` | `'lift_source_shore(P,-1)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ114'` | `'lift.mask'` | `'lift_source_shore(P,1.0)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ115'` | `'lift.mask'` | `'lift_source_shore(P,IntSubclass(1))'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ116'` | `'lift.mask'` | `'lift_source_shore(P,8)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ117'` | `'lift.mask'` | `'lift_source_shore(P,9)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ118'` | `'lift.mask'` | `'lift_source_shore(P,0)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ119'` | `'lift.mask'` | `'lift_source_shore(P,2)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ120'` | `'lift.mask'` | `'lift_source_shore(P,3)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ121'` | `'lift.mask'` | `'lift_source_shore(P,7)'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+| `'RJ122'` | `'lift.mask'` | `'lift_source_shore(P,Hostile())'` | `'ValueError'` | `'strict finite reduced source/sink shore'` |
+
+
+## ORACLE-057 — Fixed forced contractions, loops, parallel arcs, and retained zeros
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`; well-formed impossible families:
+`NEGATIVE / REJECTION` with returned None rather than an exception.
+
+**Source:** forced-contraction paragraph following `lem:sign-routing`; `lem:parity-anchor`.
+**Engineering authority:** DESIGN 4.8.6--9; TEST_PLAN PC2--PC8.
+
+The raw networks are valid standalone SignRoutedNetwork records. They need not arise from
+an active Instance: n=1, empty arcs, arbitrary nonnegative directed arcs, repeated ordered
+pairs, unsorted records, and zero capacities are legitimate standalone inputs. No density
+or global-solver conclusion is attached to them. D2 reuses the six-arc shape of Unit 10's
+N1 fixture. D3 intentionally contains repeated arcs, arcs becoming loops, and zero pairs.
+D4 retains explicit zero positions; D5 and D6 have no arcs.
+
+### Fixture table: RAW_NETWORKS
+
+| id | n | arcs | shift | constant |
+| --- | --- | --- | --- | --- |
+| `'D1'` | `1` | `()` | `0` | `0` |
+| `'D2'` | `2` | `((0, 1, 6), (1, 0, 6), (2, 0, 4), (0, 2, 4), (1, 3, 5), (3, 1, 5))` | `4` | `-3` |
+| `'D3'` | `3` | `((3, 0, 2), (3, 0, 1), (0, 3, 4), (0, 1, 5), (3, 1, 7), (1, 4, 6), (1, 2, 1), (2, 4, 8), (4, 2, 9), (0, 2, 0), (3, 2, 0), (2, 0, 0), (1, 0, 3))` | `5` | `-2` |
+| `'D4'` | `4` | `((0, 1, 0), (1, 0, 0), (2, 3, 0), (3, 2, 0), (4, 0, 0), (0, 4, 0), (1, 5, 0), (5, 1, 0))` | `7` | `-2` |
+| `'D5'` | `4` | `()` | `0` | `0` |
+| `'D6'` | `3` | `()` | `0` | `0` |
+
+
+For every feasible row, source class is I plus original source and, exactly when pi=0,
+the anchor. Sink class is O plus original sink. Free originals are singleton classes in
+increasing order. Each raw arc is mapped; mapped loops disappear; equal ordered pairs
+are summed. Encountered zero-sum pairs remain. No other pair is invented.
+
+`before_toggle` is recorded for independent verification of token transport, not a
+proposed new production field. `terminal_mask` is the final even mask. Infeasible rows
+have None in every constructed-problem field and an empty feasible_original tuple.
+The constructor is never used to disguise logical infeasibility as an empty valid graph.
+
+### Fixture table: REDUCTIONS
+
+| id | network | family | classes | arcs | before_toggle | terminal_mask | feasible_original |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `'C01'` | `'D1'` | `(0, 0, 0, 0)` | `(10, 4, 1)` | `()` | `1` | `3` | `(0, 1)` |
+| `'C02'` | `'D1'` | `(1, 1, 0, 0)` | `(2, 4, 1)` | `()` | `4` | `6` | `(1,)` |
+| `'C03'` | `'D1'` | `(1, 0, 0, 0)` | `(10, 4, 1)` | `()` | `5` | `5` | `(0,)` |
+| `'C04'` | `'D1'` | `(1, 1, 1, 0)` | `(3, 4)` | `()` | `1` | `3` | `(1,)` |
+| `'C05'` | `'D1'` | `(1, 0, 0, 1)` | `(10, 5)` | `()` | `3` | `3` | `(0,)` |
+| `'C06'` | `'D1'` | `(1, 0, 1, 0)` | `None` | `None` | `None` | `None` | `()` |
+| `'C07'` | `'D1'` | `(1, 1, 1, 1)` | `None` | `None` | `None` | `None` | `()` |
+| `'C08'` | `'D2'` | `(3, 1, 0, 0)` | `(4, 8, 1, 2)` | `((0, 2, 4), (1, 3, 5), (2, 0, 4), (2, 3, 6), (3, 1, 5), (3, 2, 6))` | `12` | `12` | `(1, 2)` |
+| `'C09'` | `'D2'` | `(3, 0, 0, 0)` | `(20, 8, 1, 2)` | `((0, 2, 4), (1, 3, 5), (2, 0, 4), (2, 3, 6), (3, 1, 5), (3, 2, 6))` | `13` | `15` | `(0, 3)` |
+| `'C10'` | `'D2'` | `(1, 1, 1, 0)` | `(5, 8, 2)` | `((0, 2, 6), (1, 2, 5), (2, 0, 6), (2, 1, 5))` | `1` | `3` | `(1, 3)` |
+| `'C11'` | `'D2'` | `(2, 1, 0, 1)` | `(4, 9, 2)` | `((0, 1, 4), (1, 0, 4), (1, 2, 11), (2, 1, 11))` | `4` | `6` | `(2,)` |
+| `'C12'` | `'D2'` | `(3, 0, 1, 2)` | `None` | `None` | `None` | `None` | `()` |
+| `'C13'` | `'D2'` | `(3, 1, 1, 2)` | `(5, 10)` | `((0, 1, 6), (1, 0, 6))` | `3` | `3` | `(1,)` |
+| `'C14'` | `'D3'` | `(3, 1, 1, 4)` | `(9, 20, 2)` | `((0, 1, 0), (0, 2, 12), (1, 0, 0), (2, 0, 3), (2, 1, 7))` | `5` | `5` | `(1,)` |
+| `'C15'` | `'D3'` | `(3, 0, 1, 4)` | `(41, 20, 2)` | `((0, 1, 0), (0, 2, 12), (1, 0, 0), (2, 0, 3), (2, 1, 7))` | `4` | `6` | `(3,)` |
+| `'C16'` | `'D3'` | `(7, 1, 3, 4)` | `None` | `None` | `None` | `None` | `()` |
+| `'C17'` | `'D3'` | `(3, 0, 3, 4)` | `(43, 20)` | `((0, 1, 7), (1, 0, 0))` | `1` | `3` | `(3,)` |
+| `'C18'` | `'D3'` | `(7, 0, 3, 0)` | `(43, 16, 4)` | `((0, 1, 6), (0, 2, 1), (1, 2, 9), (2, 0, 0), (2, 1, 8))` | `5` | `5` | `(3,)` |
+| `'C19'` | `'D3'` | `(7, 1, 0, 6)` | `(8, 22, 1)` | `((0, 1, 7), (0, 2, 3), (1, 2, 3), (2, 0, 4), (2, 1, 5))` | `4` | `6` | `(1,)` |
+| `'C20'` | `'D4'` | `(15, 0, 3, 8)` | `(83, 40, 4)` | `((0, 1, 0), (1, 0, 0), (1, 2, 0), (2, 1, 0))` | `7` | `5` | `(3,)` |
+| `'C21'` | `'D4'` | `(15, 1, 7, 8)` | `(23, 40)` | `((0, 1, 0), (1, 0, 0))` | `3` | `3` | `(7,)` |
+| `'C22'` | `'D5'` | `(0, 0, 0, 0)` | `(80, 32, 1, 2, 4, 8)` | `()` | `1` | `3` | `(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)` |
+| `'C23'` | `'D5'` | `(0, 1, 0, 0)` | `None` | `None` | `None` | `None` | `()` |
+| `'C24'` | `'D3'` | `(7, 1, 0, 0)` | `(8, 16, 1, 2, 4)` | `((0, 2, 3), (0, 3, 7), (0, 4, 0), (1, 4, 9), (2, 0, 4), (2, 3, 5), (2, 4, 0), (3, 1, 6), (3, 2, 3), (3, 4, 1), (4, 1, 8), (4, 2, 0))` | `28` | `30` | `(1, 2, 4, 7)` |
+| `'C25'` | `'D3'` | `(7, 0, 0, 0)` | `(40, 16, 1, 2, 4)` | `((0, 2, 3), (0, 3, 7), (0, 4, 0), (1, 4, 9), (2, 0, 4), (2, 3, 5), (2, 4, 0), (3, 1, 6), (3, 2, 3), (3, 4, 1), (4, 1, 8), (4, 2, 0))` | `29` | `29` | `(0, 3, 5, 6)` |
+| `'C26'` | `'D3'` | `(7, 1, 7, 0)` | `(15, 16)` | `((0, 1, 14), (1, 0, 9))` | `1` | `3` | `(7,)` |
+| `'C27'` | `'D3'` | `(7, 0, 7, 0)` | `None` | `None` | `None` | `None` | `()` |
+| `'C28'` | `'D3'` | `(7, 0, 0, 7)` | `(40, 23)` | `((0, 1, 10), (1, 0, 4))` | `3` | `3` | `(0,)` |
+| `'C29'` | `'D3'` | `(7, 1, 0, 7)` | `None` | `None` | `None` | `None` | `()` |
+
+
+### Hand derivation: C14 and C15
+
+D3 has original source 3 and sink 4. C14 forces original 0 inside and 2 outside, so its
+classes are `(9,20,2)`, representing `{3,0}`, `{4,2}`, and `{1}`. The raw arcs 3->0,
+0->3, 2->4, and 4->2 become loops. Raw 0->1 of capacity 5 and 3->1 of capacity 7 aggregate
+to reduced 0->2 of capacity 12. Raw 1->4 of capacity 6 and 1->2 of capacity 1 aggregate
+to reduced 2->1 of capacity 7. Reduced 2->0 retains capacity 3; encountered 0->1 and
+1->0 remain at capacity zero. Thus the exact reduced tuple is:
+
+```text
+((0,1,0), (0,2,12), (1,0,0), (2,0,3), (2,1,7))
+```
+
+C15 differs only by even required parity: anchor bit 5 is added to the source preimage,
+changing classes[0] from 9 to 41. No edge is added. Capacities are identical. The source's
+original terminal token and anchor cancel, leaving raw reduced T=4; the sink toggle adds
+bit 1 and yields final T=6. For C14, raw and final T are both 5.
+
+Reversing raw arc order or splitting every capacity c into two same-pair records
+`c//2` and `c-c//2` must produce the same canonical contracted tuple. Such division is
+only a test-data decomposition here, not a production arithmetic requirement.
+
+## ORACLE-058 — Anchor tokens, XOR cancellation, and sink-toggle removal
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`.
+**Source/authority:** `lem:parity-anchor`; DESIGN 4.8.7--9; TEST_PLAN PC6--PC7.
+
+The exact masks are fixed in the REDUCTIONS table; this entry states why selected rows
+protect the essential signs and parities.
+
+C01 has no original terminals and pi=0. Its anchor creates a source token, raw T=1, and
+toggling sink makes final T=3. Both original shores are allowed. C23 has no terminals
+and pi=1 and is infeasible; capacity zero does not change this distinction.
+
+C17 has two original terminal tokens forced inside. They cancel; its extra anchor leaves
+one source token. C19 has two terminal tokens forced outside; they cancel in the sink
+class. C21 and C26 force three original terminal tokens inside, leaving one source token.
+C28 has three terminal tokens in the sink class and one anchor in source, raw T=3;
+its total is already even and neither token changes.
+
+C20 is the removal case. Its source preimage `(83)` contains original tokens 0 and 1 plus
+the anchor, hence one reduced token. Sink preimage `(40)` contains original token 3,
+and free vertex 2 is a token. Raw reduced T=7 is odd; toggling the existing sink token
+REMOVES bit 1, producing T=5. Replacing XOR with OR incorrectly leaves 7.
+
+For any reduced source/sink shore X the sink is absent. Therefore toggling sink changes
+`bit_count(T) mod 2` but never changes `bit_count(X & T) mod 2`. Source tokens are retained,
+not discarded as if they were sink tokens. Two tokens in a class cancel; three do not.
+
+## ORACLE-059 — Complete lifting, parity, and cut-value correspondence
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`.
+**Source/authority:** `lem:parity-anchor`; DESIGN 4.8.7--10; TEST_PLAN PC8--PC9.
+
+Every geometrically valid reduced source shore is listed for each of the 22 feasible
+fixed contractions, including shores with EVEN terminal intersection. `odd` is 0 or 1,
+not a demand that generic lifting reject even shores. `original` is the preimage union
+intersected with `(1<<n)-1`; all source/sink/anchor bits are removed.
+
+`cut_value` equals the original raw-network cut of `{original source} union original`.
+`recovered` uses the original raw network's shift and constant. Contraction itself adds
+no shift. Odd rows correspond bijectively to feasible_original in the REDUCTIONS table.
+
+### Fixture table: LIFT_AND_CAPACITY
+
+| id | reduction | reduced | original | cut_value | odd | recovered |
+| --- | --- | --- | --- | --- | --- | --- |
+| `'C01-1'` | `'C01'` | `1` | `0` | `0` | `1` | `0` |
+| `'C01-5'` | `'C01'` | `5` | `1` | `0` | `1` | `0` |
+| `'C02-1'` | `'C02'` | `1` | `0` | `0` | `0` | `0` |
+| `'C02-5'` | `'C02'` | `5` | `1` | `0` | `1` | `0` |
+| `'C03-1'` | `'C03'` | `1` | `0` | `0` | `1` | `0` |
+| `'C03-5'` | `'C03'` | `5` | `1` | `0` | `0` | `0` |
+| `'C04-1'` | `'C04'` | `1` | `1` | `0` | `1` | `0` |
+| `'C05-1'` | `'C05'` | `1` | `0` | `0` | `1` | `0` |
+| `'C08-1'` | `'C08'` | `1` | `0` | `4` | `0` | `-3` |
+| `'C08-5'` | `'C08'` | `5` | `1` | `6` | `1` | `-1` |
+| `'C08-9'` | `'C08'` | `9` | `2` | `15` | `1` | `8` |
+| `'C08-13'` | `'C08'` | `13` | `3` | `5` | `0` | `-2` |
+| `'C09-1'` | `'C09'` | `1` | `0` | `4` | `1` | `-3` |
+| `'C09-5'` | `'C09'` | `5` | `1` | `6` | `0` | `-1` |
+| `'C09-9'` | `'C09'` | `9` | `2` | `15` | `0` | `8` |
+| `'C09-13'` | `'C09'` | `13` | `3` | `5` | `1` | `-2` |
+| `'C10-1'` | `'C10'` | `1` | `1` | `6` | `1` | `-1` |
+| `'C10-5'` | `'C10'` | `5` | `3` | `5` | `1` | `-2` |
+| `'C11-1'` | `'C11'` | `1` | `0` | `4` | `0` | `-3` |
+| `'C11-5'` | `'C11'` | `5` | `2` | `15` | `1` | `8` |
+| `'C13-1'` | `'C13'` | `1` | `1` | `6` | `1` | `-1` |
+| `'C14-1'` | `'C14'` | `1` | `1` | `12` | `1` | `5` |
+| `'C14-5'` | `'C14'` | `5` | `3` | `7` | `0` | `0` |
+| `'C15-1'` | `'C15'` | `1` | `1` | `12` | `0` | `5` |
+| `'C15-5'` | `'C15'` | `5` | `3` | `7` | `1` | `0` |
+| `'C17-1'` | `'C17'` | `1` | `3` | `7` | `1` | `0` |
+| `'C18-1'` | `'C18'` | `1` | `3` | `7` | `1` | `0` |
+| `'C18-5'` | `'C18'` | `5` | `7` | `14` | `0` | `7` |
+| `'C19-1'` | `'C19'` | `1` | `0` | `10` | `0` | `3` |
+| `'C19-5'` | `'C19'` | `5` | `1` | `12` | `1` | `5` |
+| `'C20-1'` | `'C20'` | `1` | `3` | `0` | `1` | `-9` |
+| `'C20-5'` | `'C20'` | `5` | `7` | `0` | `0` | `-9` |
+| `'C21-1'` | `'C21'` | `1` | `7` | `0` | `1` | `-9` |
+| `'C22-1'` | `'C22'` | `1` | `0` | `0` | `1` | `0` |
+| `'C22-5'` | `'C22'` | `5` | `1` | `0` | `1` | `0` |
+| `'C22-9'` | `'C22'` | `9` | `2` | `0` | `1` | `0` |
+| `'C22-13'` | `'C22'` | `13` | `3` | `0` | `1` | `0` |
+| `'C22-17'` | `'C22'` | `17` | `4` | `0` | `1` | `0` |
+| `'C22-21'` | `'C22'` | `21` | `5` | `0` | `1` | `0` |
+| `'C22-25'` | `'C22'` | `25` | `6` | `0` | `1` | `0` |
+| `'C22-29'` | `'C22'` | `29` | `7` | `0` | `1` | `0` |
+| `'C22-33'` | `'C22'` | `33` | `8` | `0` | `1` | `0` |
+| `'C22-37'` | `'C22'` | `37` | `9` | `0` | `1` | `0` |
+| `'C22-41'` | `'C22'` | `41` | `10` | `0` | `1` | `0` |
+| `'C22-45'` | `'C22'` | `45` | `11` | `0` | `1` | `0` |
+| `'C22-49'` | `'C22'` | `49` | `12` | `0` | `1` | `0` |
+| `'C22-53'` | `'C22'` | `53` | `13` | `0` | `1` | `0` |
+| `'C22-57'` | `'C22'` | `57` | `14` | `0` | `1` | `0` |
+| `'C22-61'` | `'C22'` | `61` | `15` | `0` | `1` | `0` |
+| `'C24-1'` | `'C24'` | `1` | `0` | `10` | `0` | `3` |
+| `'C24-5'` | `'C24'` | `5` | `1` | `12` | `1` | `5` |
+| `'C24-9'` | `'C24'` | `9` | `2` | `13` | `1` | `6` |
+| `'C24-13'` | `'C24'` | `13` | `3` | `7` | `0` | `0` |
+| `'C24-17'` | `'C24'` | `17` | `4` | `18` | `1` | `11` |
+| `'C24-21'` | `'C24'` | `21` | `5` | `20` | `0` | `13` |
+| `'C24-25'` | `'C24'` | `25` | `6` | `20` | `0` | `13` |
+| `'C24-29'` | `'C24'` | `29` | `7` | `14` | `1` | `7` |
+| `'C25-1'` | `'C25'` | `1` | `0` | `10` | `1` | `3` |
+| `'C25-5'` | `'C25'` | `5` | `1` | `12` | `0` | `5` |
+| `'C25-9'` | `'C25'` | `9` | `2` | `13` | `0` | `6` |
+| `'C25-13'` | `'C25'` | `13` | `3` | `7` | `1` | `0` |
+| `'C25-17'` | `'C25'` | `17` | `4` | `18` | `0` | `11` |
+| `'C25-21'` | `'C25'` | `21` | `5` | `20` | `1` | `13` |
+| `'C25-25'` | `'C25'` | `25` | `6` | `20` | `1` | `13` |
+| `'C25-29'` | `'C25'` | `29` | `7` | `14` | `0` | `7` |
+| `'C26-1'` | `'C26'` | `1` | `7` | `14` | `1` | `7` |
+| `'C28-1'` | `'C28'` | `1` | `0` | `10` | `1` | `3` |
+
+
+## ORACLE-060 — Standalone parity problems and exact minimum shores
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`; T=0 cases: `NEGATIVE / REJECTION` (None).
+**Source/authority:** `thm:GR`; DESIGN 4.8.3--5, 4.8.11--13; TEST_PLAN PC3, PC10, PC13--PC16.
+
+These are canonical, possibly asymmetric directed problem records. All arcs are sorted
+by ordered endpoints; all terminal masks have even cardinality, including zero. `n` is
+not N: N is len(classes). In P02--P05 all original vertices have already been forced,
+so n=1 and N=2. P11 explicitly retains an anchor in the source preimage.
+
+### Fixture table: PROBLEMS
+
+| id | n | classes | arcs | terminal_mask |
+| --- | --- | --- | --- | --- |
+| `'P01'` | `1` | `(3, 4)` | `()` | `0` |
+| `'P02'` | `1` | `(3, 4)` | `()` | `3` |
+| `'P03'` | `1` | `(3, 4)` | `((0, 1, 5),)` | `3` |
+| `'P04'` | `1` | `(3, 4)` | `((0, 1, 5), (1, 0, 2))` | `3` |
+| `'P05'` | `1` | `(3, 4)` | `((0, 1, 0), (1, 0, 0))` | `3` |
+| `'P06'` | `1` | `(2, 4, 1)` | `((0, 2, 2), (2, 1, 3))` | `6` |
+| `'P07'` | `1` | `(2, 4, 1)` | `((0, 2, 2), (2, 1, 3))` | `5` |
+| `'P08'` | `2` | `(4, 8, 1, 2)` | `((0, 2, 3), (0, 3, 1), (2, 1, 4), (2, 3, 2), (3, 1, 6))` | `12` |
+| `'P09'` | `2` | `(4, 8, 1, 2)` | `()` | `12` |
+| `'P10'` | `2` | `(4, 8, 1, 2)` | `((0, 2, 0), (2, 0, 0), (2, 3, 0), (3, 2, 0))` | `9` |
+| `'P11'` | `2` | `(20, 8, 1, 2)` | `((0, 2, 1), (1, 3, 2), (2, 0, 1), (2, 3, 3), (3, 1, 2), (3, 2, 3))` | `15` |
+| `'P12'` | `4` | `(16, 32, 1, 2, 4, 8)` | `()` | `60` |
+| `'P13'` | `1` | `(2, 4, 1)` | `((0, 1, 7), (1, 0, 9))` | `0` |
+| `'P14'` | `3` | `(8, 16, 1, 2, 4)` | `((0, 2, 4), (2, 0, 4), (2, 3, 1), (3, 2, 1), (3, 4, 3), (4, 3, 3))` | `20` |
+
+
+Every geometrically valid problem source shore is enumerated below. Rows with odd=1
+are the feasible parity cuts; no production minimum-cut output establishes these values.
+
+### Fixture table: PROBLEM_SHORES
+
+| id | problem | shore | capacity | odd |
+| --- | --- | --- | --- | --- |
+| `'P01-1'` | `'P01'` | `1` | `0` | `0` |
+| `'P02-1'` | `'P02'` | `1` | `0` | `1` |
+| `'P03-1'` | `'P03'` | `1` | `5` | `1` |
+| `'P04-1'` | `'P04'` | `1` | `5` | `1` |
+| `'P05-1'` | `'P05'` | `1` | `0` | `1` |
+| `'P06-1'` | `'P06'` | `1` | `2` | `0` |
+| `'P06-5'` | `'P06'` | `5` | `3` | `1` |
+| `'P07-1'` | `'P07'` | `1` | `2` | `1` |
+| `'P07-5'` | `'P07'` | `5` | `3` | `0` |
+| `'P08-1'` | `'P08'` | `1` | `4` | `0` |
+| `'P08-5'` | `'P08'` | `5` | `7` | `1` |
+| `'P08-9'` | `'P08'` | `9` | `9` | `1` |
+| `'P08-13'` | `'P08'` | `13` | `10` | `0` |
+| `'P09-1'` | `'P09'` | `1` | `0` | `0` |
+| `'P09-5'` | `'P09'` | `5` | `0` | `1` |
+| `'P09-9'` | `'P09'` | `9` | `0` | `1` |
+| `'P09-13'` | `'P09'` | `13` | `0` | `0` |
+| `'P10-1'` | `'P10'` | `1` | `0` | `1` |
+| `'P10-5'` | `'P10'` | `5` | `0` | `1` |
+| `'P10-9'` | `'P10'` | `9` | `0` | `0` |
+| `'P10-13'` | `'P10'` | `13` | `0` | `0` |
+| `'P11-1'` | `'P11'` | `1` | `1` | `1` |
+| `'P11-5'` | `'P11'` | `5` | `3` | `0` |
+| `'P11-9'` | `'P11'` | `9` | `6` | `0` |
+| `'P11-13'` | `'P11'` | `13` | `2` | `1` |
+| `'P12-1'` | `'P12'` | `1` | `0` | `0` |
+| `'P12-5'` | `'P12'` | `5` | `0` | `1` |
+| `'P12-9'` | `'P12'` | `9` | `0` | `1` |
+| `'P12-13'` | `'P12'` | `13` | `0` | `0` |
+| `'P12-17'` | `'P12'` | `17` | `0` | `1` |
+| `'P12-21'` | `'P12'` | `21` | `0` | `0` |
+| `'P12-25'` | `'P12'` | `25` | `0` | `0` |
+| `'P12-29'` | `'P12'` | `29` | `0` | `1` |
+| `'P12-33'` | `'P12'` | `33` | `0` | `1` |
+| `'P12-37'` | `'P12'` | `37` | `0` | `0` |
+| `'P12-41'` | `'P12'` | `41` | `0` | `0` |
+| `'P12-45'` | `'P12'` | `45` | `0` | `1` |
+| `'P12-49'` | `'P12'` | `49` | `0` | `0` |
+| `'P12-53'` | `'P12'` | `53` | `0` | `1` |
+| `'P12-57'` | `'P12'` | `57` | `0` | `1` |
+| `'P12-61'` | `'P12'` | `61` | `0` | `0` |
+| `'P13-1'` | `'P13'` | `1` | `7` | `0` |
+| `'P13-5'` | `'P13'` | `5` | `7` | `0` |
+| `'P14-1'` | `'P14'` | `1` | `4` | `0` |
+| `'P14-5'` | `'P14'` | `5` | `1` | `1` |
+| `'P14-9'` | `'P14'` | `9` | `8` | `0` |
+| `'P14-13'` | `'P14'` | `13` | `3` | `1` |
+| `'P14-17'` | `'P14'` | `17` | `7` | `1` |
+| `'P14-21'` | `'P14'` | `21` | `4` | `0` |
+| `'P14-25'` | `'P14'` | `25` | `5` | `1` |
+| `'P14-29'` | `'P14'` | `29` | `0` | `0` |
+
+
+`all_optimal_shores` lists all mathematical parity optima in increasing numeric order for
+inspection only. This listing order is NOT the result tie-break. `first_result` is derived
+from the separately fixed GR pair order and each ordinary query's least minimizer.
+`original_chosen` is the separate original-universe lifting. None signifies infeasible.
+`calls` is the prescribed future count, not a measurement of absent parity code.
+
+### Fixture table: MINIMUMS
+
+| id | minimum | all_optimal_shores | first_result | calls | original_chosen |
+| --- | --- | --- | --- | --- | --- |
+| `'P01'` | `None` | `()` | `None` | `0` | `None` |
+| `'P02'` | `0` | `(1,)` | `1` | `1` | `1` |
+| `'P03'` | `5` | `(1,)` | `1` | `1` | `1` |
+| `'P04'` | `5` | `(1,)` | `1` | `1` | `1` |
+| `'P05'` | `0` | `(1,)` | `1` | `1` | `1` |
+| `'P06'` | `3` | `(5,)` | `5` | `3` | `1` |
+| `'P07'` | `2` | `(1,)` | `1` | `3` | `0` |
+| `'P08'` | `7` | `(5,)` | `5` | `7` | `1` |
+| `'P09'` | `0` | `(5, 9)` | `5` | `7` | `1` |
+| `'P10'` | `0` | `(1, 5)` | `1` | `7` | `0` |
+| `'P11'` | `1` | `(1,)` | `1` | `7` | `0` |
+| `'P12'` | `0` | `(5, 9, 17, 29, 33, 45, 53, 57)` | `5` | `21` | `1` |
+| `'P13'` | `None` | `()` | `None` | `0` | `None` |
+| `'P14'` | `1` | `(5,)` | `5` | `13` | `1` |
+
+
+### Strictly worse parity minimum and coordinate hazard: P06
+
+The two admissible geometric shores are 1={0}, of cut capacity 2, and 5={0,2}, of cut
+capacity 3. Terminal T=6 means only shore 5 is odd. Thus the ordinary minimum 2 is wrong
+for the constrained problem; the parity minimum is exactly 3 at shore 5.
+
+The query (2,1) contracts problem source 0 with problem vertex 2. Its temporary least
+minimum is mask 1, which lifts to problem mask 5. Checking mask 1 directly against
+problem T=6 would wrongly reject the only correct candidate. Original lifting then
+returns original mask 1; this equality to the earlier temporary integer is accidental,
+not permission to mix the universes.
+
+P09 fixes tied parity optima 5 and 9 and requires the first encountered 5, not the last.
+P10 accepts a source-containing terminal set and an all-zero-capacity nonempty arc tuple.
+P01/P13 return None without any flow calls despite different capacities; P02/P12 are
+zero-valued feasible problems even though their arc tuples are empty.
+
+## ORACLE-061 — Exact ordered pair sequence and ordinary-query traces
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`.
+**Source:** original Goemans--Ramakrishnan Theorem 2, Corollary 3, Section 5; pinned thm:GR.
+**Engineering authority:** DESIGN 4.8.12--13; TEST_PLAN PC11--PC14.
+
+Pairs are increasing a then b with a!=sink, b!=source, a!=b. This reference enumeration
+makes exactly `(N-1)^2-(N-2) = N*N-3*N+3` calls for nonzero T, without early exit at zero
+and without deduplicating restrictions. The fixed source/sink lattice excludes the empty
+and entire ground set, so those exceptional GR candidates are not added as feasible cuts.
+
+### Fixture table: PAIR_ORDERS
+
+| N | pairs | calls |
+| --- | --- | --- |
+| `2` | `((0, 1),)` | `1` |
+| `3` | `((0, 1), (0, 2), (2, 1))` | `3` |
+| `4` | `((0, 1), (0, 2), (0, 3), (2, 1), (2, 3), (3, 1), (3, 2))` | `7` |
+| `5` | `((0, 1), (0, 2), (0, 3), (0, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3))` | `13` |
+| `6` | `((0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (2, 1), (2, 3), (2, 4), (2, 5), (3, 1), (3, 2), (3, 4), (3, 5), (4, 1), (4, 2), (4, 3), (4, 5), (5, 1), (5, 2), (5, 3), (5, 4))` | `21` |
+
+
+For the selected problems all query partitions, canonical arcs, and ordinary minimizers
+are literal below. `classes` now maps temporary vertices to PROBLEM-vertex masks.
+`all_temporary_minimizers` is obtained by complete ordinary-cut enumeration; their
+intersection is `least_temporary`. `lifted_problem_shore` must precede the oddness test.
+`update` uses strict value improvement only; `incumbent` is (cut value, problem shore).
+These are private exhaustive expected-data calculations, not a Unit 11 implementation.
+
+### Fixture table: PAIR_TRACES
+
+| id | problem | pair | classes | arcs | ordinary_minimum | all_temporary_minimizers | least_temporary | lifted_problem_shore | odd | update | incumbent |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'P02-0-1'` | `'P02'` | `(0, 1)` | `(1, 2)` | `()` | `0` | `(1,)` | `1` | `1` | `1` | `True` | `(0, 1)` |
+| `'P04-0-1'` | `'P04'` | `(0, 1)` | `(1, 2)` | `((0, 1, 5), (1, 0, 2))` | `5` | `(1,)` | `1` | `1` | `1` | `True` | `(5, 1)` |
+| `'P06-0-1'` | `'P06'` | `(0, 1)` | `(1, 2, 4)` | `((0, 2, 2), (2, 1, 3))` | `2` | `(1,)` | `1` | `1` | `0` | `False` | `None` |
+| `'P06-0-2'` | `'P06'` | `(0, 2)` | `(1, 6)` | `((0, 1, 2),)` | `2` | `(1,)` | `1` | `1` | `0` | `False` | `None` |
+| `'P06-2-1'` | `'P06'` | `(2, 1)` | `(5, 2)` | `((0, 1, 3),)` | `3` | `(1,)` | `1` | `5` | `1` | `True` | `(3, 5)` |
+| `'P08-0-1'` | `'P08'` | `(0, 1)` | `(1, 2, 4, 8)` | `((0, 2, 3), (0, 3, 1), (2, 1, 4), (2, 3, 2), (3, 1, 6))` | `4` | `(1,)` | `1` | `1` | `0` | `False` | `None` |
+| `'P08-0-2'` | `'P08'` | `(0, 2)` | `(1, 6, 8)` | `((0, 1, 3), (0, 2, 1), (1, 2, 2), (2, 1, 6))` | `4` | `(1,)` | `1` | `1` | `0` | `False` | `None` |
+| `'P08-0-3'` | `'P08'` | `(0, 3)` | `(1, 10, 4)` | `((0, 1, 1), (0, 2, 3), (2, 1, 6))` | `4` | `(1,)` | `1` | `1` | `0` | `False` | `None` |
+| `'P08-2-1'` | `'P08'` | `(2, 1)` | `(5, 2, 8)` | `((0, 1, 4), (0, 2, 3), (2, 1, 6))` | `7` | `(1,)` | `1` | `5` | `1` | `True` | `(7, 5)` |
+| `'P08-2-3'` | `'P08'` | `(2, 3)` | `(5, 10)` | `((0, 1, 7),)` | `7` | `(1,)` | `1` | `5` | `1` | `False` | `(7, 5)` |
+| `'P08-3-1'` | `'P08'` | `(3, 1)` | `(9, 2, 4)` | `((0, 1, 6), (0, 2, 3), (2, 0, 2), (2, 1, 4))` | `9` | `(1,)` | `1` | `9` | `1` | `False` | `(7, 5)` |
+| `'P08-3-2'` | `'P08'` | `(3, 2)` | `(9, 6)` | `((0, 1, 9), (1, 0, 2))` | `9` | `(1,)` | `1` | `9` | `1` | `False` | `(7, 5)` |
+| `'P09-0-1'` | `'P09'` | `(0, 1)` | `(1, 2, 4, 8)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `1` | `0` | `False` | `None` |
+| `'P09-0-2'` | `'P09'` | `(0, 2)` | `(1, 6, 8)` | `()` | `0` | `(1, 5)` | `1` | `1` | `0` | `False` | `None` |
+| `'P09-0-3'` | `'P09'` | `(0, 3)` | `(1, 10, 4)` | `()` | `0` | `(1, 5)` | `1` | `1` | `0` | `False` | `None` |
+| `'P09-2-1'` | `'P09'` | `(2, 1)` | `(5, 2, 8)` | `()` | `0` | `(1, 5)` | `1` | `5` | `1` | `True` | `(0, 5)` |
+| `'P09-2-3'` | `'P09'` | `(2, 3)` | `(5, 10)` | `()` | `0` | `(1,)` | `1` | `5` | `1` | `False` | `(0, 5)` |
+| `'P09-3-1'` | `'P09'` | `(3, 1)` | `(9, 2, 4)` | `()` | `0` | `(1, 5)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P09-3-2'` | `'P09'` | `(3, 2)` | `(9, 6)` | `()` | `0` | `(1,)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P12-0-1'` | `'P12'` | `(0, 1)` | `(1, 2, 4, 8, 16, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61)` | `1` | `1` | `0` | `False` | `None` |
+| `'P12-0-2'` | `'P12'` | `(0, 2)` | `(1, 6, 8, 16, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `1` | `0` | `False` | `None` |
+| `'P12-0-3'` | `'P12'` | `(0, 3)` | `(1, 10, 4, 16, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `1` | `0` | `False` | `None` |
+| `'P12-0-4'` | `'P12'` | `(0, 4)` | `(1, 18, 4, 8, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `1` | `0` | `False` | `None` |
+| `'P12-0-5'` | `'P12'` | `(0, 5)` | `(1, 34, 4, 8, 16)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `1` | `0` | `False` | `None` |
+| `'P12-2-1'` | `'P12'` | `(2, 1)` | `(5, 2, 8, 16, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `5` | `1` | `True` | `(0, 5)` |
+| `'P12-2-3'` | `'P12'` | `(2, 3)` | `(5, 10, 16, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `5` | `1` | `False` | `(0, 5)` |
+| `'P12-2-4'` | `'P12'` | `(2, 4)` | `(5, 18, 8, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `5` | `1` | `False` | `(0, 5)` |
+| `'P12-2-5'` | `'P12'` | `(2, 5)` | `(5, 34, 8, 16)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `5` | `1` | `False` | `(0, 5)` |
+| `'P12-3-1'` | `'P12'` | `(3, 1)` | `(9, 2, 4, 16, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P12-3-2'` | `'P12'` | `(3, 2)` | `(9, 6, 16, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P12-3-4'` | `'P12'` | `(3, 4)` | `(9, 18, 4, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P12-3-5'` | `'P12'` | `(3, 5)` | `(9, 34, 4, 16)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `9` | `1` | `False` | `(0, 5)` |
+| `'P12-4-1'` | `'P12'` | `(4, 1)` | `(17, 2, 4, 8, 32)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `17` | `1` | `False` | `(0, 5)` |
+| `'P12-4-2'` | `'P12'` | `(4, 2)` | `(17, 6, 8, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `17` | `1` | `False` | `(0, 5)` |
+| `'P12-4-3'` | `'P12'` | `(4, 3)` | `(17, 10, 4, 32)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `17` | `1` | `False` | `(0, 5)` |
+| `'P12-4-5'` | `'P12'` | `(4, 5)` | `(17, 34, 4, 8)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `17` | `1` | `False` | `(0, 5)` |
+| `'P12-5-1'` | `'P12'` | `(5, 1)` | `(33, 2, 4, 8, 16)` | `()` | `0` | `(1, 5, 9, 13, 17, 21, 25, 29)` | `1` | `33` | `1` | `False` | `(0, 5)` |
+| `'P12-5-2'` | `'P12'` | `(5, 2)` | `(33, 6, 8, 16)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `33` | `1` | `False` | `(0, 5)` |
+| `'P12-5-3'` | `'P12'` | `(5, 3)` | `(33, 10, 4, 16)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `33` | `1` | `False` | `(0, 5)` |
+| `'P12-5-4'` | `'P12'` | `(5, 4)` | `(33, 18, 4, 8)` | `()` | `0` | `(1, 5, 9, 13)` | `1` | `33` | `1` | `False` | `(0, 5)` |
+
+
+## ORACLE-062 — Why arbitrary tied ordinary minimizers are insufficient
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE` with a deliberately inadmissible backend control.
+**Source/authority:** GR Theorem 2 minimal-minimizer requirement; DESIGN 4.8.12; PC12.
+
+P12 has N=6, no arcs, and all four free vertices terminal: T=60. Every geometric shore
+has capacity zero. In each ordered-pair restriction, the least ordinary minimizer is
+exactly its forced source class `{0,a}`. For a free terminal a it is odd. The first such
+candidate is pair (2,1), after all five a=0 pairs, so the ruled result is mask 5.
+
+Every restriction also has an EVEN tied minimizer, explicitly listed below. Thus a
+backend that chooses that even minimizer in every restriction would cause the parity
+filter to discard every candidate although parity-optimal shores exist. Such a backend
+violates the adopted contract. This is not an alternative admissible tie-breaking policy.
+The least ordinary shore is the intersection of all ordinary minimizers, not the first
+shore visited by a brute enumerator unless that equality is independently established.
+
+### Fixture table: ARBITRARY_TIE_TRAP
+
+| pair | least_shore | least_odd | wrong_even_minimum |
+| --- | --- | --- | --- |
+| `(0, 1)` | `1` | `0` | `1` |
+| `(0, 2)` | `1` | `0` | `1` |
+| `(0, 3)` | `1` | `0` | `1` |
+| `(0, 4)` | `1` | `0` | `1` |
+| `(0, 5)` | `1` | `0` | `1` |
+| `(2, 1)` | `5` | `1` | `13` |
+| `(2, 3)` | `5` | `1` | `21` |
+| `(2, 4)` | `5` | `1` | `13` |
+| `(2, 5)` | `5` | `1` | `13` |
+| `(3, 1)` | `9` | `1` | `13` |
+| `(3, 2)` | `9` | `1` | `25` |
+| `(3, 4)` | `9` | `1` | `13` |
+| `(3, 5)` | `9` | `1` | `13` |
+| `(4, 1)` | `17` | `1` | `21` |
+| `(4, 2)` | `17` | `1` | `25` |
+| `(4, 3)` | `17` | `1` | `21` |
+| `(4, 5)` | `17` | `1` | `21` |
+| `(5, 1)` | `33` | `1` | `37` |
+| `(5, 2)` | `33` | `1` | `41` |
+| `(5, 3)` | `33` | `1` | `37` |
+| `(5, 4)` | `33` | `1` | `37` |
+
+
+## ORACLE-063 — Flow-only diagnostic anchors, kept separate from minima
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE` of the closed flow-interface accounting.
+**Authority:** closed minimum_cut/FlowStats; DESIGN 4.8.13; TEST_PLAN PC15--PC16.
+
+Each trace tuple is `(a,b,augmentations,bfs_scans,peak_generated_value)`. The four totals
+become ParityCutStats fields in declaration order. Counters never decide which parity
+candidate is kept. These anchors were hand-traced before comparison with the closed flow
+backend. Expected parity minima were derived solely by cut enumeration.
+
+P03 has one source->sink residual forward entry of capacity 5: one successful scan,
+one augmentation, one failed scan, peak 5. P04 has the same first successful scan but two
+source-adjacency entries on the failed search because both original orientations exist:
+three total scans, peak 5. P05 has zero capacities and only a failed scan of those two
+entries. Empty arc lists do not initiate a BFS, but each actual query still counts.
+
+P06's uncontracted path query scans three entries in its successful BFS and one in the
+failed BFS: `(1,4,3)`. Its two contracted single-edge queries have `(1,2,2)` and `(1,2,3)`.
+Thus aggregate diagnostics are `(3,3,8,3)`. The peak is FLOW-ONLY; it is not the largest
+mask, original coefficient, retained shift, or arbitrary integer in the entire reduction.
+
+### Fixture table: STATS_ANCHORS
+
+| problem | calls | augmentations | bfs_scans | peak | trace |
+| --- | --- | --- | --- | --- | --- |
+| `'P01'` | `0` | `0` | `0` | `0` | `()` |
+| `'P02'` | `1` | `0` | `0` | `0` | `((0, 1, 0, 0, 0),)` |
+| `'P03'` | `1` | `1` | `2` | `5` | `((0, 1, 1, 2, 5),)` |
+| `'P04'` | `1` | `1` | `3` | `5` | `((0, 1, 1, 3, 5),)` |
+| `'P05'` | `1` | `0` | `2` | `0` | `((0, 1, 0, 2, 0),)` |
+| `'P06'` | `3` | `3` | `8` | `3` | `((0, 1, 1, 4, 3), (0, 2, 1, 2, 2), (2, 1, 1, 2, 3))` |
+| `'P09'` | `7` | `0` | `0` | `0` | `((0, 1, 0, 0, 0), (0, 2, 0, 0, 0), (0, 3, 0, 0, 0), (2, 1, 0, 0, 0), (2, 3, 0, 0, 0), (3, 1, 0, 0, 0), (3, 2, 0, 0, 0))` |
+| `'P12'` | `21` | `0` | `0` | `0` | `((0, 1, 0, 0, 0), (0, 2, 0, 0, 0), (0, 3, 0, 0, 0), (0, 4, 0, 0, 0), (0, 5, 0, 0, 0), (2, 1, 0, 0, 0), (2, 3, 0, 0, 0), (2, 4, 0, 0, 0), (2, 5, 0, 0, 0), (3, 1, 0, 0, 0), (3, 2, 0, 0, 0), (3, 4, 0, 0, 0), (3, 5, 0, 0, 0), (4, 1, 0, 0, 0), (4, 2, 0, 0, 0), (4, 3, 0, 0, 0), (4, 5, 0, 0, 0), (5, 1, 0, 0, 0), (5, 2, 0, 0, 0), (5, 3, 0, 0, 0), (5, 4, 0, 0, 0))` |
+
+
+The independent oracle audit verifies the trace sums and hand-fixed anchors without
+executing flow. A separate closed-backend compatibility record may compare these
+pre-existing anchors with actual ordinary minimum_cut calls. It must not use returned
+flow values to seed the expected parity minimum or rewrite a discrepant oracle silently.
+
+## ORACLE-064 — Registered exhaustive directed-graph and terminal corpus
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE` / finite independent optimality oracle.
+**Authority:** TEST_PLAN PC11--PC16, PC18--PC19.
+
+For N in {2,3,4}, include every ordered pair (u,v) with u!=v, sorted by endpoints. Assign
+each capacity independently from {0,1}; retain even the zero-capacity positions. For each
+graph include every even-cardinality terminal mask, including zero. Thus there are
+4 + 64 + 4096 graphs, and 4*2 + 64*4 + 4096*8 graph/terminal problems. For N=2 use
+n=1, classes=(3,4); for N>=3 use n=N-2, source/sink singleton preimages first and free
+original singletons thereafter. These are standalone problem fixtures, not active Instances.
+
+For every graph, list all source-containing/sink-excluding masks and their directed cut
+values. For each parity mask compute its true optimum by independent all-shore filtering.
+For every compatible pair separately intersect all ordinary minimizing shores, then apply
+the ruled parity filter and strict-improvement selection. Compare the two optimum values.
+
+Query minimizer enumeration may be reused per graph in the private oracle audit because
+it is independent of T. `distinct_graph_pair_minimizations` counts that private work;
+`specified_backend_calls` instead sums the contractual future calls for all nonempty-T
+problems. **The latter is an expected call count, not a measurement of production code.**
+No flow backend or Unit 11 implementation is used to establish these counts or optima.
+
+### Fixture table: GRAPH_COUNTS
+
+| metric | value |
+| --- | --- |
+| `'distinct_graph_pair_minimizations'` | `28868` |
+| `'graphs'` | `4164` |
+| `'terminal_problems'` | `33032` |
+| `'all_shore_evaluations'` | `131592` |
+| `'infeasible'` | `4164` |
+| `'feasible'` | `28868` |
+| `'parity_admissible_shores'` | `65796` |
+| `'specified_backend_calls'` | `201284` |
+| `'zero_minima'` | `5018` |
+| `'candidate_parity_acceptances'` | `115076` |
+| `'positive_minima'` | `23850` |
+| `'multiple_optima'` | `11296` |
+
+
+T=0 accounts for every infeasible problem. A nonzero even T always allows an odd shore
+in this complete source/sink lattice, regardless of capacities. `all_shore_evaluations`
+counts every geometric shore once per terminal problem, whether parity admissible or not.
+`multiple_optima` counts feasible problems with at least two minimizing parity shores.
+No global least or lexicographically minimal parity-shore guarantee is invented.
+
+## ORACLE-065 — Registered exhaustive forced-family correspondence corpus
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`; valid but impossible descriptors return None.
+**Authority:** TEST_PLAN PC4--PC9, PC19.
+
+For n in {1,2,3,4}, use two standalone raw networks on n+2 vertices:
+
+1. no arcs;
+2. every ordered nonloop pair, capacity `((u+1)*(v+2)) % 5`, in increasing pair order,
+   including zero capacities.
+
+For each network, take every T,I,O in `range(1<<n)` and pi in {0,1}. In particular overlaps
+are included and return None; every mask is in range. The descriptor count is
+`sum(2 * 2 * 8**n for n in (1,2,3,4)) = 18720`. Independently enumerate original subsets
+to establish logical feasibility, rather than calling the production family predicate.
+Production, unlike this audit, must use the closed predicate after finite-universe checks.
+
+For each feasible descriptor, enumerate all geometric reduced shores, lift them, and
+check forced membership, parity correspondence, exact directed-cut equality, and
+one-to-one coverage of the original parity-feasible family. Include even reduced-parity
+shores when checking generic lifting. No min-cut or parity minimizer is invoked here.
+
+### Fixture table: FAMILY_COUNTS
+
+| metric | value |
+| --- | --- |
+| `'descriptors'` | `18720` |
+| `'disjoint_descriptors'` | `6216` |
+| `'feasible'` | `4656` |
+| `'pi0_feasible'` | `2448` |
+| `'toggle_add'` | `1894` |
+| `'geometric_lift_checks'` | `15612` |
+| `'odd_shores'` | `9360` |
+| `'original_admissible_shores'` | `9360` |
+| `'overlap_none'` | `12504` |
+| `'parity_none'` | `1560` |
+| `'toggle_none'` | `2208` |
+| `'pi1_feasible'` | `2208` |
+| `'toggle_remove'` | `554` |
+
+
+The 15612 geometric lift checks concern feasible descriptors only. The 9360 odd-image
+count equals the independent original admissible-shore count. The 554 sink-removal cases
+must not be conflated with the 1894 sink-add cases. None cases are neither malformed
+input exceptions nor global Empty admissible-family results.
+
+## ORACLE-066 — Local source-residual integration without the full branch oracle
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`; expected minima are over the stated family only.
+**Source:** eq:param0--3, prop:domain-decomp, lem:sign-routing, lem:parity-anchor, thm:GR.
+**Authority:** DESIGN 4.8.16; TEST_PLAN PC17.
+
+The exact RICH and MIXED instances are already fixed by ORACLE-025 and ORACLE-031.
+They are repeated here for self-contained arithmetic:
+
+### Fixture table: INSTANCES
+
+| id | n | edges | f |
+| --- | --- | --- | --- |
+| `'RICH'` | `5` | `((0, 2, 2), (1, 2, 2), (2, 4, 1), (3, 4, 1))` | `(1, 1, 1, 1, 2)` |
+| `'MIXED'` | `4` | `((0, 1, 2), (0, 2, 3), (0, 3, 1), (1, 2, 4), (1, 3, 2), (2, 3, 5))` | `(2, 3, 4, 5)` |
+
+
+The selected families use the source T_plus or T_f as appropriate. For branch 1, take
+p=0 and the first support edge orientation; branch 2 uses the first f>=2 vertex; branch 3
+uses the first support orientation. These are explicit local families, not a loop over
+all atomic families. For every branch use parameters (0,1), (2,3), and (-3,1).
+
+Independently construct source coefficients, fix the corresponding contracted classes,
+terminal mask and arcs, enumerate parity cuts, lift the chosen shore, and evaluate the
+source's literal B*c_j(U)-A*h_j(U) from raw instance records. It must equal
+`minimum_cut - negative_shift + constant` and be minimal over precisely the stated family.
+No use of the eventual ExactBranchMin, production family enumeration, or witness reconstruction
+establishes these values. The original graph and original source/sink are preserved for
+independent raw-cut evaluation.
+
+### Fixture table: BRANCH_SEAMS
+
+| id | instance | branch | parameter | family | gamma | negative_shift | constant | classes | terminal_mask | arcs | minimum_cut | reduced_choice | original_choice | minimum_residual | original_optima | calls | unrestricted_cut |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'RICH-j0-0-1'` | `'RICH'` | `0` | `(0, 1)` | `(3, 1, 0, 0)` | `(1, 1, 1, 1, 2)` | `0` | `-1` | `(32, 64, 1, 2, 4, 8, 16)` | `12` | `((1, 2, 1), (1, 3, 1), (1, 4, 1), (1, 5, 1), (1, 6, 2), (2, 1, 1), (2, 4, 2), (3, 1, 1), (3, 4, 2), (4, 1, 1), (4, 2, 2), (4, 3, 2), (4, 6, 1), (5, 1, 1), (5, 6, 1), (6, 1, 2), (6, 4, 1), (6, 5, 1))` | `3` | `5` | `1` | `2` | `(1, 2)` | `31` | `0` |
+| `'RICH-j1-0-1'` | `'RICH'` | `1` | `(0, 1)` | `(3, 0, 1, 4)` | `(1, 1, 1, 1, 2)` | `0` | `-2` | `(161, 68, 2, 8, 16)` | `6` | `((0, 1, 3), (1, 0, 3), (1, 2, 3), (1, 3, 1), (1, 4, 3), (2, 1, 3), (3, 1, 1), (3, 4, 1), (4, 1, 3), (4, 3, 1))` | `6` | `5` | `3` | `4` | `(3,)` | `13` | `0` |
+| `'RICH-j2-0-1'` | `'RICH'` | `2` | `(0, 1)` | `(15, 1, 16, 0)` | `(-2, -2, -5, -1, -2)` | `12` | `0` | `(48, 64, 1, 2, 4, 8)` | `60` | `((0, 2, 2), (0, 3, 2), (0, 4, 6), (0, 5, 2), (2, 0, 2), (2, 4, 2), (3, 0, 2), (3, 4, 2), (4, 0, 6), (4, 2, 2), (4, 3, 2), (5, 0, 2))` | `2` | `29` | `23` | `-10` | `(23,)` | `21` | `0` |
+| `'RICH-j3-0-1'` | `'RICH'` | `3` | `(0, 1)` | `(15, 0, 1, 4)` | `(-2, -2, -5, -1, -2)` | `12` | `-2` | `(161, 68, 2, 8, 16)` | `12` | `((0, 1, 7), (0, 2, 2), (0, 3, 1), (0, 4, 2), (1, 0, 7), (1, 2, 2), (1, 4, 1), (2, 0, 2), (2, 1, 2), (3, 0, 1), (3, 4, 1), (4, 0, 2), (4, 1, 1), (4, 3, 1))` | `10` | `25` | `25` | `-4` | `(25,)` | `13` | `0` |
+| `'RICH-j0-2-3'` | `'RICH'` | `0` | `(2, 3)` | `(3, 1, 0, 0)` | `(1, 1, -5, 3, 6)` | `5` | `-5` | `(32, 64, 1, 2, 4, 8, 16)` | `12` | `((0, 4, 5), (1, 2, 1), (1, 3, 1), (1, 5, 3), (1, 6, 6), (2, 1, 1), (2, 4, 6), (3, 1, 1), (3, 4, 6), (4, 0, 5), (4, 2, 6), (4, 3, 6), (4, 6, 3), (5, 1, 3), (5, 6, 3), (6, 1, 6), (6, 4, 3), (6, 5, 3))` | `10` | `21` | `5` | `0` | `(5, 6)` | `31` | `5` |
+| `'RICH-j1-2-3'` | `'RICH'` | `1` | `(2, 3)` | `(3, 0, 1, 4)` | `(1, 1, -5, 3, 6)` | `5` | `-6` | `(161, 68, 2, 8, 16)` | `6` | `((0, 1, 12), (1, 0, 12), (1, 2, 7), (1, 3, 3), (1, 4, 9), (2, 1, 7), (3, 1, 3), (3, 4, 3), (4, 1, 9), (4, 3, 3))` | `19` | `5` | `3` | `8` | `(3,)` | `13` | `5` |
+| `'RICH-j2-2-3'` | `'RICH'` | `2` | `(2, 3)` | `(15, 1, 16, 0)` | `(-8, -8, -17, -5, -10)` | `48` | `2` | `(48, 64, 1, 2, 4, 8)` | `60` | `((0, 2, 8), (0, 3, 8), (0, 4, 20), (0, 5, 8), (2, 0, 8), (2, 4, 6), (3, 0, 8), (3, 4, 6), (4, 0, 20), (4, 2, 6), (4, 3, 6), (5, 0, 8))` | `8` | `29` | `23` | `-38` | `(23,)` | `21` | `0` |
+| `'RICH-j3-2-3'` | `'RICH'` | `3` | `(2, 3)` | `(15, 0, 1, 4)` | `(-8, -8, -17, -5, -10)` | `48` | `-6` | `(161, 68, 2, 8, 16)` | `12` | `((0, 1, 23), (0, 2, 8), (0, 3, 5), (0, 4, 10), (1, 0, 23), (1, 2, 6), (1, 4, 3), (2, 0, 8), (2, 1, 6), (3, 0, 5), (3, 4, 3), (4, 0, 10), (4, 1, 3), (4, 3, 3))` | `34` | `25` | `25` | `-20` | `(25,)` | `13` | `0` |
+| `'RICH-j0--3-1'` | `'RICH'` | `0` | `(-3, 1)` | `(3, 1, 0, 0)` | `(4, 4, 13, 1, 2)` | `0` | `2` | `(32, 64, 1, 2, 4, 8, 16)` | `12` | `((1, 2, 4), (1, 3, 4), (1, 4, 13), (1, 5, 1), (1, 6, 2), (2, 1, 4), (2, 4, 2), (3, 1, 4), (3, 4, 2), (4, 1, 13), (4, 2, 2), (4, 3, 2), (4, 6, 1), (5, 1, 1), (5, 6, 1), (6, 1, 2), (6, 4, 1), (6, 5, 1))` | `6` | `5` | `1` | `8` | `(1, 2)` | `31` | `0` |
+| `'RICH-j1--3-1'` | `'RICH'` | `1` | `(-3, 1)` | `(3, 0, 1, 4)` | `(4, 4, 13, 1, 2)` | `0` | `-2` | `(161, 68, 2, 8, 16)` | `6` | `((0, 1, 6), (1, 0, 6), (1, 2, 6), (1, 3, 1), (1, 4, 3), (2, 1, 6), (3, 1, 1), (3, 4, 1), (4, 1, 3), (4, 3, 1))` | `12` | `5` | `3` | `10` | `(3,)` | `13` | `0` |
+| `'RICH-j2--3-1'` | `'RICH'` | `2` | `(-3, 1)` | `(15, 1, 16, 0)` | `(1, 1, -2, 2, 4)` | `2` | `-3` | `(48, 64, 1, 2, 4, 8)` | `60` | `((0, 1, 4), (0, 4, 3), (0, 5, 1), (1, 0, 4), (1, 2, 1), (1, 3, 1), (1, 5, 2), (2, 1, 1), (2, 4, 2), (3, 1, 1), (3, 4, 2), (4, 0, 3), (4, 2, 2), (4, 3, 2), (5, 0, 1), (5, 1, 2))` | `7` | `29` | `23` | `2` | `(23,)` | `21` | `2` |
+| `'RICH-j3--3-1'` | `'RICH'` | `3` | `(-3, 1)` | `(15, 0, 1, 4)` | `(1, 1, -2, 2, 4)` | `2` | `-2` | `(161, 68, 2, 8, 16)` | `12` | `((0, 1, 5), (1, 0, 5), (1, 2, 3), (1, 3, 2), (1, 4, 5), (2, 1, 3), (3, 1, 2), (3, 4, 1), (4, 1, 5), (4, 3, 1))` | `8` | `5` | `3` | `4` | `(3, 9)` | `13` | `2` |
+| `'MIXED-j0-0-1'` | `'MIXED'` | `0` | `(0, 1)` | `(10, 1, 0, 0)` | `(2, 3, 4, 5)` | `0` | `-1` | `(16, 32, 1, 2, 4, 8)` | `40` | `((1, 2, 2), (1, 3, 3), (1, 4, 4), (1, 5, 5), (2, 1, 2), (2, 3, 2), (2, 4, 3), (2, 5, 1), (3, 1, 3), (3, 2, 2), (3, 4, 4), (3, 5, 2), (4, 1, 4), (4, 2, 3), (4, 3, 4), (4, 5, 5), (5, 1, 5), (5, 2, 1), (5, 3, 2), (5, 4, 5))` | `11` | `9` | `2` | `10` | `(2,)` | `21` | `0` |
+| `'MIXED-j1-0-1'` | `'MIXED'` | `1` | `(0, 1)` | `(10, 0, 1, 2)` | `(2, 3, 4, 5)` | `0` | `-2` | `(81, 34, 4, 8)` | `9` | `((0, 1, 4), (0, 2, 3), (0, 3, 1), (1, 0, 4), (1, 2, 8), (1, 3, 7), (2, 0, 3), (2, 1, 8), (2, 3, 5), (3, 0, 1), (3, 1, 7), (3, 2, 5))` | `8` | `1` | `1` | `6` | `(1,)` | `7` | `0` |
+| `'MIXED-j2-0-1'` | `'MIXED'` | `2` | `(0, 1)` | `(10, 1, 1, 0)` | `(-6, -8, -12, -8)` | `34` | `0` | `(17, 32, 2, 4, 8)` | `20` | `((0, 2, 10), (0, 3, 15), (0, 4, 9), (2, 0, 10), (2, 3, 4), (2, 4, 2), (3, 0, 15), (3, 2, 4), (3, 4, 5), (4, 0, 9), (4, 2, 2), (4, 3, 5))` | `16` | `25` | `13` | `-18` | `(7, 13)` | `13` | `0` |
+| `'MIXED-j3-0-1'` | `'MIXED'` | `3` | `(0, 1)` | `(10, 0, 1, 2)` | `(-6, -8, -12, -8)` | `34` | `-2` | `(81, 34, 4, 8)` | `9` | `((0, 1, 10), (0, 2, 15), (0, 3, 9), (1, 0, 10), (1, 2, 4), (1, 3, 2), (2, 0, 15), (2, 1, 4), (2, 3, 5), (3, 0, 9), (3, 1, 2), (3, 2, 5))` | `28` | `5` | `5` | `-8` | `(5,)` | `7` | `0` |
+| `'MIXED-j0-2-3'` | `'MIXED'` | `0` | `(2, 3)` | `(10, 1, 0, 0)` | `(-2, -1, -4, 9)` | `7` | `-5` | `(16, 32, 1, 2, 4, 8)` | `40` | `((0, 2, 2), (0, 3, 1), (0, 4, 4), (1, 5, 9), (2, 0, 2), (2, 3, 6), (2, 4, 9), (2, 5, 3), (3, 0, 1), (3, 2, 6), (3, 4, 12), (3, 5, 6), (4, 0, 4), (4, 2, 9), (4, 3, 12), (4, 5, 15), (5, 1, 9), (5, 2, 3), (5, 3, 6), (5, 4, 15))` | `24` | `29` | `7` | `12` | `(7,)` | `21` | `7` |
+| `'MIXED-j1-2-3'` | `'MIXED'` | `1` | `(2, 3)` | `(10, 0, 1, 2)` | `(-2, -1, -4, 9)` | `7` | `-6` | `(81, 34, 4, 8)` | `9` | `((0, 1, 7), (0, 2, 13), (0, 3, 3), (1, 0, 7), (1, 2, 12), (1, 3, 15), (2, 0, 13), (2, 1, 12), (2, 3, 15), (3, 0, 3), (3, 1, 15), (3, 2, 15))` | `23` | `1` | `1` | `10` | `(1,)` | `7` | `7` |
+| `'MIXED-j2-2-3'` | `'MIXED'` | `2` | `(2, 3)` | `(10, 1, 1, 0)` | `(-22, -30, -44, -34)` | `130` | `2` | `(17, 32, 2, 4, 8)` | `20` | `((0, 2, 36), (0, 3, 53), (0, 4, 37), (2, 0, 36), (2, 3, 12), (2, 4, 6), (3, 0, 53), (3, 2, 12), (3, 4, 15), (4, 0, 37), (4, 2, 6), (4, 3, 15))` | `54` | `25` | `13` | `-74` | `(13,)` | `13` | `0` |
+| `'MIXED-j3-2-3'` | `'MIXED'` | `3` | `(2, 3)` | `(10, 0, 1, 2)` | `(-22, -30, -44, -34)` | `130` | `-6` | `(81, 34, 4, 8)` | `9` | `((0, 1, 36), (0, 2, 53), (0, 3, 37), (1, 0, 36), (1, 2, 12), (1, 3, 6), (2, 0, 53), (2, 1, 12), (2, 3, 15), (3, 0, 37), (3, 1, 6), (3, 2, 15))` | `100` | `5` | `5` | `-36` | `(5,)` | `7` | `0` |
+| `'MIXED-j0--3-1'` | `'MIXED'` | `0` | `(-3, 1)` | `(10, 1, 0, 0)` | `(14, 18, 28, 14)` | `0` | `2` | `(16, 32, 1, 2, 4, 8)` | `40` | `((1, 2, 14), (1, 3, 18), (1, 4, 28), (1, 5, 14), (2, 1, 14), (2, 3, 2), (2, 4, 3), (2, 5, 1), (3, 1, 18), (3, 2, 2), (3, 4, 4), (3, 5, 2), (4, 1, 28), (4, 2, 3), (4, 3, 4), (4, 5, 5), (5, 1, 14), (5, 2, 1), (5, 3, 2), (5, 4, 5))` | `22` | `33` | `8` | `24` | `(8,)` | `21` | `0` |
+| `'MIXED-j1--3-1'` | `'MIXED'` | `1` | `(-3, 1)` | `(10, 0, 1, 2)` | `(14, 18, 28, 14)` | `0` | `-2` | `(81, 34, 4, 8)` | `9` | `((0, 1, 16), (0, 2, 3), (0, 3, 1), (1, 0, 16), (1, 2, 32), (1, 3, 16), (2, 0, 3), (2, 1, 32), (2, 3, 5), (3, 0, 1), (3, 1, 16), (3, 2, 5))` | `20` | `1` | `1` | `18` | `(1,)` | `7` | `0` |
+| `'MIXED-j2--3-1'` | `'MIXED'` | `2` | `(-3, 1)` | `(10, 1, 1, 0)` | `(0, 1, 0, 7)` | `0` | `-3` | `(17, 32, 2, 4, 8)` | `20` | `((0, 1, 0), (0, 2, 2), (0, 3, 3), (0, 4, 1), (1, 0, 0), (1, 2, 1), (1, 3, 0), (1, 4, 7), (2, 0, 2), (2, 1, 1), (2, 3, 4), (2, 4, 2), (3, 0, 3), (3, 1, 0), (3, 2, 4), (3, 4, 5), (4, 0, 1), (4, 1, 7), (4, 2, 2), (4, 3, 5))` | `9` | `13` | `7` | `6` | `(7,)` | `13` | `0` |
+| `'MIXED-j3--3-1'` | `'MIXED'` | `3` | `(-3, 1)` | `(10, 0, 1, 2)` | `(0, 1, 0, 7)` | `0` | `-2` | `(81, 34, 4, 8)` | `9` | `((0, 1, 2), (0, 2, 3), (0, 3, 1), (1, 0, 2), (1, 2, 4), (1, 3, 9), (2, 0, 3), (2, 1, 4), (2, 3, 5), (3, 0, 1), (3, 1, 9), (3, 2, 5))` | `6` | `1` | `1` | `4` | `(1,)` | `7` | `0` |
+
+
+For example, RICH-j1-0-1 has required family (3,0,1,4). Its constrained minimum cut is 6,
+whereas unrestricted minimum cut is 0. Its residual minimum is 6-0-2=4, at original U=3.
+A zero-valued unrestricted candidate would violate the family and cannot replace that value.
+
+For every seam, changing only the retained network shift from C to C+17 and constant
+from kappa to kappa-9 leaves the parity problem and mathematical result unchanged, and
+changes recovered scalar by exactly -26. A future implementation must also preserve its
+diagnostic output because query graphs and pair order are unchanged. This control does
+not assert that the altered retained offsets arise from the same branch source expression.
+
+## ORACLE-067 — Large integers, positive scaling, and zero-safe boundaries
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE`.
+**Authority:** TEST_PLAN PC15--PC16, PC18.
+
+For each listed k set L=2**k; arithmetic is exact. No decimal-to-float conversion, test
+runtime threshold, or assertion of magnitude-independent bit cost is permitted.
+
+### Fixture table: LARGE_EXPONENTS
+
+| k |
+| --- |
+| `1` |
+| `8` |
+| `64` |
+| `4096` |
+
+
+**Fixed path scaling:** scale P06's capacities to 2L and 3L. Its constrained minimum is
+3L, chosen problem shore 5, original shore 1, and required query count 3. The least
+ordinary shores do not change. On this particular path and pair family the hand-traced
+backend aggregates are `(3,3,8,3L)`; the fixed path makes those flat structural counters
+justified. No flatness claim is made for arbitrary unrelated input families.
+
+**Large contraction:** original n=2, family `(3,1,1,0)`, raw arcs:
+
+```text
+((2,0,L), (2,0,L+1), (0,1,L), (0,1,0), (1,3,L+2))
+```
+
+The first two records become loops, not capacity constraints. Canonical classes are
+`(5,8,2)`, final terminal mask is 5, and reduced arcs are exactly
+`((0,2,L),(2,1,L+2))`. Both geometric source shores preserve their raw cut value.
+In particular the zero duplicate remains part of an encountered ordered pair before
+aggregation, but is not materialized as a second problem arc.
+
+The generic record validation admits high original-preimage bits only within its explicit
+universe. Large numerical capacities never authorize enlarging that universe or expanding
+multiplicities into copies. Empty arc inputs use the zero-safe flow carrier; no capacity
+maximum is needed to manufacture an infinity bound.
+
+## ORACLE-068 — Coverage, independent checking, and the completion boundary
+
+**Classification:** `LOCAL_CONTRACT_FIXTURE` / audit ledger, not a global solver claim.
+
+### Fixture table: FIXED_COUNTS
+
+| metric | value |
+| --- | --- |
+| `'raw_networks'` | `6` |
+| `'reduction_fixtures'` | `29` |
+| `'feasible_reduction_fixtures'` | `22` |
+| `'literal_lift_rows'` | `67` |
+| `'problem_fixtures'` | `14` |
+| `'problem_shore_rows'` | `51` |
+| `'ordinary_trace_rows'` | `40` |
+| `'arbitrary_tie_trap_rows'` | `21` |
+| `'stats_anchors'` | `8` |
+| `'seam_cases'` | `24` |
+| `'rejection_declarations'` | `122` |
+| `'valid_record_declarations'` | `14` |
+
+
+| Prospective obligations | Catalogue evidence |
+|---|---|
+| PC1--PC4 record shapes and validation order | ORACLE-056--058 |
+| PC5--PC9 contraction, XOR, toggle, lifting, correspondence | ORACLE-057--059, ORACLE-065 |
+| PC10 zero/infeasible and standalone boundary | ORACLE-060, ORACLE-063--065 |
+| PC11--PC14 pair coordinates, least minimizers, exact deterministic optimum | ORACLE-060--062, ORACLE-064 |
+| PC15--PC16 separate stats, zero-safe and scaled cases | ORACLE-063--064, ORACLE-067 |
+| PC17 source-residual seam and preserved offsets | ORACLE-066 |
+| PC18--PC19 isolation, structure, nonmutation and negative controls | This entry plus all audit bindings |
+| PC20 narrow conformance, future branch/certificate boundaries | This entry |
+
+The package's independent definition-level audit imports no production, verifier, flow,
+consuming tests, or external graph library. It verifies the historical catalogue prefix,
+every fixed human table against its JSON transcription, direct finite objective minima,
+GR least-query candidate equivalence, terminal/forcing bijections, and input nonmutation.
+Counter declarations and shape rejection declarations are distinct from production execution.
+A separate optional compatibility check of the already-closed flow backend is reported
+separately and never supplies expected parity values.
+
+Future tests must verify validation phase order, actual minimum_cut invocation counts,
+actual FlowStats sums, input nonmutation, immutable record behavior, and source/import/work
+restrictions. No production all-shore enumeration is authorized by using it in these oracles.
+In-memory audit mutations must reject changed classes, terminal XOR/toggle mistakes, lost
+zero pairs/opposite arcs, wrong temporary/base lifting, wrong least minimizers, wrong ties,
+wrong None handling, incorrect fixed counts, and shift mistakes without editing live source.
+
+Only after implementation GREEN, full independent auditing, and frozen-test satisfaction
+may PC20 add the narrowly scoped lem:parity-anchor and thm:GR rows plus an engineering note.
+Existing lem:ek, lem:sign-routing, and all previous conformance statuses remain unchanged at
+this oracle step. Complete thm:branch-oracle, outer solvers, witness and certificate claims,
+and global bit-growth/experiments are not discharged by these finite fixtures.
+
+**Unit 11 oracle status:** expected values derived from pinned mathematical definitions
+and the adopted DESIGN/TEST_PLAN, independently checked before `tests/test_parity_cut.py`
+or `exactfrac/parity_cut.py` exists. No Unit 11 production or consuming-test code is
+created, staged, committed, or treated as an authority by this catalogue addition.
