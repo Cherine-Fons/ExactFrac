@@ -14,6 +14,8 @@ done until its row exists and its test is green.
 | prop:domain-decomp | each generated atomic-family union equals its literal `prop:branch-transform` domain; overlap is allowed and no partition claim is made | tests/test_families.py::test_cover; tests/test_families.py::test_oracle_026_rich_cover_multiplicities_preserve_overlap | green |
 | lem:ek | zero-arc totalization; exact minimum and inclusionwise-minimal source shore; O(NE) augmentations and uniform O(N+NE^2) operations | tests/test_flow.py (TEST_PLAN FL1-FL12) | green |
 | lem:sign-routing | on production Instance inputs, the uncontracted nonnegative cut representation satisfies cut_capacity(X_U) = a*b_q(U) + sum_U gamma + C_minus; no minimization claim | tests/test_sign_routing.py::test_sign_routing_identity | green |
+| lem:parity-anchor | on supported SignRoutedNetwork/AtomicFamily inputs, forced contraction and parity anchoring give a cut-value-preserving bijection between family shores and odd reduced source/sink shores | tests/test_parity_cut.py::test_parity_anchor_correspondence | green |
+| thm:GR | exact minimum odd-terminal source/sink cut on validated nonnegative directed ParityCutProblem inputs using closed least ordinary cuts; deterministic first retained GR candidate | tests/test_parity_cut.py::test_minimum_parity_cut | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
 | prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | planned |
 | prop:branch-correct | accelerated loop terminates with the exact branch optimum | tests/test_branch.py::test_accelerated | planned |
@@ -315,3 +317,108 @@ done until its row exists and its test is green.
   A constructed network or recovered scalar certifies neither admissibility, attainment,
   nor global optimality. The complete three-file staged tree still requires isolated
   verification, atomic commit, and remote closure under TEST_PLAN section 26.
+
+## Unit 11 atomic-family parity-cut implementation note
+
+- The new `lem:parity-anchor` and `thm:GR` rows are the narrowly scoped rows authorized by
+  DESIGN 4.8.16 and TEST_PLAN PC20/section 28. They record executable conformance for the
+  supported forced-family transformation and exact reference parity-cut minimizer. The
+  governing source supplies the mathematical proofs; finite tests do not prove the universal
+  statements. The GR row covers this cut specialization, not a general submodular optimizer.
+  Every previous theorem row and status is unchanged.
+- `exactfrac.parity_cut` owns ParityCutProblem, ParityCutResult, ParityCutStats, and the three
+  functions reduce_atomic_family, lift_source_shore, and minimum_parity_cut. Frozen/slotted
+  structural records, exact built-in types, and plain ValueError enforce their stated shapes.
+  Record validity is not provenance from a family or an independent cut/optimality certificate.
+  ParityCutResult alone cannot validate its finite upper universe, terminal parity, or value
+  attainment without a problem. Normally constructed frozen records are trusted by consumers.
+- Original vertices use 0..n-1, original source/sink n/n+1, and optional anchor n+2. Reduced
+  source/sink are 0/1. Canonical classes contain their complete original preimages; remaining
+  original vertices are increasing singletons. Ordinary pair queries have a THIRD temporary
+  coordinate system. Their backend shores are lifted to the base reduced problem BEFORE
+  parity filtering; public lifting to original U is a separate later operation.
+- Reduction checks exact network/family types and finite T/I/O masks before invoking the
+  closed family.is_nonempty predicate or scanning capacities. Well-shaped infeasible families
+  return None; malformed inputs raise ValueError. Constructor-bypassing forgeries are outside
+  the public contract. Backend exceptions propagate; they are not converted to infeasibility.
+- Capacity transport removes mapped loops, sums parallel ORIGINAL directed capacities, and
+  emits encountered ordered pairs in increasing order, retaining zero sums. Opposite original
+  arcs remain distinct; no division by two, artificial infinity, or anchor edge is introduced.
+  pi=0 places one isolated parity-anchor token in the forced source class; pi=1 places none.
+  Contracted terminal tokens aggregate by XOR. Odd total terminal cardinality toggles sink
+  bit 1 by symmetric difference, including removal of an existing sink token. Both geometric
+  lifting and the odd-terminal/original-family parity equivalence preserve cut capacity.
+- Lifting accepts either terminal parity of a valid reduced source/sink shore and strips all
+  auxiliary bits. It performs no minimization or cut calculation. minimum_parity_cut returns
+  an unshifted nonnegative cut value and reduced-coordinate shore, with separate diagnostics.
+  A zero terminal mask returns (None, zero stats) without graph access. Empty arcs, all-zero
+  capacities, disconnectedness, or an ordinary candidate of wrong parity are not infeasibility.
+- For nonzero even terminals, all compatible pairs execute in increasing inside/outside order:
+  inside != sink, outside != source, inside != outside. There are N*N-3*N+3 actual ordinary
+  calls, including one when N=2. Each query consumes the closed backend's inclusionwise-minimal
+  ordinary minimum source shore; an arbitrary tied ordinary minimizer is insufficient. Lifted
+  odd candidates update the incumbent only on strict value improvement. No zero early exit,
+  pair elimination, or secondary mask/cardinality key is used. The selected parity optimum is
+  deterministically first retained, not claimed to be the inclusionwise-minimal parity optimum.
+- Stats count actual calls, sum backend augmentations and bfs_scans, and take the maximum
+  backend peak_generated_value, or zero for no calls. The peak is FLOW-ONLY: it excludes
+  contraction sums, masks, and other non-flow integers. Diagnostics do not influence selection,
+  parity, or infeasibility and are not certificate fields or global peak_integer_bits telemetry.
+- The frozen R1 file supplies the following 28 principal tests under ORACLE-056--068. Other
+  than the two scoped rows above, this is an engineering-obligation mapping. Literal expected
+  records come from the committed human-readable catalogue; the consuming tests do not read
+  private handoff JSON. Expected parity minima, capacities, and least ordinary shores are
+  independently enumerated, never seeded from production results. Diagnostic observation is
+  used only for the backend-aggregate checks that PC15 expressly requires.
+
+| Production obligation | Principal tests in `tests/test_parity_cut.py` |
+|---|---|
+| PC1--PC3: public surface, immutable records, exact shapes and finite universes | `test_public_surface_signatures_and_annotations`; `test_records_are_frozen_slotted_structural_and_not_certificates`; `test_all_fourteen_registered_valid_record_declarations`; `test_all_122_registered_exact_valueerror_cases`; `test_supplementary_hostile_exact_types_and_record_guard_order` |
+| PC4: closed validation and logical feasibility before capacity work | `test_reduction_uses_closed_guards_before_predicate_and_capacity_scan` |
+| PC5--PC8: literal contractions, zero/parallel transport, anchor/XOR/toggle and full correspondence | `test_fixed_contractions_exact_classes_arcs_and_raw_order_invariance`; `test_anchor_xor_and_sink_toggle_have_literal_distinct_meanings`; `test_parity_anchor_correspondence` |
+| PC9: either-parity lifting, closed finite-mask checks and trusted-record boundary | `test_lifting_all_literal_rows_in_both_parities_without_graph_access`; `test_lift_closed_mask_validation_and_constructor_trust` |
+| PC10--PC14: literal minima, no-terminal shortcut, full pair order, least shores and coordinate/tie traps | `test_literal_minimum_results_shores_and_separate_stats`; `test_zero_terminal_shortcut_does_not_read_arcs_or_call_flow`; `test_fixed_query_traces_and_least_backend_shores`; `test_all_compatible_pair_orders_including_zero_value_early_exit_trap`; `test_coordinate_trap_filters_only_after_temporary_to_problem_lifting`; `test_arbitrary_tied_minimizers_are_not_an_admissible_backend`; `test_minimum_parity_cut` |
+| PC15/PC18: separate exact diagnostics, error propagation and no hidden reconstruction | `test_diagnostic_anchors_and_flow_only_peak`; `test_diagnostics_cannot_select_a_different_tied_candidate`; `test_backend_exceptions_propagate_instead_of_becoming_infeasibility`; `test_consumer_does_not_reconstruct_its_valid_problem` |
+| PC14/PC16--PC17: scaling, source-residual seams, retained shifts and label/order independence | `test_fixed_large_capacities_and_raw_positive_scaling`; `test_source_residual_family_seams_and_shift_ownership`; `test_original_labels_and_raw_arc_order_do_not_change_tied_choices` |
+| PC18--PC19: exact-source/finite-work guards, negative controls and fresh import isolation | `test_source_exactness_dependencies_and_finite_work_guards`; `test_source_guard_negative_controls_cover_previous_unit_gaps`; `test_fresh_process_import_isolation` |
+
+- The frozen tests exercise all 14 valid-record and 122 rejection declarations, 29 contraction
+  fixtures/67 literal lifting rows, 14 problem fixtures/51 shore rows, 40 ordinary-query trace
+  rows, and the 21-query arbitrary-tie trap. The family corpus covers 18,720 descriptors,
+  15,612 geometric lifting checks, and 9,360 odd-shore images, including 554 sink removals.
+  The graph corpus covers 4,164 graphs, 33,032 terminal problems, 131,592 source shores, and
+  201,284 actual ordinary calls. None and zero optima remain separate in these finite counts.
+- The separate handoff implementation audit does not import the consuming test, verifier,
+  or private JSON. It independently enumerates expected minima and least ordinary shores,
+  checks the same graph/family corpus and every actual ordinary query's construction/order,
+  and additionally performs 134 supplementary exact-ValueError/hostile-object checks, seven
+  standalone anchors with 42 calls, one raw-order/shift check, two diagnostic/backend-boundary
+  checks, and 11 large-capacity/raw-scaling/130-vertex correspondence cases. Corpus overlap
+  between the test and separate audit is not counted as disjoint coverage. The implementation
+  package also records rejection of 16 faulty source variants and one nonleast-backend control;
+  these finite mutation controls do not establish freedom from every possible defect.
+- Before this documentation change, the live gate pinned implementation R1, frozen test R1,
+  and all 30 base files to 28 targeted tests, 467 full-suite tests, live source preflight,
+  repository Ruff, independent implementation audit, and input/source nonmutation passing.
+  The 30-base-file statement describes that PRE-NOTE state. This authorized CONFORMANCE edit
+  does not rewrite it or make its old manifest an assertion about the post-note repository.
+- Source review retains the ruled integer-operation carriers: O(n+E_in log(E_in+1)) initial
+  reduction, O(N) public lifting, and zero-safe O(N^3*(1+E^2)) nonzero-terminal minimization
+  including closed flow calls. One temporary graph is processed at a time with O(N+E)
+  auxiliary integer records; empty terminals use the constant-operation shortcut. Capacity
+  sums are bounded by the supplied total and mask lengths by explicit universes. These are
+  operation/record and encoding arguments, not timing guarantees or constant-byte-memory
+  claims. No outer branch/global complexity theorem or bit-growth experiment is promoted.
+- The original Unit 10 network retains negative_shift and constant; reduction adds no shift.
+  The 24 source-residual seam cases recover cut_value-negative_shift+constant and independently
+  check B*c_j(U)-A*h_j(U) over the SAME permitted family. This local composition does not
+  implement ExactBranchMin, enumerate/select all branch families, or discharge thm:branch-oracle.
+  Unit 12 still owns original-shore reconstruction, exactly-once shift recovery, and independent
+  source-residual re-evaluation before comparisons in that integrated oracle.
+- Unit 10's historical deferrals of forced contraction/parity minimization receive the scoped
+  evidence here; all other deferrals remain. lem:ek, lem:sign-routing, and all earlier rows
+  retain their existing text/status. No ratio/endpoint, branch/global solver, certificate,
+  Standard/Accelerated, telemetry, or outer bit-growth obligation is marked complete. A local
+  exact parity minimum is not an independent admissibility, attainment, or global-optimality
+  certificate. The three-file staged tree still requires isolated verification, atomic commit,
+  and synchronized remote closure under TEST_PLAN section 28 before Unit 11 is closed.
