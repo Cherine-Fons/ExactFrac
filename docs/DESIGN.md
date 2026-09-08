@@ -1272,6 +1272,268 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         No Unit 11 record is an independent admissibility, attainment, or optimality certificate.
         Follow the tests-first and atomic closure order in the appended Unit 11 completion gate.
 
+4.9 Production exact branch residual oracle
+    (RULED — Unit 12 authority R1, 2026-09-08)
+    1. Source binding and scope. exactfrac/oracle.py implements alg:branch-min and the
+       composed fixed-parameter contract of thm:branch-oracle. Its mathematical inputs are
+       an active Instance, branch j in {0,1,2,3}, and lambda=A/B with B>0. Its task is an
+       exact minimum of B*c_j(U)-A*h_j(U) over the ORIGINAL branch domain D_j, or None iff
+       that domain is empty. This is not minimization of c_j/h_j and is not a branch loop.
+       The numerical identities and domains are those of prop:branch-transform;
+       prop:domain-decomp supplies their complete ordered covers. Sections 4.6--4.8 and
+       the closed family, rational, and shore-sum interfaces are dependencies, not replaced
+       algorithms. No code, consuming test, oracle fixture, or CONFORMANCE row lands in
+       this authority step. This subsection is added without changing preceding rulings.
+
+    2. Public surface and parameter-free preparation. The Ruff-sorted __all__ is exactly
+         ("BranchOracleContext", "BranchOracleResult", "BranchOracleStats", "exact_branch_min").
+       Public signatures (ordinary positional-or-keyword arguments, no mode/defaults) are
+         BranchOracleContext(instance: Instance) -> None
+         BranchOracleResult(shore: int, c: int, h: int, residual: int) -> None
+         BranchOracleStats(atomic_families_examined: int, atomic_families_feasible: int,
+             parity_cut_calls: int, ordinary_min_cut_calls: int, flow_augmentations: int,
+             flow_bfs_scans: int, flow_peak_generated_value: int) -> None
+         exact_branch_min(context: BranchOracleContext, branch: int, parameter: RawPair)
+             -> tuple[BranchOracleResult | None, BranchOracleStats].
+       All three classes are frozen, slotted dataclasses with structural equality/hash,
+       no generated ordering, and no user-supplied field defaults. Package __init__ stays
+       export-free. There is no alternative Instance-only query signature, arbitrary-family
+       argument, backend selector, batch query, coefficient adapter, or public evaluator.
+       The prepared context is an engineering interface for sharing the already-ruled
+       enumeration once; it is not a new mathematical oracle input or an optimization.
+
+    3. Context provenance and construction. BranchOracleContext stores exactly instance
+       and families, in that order. instance has annotation Instance; families has annotation
+       tuple[tuple[AtomicFamily, ...], ...], declared field(init=False). The constructor first
+       requires type(instance) is Instance. It then calls the closed enumerate_atomic_families
+       exactly once and stores its complete four-tuple verbatim as families. That dependency
+       supplies normally constructed, finite-universe descriptors in the orders of section
+       4.3A. No caller may supply, truncate, replace, reorder, filter, or deduplicate a family
+       tuple through this constructor. Assigning the derived init=False field during
+       __post_init__ is permitted via object.__setattr__ ONLY for families at that point;
+       no subsequent mutation, hidden cache, parameter state, or global registry is allowed.
+       The Instance itself is retained, not copied, coerced, reaggregated, or revalidated
+       for the active condition. Labels play no algorithmic role. Wrong constructor arity
+       (including an attempted families argument) retains Python behavior. A context can
+       be reused across all four branches and any valid parameters. Context construction
+       has its own explicit work charge in item 16; it is never silently repeated inside
+       exact_branch_min. A complete, source-bound cover is not established by type-checking
+       an arbitrary tuple, so an external tuple-of-families injection API is not provided.
+
+    4. Result validity and meaning. BranchOracleResult stores exactly (shore,c,h,residual).
+       In that declaration order, require exact built-in int shore>0, signed exact int c,
+       exact int h>0, and signed exact int residual. Reject bool and numeric subclasses.
+       No instance, branch, parameter, family index, cut graph, witness, or diagnostic data
+       is stored. Without those inputs the constructor cannot verify the shore's upper
+       universe bound, branch membership, the c/h formulas, or the residual equality.
+       Normally returned results guarantee all of them by items 10--12. The record itself
+       is not an independent certificate. A standalone zero/negative c or residual is valid;
+       h is not reduced against c, and the raw integers are not normalized or rescaled.
+       Infeasible is None, never a fake shore, zero tuple, Empty witness, or exception for
+       a normally formed empty branch. All four D_j exclude the empty original shore.
+
+    5. Separate statistics. BranchOracleStats validates its seven declared fields, in
+       declaration order, as exact built-in nonnegative ints. Its read-only property
+       max_flow_calls returns ordinary_min_cut_calls, because the reference parity layer
+       invokes one closed max-flow per ordinary cut; do not store a duplicate counter.
+       Arbitrary constructor values do not assert observed work or enforce relationships
+       among fields. On a successful query, atomic_families_examined is the length r_j of
+       context.families[j], including empty and repeated descriptors; atomic_families_feasible
+       counts the k_j descriptors whose closed is_nonempty predicate is true; parity_cut_calls
+       equals k_j. ordinary_min_cut_calls is the sum of their ParityCutStats.mincut_calls;
+       flow_augmentations and flow_bfs_scans are sums; flow_peak_generated_value is the
+       maximum of their flow-only peaks, or zero when there are no calls. No counters
+       influence feasibility, shore/value selection, equality handling, or residual checks.
+       This record does not count preparation, integer bit growth outside flow, elapsed
+       time, outer iterations, or look-ahead. Section 8 SolveStats integration is deferred.
+       atomic_families_examined is not renamed atomic_families_enumerated: construction
+       occurred earlier in the context and must not be counted again on every query.
+
+    6. Consumer validation and errors. exact_branch_min checks type(context) is
+       BranchOracleContext, then type(branch) is int with branch in (0,1,2,3), then calls
+       the closed validate_pair(parameter), before inspecting a selected family, testing
+       its emptiness, or doing graph-dependent arithmetic. Thus invalid parameters still
+       raise on an empty branch. Malformed public data through the ruled signatures raises
+       exact built-in ValueError; no custom exception, coercion, or repair is introduced.
+       Reject float/Fraction/ExactValue substitutes, bool, integer/tuple/record subclasses,
+       iterators, and duck-typed objects where exact types are required. Wrong arity and
+       frozen mutation retain Python behavior. Normally constructed immutable records are
+       trusted after exact type checks; constructor-bypassing forgeries are outside scope.
+       Do not catch arbitrary exceptions from closed dependencies. In particular a backend
+       failure is not None or user-input ValueError. Explicit violated internal promises
+       identified below raise RuntimeError, not false infeasibility or a silently skipped
+       candidate; successful diagnostics/results are not returned after such a failure.
+
+    7. Source domains and raw forms. For an original finite-universe shore U, obtain
+       s=shore_f(instance,U), b=shore_b_q(instance,U), d=shore_d_q(instance,U) using the
+       closed witness-module SUM HELPERS only. These helpers re-read original Instance
+       records, not contraction classes, gamma coefficients, cut values, or residual arcs.
+       Do not import/use Witness, ExactValue, witness validation, or witness_value here.
+       The domain tests and literal integer pairs are
+         j   membership in D_j                          c_j           h_j
+         0   (s+b) odd                                  s+b-1         d+1-s
+         1   (s+b) even, b>=1, d-s>0                     s+b-2         d-s
+         2   s odd, s>=3                                b-d           s-1
+         3   s even, b>=1                               b-d-2         s.
+       This table is the original-shore evaluator, independent of the sole gamma/constant
+       construction in section 4.7.6. Never derive c,h by reversing the recovered cut
+       expression. Do not turn these pairs into ExactValue or normalize with gcd/Fraction.
+       h_j>0 is an explicit check at the domain-owning seam, not silently repaired by a
+       scalar factory. The polynomial extensions outside D_j remain source identities,
+       but no result outside D_j is admitted. There is no ratio comparison at this layer.
+
+    8. Fixed family traversal and empty cases. Select context.families[branch] by index;
+       do not call the family enumerator again. Traverse every descriptor in its stored
+       order. Use family.is_nonempty as the one closed nonemptiness predicate, not a
+       locally duplicated formula. Empty descriptors are counted as examined and skipped
+       before graph construction/reduction/minimization. Retain overlapping and repeated
+       descriptors. If the tuple is empty return (None, all-zero stats) after input
+       validation. If it is nonempty but all descriptors are empty, return None with
+       examined=r_j and all other fields zero. There is no graph scan or cut call in these
+       cases beyond the already-paid context preparation. Do not reinterpret either case
+       as the global empty-admissible-family output or invoke the unit-witness baseline.
+
+    9. One network per nonempty query; no graph leakage. Lazily, upon the first nonempty
+       descriptor, call branch_coefficients(instance,branch,parameter) exactly once and
+       build_sign_routed_network(instance,coefficients) exactly once. Retain THAT original
+       network for all descriptors of this query. Its coefficients and arcs do not depend
+       on the atomic family; hoisting this pure identical construction is the adopted
+       engineering specialization of the source loop. No network survives into another
+       parameter query, and the context stores none. Preserve the original separate
+       negative_shift and constant. Do not cache a contracted problem across families,
+       build the network for all-empty branches, or duplicate the gamma/constant table.
+       The original network has n+2 nodes and exactly 2*(m+n) directed arc records.
+
+    10. Per-family constrained minimum and original coordinates. For every descriptor
+        passing is_nonempty, call reduce_atomic_family(network,family), then
+        minimum_parity_cut(problem), exactly once each. Because this descriptor is
+        nonempty, an unexpected None problem or None parity result is RuntimeError,
+        not a reason to discard a feasible family. Never substitute ordinary minimum_cut
+        for minimum_parity_cut or enumerate all original shores in production. The
+        temporary-query/least-ordinary-cut discipline remains owned by the parity layer.
+        Lift the returned problem-coordinate source shore with the closed
+        lift_source_shore(problem,result.source_shore). This is the only result shore
+        used by the branch evaluator. Check it against the original n with validate_shore,
+        then check (U & family.I)==family.I, (U & family.O)==0, and
+        ((U & family.T).bit_count() & 1)==family.pi. The membership check is an assertion
+        about this returned candidate, not another family nonemptiness algorithm.
+        A finite but membership-invalid original shore is RuntimeError. An exception
+        from the closed lifting/universe validator propagates instead of becoming None.
+
+    11. Evaluate first, recover once, compare only matching residuals. On each lifted
+        original U, compute the three original sums and the literal c,h from item 7.
+        Require the exact source domain condition and h>0, otherwise RuntimeError.
+        Recompute raw= residual_numerator(parameter,c,h), i.e. B*c-A*h, with the closed
+        rational helper. Separately call recover_objective(original_network,cut_value)
+        exactly once for this candidate. The latter returns
+          cut_value - original_network.negative_shift + original_network.constant.
+        Require raw==recovered, otherwise RuntimeError. Contraction added no shift;
+        do not subtract C_minus from raw, add constant twice, divide by B, fold offsets,
+        or recover using another family's/parameter's network. The selected residual is
+        raw, not an unverified cut value. This seam check is an internal consistency
+        obligation; it is not an independent min-cut or density-optimality certificate.
+
+    12. Incumbent and returned minimizer. Initialize best=None. After all candidate checks,
+        accept the first feasible candidate or replace it only when raw<best.residual.
+        On equality retain the incumbent without consulting h,c,shore cardinality/mask,
+        family index, diagnostics, bit length, or another quantity. No early return on
+        negative residual, zero residual, or a zero cut. After the full stored sequence,
+        return (best,stats). A returned result has original shore in D_j, its literal
+        c_j,h_j, and minimum raw residual over D_j. Mathematical permission for any exact
+        argmin is unchanged; first retention only specializes reproducibility. Do not
+        claim an inclusionwise-least parity/branch optimum or lexicographically least
+        original shore. With closed correct dependencies, best is absent iff k_j=0.
+
+    13. Raw-parameter, supergradient, and downstream handoff. A can be negative, zero,
+        or positive; B is strictly positive and the submitted pair need not be reduced.
+        For fixed (A,B), raw=B*(c-lambda*h), so minimizing raw is equivalent to minimizing
+        the rational residual. For a returned U, F_j(lambda)=raw/B and -h is a valid
+        supergradient as in lem:argmin-supergradient; these equalities do not authorize
+        division or an outer Newton update here. A downstream caller explicitly retains
+        its submitted B and extracts c,h from the result. Across differently encoded
+        denominators, raw residual magnitudes are NOT directly comparable. Replacing
+        (A,B) by (k*A,k*B), k>0, retains the deterministic shore,c,h and multiplies raw by k;
+        it does not imply constant bit cost or a new general diagnostic invariance claim.
+        For another parameter, rebuild the uncontracted network; never reuse prior shifts.
+
+    14. Exact dependencies and source discipline. Permitted direct imports are optional
+        future annotations; dataclasses.dataclass and field; Instance; AtomicFamily and
+        enumerate_atomic_families; RawPair, validate_pair, residual_numerator; validate_shore;
+        branch_coefficients, build_sign_routed_network, recover_objective (and their record
+        classes for annotations); reduce_atomic_family, minimum_parity_cut, lift_source_shore
+        (and their record classes for annotations); shore_f, shore_b_q, shore_d_q. No direct
+        flow calls, verifier/test/private-JSON imports, outer branch/solve/certificate modules,
+        external optimizer, reflection/Newton helper, filesystem/I/O, randomness, recursion,
+        float literal/conversion, Fraction, division, remainder reduction, gcd, epsilon,
+        big-M, or scalarized tie objective. Bit-parity tests use finite masks. No algorithmic
+        set iteration or unsorted set-derived selection. No loop depends on q,f,A,B,Q,
+        their magnitude/bit length, or a denominator search. Closed dependency imports
+        remain permitted transitively without expanding this direct-import whitelist.
+
+    15. Correctness chain to be audited. Context preparation fixes the complete source
+        cover; empty-descriptor skipping preserves its union. For each remaining family,
+        sign routing changes its residual by a fixed known shift, and Unit 11 preserves
+        both constrained shores and cut capacities. The least-ordinary-cut GR specialization
+        supplies a true minimum over that same family. Original lifting and direct source
+        re-evaluation identify its raw residual. A strict minimum across the entire cover
+        therefore returns an allowed ExactBranchMin argmin, with positive h from the
+        domain theorem. Finite tests challenge each seam separately; a GREEN count is not
+        a universal proof, and correct arithmetic alone does not prove completeness of
+        a user-supplied partial cover (hence item 3).
+
+    16. Preparation versus per-query work. Write r_j=len(context.families[j]) and
+        R_all=sum(r_j for j in (0,1,2,3)); by section 4.3A,
+          r_0=1, r_1=2*|P|*m, r_2=|A|+binom(|W|,3), r_3=2*m.
+        A BranchOracleContext pays O(n+m+R_all) integer/comparison operations and
+        O(R_all) descriptor records ONCE. Shared immutable Instance storage is not copied.
+        Do not charge this all-branch preparation to r_0 or hide it in a per-branch bound.
+        Per valid query, validation/empty handling costs O(1+r_j); if k_j>0, network
+        construction costs O(n+m) once, and each feasible family costs at most
+        O((n+3)^3*(1+(m+n)^2)) including reduction, zero-safe parity minimization, lifting,
+        direct shore sums, and consistency checks. Since a production Instance has n>=2,
+        m>=1, the uniform per-query carrier is
+          O(1 + r_j*(n+3)^3*(m+n)^2),
+        agreeing with thm:branch-oracle for r_j>=1 and explicitly totalizing the zero-
+        descriptor case. Context construction is a separately counted front-end step.
+        ordinary_min_cut_calls equals the sum of N_F*N_F-3*N_F+3 over the k_j feasible
+        reduced problems; N_F<=n+3. Thus it is at most k_j*(n+3)^2. All query families
+        process sequentially, retaining only one original network, one reduced problem,
+        one current result and incumbent: O(n+m) auxiliary integer records beyond the
+        context and the input. No collection of all candidate shores/graphs is retained.
+        These are structural operation/record bounds, not bit-time or constant-byte claims.
+
+    17. Number-size carrier, separate from counters. Let Q=sum(q_e). The active input gives
+        0<=s<=d<=2Q and 0<=b<=Q on every original shore. Safe uniform bounds are
+          abs(c_j)<=3Q+2, abs(h_j)<=2Q+1,
+          abs(B*c_j-A*h_j)<=B*(3Q+2)+abs(A)*(2Q+1).
+        With B>0 and d_q(v)<=Q, the coefficient table gives
+          abs(gamma[v])<=(2*abs(A)+B)*Q, abs(constant)<=abs(A)+2*B.
+        The original directed network's total capacity is
+          S=2*B*Q + 2*sum(abs(gamma[v]) for v in V).
+        C_minus<=sum(abs(gamma[v])). Contractions only drop loops and sum subsets of
+        original capacities; their capacities and the closed flow values/residual
+        capacities are bounded by S. Signed recovery, raw c/h/residuals, and O(n)-bit
+        masks therefore have polynomial bit length in L+bits(A)+bits(B). Counts and
+        flow-only stats add at most structural logarithmic factors. This source-bound
+        derivation covers the composed query; it does not instrument every generated
+        integer, discharge the outer lem:standard-bits/lem:bitgrowth obligations, or make
+        flow_peak_generated_value a complete peak_integer_bits measurement.
+
+    18. Evidence order and CONFORMANCE boundary. Register Unit 12 literal branch-domain
+        minima, c/h/raw results, family order/counts, empty cases, signed parameters,
+        shift/coordinate failures, and hand-derived diagnostic/call expectations BEFORE
+        consuming tests. Expected minima come from original-record source-domain shore
+        enumeration, not production family/flow/oracle output or the global density
+        verifier. Freeze tiny corpus domains/counts before code. After tests-first GREEN
+        and a separate definition-level audit, permit a narrowly scoped thm:branch-oracle
+        CONFORMANCE row mapped to test_exact_branch_min, with the preparation/query
+        accounting and polynomial-number-size review stated separately from finite tests.
+        Preserve all prior rows/statuses. Do not promote prop:branch-transform's ratio
+        claims, outer branch correctness/invariants/iteration bounds, global correctness,
+        certificates, or peak-bit experiments. Standard/Accelerated outer loops, global
+        H2/unit witness/comparison/reconstruction, and certificate construction/verification
+        remain later units. Follow the appended Unit 12 completion gate exactly.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin

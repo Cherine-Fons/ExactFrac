@@ -2515,3 +2515,280 @@ Then, in order:
 This authority establishes no runtime implementation merely by being committed. Source
 intake calculations and private mathematical controls are not the later committed oracle
 corpus, a tests-first record, or production completion evidence.
+
+## 29. Unit 12 — integrated exact branch residual oracle
+
+Source authority: `alg:branch-min`, `thm:branch-oracle`, `prop:branch-transform`,
+`prop:domain-decomp`, and the composed `lem:sign-routing`, `lem:parity-anchor`,
+`thm:GR`, `lem:ek` contracts pinned by SPEC_LOCK. Engineering authority: DESIGN
+§4.9 with §§4.3A, 4.5A, 4.6, 4.7, and 4.8. This section is prospective; it creates
+no production implementation or executed conformance claim.
+
+The production owner is `exactfrac/oracle.py`; the consuming test is
+`tests/test_oracle.py`. A fixture is a FIXED-PARAMETER BRANCH_ORACLE, not a global
+modified-density optimum. Existing oracles, source files, tests, and CONFORMANCE
+rows stay unchanged until the specific Unit 12 completion steps authorize additions.
+
+### BO1 — public records, function signature, and exact shapes
+
+Freeze the four sorted exports in DESIGN §4.9.2. Test exact field order, annotations,
+constructor signatures, slots, frozen mutation behavior, structural equality/hash, and
+absence of generated ordering and package-root exports. The context takes only one
+Instance; `families` is `init=False`, not an optional caller parameter. Result fields
+are `(shore,c,h,residual)`. Stats has seven declared counters plus the derived
+`max_flow_calls` property, not a stored duplicate. The query returns an exact two-tuple
+of result-or-None and separate stats, never a density witness, raw pair, dictionary,
+backend object, or global-empty result. Enumerate malformed field cases before code.
+
+### BO2 — prepared context binds a complete canonical cover
+
+Use independent catalogue rows to fix all four tuples, their order, exact counts,
+empty descriptors, overlaps, and repetitions. Observe exactly one closed enumerator
+invocation during construction; the resulting tuple and Instance are retained without
+copying/reordering/filtering. No parameter, coefficient vector, network, incumbent,
+result, or mutable cache is stored. A caller cannot inject a partial/reordered family
+tuple through normal construction. Test attempted extra constructor arguments and
+frozen mutations with their normal Python exception types. Reconstructed contexts via
+normal construction must recompute the complete cover, not retain stale families.
+Do not mistake rejection of a caller tuple for a new mathematical restriction.
+
+### BO3 — validation precedence, including empty branches
+
+Test context exact type, then branch exact int/range, then the closed raw-pair guard,
+in that order before graph work or family emptiness inspection. Context construction
+checks exact Instance first. Public malformed data raises exact built-in ValueError;
+wrong arity/frozen mutations retain Python behavior. Cover bool, numeric/record/container
+subclasses, lists, generators, Fraction, ExactValue, floats, coercible/hostile objects,
+negative and zero denominators, and wrong tuple lengths. Isolate each guard by satisfying
+all earlier guards. Repeat invalid parameter cases on branches with no descriptors and
+on nonempty tuples of entirely empty descriptors; neither is an invalid-input bypass.
+
+### BO4 — direct source domains and literal c/h
+
+The independent expected calculator reads only canonical original records and applies
+DESIGN §4.9.7. Compute s from f, b by crossing support edges, and d by incident weights;
+do not use production shore sums, gamma coefficients, family generation, or flow results
+to establish expected values. On returned shores check the exact source domain, c,h,
+h>0, and raw=B*c-A*h. Include negative c on high-end branches, unreduced positive c/h,
+full original shores allowed by the source domains, and exclusion of empty original U.
+Do not replace source domains with stronger density-witness or endpoint constraints.
+
+### BO5 — fixed literal branch minima and independent full-domain oracle
+
+Before consuming code, register literal Instance/branch/(A,B) rows with branch-domain
+shores, their raw c/h/residuals, exact minimum value or None, and the specified deterministic
+winner where tied. Include positive, zero, and negative A in all four branches and at
+least one B>1 nonintegral parameter. Build the tiny corpus from explicit domains/counts
+fixed in ORACLE_CATALOG. For each valid row independently enumerate original shores
+and test membership in D_j directly. Mathematical correctness permits any exact argmin;
+assert a particular winner only where the engineering selection is independently fixed.
+A global compact-density brute verifier is not the oracle for these transformed residuals.
+
+### BO6 — selected family sequence, counts, and completeness
+
+Register r_j and the feasible-descriptor count k_j for every count anchor. Observe exactly
+the selected context tuple in stored order, not all four lists, sorted copies, unique
+sets, or a clipped prefix. `atomic_families_examined=r_j` includes skipped/repeated entries.
+Test a genuine optimal shore that occurs only in a late family to kill omission/early
+exit. Independent source-domain enumeration must detect an incomplete cover even when
+all returned candidates are individually legal. Context preparation is checked separately
+from query work; calling the enumerator during a query fails the test.
+
+### BO7 — mathematical emptiness versus zero/negative minima
+
+Cover a zero-length D1/D2 tuple, D0's single empty descriptor, D3 nonempty lists with no
+feasible shores, overlapping forced masks, and parity-empty descriptors. None iff D_j
+is empty. Empty cases have no coefficient/network/reduction/parity calls and zero flow
+counters, but preserve the r_j examined count. Include active Q=1,f=(1,1) as an anchor
+for all four empty branches. A zero residual, negative residual, zero cut, or no flow
+augmentation in a feasible branch is not None. No unit/global Empty fallback is allowed.
+
+### BO8 — exactly one lazy uncontracted network per nonempty query
+
+Observe no coefficient or builder call until the first nonempty descriptor and exactly
+one of each when k_j>0, even with repeated/overlapping families. The construction uses
+the submitted raw parameter and the sole closed coefficient table. Keep the same original
+network identity for all reductions and recoveries in this query. A second parameter query
+must construct a fresh network; there is no context or module cache. Do not compare
+expected coefficient/shift values with data seeded from the builder under test.
+
+### BO9 — constrained minimization is not unrestricted ordinary cut
+
+Each descriptor passing the closed is_nonempty predicate produces one reduction and
+one parity-cut call. Empty descriptors are skipped before either. Register a case where
+an unrestricted ordinary minimum has lower value but violates forced membership/parity.
+The oracle must use the closed parity minimizer, not direct flow, all-shore production
+enumeration, or a substitute family. Validate the observed original network and descriptor
+sequence without using the production sequence as the expected mathematical source.
+
+### BO10 — coordinate lifting and candidate membership
+
+Include a reduced shore whose integer mask also happens to fit in the original universe
+but denotes a DIFFERENT original set. Require the closed lifting result, then independent
+original-universe, I/O, and terminal-parity checks. Kill reusing temporary/reduced masks,
+returning auxiliary source/anchor bits, omitting forced vertices, and accepting an original
+shore from another feasible family. Public lifting itself is a geometric conversion;
+Unit 12, not its constructor, owns the candidate's family and source-domain checks.
+
+### BO11 — independent source re-evaluation and positive h
+
+Observe use of the closed original-record sum helpers (only sums from witness.py) and
+source table. Do not compute c/h by rearranging network.gamma, constant, cut_value, or
+recovered residual. Inject well-formed but wrong lifted candidates to test original
+branch membership; h<=0 or failed source domain is RuntimeError before raw comparison.
+No sign flip, clamp, fallback denominator, or construction of a candidate outside D_j.
+The expected c/h calculations in the consuming tests stay independent of these helpers.
+
+### BO12 — retain separate shifts and remove them exactly once
+
+Register raw c/h, B*c-A*h, unshifted cut value, C_minus, constant, and recovered value
+as distinct quantities. Cover negative and nonzero constants in every branch, positive
+C_minus, zero C_minus, negative recovered values, and nonunit B. Assert
+`cut_value - C_minus + constant == B*c-A*h` before candidate comparison. Mutations must
+kill the wrong sign, double recovery, wrong parameter/network, dividing by B, and using
+a shifted residual as input to another recovery. A plausible lower cut paired with a
+wrong source raw residual is a seam failure, not a better candidate. RuntimeError,
+not None, is required for an explicit mismatch.
+
+### BO13 — exact first retention without a hidden secondary objective
+
+Hand-fix ties across distinct and duplicate families, including tied minima with
+different h, c, and original shore cardinality/mask where such cases are present in the
+registered corpus. Equality retains the first feasible minimum; neither maximum h nor
+smallest mask/cardinality may decide. Inject legal alternative within-family exact
+minimizers separately: the branch value and original-domain legality remain correct,
+without requiring one universal shore from the mathematics. Do not replace Unit 11's
+least ORDINARY requirement with an invented least PARITY/BRANCH requirement.
+
+### BO14 — scan the complete sequence after zero/negative candidates
+
+Use fixed rows where an early feasible residual is zero or negative but a later family
+has a strictly smaller value. Also use a zero cut whose later families still must be
+processed even if no numerical improvement is possible. Count all r_j examined entries
+and k_j parity calls. Neither residual sign nor zero cut is an outer stopping condition
+at this fixed-parameter oracle. No branch reflection, Newton update, H2 scan, or unit-
+witness call may occur.
+
+### BO15 — raw scale, multiple parameters, and result meaning
+
+For fixed positive integer k, compare independently derived outputs at (A,B) and
+(k*A,k*B): deterministic shore,c,h stay identical; residual scales by k. Include zero
+numerators with denominators not normalized to one, negative A, and large powers of two
+whose c/h cancellation would expose accidental gcd reduction. Repeat parameters in
+varying order across all four branches on a shared context; no stale shifts or incumbent
+may survive. A result's raw residual divided mathematically by submitted B is F_j(lambda),
+and -h is the source supergradient; do not compare residual magnitudes across different
+B without cross-scaling or confuse this with a ratio optimum.
+
+### BO16 — diagnostics are separate, exact, and nonauthoritative
+
+For registered count anchors verify r_j,k_j, one parity call per feasible descriptor,
+and the exact sum of N_F*N_F-3*N_F+3 ordinary calls. Sum closed augmentation/scan counters
+and take the maximum flow-only peak. Observe actual diagnostic outputs for aggregation
+checks only; no expected optimum may be derived from them. Changing otherwise legal
+stats must leave the selected result unchanged. Standalone stats checks are type/range
+checks, not certification of their claimed work. `max_flow_calls` is derived, and
+preparation is not charged again as enumeration. Do not claim this flow peak measures
+all theorem-relevant generated integers or full SolveStats.
+
+### BO17 — internal failure boundaries and backend exceptions
+
+Inject unexpected None from reduction or parity minimization of a descriptor whose
+closed is_nonempty is true; require RuntimeError rather than silent skipping. Inject
+finite but wrong original-family/domain candidates and mismatched recovery; require
+failure before retention. Exceptions raised by closed dependency calls propagate rather
+than being blanket-converted to ValueError/None. Do not require tamper protection for
+objects forged by bypassing frozen constructors. Record which failures are deliberate
+internal-promise probes versus normal public invalid-data cases.
+
+### BO18 — nonmutation, labels, reuse, and fresh-process import isolation
+
+Hash the context's Instance records and all four tuples before/after calls; verify no
+in-place filtering or graph mutation. Repeated calls have equal outputs and diagnostics
+under the shipped deterministic backend; labels do not affect algorithmic results.
+In a fresh process import exactfrac.oracle from the candidate tree. Require its resolved
+project dependencies to be the closed instance/families/rational/shore/sign_routing/
+parity_cut/witness/flow layers only, with no verifier, consuming tests, outer branch,
+solve, certificate, external graph library, or private artifact loaded by production.
+The direct-import whitelist is narrower than those transitive imports.
+
+### BO19 — source exactness and magnitude-independent iteration structure
+
+Parse AST for prohibited float constants (`type(node.value) is float`), float/Fraction/
+division/gcd/epsilon/big-M paths, recursive calls, random/I/O imports, and secondary
+objectives. Cover direct set literals, SetComp, set calls, and set-typed names used as
+algorithmic iterators; membership-only uses do not authorize set-derived order. Audit
+all loop bounds and consumers of generators: original n/edge/family counts only, no
+q,f,A,B,Q,operand bit length, or all-subset shore range. Context initialization may
+assign only its derived families via object.__setattr__; forbid later mutation or
+parameter/global caches. Supplement pattern checks with a call-chain/source review.
+
+### BO20 — prep/query work and polynomial-size quantities
+
+Separate O(n+m+R_all) context construction from per-query work and stats. Exercise many
+queries on one context and a D0 query on an instance with numerous D2 families; it must
+not regenerate the D2 list. Distinguish r_j=0 from a list with k_j=0. Audit the totalized
+`O(1+r_j*(n+3)^3*(m+n)^2)` query carrier, including the closed zero-arc vertex work,
+shore helper scans, validation, and capacity aggregation. Use bounded-support magnitude
+families for arbitrary-size integers; do not turn elapsed time into a formal complexity
+test. Check all raw c/h/residual and capacity bounds in DESIGN §4.9.17, including negative
+A and retained zeros. Full intermediate bit instrumentation and outer bit-growth theorems
+remain separate. Exact equality of observed counters across magnitudes is not asserted
+unless justified for the specific family under test.
+
+### BO21 — independent audit and adversarial controls
+
+After consuming tests are frozen and implementation GREEN, a separate audit derives
+expected original branch minima from source-domain enumeration. It imports neither the
+consuming tests, global density verifier, nor a private expected-data file. Closed
+production dependencies may be invoked as subjects of checked composition, never as the
+source of expected minima. Freeze independent domains/counts before running candidate
+production. Include source-table, shift, coordinate, family-omission, tie, early-exit,
+parameter-cache, constructor-precedence, and diagnostic contamination controls. Compare
+ordinary/parity/family work only where the registered reference policy fixes it. A
+passing tiny corpus is executable evidence, not a complete universal proof.
+
+### BO22 — CONFORMANCE and downstream claim boundary
+
+Only after GREEN and source-to-code audit add a scoped `thm:branch-oracle` row mapped to
+`test_exact_branch_min` plus a note mapping every Unit 12 consuming test. Explain complete
+cover, original residual recovery, positive h, preparation/query work separation, and the
+polynomial generated-integer argument. Preserve all previous rows/statuses. Do not promote
+outer branch/global theorems, ratio transformation claims, certificate verification,
+maximum-bit telemetry, Standard/Accelerated termination, or witness reconstruction.
+No authority change to SPEC_LOCK, CONTRACT, or the immutable governing-checksum baseline
+is authorized by this unit.
+
+## 30. Unit 12 completion gate — exact branch residual oracle
+
+The completion order is binding:
+
+1. Authenticate the closed Unit 11 base and live 467-test/Ruff starting evidence.
+2. Review/apply only DESIGN §4.9 and this TEST_PLAN addition; stage and close the
+   documentation-only authority commit locally and remotely.
+3. Derive and register Unit 12 oracles in ORACLE_CATALOG before tests. Keep the private
+   machine-readable transcription out of runtime dependencies. Audit and close that
+   oracle-only commit before producing consuming tests.
+4. Apply only tests/test_oracle.py, after syntax and actual repository-configured Ruff
+   preflight. Record the intended missing exactfrac.oracle collection error, unchanged
+   pre-existing suite, empty index, and frozen test byte identities.
+5. Implement only exactfrac/oracle.py against the ruled context/query/result/stats APIs.
+   Do not repair frozen tests to accommodate implementation choices. Authenticate the
+   saved RED and all closed bytes; run live source Ruff before applying a candidate.
+6. Require targeted/full GREEN, repository Ruff, an independent definition-level audit,
+   source-to-code work/bit review, and nonmutation. No CONFORMANCE edit before this gate.
+7. Add only the authorized CONFORMANCE row/note; keep source/test bytes unchanged and
+   authenticate the pre-note live GREEN evidence without retroactively editing its
+   historical base-file claims.
+8. Stage exactly docs/CONFORMANCE.md, exactfrac/oracle.py, and tests/test_oracle.py.
+   Export the exact staged tree; run targeted/full tests and Ruff in isolation, verify
+   project import origins and all staged/live file identities, and bind the audit.
+9. Commit that exact candidate once; run postcommit checks; push only the approved
+   commit after evidence authentication; require local main, origin/main, and direct
+   remote main equal the approved commit with divergence 0 0 and clean worktree/index.
+10. Save private BUILD_NOTES and LEARNING_NOTES closure entries. Unit 12 is not complete
+    merely because an authority, oracle, RED, or unstaged GREEN checkpoint passed.
+
+No outer-iteration, global-solver, certificate, CLI, or experimental implementation is
+part of this Unit 12 gate. Any material interface/authority defect requires a controlled
+new revision rather than silent helper/source/test normalization.
