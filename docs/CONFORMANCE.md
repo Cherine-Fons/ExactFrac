@@ -16,6 +16,7 @@ done until its row exists and its test is green.
 | lem:sign-routing | on production Instance inputs, the uncontracted nonnegative cut representation satisfies cut_capacity(X_U) = a*b_q(U) + sum_U gamma + C_minus; no minimization claim | tests/test_sign_routing.py::test_sign_routing_identity | green |
 | lem:parity-anchor | on supported SignRoutedNetwork/AtomicFamily inputs, forced contraction and parity anchoring give a cut-value-preserving bijection between family shores and odd reduced source/sink shores | tests/test_parity_cut.py::test_parity_anchor_correspondence | green |
 | thm:GR | exact minimum odd-terminal source/sink cut on validated nonnegative directed ParityCutProblem inputs using closed least ordinary cuts; deterministic first retained GR candidate | tests/test_parity_cut.py::test_minimum_parity_cut | green |
+| thm:branch-oracle | fixed-parameter exact minimum of B*c_j(U)-A*h_j(U) over the complete original D_j, or infeasible; prepared-cover specialization and work/number-size scope explained below | tests/test_oracle.py::test_exact_branch_min | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
 | prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | planned |
 | prop:branch-correct | accelerated loop terminates with the exact branch optimum | tests/test_branch.py::test_accelerated | planned |
@@ -422,3 +423,129 @@ done until its row exists and its test is green.
   exact parity minimum is not an independent admissibility, attainment, or global-optimality
   certificate. The three-file staged tree still requires isolated verification, atomic commit,
   and synchronized remote closure under TEST_PLAN section 28 before Unit 11 is closed.
+
+## Unit 12 integrated exact branch residual oracle implementation note
+
+- The new `thm:branch-oracle` row is the fixed-parameter scope authorized by DESIGN 4.9.18
+  and TEST_PLAN BO22/section 30. `exactfrac.oracle.exact_branch_min` implements
+  `alg:branch-min` with a separately prepared complete cover and one lazy original network
+  per nonempty query. It minimizes B*c_j(U)-A*h_j(U) over the entire original D_j for the
+  submitted parameter (A,B), B>0. It does not minimize c_j/h_j or solve an outer branch.
+  The governing source supplies the mathematical theorem; the tests and separate audit
+  supply executable conformance evidence on finite cases, not a universal proof.
+- BranchOracleContext retains the exact Instance and the complete four-tuple returned by
+  the closed family enumerator, called once during construction. Its families field is
+  init=False; no caller-provided partial cover is accepted. Query traversal reuses only
+  the selected tuple, in stored order, including overlapping, repeated, and empty
+  descriptors. No re-enumeration, sorting, deduplication, or parameter cache is introduced.
+- Consumer checks run in order: exact context type, exact branch type/range, then closed
+  validate_pair, before family inspection or graph work. Malformed public inputs raise
+  exact ValueError; arity and frozen mutation retain Python behavior. Results and stats
+  are frozen/slotted structural records, not provenance checks or independent certificates.
+  Constructor-bypassing forgeries remain outside this normal-construction contract.
+- Empty descriptors are counted and skipped before graph work. If no descriptor is feasible,
+  return (None, stats), distinguishing zero descriptors from an all-empty nonzero tuple.
+  A feasible zero or negative minimum is not None. The first feasible descriptor triggers
+  exactly one closed coefficient calculation and sign-routed network construction. That
+  same query-local original network is used for every reduction and recovery; another
+  parameter query builds a new network. No network is constructed for an all-empty query.
+- Each nonempty descriptor receives one closed reduction and parity minimization. Lift
+  its reduced shore to original vertices, check the original finite universe and I/O/parity
+  membership, and compute s=shore_f, b=shore_b_q, d=shore_d_q from original Instance records.
+  The four source pairs are (s+b-1,d+1-s), (s+b-2,d-s), (b-d,s-1), and (b-d-2,s), under
+  their literal DESIGN 4.9.7 domains. Domain failure or h<=0 is an internal RuntimeError,
+  never a repaired denominator or silently discarded candidate. Closed dependency errors
+  propagate unchanged; unexpected None from a promised nonempty reduction/minimum is also
+  RuntimeError, not branch infeasibility.
+- Independently re-evaluate raw=B*c-A*h with the closed rational helper. Recover once from
+  the ORIGINAL network as cut_value-negative_shift+constant; contraction adds no shift.
+  Require raw==recovered before retention and record raw, not the unverified cut value.
+  A mismatch raises RuntimeError even if the erroneous value would improve the incumbent.
+  This local consistency check is not a stand-alone cut or density-optimality certificate.
+- Scan the complete cover after zero/negative residuals and zero cuts. Replace the incumbent
+  only on strict raw improvement; equality retains the first encountered minimum without
+  a secondary h, c, mask, cardinality, or diagnostic key. The closed least-ORDINARY-cut
+  requirement is unchanged. No inclusionwise-least PARITY or BRANCH optimum is claimed;
+  legal alternative within-family exact minimizers remain mathematically admissible.
+- Query statistics count r_j examined descriptors and k_j feasible descriptors/parity calls,
+  sum ordinary calls/augmentations/scans, and take the maximum flow-only peak (zero with no
+  calls). max_flow_calls is a derived alias of ordinary_min_cut_calls. Statistics do not
+  decide feasibility or selection and do not measure preparation, every generated integer,
+  or global peak_integer_bits. Raw parameter scaling by k>0 retains shore,c,h and scales
+  residual by k under the shipped policy; it does not assert invariant general diagnostics
+  or bit costs. Residual magnitudes from differently encoded denominators are not directly
+  comparable across queries without the appropriate rational scaling.
+- The following mapping includes all 30 frozen original-R1 tests under ORACLE-069--082.
+  Only the row above promotes a theorem-facing obligation. The other entries map engineering
+  requirements; BO21 is additionally supported by the separate private implementation audit,
+  and BO22 by this source-bound documentation crosswalk. Literal tables were fixed before
+  consuming code; no private handoff JSON supplies expected answers at test runtime.
+
+| Production obligation | Principal tests in `tests/test_oracle.py` |
+|---|---|
+| BO1: fixed public surface and record shapes | `test_public_surface_shapes_annotations_and_signatures`; `test_valid_records_equality_frozen_and_noncertifying_shapes` |
+| BO2: complete, immutable, once-prepared cover | `test_context_retains_exact_instance_complete_cover_once` |
+| BO3: exact public errors and validation precedence | `test_all_179_registered_rejections_and_python_behaviors`; `test_validation_phases_precede_any_graph_or_empty_family_inspection` |
+| BO4--BO5: independent source domains, literal c/h, and exact branch minima | `test_literal_tables_and_independent_source_calculator`; `test_exact_branch_min` |
+| BO6--BO8/BO14: complete traversal, genuine emptiness, and one lazy network | `test_all_empty_branches_skip_every_graph_dependency`; `test_complete_selected_sequence_lazy_network_and_seam_calls`; `test_original_networks_match_all_12_literal_rows` |
+| BO9--BO10/BO12--BO14: constrained minima, coordinate/shift recovery, and tie/early-exit traps | `test_early_zero_negative_and_secondary_tie_traps`; `test_unrestricted_cut_does_not_replace_family_parity_minimization`; `test_coordinate_recovery_literal_anchors` |
+| BO11--BO12/BO17: internal promises fail before candidate retention | `test_internal_none_from_reduction_or_parity_is_runtime_error`; `test_internal_finite_shore_membership_faults_fail_before_source_evaluation`; `test_internal_source_domains_and_h_guard_before_raw_or_recovery`; `test_recovery_and_raw_mismatches_never_become_better_candidates`; `test_closed_dependency_exceptions_propagate_unchanged` |
+| BO13/BO16: legal alternative minimizers and nonauthoritative diagnostics | `test_alternative_legal_within_family_minimizer_is_not_rejected`; `test_legal_changed_diagnostics_do_not_change_the_selected_result`; `test_registered_stats_and_146_ordinary_trace_calls` |
+| BO15/BO18: fresh query state, labels, raw scaling, and nonmutation | `test_context_reuse_parameter_network_identity_and_nonmutation`; `test_labels_and_normal_reconstruction_do_not_change_query_results`; `test_raw_scaling_20_registered_cases_preserve_unreduced_c_h` |
+| BO5--BO6/BO20: tiny-domain corpus, observed calls, number sizes, and preparation separation | `test_60_large_capacity_cases_and_polynomial_number_bounds`; `test_341_descriptor_preparation_is_not_repeated_in_a_d0_query`; `test_exhaustive_corpus_13160_queries_and_138720_actual_ordinary_calls` |
+| BO18--BO19: fresh imports, exact-source restrictions, and iteration structure | `test_imports_in_a_fresh_process_resolve_only_closed_project_layers`; `test_production_source_imports_exact_arithmetic_and_no_side_effect_paths`; `test_source_has_no_recursive_or_magnitude_or_all_shore_iteration` |
+
+- The frozen test contains 179 registered rejection/Python-behavior cases (171 exact
+  ValueError, five TypeError, three FrozenInstanceError), 360 fixed queries on nine
+  instances and ten parameters, 12 literal networks, coordinate/shift/tie traps, and
+  146 observed ordinary calls in diagnostic anchors. Its independent tiny-instance
+  comparison covers 329 instances and 13,160 queries: 11,370 feasible and 1,790 infeasible,
+  with 61,400 descriptor examinations and 34,040 feasible family calls. The previously
+  specified 138,720 ordinary calls are also checked against actual backend invocations.
+  These nested checks are not additional collected pytest test cases.
+- The separate implementation audit fixes expected minima by original vertex-set/domain
+  enumeration before production import. It imports no consuming test, global verifier, or
+  private expected-data file. On the same 13,160-query corpus it checks 138,720 observed
+  least-ordinary calls and 277,160 cut shores; overlap with the consuming corpus is not
+  counted as disjoint coverage. It also checks 360 fixed queries, 168 supplementary exact-
+  ValueError/hostile cases, two normal Python cases, 23 internal/dependency probes, 60 large-
+  capacity cases, 20 raw scalings, five reuse queries, a 341-descriptor preparation anchor,
+  and legal alternative-minimizer/diagnostic controls. Backend output is a checked subject,
+  never the source of the expected original-domain minimum.
+- Before this documentation change, the live GREEN gate recorded 30 collected/30 passing
+  targeted tests and 497 collected/497 passing full-suite tests, actual repository Ruff
+  0.16.5 source preflight and full checks, and the pinned independent audit passing. All
+  32 prior tracked files, the frozen original R1 test, saved RED records, and index bytes
+  remained unchanged. That 32-file statement describes the PRE-NOTE state; this authorized
+  CONFORMANCE edit does not rewrite its evidence or make the old ledger describe a new
+  post-note tree. Source and test remain the exact byte identities that passed GREEN.
+- Source-to-code work review is separate from finite test counts. With
+  r_j=len(context.families[j]) and R_all=sum_j r_j, preparation pays O(n+m+R_all) integer/
+  comparison operations and O(R_all) descriptor records once. It is not charged to a D0
+  query or silently repeated. Each query costs O(1+r_j) before graph work; when k_j>0 it
+  builds one O(n+m) network and processes each feasible family sequentially through the
+  closed zero-safe parity/cut stack, lifting, original sums, and residual checks. DESIGN
+  4.9.16 therefore supplies O(1+r_j*(n+3)^3*(m+n)^2) per query, explicitly including r_j=0.
+  The exact ordinary-call sum is sum_F(N_F*N_F-3*N_F+3), at most k_j*(n+3)^2. Auxiliary
+  integer records beyond input/context are O(n+m); these are not constant-byte or timing
+  claims. The many-family D0 anchor checks the preparation/query separation, not asymptotics.
+- Source-to-code number-size review follows DESIGN 4.9.17, not flow-only peak telemetry.
+  Write Q=sum(q_e). Active original sums satisfy 0<=s<=d<=2Q and 0<=b<=Q, hence
+  abs(c)<=3Q+2, abs(h)<=2Q+1 and abs(raw)<=B*(3Q+2)+abs(A)*(2Q+1).
+  The closed coefficient table gives abs(gamma[v])<=(2*abs(A)+B)*Q and
+  abs(constant)<=abs(A)+2*B. Original total directed capacity is
+  S=2*B*Q+2*sum_v abs(gamma[v]), with negative_shift<=sum_v abs(gamma[v]).
+  Contractions and temporary contractions discard loops and sum subsets of original
+  capacities; capacity/flow/residual-capacity magnitudes are bounded by S. Signed recovery,
+  original raw forms, O(n)-bit masks, and structural counters consequently have polynomial
+  encoding length in L+bits(A)+bits(B). This composed-query argument is not a finite proof
+  from timing, full intermediate-bit instrumentation, or discharge of outer bit-growth
+  lemmas. The 60 large-capacity and 20 raw-scale cases are regression evidence only.
+- Historical Unit 10/11 deferrals of integrated original-shore evaluation, complete-cover
+  selection, and exactly-once residual recovery receive the scoped Unit 12 evidence here;
+  those historical notes and every previous theorem row/status remain unchanged. No ratio
+  transformation, Standard/Accelerated termination, branch/global invariant or correctness,
+  H2/witness reconstruction, certificate verification, telemetry, or experiment obligation
+  is promoted. In particular, none of the existing planned outer rows becomes green.
+  Unit 12 still requires the complete three-file staged-tree isolation, atomic implementation
+  commit, synchronized remote closure, and private closure notes under TEST_PLAN section 30.
