@@ -18,7 +18,8 @@ done until its row exists and its test is green.
 | thm:GR | exact minimum odd-terminal source/sink cut on validated nonnegative directed ParityCutProblem inputs using closed least ordinary cuts; deterministic first retained GR candidate | tests/test_parity_cut.py::test_minimum_parity_cut | green |
 | thm:branch-oracle | fixed-parameter exact minimum of B*c_j(U)-A*h_j(U) over the complete original D_j, or infeasible; prepared-cover specialization and work/number-size scope explained below | tests/test_oracle.py::test_exact_branch_min | green |
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
-| prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | planned |
+| prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | green |
+| lem:standard-bits | literal Standard initialization and fresh candidate-ratio resets; source-bound polynomial encoding argument with finite carrier checks, not complete peak telemetry | tests/test_branch.py::test_symbolic_large_families_and_all_112_actual_branch_solves; tests/test_branch.py::test_literal_reset_carriers_and_integer_wyz_change_of_variables; tests/test_branch.py::test_production_source_exact_imports_arithmetic_and_no_graph_rescan | green |
 | prop:branch-correct | accelerated loop terminates with the exact branch optimum | tests/test_branch.py::test_accelerated | planned |
 | prop:global-invariant | global invariant holds across branches and the H2 scan | tests/test_global.py::test_invariant | planned |
 | thm:main | value equals the brute-force optimum on every catalog instance | tests/test_global.py::test_catalog | planned |
@@ -549,3 +550,142 @@ done until its row exists and its test is green.
   is promoted. In particular, none of the existing planned outer rows becomes green.
   Unit 12 still requires the complete three-file staged-tree isolation, atomic implementation
   commit, synchronized remote closure, and private closure notes under TEST_PLAN section 30.
+
+## Unit 13 Standard branch solver implementation note
+
+- The existing `prop:standard-correct` row is promoted from planned to green; its
+  promise and `tests/test_branch.py::test_standard` mapping are unchanged. The new
+  `lem:standard-bits` row records the number-size bridge authorized by DESIGN 4.10.15
+  and TEST_PLAN ST20/section 32. Every other pre-existing row, status, and historical
+  note is byte-for-byte unchanged. These rows record executable conformance and the
+  source-to-code argument below, not universal proofs established by finite tests.
+- `exactfrac.branch.solve_branch_standard` implements only `alg:standard-branch` on a
+  normally constructed closed `BranchOracleContext` and branch j in (0,1,2,3). It
+  returns the transformed minimum rho_j=min c_j(U)/h_j(U) and an original attaining
+  shore, or None for branch infeasibility. This is not the original endpoint density,
+  global density optimum, witness reconstruction, or a standalone optimality certificate.
+  Source-domain membership and literal original c/h remain the closed Unit 12 guarantee.
+- `BranchResult(root, shore)` and `StandardBranchStats(oracle_calls, outer_iterations,
+  newton_updates, oracle_stats)` are frozen/slotted structural records. The root is
+  validated as a RawPair before the positive shore; signed, zero, and unreduced pairs
+  are retained literally. Standalone construction cannot check the upper shore bound,
+  domain membership, or optimality. Statistics validate three exact nonnegative ints
+  in order, then the exact closed nested record; construction does not certify work or
+  impose the successful-run counter equations. Wrong arity/frozen mutation retain
+  Python behavior; malformed supported public inputs raise exact ValueError.
+- The solve validates exact context type, then exact branch type/range, before querying
+  or inspecting graph information. It reuses the supplied prepared context without
+  re-enumerating/filtering families or inspecting a family tuple to bypass the seed.
+  Every optimizer call is the closed exact_branch_min with that context and branch.
+  Normal replies must have the exact tuple/result/stat types; an original shore must
+  fit the n-bit universe, and residual_numerator(parameter,c,h) must equal the reported
+  residual. Explicit violations raise RuntimeError. Arbitrary dependency exceptions
+  propagate unchanged rather than becoming infeasibility or partial success.
+- Exactly one seed query is made at literal (0,1). A None seed returns counts (1,0,0)
+  with its diagnostics included. Feasible seed residuals may have any sign, including
+  zero; no seed sign terminates a feasible solve. The next parameter is exactly
+  pair_add_one(make_pair(c0,h0))=(c0+h0,h0), not a reduced equivalent or the Accelerated
+  seed ratio. The first loop residual at K is strictly negative; after a feasible seed,
+  a later None or positive residual is an internal error, not a successful return.
+- Each negative loop residual resets to fresh make_pair(c,h), after an explicit exact
+  compare_pairs check for strict decrease. The loop stops only on raw residual zero.
+  It returns the SUBMITTED terminal parameter and the CURRENT oracle shore separately.
+  In the committed EQUALITY-j3 trap, the submitted pair is (-4,4) and the terminal
+  shore is 1 with source terms (-2,2); the returned record retains (-4,4), not (-2,2).
+  There is no normalization, old-denominator accumulation, reflection, visited-shore
+  termination, tolerance, or numerical iteration budget.
+- The shipped oracle's fixed-order, strict-improvement retention is unchanged. The
+  Standard wrapper introduces no max-h, min-mask, or diagnostic secondary objective.
+  Independently legal argmin choices can change raw pair/shore/trajectory and counts
+  while preserving the numerical branch optimum. TEST_PLAN A4 receives Standard-only
+  evidence here; no Accelerated invariant or correctness obligation is promoted.
+- Per-solve diagnostics include seed, K, and terminal query exactly once. The first
+  six BranchOracleStats fields are summed and flow_peak_generated_value is maximized.
+  The derived max_flow_calls alias retains its ordinary-cut meaning. For a successful
+  feasible solve with u updates, u>=1, outer_iterations=u+1, oracle_calls=u+2; infeasible
+  counts are (1,0,0). Context preparation is not counted again. The peak remains FLOW-
+  ONLY, not a measurement of every generated integer. Mathematical first-loop/sign
+  state is separate from counters; diagnostics cannot decide validity or termination.
+- The following mapping includes all 31 frozen R2 tests under ORACLE-083--096 and
+  ST1--ST18. ST19 additionally uses the separate private source-domain implementation
+  audit and executed mutation controls; ST20 is this documentation crosswalk. Expected
+  literals are from the committed human catalogue, not runtime private expected JSON.
+
+| Production obligation | Principal tests in `tests/test_branch.py` |
+|---|---|
+| ST1--ST2: exact public surface, immutable records and noncertifying constructors | `test_public_surface_signatures_annotations_and_package_root`; `test_records_are_frozen_slotted_structural_and_not_certificates`; `test_all_nine_registered_accepted_record_declarations`; `test_all_92_registered_public_rejections_and_python_arity`; `test_result_root_guard_and_statistics_field_validation_order` |
+| ST3: public validation before graph access and optimizer use | `test_public_validation_precedes_graph_access_and_seed`; `test_keyword_calls_preserve_the_exact_positional_interface` |
+| ST4--ST5: mandatory seed, infeasible branches, literal K and zero-seed continuation | `test_seed_is_mandatory_for_zero_and_all_empty_descriptor_branches`; `test_zero_seed_continues_and_negative_seed_can_give_positive_k`; `test_context_preparation_is_not_repeated_and_seed_is_not_bypassed` |
+| ST6--ST8: independent original domains, shipped trajectories and fresh resets | `test_literal_shores_domains_and_complete_optima_are_independent`; `test_all_68_literal_shipped_trajectories_and_complete_accounting`; `test_all_four_branches_execute_multiple_fresh_newton_resets`; `test_independent_core_census_and_both_committed_stream_fingerprints`; `test_standard` |
+| ST9: submitted raw root and current terminal shore | `test_terminal_parameter_and_current_shore_are_separately_preserved` |
+| ST10/A4: legal argmin alternatives without a secondary objective | `test_all_81_named_legal_argmin_paths_without_secondary_preference`; `test_all_5374_core_legal_paths_are_valid_wrapper_runs` |
+| ST11--ST12: explicit shape/universe/binding/sign and progress failures | `test_all_seed_response_shape_type_universe_and_binding_faults`; `test_later_none_nonnegative_k_positive_loop_and_terminal_binding_faults`; `test_comparator_faults_exercise_explicit_strict_progress_guard`; `test_each_successful_reply_is_bound_to_the_submitted_raw_parameter` |
+| ST13: exact dependency-exception propagation | `test_all_nine_dependency_exception_instances_propagate` |
+| ST14--ST15: six sums/one maximum, diagnostic independence, reuse and labels | `test_all_four_diagnostic_streams_sum_six_max_one_without_control_effect`; `test_six_registered_reuse_steps_and_interleaved_direct_queries`; `test_registered_labels_change_neither_raw_results_traces_nor_diagnostics` |
+| ST16: source restrictions, static negative controls and fresh import isolation | `test_production_source_exact_imports_arithmetic_and_no_graph_rescan`; `test_source_guard_negative_controls_reject_prohibited_constructs`; `test_fresh_process_imports_resolve_to_only_permitted_project_layers` |
+| ST17--ST18: large actual solves, reset carriers and source-dependent work interpretation | `test_symbolic_large_families_and_all_112_actual_branch_solves`; `test_literal_reset_carriers_and_integer_wyz_change_of_variables` |
+
+- The consuming tests check 9 accepted-record declarations, 92 public rejection/Python-
+  behavior declarations, 18 internal-failure declarations, and 9 dependency-exception
+  boundaries. They reproduce 68 named branch solves/168 query rows, 81 named legal
+  paths, the 329-instance core with 1,316 real solves/3,635 oracle calls, and all 5,374
+  core legal paths. The core has 1,137 feasible and 179 infeasible branches; 629 roots
+  are negative, 508 positive, and none zero. Zero-root cases are supplied separately.
+  Its 116 terminal raw-pair distinctions are an overlapping structural view, not new
+  samples. Four constant-support symbolic families give 112 large branch cases through
+  exponent 4096. These nested checks are not additional collected pytest cases.
+- The separate implementation audit fixes source-domain optima and complete legal-path
+  expectations before production import, without importing the consuming tests, global
+  verifier, or private expected-data JSON. It checks 1,440 actual solves/3,878 real oracle
+  calls across the core, three supplementary inputs, and 112 large branch cases, plus
+  6,022 pre-fixed legal paths/17,815 synthetic query replays. Its actual solves contain
+  654 negative, 533 positive, and 8 zero roots, with 245 infeasible branches. The audit
+  checks membership in the complete legal path set; deterministic shipped trajectories
+  are additionally fixed by the consuming tests. Overlap with tests is not disjoint
+  coverage. Twenty-two faulty source variants are compiled and executed in isolated
+  in-memory modules; all are rejected by mathematical/interface assertions, not lint
+  or syntax rejection. This finite mutation set does not prove absence of every defect.
+- The pre-note live GREEN gate bound implementation R1 and frozen test R2 to 31 actual
+  collected/passing targeted cases, 528 collected/passing full-suite cases (497 earlier
+  plus 31 Unit 13), actual repository Ruff 0.16.5 source preflight/full checks, the
+  separate implementation audit, and 22 executed mutation rejections. All 34 committed
+  base files, the frozen test, index bytes, refs, private notes, and historical evidence
+  remained unchanged. That 34-file ledger describes the PRE-NOTE state. This authorized
+  CONFORMANCE-only edit does not rewrite it or pretend it describes the post-note tree.
+- Correctness is the source's `prop:standard-correct` instantiated by the actual loop.
+  On a nonempty finite domain with h>0, F(lambda)=min(c-lambda*h) has unique zero rho.
+  K>rho gives a negative first loop residual. At every continuing iterate an exact
+  argmin gives rho<=c/h<lambda. Fresh resets belong to the finite candidate-ratio set;
+  strict decrease therefore terminates, and the exact-zero shore attains rho. This
+  argument does not use WYZ, an empirical iteration count, or a magnitude-based cutoff.
+- The `lem:standard-bits` bridge follows DESIGN 4.10.14 and the closed Unit 12/flow
+  number-size arguments. With Q=sum(q_e), C=3Q+2, H=2Q+1, every submitted (A,B)
+  satisfies abs(A)<=C+H=5Q+3 and 1<=B<=H; after each reset, abs(A)<=C. Original source
+  terms bound residual magnitudes by B*C+abs(A)*H<=H*(2C+H)=(2Q+1)*(8Q+5), with
+  polynomial-size cross products as well. Every update resets the denominator to h;
+  no product of preceding denominators accumulates. Closed oracle sums/products and
+  the zero-safe flow carrier give polynomial encoding length for query numbers.
+  Masks use O(n) bits. Counter aggregation adds structural logarithmic factors under
+  the source iteration bound. Carrier tests are finite regression evidence; no complete
+  peak_integer_bits telemetry, universal empirical bit proof, or production cutoff is
+  asserted. The full telemetry obligations remain deferred.
+- The `cor:standard-strong` operation chain is documented separately, not promoted by
+  an empirical theorem row. Let t=oracle_calls and r_j=len(context.families[j]). The
+  actual wrapper makes one seed call and one oracle call per loop, keeps O(1) outer
+  integer records, and does O(1) wrapper arithmetic/diagnostic operations per call.
+  The fixed three-counter constructor loop does not scan the input. Unit 12's uniform
+  carrier gives O(t*(1+r_j*(n+3)^3*(m+n)^2)), including empty descriptors and r_j=0.
+  Context construction separately pays O(n+m+R_all) once, with R_all=sum_j r_j. The
+  frozen `thm:WYZ` invocation supplies t=O(M^2 log M), M=n+m+1; together with
+  `lem:standard-bits` this is the source-dependent strongly polynomial composition.
+  Finite tests do not prove WYZ, its asymptotic constant, or uniformly flat observed
+  counters under arbitrary magnitude changes. Integer-operation/record bounds are
+  not constant bit time, constant byte memory, or wall-clock guarantees.
+- Historical deferrals of Standard branch iteration receive only this Unit 13 evidence.
+  The Accelerated `prop:branch-invariant`, `prop:branch-correct`, `thm:accelerated-bound`,
+  and `lem:bitgrowth`, global solver, H2/unit endpoint reconstruction, solver witness reconstruction,
+  certificate assembly/independent checking, full telemetry, CLI, and experiments
+  remain unpromoted.
+  Source/test/CONFORMANCE still require the separate complete-candidate staging,
+  index-tree isolation, atomic implementation commit, synchronized remote closure,
+  and saved private notes under TEST_PLAN section 32 before Unit 13 is fully closed.
