@@ -3023,3 +3023,285 @@ one atomic candidate, tested from the isolated index tree before commit and remo
 Unit 13 does not implement Accelerated iteration, a global solver, H2/unit witnesses,
 endpoint transforms/reconstruction, serialization/checking, CLI, full telemetry, or a
 benchmark/release campaign. It does not reopen Unit 12 or the withdrawn import-order R2.
+
+## 33. Unit 14 — Accelerated branch solver obligations
+
+Prospective authority only. All prior TEST_PLAN bytes, including sections 31--32,
+remain historical and unchanged. DESIGN section 4.11 prospectively extends branch.py;
+the source is pinned V2.2 alg:branch, prop:branch-invariant, prop:branch-correct,
+thm:accelerated-bound, lem:bitgrowth, and their eq:fj/eq:rhoj/closed-oracle dependencies.
+These obligations are new tests, not claims that Accelerated is already implemented.
+The September 10 author rulings make Accelerated core before Unit 15 and exclude
+private BUILD/LEARNING notes from ALL machine gates. References in older sections to
+checking saved notes or their bytes are superseded; the two-block delivery and
+conversational save-confirmation workflow remain unchanged.
+
+### AC1 — exact combined public interface and result reuse
+
+Require DESIGN 4.11.2's exact five-name __all__, signatures, keyword names, annotations,
+record order and lack of defaults. BranchResult is the existing class, not a duplicate
+or subclass. No package-root re-export, automatic Standard fallback, configurable seed,
+trace callback, backend injection, or iteration cap. Preserve signed/zero/unreduced
+root pairs, nonempty original shores, and None as infeasibility rather than global Empty.
+
+### AC2 — Accelerated statistics construction and validation order
+
+Exercise all eight fields and frozen/slotted/structural/no-ordering behavior. Validate
+seven exact nonnegative-int counters in declaration order, then exact BranchOracleStats.
+Reject bool, numeric/record subclasses, coercible objects, and wrong nested shapes with
+exact ValueError. Keep Python arity and frozen exceptions. Valid standalone counters
+need not obey successful-run identities; construction certifies no actual execution.
+
+### AC3 — preserve the closed Standard implementation and test substance
+
+Authenticate the six closed definitions listed in DESIGN 4.11.14 by exact source text
+against their pre-extension contents, not merely functional output. Only module prose,
+__all__, pair_reflect import, and appended Accelerated definitions may differ in source.
+The tests-only compatibility diff is restricted to the two surface checks, their surface
+constants if any, and the old _source_violations import/reflection logic. No changes to
+31 names, literal data, mathematical references, behavioral assertions, or 20 existing
+source-control snippets. Reject arbitrary/partial export sets. Keep Standard reflection
+forbidden directly AND transitively; negative controls must detect that regression.
+No skip/xfail, blanket whitelist expansion, or conditional omission of a Standard test.
+
+### AC4 — exact public rejection before dependency or graph use
+
+Require exact context validation before branch validation, then the mandatory query.
+Challenge hostile equality/coercion/graph-access objects, bool, subclasses, Instance
+instead of prepared context, invalid branch values and empty domains. Wrong supported
+data is exact ValueError without calling the optimizer. No family/degree inspection or
+context rebuild precedes validation; arbitrary dependency exceptions are not translated.
+
+### AC5 — mandatory seed at literal (0,1), infeasibility and signs
+
+Record the first actual query and same context/branch identity. All feasible seed signs
+are legal; None returns (None,stats) and no further calls. Check one seed call, zero other
+counters and exact seed diagnostics for both zero descriptors and all-empty descriptors.
+A feasible zero seed still requires the subsequent source-ratio query. No Q shortcut,
+synthetic reply, extra seed or family-derived bypass; no infeasibility from a zero root.
+
+### AC6 — source-ratio initialization, not Standard's plus one
+
+The second parameter is exactly (seed.c,seed.h) from make_pair. No pair_add_one, fixed
+bound, normalized value or reuse of the seed reply. Require initial residual <=0; bind
+a zero return to the second query's submitted pair and shore even when they differ from
+the seed record. Initial-root counts are (2,0,0,0,0,0,0). Catalogue initial positive,
+negative and zero numerical roots, unreduced pairs, and a structural terminal-pair trap.
+
+### AC7 — original-domain independent optimum on every core solve
+
+Use the committed 329-instance core, enumerate original nonempty shores, evaluate s,b,d
+from original records and apply literal D0--D3 domains and c/h formulas. Do not derive
+expected optima from families, Unit 12 private helpers, Standard or Accelerated output.
+Require all 1,316 results, infeasibility, signed/zero roots, and original attaining shores
+to match these independent minima. A returned zero at some shore is insufficient without
+the independently checked minimum. Include a full original shore when domain-permitted.
+
+### AC8 — full precommitted deterministic Accelerated query streams
+
+Freeze seed, initialization, every Newton and reflected query, reply, disposition and
+terminal site before consuming tests. Expected ordered argmins use a separate source/cut
+reference under the ruled selector, not production output. Compare literal parameter,
+shore, c,h, raw binding and call position. Include initialization termination, Newton
+termination, reflected termination, strict-negative acceptance, positive rejection,
+multiple continuations and all four branches. Require no omitted, repeated or reordered
+query; in particular no query of the retained Newton state after rejection.
+
+### AC9 — fresh Newton reset and explicit monotonicity guard
+
+At each negative current state require make_pair(current_result.c,current_result.h)
+literally and compare_pairs(newton,current)<0 before any Newton query. Verify the point
+lies at least at the independent optimum and its exact minimum is nonpositive. Terminal
+Newton zero returns before reflection arithmetic or a reflected query. Inject a comparator
+fault to exercise the guard without claiming that fault is a legal mathematical oracle.
+Catch old-denominator accumulation, tuple ordering, normalization and non-strict progress.
+
+### AC10 — closed pair_reflect only and exact role ordering
+
+Spy on the closed arithmetic seam: it receives (newton,current) and returns the exact
+formula (2*A*D-C*B,B*D) with fresh Newton operand. Check asymmetric, unreduced, cancellation,
+negative-reflection and large-integer cases. Require reflected<newton<current numerically
+via closed compare_pairs before querying. Catch reversed operands, local reimplementation,
+clipping, reduced equivalence and reusing a growing operand as the supposedly fresh point.
+No reflection occurs on initialization-root or Newton-root termination.
+
+### AC11 — negative/zero/positive reflection have distinct legal outcomes
+
+A negative reflected minimum continues with the reflected parameter AND reflected reply.
+A zero minimum terminates at that exact pair and current reflected shore. A positive
+minimum rejects look-ahead and retains the saved queried Newton pair AND Newton reply.
+Check binding first for all three signs; malformed replies must not become legal rejection.
+After a positive rejection the next Newton construction uses the retained Newton reply,
+not the rejected reflected reply or the previous state's shore. No repeated Newton query.
+
+### AC12 — terminal raw pair and shore preservation at all three sites
+
+Independently catalogue a terminal shore whose own fresh (c,h) differs from the parameter
+that was queried, wherever realizable at initialization, Newton and reflection. Distinguish
+source-realizable traps from synthetic seam controls. Keep the submitted pair verbatim
+and that query's shore. Detect returning a seed/old/rejected shore, normalizing a quotient,
+rewriting a reflected root to fresh terminal terms or returning None for zero.
+
+### AC13 — all legal exact argmins, no hidden secondary preference
+
+Enumerate complete legal argmin sets and trajectories on registered tiny fixtures, then
+inject those mathematically valid choices. Every completed path must attain the same
+numerical optimum with a valid original shore. Verify the retained-state invariant and
+strict progress independently; distinct legal choices may change raw pairs and paths.
+Include non-max-h choices and deterministic first-retention traps. Never weaken Unit 12's
+least ordinary cut contract or add h/mask/cardinality/diagnostic tie-breaking.
+
+### AC14 — malformed response and raw binding at every query kind
+
+At seed, initialization, Newton, and reflected seams independently inject wrong outer
+shape, result/stat types or subclasses, out-of-universe shore, and inconsistent raw
+residual. Satisfy earlier guards to reach each later boundary. Require RuntimeError before
+acceptance, rejection, update or return. Constructor-bypassing forgeries are outside the
+normal immutable-record API; the wrapper does not re-solve or rescan source-domain sums.
+
+### AC15 — internal None/sign/progress errors versus normal rejection
+
+After a feasible seed, None at initialization, Newton or reflection is RuntimeError.
+Positive initialization/Newton residual is RuntimeError; positive REFLECTED residual is
+normal rejection. Exercise arithmetically bound replies to separate sign checks from raw
+mismatch. Comparator-fault controls must challenge each ruled strict-decrease comparison,
+including final retained-state transfer, without being counted as source-realizable paths.
+No counter, arbitrary iteration cap, exception translation or fallback yields false success.
+
+### AC16 — exact accounting and diagnostic independence
+
+Independently count all normally returned queries and aggregate six sums plus the maximum
+flow-only peak. Exercise distinct diagnostics at seed, initialization, each Newton and
+accepted/rejected/terminal reflection. Assert DESIGN 4.11.12's identities for infeasible,
+initial-root, Newton-terminal and reflected-terminal runs. A terminal reflection counts
+as neither accepted nor rejected. early_returns means the two explicit in-loop source
+returns, not initialization. Alter valid diagnostics alone and require identical roots,
+shores, queries and decisions. Preparation and full peak-bit telemetry remain separate.
+
+### AC17 — dependency exception identity and no partial completion
+
+Inject sentinel exceptions from exact_branch_min, make_pair, pair_reflect, compare_pairs,
+residual_numerator, and the shared validation/aggregation dependencies at reachable sites.
+Require original exception identity to propagate, not None, a relabeled data error or a
+partial result/stats tuple. A dependency throwing differs from a normal malformed reply.
+Test-local spies are restored; no production exception-catching framework is introduced.
+
+### AC18 — repeated contexts, interleaving, labels and Standard regression
+
+Reuse one prepared context across repeated Accelerated and Standard solves and direct
+queries in changing branch order. Require no re-enumeration, parameter/cache leakage or
+Instance/family mutation. Labels affect none of the mathematical results or deterministic
+counters. Preserve Standard trajectories, diagnostics, validation and exact public record
+semantics. All preexisting 528 cases remain required, with only AC3's compatibility edits.
+
+### AC19 — required Standard agreement on all 1,316 core branch solves
+
+Execute both actual solvers for every (instance,j) in the 329-by-four core: no sampling,
+feasible-only filtering or counts inflated by duplicates. Require matching infeasibility;
+on feasible results compare_pairs(standard.root,accelerated.root)==0. Independently check
+EACH shore in the literal branch domain and its own c/h attaining the optimum from AC7.
+Do not demand structural pair, witness/shore, trace, stats or iteration-count equality.
+Differential agreement is additional evidence, never the source of expected answers.
+Do not require Accelerated to have fewer oracle calls on every individual instance.
+
+### AC20 — source-derived encoding recurrence and large integer families
+
+Precommit symbolic trajectories that exercise accepted-reflection accumulation and
+rejected-look-ahead reset, including both signs and cancellation, with support fixed and
+encoding lengths through at least 4096. Where graph-realizable depth is limited, label
+abstract scalar recurrence controls separately instead of claiming real solver coverage.
+Check literal pairs, each product/subtraction intermediate, and the test-local carrier
+P_new<=(2*C+H)*P, C=3Q+2,H=2Q+1, with fresh reset bounded by C. Inspect attempted
+rejected and terminal reflections as well as accepted iterates. Combine raw/capacity
+bounds with Unit 12; no production bit cutoff, full-telemetry claim or empirical DKNV proof.
+
+### AC21 — source-dependent work and no numerical loop budget
+
+Review O(M log M) calls under the pinned thm:DKNV/thm:accelerated-bound invocation,
+M=n+m+1, and multiplication by the closed uniform per-query carrier. Count r_j as families,
+not flows; preparation is once-paid. Inspect O(1) retained outer records and one
+residual-controlled solver loop; no q/f/Q/capacity/bit-length-driven range or visited list.
+Assert flat observed counters only for a proved invariant fixture family, not general
+magnitude changes. Integer-operation bounds are distinct from bit-time and byte-memory.
+
+### AC22 — shared-module exactness and fresh-process isolation
+
+Enforce the combined direct-import whitelist, while keeping pair_add_one Standard-only
+and pair_reflect Accelerated-only. Check no prohibited direct graph/cut/verifier import,
+local reflection formula, Fraction, float, tolerance, division/gcd, dynamic I/O, sets,
+recursion or exhaustive enumeration. Detect reflection leaking into preserved Standard
+paths and ensure the 20 prior source controls still fail. Fresh imports resolve to the
+chosen candidate tree and introduce no verifier/tests/private data or global solver.
+
+### AC23 — separate implementation audit and executed mutation controls
+
+Derive source-domain optima and legal trajectories independently before importing future
+production; do not use consuming tests, global-density verifier or private expected JSON
+to generate them. Recheck all core branch agreements as subjects, not answers. Challenge
+all terminal sites, rejected-state retention, raw-pair roles/binding, strict progress,
+diagnostics, seams, independence, source structure and bit recurrence. Compile and execute
+plausible faulty implementations, distinguishing semantic rejection from syntax/lint
+failure. Record survivors honestly; preserve frozen candidate/test and evidence bytes.
+
+### AC24 — scoped CONFORMANCE, atomic closure, and Unit 15 dual route
+
+Only after GREEN and AC23, map actual tests to prop:branch-invariant, prop:branch-correct
+and scoped lem:bitgrowth; document the source-dependent thm:accelerated-bound chain
+separately. Preserve Standard coverage and unrelated rows/statuses. Finite testing does
+not prove DKNV or independent global optimality. Stage the complete authorized candidate,
+isolate that exact index tree and require both branch suites/full/Ruff before commit.
+Unit 15 must rule a Standard | Accelerated selection, execute every global corpus
+instance with both, and require equal numerical endpoint/global values with EACH returned
+witness independently validated and re-evaluated to that value. Different witnesses/raw
+pairs are legal; exact raw witness-formula storage is independently checked. True Empty
+remains separate. The Unit 18 certificate checker is not silently assumed to exist.
+
+## 34. Unit 14 completion gate — required Accelerated branch solver
+
+1. Authenticate starting checkpoint R2 at ee4a9b0279424781980d668145c7b3fc5d50f9f7,
+   tree 9d22b4c9b1d18f31d49532381a36e82099ba6055, all 36 governed files and the
+   pinned source. Baseline: 31 Standard / 528 full and actual repository Ruff. Private
+   notes are excluded before dereference from inherited pin/absence/status inventories;
+   no note-file predicate is a gate. Their previously confirmed save is conversational.
+2. Read the actual Accelerated algorithm, invariant, correctness, external iteration
+   invocation and bit proof, together with closed arithmetic/oracle/Standard interfaces.
+   Commit documentation-only DESIGN 4.11 and this prospective test plan, explicitly
+   superseding deferral and ruling the narrow shared-module compatibility boundary.
+   Apply unstaged; separately stage, local commit, postcommit baseline/Ruff, then
+   approved-hash push and remote closure. No source/test/catalogue change in authority.
+3. Independently derive and commit the Accelerated oracle catalogue before its tests.
+   Include all pseudocode paths and output/seam/diagnostic/bit distinctions above.
+   Standard numerical answers can be checked after source expectations are fixed; they
+   cannot generate Accelerated traces. Audit, baseline, Ruff and remote-close fixtures.
+4. Deliver a tests-only candidate: new tests/test_branch_accelerated.py plus EXACTLY
+   AC3's constrained edits to tests/test_branch.py. Freeze the compatibility diff and
+   both files. Run actual repository-context Ruff stdin preflight on each before apply.
+   New tests import solve_branch_accelerated explicitly from exactfrac.branch at
+   collection: require the exact missing-name ImportError while that function is absent,
+   not ModuleNotFoundError for the already-existing Standard module. No dummy export,
+   placeholder, skip or catching of intended RED. Existing 528 tests stay green when
+   only the new RED file is excluded. No production change occurs in this tests gate.
+5. Only after that RED, extend branch.py under the fixed contract. Preserve the six
+   closed definitions exactly; preflight source with live Ruff before applying it.
+   Require all new cases' actual collected/passed counts, unchanged 31 Standard cases,
+   full suite, repository Ruff, independent AC23 audit and semantic mutations. No
+   undocumented change to frozen tests to make code pass. No external reviewer gate.
+6. Apply only a narrowly scoped CONFORMANCE amendment after GREEN and audit; identify
+   exact test names, proof-dependent bounds and finite limits. No source/test changes.
+7. Stage precisely docs/CONFORMANCE.md, exactfrac/branch.py, tests/test_branch.py and
+   tests/test_branch_accelerated.py. Verify the full compatibility/source/test/document
+   payload, modes, blobs, tree and complete diff. Export the index tree, not working
+   copies; rerun both branch suites, full tests and Ruff with import-origin checks.
+8. Commit the exact isolated candidate atomically, verify parent/tree/scope/diff and
+   rerun tests/Ruff. Push only in a separate approved-hash gate; require four-ref
+   agreement, zero divergence and clean governed worktree/index. Preserve historical
+   evidence and all unrelated files; no new REVIEW_REQUEST or external-review wait.
+9. At full Unit 14 closure deliver exactly two complete four-backtick Markdown note
+   blocks, BUILD then LEARNING, with save instructions; wait for the author's save
+   confirmation before Unit 15. Never open/stat/hash/locate/check private note files,
+   assert their Git-ignore/existence status, stage them, or translate the conversational
+   save confirmation into a filesystem condition. Historical evidence is not rewritten.
+
+This unit implements neither the global selection/reconstruction nor the later
+experimental campaign. Their required dual-route obligations are prospective, not
+reported as completed. No old mathematical/source pin or activation ledger is updated.

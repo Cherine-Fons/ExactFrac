@@ -39,11 +39,12 @@ Core (complete by the release-candidate gate, Sep 8):
   8. CLI
   9. initial benchmarks (first families of the corpus, with counters)
 
-Cut line if the runway shortens: 9 beyond its first family slips first; then 5
-(SolveBranchAccelerated) — the standard route is independently strongly polynomial, so a
-standard-only solver with certificate verifier and CLI is a theorem-grade v1, not a
-consolation; 8 (CLI) and 7 (certificate verifier) are kept because they make the standard
-solver usable and inspectable. Never cut 1–4, 6, 7.
+Priority amendment (author ruling, September 10, 2026): SolveBranchAccelerated is
+required core work for the MPC computational study, built as Unit 14 immediately
+after Unit 13 and before Unit 15. It may not be deferred under a shortened runway.
+Unit 15 must support a ruled Standard | Accelerated selection and test both routes.
+Beyond its first family, item 9 may still slip; CLI and certificate verification
+remain core. The former Standard-only deferral permission is superseded.
 Sep 8 is a RELEASE-CANDIDATE GATE, not an automatic release-candidate gate: see §12.
 
 Out of core (Q4, after the core release audit): benchmark corpus design, the MPC
@@ -1730,6 +1731,269 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         Accelerated prop:branch-invariant, prop:branch-correct, thm:accelerated-bound,
         lem:bitgrowth and all global/certificate obligations remain unpromoted. Preserve
         every prior CONFORMANCE row/status. Follow the appended Unit 13 completion gate.
+
+4.11 Production Accelerated branch solver
+    (RULED — Unit 14 authority R1; effective on controlled authority commit)
+    1. Source, priority, and scope. Implement alg:branch on the same fixed original
+       D_j, c_j, h_j and exact oracle as section 4.10. The mathematical obligations are
+       eq:fj, eq:rhoj, eq:value-supergradient, prop:branch-invariant,
+       prop:branch-correct, thm:DKNV, thm:accelerated-bound, and lem:bitgrowth in the
+       pinned V2.2 source. The exact Python surface and counters below are engineering
+       rulings, not additional claims in those theorems. The September 10, 2026 author
+       ruling makes Unit 14 required core work immediately after Unit 13 and before
+       Unit 15 for the MPC computational study. It supersedes the old permission in
+       section 1 to defer Accelerated; the campaign itself is not implemented here.
+       This unit extends the previously listed owner exactfrac/branch.py. No global
+       solve, endpoint transformation, H2/unit reconstruction, certificate, CLI, or
+       complete telemetry is added. Standard remains a frozen independent algorithm.
+
+    2. Exact expanded public surface. After implementation, the sorted __all__ is
+         ("AcceleratedBranchStats", "BranchResult", "StandardBranchStats",
+          "solve_branch_accelerated", "solve_branch_standard").
+       Add the positional-or-keyword signatures, without defaults or mode switches:
+         AcceleratedBranchStats(oracle_calls: int, outer_iterations: int,
+             newton_queries: int, lookahead_queries: int, lookahead_accepted: int,
+             lookahead_rejected: int, early_returns: int,
+             oracle_stats: BranchOracleStats) -> None
+         solve_branch_accelerated(context: BranchOracleContext, branch: int)
+             -> tuple[BranchResult | None, AcceleratedBranchStats].
+       Reuse exactly the closed BranchResult. Its signed, zero, unreduced root and
+       original positive shore semantics in section 4.10.3 are unchanged. None denotes
+       branch infeasibility, not zero root or global Empty. No user seed, callback,
+       injected optimizer, iteration limit, normalization, or automatic Standard
+       fallback is accepted. Package __init__ remains export-free.
+
+    3. New statistics record. AcceleratedBranchStats is frozen, slotted, structurally
+       equal/hashable, with no generated ordering and exactly the eight fields in
+       item 2, in that order. Check the first seven as exact built-in nonnegative ints
+       in declaration order; then require type(oracle_stats) is BranchOracleStats.
+       Reject bool, subclasses, coercible/duck-typed values and malformed supported
+       data with exact ValueError. Constructors do not enforce successful-run equations
+       or certify that any computation occurred. No trace, mutable cache, Instance,
+       branch label, timer, or complete peak_integer_bits field is stored. Unit 16
+       remains responsible for the common full AlgorithmStats/RunMetadata interface;
+       these local records do not silently enlarge or change StandardBranchStats.
+
+    4. Public validation and checked oracle seam. First require type(context) is
+       BranchOracleContext, then exact built-in int branch in (0,1,2,3), before graph
+       access or any query. Wrong supported data raises exact ValueError; ordinary
+       Python arity and frozen-mutation behavior remain unchanged. Reuse the closed
+       _checked_query(context,branch,parameter) and _add_diagnostics without editing
+       their definitions. Thus every query checks exact tuple/result/stat types,
+       original shore universe, and residual_numerator(parameter,c,h)==result.residual;
+       explicit returned-data inconsistencies are RuntimeError. A normally constructed
+       BranchOracleResult already guarantees its field types and positive h. Do not
+       duplicate original-domain formulas or test a minimum a second time. The sole
+       optimizer is the closed exact_branch_min; arbitrary dependency exceptions
+       propagate unchanged. No catch-all conversion to infeasibility or partial result.
+
+    5. Mandatory seed and fresh initialization. Query literal (0,1) once and aggregate
+       its diagnostics. If the checked result is None, return (None,stats) with
+       oracle_calls=1 and all other counters zero. Otherwise construct the initial
+       parameter with make_pair(seed.c,seed.h), exactly (c0,h0), WITHOUT pair_add_one.
+       Query this parameter even if the seed residual was zero. Any seed residual
+       sign is legal; it is not subject to a continuing-state sign test. No context
+       construction, descriptor inspection, Q==1 shortcut, or reuse of the seed reply
+       as the initialization reply may bypass either required call. After a feasible
+       seed every later None is RuntimeError, including at a reflected point: the
+       fixed nonempty branch domain cannot become empty when its parameter changes.
+
+    6. Initialization query. Its checked minimum residual must be <=0; a positive
+       value is RuntimeError. If zero, immediately return the SUBMITTED initial pair
+       and that initialization query's current shore, not the seed shore or its pair.
+       For a negative residual retain parameter and its checked result together as
+       the current state. The seed and initialization queries are excluded from
+       outer_iterations and newton_queries. Even at a numerical zero initial pair,
+       do not normalize its denominator or replace the successful result with None.
+
+    7. Newton query from the current negative state. On each execution of the source
+       while body, form newton=make_pair(current_result.c,current_result.h) once.
+       Require compare_pairs(newton,current)<0 before the query, else RuntimeError.
+       Query newton and retain its parameter, minimizing shore, source terms, residual,
+       and diagnostics as one already-queried candidate. A positive Newton residual
+       is RuntimeError, because the fresh feasible ratio is at least rho_j. A zero
+       residual returns BranchResult(newton,newton_result.shore) immediately, before
+       calling pair_reflect or performing any reflected query. No division, old-scale
+       B*c/(B*h) expression, or re-encoding substitutes for the literal fresh pair.
+
+    8. Reflected query and argument order. Only if the Newton minimum is negative,
+       call closed pair_reflect(newton,current), with those roles in that order.
+       For newton=(A,B), current=(C,D), this preserves (2*A*D-C*B,B*D) exactly.
+       Do not reimplement this arithmetic in branch.py, reduce it, cancel common
+       factors, reverse operands, clip a negative value, or shortcut equal denominators.
+       Require compare_pairs(reflected,newton)<0 before the query, else RuntimeError;
+       combined with item 7 this gives reflected<newton<current. Query reflected once.
+       A positive, zero, or negative reflected minimum is a normal mathematical outcome
+       AFTER the common response/binding checks, not a reason to repair the parameter.
+       A zero residual returns BranchResult(reflected,reflected_result.shore) immediately.
+
+    9. Acceptance, rejection, and exact state transfer. A strictly negative reflected
+       residual accepts its queried pair and result as the next current state. A
+       strictly positive reflected residual rejects only the look-ahead: retain the
+       ALREADY-QUERIED Newton pair and Newton result, whose residual is negative.
+       Never retain the rejected shore/raw result, replace the Newton pair by the
+       Newton result's own (c,h), or query Newton again on rejection. Keep the parameter
+       and its matching oracle result together. Before continuing require
+       compare_pairs(next_parameter,current)<0, else RuntimeError; then replace the
+       entire current state. Every accepted current state has negative residual.
+       Do not apply Standard's blanket no-positive-query rule to reflection.
+
+    10. Terminal binding and arbitrary legal ties. Every successful return keeps the
+        exact parameter submitted at the zero query and the shore returned by THAT
+        query. Initial, Newton, and reflected termination all obey this rule, even
+        when the terminal result's fresh (c,h) differs structurally. Test raw identity
+        separately from numerical root equality. The source allows any exact residual
+        argmin. Shipped selection remains section 4.6; the wrapper adds no max-h,
+        minimum-mask/cardinality, bit-size, or diagnostic secondary objective. Legal
+        choices can change queried pairs, attaining shores, and counts without changing
+        the numerical root. The closed least-ORDINARY-cut requirement is not relaxed.
+
+    11. Exact local accounting. oracle_calls counts every normally returned optimizer
+        invocation, including seed, initialization, all Newton queries, and all
+        reflected queries (accepted, rejected, or terminal). outer_iterations counts
+        entered negative-state while bodies, including a body that terminates early;
+        newton_queries counts their Newton queries, not initialization. lookahead_queries
+        counts actual reflected queries; lookahead_accepted counts only strictly negative
+        reflected results used for continuation; lookahead_rejected counts only strictly
+        positive reflected results that cause Newton retention. A zero reflected result
+        is neither accepted nor rejected. early_returns counts the source's explicit
+        zero-Newton or zero-reflection returns: one on such a completed run and zero
+        on infeasibility or an initialization-root return. Aggregate all six additive
+        BranchOracleStats fields and max(flow_peak_generated_value), including discarded
+        reflected-query work. No diagnostic determines validation, signs, selection,
+        iteration, or an early return. No completed stats tuple is returned after failure.
+
+    12. Successful-run accounting identities (not constructor assertions). Infeasible:
+        (oracle_calls,outer_iterations,newton_queries,lookahead_queries,
+         lookahead_accepted,lookahead_rejected,early_returns)=(1,0,0,0,0,0,0).
+        Initialization root: (2,0,0,0,0,0,0). Otherwise let p=outer_iterations,
+        l=lookahead_queries, a=lookahead_accepted, r=lookahead_rejected. Then
+          p=newton_queries>=1, oracle_calls=2+p+l, early_returns=1.
+        Newton-terminal run: l=p-1 and a+r=l. Reflection-terminal run: l=p and
+        a+r=l-1. Equivalently a+r=p-1 for either terminal kind. A positive reflected
+        rejection still contributes one oracle call and its full diagnostics. These
+        source-order counts are not extra mathematical constraints on valid standalone
+        records. Context preparation remains once-paid outside each branch solve.
+
+    13. Dependency and control restrictions. Extend the closed module's direct rational
+        import whitelist by pair_reflect only. Keep all other section 4.10.12 imports
+        and bans: no direct flow/parity/family/witness/instance/verifier access, external
+        optimizer, filesystem/I/O, floating point, Fraction, division/remainder/gcd,
+        tolerance, sets, recursive solver, magnitude search or arbitrary iteration cap.
+        pair_add_one remains Standard-only; pair_reflect is Accelerated-only. Production
+        retains O(1) outer records, not a full trace or a visited collection. The only
+        graph access owned by the common query seam is its existing universe check.
+        Families are neither rebuilt nor scanned by the outer algorithm. Mathematical
+        control depends on query residuals and exact pair comparisons, never counters.
+
+    14. Frozen Standard compatibility boundary. The future implementation may change
+        branch.py's module description, __all__, and the addition of pair_reflect to
+        its rational imports, and append AcceleratedBranchStats and
+        solve_branch_accelerated. Preserve the EXACT source text, signatures, annotations,
+        defaults, and behavior of BranchResult, StandardBranchStats, _checked_query,
+        _add_diagnostics, and solve_branch_standard from ee4a9b0; no refactoring or
+        common algorithm dispatch is authorized. All earlier production modules stay
+        byte-identical. The future tests-only compatibility amendment may alter ONLY
+        the two exact module-surface assertions in tests/test_branch.py (the main
+        surface test and its fresh-process script), their explicitly named surface
+        constants if used, and _source_violations' import/reflection permission logic.
+        All 31 test names, literal tables, reference calculators, behavioral assertions,
+        and the 20 prohibited-source controls are otherwise frozen. No prior test is
+        removed, skipped, xfailed, renamed, or made insensitive to Standard regressions.
+
+    15. Compatibility is constrained, not a blanket guard waiver. During tests-first
+        RED the existing module still has exactly the legacy three-name surface; after
+        GREEN it has exactly item 2's five-name surface. The two old surface checks may
+        accept these TWO explicit complete tuples, never an arbitrary superset or a
+        partial extension. The new Unit 14 test requires the five-name tuple exactly.
+        The shared source guard may permit the pair_reflect import, but its invocation
+        is allowed only inside solve_branch_accelerated, never in a Standard-reachable
+        function or a generic helper. All other source restrictions remain enforced,
+        and a negative control placing reflection in a Standard-reachable function must
+        fail. New Unit 14 tests verify the six preserved definitions byte-for-byte and
+        exercise the full combined module. Freeze and separately audit the precise
+        compatibility diff before production; the authority package itself edits no test.
+
+    16. Source correctness bridge. For rho=min c/h, F is zero only at rho, negative
+        above it, and positive below. Initialization delta=c0/h0 is at least rho.
+        At negative current residual, rho<=hat_delta<delta. If its query is nonzero,
+        delta'=2*hat_delta-delta<hat_delta: a negative reflected minimum proves
+        delta'>rho; a positive one proves delta'<rho<=hat_delta and hence requires
+        Newton retention. The retained pair/result satisfies the source invariant.
+        Concavity makes the selected supergradient -h nondecreasing under decreasing
+        parameters; at successive nonterminal retained states it strictly increases,
+        by prop:branch-correct's equal-active-slope argument. Finitely many slopes give
+        finite termination for any exact argmins. This argument is not the polynomial
+        iteration count. That count uses the separate frozen thm:DKNV invocation.
+        Strict h descent may be checked test-locally; it is not a secondary selector.
+
+    17. Work carrier and prepared-context separation. With M=n+m+1 and p entered loop
+        bodies, t=oracle_calls<=2+2*p on feasible branches. Under thm:accelerated-bound,
+        p and t are O(M log M); no numerical O-constant becomes a production limit.
+        Unit 12 gives O(t*(1+r_j*(n+3)^3*(m+n)^2)) integer/comparison operations,
+        including zero-descriptor and all-empty cases. Once-paid preparation remains
+        O(n+m+R_all), not hidden in a branch-0 query. The outer wrapper contributes
+        O(1) operations/records per query beyond the oracle's O(n+m) workspace and
+        the stored context. Bit-operation time and byte memory are not constant.
+        No universal claim that Accelerated uses fewer calls than Standard on every
+        instance follows; the two exact algorithms are compared experimentally later.
+
+    18. Bit recurrence as source review and test-local evidence only. Use C=3Q+2,
+        H=2Q+1 from section 4.9.17. A fresh (c,h) has abs(c)<=C and 1<=h<=H.
+        If P=max(abs(current.A),current.B), reflection with a fresh Newton operand
+        has abs(A_new)<=2*C*P+H*P and B_new<=H*P. Thus P_new<=(2*C+H)*P;
+        rejection resets the stored point to a fresh source pair, not this product.
+        Since C>=H, after s consecutive reflections since a fresh stored point,
+        every attempted point, including a rejected/terminal one, has
+          max(abs(A),B)<=C*(2*C+H)^s.
+        Length therefore increases additively by O(log(C+H)) per reflection, not by
+        squaring two growing operands. At every query abs(raw)<=B*C+abs(A)*H;
+        comparison products and reflection temporaries have the corresponding
+        product/sum length bounds. Combine with section 4.9.17's capacities, signed
+        recovery and zero-safe flow bounds. With the source O(M log M) iteration
+        invocation this supplies lem:bitgrowth's polynomial encoding argument.
+        Large-integer tests may check these derived inequalities and raw preservation;
+        production may not enforce them as cutoffs or instrument them as complete
+        telemetry. Flow-only peak is not full peak_integer_bits. General magnitude
+        changes need not leave observed counters flat; use proved invariant families.
+
+    19. Corpus-wide agreement and Unit 15 handoff. Unit 14 must execute both solvers
+        on ALL 1,316 core branch solves (329 instances times four), including empty
+        branches. Require matching None decisions; otherwise compare_pairs of their
+        roots is zero, and each original shore independently belongs to D_j and attains
+        that value under source-term evaluation. Also require each root equal the
+        independently enumerated original-domain optimum: agreement alone could hide
+        a common dependency defect. Do not require equal raw pairs, shores, counters,
+        or trajectories, nor use Standard to generate Accelerated expected traces.
+        Unit 15 must make Standard | Accelerated a ruled solver selection and run every
+        global corpus instance with both. Require equal numerical endpoint/global
+        values and independent verifier re-evaluation of EACH admissible witness to
+        that value, preserving each literal witness-derived raw quotient. Different
+        witnesses or raw quotient pairs may be equally valid. Verify genuine Empty
+        separately. Unit 15 rules exact selection spelling/default/interface before
+        its own tests; this authority does not implement solve.py or an unavailable
+        certificate checker. The independent definition-level verifier remains isolated.
+
+    20. Evidence sequence and claims. Authority changes only DESIGN and TEST_PLAN;
+        commit/push that authority before Phase C fixture derivation. Catalogue complete
+        independent initialization/Newton/reflection traces, all three terminal sites,
+        accepted/rejected reflections, tied raw terminal pairs, diagnostic accounting,
+        negative/zero/infeasible cases, rejection declarations, and large symbolic
+        trajectories before tests or Accelerated code. Derive expectations without
+        future production, and distinguish abstract algebra controls from graph fixtures.
+        Freeze the narrow Standard-compatibility test amendment and new Accelerated
+        tests; establish specific missing-symbol RED while Standard stays green. After
+        GREEN, a separate source-domain audit and executed mutations precede scoped
+        CONFORMANCE: preserve Standard rows and all unrelated rows; map implemented
+        prop:branch-invariant, prop:branch-correct and lem:bitgrowth. Document the
+        thm:accelerated-bound source-dependent chain separately, not as a finite proof
+        of DKNV. Staged-tree isolation, atomic implementation commit, and separate
+        approved-hash remote closure remain required. No external review-request
+        artifact or external-review wait is part of these gates. Private BUILD/LEARNING
+        notes are outside every gate: no existence/path/type/permission/content/hash/
+        Git-ignore assertion, and no dereference of inherited note pins. Deliver the
+        two complete four-backtick blocks at full closure and await the author's save
+        confirmation conversationally; no machine verification of that confirmation.
 
 ## 5. Algorithm map (by label)
 
