@@ -2792,3 +2792,234 @@ The completion order is binding:
 No outer-iteration, global-solver, certificate, CLI, or experimental implementation is
 part of this Unit 12 gate. Any material interface/authority defect requires a controlled
 new revision rather than silent helper/source/test normalization.
+
+## 31. Unit 13 — Standard branch solver obligations
+
+This is a prospective, documentation-only extension. All previous test-plan bytes and
+consumed obligations remain unchanged. No Unit 13 oracle fixture, consuming test,
+production module, or CONFORMANCE promotion is created by this authority amendment.
+DESIGN section 4.10 rules exactfrac/branch.py; the future test is tests/test_branch.py.
+Source binding: alg:standard-branch; eq:fj and eq:rhoj; prop:standard-correct;
+lem:standard-bits; thm:WYZ and cor:standard-strong; closed thm:branch-oracle.
+
+### ST1 — exact surface and immutable mathematical result
+
+Require exactly BranchResult, StandardBranchStats, solve_branch_standard in __all__;
+exact signatures/annotations/field order from DESIGN 4.10.2; frozen, slotted, hashable
+records with structural equality and no generated ordering/defaults. Check root before
+shore in BranchResult. Accept signed/zero/unreduced valid RawPairs verbatim; reject
+ExactValue/Fraction/float/bool and tuple/numeric subclasses, malformed pairs, nonpositive
+shore, and implicit coercion. Constructor validation is structural, not optimality.
+Package __init__ stays empty; no Accelerated or global API appears in this unit.
+
+### ST2 — local statistics shape and nonauthoritative meaning
+
+Require exact nonnegative ints for oracle_calls, outer_iterations, newton_updates, then
+exact BranchOracleStats for oracle_stats, in order. Reject subclasses/duck types; retain
+normal Python arity/frozen exceptions. Valid standalone records need not satisfy the
+successful-run counter relations; constructors do not certify an observed execution.
+No full AlgorithmStats, environment metadata, or global integer-peak claim is introduced.
+
+### ST3 — public validation before graph or optimizer use
+
+Wrong context fails before wrong branch; wrong branch fails before the seed query.
+Exercise exact types, bool, int/record subclasses, iterators, hostile coercion/equality
+objects, Instance instead of prepared context, and out-of-range branch numbers. Require
+exact ValueError for the governed data violations, with no dependency call. Wrong arity
+retains Python behavior. Include empty branches so early emptiness cannot hide bad input.
+
+### ST4 — one mandatory seed at literal zero
+
+Record the complete query sequence. The first invocation must use the same context and
+branch with literal parameter (0,1). No family enumeration, context construction, Q==1
+shortcut, or descriptor-emptiness bypass may replace it. A None seed returns (None,stats)
+with counts (1,0,0) and the seed diagnostics; no initialization/loop calls follow. Distinguish
+zero descriptors from a nonzero list of all-empty descriptors using closed oracle behavior.
+
+### ST5 — Standard K is not the Accelerated initialization
+
+For a feasible seed (c0,h0), require the exact next parameter (c0+h0,h0), unreduced. Check
+both a numerator whose sign changes under +1 and a zero seed residual. Neither sign nor
+zero at the seed authorizes termination. At K the true minimum must be negative, so no
+normally feasible Standard run finishes at the seed or first loop call. Catch omission
+of +1, a fixed (1,1) bound, normalization, user-selected seed, or an extra initialization query.
+
+### ST6 — independent source-domain branch optima
+
+Before consuming tests, enumerate every original nonempty shore for a declared tiny
+active corpus. Compute s,b,d directly from original edge/f data; apply the literal D0--D3
+conditions and c/h table, not a production family union, source-term private helper, or
+future solver output. Find min c/h by independent exact rational comparisons. For every
+feasible solve require root numerically equal to that minimum and the returned original
+shore in the complete argmin set. Distinguish empty branches, zero roots, and negative
+high-branch roots. Test the full original shore when it is a legitimate optimum.
+
+### ST7 — complete prescribed query trajectories
+
+Freeze hand-derived source traces before code, including the zero seed, K, every negative
+query/update, and final exact-zero query. Include multiple updates and all four branches.
+For deterministic traces, independently identify the closed oracle's first ordered-cover
+minimizer using direct finite enumeration with its documented tie policy; keep that trace
+reference separate from the independent domain-optimum reference. Compare each queried
+raw pair, returned original c/h/residual, and stopping position. No query may be omitted,
+reordered, repeated unnecessarily, or replaced with a look-ahead/reflection call.
+
+### ST8 — literal Newton reset, strict progress, and exact zero
+
+At every nonterminal loop query require raw<0 and next_parameter exactly (c,h), not just
+an equivalent fraction. Compare rationals by cross multiplication; the new point stays
+at least the independent optimum and strictly decreases numerically. Require termination
+only on exact integer raw==0. Catch a tolerance, <=0 stop, positive-residual continuation,
+stopping on repeated shore/tuple, an arbitrary iteration cap, and unreduced expression
+Bc/(Bh) masquerading as the fresh source ratio. No visited collection is necessary.
+
+### ST9 — terminal parameter and terminal shore are separately authoritative
+
+Include a fixture where the last negative query supplies raw pair (c_old,h_old), then the
+zero query returns another optimizing shore with a structurally DIFFERENT but numerically
+equal (c_new,h_new). Require BranchResult.root to retain the submitted (c_old,h_old) and
+BranchResult.shore to be the TERMINAL query's shore. Replacing root with (c_new,h_new),
+gcd reduction, returning the previous shore, or returning the seed must fail. Do not
+require structural equality across independently legal oracle tie policies.
+
+### ST10 — any exact argmin, shipped first-retention behavior
+
+Historical A4 is discharged for the Standard loop only. For tiny declared instances,
+substitute independently checked legal residual minimizers, including non-max-h choices;
+require exact optimal root and an attaining shore for each run. Intermediate raw pairs,
+iteration counts, and selected shores may differ. Separately require the shipped closed
+oracle's deterministic first-retention behavior. Never alter Unit 12's frozen implementation,
+tests, or expected deterministic policy; substitutions are test-local and restored.
+
+### ST11 — checked response shape and residual binding
+
+Substitute malformed response tuples, wrong result/stat classes or subclasses, an
+out-of-universe positive shore, and a normally constructed BranchOracleResult with an
+inconsistent raw residual. Each explicit seam violation must raise RuntimeError before
+that response can authorize a root or update. Satisfy earlier shape/type guards to reach
+each later check. These probes challenge the consumed contract, not full revalidation of
+source-domain membership or exact minimum status already owned by Unit 12. Do not test
+constructor-bypassing forgeries as part of the supported public API.
+
+### ST12 — infeasibility and sign failures after a feasible seed
+
+A subsequent None result is RuntimeError, not normal infeasibility. A nonnegative first
+K-query residual violates its strict-negative promise; a positive later loop residual is
+also RuntimeError. Exercise these separately from residual-binding failures with responses
+whose raw arithmetic is internally consistent. No failure returns a partial mathematical
+record or misleading completed statistics. The seed is expressly exempt from loop-sign
+rules and may have any signed residual.
+
+### ST13 — dependency exceptions propagate without false success
+
+Inject sentinel exceptions from the closed oracle and used arithmetic helpers; require the
+same exception to propagate, not None, generic ValueError, or an apparently completed
+BranchResult. Distinguish explicitly detected malformed returned data (RuntimeError) from
+an exception raised by the dependency itself. No catch-all rollback or fallback algorithm.
+
+### ST14 — exact accounting includes seed, K, and terminal
+
+For every successful trace, independently sum the first six fields of all returned
+BranchOracleStats and take max of flow_peak_generated_value, including seed/terminal once
+each. Check oracle_calls=outer_iterations+1; on a feasible run with u updates, u>=1,
+outer_iterations=u+1 and oracle_calls=u+2; on infeasible run (1,0,0). Use differing nonzero
+per-query diagnostics to expose a skipped/double-counted seed/terminal and sum-vs-max
+errors. Verify the nested max_flow_calls property keeps its closed meaning. Preparation
+is outside this per-solve accounting; no re-enumeration charge or flow-only/full-peak mixup.
+
+### ST15 — diagnostic independence, no state leakage, and labels
+
+Change only valid diagnostics while keeping legal mathematical replies fixed; root,
+shore, query sequence, and termination must stay fixed. Reuse one prepared context for
+repeated solves, different branches, and interleaved direct oracle queries. Assert no
+context/Instance/family mutation or parameter/aggregate survival between solves. Labels
+must not alter results, traces, or counters. Do not use a diagnostic counter to control
+mathematical initial-state/sign validation or termination.
+
+### ST16 — exactness, direct-import isolation, and compact control flow
+
+AST/source checks enforce the DESIGN 4.10.12 import whitelist and no float, Fraction,
+division, gcd/remainder reduction, set construction/iteration, recursion, reflection,
+filesystem/I/O, exhaustive shore enumeration, multiplicity expansion, or magnitude-based
+iteration budget. Fresh-process imports may include flow/families transitively through
+the closed oracle; they must resolve to the expected project tree and import no verifier,
+consuming test, private expected-data file, or future solve/certificate implementation.
+Inspect the actual call structure; a source-string whitelist alone is not a proof.
+
+### ST17 — input-sized resets and large signed integers
+
+For independently derived constant-support cases, grow q/f encoding lengths and inspect
+all submitted parameters and direct residuals. Check literal K=(c0+h0,h0) and each reset
+(c,h), including unreduced pairs and signed/zero roots. The source-bound carrier is
+abs(A)<=5Q+3, 1<=B<=2Q+1; later abs(A)<=3Q+2; raw magnitude is at most
+(2Q+1)*(8Q+5). Test-local checks and derivations must agree. These are NOT production
+cutoffs, complete peak_integer_bits instrumentation, or empirical universal proofs.
+
+### ST18 — source-dependent work bound versus observed counters
+
+Record t oracle invocations and its exact seed/loop decomposition. Review the t times
+Unit 12 per-query carrier and the separately paid context preparation. M is n+m+1, not Q;
+r_j counts descriptors, not flows. No loop bounds may be derived from q,f,Q, the input's
+encoding length, or an unproved numerical constant in O(M^2 log M). Magnitude sweeps test
+structural envelopes/no copy expansion; assert flat observed counters ONLY when the
+chosen fixture family has a proved invariant path. Retain O(1) outer records, not a full
+trajectory in production. thm:WYZ remains the frozen source invocation, not a measured fact.
+
+### ST19 — independent implementation audit and mutation controls
+
+After GREEN, independently compare Standard against original-domain exact ratio minima
+and source-derived sequences fixed before importing the production branch module. The
+auditor must not import consuming tests, the global density verifier, or private expected
+JSON to generate its source optima. The closed oracle may run only as a checked dependency,
+not as the producer of expected optima. Audit empty/signed/zero cases, any-argmin freedom,
+raw terminal-pair distinction, reuse, exact counts, no direct flow calls, bit recurrence,
+and all file/evidence nonmutation. Mutation controls must actually reject plausible
+wrong implementations; document every tested control and preserve failed-control findings.
+
+### ST20 — scoped conformance and later-unit boundaries
+
+After the independent implementation audit and GREEN only, map actual frozen tests to
+prop:standard-correct and lem:standard-bits. Document the source-dependent
+cor:standard-strong composition separately from finite evidence. Do not promote the
+Accelerated prop:branch-invariant/prop:branch-correct, thm:accelerated-bound,
+lem:bitgrowth, global/witness reconstruction, certificate, or full telemetry obligations.
+All previous rows/statuses are preserved. Final implementation/tests/CONFORMANCE form
+one atomic candidate, tested from the isolated index tree before commit and remote closure.
+
+## 32. Unit 13 completion gate — Standard branch solver
+
+1. Authenticate the closed Unit 12 commit, saved notes, governing V2.2 source/package,
+   and recorded Unit 13 starting baseline (497 collected/passed and repository Ruff).
+2. Read alg:standard-branch, prop:standard-correct, lem:standard-bits, thm:WYZ,
+   cor:standard-strong, residual-root definitions, and the closed oracle/arithmetic API.
+   Distinguish source obligations from new Python representation/accounting choices.
+3. Apply only the reviewed DESIGN 4.10 / this TEST_PLAN authority amendment; preserve
+   all other bytes, frozen tests, CONFORMANCE and historical evidence. Review unstaged,
+   then separately stage, commit, postcommit regression/Ruff, push, and verify remote
+   closure. No Unit 13 fixtures, consuming tests, or production code exist yet.
+4. Independently derive and append Standard fixtures to ORACLE_CATALOG, classifying
+   transformed branch optima and local loop traces correctly. Commit/push that catalogue
+   change after its independent audit and unchanged baseline/Ruff; do not derive expected
+   values from a future branch implementation or promote them to global density results.
+5. Create only tests/test_branch.py against committed authority/fixtures and ST1--ST20.
+   Run syntax and actual repository-context Ruff preflight before application. Freeze
+   exact test bytes and record intended missing-exactfrac.branch RED while production
+   remains absent; require all 497 existing tests and repo Ruff still pass.
+6. Only after RED, create exactfrac/branch.py implementing the Standard-only surface.
+   Apply only its reviewed source after live preflight. Assert actual targeted/full
+   collection and passing counts, repository Ruff, and independent implementation audit.
+   Do not revise a frozen test based on an unreplicated external lint claim.
+7. After GREEN, apply only the narrowly scoped CONFORMANCE amendment, mapping actual
+   frozen tests and preserving prior statuses. Do not alter source/test/config bytes.
+8. Stage exactly docs/CONFORMANCE.md, exactfrac/branch.py, tests/test_branch.py. Record
+   blobs/modes/tree/full-index diff; export the staged tree; rerun targeted/full/Ruff
+   with isolated project-import checks and prove live/index/evidence nonmutation.
+9. Create the approved implementation commit, check parent/tree/scope/diff, rerun the
+   actual targeted/full suite and Ruff, and save the local audit. Push only in a separate
+   gate, verifying all four refs equal, 0 0 divergence, clean worktree/index, and unchanged
+   historical evidence. Deliver private BUILD_NOTES and LEARNING_NOTES only at full
+   unit remote closure; wait for their saved confirmation before Unit 14.
+
+Unit 13 does not implement Accelerated iteration, a global solver, H2/unit witnesses,
+endpoint transforms/reconstruction, serialization/checking, CLI, full telemetry, or a
+benchmark/release campaign. It does not reopen Unit 12 or the withdrawn import-order R2.

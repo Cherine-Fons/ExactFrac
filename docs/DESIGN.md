@@ -1534,6 +1534,203 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         H2/unit witness/comparison/reconstruction, and certificate construction/verification
         remain later units. Follow the appended Unit 12 completion gate exactly.
 
+4.10 Production Standard branch solver
+    (RULED — Unit 13 authority R1; effective on controlled authority commit)
+    1. Source and ownership. exactfrac/branch.py implements ONLY SolveBranchStandard,
+       alg:standard-branch, in this unit. Its guarantee is Infeasible or the transformed
+       minimum rho_j=min_{U in D_j} c_j(U)/h_j(U), together with an original optimizing
+       shore. Source obligations are eq:fj, eq:rhoj, prop:standard-correct,
+       lem:standard-bits, thm:WYZ, and cor:standard-strong. The last two are the frozen
+       source's standard-loop operation-count invocation, not a new empirical theorem.
+       Sections 4.5, 4.5A, 4.6, and 4.9 remain unchanged. The returned signed root is
+       NOT the original endpoint density, a global optimum, an ExactValue, or a compact
+       witness. No reciprocal/sign transform, H2 scan, unit witness, reconstruction,
+       certificate, or Accelerated implementation is authorized here. branch.py is the
+       previously listed module owner; Unit 14 may later extend its surface by authority.
+
+    2. Exact public interface. The sorted __all__ in this unit is exactly
+         ("BranchResult", "StandardBranchStats", "solve_branch_standard").
+       Ordinary positional-or-keyword signatures, with no defaults or mode switches:
+         BranchResult(root: RawPair, shore: int) -> None
+         StandardBranchStats(oracle_calls: int, outer_iterations: int,
+             newton_updates: int, oracle_stats: BranchOracleStats) -> None
+         solve_branch_standard(context: BranchOracleContext, branch: int)
+             -> tuple[BranchResult | None, StandardBranchStats].
+       Both new records are frozen, slotted dataclasses with structural equality/hash,
+       no generated ordering, and exactly the fields above in declaration order. No
+       Instance-only overload, user seed/parameter, iteration cap, tolerance, alternate
+       oracle/backend, trace callback, or public residual evaluator is introduced.
+       Package __init__ remains export-free. These Python names/records are engineering
+       choices; the mathematical source specifies root-and-shore semantics, not Python.
+
+    3. Result validation and meaning. BranchResult first calls closed validate_pair(root),
+       then requires type(shore) is int and shore>0. Preserve root verbatim, including a
+       negative/zero numerator, an unreduced denominator, and structural pair identity.
+       Reject bool, numeric/tuple subclasses, Fraction, ExactValue, and coercion. A record
+       without an instance cannot check its upper shore bound, domain membership, or
+       optimality. A normally RETURNED record guarantees an original shore in D_j and
+       root[0]*h_j(shore)==root[1]*c_j(shore). Constructor acceptance alone certifies
+       neither attainment nor a minimum. Infeasible is represented by the first tuple
+       component None, never a fake BranchResult, zero root, empty shore, or global Empty.
+
+    4. Statistics validation and scope. StandardBranchStats checks its first three
+       fields, in order, as exact built-in nonnegative ints; then requires
+       type(oracle_stats) is BranchOracleStats. Retain that immutable nested record, not
+       a mutable dictionary or a duplicate set of flow counters. Standalone constructor
+       values do not assert observed work or enforce inter-field equations. No clocks,
+       environment metadata, final branch label, reflected points, or complete integer-
+       peak claim occurs here. Full AlgorithmStats/RunMetadata integration of section 8
+       stays deferred to Unit 16; this unit's local aggregate is not its replacement.
+
+    5. Public validation and prepared-context reuse. solve_branch_standard first requires
+       type(context) is BranchOracleContext, then type(branch) is int with branch in
+       (0,1,2,3), before querying or inspecting graph/domain information. Malformed public
+       input through supported signatures raises exact built-in ValueError; wrong arity
+       and frozen mutation retain Python behavior. Normally constructed closed immutable
+       records are trusted after exact type checks; constructor-bypassing forgeries are
+       outside scope. The caller supplies the prepared context. Do not construct another
+       context, enumerate/filter/deduplicate families, call is_nonempty, or inspect a
+       family list to bypass the seed query. The same context supports repeated solves
+       and all four branches; every parameter, incumbent, and aggregate is call-local.
+
+    6. Sole optimizer and checked response boundary. Every optimization call is to the
+       closed exact_branch_min(context,branch,parameter), with precisely the submitted
+       context and branch. On a normal return require an exact tuple of length two,
+       whose components are BranchOracleResult or None, and exact BranchOracleStats.
+       An explicit response-shape/type violation is RuntimeError. For a non-None result,
+       require its positive original shore to fit the instance's n-bit universe; a shore
+       outside that universe is RuntimeError. The closed result constructor supplies
+       exact signed c/residual and positive h. Recompute check_raw using the closed
+       residual_numerator(parameter,result.c,result.h) and require
+       check_raw==result.residual, otherwise RuntimeError. This verifies the parameter-
+       binding seam; it is NOT a second optimization or independent optimality proof.
+       Source-domain membership and original c/h formulas remain the closed Unit 12
+       guarantee. Do not import its private _source_terms or duplicate its four formulas,
+       sign-routing coefficients, family traversal, shifts, cuts, or original shore sums.
+       Do not catch/translate arbitrary dependency exceptions. An exception raised by a
+       closed query or scalar helper propagates unchanged; do not return partial success.
+
+    7. Mandatory zero-parameter seed. After public validation, query exactly once at the
+       literal RawPair (0,1). Check its response as above and include its diagnostics.
+       If its result is None, return (None,stats) immediately: oracle_calls=1,
+       outer_iterations=0, newton_updates=0, with the returned seed oracle_stats included.
+       This is source branch infeasibility, not a global empty-family decision. A zero,
+       positive, or negative seed residual is allowed for a feasible branch. In particular,
+       a zero seed residual does NOT terminate a feasible Standard solve. No Q==1 shortcut,
+       all-zero placeholder, or pre-scan of descriptors replaces this seed invocation.
+
+    8. Literal Standard initialization. For a non-None seed result (c0,h0), construct
+       seed_pair=make_pair(c0,h0), then parameter=pair_add_one(seed_pair). The initial
+       query parameter K is therefore EXACTLY (c0+h0,h0), not (c0,h0), (1,1), a reduced
+       equivalent, a rounded bound, or a shared Accelerated initialization. Since h0>0,
+       K>c0/h0>=rho_j and F_j(K)<0. No K or denominator is chosen by magnitude search.
+       The zero-parameter seed is not counted as an outer-loop iteration or a Newton
+       update. Arithmetic at initialization does not create a user-adjustable seed API.
+
+    9. Loop, internal signs, and exact termination. Query at the current parameter,
+       validate the response, and aggregate that invocation's diagnostics. After the
+       feasible seed, None from any later query is RuntimeError, never a normal empty
+       result. The first loop query, at K, must have strictly negative raw residual;
+       a nonnegative value there contradicts the initialization guarantee and is
+       RuntimeError. At subsequent loop queries a positive raw residual is RuntimeError.
+       Such checks use mathematical/initialization state, never diagnostic counters.
+       For a zero raw residual at a subsequent query, return
+         (BranchResult(parameter, result.shore), stats).
+       Test integer equality with zero exactly; no tolerance, sign-of-c shortcut,
+       residual decrease threshold, tuple equality to (0,1), or visited-shore test.
+       Since submitted B>0, raw==0 iff F_j(A/B)==0. The terminal shore is the current
+       oracle shore, not the seed or the preceding update's shore.
+
+    10. Negative-residual update and literal return pair. For every negative loop residual,
+        construct next_parameter=make_pair(result.c,result.h). Require
+        compare_pairs(next_parameter,parameter)<0, otherwise RuntimeError, then replace
+        parameter by that fresh pair. Increment the Newton-update diagnostic once. Never
+        form parameter + raw/(B*h), multiply through an old denominator, retain the old
+        parameter's scale, normalize, or reflect the point. The source invariant gives
+        rho_j<=c/h<parameter numerically. Every loop has one oracle invocation, with no
+        extra query at the new point until the next loop iteration. At exact-zero return,
+        KEEP the submitted parameter pair even when it differs structurally from the
+        current result's (c,h): different optimizing shores can have different raw pairs
+        for the same root. Do not overwrite the parameter after detecting zero. A4's
+        legal alternative oracle choices may change raw root representation, shore,
+        and trajectory, but must preserve the numerical optimum. No new tie objective.
+
+    11. Exact diagnostic accounting. oracle_calls counts all normally returned optimizer
+        invocations, including the seed, the K query, and the terminal zero query.
+        outer_iterations counts loop invocations at K and later parameters, including
+        the terminal one; it excludes the zero seed. newton_updates counts only negative-
+        residual assignments to a fresh (c,h), excluding initialization. Aggregate the
+        first six fields of each returned BranchOracleStats by exact addition and its
+        flow_peak_generated_value by maximum, with initial maximum zero. Include the
+        seed and terminal diagnostics exactly once, even when they describe no flow.
+        For a successful feasible solve with u=newton_updates, u>=1 and
+          outer_iterations=u+1, oracle_calls=u+2.
+        For a successful infeasible solve the counts are (1,0,0). Context preparation is
+        never included again. Aggregates remain separate from the returned mathematical
+        record and cannot affect termination, updates, choice, validation, or feasibility.
+        A legal change in diagnostics alone must leave root/shore and query parameters
+        unchanged. No result/stats tuple is returned after an internal or backend failure.
+
+    12. Dependency/exactness boundary. Permitted direct imports: optional future
+        annotations; dataclasses.dataclass; BranchOracleContext, BranchOracleResult,
+        BranchOracleStats, exact_branch_min from oracle; RawPair, validate_pair, make_pair,
+        pair_add_one, compare_pairs, residual_numerator from rational. Nothing else is
+        required or authorized in the production module. Closed dependencies may import
+        their own permitted layers transitively; observing flow in sys.modules is not
+        evidence of a prohibited DIRECT flow import here. No direct flow, parity_cut,
+        sign_routing, families, witness, instance, verifier, test, private-data, solve,
+        certificate, external optimizer, filesystem, randomness, or reflection imports.
+        No float literal/conversion, Fraction, true/floor division, remainder/gcd reduction,
+        tolerance, big-M, scalarized objective, set construction/iteration, recursion,
+        exhaustive shore enumeration, multiplicity expansion, or user iteration budget.
+        The loop is controlled by exact residuals, not q,f,Q, bit length, or a numerical
+        asymptotic cutoff. No unbounded trace/cache/visited collection is retained.
+
+    13. Correctness and work carrier. On a nonempty finite source domain with h>0, let
+        rho=min c/h. F(lambda) is negative above rho and zero exactly at rho. The K
+        initialization is strictly above rho; each nonterminal update is a candidate
+        ratio at least rho and strictly below its predecessor. The finite candidate
+        ratio set proves termination without an external iteration bound; exact zero
+        proves the returned shore attains rho. No mathematical max-h tie rule is needed.
+        Under the source invocation thm:WYZ, t=oracle_calls is O(M^2 log M), M=n+m+1,
+        including the constant seed/init overhead. With r_j=len(context.families[j]),
+        Unit 12's uniform per-query carrier yields total solve work
+          O(t*(1+r_j*(n+3)^3*(m+n)^2)).
+        This counts empty descriptors and totalizes r_j=0. Separate context preparation
+        remains O(n+m+R_all) once, as section 4.9.16 rules. Wrapper arithmetic/diagnostic
+        work is O(1) per call in the same integer-operation model. Extra retained solver
+        state is O(1) integer records beyond the context and the oracle's O(n+m) workspace.
+        No support-dimensional bound is replaced by the exponentially large domain size,
+        a Q-driven descent count, or an empirical iteration limit.
+
+    14. Number sizes, not a production cutoff. Use Q=sum(q_e), C=3Q+2, H=2Q+1 from
+        section 4.9.17. Seed (0,1) and every actual Standard parameter (A,B) satisfy
+          abs(A)<=C+H=5Q+3, 1<=B<=H;
+        after a Newton assignment the stronger abs(A)<=C holds. Accordingly the raw
+        residual magnitude is at most B*C+abs(A)*H <= H*(2C+H), and the exact comparison
+        products have the same polynomial-size carrier. Every update resets to original
+        source terms; no denominator product accumulates across iterations. Unit 12 and
+        the closed zero-safe flow carrier bound the query's remaining integers. Masks
+        use O(n) bits; counter aggregation adds only structural logarithmic factors under
+        the source iteration bound. These give the lem:standard-bits proof-to-code bridge,
+        not a complete measurement of every generated integer and not a wall-time bound.
+        Test-local bounds may be checked on specified families. Do not add asymptotic
+        production assertions or claim general flat observed counters as magnitudes vary.
+
+    15. Evidence and conformance. Before tests or code, commit independently derived
+        fixtures for all four source domains, infeasible/zero/signed roots, complete
+        query trajectories including seed/K/terminal, unreduced resets, root-pair ties,
+        legal argmin alternatives, exact diagnostic sums/maxima, and failure boundaries.
+        The reference route evaluates original instance shores and literal source forms;
+        never seed expected optima or traces from the future branch implementation.
+        After tests-first GREEN and a separate definition-level implementation audit,
+        add narrowly scoped CONFORMANCE coverage for prop:standard-correct and
+        lem:standard-bits and document cor:standard-strong's source-dependent operation
+        chain. Finite tests do not prove WYZ or universal strong polynomiality. The
+        Accelerated prop:branch-invariant, prop:branch-correct, thm:accelerated-bound,
+        lem:bitgrowth and all global/certificate obligations remain unpromoted. Preserve
+        every prior CONFORMANCE row/status. Follow the appended Unit 13 completion gate.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin
