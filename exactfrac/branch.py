@@ -1,6 +1,6 @@
-"""Exact Standard branch root and shore, with separate query diagnostics.
+"""Exact Standard and Accelerated branch roots with separate query diagnostics.
 
-Implement alg:standard-branch under DESIGN 4.10 using the closed Unit 12 oracle.
+Implement alg:standard-branch and alg:branch under DESIGN 4.10 and 4.11.
 A returned root is the transformed branch minimum, not an endpoint density,
 global result, witness, or certificate. Raw pairs are never normalized.
 """
@@ -20,11 +20,18 @@ from .rational import (
     compare_pairs,
     make_pair,
     pair_add_one,
+    pair_reflect,
     residual_numerator,
     validate_pair,
 )
 
-__all__ = ("BranchResult", "StandardBranchStats", "solve_branch_standard")
+__all__ = (
+    "AcceleratedBranchStats",
+    "BranchResult",
+    "StandardBranchStats",
+    "solve_branch_accelerated",
+    "solve_branch_standard",
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -151,3 +158,117 @@ def solve_branch_standard(
         parameter = next_parameter
         newton_updates += 1
         first_loop = False
+
+
+@dataclass(frozen=True, slots=True)
+class AcceleratedBranchStats:
+    """Structural per-solve diagnostics, not an execution or optimality certificate."""
+
+    oracle_calls: int
+    outer_iterations: int
+    newton_queries: int
+    lookahead_queries: int
+    lookahead_accepted: int
+    lookahead_rejected: int
+    early_returns: int
+    oracle_stats: BranchOracleStats
+
+    def __post_init__(self) -> None:
+        for value in (
+            self.oracle_calls, self.outer_iterations, self.newton_queries,
+            self.lookahead_queries, self.lookahead_accepted,
+            self.lookahead_rejected, self.early_returns,
+        ):
+            if type(value) is not int or value < 0:
+                raise ValueError("counts must be nonnegative built-in ints")
+        if type(self.oracle_stats) is not BranchOracleStats:
+            raise ValueError("oracle_stats must be an exact BranchOracleStats")
+
+
+def solve_branch_accelerated(
+    context: BranchOracleContext,
+    branch: int,
+) -> tuple[BranchResult | None, AcceleratedBranchStats]:
+    """Return the transformed branch minimum and an attaining original shore.
+
+    Initialize at the mandatory seed's fresh ratio, without Standard's plus one.
+    Query each fresh Newton point before reflecting the current point about it.
+    Reject positive look-ahead residuals by retaining the already-queried Newton
+    pair and reply; accept negative ones. Exact zero returns the submitted pair
+    with that query's shore. Closed dependencies own arithmetic and minimization.
+
+    Retain only bounded outer state; do not rebuild the supplied prepared context,
+    normalize raw pairs, add a tie preference, or enforce a numerical work limit.
+    Diagnostics include rejected-query work and never control mathematical choices.
+    Dependency exceptions propagate unchanged; internal seam failures return no result.
+    """
+    if type(context) is not BranchOracleContext:
+        raise ValueError("context must be an exact BranchOracleContext")
+    if type(branch) is not int or branch not in (0, 1, 2, 3):
+        raise ValueError("branch must be a built-in int in (0, 1, 2, 3)")
+
+    seed, diagnostics = _checked_query(context, branch, (0, 1))
+    oracle_stats = _add_diagnostics(BranchOracleStats(0, 0, 0, 0, 0, 0, 0), diagnostics)
+    oracle_calls = 1
+    outer_iterations = newton_queries = lookahead_queries = 0
+    lookahead_accepted = lookahead_rejected = 0
+    if seed is None:
+        return None, AcceleratedBranchStats(1, 0, 0, 0, 0, 0, 0, oracle_stats)
+
+    parameter = make_pair(seed.c, seed.h)
+    result, diagnostics = _checked_query(context, branch, parameter)
+    oracle_calls += 1
+    oracle_stats = _add_diagnostics(oracle_stats, diagnostics)
+    if result is None:
+        raise RuntimeError("a feasible branch became infeasible at initialization")
+    if result.residual > 0:
+        raise RuntimeError("the initial Accelerated query has positive residual")
+
+    while result.residual < 0:
+        outer_iterations += 1
+        newton = make_pair(result.c, result.h)
+        if compare_pairs(newton, parameter) >= 0:
+            raise RuntimeError("the Newton point must strictly decrease")
+        newton_result, diagnostics = _checked_query(context, branch, newton)
+        oracle_calls += 1
+        newton_queries += 1
+        oracle_stats = _add_diagnostics(oracle_stats, diagnostics)
+        if newton_result is None:
+            raise RuntimeError("a feasible branch became infeasible at Newton")
+        if newton_result.residual > 0:
+            raise RuntimeError("a Newton query has positive residual")
+        if newton_result.residual == 0:
+            return BranchResult(newton, newton_result.shore), AcceleratedBranchStats(
+                oracle_calls, outer_iterations, newton_queries, lookahead_queries,
+                lookahead_accepted, lookahead_rejected, 1, oracle_stats,
+            )
+
+        reflected = pair_reflect(newton, parameter)
+        if compare_pairs(reflected, newton) >= 0:
+            raise RuntimeError("the reflected point must strictly precede Newton")
+        reflected_result, diagnostics = _checked_query(context, branch, reflected)
+        oracle_calls += 1
+        lookahead_queries += 1
+        oracle_stats = _add_diagnostics(oracle_stats, diagnostics)
+        if reflected_result is None:
+            raise RuntimeError("a feasible branch became infeasible at reflection")
+        if reflected_result.residual == 0:
+            return BranchResult(reflected, reflected_result.shore), AcceleratedBranchStats(
+                oracle_calls, outer_iterations, newton_queries, lookahead_queries,
+                lookahead_accepted, lookahead_rejected, 1, oracle_stats,
+            )
+
+        if reflected_result.residual < 0:
+            next_parameter, next_result = reflected, reflected_result
+            lookahead_accepted += 1
+        else:
+            next_parameter, next_result = newton, newton_result
+            lookahead_rejected += 1
+        if compare_pairs(next_parameter, parameter) >= 0:
+            raise RuntimeError("the retained Accelerated state must strictly decrease")
+        parameter, result = next_parameter, next_result
+
+    return BranchResult(parameter, result.shore), AcceleratedBranchStats(
+        oracle_calls, outer_iterations, newton_queries, lookahead_queries,
+        lookahead_accepted, lookahead_rejected, 0, oracle_stats,
+    )

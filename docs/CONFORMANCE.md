@@ -20,7 +20,8 @@ done until its row exists and its test is green.
 | prop:branch-invariant | invariant holds after every branch iteration | tests/test_branch.py::test_invariant | planned |
 | prop:standard-correct | standard loop terminates with the exact branch optimum | tests/test_branch.py::test_standard | green |
 | lem:standard-bits | literal Standard initialization and fresh candidate-ratio resets; source-bound polynomial encoding argument with finite carrier checks, not complete peak telemetry | tests/test_branch.py::test_symbolic_large_families_and_all_112_actual_branch_solves; tests/test_branch.py::test_literal_reset_carriers_and_integer_wyz_change_of_variables; tests/test_branch.py::test_production_source_exact_imports_arithmetic_and_no_graph_rescan | green |
-| prop:branch-correct | accelerated loop terminates with the exact branch optimum | tests/test_branch.py::test_accelerated | planned |
+| prop:branch-correct | Accelerated branch solver returns infeasible or the exact transformed branch root and an original attaining shore; source finite-termination bridge and finite test scope below | tests/test_branch_accelerated.py::test_all_1316_actual_core_branches_agree_with_standard_and_independent_minima; tests/test_branch_accelerated.py::test_source_selected_raw_terminal_pair_traps_at_all_three_sites; tests/test_branch_accelerated.py::test_all_51_named_legal_argmin_paths_and_no_secondary_preference | green |
+| thm:accelerated-bound | implemented Accelerated recurrence and constant oracle-call accounting per iteration, composed with the source-dependent O(M log M) bound; finite trace/encoding checks are not a proof of DKNV or a production cutoff | tests/test_branch_accelerated.py::test_all_112_named_actual_trajectories_closed_primitives_and_accounting; tests/test_branch_accelerated.py::test_all_reflections_and_retained_transfers_match_literal_source_records; tests/test_branch_accelerated.py::test_all_168_large_graph_solves_symbolic_traces_and_attempted_bit_bounds | green |
 | prop:global-invariant | global invariant holds across branches and the H2 scan | tests/test_global.py::test_invariant | planned |
 | thm:main | value equals the brute-force optimum on every catalog instance | tests/test_global.py::test_catalog | planned |
 
@@ -689,3 +690,172 @@ done until its row exists and its test is green.
   Source/test/CONFORMANCE still require the separate complete-candidate staging,
   index-tree isolation, atomic implementation commit, synchronized remote closure,
   and saved private notes under TEST_PLAN section 32 before Unit 13 is fully closed.
+
+## Unit 14 Accelerated branch implementation note
+
+- Scope is DESIGN 4.11, TEST_PLAN AC1--AC24, and the pinned V2.2 `alg:branch`.
+  The formerly planned `prop:branch-correct` row now points to actual frozen
+  Accelerated tests. The new `thm:accelerated-bound` row records the source-dependent
+  work bridge explained below, not an empirical proof of its iteration bound. Every other
+  existing row and status, including both Standard rows, is unchanged. All earlier
+  note bytes are preserved as historical evidence; later scoped evidence does not
+  rewrite their earlier statements of deferred work. A green row records implemented
+  conformance with the source, not a universal theorem proved by finite testing.
+- `solve_branch_accelerated(context, branch)` returns `(BranchResult | None,
+  AcceleratedBranchStats)`. The root is the signed transformed minimum c_j/h_j, NOT
+  an endpoint density, global optimum, compact witness, or certificate. BranchResult
+  remains the unchanged shared raw-pair/shore carrier. Statistics are frozen/slotted
+  structural records: seven nonnegative exact-int counters then exact BranchOracleStats,
+  validated in field order. Constructor success is not provenance or successful-run
+  accounting. Public malformed inputs raise exact ValueError; wrong arity retains
+  Python behavior. No diagnostic participates in a mathematical decision.
+- The Unit 14 authority's three references to 'six' preserved Standard definitions (DESIGN §4.11.15, TEST_PLAN AC3, completion-gate item 5) are a clerical miscount; the preserved set is exactly the five definitions named in DESIGN §4.11.14 — BranchResult, StandardBranchStats, _checked_query, _add_diagnostics, solve_branch_standard — with their complete bodies, as ruled on Sep 10, 2026 and recorded in the private handoff erratum. The sealed authority commit is not amended.
+  Their decorators, class/function bodies, signatures and annotations remain identical
+  to closed Unit 13. The allowed module-description/import/export changes and the two
+  appended Accelerated definitions do not refactor Standard. The previously frozen
+  compatibility amendment changes only the three ruled Standard test functions;
+  all 31 Standard test names, literals, and 20 prior negative controls remain covered.
+  This note records the erratum's effect; it edits neither authority document nor
+  the authenticated authority archive or private erratum.
+- One mandatory seed query uses literal (0,1), including zero/all-empty descriptor
+  branches. Only an infeasible seed returns None. A feasible seed's zero residual
+  never bypasses initialization: make_pair(seed.c,seed.h), with NO Standard +1, is
+  queried once. A zero initialization minimum returns that submitted pair and its
+  current shore. A positive minimum, or None after a feasible seed, is RuntimeError.
+- At a continuing negative state, Newton is the fresh make_pair(current.c,current.h).
+  Require compare_pairs(newton,current_parameter)<0 before its query. Its minimum
+  is nonpositive; a positive value is RuntimeError. Exact zero returns immediately,
+  before reflection. Otherwise only closed pair_reflect(newton,current_parameter)
+  forms (2*A*D-C*B,B*D), with Newton=(A,B), current=(C,D). Require the reflected point
+  strictly below Newton before querying. No gcd reduction, rescaling, zero/sign
+  repair, local reflection formula, or magnitude-controlled loop is introduced.
+- Negative reflected residual accepts its queried pair AND reply; zero returns that
+  exact queried pair and shore; positive is normal rejection, retaining the ALREADY
+  QUERIED Newton pair AND Newton reply. Rejection adds no repeated Newton query and
+  never substitutes the Newton reply's own fresh terms for the submitted pair.
+  A separate compare_pairs(next_parameter,current_parameter)<0 guard precedes the
+  entire state transfer. A positive REFLECTED residual is not Standard's sign fault.
+  The common checked-query seam validates result/stat shape, finite original shore
+  and raw B*c-A*h binding before any disposition. Dependency exceptions propagate
+  unchanged; malformed replies and internal failures never become infeasibility.
+- All three terminal sites preserve the submitted unreduced parameter and that
+  query's returned shore, even when the shore's own (c,h) is a different raw pair.
+  Legal argmins may produce different raw pairs, shores, counters, and trajectories
+  while attaining the same numerical optimum. The wrapper adds no max-h, minimum-mask,
+  cardinality, or diagnostic tie preference. The closed least-ORDINARY-cut requirement
+  is unchanged; no least parity/branch shore is promised. Standard agreement is
+  numerical plus independently checked domain membership and attainment, not raw
+  pair/shore identity and not an independent substitute for source-domain minima.
+- Accounting includes every normally returned seed, initialization, Newton and
+  reflected query, including rejected and terminal look-ahead work. With p entered
+  loop bodies and l reflected queries, a noninitial feasible completion has
+  newton_queries=p>=1, oracle_calls=2+p+l and early_returns=1. A Newton-terminal run
+  has l=p-1; a reflected-terminal run has l=p. Strict-negative acceptances a and
+  positive rejections r satisfy a+r=p-1 in either case; reflected zero is neither.
+  Infeasible counts are (1,0,0,0,0,0,0); initialization-root counts (2,0,0,0,0,0,0).
+  All six additive oracle diagnostics sum, while the flow-only peak takes their
+  maximum. These successful-run relations are tested, not constructor restrictions.
+  Context preparation is once-paid; flow-only peak is not complete integer telemetry.
+
+The following engineering crosswalk maps all 25 frozen Accelerated tests. AC23 is
+additionally supported by the separate source-domain audit and executed mutations;
+AC24's remaining staging/isolation/commit/remote-closure obligations are not yet complete.
+
+| Production obligation | Principal tests in `tests/test_branch_accelerated.py` |
+|---|---|
+| AC1--AC2: exact combined surface; structural statistics, validation order, and Python arity | `test_exact_combined_public_surface_signatures_and_record_reuse`; `test_all_seven_valid_statistics_declarations_are_structural_only`; `test_all_73_registered_public_rejections_and_python_arity`; `test_statistics_validation_field_order_and_no_later_guard` |
+| AC3: preservation of five complete Standard definitions and frozen compatibility bytes | `test_five_closed_definitions_and_compatibility_bytes_are_preserved` |
+| AC7: independent original domains, shores, and all named optima | `test_original_domains_shores_and_all_named_optima_are_independent` |
+| AC4--AC6/AC8--AC11/AC16: literal queries, closed arithmetic, seed and infeasibility, reflection and retained state | `test_all_112_named_actual_trajectories_closed_primitives_and_accounting`; `test_mandatory_seed_zero_and_both_descriptor_infeasibility_kinds`; `test_all_reflections_and_retained_transfers_match_literal_source_records` |
+| AC12: submitted raw terminal pair and corresponding shore at all three return sites | `test_source_selected_raw_terminal_pair_traps_at_all_three_sites` |
+| AC13: every registered legal argmin path, retained invariant, and no secondary preference | `test_all_51_named_legal_argmin_paths_and_no_secondary_preference`; `test_all_3099_core_legal_argmin_paths_without_shore_identity_constraints` |
+| AC19: all 1,316 actual core branches, both solvers, and independent source minima | `test_all_1316_actual_core_branches_agree_with_standard_and_independent_minima` |
+| AC7/AC8/AC20: fixed core census and stream fingerprints; explicit zero-reflection coverage boundary | `test_core_census_stream_fingerprints_and_zero_reflection_coverage_boundary` |
+| AC14--AC15: guard-isolated malformed/None/sign seams and strict-progress failures | `test_all_45_guard_isolated_malformed_none_and_sign_seams`; `test_all_eight_strict_progress_fault_controls_before_later_queries` |
+| AC16: all 12 diagnostic streams; sum-six/max-one aggregation without control effects | `test_all_12_diagnostic_streams_sum_six_max_one_without_control_effect` |
+| AC17: original identity of all 16 registered dependency exceptions | `test_all_16_registered_dependency_exceptions_preserve_original_identity` |
+| AC18: context preparation, interleaving, six reuse steps, labels, repeatability, and keyword calls | `test_context_preparation_interleaving_six_reuse_steps_and_no_graph_rescan`; `test_registered_labels_repeatability_and_keyword_interface` |
+| AC20: 168 large graph solves with attempted-point bit checks; 49 separately classified abstract recurrences | `test_all_168_large_graph_solves_symbolic_traces_and_attempted_bit_bounds`; `test_all_49_abstract_scalar_recurrences_are_not_graph_coverage` |
+| AC21--AC22: exact source and arithmetic ownership, preserved negative controls, and fresh-process isolation | `test_combined_source_guard_and_accelerated_only_arithmetic_ownership`; `test_legacy_20_negative_controls_and_standard_reflection_leaks_still_fail`; `test_fresh_process_combined_imports_resolve_only_to_candidate_tree` |
+
+- The consuming file transcribes 31 committed tables / 9,167 literal rows fixed before
+  production. It exercises 112 named actual solves, 51 named legal paths, all 3,099
+  core legal paths, and all 1,316 actual core branch solves on 329 instances. Each
+  feasible root and shore is checked against independently evaluated original domains
+  and minima; the same core also executes Standard. This core has ZERO reflected
+  queries. It is not advertised as look-ahead coverage. Named and large graph fixtures
+  provide reflection coverage, including positive rejection and reflected termination.
+- The 168 large graph solves and their symbolic trajectories are actual solver tests;
+  the 49 abstract scalar recurrences are separate encoding controls, NOT 49 additional
+  graph instances or a proof of DKNV. Public declarations (seven accepted-stat records,
+  73 rejection/arity cases), 45 guarded query faults, eight strict-progress controls,
+  12 diagnostic streams, and 16 dependency-exception declarations are nested checks,
+  not additional collected pytest cases. The exact frozen file collects 25 cases.
+- The separate implementation audit fixed source-domain optima and complete legal
+  trajectories BEFORE importing production. It used neither consuming tests nor
+  production answers to generate expectations. It executed 1,596 actual Accelerated
+  solves / 3,376 queries: 1,316 core / 2,603 queries; 112 named / 279 queries; and
+  168 large / 494 queries. All 1,316 Standard/core comparisons independently attain
+  the source minima or agree on infeasibility. Named runs make 19 reflected queries
+  (10 negative acceptances, seven positive rejections, two zero terminal returns);
+  large runs make 57 (35 negative acceptances, 22 positive rejections). Core reflection
+  count is zero. The audit replays 3,528 legal paths / 7,625 queries and adds 24
+  diagnostic variants, 89 query faults, 12 operand-targeted comparator faults,
+  16 dependency exceptions and 52 public rejections. These counts overlap consuming
+  coverage and are not disjoint samples. All 26 compiled semantic mutants were rejected
+  with the unmodified candidate passing; rejection was not based on lint or syntax.
+- The live pre-CONFORMANCE GREEN checkpoint binds the frozen source and BOTH frozen
+  tests to 25/25 Accelerated, 31/31 Standard and 553/553 full cases (497+31+25), with
+  actual repository Ruff 0.16.5 preflight/full checks and the separate audit/mutations
+  passing under Python 3.14.6 / pytest 9.1.1. Project-import origins and candidate-file
+  nonmutation passed. The 37-file GREEN manifest describes the PRE-NOTE state. This
+  documentation-only amendment changes only CONFORMANCE and creates a new manifest;
+  it does not reinterpret a historical manifest as the post-amendment state.
+- Source correctness bridge: on a nonempty finite domain with h>0, F(delta)=min(c-delta*h)
+  is strictly decreasing with unique zero rho=min(c/h). Initialization delta=c0/h0>=rho
+  has F<=0. At negative current residual, rho<=Newton<delta. A nonterminal reflected
+  point lies below Newton: its negative minimum puts it above rho; its positive
+  minimum puts it below rho and requires retention of the still-negative Newton state.
+  Exact-zero queries terminate at rho. Thus retained states remain exact negative
+  minima with matched parameter/shore and strict decrease (`prop:branch-invariant`).
+  In the source's `prop:branch-correct` argument, concavity makes selected -h
+  nondecreasing as parameters decrease. Equal active slopes represent the same
+  effective affine function: at Newton it would be zero, while at an accepted
+  reflection the previous active function is positive and cannot be the new negative
+  minimum. Nonterminal retained slopes therefore strictly increase in a finite set,
+  giving finite termination for any legal exact argmins. This is NOT a polynomial
+  iteration-count argument and installs no slope-based tie selector or cutoff.
+- Work bridge, separate from finite correctness tests: the pinned thm:DKNV invocation
+  and thm:accelerated-bound supply p,t=O(M log M), M=n+m+1, with t=oracle_calls<=2+2*p
+  on feasible branches. Closed Unit 12 gives O(t*(1+r_j*(n+3)^3*(m+n)^2)) integer/
+  comparison operations, including empty descriptors and r_j=0; r_j counts families,
+  not flows. Preparation separately pays O(n+m+R_all) once. The wrapper retains O(1)
+  outer records and does O(1) operations per query beyond the oracle's workspace.
+  The scoped thm:accelerated-bound row records this source-dependent composition;
+  finite tests do not prove DKNV or the universal iteration bound. No guarantee
+  of fewer calls than Standard on EVERY instance, constant bit time, constant byte
+  memory, uniformly flat magnitude-sweep counters, or wall-clock speedup is inferred.
+- Encoding bridge for lem:bitgrowth follows DESIGN 4.11.18. Let C=3Q+2, H=2Q+1 and
+  P=max(abs(current.A),current.B). Fresh Newton terms satisfy abs(c)<=C and 1<=h<=H.
+  A reflection's raw numerator is bounded by (2*C+H)*P, and its denominator by H*P;
+  thus P_new<=(2*C+H)*P. Rejection resets retained state to the fresh Newton pair.
+  After s consecutive reflections from a fresh point, attempted pairs, including
+  rejected or terminal ones, satisfy max(abs(A),B)<=C*(2*C+H)^s. Encoding length grows
+  additively per reflection, not by squaring two growing operands. At every query
+  abs(raw)<=B*C+abs(A)*H. Comparison/reflection temporaries have the corresponding
+  product/sum bounds; combine these with the closed oracle's capacities, recovery,
+  O(n)-bit masks and zero-safe flow bounds, and the SOURCE iteration invocation above.
+  This is the source-dependent polynomial-encoding composition. Test-local carrier
+  checks remain finite evidence, not complete peak_integer_bits instrumentation,
+  an empirical universal proof, or permitted production bit/iteration cutoffs.
+- Historical Accelerated deferrals receive only the scoped evidence above. Unit 15
+  still owns endpoint transforms, H2/unit-baseline combination, global selection,
+  witness reconstruction, and the ruled Standard | Accelerated dual-route integration.
+  Each future global witness must independently validate and attain the equal numerical
+  value; different witnesses/raw quotients are permitted, and genuine Empty is separate.
+  Global theorem rows, certificate construction/checking, full telemetry, CLI and the
+  MPC experimental study remain unpromoted. No authority, catalogue, source, test,
+  activation ledger, or historical evidence is changed by this note. Unit 14 still
+  requires four-file candidate staging, exact index-tree isolation, atomic implementation
+  commit, separate approved-hash remote closure, and the two private note blocks with
+  conversational save confirmation. Private notes are never gate inputs.

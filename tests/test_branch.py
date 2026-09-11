@@ -2028,6 +2028,20 @@ def _source_violations(text):
         "rational": {"RawPair", "validate_pair", "make_pair", "pair_add_one",
                      "compare_pairs", "residual_numerator"},
     }
+    # Unit 14: allow the closed primitive only in the explicit Accelerated owner.
+    parents = {child: node for node in ast.walk(tree) for child in ast.iter_child_nodes(node)}
+    accelerated = next((node for node in tree.body if isinstance(node, ast.FunctionDef)
+                        and node.name == "solve_branch_accelerated"), None)
+    if accelerated is not None:
+        permitted["rational"].add("pair_reflect")
+
+    def reflection_owner(node):
+        while node in parents:
+            node = parents[node]
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.Lambda)):
+                return node is accelerated
+        return False
+
     forbidden_calls = {
         "float", "Fraction", "int", "gcd", "set", "frozenset", "eval", "exec",
         "compile", "open", "__import__", "getattr", "setattr", "hasattr", "delattr",
@@ -2063,7 +2077,8 @@ def _source_violations(text):
             name = node.func.id if isinstance(node.func, ast.Name) else (
                 node.func.attr if isinstance(node.func, ast.Attribute) else ""
             )
-            if imports.get(name, name) in forbidden_calls:
+            if (imports.get(name, name) in forbidden_calls
+                    and (imports.get(name, name) != "pair_reflect" or not reflection_owner(node))):
                 problems.append("forbidden call")
             if name == "range" and any(
                 isinstance(x, (ast.LShift, ast.Pow))
@@ -2104,6 +2119,22 @@ def _source_violations(text):
             if nxt not in seen:
                 seen.add(nxt)
                 pending.extend(edges[nxt])
+    # No reflection alias/storage or Standard-to-Accelerated transit is allowed.
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Name) and imports.get(node.id, node.id) == "pair_reflect":
+            parent = parents.get(node)
+            if not (isinstance(parent, ast.Call) and parent.func is node
+                    and reflection_owner(node)):
+                problems.append("reflection outside Accelerated call site")
+    pending = list(edges.get("solve_branch_standard", ()))
+    seen = set()
+    while pending:
+        target = pending.pop()
+        if target == "solve_branch_accelerated":
+            problems.append("reflection reachable from Standard")
+        if target not in seen:
+            seen.add(target)
+            pending.extend(edges.get(target, ()))
     changed = True
     while changed:
         prior = optimizer_users.copy()
@@ -2131,7 +2162,11 @@ def _source_violations(text):
 
 
 def test_public_surface_signatures_annotations_and_package_root():
-    assert _BRANCH.__all__ == ("BranchResult", "StandardBranchStats", "solve_branch_standard")
+    assert _BRANCH.__all__ in (
+        ("BranchResult", "StandardBranchStats", "solve_branch_standard"),
+        ("AcceleratedBranchStats", "BranchResult", "StandardBranchStats",
+         "solve_branch_accelerated", "solve_branch_standard"),
+    )
     shapes = (
         (_BRANCH.BranchResult, ("root", "shore"), {"root": RawPair, "shore": int}),
         (_BRANCH.StandardBranchStats,
@@ -2846,7 +2881,11 @@ for name in set(sys.modules) - before:
         assert origin == wanted, (name, origin)
         origins[name] = str(origin.relative_to(root))
 assert pathlib.Path(module.__file__).resolve() == root / "exactfrac/branch.py"
-assert tuple(module.__all__) == ("BranchResult", "StandardBranchStats", "solve_branch_standard")
+assert tuple(module.__all__) in (
+    ("BranchResult", "StandardBranchStats", "solve_branch_standard"),
+    ("AcceleratedBranchStats", "BranchResult", "StandardBranchStats",
+         "solve_branch_accelerated", "solve_branch_standard"),
+)
 print(json.dumps(origins, sort_keys=True))
 '''
     result = subprocess.run(
