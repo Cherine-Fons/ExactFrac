@@ -1995,6 +1995,253 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         two complete four-backtick blocks at full closure and await the author's save
         confirmation conversationally; no machine verification of that confirmation.
 
+4.12 Production StrongCompactMSPD global solver
+    (Unit 15 authority R1 — effective only on controlled authority commit)
+    1. Source and unit boundary. exactfrac/solve.py owns alg:global: the constructive
+       lem:unit baseline, four transformed branches in source order, direct H2 scan,
+       exact endpoint comparison, and reconstruction of the retained original compact
+       witness. Read def:parameter, lem:empty, lem:unit, prop:endpoints,
+       prop:branch-transform, sec:global (including its complete reconstruction table),
+       prop:global-invariant, and the proof of thm:main in the SPEC_LOCK-pinned V2.2
+       source. The main theorem's literal label is thm:main; no thm:B alias is present.
+       The September 10 ruling permits exactly Standard | Accelerated, without changing
+       the mathematical problem. The source's accelerated operation factor is not
+       attributed to Standard. All prior implementation/test files remain closed.
+
+    2. Exact public surface and selection. Module __all__ is exactly the sorted tuple
+         ("SolveResult", "SolveStats", "solve").
+       The positional-or-keyword signatures, with no defaults or hidden modes, are:
+         SolveResult(value: ExactValue, witness: Witness | None) -> None
+         SolveStats(branch_solver: str,
+             branch_stats: tuple[StandardBranchStats | AcceleratedBranchStats, ...],
+             attaining_candidate: str) -> None
+         solve(instance: Instance, branch_solver: str) -> tuple[SolveResult, SolveStats].
+       branch_solver must be an exact built-in str equal to "Standard" or "Accelerated".
+       Reject aliases, alternate capitalization, whitespace, enums, str subclasses,
+       callables, bools and coercion. No implicit default, automatic fallback, injected
+       optimizer, user seed, budget, callback, backend or externally prepared context.
+       The Python name solve implements StrongCompactMSPD; it does not rename its source
+       label. The consuming test is tests/test_solve.py, not tests/test_global.py.
+       Package-root exports remain unchanged.
+
+    3. Mathematical result record. SolveResult is a frozen, slotted, hashable dataclass
+       with structural equality, no generated ordering, and exactly value,witness in
+       that order. Validate type(value) is ExactValue first, then witness is None or
+       type(witness) is Witness. For None require literally value.N==0 and value.D==1;
+       reject a rescaled zero. With a Witness, this constructor checks types only, not
+       instance-dependent admissibility, attainment, optimality, or raw-formula equality.
+       Normally constructed closed records are trusted; constructor-bypassing forgeries
+       are outside scope. Preserve both supplied records; no normalization or duplicate
+       U,y,N,D fields. Successful solve returns the exact raw witness-attaining quotient
+       required by 4.4 and 4.4A, or ExactValue(0,1) with None for genuine Empty. It never
+       returns bare None, a fake witness, a new Empty sentinel, or a zero-valued witness
+       reclassified as Empty. There is no certificate field or placeholder object here:
+       Unit 17 derives the certificate envelope from value and witness; Unit 18 implements
+       independent checking. This is the pre-certificate realization of section 2 R5,
+       not permission to claim that certificate serialization/checking is implemented.
+
+    4. Separate local diagnostics. SolveStats is a frozen, slotted, hashable dataclass,
+       structural equality/no ordering, fields exactly as in item 2. Validate the solver
+       selection first; then an exact tuple whose entries have the exact selected closed
+       stats type, StandardBranchStats or AcceleratedBranchStats; then an exact built-in
+       str in ("Empty","Baseline","L0","L1","H0","H1","H2"). Keep the original immutable
+       branch records without recomputing, merging, replacing, or coercing their fields.
+       Construction imposes no cross-field/run-history equations. A successful nonempty
+       solve returns four entries aligned to j=0,1,2,3, including infeasible branches;
+       a Q==1 solve returns (). attaining_candidate records first-retained provenance,
+       not a claim that its witness belongs exclusively to a branch. No counter, origin
+       string, or diagnostics field controls mathematical comparison, feasibility, or
+       reconstruction. Unit 16 still owns full AlgorithmStats/RunMetadata, timings,
+       aggregation and complete peak-integer accounting. This local wrapper does not
+       claim those capabilities or put diagnostics in SolveResult or a certificate.
+
+    5. Public validation and Empty. solve first requires type(instance) is Instance,
+       then validates branch_solver, before reading graph properties or calling any
+       dependency. Accept only a normally constructed canonical active Instance; do
+       not repeat normalization, active-regime validation or labels processing. Public
+       malformed data/record construction through supported signatures raises exact
+       built-in ValueError. Wrong arity and frozen mutation retain Python behavior.
+       After validation, read Q. For Q==1, return
+         (SolveResult(ExactValue(0,1),None), SolveStats(branch_solver,(),"Empty")).
+       This lem:empty shortcut constructs no Witness, no BranchOracleContext, and makes
+       no branch/oracle/cut calls. Both selections and selection rejection still apply.
+       Q==0 is excluded by the closed canonical Instance, not a new mathematical case.
+
+    6. One preparation and complete traversal. For Q>=2, construct exactly one closed
+       BranchOracleContext(instance), retaining the same Instance object. Read d_q into
+       one local tuple for wrapper vertex scans; never recompute that property per vertex.
+       Construct/evaluate the baseline in item 7. Invoke only the selected closed solver
+       once for each j in the literal order (0,1,2,3), passing that same context and j.
+       Do not inspect context.families, skip a solver based on descriptor counts, call
+       exact_branch_min directly, rebuild contexts, or bypass an infeasible branch's
+       required seed. Every normal branch reply contributes its selected-type stats.
+       After all four replies, execute the direct H2 scan in item 10. No early return
+       based on a current density, a zero/negative transformed root, a known tie, or a
+       presumed globally winning branch. The sole global shortcut is the validated Q==1
+       case. Mutable working lists are local; no instance cache or cross-run state.
+
+    7. Constructive baseline, including the matching case. Follow lem:empty to choose
+       an admissible-capable shore, with these deterministic refinements of its choices:
+       (a) first increasing-index vertex with even f(v); otherwise
+       (b) first increasing-index vertex with odd f(v)>=3; otherwise
+       (c) first increasing-index vertex with f(v)==1 and d_q(v)>=2; otherwise
+       (d) all vertices have f(v)==d_q(v)==1, so the graph is a unit matching with at
+           least two edges. Choose the smaller endpoint of each of the first two
+           canonical support edges, and take their two-vertex shore.
+       Category priority precedes vertex-index priority; do not replace it by a single
+       differently ordered mixed-condition scan. Guard a violated matching promise with
+       RuntimeError, not repair or arbitrary shore enumeration. These choices refine
+       source freedom, not a mathematical minimum-mask preference.
+       The feasibility proof's preliminary boundary selection is NOT the final baseline.
+       Compute s=f(U), b=b_q(U); apply lem:unit: if s+b is odd take Y=b, otherwise Y=b-1.
+       Set all crossing counts to q_e, except decrement the first crossing edge_ref by
+       one in the latter case. Every noncrossing coordinate is zero. The even case must
+       have b>=1 and s+b>=4; the odd case must have s+b>=3. Evaluate this Witness with
+       closed witness_value, require its numerical value >=1, and retain its actual raw
+       quotient and actual Witness. An explicit violated source prerequisite is an
+       internal RuntimeError. Never initialize to a bare value 1, use a feasibility
+       witness of value below one, discard the baseline after branch preparation, or
+       assume the eventual winner must be a transformed-branch result.
+
+    8. Checked branch reply and original-domain binding. A normal selected-solver reply
+       must be an exact two-element tuple containing BranchResult or None, and the exact
+       selected closed stats type. Explicit shape/type violations are RuntimeError.
+       None is ordinary branch infeasibility and makes no endpoint candidate; keep its
+       stats and continue. For a BranchResult require its original shore within the
+       nonempty n-bit universe. Use closed shore_f, shore_b_q and shore_d_q to obtain
+       s,b,d, and check its source domain before reconstruction:
+         j=0: s+b odd (h=d+1-s>0, s+b>=3);
+         j=1: s+b even, b>=1, d>s (h=d-s>0, s+b>=4);
+         j=2: s odd, s>=3;
+         j=3: s even, b>=1 (s>=2).
+       Domain/universe failures are RuntimeError, never an infeasible branch. Do not
+       import oracle._source_terms or another private closed helper. Domain checks and
+       root/shore binding are consumer consistency checks, not a second optimization.
+       Trust the closed solver's global branch-minimum promise; do not enumerate shores
+       or independently recalculate a branch optimum in production.
+
+    9. Reconstruct each feasible original endpoint and compare the right quantity.
+       Work in original vertex coordinates and canonical support-edge order; dense y
+       has length instance.m and noncrossing entries zero. Endpoint recipes and literal
+       raw quotients (using d=2e_q(U)+b) are:
+         j=0 / L0: all crossing copies; Y=b;   (N,D)=(d+b,   s+b-1).
+         j=1 / L1: all except one copy from the first crossing edge; Y=b-1;
+                                                    (N,D)=(d+b-2, s+b-2).
+         j=2 / H0: all counts zero; Y=0;     (N,D)=(d-b,   s-1).
+         j=3 / H1: one copy on the first crossing edge only; Y=1;
+                                                    (N,D)=(d-b+2, s).
+       Build Witness(U,y), call closed witness_value for its authoritative raw ExactValue,
+       and require equality of the two literal formula fields above. The evaluator's
+       normal return must have exact ExactValue type; an explicit mismatch is RuntimeError.
+       Bind the returned root (A,B) NUMERICALLY to this candidate: for j=0,1 require
+         N-D>0 and A*(N-D)==B*D;
+       for j=2,3 require A*D==-B*N. These are respectively c/h=D/(N-D) and -N/D.
+       Never require structural root equality to a fresh c/h pair: terminal root scale
+       and terminal shore can legitimately differ. Never compare transformed roots
+       across branches, copy a submitted root's scale into the global value, normalize
+       (N,D), or treat a zero H0 endpoint as branch infeasibility.
+       Reconstruct/evaluate every feasible endpoint before comparison, even if it loses.
+       Invoke closed compare_pairs((candidate.N,candidate.D),(best.N,best.D)); update
+       value and witness together only when it returns a positive result. Equal values
+       preserve the first candidate. No secondary key based on root, h, mask, y,
+       numerator/denominator, cardinality, provenance, stats or solver selection.
+
+    10. Direct H2 is a real reconstruction path, not a fifth branch-solver call.
+        After the four branches, find the first increasing-index v with f(v)==1 and
+        cached d_q(v)>=2. If none, there is no H2 candidate. Otherwise U=1<<v. In
+        canonical edge order select two incident copies compactly: start remaining=2,
+        assign min(q_e,remaining) on each encountered crossing edge until remaining
+        is zero, and zero elsewhere. This uses at most two positive coordinates, either
+        a count 2 on one edge or counts 1,1 on two edges, without expanding multiplicity.
+        Check that two copies were attained, build its Witness, and call witness_value
+        before the same strict-improvement comparison. The literal value is (4,2),
+        not (2,1); its mathematical value is two. Do not skip this scan or reconstruction
+        merely because previous candidates already dominate it. The source permits any
+        such vertex/copies; these are deterministic refinements only.
+        For a valid H2 singleton, b=d>=2 and s=1. If b is even its L0 endpoint has value
+        2; if b is odd then b>=3 and its useful L1 endpoint has value 2. Therefore, with
+        correct complete branch solves and the prescribed order, H2 cannot STRICTLY
+        improve the incumbent after the branch loop. This does not authorize deleting
+        the source-prescribed direct scan or faking a strict-H2-winner graph fixture.
+        Cover its construction and comparison as a candidate, including tie retention.
+
+    11. Retained-result invariant and exception boundary. Initialization and every
+        completed candidate preserve: a genuinely admissible BestWitness, BestValue
+        literally equal to its raw objective, and numerical dominance over all candidates
+        examined so far. The final SolveResult uses those retained records, including
+        a retained Baseline; never reconstruct from an assumed branch index afterwards.
+        SolveStats provenance is derived from the mathematical retention decision, never
+        its authority. Explicit consumer-detected violations of closed promises raise
+        RuntimeError. Exceptions RAISED by a dependency (context constructor, selected
+        solver, shore helper, witness constructor/evaluator, or rational helper) propagate
+        unchanged; no blanket translation, fallback, swallowed error or partial success.
+        No returned record is itself an independently verified global-optimality certificate.
+
+    12. Imports, exactness and compact work. Permitted direct runtime imports: optional
+        future annotations; dataclasses.dataclass; Instance from instance;
+        BranchOracleContext from oracle; BranchResult, StandardBranchStats,
+        AcceleratedBranchStats, solve_branch_standard, solve_branch_accelerated from branch;
+        compare_pairs from rational; ExactValue, Witness, shore_f, shore_b_q, shore_d_q,
+        witness_value from witness. Internal helpers are private, not additional API.
+        No direct families/flow/parity_cut/sign_routing imports, private closed imports,
+        verifier/test/hand-off imports, certificate/CLI/telemetry implementations, file I/O,
+        external optimizers, timing, randomness, Fraction/decimal/float, true/floor division,
+        gcd/reduction, tolerances, scalarization, recursion, set construction/iteration,
+        all-shore enumeration or copy expansion. Integer parity via &1 or %2 is allowed.
+        Do not import forbidden layers merely to add another runtime validity check.
+        All wrapper loops are scans over vertices/support edges, the fixed four branches,
+        or bounded record fields. No loop bound depends on q,f,Q,Y,N,D or their bit lengths.
+
+    13. Source-dependent operation and number-size carriers. Let M=n+m+1,
+        K=(n+3)^3*(m+n)^2, and r_j=len(context.families[j]) for ANALYSIS ONLY. Preparation
+        is O(n+m+R_all) once under 4.9; wrapper baseline, at most four branch endpoint
+        reconstructions, H2 and their evaluations cost O(n+m) in total. If t_j is the
+        selected solver's oracle-call count, the full carrier is
+          O(n+m+R_all + sum_j t_j*(1+r_j*K)).
+        The source gives t_j=O(M log M) for Accelerated and O(M^2 log M) for Standard.
+        Thus the global accelerated bound agrees with thm:main; Standard has its own
+        corresponding larger source-dependent factor from cor:standard-strong. Finite
+        tests prove neither invocation nor universal strong polynomiality. No observed
+        flat-counter assertion or numerical production cutoff follows from these bounds.
+        For any admissible compact witness, e_q(U)+Y<=Q and f(U)+Y<=2Q, so
+          0<=N<=2Q and 2<=D<=2Q-1.
+        Raw endpoint/baseline outputs are input-sized; H2 has literal (4,2). Cross products
+        for endpoint comparisons have input-polynomial bit lengths. Root-binding products
+        additionally inherit the chosen branch solver's parameter-bit carrier; do not
+        falsely bound an unreduced Accelerated terminal pair by the final witness's raw
+        scale. Keep only a bounded number of witnesses/branch records plus O(n+m) wrapper
+        workspace beyond the prepared context and closed oracle work; no full trace cache.
+
+    14. Independent dual-route obligations and future boundary. On EVERY valid instance
+        in the Unit 15 registered corpus, run solve with both exact selections. Check
+        genuine Empty separately. Otherwise convert only primitive instance data and
+        the returned U,y into independent brute.BruteInstance and brute.Witness records;
+        require brute.witness_is_admissible and equality of brute.witness_raw_value to
+        that run's literal (N,D). Then compare the two numerical quotients exactly.
+        Neither equal witnesses nor equal raw pairs is required across routes under ties.
+        On the tiny corpus require equality to brute.brute_force's independent optimum;
+        route agreement alone is insufficient. For captured feasible branch endpoints,
+        likewise check numerical cross-route agreement and independent admissibility/
+        attainment of each reconstructed endpoint. Tests may instrument module-local
+        dependency bindings to observe candidates; this is not a production trace API.
+        Large-multiplicity fixtures use independent witness evaluation and a prior exact
+        mathematical optimum proof, not exhaustive loops to Q. Keep the verifier unchanged
+        and solver-blind; the unavailable certificate checker is not an added gate.
+
+    15. Controlled lifecycle. This authority changes only DESIGN and TEST_PLAN and remains
+        a proposal until its controlled authority commit; apply unstaged, review, stage,
+        commit and remotely close it before Phase C oracle fixtures. Then independently
+        derive/cross-check catalogue expectations before tests/test_solve.py exists.
+        Establish its specific missing-module RED while exactfrac/solve.py stays absent;
+        implement only that new production module under frozen authority/test, perform
+        the separate implementation audit, and promote only finite tested CONFORMANCE
+        scope after GREEN. Preserve every earlier row and every closed dependency.
+        Full telemetry, certificate serialization/checking, CLI, experiments and release
+        remain later units. External/second-model review is discretionary, never a gate;
+        no REVIEW_REQUEST artifact. Private BUILD/LEARNING notes are outside every gate;
+        deliver their two text blocks only at full Unit 15 remote closure and await the
+        author's saved confirmation only before Unit 16. No new lifecycle gate is added.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin

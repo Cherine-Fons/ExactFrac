@@ -3305,3 +3305,260 @@ remains separate. The Unit 18 certificate checker is not silently assumed to exi
 This unit implements neither the global selection/reconstruction nor the later
 experimental campaign. Their required dual-route obligations are prospective, not
 reported as completed. No old mathematical/source pin or activation ledger is updated.
+
+## 35. Unit 15 — StrongCompactMSPD global-solver obligations
+
+Authority: proposed DESIGN 4.12, effective only on its controlled authority commit.
+Source: def:parameter, lem:empty, lem:unit, prop:endpoints, prop:branch-transform,
+sec:global reconstruction table, alg:global, prop:global-invariant and thm:main.
+These are prospective obligations, not tests already implemented or passed. No prior
+TEST_PLAN obligation, fixture scope, closed test or completion status is changed.
+
+### GL1 — exact interface, raw records and strict selection
+
+Require exactly the DESIGN 4.12 public surface, record fields/signatures, frozen slots,
+structural equality/hash, no ordering, and explicit no-default selection. Exercise both
+exact strings "Standard" and "Accelerated". Reject wrong types, subclasses, aliases,
+case/whitespace changes and callable injection with exact ValueError. Check SolveResult
+validation order and literal (0,1) when witness is None. Constructor shape acceptance
+must never be described as instance-dependent admissibility or global optimality.
+
+### GL2 — public validation before graph use and dependencies
+
+Require exact Instance first, then selection validation before graph properties/context
+construction/optimizer calls, including on a valid Q==1 instance. Separate malformed
+public requests from supported-instance construction errors and internal dependency
+failures. Wrong call arity and frozen mutation keep Python behavior. No repair, raw-data
+adapter, labels-driven path, automatic fallback or constructor-forgery contract.
+
+### GL3 — genuine Empty under both selections
+
+Reproduce ORACLE-001. Require literal ExactValue(0,1), witness None, selected diagnostic
+spelling, empty branch_stats and origin "Empty". Instrument context construction, both
+branch solvers and Witness construction: none is invoked. Verify emptiness independently
+from the valid active input/Q and, on tiny input, brute_force. No fake U/y, rescaled zero,
+exception, or zero-valued admissible witness may masquerade as Empty.
+
+### GL4 — complete constructive baseline categories and exact unit guarantee
+
+Independently fix fixtures for all four ordered lem:empty shore-selection categories:
+even f; otherwise odd f>=3; otherwise unit-capacity degree>=2; otherwise a matching of
+at least two unit edges. Include conflicts between category priority and smaller vertex
+indices. Require first-in-category selection, and canonical first-two-edge lower endpoints
+for the matching case. Then apply lem:unit's all/all-but-one upgrade, not the preliminary
+feasibility proof's possibly zero-valued selection. Independently check admissibility,
+raw (N,D), the >=1 inequality, both parity cases and noncrossing zeros.
+
+### GL5 — baseline retention, not a synthetic lower bound
+
+Include an independently proved instance where the baseline remains globally optimal
+under strict retention, including omitted L1 d=s value-one shores. Require the original
+baseline Witness and its literal raw ExactValue to survive tied/lower later candidates.
+Also include a baseline that is improved. Preserve ORACLE-002's LOCAL_CONTRACT_FIXTURE
+scope; a local candidate is not promoted to a global optimum without a separate proof.
+The result must not be reconstructed from an assumed winning transformed-branch index.
+
+### GL6 — one prepared context and all four selected branch calls
+
+For Q>=2, observe exactly one BranchOracleContext(instance), identity reuse on j=0,1,2,3
+in that order, and no call to the unselected branch solver. Require all four calls even
+when early candidates tie/dominate or later branches are infeasible. Every normal reply's
+diagnostics is retained in branch order. No context.family inspection, direct oracle call,
+pre-skipped infeasibility, extra optimizer query, or shortcut at density two.
+
+### GL7 — branch reply shape, universe and source-domain checks
+
+Guard-isolate malformed tuple/result/stats replies, selected-stats-type mismatches,
+out-of-universe original shores and each source-domain violation. Require RuntimeError
+for explicit broken dependency promises, not ValueError, branch None or global Empty.
+A normal (None,stats) reply preserves its stats, creates no witness and continues. Test
+feasible zero/signed roots separately. Do not require a second production optimization.
+
+### GL8 — all four original endpoint formulas and compact reconstructions
+
+Fix independent fixtures for L0 all crossing copies, L1 all except one copy on the first
+crossing edge, H0 all-zero counts, and H1 one copy on the first crossing edge. Require
+original U, exact length-m dense y, every nonboundary zero, correct edge_ref, parity,
+lower bound and literal raw formulas from DESIGN 4.12.9. Include q_e=1 decrement-to-zero,
+full-shore H0, absent/empty boundary where legal, and candidates with internal edges.
+Observe reconstruction/evaluation even for feasible candidates that do not improve.
+
+### GL9 — exact root-to-endpoint binding without scale corruption
+
+Independently verify A*(N-D)==B*D for L0/L1 (N-D>0), and A*D==-B*N for H0/H1. Include
+returned terminal pairs numerically equal but structurally different from the returned
+shore's c/h; these are accepted. Incorrect root/shore binding is RuntimeError. Correct
+endpoint N,D come from the reconstructed witness, never root scale, a reciprocal copied
+blindly from the submitted parameter, a signed transformed root or a reduced fraction.
+
+### GL10 — compare endpoints, not transformed roots or stored tuples
+
+Include traps where transformed-root ordering, lexicographic (N,D) ordering, structural
+ExactValue equality, negative-root handling or float rounding would select incorrectly.
+Require closed compare_pairs on original positive-denominator endpoint pairs. On equality
+retain the first encountered candidate in Baseline,L0,L1,H0,H1,H2 order. Reject hidden
+max-h, minimum-mask, numerator/denominator, y or provenance secondary keys. Different
+legal tied terminal shores may give different final witnesses/raw pairs without error.
+
+### GL11 — direct H2 scan, both two-copy shapes and raw (4,2)
+
+Reproduce ORACLE-003 as a BRANCH_ORACLE, without an unsupported global promotion. Observe
+the scan after all four branch calls, first qualifying vertex, canonical greedy two-copy
+selection, a count 2 on one support edge and a split 1,1 on two edges. Require independent
+admissibility and literal witness_raw_value (4,2), not (2,1). Include absence and later-
+index eligibility. H2 must be constructed/evaluated and compared even when it ties/loses;
+there is no fifth transformed-branch solver invocation.
+
+### GL12 — honest H2 reachability and global invariant at every candidate
+
+Prove the source-domain redundancy: an H2 singleton is L0 when b is even, useful L1 when
+b is odd, and that L endpoint also has value two. Therefore do not demand or manufacture
+a valid graph on which correct completed branches are strictly improved by H2. Test its
+candidate construction/comparison separately from retained-result provenance. Instrument
+existing module-local dependency bindings, not a new production trace API, to check the
+baseline and each processed candidate. At every retention, value and witness stay bound,
+admissible and dominant over all candidates processed so far. Pure comparator controls
+must be labeled abstract controls, not graph-realizable endpoint histories.
+
+### GL13 — every registered instance under both selections
+
+Use at least the existing 329-instance core definition of ORACLE-079/093/100: n=2 then 3;
+lexicographic unordered support pairs; multiplicities in {0,1,2} in product order, zero
+records omitted; discard isolated-vertex patterns; f(v) ranges from 1 to d_q(v) in product
+order. Run each global instance under Standard and Accelerated, including genuine Empty.
+This specifies 658 global invocations, not a claimed pytest case count. Also run EVERY
+additional valid Unit 15 named/corpus/magnitude instance under both selections. Invalid
+requests and abstract fault controls are not mislabeled active graph instances.
+
+### GL14 — independent raw attainment and independent global optimum
+
+For EACH nonempty output of EACH selection construct independent BruteInstance and
+brute.Witness from primitive n,edges,f,U,y only. Require witness_is_admissible and
+witness_raw_value==(result.value.N,result.value.D) literally. Require the two numerical
+values equal by exact arithmetic. For tiny cases compare each to brute_force's exact
+global optimum, without requiring the brute enumerator's tied witness or raw scale.
+For Empty check its complete state independently. Production witness_value, branch
+agreement or a production success flag is not independent verification. Do not import
+production helpers into exactfrac_verify or implement the future certificate checker.
+
+### GL15 — independent per-branch endpoint agreement across routes
+
+Capture the actual selected solvers' replies/candidate evaluations while each global
+solve runs. For corresponding branches require identical feasible/None decisions and,
+when feasible, equal NUMERICAL original endpoint values; independently verify each
+reconstructed witness and its own literal raw value. Compare tiny branch values to
+independently enumerated original source-domain endpoint optima. Distinct legal roots,
+shores, dense y, raw output pairs, traces and stats across the routes are allowed.
+For Q==1 the no-branch shortcut is checked instead of inventing missing branch replies.
+
+### GL16 — diagnostic separation, retention and constructor boundaries
+
+Check the exact SolveStats representation and validation order, selected-type tuple
+entries, literal branch record retention/order, Empty tuple, and final provenance.
+Standalone constructor values do not assert observed history or cross-field identities.
+Vary normally constructed legal branch statistics without changing branch results:
+mathematical candidates, comparisons and output must be unchanged. Counts, provenance
+and root trajectories are not certificates. Do not claim Unit 16 telemetry complete.
+
+### GL17 — unchanged dependency exceptions and no partial result
+
+Inject distinct dependency exceptions at context preparation, each branch position,
+source-sum evaluation, reconstruction/evaluation and numerical comparison. They must
+propagate unchanged, including identity where applicable; no conversion into Empty,
+branch None, a fallback solver or a partial successful result. Independently exercise
+explicit consumer-detected promise violations as RuntimeError. Earlier guards must be
+satisfied so every intended seam is actually reached.
+
+### GL18 — reuse, deterministic repetition and nonalgorithmic labels
+
+Repeat and interleave both selections on the same immutable Instance, retaining prior
+results/stats to test absence of mutation or mutable aliasing. Check same-selection
+shipped determinism separately from cross-selection equality. Relabel without changing
+the canonical dense indices or edges: choices and mathematical results must not change.
+No module-global traces/caches or modifications to instances, contexts, witnesses or
+closed branch records. Dense counts must remain original-coordinate/canonical-order.
+
+### GL19 — exactness, direct-import isolation and compact control flow
+
+AST/source and fresh-process controls enforce DESIGN 4.12.12. Distinguish direct forbidden
+imports from permitted transitive closed-layer imports. No float, Fraction, true/floor
+division, gcd, tolerances, copy expansion, all-shore enumeration, set traversal, mutable
+trace cache or magnitude-driven loop bound. The verifier remains solver-blind. The
+nonexecuted Phase B interface probe is not a production module or a consuming test.
+
+### GL20 — large integers and separate magnitude/work claims
+
+Before tests, fix independently proved large-q/f active families, raw output formulas,
+comparison traps and witness counts. Run both routes; independently evaluate admissibility
+and raw attainment without brute_force/copy enumeration at huge magnitudes. Check source-
+bounded wrapper scans and the carriers 0<=N<=2Q, 2<=D<=2Q-1 for nonempty returned raw values.
+Do not force the returned Accelerated root's intermediate scale into this output bound.
+The separate Standard/Accelerated source-dependent iteration carriers are not observed
+flatness, a wall-time promise, a complete integer-peak measurement or production cutoffs.
+
+### GL21 — independently fixed oracle coverage before tests/code
+
+Phase C must classify/fix the complete input set, expected global values, admissible
+witness choices where deterministic reconstruction is ruled, feasible endpoint values,
+legal tie alternatives, baseline categories, all four reconstruction recipes, direct
+H2 shapes, rejections, faults and magnitude cases. Derive them from the definition and
+source without future solve.py or production-generated expected answers. Cross-check
+tiny optima with the closed independent verifier. Preserve historical seed-fixture scopes.
+Catalogue counts/fingerprints are independent expectations, not pytest collection counts.
+
+### GL22 — separate implementation audit and executed mutation controls
+
+After implementation, run a separate definition-level audit using the registered corpus
+and both real selections. Demonstrate actual rejection/detection of broken mutations:
+bare-one/no-witness initialization; feasibility witness used without unit upgrade;
+baseline overwritten on a tie; dropped branch; wrong solver selection; independent context
+per branch; comparison of transformed roots; rescaled raw output; stale winner witness;
+L1 decrement on the wrong edge; nonboundary count; invalid H0/H1 selection; omitted H2
+scan or reconstruction; H2 normalization to (2,1); wrong root/shore binding; and diagnostics
+controlling mathematical output. Use only mathematically realizable fixtures for graph
+claims; label synthetic boundary controls explicitly. External review is not a gate.
+
+### GL23 — narrow CONFORMANCE and later-unit boundaries
+
+Only after GREEN and the implementation audit may CONFORMANCE describe finite tested
+coverage of lem:empty, lem:unit, prop:endpoints/reconstruction, prop:global-invariant and
+alg:global's composition, mapped to actual frozen tests. Preserve all earlier rows and
+statuses. Document thm:main and the Standard alternative as source-dependent algorithm/
+operation/bit-growth chains, not universal theorems proved by finite testing. Witness
+checking establishes admissibility and attainment; tiny independent exhaustive comparison
+establishes optimality only for its enumerated cases. No certificate, CLI, telemetry,
+MPC experiment or release completion is implied.
+
+## 36. Unit 15 completion gate — global solve and witness reconstruction
+
+Follow the existing controlled lifecycle without adding a review or approval gate:
+
+1. Remotely close the documentation-only DESIGN/TEST_PLAN authority before Phase C.
+2. Independently derive/audit and remotely close ORACLE_CATALOG fixtures before creating
+   the consuming test or production source. No future production output supplies answers.
+3. Apply only tests/test_solve.py after syntax and repository-context Ruff preflight;
+   exactfrac/solve.py and tests/test_global.py remain absent. Require specifically one
+   collection error, exit status 2, caused by ModuleNotFoundError for exactfrac.solve.
+   A different import/runtime failure is not accepted RED. Keep the pre-existing suite
+   green with --ignore=tests/test_solve.py; never create a dummy production module.
+4. Under frozen authority/fixtures/test, apply only exactfrac/solve.py after syntax and
+   live Ruff preflight. Require targeted GREEN, full regression, repository Ruff, a
+   separate independent audit, original-coordinate/raw-value checks and all dual-route
+   obligations. Baseline is the authenticated prior checkpoint; new collected/passing
+   counts are observed live, not guessed from function counts or corpus cardinalities.
+5. Verify source/test/import isolation, immutable closed dependencies, complete-candidate
+   nonmutation and the audit's executed adversarial controls before CONFORMANCE.
+6. Apply only the narrowly scoped CONFORMANCE amendment unstaged; then stage exactly
+   docs/CONFORMANCE.md, exactfrac/solve.py and tests/test_solve.py. Verify full-index
+   diff/blobs/modes and isolate the exact staged tree for targeted/full/Ruff checks.
+7. Commit only that approved isolated tree; authenticate parent/tree/subject/scope and
+   postcommit regression/Ruff. Push only the approved commit in the separate closure
+   action; require HEAD/main/origin/main/direct remote equality, divergence 0 0, clean
+   worktree/index and unchanged evidence before declaring Unit 15 remotely closed.
+8. Deliver the private BUILD and LEARNING text blocks at full unit closure. They remain
+   outside every machine gate; accept the author's saved confirmation conversationally
+   before Unit 16. No private-note inspection or REVIEW_REQUEST artifact is authorized.
+
+This gate does not reopen closed modules/tests, create a certificate checker early,
+require identical witnesses across branch solvers, or replace independent definition-level
+verification with agreement between two consumers of the same production oracle.
