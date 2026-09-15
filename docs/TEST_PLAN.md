@@ -3562,3 +3562,254 @@ Follow the existing controlled lifecycle without adding a review or approval gat
 This gate does not reopen closed modules/tests, create a certificate checker early,
 require identical witnesses across branch solvers, or replace independent definition-level
 verification with agreement between two consumers of the same production oracle.
+
+## 37. Unit 16 — exact telemetry obligations
+
+These obligations implement DESIGN §4.13, not a new mathematical theorem. The
+starting authority is the closed Unit 15 tree with 1,178 passing cases. The new
+recording layer must preserve that mathematical program while measuring its work.
+The Phase B amendment is documentation-only. Its exceptional later instrumentation
+and legacy structural-test scopes are explicit in DESIGN §4.13(13), not inferred.
+
+### TE1 — exact public interface and immutable records
+
+Freeze the complete telemetry API and field order from DESIGN §4.13. Reject bool,
+subclasses, iterators, ducks, omitted fields, malformed tuples and wrong records;
+use exact ValueError for supported public-data rejection. Check slots/frozen fields,
+no generated ordering, unchanged legacy signatures/exports/classes, and no root
+re-exports. Constructors validate data shape/local equations, not execution history.
+
+### TE2 — no second solver and same mathematical execution
+
+For every registered valid input under each explicit selection, compare the measured
+entry point against legacy solve. Require exactly one selected legacy solve call,
+the same returned SolveResult object at the seam, the same native SolveStats object,
+and exact mathematical records/native diagnostics for repeated equivalent calls.
+Independently check each result's admissibility and literal raw value; cross-route
+numerical equality does not require equal tied witnesses. Scripted seam tests must
+not be confused with real global-solver executions.
+
+### TE3 — complete route and candidate attribution
+
+Nonempty runs prepare once, contain four ordered branch rows, retain infeasible
+branch work and all losing/tied endpoint work, and preserve native selection and
+attaining-candidate provenance. Baseline and H2 are genuine nonbranch observations.
+All 379 Unit 15 oracle inputs run under both selections; supplement with the telemetry
+fixtures. A zero-valued H0 endpoint must not be dropped from the observations.
+
+### TE4 — native and common Newton semantics
+
+Independently simulate short exact query streams to establish Standard updates,
+Accelerated Newton queries, common Newton-candidate constructions and native outer
+iterations. Cover zero iterations, artificial Standard K initialization, early Newton
+root, reflection root, accepted reflection and rejected reflection. Compare the full
+counter tables, not only oracle totals. Inapplicable native fields are explicit zero;
+that is not permission to fill an unmeasured event with zero.
+
+### TE5 — three look-ahead outcomes and return identities
+
+Freeze expected queried/accepted/rejected/terminal counts. Require queried = accepted
++ rejected + terminal; distinguish terminal reflection from terminal Newton using the
+native early_returns record. Initialization termination is separately recorded and is
+not an early-return increment. Validate each solver's successful-run identities from
+DESIGN §4.13(4), with branch infeasibility handled separately. Real larger-input path
+coverage is classified by actual outcomes, never by n>3 alone.
+
+### TE6 — one-time preparation versus repeated examinations
+
+Independently compute r_j and k_j from the prescribed ordered family definition.
+Prepared descriptor counts include empty and duplicate descriptors, one-time per
+branch. Query examinations are accumulated visits, not re-enumerations. Test total
+preparation, examined=calls*r_j, feasible=calls*k_j and parity=feasible against observed
+native work. Alter descriptors in test-only injected seams to ensure the production
+recording is not a hardcoded formula or a second enumeration.
+
+### TE7 — ordinary cuts, flow calls and all queries
+
+For a fixed query independently derive each feasible reduced N_F and sum
+N_F^2-3N_F+3. At solve level sum over all queries, including seeds, initialization,
+terminal and rejected look-ahead queries. Require agreement to native observed ordinary
+cuts and max-flow calls without reconstructing new graphs solely for diagnostics.
+Retain native augmentation and residual-adjacency scan definitions, including terminal
+reachability work. Zero-arc and zero-terminal cases are distinct fixtures.
+
+### TE8 — sum/max algebra and structural comparability
+
+Use intentionally different branch records to catch sum-versus-max errors. Totals
+sum event counts and one-time enumeration counts; maxima combine all magnitude/bit
+peaks, including nonbranch work. Derived branch_solver and attaining_branch cannot
+disagree with native. WorkStats has the same field layout for both selections. Reject
+inconsistent aggregates without claiming they prove an actual execution occurred.
+
+### TE9 — bit convention, zero and absent observations
+
+Verify bits(0)=bits(1)=bits(-1)=1 and sign-symmetric exact integer bit lengths. An empty
+observation bucket has peak zero; a bucket observing zero has peak at least one.
+flow_peak_generated_value zero with no flow call has flow_peak_bits zero; a real
+zero-valued flow call has flow_peak_bits one. Empty output (0,1) has positive output
+bit lengths one and no fabricated branch rows.
+
+### TE10 — independently fixed arithmetic-site manifest
+
+Before new tests or code, classify every scalar arithmetic expression on the measured
+call graph by qualified function, AST location and numeric role. Fix direct observation
+or a written executed-value dominance argument. Cover compound expressions, augmented
+assignments, generator/sum intermediates, short circuits and returned expressions.
+Publish the manifest in the Phase C human catalogue; a private mirror is not authority.
+No missing observation may be relabelled as a complete peak after implementation.
+
+### TE11 — cancellation and transient cross-products
+
+Hand-derive fixtures whose intermediate products exceed both their cancelling result
+and every final output field. Cover B*c-A*h, coefficient products, reflection numerator
+and denominator, root binding, comparisons of losing/tied candidates, and additive shift
+recovery. Check intermediate products before cancellation, not only final expression
+results or named locals. Accepted and rejected reflection computations are both counted.
+Use exact signed integers and unreduced raw pairs; Fraction is verifier/test-only.
+
+### TE12 — monotone summation and dominance omissions
+
+For allowed sum-prefix omissions, test the supporting nonnegative operand preconditions
+and equality of the maximum to the executed final sum. Reject mixed-sign use of that
+argument. Separately check branch.py's untouched repeated universe-bound expressions
+against the lower-layer observed bound on every successful branch-return path. A bound
+not actually generated by the algorithm is not a permissible replacement observation.
+
+### TE13 — flow, contraction and mask completeness
+
+Independently observe capacity aggregation, reverse-residual changes, bottlenecks and
+flow totals; exercise parallel/reverse/zero arcs. Include forced contraction, anchor and
+sink-terminal toggle, raw and lifted masks, and original-universe validation. Input labels
+with enormous integer values must not contaminate the numerical measurement. Algorithmic
+epoch/index arithmetic belongs to the defined observation set; recording counters do not.
+
+### TE14 — parameter peaks versus returned output size
+
+Require peak_numerator_bits/peak_denominator_bits to cover actual parameter and residual
+pairs, not merely the final optimal pair. Preserve the unreduced scale of accepted
+reflection parameters and raw output. Re-evaluate final output bit lengths separately.
+Use a trajectory with a large discarded intermediate and a small returned witness.
+No implicit gcd, float comparison, tolerance, surrogate upper bound or bit cutoff.
+
+### TE15 — recording noninterference and disabled path
+
+With recording disabled, the primitive is exact identity and legacy behavior remains.
+With recording enabled, returned int/tuple object identity is unchanged. Poison/change
+recorded maxima/counts in controlled tests and require the same mathematical decisions,
+queries, minimizers, tie behavior and raw output. Collector-local branching is permitted;
+mathematical reads of diagnostic state are not. No user callback is part of production.
+
+### TE16 — isolation, failures and lifecycle cleanup
+
+Test successive, interleaved and separate-thread measured calls, and reject nested
+measured calls before invoking the solver. On every dependency failure restore the
+context and propagate the same exception object; no partial AlgorithmStats result.
+Inject recorder failure only as a test seam and verify cleanup. Follow it immediately
+with an ordinary and a measured solve to detect state leakage. No shared mutable fields
+on Instance, prepared context, witnesses/results or native diagnostic records.
+
+### TE17 — exact observational erasure
+
+The stdlib-only source audit helper parses, never executes, immutable reference source
+fixtures. Erase only explicitly named leaf imports, scalar/pair identity wrappers and
+observation statements/scope wrappers. Compare to the complete original AST, including
+validation/exception order and arithmetic operand order. Reject every non-erasable edit,
+extra evaluation, regrouped expression, changed comparison, changed loop or tie policy.
+Preserve branch.py bytes and all five protected Standard definition hashes exactly.
+Execute deliberate mathematical-edit mutants to show the erasure checker rejects them.
+
+### TE18 — existing test-guard adaptations are not a weakening budget
+
+For each permitted existing test edit, preregister the exact structural import whitelist
+or historical byte-preservation assertion being adapted. Existing mathematical fixtures,
+query traces, expected counters, witness and rejection assertions stay byte-identical.
+No deletion/skip/xfail or renamed case. The helper must authenticate legacy source/test
+fixtures against the closed hashes and validate only enumerated test-AST changes.
+Keep transitive origin checks; add only exactfrac._telemetry to allowed project layers,
+not arbitrary exactfrac submodules. Source direct imports add only named leaf primitives.
+The old test_branch.py compatibility SHA remains checked against its historical fixture;
+its live import-only delta is independently checked, not approved by changing that SHA.
+
+### TE19 — primitive is genuinely a leaf
+
+In a fresh process import _telemetry without any solver/instance/verifier import. Only
+approved stdlib dependencies and fixed primitive definitions may appear. There is no
+clock/I/O/network/profiling/dynamic source tool in the leaf. Import the instrumented
+solver directly from its own file tree without tests, verifier or optional libraries.
+No parameter or result flows through a proxy numeric class. Retain minimum Python 3.11
+syntax/support obligations; live Ruff is authoritative for actual target paths.
+
+### TE20 — metadata is explicit and external
+
+Reject invalid elapsed values including bool/int substitutes, negative, NaN/infinite
+float and numeric subclasses; accept finite nonnegative exact floats and None. Unknown
+CPU is None, not a fabricated device string. Validate metadata strings/hash format.
+Constructing metadata or RunRecord performs no clock, subprocess, network or file call.
+Vary metadata with deterministic AlgorithmStats held equal. These are in-memory records;
+no certificate/checker timing, wire-format implementation or benchmark campaign is claimed.
+
+### TE21 — exact source-bound work and storage
+
+Inspect the wrapper and hooks for one solve call, one preparation, no replay/expanded
+copies/all-shore enumeration, no unbounded trace storage, no magnitude-based loop bound
+and no diagnostic-driven optimizer cutoff. Record actual event counts, not implied total
+elementary operations. Test fixed-support large encodings but do not require universally
+flat trajectories or infer a theorem from a finite sweep. Preserve both source factors.
+
+### TE22 — independent implementation audit and mutations
+
+Run a separate audit that does not reuse telemetry collectors to derive expected peaks
+or event counts. Compare hand-derived site/stream tables, independent raw witness checks,
+source erasure, legacy-test preservation and reference-native diagnostics. Execute mutants
+for output-only/flow-only peak, missed cancelling product, missed sum prefix where invalid,
+max-versus-sum inversion, terminal-look-ahead miscount, doubled preparation, omitted losing
+branch/H2/zero-H0, counter feedback, context leakage, metadata mixing, extra optimization,
+expanded-copy work and hidden source/test weakening. A detector must pass unmodified code
+and fail a real test body against its mutant; import/collection errors are not kills.
+The exact finite mutation list is fixed with oracle/test authority before implementation.
+
+### TE23 — exact regression and finite CONFORMANCE
+
+Run every legacy case after the tightly scoped adapters, plus every new collected case.
+The new total is 1,178 plus actual new collection, never a forecasted number. Preserve
+source/test identity throughout GREEN and later gates. Promote only actual finite scope
+in CONFORMANCE; report exceptions to historical source immutability explicitly, rather
+than claiming instrumentation changed no source bytes. No theorem, whole-input timing,
+optimality certificate or empirical strong-polynomial proof is newly established.
+
+## 38. Unit 16 completion gate — exact telemetry
+
+1. Authenticate the closed Unit 15 commit/tree, all 39 file identities, the fresh
+   1,178-case Unit 16 baseline, live Ruff and the pinned V2.2 source.
+2. Read the numerical/work source passages and the actual closed counters and static
+   preservation tests. Distinguish source requirements from DESIGN §4.13 engineering
+   choices. Present the limited source/test reopening explicitly during authority review.
+3. Apply only DESIGN/TEST_PLAN, preserving their historical bytes; leave unstaged. Review,
+   stage only these documents, record tree/diff, commit, rerun the 1,178-case baseline/Ruff,
+   and verify remote closure. No Unit 16 production or consuming-test file exists yet.
+4. Derive the independent counter/peak/site/preservation tables and immutable old-source
+   fixture digests before code. Append only the oracle catalogue; audit, regression/Ruff,
+   then separate stage/commit/postcommit-audit-tests/push/closure. No external-review gate.
+5. Phase D creates tests/test_telemetry.py, tests/_telemetry_source_audit.py and the exact
+   unexecuted legacy JSON fixture; applies only enumerated import/preservation adapters
+   to permitted tests. Run syntax and live per-target Ruff first. Require specific missing-
+   exactfrac.telemetry RED; existing 1,178 cases must pass with that new test excluded.
+   Neither new production file nor instrumentation edit exists at RED. Freeze all tests.
+6. Phase E creates telemetry/_telemetry and only the explicit erasable instrumentation
+   source changes. Preserve branch.py and the independent verifier byte-for-byte. Run
+   targeted/full regression, live Ruff, import-isolation/nonmutation, independent audit,
+   legacy reference checks and executed mutations. Stop on any unruled non-erasable edit.
+7. Only after GREEN, amend CONFORMANCE within the actual finite scope. Preserve all
+   earlier historical rows/statuses and document rather than conceal observational changes.
+   Do not change production/tests in this documentation phase.
+8. Stage exactly the reviewed full candidate; record all source/test/doc/fixture identities,
+   full-index diff and tree. Test the exact staged export in isolation, including every
+   legacy/new case and Ruff, with import origins rooted in that export. Prove nonmutation.
+9. Commit that exact isolated tree; check parent/tree/subject/scope/diff and clean index;
+   rerun targeted/full/Ruff. Push only in a separate authenticated gate, then verify four
+   equal refs and zero divergence. Deliver private BUILD/LEARNING blocks only at full
+   Unit 16 closure, then await saved confirmation before Unit 17. Never inspect those notes.
+
+The authority creates no new scientific-review or model gate. The extra source/test
+paths arise from an explicitly proposed observational extension to closed code; they
+are not a general permission to rewrite dependencies, weaken tests, or alter mathematics.

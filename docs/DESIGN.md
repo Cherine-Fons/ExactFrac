@@ -2242,6 +2242,333 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         deliver their two text blocks only at full Unit 15 remote closure and await the
         author's saved confirmation only before Unit 16. No new lifecycle gate is added.
 
+4.13 Unit 16 — exact telemetry and observational instrumentation
+    (AUTHORITY R1 PROPOSAL; adopted only by its controlled authority commit)
+
+    1. Basis, boundary, and explicit scope decision.
+       This section refines §§4.5 and 8; it does not amend SPEC_LOCK, CONTRACT,
+       the V2.2 mathematics, or any prior mathematical result. Relevant source:
+       def:complexities, prop:domain-decomp, lem:ek, thm:branch-oracle,
+       alg:branch-min, alg:standard-branch, alg:branch, lem:standard-bits,
+       lem:bitgrowth, alg:global, prop:global-invariant and thm:main.
+       Source statements concern operation counts and number encodings, not
+       Python telemetry interfaces. The interfaces below are new engineering
+       rulings, not names or definitions purportedly present in the theorem.
+
+       Full peak_integer_bits cannot be recovered from the closed final records.
+       It requires observations of intermediate products, sums, masks, parameters,
+       capacities and flows. This is NOT a new-file-only unit. Adoption of this
+       authority explicitly authorizes the limited recording-only extensions in
+       item 13. It does not authorize algorithm redesign or wholesale replacement.
+       Prior release/closure identities remain historical truth, not rolling pins.
+       The Phase B patch changes only DESIGN and TEST_PLAN; no closed Python file
+       or existing test changes in Phase B. All 39 baseline files are authenticated
+       against commit aafac4d25bee3992399e8591bd37335b94ce7e9c before application.
+
+    2. Public surface and old-contract preservation.
+       New public module: exactfrac/telemetry.py. New private observation primitive
+       module: exactfrac/_telemetry.py. No package-root re-exports.
+       Entry point, with two required positional-or-keyword arguments:
+
+           solve_with_telemetry(instance: Instance, branch_solver: str)
+               -> tuple[SolveResult, AlgorithmStats]
+
+       Validate exact Instance and exact str selection Standard | Accelerated,
+       in that order, before graph access. No default, coercion, injected callback,
+       alternate solver, automatic route choice, or cached mathematical result.
+       Call the existing solve(instance, branch_solver) exactly once. Return its
+       exact SolveResult object and retain its exact native SolveStats object.
+       Legacy solve and branch public signatures, __all__ sequences, dataclass
+       fields, argument-validation order, result/raw-pair meanings, diagnostic
+       counters, exception behavior, minimizers, and tie order remain unchanged.
+       Legacy solve stays callable without requesting complete measurements.
+       No production monkeypatching, int subclass/proxy, tracing, stack inspection,
+       dynamic compilation, source rewriting, or cloned mathematical implementation.
+
+    3. Immutable record layout; no implicit adoption by construction.
+       All new public records are frozen, slots dataclasses; fields are required
+       positional-or-keyword arguments in the order below, with no hidden defaults.
+       Exact built-in types are required; bool is not an int. Invalid public data
+       raises exact ValueError without coercion or repair. Construction checks
+       record shape, local bounds and declared identities, not a historical run.
+
+       WorkStats fields (all exact nonnegative ints), in order:
+           outer_iterations, oracle_calls, newton_updates, newton_queries,
+           newton_candidates, lookahead_queries, lookahead_accepted,
+           lookahead_rejected, lookahead_terminal, newton_terminal,
+           initialization_returns, early_returns, atomic_families_enumerated,
+           atomic_families_examined, atomic_families_feasible, parity_cut_calls,
+           ordinary_min_cut_calls, max_flow_calls, augmentations, bfs_scans,
+           flow_peak_generated_value, flow_peak_bits, peak_numerator_bits,
+           peak_denominator_bits, peak_integer_bits.
+       BranchTelemetry fields:
+           branch: int, feasible: bool, work: WorkStats.
+       AlgorithmStats fields:
+           native: SolveStats, total: WorkStats, nonbranch: WorkStats,
+           branches: tuple[BranchTelemetry, ...],
+           output_numerator_bits: int, output_denominator_bits: int.
+       AlgorithmStats.branch_solver and AlgorithmStats.attaining_branch are read-only
+       properties of native.branch_solver and native.attaining_candidate, not second
+       independently stored selection/provenance values. The latter property retains
+       the labels Empty, Baseline, L0, L1, H0, H1, H2; it never assumes a branch winner.
+       BranchTelemetry.branch is exactly 0,1,2,3; feasible is an exact bool.
+       AlgorithmStats.native is exact SolveStats; the constituent work/branch records
+       are exact declared types; branches is an exact tuple, not a mutable sequence.
+       Output bit lengths are exact positive ints, including for the Empty pair (0,1).
+       Nonempty-run branches contains four records in order 0,1,2,3 and native has
+       four selected-type branch records. Empty has native.attaining_candidate Empty,
+       native.branch_stats (), and branches (); absent execution is not four fake runs.
+       Record validators must reject mismatched lengths, order, aggregation, and native
+       counter mappings. They do not certify that supplied diagnostics were executed.
+
+    4. Common fields do not erase native event definitions.
+       Copy the existing returned event counters, never rerun the oracle to count work.
+       For Standard, newton_updates is native.newton_updates; newton_queries is zero.
+       For Accelerated, newton_queries is native.newton_queries; newton_updates is zero.
+       newton_candidates counts formation of the fresh c/h Newton point in a negative-
+       residual loop body, excluding the seed, K, initialization, and reflection. It
+       equals Standard.newton_updates or Accelerated.newton_queries. This is the common
+       event; the native fields are deliberately not renamed to imply identical updates.
+       outer_iterations and oracle_calls keep their solver-specific native conventions.
+       oracle_calls includes seed, initialization, terminal, and rejected look-ahead calls.
+       A Standard feasible branch has calls=1+outer_iterations and
+       outer_iterations=newton_updates+1. Standard infeasible has calls=1, all three
+       iteration/Newton fields zero. Standard look-ahead/early-return fields are zero.
+       Accelerated infeasible has calls=1 and all outer/Newton/look-ahead/return counts
+       zero. A feasible Accelerated branch has calls=2+newton_queries+lookahead_queries
+       and outer_iterations=newton_queries. Let L=lookahead_queries-accepted-rejected.
+       Then L=lookahead_terminal in {0,1}; newton_terminal=early_returns-L in {0,1}.
+       early_returns is the sum of these two terminal counts, not initialization returns.
+       initialization_returns=1 exactly for a feasible Accelerated branch with zero
+       outer_iterations; otherwise zero. Successful nonempty Accelerated branch returns
+       once: initialization_returns+early_returns=1. These are recording checks only.
+       No event may be inferred from a small-corpus assumption that look-ahead is absent.
+
+    5. Preparation, per-query work, and flow accounting.
+       atomic_families_enumerated counts each descriptor actually emitted by the one
+       preparation, including empty descriptors and duplicates prescribed by enumeration.
+       Attribute the prepared cardinality r_j to branch j once, even if j is infeasible.
+       Record it from the existing prepared cover, with no second enumeration and no
+       graph-derived formula substituted for observation. Context creation remains once.
+       atomic_families_examined is native.oracle_stats.atomic_families_examined, accumulated
+       over every query; feasible is its existing nonempty-descriptor visit counter.
+       parity_cut_calls and ordinary_min_cut_calls are copied from that same native
+       aggregate; max_flow_calls retains the present backend equality to ordinary cuts.
+       augmentations and bfs_scans map to flow_augmentations and flow_bfs_scans.
+       flow_peak_generated_value is the native flow-only peak; never sum it across calls.
+       Nonbranch event counters are zero: prepare cardinalities are attributed once to
+       their branch rows. Nonbranch retains preprocessing/baseline/H2/output bit peaks.
+       Totals add all event counts and preparation cardinalities, but take maxima of
+       flow_peak_generated_value and all bit peaks across nonbranch and all branch rows.
+       output_*_bits measure only the final returned raw pair, not a maximum over queries.
+       Unit 16 exposes all four branch records, never only the winning branch's work.
+       Identity checks in tests: examined_j=calls_j*r_j, feasible_j=calls_j*k_j, and
+       parity_j=feasible_j, where k_j is the number of nonempty prepared descriptors.
+       Those identities follow the current complete cover; they do not replace counters.
+       For each query, ordinary calls sum N_F^2-3N_F+3 over the feasible reduced problems.
+       For a whole run sum over queries as well. N_F is the reduced problem's actual
+       node count, not automatically n+3. The theorem supplies bounds, not exact counts.
+
+    6. Observation interval and complete integer-peak semantics.
+       Measurement begins after the wrapper's public validation and before the sole
+       legacy solve call. It includes input mathematical integers consumed by this call,
+       Q and degree preparation, baseline, every branch/query/cut/flow, all reconstructed
+       candidates, comparisons/root binding and final output. Already-completed Instance
+       construction/normalization is outside this interval; labels and metadata are not
+       mathematical integers to include merely because a label happens to be an int.
+       bits(x)=max(1,abs(x).bit_length()). An empty observation set has peak zero; this is
+       different from observing the integer zero, which contributes one bit.
+       flow_peak_bits=0 if no ordinary flow call occurred, otherwise bits(flow_peak_generated_value).
+       Empty still observes Q and output (0,1); its output numerator/denominator bits are one.
+
+       peak_integer_bits is the EXACT maximum over the following observation set, not
+       an upper bound or a subset advertised as complete: consumed q,f,n,m and vertex
+       indices; generated degree/shore/selected-copy totals and their scalar subexpressions;
+       all numerator/denominator/parameter and c,h/residual terms; coefficient, support
+       capacity, spoke, shift and recovery intermediates; contraction/parallel sums;
+       normalized flow capacities, bottlenecks, residual updates and total flow; all
+       exact comparison/root-binding products; finite-universe masks, anchors, lifted
+       coordinates and algorithmic indexing/epoch arithmetic on the measured call path.
+       Exclude diagnostic-only counting/aggregation, recorder bookkeeping, Python object
+       IDs/runtime internals, wall-clock/metadata/hash/serialization computations, and
+       arithmetic in the independent verifier/tests. This is not a CPython memory profiler.
+       Include ephemeral products BEFORE cancellation: B*c and A*h as well as their
+       difference; all factors/products of 2*A*D-C*B and B*D; root-binding products and
+       products from losing/tied global comparisons. Unselected candidate arithmetic and
+       rejected look-ahead work still belongs to the run.
+       peak_numerator_bits and peak_denominator_bits cover all actual raw rational pairs
+       formed or consumed in the measured path (seed/K/Newton/reflection/branch return,
+       existing exact comparison operands, residual numerator over submitted B, original
+       endpoint pairs and output). A pair need not be reduced or ultimately retained.
+       Do not manufacture extra arithmetic solely to enlarge or certify a peak.
+       A site may omit individual monotone nonnegative sum prefixes only with an explicit
+       dominance proof: the observed final sum is itself an executed value and dominates
+       every omitted prefix. Cancellation sums/products may not use that shortcut.
+
+    7. Instrumentation primitive, erasure and noninterference.
+       _telemetry.py is a standard-library-only leaf: no imports of any other exactfrac
+       layer, verifier, tests, I/O, randomness, or clock. It holds a context-local active
+       recorder. Start a fresh recorder for each measured call and restore the previous
+       context in finally, including failure. Never install mutable state on an Instance,
+       BranchOracleContext, result, witness, or native statistics object.
+       A private integer tap returns its original argument object unchanged; a raw-pair
+       tap returns its original tuple unchanged. With recording disabled they are identity
+       operations. With recording enabled they additionally update peaks, never the value.
+       Taps may surround already-validated scalar expressions to expose intermediate
+       values without changing Python evaluation order or evaluating an operand twice.
+       Statement-only observation events and scope boundaries may return no information
+       used by mathematical code. The only recorder reads inside the leaf control whether
+       and where to record and whether to update a diagnostic maximum.
+       No mathematical condition, parameter, loop bound, result, exception translation,
+       minimizer, graph ordering, or tie choice reads a recorded field. No user callbacks.
+       Branch scopes include their branch computation and original endpoint comparison;
+       preparation outside the branches, baseline and H2 go to nonbranch. Preparation
+       counts are distributed to their matching branch IDs without reexecuting preparation.
+       Nested measured solves in the same execution context reject before invoking solve;
+       independent threads have disjoint recorders. The synchronous wrapper does not spawn
+       tasks/threads or suspend into arbitrary user code. Repeated and failed runs leak no
+       observations. No complete AlgorithmStats is returned for a failed solve; original
+       dependency exceptions propagate as the same exception object. Collector corruption
+       or normally returned inconsistent records raise RuntimeError, not partial success.
+
+       The permitted source transformation must admit a deterministic syntax-only
+       erasure: remove only named observation imports/events/scope wrappers and replace
+       identity taps by their original argument expressions. Original arithmetic ASTs,
+       public definitions, validations and control-flow order must then match the closed
+       source ASTs. No generalized optimizer, algebraic simplifier, or arbitrary statement
+       deletion is permitted in the erasure checker. Any necessary non-erasable edit is
+       outside this authority and must be reported, not silently authorized.
+
+    8. Coverage before a whole-peak claim.
+       Before production, enumerate a finite observation-site manifest against the exact
+       closed source ASTs: module, qualified function, expression/event location, observed
+       role, branch/nonbranch scope, and either an explicit tap or a justified dominance
+       omission. This is part of the existing Phase C oracle-source derivation, not a new
+       workflow gate. Phase D fixes its expected behavior before telemetry code exists.
+       Audit every arithmetic expression on the measured call graph, including nested
+       temporaries and generator expressions. Fields cannot be zero-filled because an
+       observation is missing. Missing coverage is an audit failure, not a complete peak.
+       Measurements of final output or the flow-only summary never substitute for item 6.
+       No counter/peak may impose a production asymptotic cutoff or a theoretical constant.
+
+    9. Environmental metadata and run records.
+       RunMetadata fields: wall_clock_s: float | None, python_version: str,
+       platform: str, cpu: str | None, code_version: str, instance_sha256: str.
+       wall_clock_s is externally supplied: exact finite nonnegative float or None
+       (unmeasured, never represented by fake zero). Text fields are exact nonempty str;
+       cpu may be None for unknown. instance_sha256 is exact lower-case 64-digit hex.
+       None does not certify an unmeasured resource. No discovery, clock, subprocess,
+       Git query, network, or file I/O runs inside telemetry constructors or measured solve.
+       RunRecord fields: algorithm: AlgorithmStats, metadata: RunMetadata; exact types.
+       These records and measurements are never certificate fields. Their constructors
+       assert local data validity, not authenticity of a supplied clock/version/hash.
+       Unit 19/21 assembles externally measured metadata and later run serialization.
+       Unit 16 rules these in-memory records only; versioned wire-format implementation
+       is not smuggled into this phase. §9's versioned run-record requirement remains.
+       External timing must disclose whether recording is enabled, interval boundaries,
+       warmup, repeats and environment. External timers do not remove instrumentation
+       overhead. A timing-only uninstrumented run must not masquerade as the same traced
+       execution. Metadata differences must not change deterministic AlgorithmStats.
+
+    10. Tests and independent evidence.
+        Test both selections on every registered valid instance, matching legacy results
+        exactly for the same selection and independently evaluating each witness's own raw
+        pair. Across selections require numerical equality, not tied-witness equality.
+        Also compare the underlying native diagnostics exactly to the uninstrumented call.
+        Retain all 1,178 previous test case identities and mathematical/rejection assertions.
+        Their permitted import/preservation-check adaptations are enumerated in item 13;
+        the count is not permission to weaken a case. New collected count is established
+        by actual collection, not assumed. Independent audit covers the observation-site
+        manifest, erasure, counters, peak completeness, isolation and mutation detection.
+        Real and scripted nonzero accepted/rejected/terminal look-ahead cases are required
+        for accounting; n>3 by itself is not a sufficient path-coverage predicate.
+        Later Unit 20 builds the benchmark corpus; Unit 21 runs experiments. Small tests
+        do not prove generic trace invariance or support-size scalability.
+
+    11. Work and encoding statement.
+        Forwarding fixed scalar observations adds O(1) tap/record operations per recorded
+        scalar expression, O(n+m) initial input observations and a fixed number of bucket
+        records. No extra optimization query, family preparation, graph/multiplicity-sized
+        replay, or all-shore enumeration is permitted. Streaming maxima retain no execution
+        history. Context-local storage is bounded in record count, not byte-size constant.
+        Source mathematical operation carriers remain those of the selected algorithm:
+        Standard O(M^2 log M) versus Accelerated O(M log M) oracle factors. Monitoring
+        costs and Python bit operations are reported separately; no elapsed-time or memory
+        bound is inferred merely from the mathematical arithmetic-operation theorem.
+        Strong polynomiality does not imply equal observed counters under varying input
+        magnitudes. Event counters are measurements, not a count of all elementary operations.
+
+    12. Error, Empty, and zero distinctions.
+        New public wrong types/values: exact ValueError. Internal violated closed promises:
+        RuntimeError. Dependency exceptions: propagated unchanged. Empty ((0,1),None)
+        retains no branch/context; nonempty infeasible branches still have preparation
+        rows and seed/oracle diagnostic work. Feasible zero-valued H0 candidates are
+        measured, not treated as Empty. Labels, native candidate provenance and raw output
+        remain intact. No telemetry record proves global optimality or a universal theorem.
+
+    13. Explicitly bounded reopening and exact future file scope.
+        This authority proposes an OBSERVATIONAL extension, not a correction of the proved
+        algorithm. After its authority commit/remote closure, only these closed production
+        modules may receive the erasable taps/events of items 6–8:
+           exactfrac/instance.py, exactfrac/shore.py, exactfrac/families.py,
+           exactfrac/witness.py, exactfrac/rational.py, exactfrac/sign_routing.py,
+           exactfrac/parity_cut.py, exactfrac/flow.py, exactfrac/oracle.py,
+           exactfrac/solve.py.
+        Instrument only functions reached by the measured canonical-instance solve, plus
+        import plumbing. Normalization/serialization-only functions not reached by it stay
+        byte-identical. Public record fields, constructor validation and exports stay
+        byte-identical. Arithmetic property bodies may receive only erasable observations.
+        branch.py remains entirely byte-identical: its numerical work is in instrumented
+        dependencies; its repeated shore-universe bound is dominated by the already
+        executed lower-layer validation bound. The site manifest must verify that argument.
+        Both branch algorithms and all five protected Standard definitions retain their
+        old bytes. Only the transitive-import test envelope gains the new leaf.
+
+        Closed test files permitted ONLY dependency/preservation-guard adaptations:
+           tests/test_instance.py, tests/test_shore.py, tests/test_families.py,
+           tests/test_witness.py, tests/test_rational.py, tests/test_sign_routing.py,
+           tests/test_parity_cut.py, tests/test_oracle.py, tests/test_branch.py,
+           tests/test_branch_accelerated.py, tests/test_solve.py.
+        Do not touch their fixtures, expected numbers, witnesses, native counter values,
+        query traces, exception assertions, case IDs, or prohibitions on inexact arithmetic,
+        algorithmic telemetry feedback, verification imports and magnitude-driven loops.
+        Whitelists may add only the new leaf dependency and explicitly named observation
+        primitives. No wildcard/blanket relative-import permission. Exact old source-byte
+        preservation assertions must be retained for their immutable historical fixtures
+        and complemented by erasure-equivalence checks for instrumented live definitions,
+        not replaced by a freshly blessed hash alone. The Unit 14 test's old Standard-test
+        SHA remains a historical reference, not silently overwritten to bypass its purpose.
+        New Phase D files: tests/test_telemetry.py, tests/_telemetry_source_audit.py,
+        tests/fixtures/unit16_legacy_sources.json (exact unexecuted old source/test bytes).
+        The audit helper is stdlib-only and must not import future telemetry/production.
+        The JSON is an authenticated immutable comparison fixture, not executed code or a
+        second solver. Legacy content identity and allowed test-AST edits are preregistered
+        in the oracle catalogue. Hashing it does not change any private evidence record.
+        New Phase E files: exactfrac/_telemetry.py and exactfrac/telemetry.py, plus the
+        bounded edits above. Existing test adaptations are frozen at RED; do not revise
+        them to accommodate unexpected implementation behavior. test_flow.py and
+        test_verify_brute.py, exactfrac/branch.py, every exactfrac_verify file, package roots, pyproject.toml,
+        instance corpus, SPEC_LOCK, CONTRACT and all other paths remain frozen.
+        Actual later patches may omit unnecessary files from this ceiling; no other file
+        or edit purpose is implicitly authorized. Export all originals before adaptation.
+
+    14. Existing lifecycle only.
+        Phase B changes only DESIGN/TEST_PLAN, unstaged for review, then separately staged,
+        committed, tested and remotely closed. No observation primitive or consuming test
+        is created here. Phase C fixes independent tables, site manifest and preservation
+        references. Phase D applies the declared tests/fixtures/guard adapters, requires
+        specific missing-exactfrac.telemetry RED and the same 1,178 legacy cases passing
+        with the new telemetry test excluded. No new leaf/telemetry module exists in RED.
+        Phase E adds the new modules and ONLY the authorized erasable observation edits,
+        requiring GREEN, legacy identity/conservation tests, both routes, live Ruff and
+        the separate implementation/mutation audit. Phase G adds only finite CONFORMANCE
+        coverage while preserving prior historical rows/statuses. Complete staging must
+        include exactly the reviewed new and amended files; isolated staged-tree tests,
+        local-postcommit tests and four-reference remote closure follow unchanged.
+        No external-model gate, REVIEW_REQUEST, automatic recovery or private-note check.
+        BUILD/LEARNING blocks are delivered only at full unit closure; their saved
+        confirmation is required only for the transition to Unit 17.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin
