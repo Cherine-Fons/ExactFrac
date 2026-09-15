@@ -859,3 +859,198 @@ AC24's remaining staging/isolation/commit/remote-closure obligations are not yet
   requires four-file candidate staging, exact index-tree isolation, atomic implementation
   commit, separate approved-hash remote closure, and the two private note blocks with
   conversational save confirmation. Private notes are never gate inputs.
+
+## Unit 15 global composition and compact-witness implementation note
+
+### Scope and historical-row boundary
+
+This is the finite implementation crosswalk authorized by DESIGN 4.12 and TEST_PLAN
+GL1--GL23 / section 36, after production R2 and frozen test R2 passed the live GREEN
+and separate implementation audit. Every earlier byte, row and status is preserved.
+In particular, the top-table `prop:global-invariant` and `thm:main` rows remain
+`planned`, with their historical `tests/test_global.py` reservations unchanged.
+Those reservations do not name executable Unit 15 tests: the actual file is
+`tests/test_solve.py`; `tests/test_global.py` remains absent. The scoped evidence
+below neither promotes those historical rows nor invents a new theorem label.
+Earlier notes' deferrals describe their own checkpoints; they are not rewritten.
+
+`exactfrac.solve.solve(instance, branch_solver)` implements `alg:global` under the
+explicit exact-string selection `"Standard"` or `"Accelerated"`. It returns the
+separate `(SolveResult, SolveStats)` records. Mathematical output is the literal
+raw `ExactValue` and original `Witness(U,y)`, or `(0,1)` with None for genuine Empty.
+The result is not a serialized certificate or an independent optimality proof.
+
+### Source-referenced finite evidence (not top-table status changes)
+
+| Governing source reference | Implemented and finitely tested scope | Actual frozen tests in `tests/test_solve.py` |
+|---|---|---|
+| `lem:empty` | The supported active Q=1 case returns literal `(0,1)` and None under both selections without preparing a context, building a witness, or invoking a branch. The earlier verifier-owned row remains unchanged. | `test_gl3_genuine_empty_constructs_no_graph_dependency`; `test_gl4_gl15_every_registered_input_both_real_routes` |
+| `lem:unit` | Constructive baseline category priority, matching case, unit upgrade, independent admissibility, raw attainment and retention on ties on the registered inputs; no unattached bare-one incumbent. | `test_gl4_gl15_every_registered_input_both_real_routes`; `test_gl13_gl21_registry_fingerprints_and_core_definition`; `test_gl7_synthetic_source_prerequisite_failures` |
+| `prop:endpoints`, `prop:branch-transform`, `sec:global` reconstruction passages | All four original endpoint recipes, zero H0 included, exact root-to-endpoint binding, original coordinates, and compact direct H2 with literal `(4,2)`. Finite reconstruction evidence is not another branch optimization or a proof of the endpoint theorem. | `test_gl4_gl15_every_registered_input_both_real_routes`; `test_gl9_scaled_roots_and_original_shore_binding`; `test_gl7_explicit_broken_dependency_promises` |
+| `prop:global-invariant`, `alg:global` | One shared context; four selected branch calls in order; actual H2 construction/comparison; first strict numerical maximum retained with its corresponding witness. Instrumented candidate-by-candidate checks cover the registered trajectories. | `test_gl4_gl15_every_registered_input_both_real_routes`; `test_gl16_diagnostics_do_not_change_mathematical_choices`; `test_gl10_registered_comparison_traps` |
+
+### Implemented composition and representation
+
+For a nonempty original shore, write s=f(U), b=b_q(U), d=d_q(U)=2e_q(U)+b,
+and Y=sum(y). Admissibility requires zero nonboundary coordinates, crossing counts
+between zero and q_e, and odd s+Y>=3. The raw evaluator returns
+N=2*(e_q(U)+Y), D=s+Y-1. Exact structural equality of records is not numerical
+quotient equality; normalization and substitution of a branch root's scale are absent.
+
+Public solve validation checks exact Instance type, then exact solver selection,
+before graph access. Q=1 is the sole global shortcut. For Q>=2, one closed
+BranchOracleContext retains the same Instance; the wrapper caches d_q once for its
+vertex scans. The baseline chooses the first even-f vertex, otherwise the first
+odd-f>=3 vertex, otherwise the first f=1 vertex of degree>=2. Category priority
+precedes vertex index. The remaining case is a checked unit matching with at least
+two edges; the smaller endpoints of the first two canonical edges form its shore.
+The preliminary feasibility selection is upgraded: use all boundary copies when
+s+b is odd, or all except one on the first crossing edge otherwise. The actual
+admissible witness and its evaluated quotient, at least one, initialize retention.
+
+The selected closed branch solver is called once for each j=0,1,2,3, including
+infeasible branches. Its normally returned exact tuple, result type, selected stats
+type, nonempty original-universe shore and source domain are checked. None means
+branch infeasibility; it still contributes its original stats record. Production
+trusts the closed branch minimum and does not enumerate shores or inspect families.
+Each feasible endpoint is reconstructed and evaluated, even if losing or zero:
+
+| Branch | Compact selection in canonical edge order | Literal raw `(N,D)` |
+|---|---|---|
+| L0 | all crossing copies | `(d+b, s+b-1)` |
+| L1 | all crossing copies except one on the first crossing edge | `(d+b-2, s+b-2)` |
+| H0 | all zero counts | `(d-b, s-1)` |
+| H1 | one copy on the first crossing edge | `(d-b+2, s)` |
+
+The returned branch root (A,B) is checked numerically against that endpoint:
+A*(N-D)=B*D with N>D for L0/L1, and A*D=-B*N for H0/H1. The evaluator's literal
+fields must first equal the source endpoint formula. Different unreduced terminal
+root scales are allowed; unrelated root/shore pairs are rejected. Only the closed
+compare_pairs on original raw endpoint values drives strict-improvement retention.
+Value and witness update together; ties retain the first examined candidate without
+a secondary key. Diagnostics and provenance strings do not control mathematics.
+
+After all four branches, the first f(v)=1, cached d_q(v)>=2 vertex supplies H2.
+A canonical support scan takes two copies without expanding multiplicity: either
+one count 2 or two counts 1,1. It constructs and evaluates the actual Witness,
+requires literal `(4,2)`, and performs the normal comparison even when dominated.
+For such a singleton, s=1 and b=d>=2: even b gives an L0 endpoint of value two;
+odd b>=3 gives a useful L1 endpoint of value two. Complete correct branch solves
+therefore prevent a strict H2 win in this order. H2 construction, tie/losing
+comparison and omission detection are tested; no impossible strict-winner graph
+is claimed. A retained baseline remains a legitimate final witness.
+
+SolveResult and SolveStats are frozen/slotted structural records, not provenance
+certificates. SolveResult checks exact component types and literal `(0,1)` when
+witness is None; with a Witness, standalone construction makes no instance-dependent
+admissibility/attainment assertion. Successful nonempty solves retain four original
+selected-type diagnostics by identity; Empty has (). SolveStats construction does
+not impose successful-run equations. Supported malformed public inputs raise exact
+ValueError. Consumer-detected broken dependency promises raise RuntimeError; exceptions
+raised by dependencies propagate unchanged, without fallback or partial success.
+Constructor-bypassing forgeries are outside the adopted contract.
+
+### Complete frozen-test engineering crosswalk
+
+These 16 top-level test functions collect 625 parametrized cases in the authenticated
+live run. The following mappings are engineering obligations, not new theorem rows.
+
+| Unit 15 obligations | Principal frozen tests in `tests/test_solve.py` |
+|---|---|
+| GL1--GL2: exact interface, immutable structural records, public rejection and arity | `test_gl1_public_surface_and_record_contracts`; `test_gl1_gl2_registered_exact_public_rejections` |
+| GL3: genuine Empty and dependency-free shortcut | `test_gl3_genuine_empty_constructs_no_graph_dependency` |
+| GL4--GL6/GL8/GL10--GL15/GL20: shared context, constructive baseline, complete selected traversal, every original endpoint, retained invariant and dual-route optimum checks | `test_gl4_gl15_every_registered_input_both_real_routes` |
+| GL13/GL21: independently fixed registered inputs, table fingerprints, baseline/H2/winner categories | `test_gl13_gl21_registry_fingerprints_and_core_definition` |
+| GL9: raw-scale freedom, original shore and numerical root binding | `test_gl9_scaled_roots_and_original_shore_binding` |
+| GL7: exact returned shapes/types, source prerequisites and explicit internal faults | `test_gl7_explicit_broken_dependency_promises`; `test_gl7_additional_exact_reply_shapes`; `test_gl7_synthetic_source_prerequisite_failures` |
+| GL16: retained diagnostics, noncertifying constructors and mathematical independence | `test_gl16_standalone_diagnostics_have_no_history_equations`; `test_gl16_diagnostics_do_not_change_mathematical_choices` |
+| GL17: original dependency-exception identity at the exercised boundaries | `test_gl17_dependency_exceptions_propagate_by_identity` |
+| GL18: repetition, interleaving, labels and immutable input state | `test_gl18_repetition_interleaving_labels_and_no_mutable_aliases` |
+| GL10: exact numerical comparator traps, separately from actual graph choices | `test_gl10_registered_comparison_traps` |
+| GL19: permitted imports, exact arithmetic, compact source structure and fresh-process provenance | `test_gl19_direct_import_exactness_and_compact_source_controls`; `test_gl19_fresh_process_direct_import_isolation` |
+| GL22--GL23: separate implementation/mutation audit and narrowly scoped documentation | The private definition-level audit and executed controls described below, plus this source/test/evidence crosswalk; neither is an additional collected pytest case. |
+
+Every one of the 379 registered inputs (329 core, 22 named/labelled, 28 magnitude)
+runs through both real selections in the consuming corpus test. Instrumentation
+checks intermediate and final witnesses using only primitive data transferred to
+the unchanged solver-blind verifier. Raw attainment is checked separately for each
+run; numerical endpoint values must agree across selections. Equal witness objects
+or equal unreduced pairs across selections are not required. The 351 tiny entries
+are compared with independently exhaustive optima. The 28 large entries use the
+preimplementation exact symbolic endpoint bounds and attaining constructions, not
+multiplicity-sized brute force or route agreement as an optimality proof. Synthetic
+fault injections and pure comparator controls are not additional graph instances.
+
+### Separate audit and authenticated live GREEN
+
+The separate audit imports no consuming test to derive its definition-level answers;
+it parses the committed preimplementation human tables and checks primitives with
+the closed independent verifier. It reports 379 paired inputs / 758 real global
+calls: two Empty and 756 nonempty runs. The nonempty runs make 3,024 selected branch
+calls, with 2,560 feasible endpoints and 464 infeasible replies. It observes 756
+baseline candidates, 510 direct H2 candidates and 3,070 endpoint comparisons, and
+performs 4,582 independent raw-witness checks. These categories overlap consuming
+coverage; neither audit calls nor nested observations are collected pytest counts.
+
+All 25 preregistered mutations were executed in private exports. Each selected
+frozen detector first passed on unmodified R2, then failed in a test body on its
+controlled variant with identical collected case identities. Import, collection,
+syntax, setup, skip and xfail failures do not qualify as detection. Twenty-four
+controls are behavioural; the magnitude-expansion variant is detected by an executed
+AST/source-structure test, without attempting a large explicit-copy expansion.
+The controls cover omitted branches/H2, wrong selection/preparation, baseline and
+tie errors, root/endpoint or lexicographic/float comparison, raw rescaling, stale
+witnesses, invalid compact counts, original-coordinate errors, diagnostic influence,
+and omitted zero H0 evaluation. Detection of these finite variants is not a proof
+of defect absence or a test of every possible incorrect implementation.
+
+The pre-CONFORMANCE live R2 GREEN run reports 625 collected/passing targeted cases
+and 1,178 collected/passing full cases: the unchanged 553-case baseline plus the
+actual 625 new cases. Live production preflight and repository Ruff 0.16.5 passed
+under Python 3.14.6 / pytest 9.1.1, as did import provenance, the separate audit and
+all mutation detectors. Its exact production SHA-256 is
+`03ade830010ca0aabd69c4fdb961d68dbc2d44108d7217d831e7b1672d2f85bc`;
+the frozen test SHA-256 is
+`a252300164d727e6e415ae0545583477fb24cea3d81063f2d81df991381d1a5c`.
+The 37-file GREEN ledger describes the committed base BEFORE this CONFORMANCE
+amendment; source and test were two additional untracked files. This documentation
+step does not reinterpret that earlier ledger as the post-amendment state.
+
+### Source-dependent correctness, work and encoding boundary
+
+`prop:endpoints` and `prop:branch-transform` provide the global reduction, not the
+agreement of two consumers of a shared oracle. `lem:empty` and `lem:unit` supply
+Empty and the constructive unit bound. Each closed solver supplies its own exact
+branch minimum; useful-L1 exclusion of value-one endpoints is harmless against that
+baseline. Correct reconstruction and strict maximum retention give the source's
+`prop:global-invariant`. Adding the direct H2 scan completes `alg:global`.
+This is the source-to-code correctness chain for `thm:main`, not a universal theorem
+proved by the finite corpus, a second optimization in the wrapper, or an independent
+global-optimality certificate obtained by merely checking the returned witness.
+
+Under DESIGN 4.12.13, let M=n+m+1, K=(n+3)^3*(m+n)^2, and r_j be branch-cover sizes
+for analysis only. Preparation costs O(n+m+R_all) once. The fixed number of wrapper
+vertex/support scans and witness reconstructions contributes O(n+m); the full
+integer/comparison-operation carrier is
+O(n+m+R_all+sum_j t_j*(1+r_j*K)). The source supplies t_j=O(M log M) for Accelerated
+and t_j=O(M^2 log M) for Standard. `thm:main` uses the accelerated chain; the Standard
+alternative inherits `cor:standard-strong`, not the accelerated factor. Finite tests
+prove neither source invocation nor universal strong polynomiality. No magnitude
+cutoff, empirical flat-counter claim or guaranteed per-instance speedup is inferred.
+
+For an admissible compact witness, e_q(U)+Y<=Q and f(U)+Y<=2Q, giving
+0<=N<=2Q and 2<=D<=2Q-1. Endpoint comparison products have input-polynomial encoding.
+Root-binding products additionally inherit the selected branch solver's parameter
+bit-growth bound: an unreduced Accelerated terminal root need not have the witness's
+raw scale. Bounded retained candidate/diagnostic records plus O(n+m) wrapper workspace
+sit beyond the prepared context and closed oracle workspace. These are source-based
+carriers, not constant byte space, constant bit time, complete peak telemetry, or
+wall-clock guarantees established by the observed test counts.
+
+Full telemetry, certificate construction/serialization, the independent checker,
+CLI, expanded corpus/experiments and release remain later units. This note does not
+claim staged-tree isolation, an implementation commit, or Unit 15 remote closure.
+Those follow the separate complete-candidate staging, index-tree isolation,
+postcommit checks and approved-hash push/closure steps. Source, frozen test, every
+other governing document and every earlier CONFORMANCE row/status remain unchanged
+by this documentation-only amendment.
