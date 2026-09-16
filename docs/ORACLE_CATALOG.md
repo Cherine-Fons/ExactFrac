@@ -32794,3 +32794,202 @@ check, external review gate, source/test amendment or CONFORMANCE promotion occu
 | `'U16_LEGACY_JSON'` | `1` | `'6382d899bbcacfbe41d3b1a6bd48ceac17170be5453c6876883667588fc5d193'` |
 | `'U16_PROTECTED'` | `6` | `'1839050c91aff24f5e670b70ff7e050feee5cf0eeae45d27dee20f930db4a6e5'` |
 | `'U16_PRIMITIVE_ROLES'` | `7` | `'70f704641ad955aa0e357908548ca32b5fa147fab67224314a064acdd0e801c8'` |
+
+
+# Unit 16 observation-manifest correction R1 — typed signature exclusion
+
+Status: correction proposal; effective only upon its controlled catalogue commit.
+Authorization: the author explicitly authorized the narrow oracle-manifest and
+consuming-test correction while preserving all legacy adapters and production.
+This appendix corrects the omission discovered before Phase E production; it
+does not reopen mathematical source, interfaces, counter semantics, or branch.py.
+
+## Defect and effective inventory
+
+The Phase C generator excluded every AST field named `args`; that incorrectly
+skipped `ast.Call.args`. The original 333 scalar rows and 25 iterator rows remain
+unchanged as historical content. They are not a complete standalone inventory.
+For subsequent Unit 16 coverage, the effective scalar inventory is the original
+`U16_SCALAR_SITES` followed by `U16MC_SCALAR_ADDITIONS`; the effective iterator
+inventory is `U16_ITERATOR_SITES` followed by `U16MC_ITERATOR_ADDITIONS`. Existing
+IDs and rows keep their exact meaning. The function inventory, dominance rules,
+entry/pair/scope roles, primitive roles, numeric fixtures, graph inputs, native
+counters, and mutation declarations otherwise remain unchanged.
+
+The corrected counts are 102 functions, 366 classified scalar occurrences, and
+27 iterators. The additions comprise 25 mathematical scalar sites, one Boolean
+exclusion and seven diagnostic exclusions. Required direct observations increase
+from 212 to 237; the 25 post-store observations do not change. These are static
+coverage counts, not collected pytest counts or executed telemetry events.
+
+## Reproducible source-traversal rule
+
+The source universe is the pinned eleven modules listed below. Inventory all
+functions/methods/lexically nested functions with qualified owners, including
+inactive functions. Start each owner's walk at its executable `body[i]`; nested
+definitions belong to their own callable owners. Exclude standalone string Expr
+statements and definition/type metadata fields `annotation`, `returns`,
+`type_comment`, `decorator_list`, and `type_params`. Exclude an `args` field ONLY
+when its parent is FunctionDef, AsyncFunctionDef, or Lambda (signature arguments).
+Defaults/annotations/decorators are not this body-observation interval.
+
+Never exclude Call.args. Descend the call's function expression, every positional
+and starred operand, keyword value/unpacking value, and all nested container,
+generator, comprehension element/iterator/filter and short-circuit expressions.
+A Lambda body is included; its signature is not.
+
+Scalar candidates retain the existing definition: every BinOp, UnaryOp and
+AugAssign, calls to Name len/sum/min/max/int/abs, and Attribute calls bit_count or
+bit_length. Classify only AFTER discovery. Iterator candidates are For and
+comprehension nodes whose iter is a call to Name range or enumerate. Occurrence
+identity includes module, qualified owner, source span and body path; scalar
+identity also includes the existing location-free AST digest and source segment.
+Repeated equal expressions at distinct paths must not be collapsed.
+
+## Completeness independent of the manifest
+
+The completeness checker must derive its candidate universe solely from the
+authenticated source and this stated traversal rule, not from scalar/function
+rows, permitted active-site lists or fingerprints of the manifest under test.
+One implementation recursively prunes excluded fields; the independently
+structured checker enumerates body descendants with ancestor edges and filters
+them under the typed exclusion rule. Both run before observation hooks exist.
+Only after discovery are exact occurrence multisets compared with the effective
+manifest. Reject omitted functions/scalars/iterators, duplicate IDs/occurrences,
+and same-count substitutions, even when table checksums are recomputed.
+
+The hand-written rule fixtures below are normative syntax controls. Their
+expected owner/expression occurrences and iterators are not generated from the
+manifest. In particular, the typed-signature fixture must fail if an independent
+checker is mutated to exclude every field called args. The two actual coefficient
+generator sites and their nested products must be recovered by both traversals.
+
+The complete regeneration commands and independently structured checker are in
+the private correction package. Human appendix tables govern additions; private
+JSON mirrors do not replace them. Row digests retain the existing newline-joined
+compact JSON encoding. Old fingerprints continue to authenticate old rows only.
+New fingerprints cover the correction tables, not a retroactive alteration of
+the historical catalogue.
+
+## Controlled continuation and preserved scope
+
+Phase C correction changes only this catalogue, first applied unstaged, then
+separately staged/committed/remotely closed under the existing lifecycle. The
+applied R3 tests and their resumed-RED evidence are preserved in the meantime.
+After this correction's oracle closure, revise only tests/_telemetry_source_audit.py
+and tests/test_telemetry.py for effective-inventory selection, independent
+completeness validation and its negative controls; re-establish specific RED.
+Keep the eleven adapted legacy tests, all 17 literal adapter recipes and
+tests/fixtures/unit16_legacy_sources.json byte-identical. No production source,
+SPEC_LOCK, CONTRACT, DESIGN, TEST_PLAN, or CONFORMANCE changes are authorized
+by this appendix. No original artifact is edited in place.
+
+The existing R3 checker is temporarily a historical incomplete coverage consumer;
+its passing legacy regression does not assert completeness of the corrected
+manifest. The independent correction audit supplies that check in Phase C.
+Production remains absent until the corrected consuming-test RED is established.
+No external-review or private-note gate is introduced.
+
+### Fixture table: U16MC_SCALAR_ADDITIONS
+
+| id | module | owner | line | col | end_line | end_col | body_path | ast_sha256 | expression | classification | scope | justification |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'S0334'` | `'families'` | `'enumerate_atomic_families'` | `127` | `20` | `127` | `33` | `'body[5].body[1].body[2].value.args[0].args[3]'` | `'a393b819921d44ea9eacdb322c0ed6f9e702e8d30c0da37fb894a08e79068400'` | `'p_bit &#124; u_bit'` | `'TAP_SCALAR'` | `'nonbranch preparation (cardinalities separately attributed to branch IDs)'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0335'` | `'families'` | `'enumerate_atomic_families'` | `136` | `20` | `136` | `33` | `'body[5].body[1].body[3].value.args[0].args[3]'` | `'2999fc438d6d3770bdf9e2bab70fe396cd7ab8c5af4cd1e7e0b10005a20cdeb3'` | `'p_bit &#124; v_bit'` | `'TAP_SCALAR'` | `'nonbranch preparation (cardinalities separately attributed to branch IDs)'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0336'` | `'families'` | `'enumerate_atomic_families'` | `144` | `52` | `144` | `63` | `'body[7].body[0].value.args[0].args[3]'` | `'109ae50db7f6d5835f7ad1d510bf40d437bbe88f5ccc8b2222efa228534dd2b4'` | `'1 << vertex'` | `'TAP_SCALAR'` | `'nonbranch preparation (cardinalities separately attributed to branch IDs)'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0337'` | `'witness'` | `'_crosses'` | `68` | `16` | `68` | `31` | `'body[0].value.left.args[0]'` | `'452d858c5bd212ff64703b7292e5c3260a2984795cf5ffef044cdfd82c333f97'` | `'U & (1 << left)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0338'` | `'witness'` | `'_crosses'` | `68` | `21` | `68` | `30` | `'body[0].value.left.args[0].right'` | `'8ddd3b7888b277979b14744998fa0699384de725b39b23ee1f5f066dadbed338'` | `'1 << left'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0339'` | `'witness'` | `'_crosses'` | `68` | `41` | `68` | `57` | `'body[0].value.comparators[0].args[0]'` | `'b198d9ad78b1db78e4fdc578733b806a12d5d5a050458e6d84a3813badc80e8c'` | `'U & (1 << right)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0340'` | `'witness'` | `'_crosses'` | `68` | `46` | `68` | `56` | `'body[0].value.comparators[0].args[0].right'` | `'82763528a073246a17921d61c25c8c48480c59e665b2ab6edc4802d8e1648bbd'` | `'1 << right'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0341'` | `'sign_routing'` | `'branch_coefficients'` | `112` | `12` | `112` | `71` | `'body[7].body[1].value.args[0].elt'` | `'38e11220c55024ef38bb11d7d569848e2fb8442c72ba0bdf5a6fe986b8f1260f'` | `'combined * instance.f[vertex] - numerator * degrees[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0342'` | `'sign_routing'` | `'branch_coefficients'` | `112` | `12` | `112` | `41` | `'body[7].body[1].value.args[0].elt.left'` | `'4c70d065e32f1bf7adac8d5edd112c5a66dcda8e1e18e2fa3d5868cc4b252235'` | `'combined * instance.f[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0343'` | `'sign_routing'` | `'branch_coefficients'` | `112` | `44` | `112` | `71` | `'body[7].body[1].value.args[0].elt.right'` | `'83ddf26ffba9a059773c5d15802ef42ab97db3e866cc50bdb248ec8a4a68a8d7'` | `'numerator * degrees[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0344'` | `'sign_routing'` | `'branch_coefficients'` | `118` | `12` | `118` | `75` | `'body[7].orelse[0].value.args[0].elt'` | `'1e9330b33f7f13da35aaaa0f5e76315e66eecdad856edfd35c12870ba950a35a'` | `'-denominator * degrees[vertex] - numerator * instance.f[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0345'` | `'sign_routing'` | `'branch_coefficients'` | `118` | `12` | `118` | `42` | `'body[7].orelse[0].value.args[0].elt.left'` | `'39836d51d465ed3f3783ab7ec48cb27e78f47160e97034c8dd0ba05d0d396149'` | `'-denominator * degrees[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0346'` | `'sign_routing'` | `'branch_coefficients'` | `118` | `12` | `118` | `24` | `'body[7].orelse[0].value.args[0].elt.left.left'` | `'df27c4d15e36a42d8eb238dbcae54f9e1463bd0f9e97c9282502db96b4207824'` | `'-denominator'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0347'` | `'sign_routing'` | `'branch_coefficients'` | `118` | `45` | `118` | `75` | `'body[7].orelse[0].value.args[0].elt.right'` | `'2ac3dca8fa551ab678e9f5ac4cf0f53c20218eb0beffc4bbf7213f794bad2024'` | `'numerator * instance.f[vertex]'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0348'` | `'parity_cut'` | `'reduce_atomic_family'` | `210` | `37` | `210` | `42` | `'body[16].value.args[1]'` | `'7281979fc74e715e9f5bb464d0e9d43186ccb7fa4c238a3107b5fa1f732e4b8b'` | `'n + 3'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0349'` | `'parity_cut'` | `'_pair_classes'` | `236` | `26` | `236` | `37` | `'body[2].body[0].body[0].value.args[0]'` | `'109ae50db7f6d5835f7ad1d510bf40d437bbe88f5ccc8b2222efa228534dd2b4'` | `'1 << vertex'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0350'` | `'parity_cut'` | `'minimum_parity_cut'` | `265` | `35` | `265` | `47` | `'body[6].body[1].body[4].value.args[0]'` | `'8b01cf631328bc02ad4e7ed8537815b82e3f2d6d9103a0953cac5e274377e638'` | `'len(classes)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0351'` | `'solve'` | `'_all_boundary'` | `106` | `16` | `106` | `31` | `'body[3].body[0].test.left.args[0]'` | `'452d858c5bd212ff64703b7292e5c3260a2984795cf5ffef044cdfd82c333f97'` | `'U & (1 << left)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0352'` | `'solve'` | `'_all_boundary'` | `106` | `21` | `106` | `30` | `'body[3].body[0].test.left.args[0].right'` | `'8ddd3b7888b277979b14744998fa0699384de725b39b23ee1f5f066dadbed338'` | `'1 << left'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0353'` | `'solve'` | `'_all_boundary'` | `106` | `41` | `106` | `57` | `'body[3].body[0].test.comparators[0].args[0]'` | `'b198d9ad78b1db78e4fdc578733b806a12d5d5a050458e6d84a3813badc80e8c'` | `'U & (1 << right)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0354'` | `'solve'` | `'_all_boundary'` | `106` | `46` | `106` | `56` | `'body[3].body[0].test.comparators[0].args[0].right'` | `'82763528a073246a17921d61c25c8c48480c59e665b2ab6edc4802d8e1648bbd'` | `'1 << right'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0355'` | `'solve'` | `'_first_copies'` | `119` | `16` | `119` | `31` | `'body[3].body[0].test.left.args[0]'` | `'452d858c5bd212ff64703b7292e5c3260a2984795cf5ffef044cdfd82c333f97'` | `'U & (1 << left)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0356'` | `'solve'` | `'_first_copies'` | `119` | `21` | `119` | `30` | `'body[3].body[0].test.left.args[0].right'` | `'8ddd3b7888b277979b14744998fa0699384de725b39b23ee1f5f066dadbed338'` | `'1 << left'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0357'` | `'solve'` | `'_first_copies'` | `119` | `41` | `119` | `57` | `'body[3].body[0].test.comparators[0].args[0]'` | `'b198d9ad78b1db78e4fdc578733b806a12d5d5a050458e6d84a3813badc80e8c'` | `'U & (1 << right)'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0358'` | `'solve'` | `'_first_copies'` | `119` | `46` | `119` | `56` | `'body[3].body[0].test.comparators[0].args[0].right'` | `'82763528a073246a17921d61c25c8c48480c59e665b2ab6edc4802d8e1648bbd'` | `'1 << right'` | `'TAP_SCALAR'` | `'active branch/nonbranch bucket'` | `'Identity tap on this actual executed scalar expression, including nested products/short-circuit sites. Original AST must be recovered by erasure.'` |
+| `'S0359'` | `'solve'` | `'_baseline'` | `144` | `52` | `144` | `59` | `'body[6].value.args[1].args[2]'` | `'5317c1748c601835b0e88645677788593e4c8ab03727a4e92b96a7338403c074'` | `'not odd'` | `'EXCLUDE_BOOL'` | `'active branch/nonbranch bucket'` | `'Logical negation returns bool, not a scalar integer; arithmetic operands have separate rows.'` |
+| `'S0360'` | `'branch'` | `'_add_diagnostics'` | `96` | `8` | `96` | `73` | `'body[1].value.args[0]'` | `'484b1ea74d000c0d61770e08fbc59ffff18f89e10dc52fc566092fd3635f39e3'` | `'total.atomic_families_examined + current.atomic_families_examined'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0361'` | `'branch'` | `'_add_diagnostics'` | `97` | `8` | `97` | `73` | `'body[1].value.args[1]'` | `'72d278e44d414ee2d77b17b13f68070cb6f772be147d9581549e74177274a6ed'` | `'total.atomic_families_feasible + current.atomic_families_feasible'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0362'` | `'branch'` | `'_add_diagnostics'` | `98` | `8` | `98` | `57` | `'body[1].value.args[2]'` | `'ccab3be1d3552a201d720f9761d96dd6badd97e65cbc57fd5c4a6afe046558d8'` | `'total.parity_cut_calls + current.parity_cut_calls'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0363'` | `'branch'` | `'_add_diagnostics'` | `99` | `8` | `99` | `69` | `'body[1].value.args[3]'` | `'2ac8151a2730f169448c8e4d7ccda67d1b041af16fc065187a17e5065aeb3443'` | `'total.ordinary_min_cut_calls + current.ordinary_min_cut_calls'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0364'` | `'branch'` | `'_add_diagnostics'` | `100` | `8` | `100` | `61` | `'body[1].value.args[4]'` | `'e4bc6553c7a1847cfdeb67bdbf44fa19bc657b2327546f1f3206318d32e984ab'` | `'total.flow_augmentations + current.flow_augmentations'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0365'` | `'branch'` | `'_add_diagnostics'` | `101` | `8` | `101` | `53` | `'body[1].value.args[5]'` | `'f9341eaa355e6205070512aa5e4bd33389be860feb6d201ba552cc09652701df'` | `'total.flow_bfs_scans + current.flow_bfs_scans'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+| `'S0366'` | `'branch'` | `'_add_diagnostics'` | `102` | `8` | `102` | `79` | `'body[1].value.args[6]'` | `'67db0ef4374abb5c4611a8057474e46cb2b454448ba3af05e58b2be601be47f4'` | `'max(total.flow_peak_generated_value, current.flow_peak_generated_value)'` | `'EXCLUDE_DIAGNOSTIC'` | `'active branch/nonbranch bucket'` | `'Native diagnostic counting/aggregation only; copy its returned counter, do not add its arithmetic to numerical peaks.'` |
+
+
+### Fixture table: U16MC_ITERATOR_ADDITIONS
+
+| module | owner | line | body_path | target | iterator | obligation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `'sign_routing'` | `'branch_coefficients'` | `113` | `'body[7].body[1].value.args[0].generators[0]'` | `'vertex'` | `'range(instance.n)'` | `'observe integer binder(s); range may use D-ITER only against its observed executed bound'` |
+| `'sign_routing'` | `'branch_coefficients'` | `119` | `'body[7].orelse[0].value.args[0].generators[0]'` | `'vertex'` | `'range(instance.n)'` | `'observe integer binder(s); range may use D-ITER only against its observed executed bound'` |
+
+
+### Fixture table: U16MC_SOURCE_PINS
+
+| path | sha256 | blob |
+| --- | --- | --- |
+| `'exactfrac/instance.py'` | `'3ef5af7813c3bfcff4b5410ecf814a95e70c019e761c2744629860f3d47e4f1e'` | `'29c85c4485453d45e37177e00e1e7231a5edf8f1'` |
+| `'exactfrac/shore.py'` | `'581a1e75a08da9150ee78d133bd6ef32cd55c3c13c3b2bd7b9b65a26d4aeb029'` | `'484a1772e38ba1a62887b9533cbe951ce5422b3e'` |
+| `'exactfrac/families.py'` | `'2622d62e373ac14c0010a87571cf22b04ff47b400d8dcb531b9343d130f49cb1'` | `'59c57ef94c62cb2399dc5e0ded6c3af9a3d9ffa6'` |
+| `'exactfrac/witness.py'` | `'d15ec88f0865098803a15ef7be18e2fa749117be5a6a46347abaeec6b514756d'` | `'30918afc66f501ad21394dee5227637d7cc4540b'` |
+| `'exactfrac/rational.py'` | `'c3f8f2c7ccc21db27f69d62b4cc170f8e68fc79e01cccb70feccdef999429739'` | `'e5472d6388a23917ab0fb9de4f262f48b7f74c78'` |
+| `'exactfrac/sign_routing.py'` | `'83cfc7a9e868317f7f8c8ee658da5a13a33282a0c3134090ffc07451de2ad062'` | `'36e37fe3d8727d574211c6132e76b3650fcab2ad'` |
+| `'exactfrac/parity_cut.py'` | `'1584a9b8535e18c0f99f8c93462c99dcdb8305b0215b7f24418926020bf21483'` | `'56333e5e0145863f0488734564982e3f359ee251'` |
+| `'exactfrac/flow.py'` | `'11cbb1ede439208820f3cf931383ac15dd2f83436e80b5c7f5bf12926dc29e5c'` | `'07bd14ecbeee80194886106e928f1c6515673928'` |
+| `'exactfrac/oracle.py'` | `'33175efeed94b2948aeafb4f38b0a88e07db79f196038d41599b6012baac6448'` | `'c94e096f2b112b55079288d79e16c83eb76a683a'` |
+| `'exactfrac/solve.py'` | `'03ade830010ca0aabd69c4fdb961d68dbc2d44108d7217d831e7b1672d2f85bc'` | `'fabc0316e515e263c2a000be89314af57d28baee'` |
+| `'exactfrac/branch.py'` | `'584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057'` | `'a06019639ffe190979d1be9ebde9f932b2a6b0f7'` |
+
+
+### Fixture table: U16MC_RULE_FIXTURES
+
+| id | source | expected_owner_and_scalar_syntax | expected_owner_target_iterator |
+| --- | --- | --- | --- |
+| `'signature-vs-call'` | `'def f(x=before(91 * 92)) -> result(93 + 94):\n    return outer(inner(x * y), named=z + 1)\n'` | `[['f', 'x * y'], ['f', 'z + 1']]` | `[]` |
+| `'two-coefficient-generators'` | `'def coefficients(A, B, f, d, n):\n    low = tuple((A + B) * f[i] - A * d[i] for i in range(n))\n    high = tuple(-B * d[i] - A * f[i] for i in range(n))\n    return low, high\n'` | `[['coefficients', '(A + B) * f[i] - A * d[i]'], ['coefficients', '(A + B) * f[i]'], ['coefficients', 'A + B'], ['coefficients', 'A * d[i]'], ['coefficients', '-B * d[i] - A * f[i]'], ['coefficients', '-B * d[i]'], ['coefficients', '-B'], ['coefficients', 'A * f[i]']]` | `[['coefficients', 'i', 'range(n)'], ['coefficients', 'i', 'range(n)']]` |
+| `'nested-owner'` | `'def outer(a):\n    x = wrap(a + 1)\n    def inner(b=before(97 * 98)):\n        return wrap(b * 2)\n    return wrap(x - 1)\n'` | `[['outer', 'a + 1'], ['outer.inner', 'b * 2'], ['outer', 'x - 1']]` | `[]` |
+| `'annotation-keyword'` | `'def f(x):\n    y: Hint[x * 99] = wrap(x + 1)\n    return callee(value=int(y * 2))\n'` | `[['f', 'x + 1'], ['f', 'int(y * 2)'], ['f', 'y * 2']]` | `[]` |
+| `'star-arguments'` | `'def f(x):\n    return call(*[x + 1], **{"value": x * 2})\n'` | `[['f', 'x + 1'], ['f', 'x * 2']]` | `[]` |
+| `'lambda-signature'` | `'def f(x):\n    return call(lambda y=before(x * 9): y + x, x - 2)\n'` | `[['f', 'y + x'], ['f', 'x - 2']]` | `[]` |
+| `'short-circuit-and-bool'` | `'def f(x):\n    return x and bool(not call(x & (1 << 3)))\n'` | `[['f', 'not call(x & (1 << 3))'], ['f', 'x & (1 << 3)'], ['f', '1 << 3']]` | `[]` |
+| `'sum-generator'` | `'def f(n):\n    return sum(x - 1 for x in range(n + 1))\n'` | `[['f', 'sum(x - 1 for x in range(n + 1))'], ['f', 'x - 1'], ['f', 'n + 1']]` | `[['f', 'x', 'range(n + 1)']]` |
+| `'class-method-owner'` | `'class Box:\n    def f(self, n):\n        for i, x in enumerate(values):\n            n += call(x * 2)\n        return int(n)\n'` | `[['Box.f', 'n += call(x * 2)'], ['Box.f', 'x * 2'], ['Box.f', 'int(n)']]` | `[['Box.f', '(i, x)', 'enumerate(values)']]` |
+| `'decorator-and-signature-excluded'` | `'@decorate(71 * 72)\ndef f(a: Hint[73 * 74]=before(75 * 76), *, b=77 * 78) -> Hint[79 * 80]:\n    "string statement"\n    return call(a + b)\n'` | `[['f', 'a + b']]` | `[]` |
+
+
+### Fixture table: U16MC_EFFECTIVE_COUNTS
+
+| quantity | historical | corrected |
+| --- | --- | --- |
+| `'functions'` | `102` | `102` |
+| `'scalar_sites'` | `333` | `366` |
+| `'iterator_sites'` | `25` | `27` |
+| `'required_direct_sites'` | `212` | `237` |
+| `'post_store_sites'` | `25` | `25` |
+| `'added_mathematical_scalar_sites'` | `0` | `25` |
+| `'added_boolean_exclusions'` | `0` | `1` |
+| `'added_diagnostic_exclusions'` | `0` | `7` |
+
+
+### Fixture table: U16MC_FINGERPRINTS
+
+| table | rows | row_sha256 |
+| --- | --- | --- |
+| `'U16MC_SCALAR_ADDITIONS'` | `33` | `'ed92209d62f84b06de61402698533d3c977d09f09b1dcd5750ea91a0ffb566ec'` |
+| `'U16MC_ITERATOR_ADDITIONS'` | `2` | `'ee098a47b308d15e42b69c097343e6502c55382bc0b40ad130d8435bdf29a1e5'` |
+| `'U16MC_SOURCE_PINS'` | `11` | `'d54d481cb482a60823c4acff3c9d9e30ea4465ca617c8f2d8994ef1005f55cca'` |
+| `'U16MC_RULE_FIXTURES'` | `10` | `'da3ba5e083a272639c3f1084c571731c695d6f8fc82c2a061b4990e706863b99'` |
+| `'U16MC_EFFECTIVE_COUNTS'` | `8` | `'c7e27fc2fcbf96aa8ddf0aff8c39336b4938988dff307adf3fedd1acad73f3ab'` |
