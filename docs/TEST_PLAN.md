@@ -3813,3 +3813,220 @@ optimality certificate or empirical strong-polynomial proof is newly established
 The authority creates no new scientific-review or model gate. The extra source/test
 paths arise from an explicitly proposed observational extension to closed code; they
 are not a general permission to rewrite dependencies, weaken tests, or alter mathematics.
+
+## 39. Unit 17 — certificate construction and exact serialization obligations
+
+Authority: proposed DESIGN 4.14, effective only on its controlled authority commit.
+Source: def:instance, ass:active, def:parameter, eq:compact-density, lem:empty,
+lem:unit, prop:endpoints, sec:global's reconstruction table and proofs, alg:global,
+prop:global-invariant. Earlier obligations and fixture classifications are unchanged.
+All obligations below are prospective, not claims of executed Unit 17 coverage.
+
+### CE1 — exact public surface and layer ownership
+
+Require exactly build_certificate(instance,result) and
+serialize_certificate(instance,certificate), signatures/types/exports in DESIGN 4.14.2.
+No added result fields, Certificate record, verifier, decoder, implicit solver selection,
+package-root exports or changes to closed modules/tests. The certificate object is a
+validated detached representation, not a second authoritative mutable result record.
+
+### CE2 — builder validation and literal result preservation
+
+Require exact Instance then exact SolveResult before other reads/dependency calls.
+Use normally constructed records: malformed instance-dependent witnesses and mismatched
+ExactValues must be rejected despite valid record shapes. Validate full admissibility
+and both raw fields. Preserve the input's raw integers and original U/y. Reject the outer
+solve return pair, subclasses, duck types, invalid coordinates and invalid counts.
+
+### CE3 — versioned exact object schema and detached exports
+
+Check the exact format tag, exact per-case key set, fixed builder field order and exact
+bool/int/list/dict/string types, including nested lists. Reject extra digest/instance/
+provenance/stats/metadata/witness-wrapper fields. Mutating any exported list/dict must
+not alter inputs, earlier independent exports, or later builds. All errors leave inputs
+unchanged. Serializer accepts any dict insertion order but emits the single ruled order.
+
+### CE4 — serializer revalidation, not trust in a previous build
+
+Independently specified valid objects must serialize without first calling the builder.
+Mutations after a successful build must be checked again. Guard-isolate exact types,
+required/extra keys, format, empty, N then D, U, sparse y, admissibility and raw identity
+in the ruled precedence. Assert exact ValueError, not merely a subclass match. Unsupported
+text/bytes inputs to serialize_certificate fail at its object boundary, with no decode.
+
+### CE5 — genuine Empty and forged Empty claims
+
+Use ORACLE-001 and independent active-instance validation/Q recomputation. Both solver
+selections must yield literal (0,1), empty true, no U/y. Reject U or y even when null/[];
+reject false Empty at Q>1, reduced/rescaled-zero substitutions and invalid instance data
+in the independent byte route. No witness construction occurs on the builder Empty path.
+
+### CE6 — nonempty zero, suboptimal witnesses and the limit of the claim
+
+Reuse the W16/Unit 08 local zero-valued witness: its raw (0,2), nonempty U and sparse []
+must remain nonempty. Include other admissible suboptimal witnesses. Neither API nor
+independent route requires a global maximum, branch membership, output >=1, solver-run
+provenance or a winning-candidate tag. No positive/zero/absent states are conflated.
+
+### CE7 — original coordinates and strict sparse support
+
+Fix references against the independently validated canonical edge list. Cover later
+vertex indices, disconnected graphs, internal/external/crossing edges, optional labels,
+zero omission, sparse gaps, all-zero counts and a full shore. Reject labels/cut coordinates,
+high or negative indices, duplicates, descending U/refs, malformed entries, nonpositive
+counts, over-capacity counts and noncrossing references. Never sort, merge or repair.
+
+### CE8 — guard-isolated admissibility and literal-pair adversaries
+
+Require odd f(U)+Y and total >=3 independently. Separate even-total and odd-too-small
+controls. Forge N and D separately; also multiply BOTH raw fields by a common positive
+factor or replace them by a numerically equal reduced pair. Prove numerical equality in
+the test while requiring rejection as literal nonattainment. Include zero rescaling.
+
+### CE9 — independently fixed exact byte fixtures
+
+Phase C fixes byte literals/hex or unambiguous literal-concatenation recipes, their lengths
+and digests, BEFORE tests/production. Compare emitted bytes to those fixtures, not to
+production output passed through another encoder. Freeze exact field order, numeric token
+spelling, sparse/list punctuation, UTF-8 ASCII subset, no whitespace/BOM and one final LF.
+Round trips alone are insufficient. Fixtures cover Empty, nonempty zero, sparse gaps,
+full shore, baseline and all source endpoint patterns, legal ties and large integers.
+
+### CE10 — independent serialized-input parse-and-recompute route
+
+New test-only route accepts ONLY serialized instance/certificate byte strings. Independently
+parse exact integers and duplicate-key-aware objects, validate canonical active instances
+before edge-ref interpretation, then decode U/y and recompute Y,s,e,N,D from definitions.
+No exactfrac imports or shared production parser/validator/serializer; no production dict,
+mask, helper return or expected sum as an input to this route. Test-only instance encoding
+starts from registered primitive data, not Instance.to_dict. Verify isolation in a fresh
+subprocess. Any assertion against solver values occurs outside this independent verifier.
+This is test evidence for Unit 17, not production exactfrac_verify.check implementation.
+
+### CE11 — malformed-byte responsibility and independent decoder adversaries
+
+In the test-only byte route reject duplicate keys before dict collapse, malformed UTF-8,
+BOM, unsupported versions, escaped certificate keys/tag, reordered certificate fields,
+extra/missing LF, CRLF, whitespace, extra documents/trailing garbage, leading zeros,
+negative zero, plus signs, fractional/exponent/nonfinite numbers and quoted numeric fields.
+Reject invalid shapes/envelopes and all mathematical corruptions after parsing. Instance
+object key order/ordinary JSON whitespace are allowed, but its canonical edge order is
+not normalized; duplicate decoded keys, unknown fields, invalid types/labels, loops,
+nonpositive q/f, empty support and active failure are rejected. These raw-byte rejection
+claims belong to the independent test route now and Unit 18 production later, not to
+Unit 17's dict serializer. Never call a production decoder that this unit does not own.
+
+### CE12 — cumulative registered corpus under both solver selections
+
+Preserve all 379 U15_INPUTS and 10 U16_INPUTS entry identities and fingerprints; add every
+valid Unit 17 graph fixture in Phase C's explicit registry. Run each under both exact
+selections, including intentional duplicates and huge-label entries. For each actual
+SolveResult emit a certificate and independently parse/recompute it from bytes; bind its
+literal pair to that run's result. Compare routes by exact cross multiplication, not
+witness, raw-pair or byte equality. The inherited 778 runs are not a pytest case count.
+Report the independently fixed cumulative count and the actual execution census separately.
+
+### CE13 — baseline, all endpoints and honest direct-H2 coverage
+
+Cover actual baseline output retention and independently fixed/captured candidate records
+for L0, L1, H0, H1 and H2. Include all baseline shore-selection categories, L1 decrement
+reaching zero, H0 all-zero y, H1 single-copy and both H2 count shapes with literal (4,2).
+Capture candidates through test-local bindings without changing closed source. Do not
+invent a strict H2 final winner: DESIGN 4.12.10 and ORACLE-111 exclude it. Candidate/local
+attainment checks are distinct from the per-run final-result obligations of CE12.
+
+### CE14 — tie freedom and deterministic serialization
+
+Use independently catalogued tied witnesses, including different valid raw scales on
+one instance. Build/serialize EACH supplied valid witness unchanged. Require repeated
+identical inputs to produce identical bytes, including across fresh processes/hash seeds;
+reordered input dict keys serialize identically. Across Standard/Accelerated ties allow
+different witnesses/raw pairs/bytes. No optimizer invocation, secondary key or witness
+canonicalization is added to the certificate layer to force cross-route byte agreement.
+
+### CE15 — arbitrary-length decimal integers and explicit resource policy
+
+Before tests fix constant-support magnitude families and independent literal digit-pattern
+expectations exceeding 4,300 decimal digits, for value/count fields and serialized instance
+q/f or integer labels as relevant. Exercise enabled interpreter conversion limits, including
+a lowered nonzero limit, in isolated processes; output/acceptance must not inherit that
+cutoff and no production call may change the setting. Bound conversion chunks independently.
+No float, quoted numeric workaround, GCD, copy expansion, truncation or numeric cutoff.
+Resource failures are not mathematical verdicts; test deterministic injected failures rather
+than exhausting the machine. Separate O(n+m) scans from output/decimal-conversion bit work.
+
+### CE16 — dependency exceptions, explicit promise faults and no partial result
+
+Guard-isolate raised dependency exceptions and require unchanged identity. Explicitly
+wrong normal-return types/shapes listed in DESIGN 4.14.7 raise RuntimeError. Caller
+raw mismatch/inadmissibility remains ValueError. Do not pin diagnostic wording, translate
+arbitrary exceptions, misclassify failures as Empty, or return partial bytes. Wrong arity,
+frozen mutation and deliberate closed-record constructor bypass are not new public domains.
+
+### CE17 — mathematical/result/diagnostic noninterference
+
+Vary labels and separately supplied diagnostics/metadata without changing mathematical
+instance/result fields; bytes remain unchanged. Compare certificates built from each route's
+legacy solve result and its solve_with_telemetry result. The certificate builder/serializer
+must invoke no solve, branch, oracle, cut, flow or telemetry wrapper; import of SolveResult
+must not be misreported as an optimizer invocation. No state leaks between interleaved calls.
+
+### CE18 — source and fresh-process isolation with narrow codec permission
+
+Enforce DESIGN 4.14.13 direct imports, unchanged closed sources and export-free roots.
+Prohibit private closed imports, verifier/test/handoff access, I/O, dynamic code, float,
+Fraction, true division, tolerances, GCD, settings changes, all-shore/copy enumeration and
+order from set traversal. Permit only the explicitly scoped exact digit-conversion loops
+and divmod/floor/mod operations for decimal encoding. Inspect their dataflow: a codec loop
+is not a reopened magnitude-dependent optimization path. Fresh-process tests separately
+check production imports and independent-test-verifier absence of all exactfrac imports.
+
+### CE19 — separate implementation audit and executed mutations
+
+Before CONFORMANCE run the independent audit under both selections and execute detectors
+for wrong raw scale, skipped admissibility, false Empty, omitted nonempty zero payload,
+wrong original edge refs, sorted/repaired sparse input, dropped/unknown fields, altered
+byte order/newline, accidental digit cutoff, hidden re-solving, input alias mutation and
+shared production validation in the independent route. Count actual detected faults and
+actual corpus executions, not declared mutation names or unexecuted plans. External-model
+review is discretionary and never an additional gate.
+
+### CE20 — conformance and closed-unit boundaries
+
+Preserve all previous CONFORMANCE rows/statuses. After GREEN describe only finite tested
+assembly, byte serialization, production input rejection and independently recomputed raw
+attainment/Empty cases. Integration with exact global solves does not turn these bytes into
+an independent optimality certificate. No Unit 18 checker, CLI, corpus-expansion campaign,
+experiment, release or universal complexity theorem is claimed complete by Unit 17 tests.
+Historical section 11 C1-C10 remains the future independent checker obligation; the new
+production object checks and test-only byte checks do not prematurely close that section.
+
+## 40. Unit 17 completion gate — certificate construction and serialization
+
+Use only the existing controlled lifecycle:
+
+1. Remotely close DESIGN/TEST_PLAN authority before Phase C. No production source,
+   consuming test, independent checker or oracle catalogue is changed by Phase B.
+2. Independently fix/cross-check the byte fixtures, input registry, mathematical answers,
+   parser/rejection obligations and audit controls in ORACLE_CATALOG; remotely close
+   that oracle-only amendment before the new consuming test or production module exists.
+3. Apply ONLY tests/test_certificate.py after syntax and live repository-context Ruff
+   preflight. Include the independent test-only byte route in that file; no shared new
+   production helper. Require exactly the intended missing-exactfrac.certificate
+   ModuleNotFoundError, one collection error and exit status 2. Keep the authenticated
+   previous baseline green with --ignore=tests/test_certificate.py; no dummy module.
+4. After RED, apply ONLY exactfrac/certificate.py under the frozen authority/test. Require
+   targeted/full GREEN, repository Ruff, independent byte verification for every registered
+   instance under both solvers, the separate implementation/mutation audit and frozen-file
+   conservation. The inherited baseline is 1,987 cases; new collected/passing counts are
+   observed live. exactfrac_verify/check.py remains absent and is never an availability gate.
+5. Complete import/source/nonmutation review as part of the existing implementation audit.
+   Then apply ONLY the finite-scoped CONFORMANCE amendment, leaving earlier rows intact.
+6. Stage exactly docs/CONFORMANCE.md, exactfrac/certificate.py and tests/test_certificate.py;
+   isolate the staged tree and rerun targeted/full/Ruff before the approved local commit.
+   Verify parent/tree/scope/postcommit regression, then separately push that approved commit
+   and require four-reference equality, divergence 0 0, clean status and unchanged evidence.
+7. Deliver the two private BUILD/LEARNING text blocks only at full Unit 17 remote closure.
+   Their saved confirmation is conversational, not inspected or asserted by any helper.
+   Unit 18 follows only after this existing full-unit transition. No REVIEW_REQUEST,
+   external-model gate, automatic repair, frozen-dependency reopening or extra gate.
