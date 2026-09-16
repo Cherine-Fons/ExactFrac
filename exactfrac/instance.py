@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _observe_ints, _tap_int
+
 __all__ = (
     "Edge",
     "Instance",
@@ -111,7 +113,9 @@ def _degree_tuple(n: int, edges: tuple[Edge, ...]) -> tuple[int, ...]:
     degrees = [0] * n
     for u, v, multiplicity in edges:
         degrees[u] += multiplicity
+        _observe_ints(degrees[u])
         degrees[v] += multiplicity
+        _observe_ints(degrees[v])
     return tuple(degrees)
 
 
@@ -141,7 +145,7 @@ class Instance:
     def m(self) -> int:
         """Number of canonical support edges."""
 
-        return len(self.edges)
+        return _tap_int(len(self.edges))
 
     @property
     def support_edges(self) -> tuple[tuple[int, int], ...]:
@@ -159,7 +163,7 @@ class Instance:
     def Q(self) -> int:
         """Total compact multiplicity."""
 
-        return sum(multiplicity for _, _, multiplicity in self.edges)
+        return _tap_int(sum(multiplicity for _, _, multiplicity in self.edges))
 
     @property
     def d_q(self) -> tuple[int, ...]:

@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _observe_ints, _tap_int
 from .families import AtomicFamily
 from .flow import minimum_cut
 from .shore import validate_shore
@@ -29,40 +30,49 @@ def _require_nonnegative_int(value: object, name: str) -> None:
 
 
 def _validate_classes(vertex_count: int, classes: tuple[int, ...]) -> None:
-    if type(classes) is not tuple or len(classes) < 2:
+    if type(classes) is not tuple or _tap_int(len(classes)) < 2:
         raise ValueError("classes must be a built-in tuple with at least two entries")
-    original_full = (1 << vertex_count) - 1
-    source_bit = 1 << vertex_count
-    sink_bit = 1 << (vertex_count + 1)
-    anchor_bit = 1 << (vertex_count + 2)
-    augmented_full = (1 << (vertex_count + 3)) - 1
+    original_full = _tap_int((_tap_int(1 << vertex_count)) - 1)
+    source_bit = _tap_int(1 << vertex_count)
+    sink_bit = _tap_int(1 << (_tap_int(vertex_count + 1)))
+    anchor_bit = _tap_int(1 << (_tap_int(vertex_count + 2)))
+    augmented_full = _tap_int((_tap_int(1 << (_tap_int(vertex_count + 3)))) - 1)
     covered = 0
     previous_singleton = 0
     for index, group in enumerate(classes):
+        _observe_ints(index)
         if type(group) is not int or group <= 0 or group > augmented_full:
             raise ValueError("each class must be a positive finite built-in int mask")
-        if group & covered:
+        if _tap_int(group & covered):
             raise ValueError("class preimages must be disjoint")
         if index >= 2:
-            if group > original_full or group.bit_count() != 1 or group <= previous_singleton:
+            if (
+                group > original_full
+                or _tap_int(group.bit_count()) != 1
+                or group <= previous_singleton
+            ):
                 raise ValueError("free classes must be increasing original-vertex singletons")
             previous_singleton = group
         covered |= group
-    if not classes[0] & source_bit or classes[0] & sink_bit:
+        _observe_ints(covered)
+    if not _tap_int(classes[0] & source_bit) or _tap_int(classes[0] & sink_bit):
         raise ValueError("class zero must contain original source and exclude original sink")
-    if not classes[1] & sink_bit or classes[1] & (source_bit | anchor_bit):
+    if (
+        not _tap_int(classes[1] & sink_bit)
+        or _tap_int(classes[1] & (_tap_int(source_bit | anchor_bit)))
+    ):
         raise ValueError("class one must contain original sink and exclude source and anchor")
-    required = (1 << (vertex_count + 2)) - 1
-    if covered & required != required:
+    required = _tap_int((_tap_int(1 << (_tap_int(vertex_count + 2)))) - 1)
+    if _tap_int(covered & required) != required:
         raise ValueError("classes must cover all original vertices and fixed terminals")
 
 
 def _validate_arcs(node_count: int, arcs: tuple[tuple[int, int, int], ...]) -> None:
     if type(arcs) is not tuple:
         raise ValueError("arcs must be a built-in tuple")
-    previous = (-1, -1)
+    previous = (_tap_int(-1), _tap_int(-1))
     for arc in arcs:
-        if type(arc) is not tuple or len(arc) != 3:
+        if type(arc) is not tuple or _tap_int(len(arc)) != 3:
             raise ValueError("each arc must be a built-in three-tuple")
         tail, head, capacity = arc
         if type(tail) is not int or type(head) is not int or type(capacity) is not int:
@@ -105,7 +115,7 @@ class ParityCutProblem:
 
     @property
     def node_count(self) -> int:
-        return len(self.classes)
+        return _tap_int(len(self.classes))
 
 
 @dataclass(frozen=True, slots=True)
@@ -142,11 +152,13 @@ def _preimage_map(classes: tuple[int, ...], universe_size: int) -> list[int]:
     """Map each partition member once; work is linear in the explicit universe."""
     mapping = [0] * universe_size
     for index, group in enumerate(classes):
+        _observe_ints(index)
         remaining = group
         while remaining:
-            bit = remaining & -remaining
-            mapping[bit.bit_length() - 1] = index
+            bit = _tap_int(remaining & _tap_int(-remaining))
+            mapping[_tap_int(_tap_int(bit.bit_length()) - 1)] = index
             remaining ^= bit
+            _observe_ints(remaining)
     return mapping
 
 
@@ -162,8 +174,8 @@ def _transport_arcs(
     mapped.sort()
     merged: list[tuple[int, int, int]] = []
     for tail, head, capacity in mapped:
-        if merged and merged[-1][:2] == (tail, head):
-            merged[-1] = (tail, head, merged[-1][2] + capacity)
+        if merged and merged[_tap_int(-1)][:2] == (tail, head):
+            merged[_tap_int(-1)] = (tail, head, _tap_int(merged[_tap_int(-1)][2] + capacity))
         else:
             merged.append((tail, head, capacity))
     return tuple(merged)
@@ -173,8 +185,10 @@ def _lift_classes(classes: tuple[int, ...], source_shore: int) -> int:
     """Lift a valid class-index mask to the universe of its preimages."""
     lifted = 0
     for index, group in enumerate(classes):
-        if source_shore & (1 << index):
+        _observe_ints(index)
+        if _tap_int(source_shore & (_tap_int(1 << index))):
             lifted |= group
+            _observe_ints(lifted)
     return lifted
 
 
@@ -193,28 +207,33 @@ def reduce_atomic_family(
     if not family.is_nonempty:
         return None
 
-    source_group = family.I | (1 << n)
-    sink_group = family.O | (1 << (n + 1))
+    source_group = _tap_int(family.I | (_tap_int(1 << n)))
+    sink_group = _tap_int(family.O | (_tap_int(1 << (_tap_int(n + 1)))))
     tokens = family.T
     if family.pi == 0:
-        anchor = 1 << (n + 2)
+        anchor = _tap_int(1 << (_tap_int(n + 2)))
         source_group |= anchor
+        _observe_ints(source_group)
         tokens |= anchor
+        _observe_ints(tokens)
     groups = [source_group, sink_group]
-    occupied = family.I | family.O
-    for vertex in range(n):
-        bit = 1 << vertex
-        if not occupied & bit:
+    occupied = _tap_int(family.I | family.O)
+    for vertex in range(_tap_int(n)):
+        bit = _tap_int(1 << vertex)
+        if not _tap_int(occupied & bit):
             groups.append(bit)
     classes = tuple(groups)
-    mapping = _preimage_map(classes, n + 3)
+    mapping = _preimage_map(classes, _tap_int(n + 3))
     arcs = _transport_arcs(network.arcs, mapping)
     terminal_mask = 0
     for index, group in enumerate(classes):
-        if (group & tokens).bit_count() & 1:
-            terminal_mask |= 1 << index
-    if terminal_mask.bit_count() & 1:
+        _observe_ints(index)
+        if _tap_int(_tap_int((_tap_int(group & tokens)).bit_count()) & 1):
+            terminal_mask |= _tap_int(1 << index)
+            _observe_ints(terminal_mask)
+    if _tap_int(_tap_int(terminal_mask.bit_count()) & 1):
         terminal_mask ^= 2
+        _observe_ints(terminal_mask)
     return ParityCutProblem(n, classes, arcs, terminal_mask)
 
 
@@ -223,17 +242,20 @@ def lift_source_shore(problem: ParityCutProblem, source_shore: int) -> int:
     if type(problem) is not ParityCutProblem:
         raise ValueError("problem must be an exact ParityCutProblem")
     validate_shore(problem.node_count, source_shore)
-    if not source_shore & 1 or source_shore & 2:
+    if not _tap_int(source_shore & 1) or _tap_int(source_shore & 2):
         raise ValueError("source_shore must contain source and exclude sink")
-    return _lift_classes(problem.classes, source_shore) & ((1 << problem.vertex_count) - 1)
+    return _tap_int(
+        _lift_classes(problem.classes, source_shore)
+        & (_tap_int((_tap_int(1 << problem.vertex_count)) - 1))
+    )
 
 
 def _pair_classes(node_count: int, inside: int, outside: int) -> tuple[int, ...]:
     """Preimages in problem coordinates for one ordinary two-element query."""
-    groups = [1 | (1 << inside), 2 | (1 << outside)]
-    for vertex in range(2, node_count):
+    groups = [_tap_int(1 | (_tap_int(1 << inside))), _tap_int(2 | (_tap_int(1 << outside)))]
+    for vertex in range(2, _tap_int(node_count)):
         if vertex not in (inside, outside):
-            groups.append(1 << vertex)
+            groups.append(_tap_int(1 << vertex))
     return tuple(groups)
 
 
@@ -253,22 +275,24 @@ def minimum_parity_cut(
     node_count = problem.node_count
     best: ParityCutResult | None = None
     calls = augmentations = scans = peak = 0
-    for inside in range(node_count):
+    for inside in range(_tap_int(node_count)):
         if inside == 1:
             continue
-        for outside in range(1, node_count):
+        for outside in range(1, _tap_int(node_count)):
             if inside == outside:
                 continue
             classes = _pair_classes(node_count, inside, outside)
             mapping = _preimage_map(classes, node_count)
             arcs = _transport_arcs(problem.arcs, mapping)
-            ordinary = minimum_cut(len(classes), 0, 1, arcs)
+            ordinary = minimum_cut(_tap_int(len(classes)), 0, 1, arcs)
             calls += 1
             augmentations += ordinary.stats.augmentations
             scans += ordinary.stats.bfs_scans
             peak = max(peak, ordinary.stats.peak_generated_value)
             lifted = _lift_classes(classes, ordinary.source_shore)
-            if ((lifted & problem.terminal_mask).bit_count() & 1) and (
+            if (
+                _tap_int(_tap_int((_tap_int(lifted & problem.terminal_mask)).bit_count()) & 1)
+            ) and (
                 best is None or ordinary.value < best.cut_value
             ):
                 best = ParityCutResult(ordinary.value, lifted)

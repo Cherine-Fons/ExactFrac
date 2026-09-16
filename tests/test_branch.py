@@ -2866,7 +2866,7 @@ root = pathlib.Path(sys.argv[1]).resolve()
 sys.path.insert(0, str(root))
 before = set(sys.modules)
 module = importlib.import_module("exactfrac.branch")
-allowed = {
+allowed = {"exactfrac._telemetry",
     "exactfrac", "exactfrac.branch", "exactfrac.instance", "exactfrac.families",
     "exactfrac.flow", "exactfrac.shore", "exactfrac.witness", "exactfrac.rational",
     "exactfrac.sign_routing", "exactfrac.parity_cut", "exactfrac.oracle",

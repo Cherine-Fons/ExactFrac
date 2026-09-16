@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _branch_scope, _observe_ints, _observe_pair_values, _tap_int
 from .branch import (
     AcceleratedBranchStats,
     BranchResult,
@@ -72,39 +73,45 @@ class SolveStats:
 def _baseline_shore(instance: Instance, degrees: tuple[int, ...]) -> int:
     """Refine lem:empty by category priority, then increasing vertex index."""
     for vertex, capacity in enumerate(instance.f):
-        if not capacity & 1:
-            return 1 << vertex
+        _observe_ints(vertex)
+        if not _tap_int(capacity & 1):
+            return _tap_int(1 << vertex)
     for vertex, capacity in enumerate(instance.f):
+        _observe_ints(vertex)
         if capacity >= 3:
-            return 1 << vertex
+            return _tap_int(1 << vertex)
     for vertex, capacity in enumerate(instance.f):
+        _observe_ints(vertex)
         if capacity == 1 and degrees[vertex] >= 2:
-            return 1 << vertex
+            return _tap_int(1 << vertex)
 
     # The remaining source case is a unit matching with at least two edges.
     for vertex, capacity in enumerate(instance.f):
+        _observe_ints(vertex)
         if capacity != 1 or degrees[vertex] != 1:
             raise RuntimeError("the baseline's remaining case is not a unit matching")
     if instance.m < 2:
         raise RuntimeError("the matching baseline requires at least two support edges")
     covered = 0
     for left, right, multiplicity in instance.edges:
-        endpoints = (1 << left) | (1 << right)
-        if multiplicity != 1 or covered & endpoints:
+        endpoints = _tap_int((_tap_int(1 << left)) | (_tap_int(1 << right)))
+        if multiplicity != 1 or _tap_int(covered & endpoints):
             raise RuntimeError("the matching baseline requires disjoint unit edges")
         covered |= endpoints
-    if covered != (1 << instance.n) - 1:
+        _observe_ints(covered)
+    if covered != _tap_int((_tap_int(1 << instance.n)) - 1):
         raise RuntimeError("the matching baseline must cover the original vertex universe")
-    return (1 << instance.edges[0][0]) | (1 << instance.edges[1][0])
+    return _tap_int((_tap_int(1 << instance.edges[0][0])) | (_tap_int(1 << instance.edges[1][0])))
 
 
 def _all_boundary(instance: Instance, U: int, omit_one: bool) -> tuple[int, ...]:
     """Take all crossing copies, optionally omitting one from the first edge."""
     counts = [0] * instance.m
-    remaining = int(omit_one)
+    remaining = _tap_int(int(omit_one))
     for edge_ref, (left, right, multiplicity) in enumerate(instance.edges):
-        if bool(U & (1 << left)) != bool(U & (1 << right)):
-            counts[edge_ref] = multiplicity - remaining
+        _observe_ints(edge_ref)
+        if bool(_tap_int(U & (_tap_int(1 << left)))) != bool(_tap_int(U & (_tap_int(1 << right)))):
+            counts[edge_ref] = _tap_int(multiplicity - remaining)
             remaining = 0
     if remaining:
         raise RuntimeError("omitting one copy requires an actual crossing edge")
@@ -116,10 +123,12 @@ def _first_copies(instance: Instance, U: int, total: int) -> tuple[int, ...]:
     counts = [0] * instance.m
     remaining = total
     for edge_ref, (left, right, multiplicity) in enumerate(instance.edges):
-        if bool(U & (1 << left)) != bool(U & (1 << right)):
-            taken = min(multiplicity, remaining)
+        _observe_ints(edge_ref)
+        if bool(_tap_int(U & (_tap_int(1 << left)))) != bool(_tap_int(U & (_tap_int(1 << right)))):
+            taken = _tap_int(min(multiplicity, remaining))
             counts[edge_ref] = taken
             remaining -= taken
+            _observe_ints(remaining)
     if remaining:
         raise RuntimeError("the endpoint requires more incident copies than the scan found")
     return tuple(counts)
@@ -130,6 +139,7 @@ def _evaluate(instance: Instance, witness: Witness) -> ExactValue:
     value = witness_value(instance, witness)
     if type(value) is not ExactValue:
         raise RuntimeError("witness_value returned an unexpected record type")
+    _observe_pair_values(value.N, value.D)
     return value
 
 
@@ -138,8 +148,8 @@ def _baseline(instance: Instance, degrees: tuple[int, ...]) -> tuple[ExactValue,
     U = _baseline_shore(instance, degrees)
     s = shore_f(instance, U)
     b = shore_b_q(instance, U)
-    odd = (s + b) & 1
-    if (odd and s + b < 3) or (not odd and (b < 1 or s + b < 4)):
+    odd = _tap_int((_tap_int(s + b)) & 1)
+    if (odd and _tap_int(s + b) < 3) or (not odd and (b < 1 or _tap_int(s + b) < 4)):
         raise RuntimeError("the baseline shore violates the unit-witness prerequisites")
     witness = Witness(U, _all_boundary(instance, U, not odd))
     value = _evaluate(instance, witness)
@@ -151,23 +161,27 @@ def _baseline(instance: Instance, degrees: tuple[int, ...]) -> tuple[ExactValue,
 def _endpoint(instance: Instance, branch: int, result: BranchResult) -> tuple[ExactValue, Witness]:
     """Reconstruct and numerically bind one original endpoint, not another optimum."""
     U = result.shore
-    if not 0 < U < 1 << instance.n:
+    if not 0 < U < _tap_int(1 << instance.n):
         raise RuntimeError("the branch shore is outside the original nonempty universe")
     s = shore_f(instance, U)
     b = shore_b_q(instance, U)
     d = shore_d_q(instance, U)
     if branch == 0:
-        valid = (s + b) & 1 and s + b >= 3 and d + 1 - s > 0
-        numerator, denominator = d + b, s + b - 1
+        valid = (
+            _tap_int((_tap_int(s + b)) & 1)
+            and _tap_int(s + b) >= 3
+            and _tap_int(_tap_int(d + 1) - s) > 0
+        )
+        numerator, denominator = _tap_int(d + b), _tap_int(_tap_int(s + b) - 1)
     elif branch == 1:
-        valid = not ((s + b) & 1) and b >= 1 and d > s and s + b >= 4
-        numerator, denominator = d + b - 2, s + b - 2
+        valid = not (_tap_int((_tap_int(s + b)) & 1)) and b >= 1 and d > s and _tap_int(s + b) >= 4
+        numerator, denominator = _tap_int(_tap_int(d + b) - 2), _tap_int(_tap_int(s + b) - 2)
     elif branch == 2:
-        valid = (s & 1) and s >= 3
-        numerator, denominator = d - b, s - 1
+        valid = (_tap_int(s & 1)) and s >= 3
+        numerator, denominator = _tap_int(d - b), _tap_int(s - 1)
     else:
-        valid = not (s & 1) and s >= 2 and b >= 1
-        numerator, denominator = d - b + 2, s
+        valid = not (_tap_int(s & 1)) and s >= 2 and b >= 1
+        numerator, denominator = _tap_int(_tap_int(d - b) + 2), s
     if not valid:
         raise RuntimeError("the branch shore violates its original endpoint domain")
 
@@ -177,15 +191,20 @@ def _endpoint(instance: Instance, branch: int, result: BranchResult) -> tuple[Ex
         counts = (0,) * instance.m
     else:
         counts = _first_copies(instance, U, 1)
+    _observe_pair_values(numerator, denominator)
     witness = Witness(U, counts)
     value = _evaluate(instance, witness)
     if (numerator, denominator) != (value.N, value.D):
         raise RuntimeError("the evaluated raw endpoint differs from its literal source formula")
     A, B = result.root
+    _observe_pair_values(A, B)
     if branch < 2:
-        bound = value.N > value.D and A * (value.N - value.D) == B * value.D
+        bound = (
+            value.N > value.D
+            and _tap_int(A * (_tap_int(value.N - value.D))) == _tap_int(B * value.D)
+        )
     else:
-        bound = A * value.D == -B * value.N
+        bound = _tap_int(A * value.D) == _tap_int(_tap_int(-B) * value.N)
     if not bound:
         raise RuntimeError("the branch root is not numerically bound to the reconstructed endpoint")
     return value, witness
@@ -215,25 +234,27 @@ def solve(instance: Instance, branch_solver: str) -> tuple[SolveResult, SolveSta
     )
     records = []
     for branch in (0, 1, 2, 3):
-        response = selected_solver(context, branch)
-        if type(response) is not tuple or len(response) != 2:
-            raise RuntimeError("a branch reply must be an exact two-element tuple")
-        result, diagnostics = response
-        if result is not None and type(result) is not BranchResult:
-            raise RuntimeError("a branch reply has an unexpected result type")
-        if type(diagnostics) is not selected_type:
-            raise RuntimeError("a branch reply has the wrong selected diagnostics type")
-        records.append(diagnostics)
-        if result is None:
-            continue
-        value, witness = _endpoint(instance, branch, result)
-        if compare_pairs((value.N, value.D), (best_value.N, best_value.D)) > 0:
-            best_value, best_witness = value, witness
-            origin = ("L0", "L1", "H0", "H1")[branch]
+        with _branch_scope(branch):
+            response = selected_solver(context, branch)
+            if type(response) is not tuple or _tap_int(len(response)) != 2:
+                raise RuntimeError("a branch reply must be an exact two-element tuple")
+            result, diagnostics = response
+            if result is not None and type(result) is not BranchResult:
+                raise RuntimeError("a branch reply has an unexpected result type")
+            if type(diagnostics) is not selected_type:
+                raise RuntimeError("a branch reply has the wrong selected diagnostics type")
+            records.append(diagnostics)
+            if result is None:
+                continue
+            value, witness = _endpoint(instance, branch, result)
+            if compare_pairs((value.N, value.D), (best_value.N, best_value.D)) > 0:
+                best_value, best_witness = value, witness
+                origin = ("L0", "L1", "H0", "H1")[branch]
 
     for vertex, capacity in enumerate(instance.f):
+        _observe_ints(vertex)
         if capacity == 1 and degrees[vertex] >= 2:
-            U = 1 << vertex
+            U = _tap_int(1 << vertex)
             witness = Witness(U, _first_copies(instance, U, 2))
             value = _evaluate(instance, witness)
             if (value.N, value.D) != (4, 2):

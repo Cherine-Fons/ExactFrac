@@ -1202,8 +1202,8 @@ def test_instance_imports_only_standard_library_modules() -> None:
         if name.lstrip(".")
     }
 
-    assert not any(name.startswith(".") for name in imported)
-    assert roots <= set(sys.stdlib_module_names) | {"__future__"}
+    assert not any(name.startswith(".") and name != "._telemetry" for name in imported)
+    assert roots <= set(sys.stdlib_module_names) | {"__future__", "_telemetry"}
 
 
 def test_instance_source_and_fresh_import_are_verifier_isolated() -> None:

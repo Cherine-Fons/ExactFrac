@@ -603,14 +603,14 @@ def test_oracle_022_source_is_graph_independent_and_stdlib_only() -> None:
     tree = _parsed_shore_source()
     imported = _imported_modules(tree)
 
-    assert not any(name.startswith(".") for name in imported)
+    assert not any(name.startswith(".") and name != "._telemetry" for name in imported)
 
     roots = {
         name.lstrip(".").split(".", maxsplit=1)[0]
         for name in imported
         if name.lstrip(".")
     }
-    assert roots <= set(sys.stdlib_module_names) | {"__future__"}
+    assert roots <= set(sys.stdlib_module_names) | {"__future__", "_telemetry"}
     assert "exactfrac" not in roots
     assert "exactfrac_verify" not in roots
     assert all(name != "exactfrac.instance" for name in imported)

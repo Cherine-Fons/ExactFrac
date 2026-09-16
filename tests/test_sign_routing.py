@@ -551,6 +551,8 @@ def _assert_acyclic(graph: dict) -> None:
 
 def _check_source(tree: ast.Module) -> None:
     allowed_from = {
+        (1, "_telemetry"): {"_tap_int", "_tap_pair", "_tap_numerator", "_observe_ints",
+                       "_observe_pair_values", "_record_prepared_sizes", "_branch_scope"},
         (0, "__future__"): {"annotations"},
         (0, "dataclasses"): {"dataclass"},
         (1, "instance"): {"Instance"},
@@ -676,8 +678,10 @@ print(module.__file__)
     lines = completed.stdout.splitlines()
     assert len(lines) == 2
     origins = json.loads(lines[0])
-    assert tuple(sorted(origins)) == (
-        "exactfrac", "exactfrac.instance", "exactfrac.rational", "exactfrac.sign_routing",
+    assert tuple(sorted(origins)) in (
+        ("exactfrac", "exactfrac.instance", "exactfrac.rational", "exactfrac.sign_routing"),
+        ("exactfrac", "exactfrac._telemetry", "exactfrac.instance",
+         "exactfrac.rational", "exactfrac.sign_routing"),
     )
     for name, path in origins.items():
         relative = name.replace(".", "/") + ("/__init__.py" if name == "exactfrac" else ".py")

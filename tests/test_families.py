@@ -1131,8 +1131,8 @@ def test_oracle_029_static_import_and_exactness_boundary() -> None:
     tree = _parsed_family_source()
     imported = _imported_modules(tree)
 
-    allowed_relative = {".instance", ".shore"}
-    allowed_absolute = {"exactfrac.instance", "exactfrac.shore"}
+    allowed_relative = {".instance", ".shore", "._telemetry"}
+    allowed_absolute = {"exactfrac.instance", "exactfrac.shore", "exactfrac._telemetry"}
 
     for imported_name in imported:
         canonical = imported_name.lstrip(".")

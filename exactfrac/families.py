@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from itertools import combinations
 
+from ._telemetry import _observe_ints, _record_prepared_sizes, _tap_int
 from .instance import Instance
 from .shore import validate_shore
 
@@ -36,12 +37,12 @@ class AtomicFamily:
     def is_nonempty(self) -> bool:
         """Return whether at least one shore satisfies this descriptor."""
 
-        if self.I & self.O:
+        if _tap_int(self.I & self.O):
             return False
 
-        occupied_terminals = self.T & (self.I | self.O)
-        free_terminals = self.T ^ occupied_terminals
-        forced_parity = (self.I & self.T).bit_count() & 1
+        occupied_terminals = _tap_int(self.T & (_tap_int(self.I | self.O)))
+        free_terminals = _tap_int(self.T ^ occupied_terminals)
+        forced_parity = _tap_int(_tap_int((_tap_int(self.I & self.T)).bit_count()) & 1)
         return bool(free_terminals) or forced_parity == self.pi
 
 
@@ -72,15 +73,17 @@ def _derived_classifications(
     a_vertices: list[int] = []
     w_vertices: list[int] = []
 
-    for vertex in range(value.n):
+    for vertex in range(_tap_int(value.n)):
         f_value = value.f[vertex]
         degree = degrees[vertex]
-        bit = 1 << vertex
+        bit = _tap_int(1 << vertex)
 
-        if (f_value + degree) & 1:
+        if _tap_int((_tap_int(f_value + degree)) & 1):
             terminal_plus |= bit
-        if f_value & 1:
+            _observe_ints(terminal_plus)
+        if _tap_int(f_value & 1):
             terminal_f |= bit
+            _observe_ints(terminal_f)
         if degree > f_value:
             p_vertices.append(vertex)
         if f_value >= 2:
@@ -115,16 +118,16 @@ def enumerate_atomic_families(
 
     d1: list[AtomicFamily] = []
     for p_vertex in p_vertices:
-        p_bit = 1 << p_vertex
+        p_bit = _tap_int(1 << p_vertex)
         for u, v, _ in value.edges:
-            u_bit = 1 << u
-            v_bit = 1 << v
+            u_bit = _tap_int(1 << u)
+            v_bit = _tap_int(1 << v)
             d1.append(
                 _checked_family(
                     value.n,
                     terminal_plus,
                     0,
-                    p_bit | u_bit,
+                    _tap_int(p_bit | u_bit),
                     v_bit,
                 )
             )
@@ -133,7 +136,7 @@ def enumerate_atomic_families(
                     value.n,
                     terminal_plus,
                     0,
-                    p_bit | v_bit,
+                    _tap_int(p_bit | v_bit),
                     u_bit,
                 )
             )
@@ -141,18 +144,19 @@ def enumerate_atomic_families(
     d2: list[AtomicFamily] = []
     for vertex in a_vertices:
         d2.append(
-            _checked_family(value.n, terminal_f, 1, 1 << vertex, 0)
+            _checked_family(value.n, terminal_f, 1, _tap_int(1 << vertex), 0)
         )
 
     for u, v, w in combinations(w_vertices, 3):
-        forced_in = (1 << u) | (1 << v) | (1 << w)
+        forced_in = _tap_int(_tap_int((_tap_int(1 << u)) | (_tap_int(1 << v))) | (_tap_int(1 << w)))
         d2.append(_checked_family(value.n, terminal_f, 1, forced_in, 0))
 
     d3: list[AtomicFamily] = []
     for u, v, _ in value.edges:
-        u_bit = 1 << u
-        v_bit = 1 << v
+        u_bit = _tap_int(1 << u)
+        v_bit = _tap_int(1 << v)
         d3.append(_checked_family(value.n, terminal_f, 0, u_bit, v_bit))
         d3.append(_checked_family(value.n, terminal_f, 0, v_bit, u_bit))
 
+    _record_prepared_sizes(len(d0), len(d1), len(d2), len(d3))
     return d0, tuple(d1), tuple(d2), tuple(d3)

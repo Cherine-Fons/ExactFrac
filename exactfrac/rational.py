@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from ._telemetry import _observe_pair_values, _tap_int, _tap_numerator, _tap_pair
+
 RawPair = tuple[int, int]
 
 __all__ = (
@@ -28,12 +30,12 @@ def make_pair(numerator: int, denominator: int) -> RawPair:
     checked_denominator = _require_exact_int(denominator)
     if checked_denominator <= 0:
         raise ValueError("denominator must be positive")
-    return checked_numerator, checked_denominator
+    return _tap_pair((checked_numerator, checked_denominator))
 
 
 def validate_pair(pair: RawPair) -> None:
     """Validate the exact raw-pair representation."""
-    if type(pair) is not tuple or len(pair) != 2:
+    if type(pair) is not tuple or _tap_int(len(pair)) != 2:
         raise ValueError("pair must be an exact two-element tuple")
 
     numerator, denominator = pair
@@ -42,6 +44,7 @@ def validate_pair(pair: RawPair) -> None:
 
     if checked_denominator <= 0:
         raise ValueError("denominator must be positive")
+    _observe_pair_values(numerator, checked_denominator)
 
 
 def compare_pairs(left: RawPair, right: RawPair) -> int:
@@ -52,9 +55,9 @@ def compare_pairs(left: RawPair, right: RawPair) -> int:
     left_numerator, left_denominator = left
     right_numerator, right_denominator = right
 
-    left_cross = left_numerator * right_denominator
-    right_cross = right_numerator * left_denominator
-    return (left_cross > right_cross) - (left_cross < right_cross)
+    left_cross = _tap_int(left_numerator * right_denominator)
+    right_cross = _tap_int(right_numerator * left_denominator)
+    return _tap_int((left_cross > right_cross) - (left_cross < right_cross))
 
 
 def pair_sign(pair: RawPair) -> int:
@@ -68,7 +71,7 @@ def pair_add_one(pair: RawPair) -> RawPair:
     """Return the literal unreduced raw pair representing pair + 1."""
     validate_pair(pair)
     numerator, denominator = pair
-    return numerator + denominator, denominator
+    return _tap_pair((_tap_int(numerator + denominator), denominator))
 
 
 def pair_reflect(newton: RawPair, current: RawPair) -> RawPair:
@@ -79,11 +82,11 @@ def pair_reflect(newton: RawPair, current: RawPair) -> RawPair:
     newton_numerator, newton_denominator = newton
     current_numerator, current_denominator = current
 
-    return (
-        2 * newton_numerator * current_denominator
-        - current_numerator * newton_denominator,
-        newton_denominator * current_denominator,
-    )
+    return _tap_pair((
+        _tap_int(_tap_int(_tap_int(2 * newton_numerator) * current_denominator)
+        - _tap_int(current_numerator * newton_denominator)),
+        _tap_int(newton_denominator * current_denominator),
+    ))
 
 
 def residual_numerator(parameter: RawPair, c: int, h: int) -> int:
@@ -93,4 +96,6 @@ def residual_numerator(parameter: RawPair, c: int, h: int) -> int:
     checked_h = _require_exact_int(h)
 
     numerator, denominator = parameter
-    return denominator * checked_c - numerator * checked_h
+    return _tap_numerator(
+        _tap_int(_tap_int(denominator * checked_c) - _tap_int(numerator * checked_h)), denominator,
+    )

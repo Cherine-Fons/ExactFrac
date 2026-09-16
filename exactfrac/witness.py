@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _observe_ints, _observe_pair_values, _tap_int
 from .instance import Instance
 from .shore import validate_shore
 
@@ -65,7 +66,7 @@ def _checked_instance_shore(instance: object, U: object) -> tuple[Instance, int]
 
 
 def _crosses(U: int, left: int, right: int) -> bool:
-    return bool(U & (1 << left)) != bool(U & (1 << right))
+    return bool(_tap_int(U & (_tap_int(1 << left)))) != bool(_tap_int(U & (_tap_int(1 << right))))
 
 
 def _validate_dense(
@@ -73,7 +74,7 @@ def _validate_dense(
     U: int,
     y: object,
 ) -> tuple[int, ...]:
-    if type(y) is not tuple or len(y) != instance.m:
+    if type(y) is not tuple or _tap_int(len(y)) != instance.m:
         raise ValueError("dense y must be an exact tuple of length m")
 
     # Shape validation precedes every graph-dependent bound/boundary check.
@@ -82,6 +83,7 @@ def _validate_dense(
             raise ValueError("every dense y coordinate must be a nonnegative built-in int")
 
     for edge_ref, (left, right, multiplicity) in enumerate(instance.edges):
+        _observe_ints(edge_ref)
         count = y[edge_ref]
         if count > multiplicity:
             raise ValueError("dense y coordinate exceeds edge multiplicity")
@@ -96,9 +98,10 @@ def shore_f(instance: Instance, U: int) -> int:
 
     checked_instance, checked_shore = _checked_instance_shore(instance, U)
     total = 0
-    for vertex in range(checked_instance.n):
-        if checked_shore & (1 << vertex):
+    for vertex in range(_tap_int(checked_instance.n)):
+        if _tap_int(checked_shore & (_tap_int(1 << vertex))):
             total += checked_instance.f[vertex]
+            _observe_ints(total)
     return total
 
 
@@ -108,8 +111,12 @@ def shore_e_q(instance: Instance, U: int) -> int:
     checked_instance, checked_shore = _checked_instance_shore(instance, U)
     total = 0
     for left, right, multiplicity in checked_instance.edges:
-        if checked_shore & (1 << left) and checked_shore & (1 << right):
+        if (
+            _tap_int(checked_shore & (_tap_int(1 << left)))
+            and _tap_int(checked_shore & (_tap_int(1 << right)))
+        ):
             total += multiplicity
+            _observe_ints(total)
     return total
 
 
@@ -121,6 +128,7 @@ def shore_b_q(instance: Instance, U: int) -> int:
     for left, right, multiplicity in checked_instance.edges:
         if _crosses(checked_shore, left, right):
             total += multiplicity
+            _observe_ints(total)
     return total
 
 
@@ -130,9 +138,10 @@ def shore_d_q(instance: Instance, U: int) -> int:
     checked_instance, checked_shore = _checked_instance_shore(instance, U)
     degrees = checked_instance.d_q
     total = 0
-    for vertex in range(checked_instance.n):
-        if checked_shore & (1 << vertex):
+    for vertex in range(_tap_int(checked_instance.n)):
+        if _tap_int(checked_shore & (_tap_int(1 << vertex))):
             total += degrees[vertex]
+            _observe_ints(total)
     return total
 
 
@@ -214,8 +223,8 @@ def validate_witness(instance: Instance, witness: Witness) -> None:
         raise ValueError("a witness shore must be nonempty")
     _validate_dense(checked_instance, checked_shore, witness.y)
 
-    total = shore_f(checked_instance, checked_shore) + sum(witness.y)
-    if total % 2 == 0:
+    total = _tap_int(shore_f(checked_instance, checked_shore) + _tap_int(sum(witness.y)))
+    if _tap_int(total % 2) == 0:
         raise ValueError("witness admissibility total must be odd")
     if total < 3:
         raise ValueError("witness admissibility total must be at least three")
@@ -229,7 +238,8 @@ def witness_value(instance: Instance, witness: Witness) -> ExactValue:
         raise ValueError("witness must be an exact Witness")
 
     validate_witness(checked_instance, witness)
-    selected = sum(witness.y)
-    numerator = 2 * (shore_e_q(checked_instance, witness.U) + selected)
-    denominator = shore_f(checked_instance, witness.U) + selected - 1
+    selected = _tap_int(sum(witness.y))
+    numerator = _tap_int(2 * (_tap_int(shore_e_q(checked_instance, witness.U) + selected)))
+    denominator = _tap_int(_tap_int(shore_f(checked_instance, witness.U) + selected) - 1)
+    _observe_pair_values(numerator, denominator)
     return ExactValue(numerator, denominator)

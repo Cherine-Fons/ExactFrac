@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from ._telemetry import _tap_int, _tap_pair
 from .families import AtomicFamily, enumerate_atomic_families
 from .instance import Instance
 from .parity_cut import lift_source_shore, minimum_parity_cut, reduce_atomic_family
@@ -100,20 +101,20 @@ def _source_terms(instance: Instance, shore: int, branch: int) -> tuple[int, int
     b = shore_b_q(instance, shore)
     d = shore_d_q(instance, shore)
     if branch == 0:
-        in_domain = (s + b) & 1
-        c, h = s + b - 1, d + 1 - s
+        in_domain = _tap_int((_tap_int(s + b)) & 1)
+        c, h = _tap_int(_tap_int(s + b) - 1), _tap_int(_tap_int(d + 1) - s)
     elif branch == 1:
-        in_domain = not ((s + b) & 1) and b >= 1 and d > s
-        c, h = s + b - 2, d - s
+        in_domain = not (_tap_int((_tap_int(s + b)) & 1)) and b >= 1 and d > s
+        c, h = _tap_int(_tap_int(s + b) - 2), _tap_int(d - s)
     elif branch == 2:
-        in_domain = (s & 1) and s >= 3
-        c, h = b - d, s - 1
+        in_domain = (_tap_int(s & 1)) and s >= 3
+        c, h = _tap_int(b - d), _tap_int(s - 1)
     else:
-        in_domain = not (s & 1) and b >= 1
-        c, h = b - d - 2, s
+        in_domain = not (_tap_int(s & 1)) and b >= 1
+        c, h = _tap_int(_tap_int(b - d) - 2), s
     if not in_domain or h <= 0:
         raise RuntimeError("lifted candidate violates the source domain or positive h")
-    return c, h
+    return _tap_pair((c, h))
 
 
 def exact_branch_min(
@@ -160,9 +161,9 @@ def exact_branch_min(
         validate_shore(instance.n, shore)
         if (
             shore == 0
-            or (shore & family.I) != family.I
-            or (shore & family.O) != 0
-            or ((shore & family.T).bit_count() & 1) != family.pi
+            or (_tap_int(shore & family.I)) != family.I
+            or (_tap_int(shore & family.O)) != 0
+            or (_tap_int(_tap_int((_tap_int(shore & family.T)).bit_count()) & 1)) != family.pi
         ):
             raise RuntimeError("lifted original shore violates its atomic family")
 

@@ -12233,8 +12233,11 @@ def test_five_closed_definitions_and_compatibility_bytes_are_preserved():
     assert tuple(definitions) == (*five, 'AcceleratedBranchStats', 'solve_branch_accelerated')
     for name, digest, _start, _end in _U14['PRESERVATION']:
         assert hashlib.sha256(definitions[name]).hexdigest() == digest, name
-    assert (hashlib.sha256(Path(__file__).with_name('test_branch.py').read_bytes()).hexdigest(
+    from _telemetry_source_audit import assert_test_adaptation, legacy_bytes
+
+    assert (hashlib.sha256(legacy_bytes("tests/test_branch.py")).hexdigest(
         ) == _COMPATIBILITY_SHA256)
+    assert_test_adaptation("tests/test_branch.py")
     allowed = (ast.ClassDef, ast.FunctionDef, ast.ImportFrom, ast.Assign, ast.Expr)
     assert all(isinstance(node, allowed) for node in tree.body)
     for node in tree.body:
@@ -12717,7 +12720,7 @@ def test_fresh_process_combined_imports_resolve_only_to_candidate_tree():
         'modules)\nmodule = importlib.import_module("exactfrac.branch")\nas'
         'sert module.__all__ == (\n    "AcceleratedBranchStats", "BranchRes'
         'ult", "StandardBranchStats",\n    "solve_branch_accelerated", "sol'
-        've_branch_standard",\n)\nallowed = {"exactfrac", "exactfrac.branch'
+        've_branch_standard",\n)\nallowed = {"exactfrac._telemetry", "exactfrac", "exactfrac.branch'
         '", "exactfrac.oracle", "exactfrac.rational",\n           "exactfra'
         'c.instance", "exactfrac.families", "exactfrac.shore", "exactfrac.w'
         'itness",\n           "exactfrac.flow", "exactfrac.sign_routing", "'

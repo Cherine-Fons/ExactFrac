@@ -11,6 +11,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _observe_ints, _tap_int
+
 Arc = tuple[int, int, int]
 
 __all__ = ["FlowStats", "MinCutResult", "minimum_cut"]
@@ -81,12 +83,13 @@ def _validate_and_normalize(
     if type(arcs) is not tuple:
         raise TypeError("arcs must be a tuple")
 
+    _observe_ints(checked_n, checked_source, checked_sink)
     nonloop_records: list[Arc] = []
 
     for arc in arcs:
         if type(arc) is not tuple:
             raise TypeError("every arc must be a tuple")
-        if len(arc) != 3:
+        if _tap_int(len(arc)) != 3:
             raise ValueError("every arc must have exactly three entries")
 
         raw_tail, raw_head, raw_capacity = arc
@@ -101,6 +104,7 @@ def _validate_and_normalize(
         if capacity < 0:
             raise ValueError("capacity must be nonnegative")
 
+        _observe_ints(tail, head, capacity)
         if tail != head:
             nonloop_records.append((tail, head, capacity))
 
@@ -108,9 +112,9 @@ def _validate_and_normalize(
     normalized: list[Arc] = []
 
     for tail, head, capacity in nonloop_records:
-        if normalized and normalized[-1][:2] == (tail, head):
-            previous_capacity = normalized[-1][2]
-            normalized[-1] = (tail, head, previous_capacity + capacity)
+        if normalized and normalized[_tap_int(-1)][:2] == (tail, head):
+            previous_capacity = normalized[_tap_int(-1)][2]
+            normalized[_tap_int(-1)] = (tail, head, _tap_int(previous_capacity + capacity))
         else:
             normalized.append((tail, head, capacity))
 
@@ -147,7 +151,7 @@ def minimum_cut(
     if not normalized:
         return MinCutResult(
             value=0,
-            source_shore=1 << checked_source,
+            source_shore=_tap_int(1 << checked_source),
             stats=FlowStats(
                 augmentations=0,
                 bfs_scans=0,
@@ -155,12 +159,12 @@ def minimum_cut(
             ),
         )
 
-    adjacency: list[list[_ResidualEntry]] = [[] for _ in range(checked_n)]
+    adjacency: list[list[_ResidualEntry]] = [[] for _ in range(_tap_int(checked_n))]
     peak_generated_value = 0
 
     for tail, head, capacity in normalized:
-        forward_index = len(adjacency[tail])
-        reverse_index = len(adjacency[head])
+        forward_index = _tap_int(len(adjacency[tail]))
+        reverse_index = _tap_int(len(adjacency[head]))
 
         adjacency[tail].append(
             _ResidualEntry(
@@ -197,6 +201,7 @@ def minimum_cut(
         nonlocal bfs_scans, epoch
 
         epoch += 1
+        _observe_ints(epoch)
         queue_head = 0
         queue_tail = 1
         queue[0] = checked_source
@@ -205,8 +210,10 @@ def minimum_cut(
         while queue_head < queue_tail:
             vertex = queue[queue_head]
             queue_head += 1
+            _observe_ints(queue_head)
 
             for entry_index, entry in enumerate(adjacency[vertex]):
+                _observe_ints(entry_index)
                 bfs_scans += 1
 
                 if entry.capacity <= 0 or seen_epoch[entry.head] == epoch:
@@ -221,6 +228,7 @@ def minimum_cut(
 
                 queue[queue_tail] = entry.head
                 queue_tail += 1
+                _observe_ints(queue_tail)
 
         return False, queue_tail
 
@@ -228,8 +236,9 @@ def minimum_cut(
         found, reached_count = search()
 
         if not found:
-            for reached_index in range(reached_count):
-                source_shore |= 1 << queue[reached_index]
+            for reached_index in range(_tap_int(reached_count)):
+                source_shore |= _tap_int(1 << queue[reached_index])
+                _observe_ints(source_shore)
             break
 
         vertex = checked_sink
@@ -258,7 +267,9 @@ def minimum_cut(
             reverse = adjacency[entry.head][entry.reverse_index]
 
             entry.capacity -= bottleneck
+            _observe_ints(entry.capacity)
             reverse.capacity += bottleneck
+            _observe_ints(reverse.capacity)
 
             if entry.capacity > peak_generated_value:
                 peak_generated_value = entry.capacity
@@ -268,6 +279,7 @@ def minimum_cut(
             vertex = previous
 
         value += bottleneck
+        _observe_ints(value)
         augmentations += 1
 
         if value > peak_generated_value:

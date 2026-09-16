@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from ._telemetry import _observe_ints, _tap_int
 from .instance import Instance
 from .rational import RawPair, validate_pair
 
@@ -106,19 +107,25 @@ def branch_coefficients(
 
     numerator, denominator = parameter
     degrees = instance.d_q
+    _observe_ints(instance.n)
     if branch < 2:
-        combined = numerator + denominator
+        combined = _tap_int(numerator + denominator)
         gamma = tuple(
-            combined * instance.f[vertex] - numerator * degrees[vertex]
+            _tap_int(
+                _tap_int(combined * instance.f[vertex]) - _tap_int(numerator * degrees[vertex])
+            )
             for vertex in range(instance.n)
         )
-        constant = -combined if branch == 0 else -2 * denominator
+        constant = _tap_int(-combined) if branch == 0 else _tap_int(_tap_int(-2) * denominator)
     else:
         gamma = tuple(
-            -denominator * degrees[vertex] - numerator * instance.f[vertex]
+            _tap_int(
+                _tap_int(_tap_int(-denominator) * degrees[vertex])
+                - _tap_int(numerator * instance.f[vertex])
+            )
             for vertex in range(instance.n)
         )
-        constant = numerator if branch == 2 else -2 * denominator
+        constant = numerator if branch == 2 else _tap_int(_tap_int(-2) * denominator)
     return SignRoutingCoefficients(denominator, gamma, constant)
 
 
@@ -131,27 +138,29 @@ def build_sign_routed_network(
         raise ValueError("instance must be an exact production Instance")
     if type(coefficients) is not SignRoutingCoefficients:
         raise ValueError("coefficients must be an exact SignRoutingCoefficients")
-    if len(coefficients.gamma) != instance.n:
+    if _tap_int(len(coefficients.gamma)) != instance.n:
         raise ValueError("gamma length must equal the original vertex count")
 
     source = instance.n
-    sink = source + 1
+    sink = _tap_int(source + 1)
     arcs: list[tuple[int, int, int]] = []
     for u, v, multiplicity in instance.edges:
-        capacity = coefficients.a * multiplicity
+        capacity = _tap_int(coefficients.a * multiplicity)
         arcs.append((u, v, capacity))
         arcs.append((v, u, capacity))
 
     negative_shift = 0
     for vertex, coefficient in enumerate(coefficients.gamma):
+        _observe_ints(vertex)
         if coefficient >= 0:
             arcs.append((vertex, sink, coefficient))
             arcs.append((sink, vertex, coefficient))
         else:
-            capacity = -coefficient
+            capacity = _tap_int(-coefficient)
             arcs.append((source, vertex, capacity))
             arcs.append((vertex, source, capacity))
             negative_shift += capacity
+            _observe_ints(negative_shift)
 
     return SignRoutedNetwork(instance.n, tuple(arcs), negative_shift, coefficients.constant)
 
@@ -163,4 +172,4 @@ def recover_objective(network: SignRoutedNetwork, cut_value: int) -> int:
     _require_int(cut_value, "cut_value")
     if cut_value < 0:
         raise ValueError("cut_value must be nonnegative")
-    return cut_value - network.negative_shift + network.constant
+    return _tap_int(_tap_int(cut_value - network.negative_shift) + network.constant)

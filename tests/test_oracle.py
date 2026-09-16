@@ -5653,7 +5653,8 @@ import sys
 root = Path(sys.argv[1]).resolve()
 sys.path.insert(0, str(root))
 module = importlib.import_module("exactfrac.oracle")
-allowed = {"exactfrac", "exactfrac.oracle", "exactfrac.instance", "exactfrac.families",
+allowed = {"exactfrac._telemetry",
+           "exactfrac", "exactfrac.oracle", "exactfrac.instance", "exactfrac.families",
            "exactfrac.rational", "exactfrac.shore", "exactfrac.sign_routing",
            "exactfrac.parity_cut", "exactfrac.witness", "exactfrac.flow"}
 origins = {}
@@ -5683,6 +5684,8 @@ print(json.dumps(origins, sort_keys=True))
 def test_production_source_imports_exact_arithmetic_and_no_side_effect_paths():
     tree = ast.parse(Path(oracle.__file__).read_text(encoding="utf-8"))
     whitelist = {
+        "_telemetry": {"_tap_int", "_tap_pair", "_tap_numerator", "_observe_ints",
+                       "_observe_pair_values", "_record_prepared_sizes", "_branch_scope"},
         "__future__": {"annotations"}, "dataclasses": {"dataclass", "field"},
         "instance": {"Instance"}, "families": {"AtomicFamily", "enumerate_atomic_families"},
         "rational": {"RawPair", "validate_pair", "residual_numerator"},

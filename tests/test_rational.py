@@ -617,7 +617,14 @@ def test_rp11_source_exactness_and_dependency_isolation() -> None:
             allowed_future = node.module == "__future__" and [
                 alias.name for alias in node.names
             ] == ["annotations"]
-            assert allowed_future, ast.unparse(node)
+            assert allowed_future or (
+                node.level == 1 and node.module == "_telemetry"
+                and {alias.name for alias in node.names} <= {
+                    "_tap_int", "_tap_pair", "_tap_numerator", "_observe_ints",
+                    "_observe_pair_values", "_record_prepared_sizes", "_branch_scope",
+                }
+                and all(alias.asname is None for alias in node.names)
+            ), ast.unparse(node)
         if isinstance(node, ast.Constant):
             assert type(node.value) is not float
         if isinstance(node, ast.BinOp):
@@ -706,7 +713,10 @@ print("|".join(new))
     lines = completed.stdout.strip().splitlines()
     assert len(lines) == 2
     assert Path(lines[0]).resolve() == Path(rational.__file__).resolve()
-    assert lines[1].split("|") == ["exactfrac", "exactfrac.rational"]
+    assert lines[1].split("|") in (
+        ["exactfrac", "exactfrac.rational"],
+        ["exactfrac", "exactfrac._telemetry", "exactfrac.rational"],
+    )
 
 
 

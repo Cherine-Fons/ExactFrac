@@ -3265,7 +3265,9 @@ def _iterators(tree: ast.AST) -> Iterator[ast.AST]:
 def _source_violations(source: str) -> set[str]:
     tree = ast.parse(source)
     failures: set[str] = set()
-    allowed = {"__future__": {"annotations"}, "dataclasses": {"dataclass"},
+    allowed = {"_telemetry": {"_tap_int", "_tap_pair", "_tap_numerator", "_observe_ints",
+                       "_observe_pair_values", "_record_prepared_sizes", "_branch_scope"},
+               "__future__": {"annotations"}, "dataclasses": {"dataclass"},
                "families": {"AtomicFamily"}, "sign_routing": {"SignRoutedNetwork"},
                "shore": {"validate_shore"}, "flow": {"minimum_cut", "MinCutResult", "FlowStats"}}
     known_sets: set[str] = set()
@@ -3431,7 +3433,8 @@ print(json.dumps(modules, sort_keys=True))
                                capture_output=True, text=True, check=False)
     assert completed.returncode == 0, completed.stderr
     observed = json.loads(completed.stdout)
-    allowed = {"exactfrac", "exactfrac.parity_cut", "exactfrac.families", "exactfrac.flow",
+    allowed = {"exactfrac._telemetry",
+               "exactfrac", "exactfrac.parity_cut", "exactfrac.families", "exactfrac.flow",
                "exactfrac.shore", "exactfrac.instance", "exactfrac.sign_routing",
                "exactfrac.rational"}
     assert set(observed) <= allowed

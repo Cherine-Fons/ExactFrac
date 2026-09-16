@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from ._telemetry import _tap_int
+
 # ORACLE-022 fixes this public export sequence; do not alphabetize it.
 __all__ = (  # noqa: RUF022
     "Shore",
@@ -35,7 +37,7 @@ def validate_shore(n: int, shore: object) -> Shore:
     if type(shore) is not int:
         raise ValueError("shore must be a built-in int")
 
-    maximum = (1 << checked_n) - 1
+    maximum = _tap_int((_tap_int(1 << checked_n)) - 1)
     if shore < 0 or shore > maximum:
         raise ValueError("shore has a bit outside the vertex universe")
 

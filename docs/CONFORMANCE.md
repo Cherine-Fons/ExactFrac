@@ -1054,3 +1054,207 @@ Those follow the separate complete-candidate staging, index-tree isolation,
 postcommit checks and approved-hash push/closure steps. Source, frozen test, every
 other governing document and every earlier CONFORMANCE row/status remain unchanged
 by this documentation-only amendment.
+
+## Unit 16 exact telemetry — finite implementation and engineering crosswalk
+
+### Basis, status and preservation boundary
+
+This appendix records the implemented engineering scope of DESIGN 4.13 and
+TEST_PLAN TE1--TE23 / section 38, after the live implementation R2 GREEN gate.
+Every prior byte, theorem row, status and explanatory note above is preserved.
+In particular, the historical `prop:branch-invariant`, `prop:global-invariant`
+and `thm:main` planned rows are not promoted or rewritten. No new theorem label
+is invented. Earlier telemetry deferrals describe their historical checkpoints;
+this separately scoped appendix records the present implementation evidence.
+
+The source remains the V2.2 mathematical specification pinned in SPEC_LOCK.
+Its work/encoding claims supply the mathematical context, not the Python record
+interfaces. The corrected source-derived manifest traverses `Call.args` and
+excludes signature `args` only by callable owner type. The existing 333 scalar
+IDs and 25 iterator entries remain historical; the effective inventory has
+102 functions, 366 scalar occurrences and 27 iterator sites, including the
+33 appended scalar classifications and two coefficient-generator iterators.
+The current consumers recognize 237 required direct observations and 25
+post-store observations. These are static obligations, not execution counts.
+
+The accepted GREEN candidate adds `exactfrac/_telemetry.py` and
+`exactfrac/telemetry.py`. Exactly ten older modules have authorized erasable
+recording additions: instance, shore, families, witness, rational, sign_routing,
+parity_cut, flow, oracle and solve. Their source bytes DID change; removing only
+the ruled observation imports/taps/events/scopes recovers their mathematical ASTs.
+`branch.py`, the independent verifier, package roots, and unruled paths retain
+their original bytes. The eleven legacy test adapters contain only the 17
+registered recipes. Their immutable 27-file JSON reference is parsed comparison
+data, never executed. No rolling hash replaces an original historical identity.
+
+### Implemented surface and measurement meaning
+
+`solve_with_telemetry(instance, branch_solver)` validates an exact Instance and
+exact selection `Standard` or `Accelerated`, calls the existing global solve once,
+and returns its exact SolveResult object with AlgorithmStats retaining the exact
+native SolveStats object. Legacy solver signatures, native diagnostics, raw
+witness values, first-encountered tie handling and result semantics are preserved.
+The new immutable in-memory records are WorkStats, BranchTelemetry, AlgorithmStats,
+RunMetadata and RunRecord; there are no package-root re-exports or implicit defaults.
+Their validators check shape and local consistency, not that a claimed run occurred.
+
+All four branches, including infeasible/losing ones, retain their own records.
+Nonbranch arithmetic includes input values, the constructive baseline, candidate
+comparison and direct H2 reconstruction; Empty has no fake branch execution.
+Standard newton_updates and Accelerated newton_queries retain distinct native
+meanings. The common newton_candidates event is defined explicitly; accepted,
+rejected and terminal look-aheads remain separate, and initialization termination
+is not an early in-loop return. Prepared-cover cardinality is recorded once;
+repeated examinations and cut/flow calls are not recomputed by replaying work.
+The first 20 WorkStats fields aggregate by sum; its five magnitude/bit fields
+aggregate by maximum, with native field meanings preserved.
+
+Scalar bits use max(1, abs(x).bit_length()); zero has one bit. A zero flow value
+is not absent flow. Raw numerator/denominator peaks are distinct from output bit
+sizes and from the complete measured integer peak. Cancelling products, rejected
+or discarded intermediates, masks, capacities, residuals and executed dominance
+carriers are covered in their specified scopes. Display labels and recording
+bookkeeping do not enter the mathematical peak. No gcd normalization, float
+comparison, tolerance or magnitude-based optimizer cutoff is introduced.
+
+At the two registered D-ITER coefficient-generator sites, the candidate places
+`_observe_ints(instance.n)` immediately before the top-level `if branch < 2` in
+branch_coefficients, in the same scope. Both generators keep `range(instance.n)`.
+The frozen checker accepts the exact preceding statement as well as the original
+inline form; exact operand/path/binder, unconditional placement and non-reassignment
+requirements remain. Controls reject after-generator and opposite-branch events,
+a different operand, intervening reassignment, scope changes and extra evaluation.
+The valid statement variant also satisfies the unchanged structural-loop guard.
+
+Recording decisions do not feed mathematical branch/loop/comparison decisions.
+Leaf taps preserve object identity, and context-local cleanup is exercised for
+normal, rejected-nested, exceptional and separate-thread runs. Metadata values,
+including wall_clock_s, are supplied externally and remain separate from AlgorithmStats.
+Constructors do not discover clocks, CPUs, files, Git versions or instance hashes.
+No wire format, timing campaign or certificate field is implemented here.
+
+### Actual frozen tests and finite scope
+
+Every row below names an existing top-level function in the frozen
+`tests/test_telemetry.py`; all 39 functions are represented. Their parametrization
+collected 809 live targeted cases. Together with the unchanged identities of
+1,178 legacy cases, the full live suite collected and passed 1,987 cases. Case
+counts are not counts of solver calls, source sites, or mathematical theorems.
+All rows are green only for the executed finite assertions described here.
+
+| Engineering obligations (TEST_PLAN 37) | Actual frozen discharging test | Finite scope | Status |
+|---|---|---|---|
+| TE2, TE8, TE23 | `tests/test_telemetry.py::test_te02_te08_all_registered_inputs_both_real_routes` | Both routes on the 389-input registry; one legacy call, exact result/native identity, repeats and independent raw-witness checks. | green |
+| TE1 | `tests/test_telemetry.py::test_te01_exact_record_layout_required_arguments_and_immutability` | Required record fields and entry signature; frozen/slots, no ordering, and argument-shape rejection. | green |
+| TE1, TE8, TE20 | `tests/test_telemetry.py::test_te01_te08_te20_all_registered_rejections` | All catalogue public-data/signature rejection cases with exact exception types. | green |
+| TE1 | `tests/test_telemetry.py::test_te01_public_validation_precedes_all_graph_access` | Public argument rejection precedes solver invocation and graph access. | green |
+| TE3, TE4, TE5, TE6, TE7 | `tests/test_telemetry.py::test_te03_te07_registered_real_traces_and_all_native_fields` | Registered real query trajectories, native event fields and labelled backend measurements. | green |
+| TE9 | `tests/test_telemetry.py::test_te09_integer_tap_bit_convention_and_identity` | Zero-safe scalar bit convention, tap identity and recorded nonbranch maxima. | green |
+| TE9, TE14 | `tests/test_telemetry.py::test_te09_te14_raw_pair_streams_and_no_normalization` | Raw-pair streams, separate numerator/denominator peaks and unreduced scale. | green |
+| TE11 | `tests/test_telemetry.py::test_te11_real_rational_operations_observe_cancelling_products` | Real residual/reflection/comparison primitives observe cancelling products. | green |
+| TE12 | `tests/test_telemetry.py::test_te12_signed_prefixes_and_executed_dominance` | Signed prefix observations and the limited executed nonnegative-sum dominance argument. | green |
+| TE7, TE13 | `tests/test_telemetry.py::test_te07_te13_local_flow_definition_and_numeric_measurement` | Local flow fixtures: value, shore, augmentations, scans, generated peaks and injected-call scope. | green |
+| TE13 | `tests/test_telemetry.py::test_te13_local_reduced_coordinates_and_masks` | Local reduction coordinates, terminal masks and original/reduced universe observations. | green |
+| TE7, TE9 | `tests/test_telemetry.py::test_te09_synthetic_zero_flow_and_aggregate_construction` | Sum-versus-maximum aggregation and zero-valued flow versus absent flow. | green |
+| TE13 | `tests/test_telemetry.py::test_te13_huge_labels_do_not_enter_algorithm_statistics` | Huge display labels do not alter the deterministic algorithm statistics. | green |
+| TE15 | `tests/test_telemetry.py::test_te15_injected_numeric_maximum_cannot_change_mathematical_decisions` | Injected recorded maxima cannot change the mathematical result or native decisions. | green |
+| TE16 | `tests/test_telemetry.py::test_te16_nested_rejection_before_second_call_and_successive_cleanup` | Nested measured calls rejected before a second solve; successive measurements clean up. | green |
+| TE16 | `tests/test_telemetry.py::test_te16_dependency_exception_identity_and_recorder_cleanup` | Entry/oracle/recorder failures preserve the exception object and restore the recording context. | green |
+| TE16 | `tests/test_telemetry.py::test_te16_separate_thread_measurements_have_disjoint_state` | Independent thread jobs and subsequent reruns produce disjoint, repeatable measurements. | green |
+| TE10, TE17, TE18 | `tests/test_telemetry.py::test_te17_te18_complete_source_erasure_and_exact_legacy_adapters` | Complete source erasure, 237 direct/25 post-store sites, 17 recipes, 27 references and frozen branch bytes. | green |
+| TE17 | `tests/test_telemetry.py::test_te17_erasure_rejects_controlled_source_faults` | Erasure rejects comparison edits, extra evaluation, omitted scalar taps and arbitrary imports. | green |
+| TE18 | `tests/test_telemetry.py::test_te18_test_delta_checker_rejects_changed_math_and_changed_historical_hash` | Exact adapter reconstruction rejects widened dependencies and altered historical-hash guards. | green |
+| TE19 | `tests/test_telemetry.py::test_te19_leaf_import_isolation_and_no_runtime_source_tools` | Fresh leaf-only import, allowed dependencies and absence of runtime source/profiling/clock tools. | green |
+| TE20 | `tests/test_telemetry.py::test_te20_metadata_is_supplied_not_discovered` | Explicit metadata and record construction; no discovery calls or AlgorithmStats contamination. | green |
+| TE10, TE21, TE22 | `tests/test_telemetry.py::test_te10_te21_te22_manifest_registry_and_no_new_math` | Manifest/registry identities, static wrapper restrictions and unchanged branch mathematics. | green |
+| TE11 | `tests/test_telemetry.py::test_te11_all_literal_arithmetic_streams_against_leaf` | Every literal arithmetic-stream fixture exercises leaf observations with independently listed results. | green |
+| TE4, TE5 | `tests/test_telemetry.py::test_te04_te05_abstract_scalar_streams_drive_actual_mapper` | Abstract scalar oracle streams drive the real branch recurrences and actual event mapping. | green |
+| TE3, TE6 | `tests/test_telemetry.py::test_te03_te06_branch_ownership_and_preparation_observation` | Branch ownership, one preparation and actual prepared-cover observations. | green |
+| TE3, TE8 | `tests/test_telemetry.py::test_te03_baseline_h2_and_zero_h0_are_really_measured` | Baseline, direct H2 and feasible zero-valued H0 measurements are reached and retained correctly. | green |
+| TE15 | `tests/test_telemetry.py::test_te15_disabled_taps_and_record_bookkeeping_do_not_enter_math_peak` | Disabled tap identity and exclusion of recording bookkeeping from mathematical peaks. | green |
+| TE16 | `tests/test_telemetry.py::test_te16_normally_returned_invalid_dependency_records_fail_closed` | Normally returned malformed dependency records fail closed rather than produce partial success. | green |
+| TE7, TE9 | `tests/test_telemetry.py::test_te07_te09_zero_terminal_performs_no_ordinary_cut` | Zero-terminal execution makes no ordinary cut and preserves zero/absence distinctions. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_manifest_rule_manual_syntax_fixtures` | Manual syntax fixtures establish the typed callable-signature exclusion rule. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_corrected_inventory_is_complete_from_authenticated_source` | Effective corrected inventory is discovered from authenticated source before manifest comparison. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_completeness_rejects_each_added_scalar_omission` | Each of the 33 appended scalar classifications is individually omission-sensitive. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_completeness_rejects_each_added_iterator_omission` | Each of the two appended iterator occurrences is individually omission-sensitive. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_completeness_rejects_self_consistent_but_incomplete_tables` | Self-consistent incomplete, duplicated and substituted manifest tables are rejected. | green |
+| TE10 | `tests/test_telemetry.py::test_te10_rule_fixture_detects_untyped_args_exclusion` | The syntax fixture detects blanket args-field exclusion, including skipped Call.args. | green |
+| TE17 | `tests/test_telemetry.py::test_te17_diter_exact_inline_and_preceding_statement_forms` | Inline, exact preceding statement and combined/mixed forms remain accepted at the two D-ITER sites. | green |
+| TE17 | `tests/test_telemetry.py::test_te17_diter_statement_rejects_wrong_placement_operand_scope_and_reassignment` | After-use, opposite-branch, different-operand, reassignment, scope and extra-evaluation forms are rejected. | green |
+| TE17 | `tests/test_telemetry.py::test_te17_diter_statement_cannot_discharge_another_registered_site` | The statement alternative cannot discharge a different module/function/path/operand/binder obligation. | green |
+
+### Separate independent execution and mutation evidence
+
+The implementation audit runs the 389 registered inputs under both selections:
+778 measured global solves, comprising four Empty runs and 774 nonempty runs.
+It checks all 3,096 nonempty-run branch records and all 389 cross-route numerical
+pairs. Same-route original raw result, witness and native diagnostics agree with
+778 uninstrumented original-source calls. Across selections only numerical value
+agreement is required; tied witness objects or unreduced pairs need not coincide.
+Each of the 774 nonempty witnesses independently passes admissibility and literal
+raw-attainment evaluation under the unchanged verifier; direct compact-definition
+arithmetic supplies an additional 774 raw checks. These checks are not an
+independently checkable global-optimality certificate.
+
+A separate original-source observation transform performs 778 reference calls.
+It neither imports production telemetry nor uses candidate outputs/tap placement
+as expected peaks. The reference checks scoped integer and raw-pair peaks against
+the candidate using its own bin-string bit computation. Manifest cover tables and
+native diagnostic comparisons provide separate event-count evidence. Agreement
+is finite corroboration, not proof that all possible execution paths were sampled.
+The candidate/reference row digest recorded by the audit is:
+`9934255109b1304b45f3913f926f261ff716e21a174c1582089e1d594706e323`.
+
+All 30 preregistered fault variants were executed in private copies and detected:
+21 behavioural, eight structural, one manifest-static. Each detector first passed
+on the unmodified candidate. Import, collection, setup, skip and syntax failures
+do not qualify as behavioural kills. Coverage includes output-only/flow-only
+peaks, omitted products and arithmetic epochs, invalid dominance, count/peak
+aggregation reversal, terminal-event errors, preparation/branch omissions,
+normalization, feedback, leakage, nesting, metadata contamination, extra solve,
+cover replay, source/guard changes, expanded-copy work and returned-object identity.
+These are the implementation audit's 30 executed mutations, not the separate
+56 source-rule or 21 bound-recognition controls.
+
+The independent auditor is byte-identical to its R1 version and retains its R1
+report label; the authenticated execution here is implementation R2. Both the
+full and targeted live runs preserved project import provenance. All twelve
+candidate live Ruff preflights and the final repository Ruff passed. Saved
+execution evidence is private handoff material, not newly committed source.
+
+### Artifact bindings and limits of this appendix
+
+Accepted implementation package:
+`ExactFrac_UNIT16_IMPLEMENTATION_R2_PRO_AUDITED_PACKAGE.zip`
+SHA-256: `edddc154209f4ce42252e8db8bfa6fa181535ce112069ae972cd42987559bbed`.
+The implementation-only patch has 1,529 lines and SHA-256
+`59e1bb6a0ee701c51b7b607cfd4ad0e7ae82c116c9581b3a8f7092a206aa794f`.
+
+| Bound artifact | SHA-256 |
+|---|---|
+| exactfrac/telemetry.py | aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3 |
+| exactfrac/_telemetry.py | 3be3cae6757db921aacdde7fbae2cb59cfa1b91b73bd9c16c0695a1f620b9cac |
+| exactfrac/branch.py (unchanged) | 584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057 |
+| tests/test_telemetry.py | a009f6e6052bf386793791a67a7973581c466968465d0d562eb5d4811096f94b |
+| tests/_telemetry_source_audit.py | 7d737818adfb193c8335a123b4fdc38735260dd0006c4a0cdb9b5def945e1d77 |
+| tests/fixtures/unit16_legacy_sources.json | e81ba1aac48412d7b9e85bb493d1edef1f98e6788d3ef67070b4a9ae21993136 |
+| GREEN_CHECKPOINT.txt | 71cb460367618db2af2ee36ec62214271fe2ac88b7abc2402fc08b0a9e841eaf |
+| GREEN_AUDIT.json | d5ce342230326713c06672076f03ede78a8dc897387ea7c0c9f7106040f1ca83 |
+| Independent implementation report | 77ce145b86c62bc9e93083fcc57a2acc0a32fbf7814d7c596ea1667b8a21de72 |
+| Executed mutation record | 9bde75745f78c66df53ad26ff6d8ddd0474fa750cce617b65d2b511f17ff561f |
+
+The governing source's selected-solver work factors remain distinct: Standard
+O(M^2 log M), Accelerated O(M log M), within their documented operation carriers.
+Finite telemetry tests do not prove those theorems, universally flat trajectories,
+end-to-end bit complexity, elapsed-time scalability, or constant byte-space usage.
+Instrumentation and Python bit-operation costs require separate reporting.
+Full peak claims refer to the ruled measured execution and observation universe,
+not arbitrary interpreter internals or unexecuted paths.
+
+Certificate construction/checking, CLI, benchmark corpus, experiments and release
+remain later units. No benchmark result, certificate of global optimality, whole-
+input timing or public release is promoted here. Unit 16 still requires the
+reviewed complete candidate to be staged, tested from its exact Git index tree,
+committed and separately remotely closed. This appendix changes only CONFORMANCE;
+it does not stage, commit, push, or alter a production/test/fixture identity.

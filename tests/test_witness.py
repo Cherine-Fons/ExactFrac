@@ -914,7 +914,7 @@ def test_source_exactness_import_boundary_and_no_numeric_shortcuts() -> None:
     source = source_path.read_text(encoding="utf-8")
     tree = ast.parse(source)
 
-    allowed_imports = {"__future__", "dataclasses", "instance", "shore"}
+    allowed_imports = {"__future__", "dataclasses", "instance", "shore", "_telemetry"}
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):
             names = {alias.name for alias in node.names}

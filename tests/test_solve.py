@@ -800,6 +800,8 @@ def test_gl10_registered_comparison_traps(row):
 def test_gl19_direct_import_exactness_and_compact_source_controls():
     tree = ast.parse(Path(global_solver.__file__).read_text(encoding="utf-8"))
     allowed = {
+        "_telemetry": {"_tap_int", "_tap_pair", "_tap_numerator", "_observe_ints",
+                       "_observe_pair_values", "_record_prepared_sizes", "_branch_scope"},
         "__future__": {"annotations"}, "dataclasses": {"dataclass"},
         "instance": {"Instance"}, "oracle": {"BranchOracleContext"},
         "branch": {"BranchResult", "StandardBranchStats", "AcceleratedBranchStats",
@@ -874,5 +876,6 @@ print(json.dumps({'direct': seen, 'origins': origins}, sort_keys=True))
     assert run.returncode == 0, run.stdout + run.stderr
     observed = json.loads(run.stdout)
     assert "exactfrac.solve" in observed["origins"]
-    allowed = {"__future__", "dataclasses", "instance", "branch", "oracle", "rational", "witness"}
+    allowed = {"_telemetry",
+               "__future__", "dataclasses", "instance", "branch", "oracle", "rational", "witness"}
     assert all(name.removeprefix("exactfrac.") in allowed for name, _, _ in observed["direct"])
