@@ -32993,3 +32993,1492 @@ No external-review or private-note gate is introduced.
 | `'U16MC_SOURCE_PINS'` | `11` | `'d54d481cb482a60823c4acff3c9d9e30ea4465ca617c8f2d8994ef1005f55cca'` |
 | `'U16MC_RULE_FIXTURES'` | `10` | `'da3ba5e083a272639c3f1084c571731c695d6f8fc82c2a061b4990e706863b99'` |
 | `'U16MC_EFFECTIVE_COUNTS'` | `8` | `'c7e27fc2fcbf96aa8ddf0aff8c39336b4938988dff307adf3fedd1acad73f3ab'` |
+
+
+## ORACLE-126 — Unit 17 certificate fixture basis, symbols and cumulative registry
+
+Classification: CERTIFICATE_ORACLE / LOCAL_ATTAINMENT_FIXTURE, with separate finite
+GLOBAL_REFERENCE rows. Authority is DESIGN 4.14 and TEST_PLAN 39/40 (CE1–CE20),
+remotely closed at 2cc8bd16287a3ec6a192c4f0b9249ded73484b99, tree
+d418d019ddbb470531b4a8e95faca10c1ea4f264. No authority, CONTRACT, SPEC_LOCK, production,
+consuming test, independent production checker or CONFORMANCE change occurs here.
+Only this catalogue is amended. The pre-amendment catalogue and all
+its classifications/registries remain byte-for-byte intact; numbering is additive.
+
+Source basis: pinned V2.2 def:instance, ass:active, def:parameter/eq:compact-density;
+lem:interval; lem:empty and lem:unit (both complete proofs); prop:endpoints and its
+monotonicity proof; sec:global complete reconstruction table, alg:global,
+prop:global-invariant and proofs. The private package records exact hashes and TeX
+line ranges. Read the Unit 16-closed sources, not Unit 15 historical telemetry text.
+
+Rows are governing human fixtures, not production output. A private JSON companion
+is an exact mirror only. Cells are Python literals read by literal_eval, never eval.
+Tuples/lists fingerprint identically as compact ASCII-escaped JSON arrays. Each row
+is encoded in printed order with separators comma/colon and a single LF, concatenated,
+then SHA-256 hashed. This is the same U15/U16 row-payload convention; retain both old
+fingerprints. U17_FINGERPRINTS excludes itself. It fingerprints symbolic recipes as
+printed, not expanded huge numbers. A ('sym',name) leaf is allowed only in declared
+integer positions and resolves through U17_SYMBOLS; labels otherwise retain str/int
+values, including distinction between 0 and '0'. No symbolic expression is evaluated.
+
+A literal decimal/byte recipe is a tuple of literal ASCII strings and
+('repeat',one_ASCII_character,nonnegative_count) parts; concatenate parts in order,
+without substitutions, implicit spacing or newline. The listed LF is the actual byte
+0a. T=10**4800 has 4,801 decimal digits, exceeding both test process limits 4,300/640.
+All huge number tokens remain JSON numbers, never quoted numeric strings.
+
+Preserve all 379 U15_INPUTS and 10 U16_INPUTS qualified identities, including aliases.
+Add precisely seven U17_INPUTS entries. Every cumulative pass invokes 396 identities
+under Standard and Accelerated, exactly 792 real global calls. No duplicate graph is
+removed. These are NOT pytest case counts. Production certificate emission/verification
+on every call is an obligatory Phase D/E test, not accomplished by this Phase C data.
+
+### Fixture table: U17_SYMBOLS
+
+| symbol | literal_decimal_recipe | mathematical_identity |
+| --- | --- | --- |
+| `'T'` | `('1', ('repeat', '0', 4800))` | `'10**4800'` |
+| `'Tm1'` | `(('repeat', '9', 4800),)` | `'T-1'` |
+| `'Tp1'` | `('1', ('repeat', '0', 4799), '1')` | `'T+1'` |
+| `'twoT'` | `('2', ('repeat', '0', 4800))` | `'2*T'` |
+| `'twoTm2'` | `('1', ('repeat', '9', 4799), '8')` | `'2*T-2'` |
+| `'minusT'` | `('-1', ('repeat', '0', 4800))` | `'-T'` |
+
+### Fixture table: U17_INPUTS
+
+| key | n | edges | f | labels |
+| --- | --- | --- | --- | --- |
+| `'GAP'` | `6` | `((0, 1, 1), (0, 3, 2), (1, 2, 3), (2, 4, 2), (4, 5, 1))` | `(1, 1, 2, 1, 1, 1)` | `None` |
+| `'INTERIOR'` | `2` | `((0, 1, 6),)` | `(3, 3)` | `None` |
+| `'UTF8'` | `3` | `((0, 1, 1), (0, 2, 1), (1, 2, 1))` | `(1, 1, 1)` | `('é\n', 7, '7')` |
+| `'BIG-COUNTS'` | `2` | `((0, 1, ('sym', 'T')),)` | `(('sym', 'T'), ('sym', 'T'))` | `None` |
+| `'BIG-ZERO'` | `2` | `((0, 1, ('sym', 'Tp1')),)` | `(('sym', 'Tp1'), ('sym', 'Tp1'))` | `None` |
+| `'BIG-N'` | `2` | `((0, 1, ('sym', 'T')),)` | `(1, 2)` | `None` |
+| `'BIG-LABEL'` | `2` | `((0, 1, 2),)` | `(1, 1)` | `(('sym', 'T'), ('sym', 'minusT'))` |
+
+### Fixture table: U17_REGISTRY
+
+| source | entries | row_sha256 |
+| --- | --- | --- |
+| `'U15_INPUTS'` | `379` | `'98d3f32c3dde19670e36900525b8bd6623ca4fd932c804d47725d305fd45b90c'` |
+| `'U16_INPUTS'` | `10` | `'231d5dc3d91429aed5c78e890c25ccfb2456dbe1551e59ef566359bfa5a91df9'` |
+| `'U17_INPUTS'` | `7` | `'41e1fa93ca630950ac49f6d6237c0b44eeac0144969e911e2c33b12e2ad128c6'` |
+
+The test instance transport for U17_INSTANCE_BYTES is precisely the primitive
+registered object with fields format,n,edges,f, then labels only when present; lists
+in registered order; integer tokens in exact signed decimal; JSON strings escaped
+as ensure_ascii=True; no spaces and no terminal LF. This is a reproducible TEST
+transport recipe, not a new canonical-instance byte schema. Instance key order and
+ordinary JSON whitespace remain immaterial to validation. No Instance.to_dict or
+production instance parser supplies these bytes. The cumulative graph-stream hash
+encodes [qualified_id,primitive_object] plus LF for each entry in U15,U16,U17 order.
+
+### Fixture table: U17_INSTANCE_BYTES
+
+| qualified_id | transport_length | transport_sha256 |
+| --- | --- | --- |
+| `'U15_INPUTS/C000'` | `67` | `'c396529c56ad576383d4cedb062240742ea0884d949a353fb56c28289a32ab54'` |
+| `'U15_INPUTS/C001'` | `67` | `'8b39b98c39a8fac822d2cd55a8ab6921059c86a35342704197e56c6c0583f289'` |
+| `'U15_INPUTS/C002'` | `67` | `'4d84dd649b94e9af8e35bf7d5576c9a6bd09eba7ede7d7b0b1944c8b1ad23d6e'` |
+| `'U15_INPUTS/C003'` | `67` | `'8c429c93f7adc567fa5495203c79eb6c2b2aecb5c889b2ac6c87761f7fb601e6'` |
+| `'U15_INPUTS/C004'` | `67` | `'b0b633f64bb6dc6a2b9b110e3a4b5e20c853450bed3561448af94d16bb47a4c4'` |
+| `'U15_INPUTS/C005'` | `77` | `'dd0e516ac7766b503091955b596fd037f956902ae87c79cf8370b39365a029ee'` |
+| `'U15_INPUTS/C006'` | `77` | `'110fcf046bd6b0d13932ebd37e346a98191f621943906e8ec3535dec73163931'` |
+| `'U15_INPUTS/C007'` | `77` | `'38181ba7dfa476c1ee94a0b5c390722126d24e6526c0bcf806c14f1a0ebba278'` |
+| `'U15_INPUTS/C008'` | `77` | `'a92dde8ee71beccdf8cd95a1261b1a31e1dc9d73334894a408a83a9922af9db5'` |
+| `'U15_INPUTS/C009'` | `77` | `'2e28ae2fa522efb2fdfe82a8a0eba74fa18f35f7db1dbb0e8d4cd1cdaa74cbcf'` |
+| `'U15_INPUTS/C010'` | `77` | `'5b9822c6ee37b0e4c6bb8d8632a9b9dc5d1af0dd48c73c257c8dd2c572e198b1'` |
+| `'U15_INPUTS/C011'` | `77` | `'76175d8a27a25887673d04a167302726ad3775775afb9e6b480c9640d12c234b'` |
+| `'U15_INPUTS/C012'` | `77` | `'245e89c153bef195a5663ed865583ed4311e8e0fb6481c5320311373382ac289'` |
+| `'U15_INPUTS/C013'` | `77` | `'31965c3f472691d8c1a58ed14959b557a637f3c324d06917230c6ac93426db8b'` |
+| `'U15_INPUTS/C014'` | `77` | `'6c96051acc0af72376b0d3cb623dc4ba2713ae4f15a9e7c760215a809d95fafb'` |
+| `'U15_INPUTS/C015'` | `77` | `'33735f589f4aa98af4f20966ea9ab40792167fd1c290ab16f2d2176031762d17'` |
+| `'U15_INPUTS/C016'` | `77` | `'c6e13943a24d32746684f32b949e0b23cac0a73eaefc1b70036580d2c0e90fbf'` |
+| `'U15_INPUTS/C017'` | `77` | `'e5285f6e287aa39eca4718f0eeec590f02efe95519bff76c9e80d2b2c00f3d85'` |
+| `'U15_INPUTS/C018'` | `77` | `'bd0c6309c16b314029b70bdf8a8b87b4e4a8938ffdf62994c6521b48f20ec40f'` |
+| `'U15_INPUTS/C019'` | `77` | `'756b4ff3faf999901534fd456b788214e1c3048b995fffb240251fc6fa7512f1'` |
+| `'U15_INPUTS/C020'` | `77` | `'fc2f3b5c3ca7d1fe24e70c27ff6d804734629f9285323e23c3f373ef2ac1051a'` |
+| `'U15_INPUTS/C021'` | `77` | `'e9c42f3813f78bf1ae9d7bfacdf958b054bcf5f74fac0820ce832f37fc86de28'` |
+| `'U15_INPUTS/C022'` | `77` | `'7b4c474ac506dce8211a0c0adae5f5082d26e973dfa3b9749eaa4116c03ebf3e'` |
+| `'U15_INPUTS/C023'` | `77` | `'dee2e5e9511039aaafe132ccf357f70c821769a7846fdad7c1756c774cac4d7e'` |
+| `'U15_INPUTS/C024'` | `77` | `'ce44c2c143d420f61cbe651272c6554ecf9675a128a23ea5f7ba75ffedabe1b6'` |
+| `'U15_INPUTS/C025'` | `77` | `'fe7d9d9c8ab2d693449f9d86295a131a4dfde0ecd224fb691de8c400bce43ba2'` |
+| `'U15_INPUTS/C026'` | `77` | `'633d7e748ed1ec9ce63055cfe26838ac888c58e9f40174869ddf0e3fa7c7569b'` |
+| `'U15_INPUTS/C027'` | `77` | `'c146e33af8b58c744a0571c6072cd72171ec0e38d05e6304da97d28b1666f139'` |
+| `'U15_INPUTS/C028'` | `77` | `'12f31efa92bd281cc0c78bb588e3c1fe1a111853eb0f3e79d53893b3e894557e'` |
+| `'U15_INPUTS/C029'` | `77` | `'6fcf086b1ed332ab3e1fc90eb588f58c51926d9f802e355ca7b6ff69064c17eb'` |
+| `'U15_INPUTS/C030'` | `77` | `'89cc3ccc41bb779cca982a6fc8d033acd6d66eeece08604127133ae502146955'` |
+| `'U15_INPUTS/C031'` | `77` | `'fc7f1ec038fd8f29ecf3caf1b952791229cb6bc363cba3da2a54ebd6cfefec46'` |
+| `'U15_INPUTS/C032'` | `77` | `'8f89931d15756d7cd6760dd1435b2cf392a5dcb0a9af950ec6cdd77b14ce49f6'` |
+| `'U15_INPUTS/C033'` | `77` | `'a7eef302fefbb5d8514d0a8c29799aaba2405a9eaf5a84e702f34eb14c588fa6'` |
+| `'U15_INPUTS/C034'` | `77` | `'b6d0c1dd8975234b10f2cc6bad9b494c1ac295a662023d55668e17de27564ba7'` |
+| `'U15_INPUTS/C035'` | `77` | `'2408f4e1a7941618a3c2279f8cc38462c79bdde4d9e24e7a67cd0c6829745ee2'` |
+| `'U15_INPUTS/C036'` | `77` | `'44662dcfc41c53394ebdd58cdb278fa75b9231cbdea71ed1bb763eb68bbd2529'` |
+| `'U15_INPUTS/C037'` | `77` | `'c657bba0abf939174cc89fcee86f2406f4eb8e486419b57c1907b1c916d8c9a3'` |
+| `'U15_INPUTS/C038'` | `77` | `'d4f3cdd655a07e43dbdcd358e01959973fd1e73f8907ac60fd7cfe6acfdba210'` |
+| `'U15_INPUTS/C039'` | `77` | `'cce66e8acaf17e4c90defc3afafeaa73f763c0af6c7acff9bb66da30ac0a8517'` |
+| `'U15_INPUTS/C040'` | `77` | `'1b043e6ab2aae12475d527904eeab904087a94c69126a3c7d74c71bce1342b3e'` |
+| `'U15_INPUTS/C041'` | `77` | `'eaf580977cbee6d04accc2c7147e22dfd82eed6fc093e87eb0b56e656c2d86d9'` |
+| `'U15_INPUTS/C042'` | `77` | `'67d54df868925edcf572d3f183f6dd951f7364a692e97a530810914d062f06d2'` |
+| `'U15_INPUTS/C043'` | `77` | `'cb71cb13d04cebfb54cfa601fbd6176fae09f9047dc91350a77e9d38a929b740'` |
+| `'U15_INPUTS/C044'` | `77` | `'71bb9d98641735e999465368e4451fcd1a0a4d68029328c08f5950db2ee80958'` |
+| `'U15_INPUTS/C045'` | `85` | `'8ae2c5d242f08d6c7cbb95cfa8b6705be807f4af8763823e557ae482e68feb84'` |
+| `'U15_INPUTS/C046'` | `85` | `'efbd6bba3fd320c90bc8d02d918c0e4e25f44ecde5a3440130c131172c8a539e'` |
+| `'U15_INPUTS/C047'` | `85` | `'4b08489fec8da312330b89bd6081ff0ca1cb0f6918b7ef5111bbc8d72cf6949a'` |
+| `'U15_INPUTS/C048'` | `85` | `'83c70cc5bf420bc384bebe8bb2ee879d3724524e210f9e5cc487f0b1d0412dd0'` |
+| `'U15_INPUTS/C049'` | `85` | `'1b0b93d9f32401ea2d23defa0ef2b92f3529d5bae998ab54dc79b910319914b2'` |
+| `'U15_INPUTS/C050'` | `85` | `'bdaf29a603812b46cad87299b1e5f097ac68bf488f06bc982196cb3c25e67047'` |
+| `'U15_INPUTS/C051'` | `85` | `'f7ab72b2c94e3abe79da3d1f34ac2e2dc345d3f9b5949bd3b173e2898c506c2e'` |
+| `'U15_INPUTS/C052'` | `85` | `'7b7a33b04754dfa5516cfdef4193cc5e82e32fddf24dab98a26291a4d1478ee7'` |
+| `'U15_INPUTS/C053'` | `85` | `'bd68010b1b3908d6f3facba8eeeff6c36e6d4241d91d0efef5a764b338f5f126'` |
+| `'U15_INPUTS/C054'` | `85` | `'8a8cd2fa122239409cdd9b6a7bc32bbed4ee1b6aaa8bfdb69d048cd3878538a7'` |
+| `'U15_INPUTS/C055'` | `85` | `'3e95077f0e1affd9d150d8cbcec351e2e8629625bdda69ae3d5f4f5f58cf710b'` |
+| `'U15_INPUTS/C056'` | `85` | `'44fed35f889e160e8ab9c0867a40d9339d3edb43ee1c0b6ca09f3e7f720c70d4'` |
+| `'U15_INPUTS/C057'` | `85` | `'cab2924fc22e20e28624290a902821633a1277f95fae89c6950c5bea0aa57c52'` |
+| `'U15_INPUTS/C058'` | `85` | `'484e892b92918db107b688f5e44e4a170193490d187bfd317254332ce521cc0d'` |
+| `'U15_INPUTS/C059'` | `85` | `'2f01b00e67fc03f7fb021c62667585a76206b262347995a47d7b0bb410ad53e2'` |
+| `'U15_INPUTS/C060'` | `85` | `'a876237fa2f55c53fe6c3919b8e7d159d92cac13cc2ce1d4c48a07dbb73c74a6'` |
+| `'U15_INPUTS/C061'` | `85` | `'5b2ad929f70aa1a8285a4fbf4cd0dbc66a81b32a8a00c5470ef9d214093ead6b'` |
+| `'U15_INPUTS/C062'` | `85` | `'b7d32d7665cd456ff2fbad899fd0c93170c6fed5e1de7a2a876d5400a5202399'` |
+| `'U15_INPUTS/C063'` | `85` | `'cb7dc473042eb0362e96b4943ff8de114dd1dad8aa21f5ac8e19c498df7c6808'` |
+| `'U15_INPUTS/C064'` | `85` | `'2526a4899a61175b935fc0a569a9468141d5ea0a37cae3b11e8e8d95c5d9ed3a'` |
+| `'U15_INPUTS/C065'` | `85` | `'01ed75792cb648b4f332ab6f307fe6baba03bd89198e6c91950488c85301f664'` |
+| `'U15_INPUTS/C066'` | `85` | `'8f96612aa62fa155e63d0f8faf3ada24bb7eb0e38148250258aca85d7a120b31'` |
+| `'U15_INPUTS/C067'` | `85` | `'705eab4cae3f6d2bec5ab39bc97ba94bf96f856a76b1f4b3d2fdace659e9f2ac'` |
+| `'U15_INPUTS/C068'` | `85` | `'6bd5963101c4f5aaa763b8fb77d4ab7d448d1e8a2ed9d4ae7ebfb5f1a59d8cd1'` |
+| `'U15_INPUTS/C069'` | `85` | `'38ac99039d6b81245fa1b95911ae63be62e2fed85c5a8b84f2b532d43b0b44d7'` |
+| `'U15_INPUTS/C070'` | `85` | `'b1d3859c27ed498abb2327bc2ccb8bf69c9b0f467da450b99a0115e3887ef82f'` |
+| `'U15_INPUTS/C071'` | `77` | `'2c29dd22e19032ee3634acf2ca185110744dcd2d1b6bf051696004eb074f6eda'` |
+| `'U15_INPUTS/C072'` | `77` | `'3ba8af5a3dfa071cc40bfa7c2480bb2ebbd2d5d6203d8a93a94c952c1bba80ed'` |
+| `'U15_INPUTS/C073'` | `77` | `'bfb61171b49b59e5f6c3cf7f33b6e8f413e26bf499f645fb546533f940041092'` |
+| `'U15_INPUTS/C074'` | `77` | `'321b224d036e417b335b4e464652aea3d50c1ecdd4ff1ea5b1ee9e77717d568d'` |
+| `'U15_INPUTS/C075'` | `77` | `'17275624877210e85208e3526e9e2120667b0c9316aa7d2baa143bebaf5a79fb'` |
+| `'U15_INPUTS/C076'` | `77` | `'faf3cd3333aa5ef63df78d53a510c8a5743a7a44d7b243e1aa2018ad5f55e2e8'` |
+| `'U15_INPUTS/C077'` | `85` | `'9aa4e0d751174b1a95217141c6609699ce700163f62f5154de4642180d48a27e'` |
+| `'U15_INPUTS/C078'` | `85` | `'96dd6060319e86ad5446a6ff29e89d94a6817d7b00c1c922f9542820c9565751'` |
+| `'U15_INPUTS/C079'` | `85` | `'af8e899c2ef337d3da6a3797d83d6301ef37a77cedb0b3a251af493a0f5bc7e4'` |
+| `'U15_INPUTS/C080'` | `85` | `'c24057b36c4ee3ca80e50647cca02f691c650fd888df5242bd1471eb49828932'` |
+| `'U15_INPUTS/C081'` | `85` | `'e17e31da484a8d3ae4ba29e18dd7dd5d4df9f65a5ebb8e1f18e756e7663360bf'` |
+| `'U15_INPUTS/C082'` | `85` | `'2d76fcc515f4afe5664d4bb2642734247c4b07aba353c2dadee36bed57ea65e2'` |
+| `'U15_INPUTS/C083'` | `85` | `'7503c4f713de205f23fb57d8b184c503bce1dd70fe77cae3ba534e8f9aa04c12'` |
+| `'U15_INPUTS/C084'` | `85` | `'bdb0107f2e5196eced7188b87b79d82a1a3ceed346bb97daf602df03e25e4240'` |
+| `'U15_INPUTS/C085'` | `85` | `'3925c2f1c5199db63d6b49cb4626611472d3dbdf3a4e2b2b83be576506204a91'` |
+| `'U15_INPUTS/C086'` | `85` | `'a828a49778082811f9032042fb6d986cafc464261a1d4e715545a5df59dab107'` |
+| `'U15_INPUTS/C087'` | `85` | `'c1b73c1f919e3d91583213e7674336ad8b574728b0af1454c3e1df48fe2cc6c4'` |
+| `'U15_INPUTS/C088'` | `85` | `'528e5be98426753b4c5ce9aab23c76286ed84e9e519aa00bbae75b8b70157a14'` |
+| `'U15_INPUTS/C089'` | `85` | `'2775637a85d348b88c5d8fee05cbe6c543a6afd8b3df1be960d57a3224eeacd2'` |
+| `'U15_INPUTS/C090'` | `85` | `'4394389b345db1c15063a6781debd5899df3fcfc6d5928d0aaaf3c72acbeed79'` |
+| `'U15_INPUTS/C091'` | `85` | `'5e7ac67e8d4b0754cc095ea1ae56c070ad0154eae1fcf51377c5152d579275d5'` |
+| `'U15_INPUTS/C092'` | `85` | `'09f3875c4e9e6e0200c4d078f45e50b929d32268921622ebee5d167b60ca55b2'` |
+| `'U15_INPUTS/C093'` | `85` | `'13c7754cce1ef5b74d1a8e037fe5cebb06a476f1913662c39dd08b7f8590af61'` |
+| `'U15_INPUTS/C094'` | `85` | `'ad256c094bf075202126fcf29723000b4c52fe7e22b49b76d135930b9add7e6d'` |
+| `'U15_INPUTS/C095'` | `85` | `'f3e78ae66e7993b748b84688f16481564d4f94024b3ca34b129b8d44cd3102b3'` |
+| `'U15_INPUTS/C096'` | `85` | `'e8a1765f5dabc19e0838c2fdb566cf0c7d32530f8b87d87d0b6a75152ac137bf'` |
+| `'U15_INPUTS/C097'` | `85` | `'18fa218c6f67c3074b34ce6355d4a50a84d552929223bd7d438b3aa5cbf58dbf'` |
+| `'U15_INPUTS/C098'` | `85` | `'7596734651ddc2499b4042ebb6398051ff5b73db45a8242b436997a7634632a5'` |
+| `'U15_INPUTS/C099'` | `85` | `'ba018de93f48e1ae2835309688d910d1ba85437cceb762fa9e501726d831cd6d'` |
+| `'U15_INPUTS/C100'` | `85` | `'bf9c2c8109b2d2d521b9ea141af8db3d38da3e762589de22e88d5ca77606e955'` |
+| `'U15_INPUTS/C101'` | `85` | `'32d49be2bd9639cfdebd28bdfd0a36e74f3ce3e70727f7da5874f2cff78ca6dc'` |
+| `'U15_INPUTS/C102'` | `85` | `'b8cd02adbb25fc1d3bb71620577045f9f52c68a0bec3b5734e420e1320f0cef9'` |
+| `'U15_INPUTS/C103'` | `85` | `'2f75ab88dcb7ca2957d8b6fada55b1723a1978b79185fb5dc9fa95d642149aa0'` |
+| `'U15_INPUTS/C104'` | `85` | `'6cfec52072cd9d6dd182761de87700baef7d8592a2aae44119d42b649d98da26'` |
+| `'U15_INPUTS/C105'` | `85` | `'a17c7777c5428d0e97737d385fcb46f0fc069365a67eeb10800bdb0d07eacee2'` |
+| `'U15_INPUTS/C106'` | `85` | `'913b0cdee0d78d412a06d2a6b2b98501a48cc21c5a62a61420bf87c1f1144d99'` |
+| `'U15_INPUTS/C107'` | `85` | `'0a1cb4029e38f03180a1712d526de06354859f9a948fea206809ac5788f7d41a'` |
+| `'U15_INPUTS/C108'` | `85` | `'9a80ec6116983ca6ef1a3d088128a76ff4f9a59c37d7d92618a890ad10a20a98'` |
+| `'U15_INPUTS/C109'` | `85` | `'a9b2130bef31ccb606f69fd677f4724239fe49bf37b77a2717183796fe773a71'` |
+| `'U15_INPUTS/C110'` | `85` | `'fb1bcb09ca3f360141cb56cb9316bb7996ef4d4ad57719dbf613e23653a9803e'` |
+| `'U15_INPUTS/C111'` | `85` | `'d990d4d7eef7e9f9992be5aa5f594e62c94e2bae575bf48158fb7a6386f3d630'` |
+| `'U15_INPUTS/C112'` | `85` | `'fc303fe31a42bb1ba3ec7d5e360ceb68a967ada9827c65e65b3c998755c5755a'` |
+| `'U15_INPUTS/C113'` | `85` | `'9bb6a0c211bcbcc9e84cb54b525451b29e4b80b1a4ba0861e516cc67df474c5a'` |
+| `'U15_INPUTS/C114'` | `85` | `'5e475dac55e755d56f5afc47b510c2d4b3e4f9fd1b9e4563fd18931e2a6b603b'` |
+| `'U15_INPUTS/C115'` | `85` | `'e4010234884623d7332e50dc0017ad0933ec1d8c9923c55d8a2c4bdd8828c87b'` |
+| `'U15_INPUTS/C116'` | `85` | `'4afab948238d3d5428e4a92fd1e8ace79e64e4deee8d481e240baaf325276bb5'` |
+| `'U15_INPUTS/C117'` | `85` | `'e8fb70bcb35bedde4c7ec6821362cdb90ed3387b2c749d753b6c3ddccfdcf9d0'` |
+| `'U15_INPUTS/C118'` | `85` | `'b68e0348360c36c1ef0e711856aec68cd69e376c2af8f5d8ac178956b755fd95'` |
+| `'U15_INPUTS/C119'` | `85` | `'0c644b31c213a2aa2b3448b699d3031558387a62cef875606bf139bc309f43a7'` |
+| `'U15_INPUTS/C120'` | `85` | `'b2557929fd90f0d6c54f5946799e5fe9e328e2af29c4ce961b5e5ae874702a84'` |
+| `'U15_INPUTS/C121'` | `85` | `'e6446e8f1dbfaaa5e95e38d9a362ad15702b9dccfc2335c01cfd013e85f2c370'` |
+| `'U15_INPUTS/C122'` | `85` | `'f34bcdb7f0717f6939095e598ade14314ded3823772c3d47d0df585b9938aa67'` |
+| `'U15_INPUTS/C123'` | `85` | `'9674008cf7dbb1f68dfcb5b06d35e80e73577555622ff9b2203ba7e32e4de854'` |
+| `'U15_INPUTS/C124'` | `85` | `'35961caac48802dcd2e87435bf60eb1296e826d10223b69d6a19bbffd93a443c'` |
+| `'U15_INPUTS/C125'` | `85` | `'0eb412c316a2170a39b5b6660f517fb72f5cb7f95561054876f8b1fa48d955e1'` |
+| `'U15_INPUTS/C126'` | `85` | `'eeeb422f46892332563763cb965cc83a06fbb18a437bdb8474ec2a1180e99298'` |
+| `'U15_INPUTS/C127'` | `85` | `'b0f89e5544b72e496e956f0b0ca1ebe4bf2bd57e640cca945e4a0ea151a70aa6'` |
+| `'U15_INPUTS/C128'` | `85` | `'42a5dd63759c7386d24363e56687e142bf33104734afb3b30fdeadfc38d645e0'` |
+| `'U15_INPUTS/C129'` | `85` | `'a5cac6deee6355bb28d408df00ce7e0f8ea0783b271b99cf6eb6dd01d990d3ac'` |
+| `'U15_INPUTS/C130'` | `85` | `'af3cc638b5b58c24cc0f95c25a48a84751858b7c19d50a356626405111ac3cdc'` |
+| `'U15_INPUTS/C131'` | `77` | `'3a60ae23bc4474fdada658af7673fa3c2242bced4c07aaebbed7e608bcf3b956'` |
+| `'U15_INPUTS/C132'` | `77` | `'a7e01a7dcfd18c360e78d028013a3b817fe997ed39dc21aa0b2c597ea5f1d1fd'` |
+| `'U15_INPUTS/C133'` | `77` | `'c7efb09d77f4b9fb7639602963ca368d26dd82812796d2d6fca1a9293e961c52'` |
+| `'U15_INPUTS/C134'` | `77` | `'e26144fcec77a6f79e06a00fe49a21e43a01ac701af3af2b3f8e39833bb9c109'` |
+| `'U15_INPUTS/C135'` | `77` | `'0625c898f845b303b5a58fe800220bbf0aea41ac17a5e716e30ca7d658b67d65'` |
+| `'U15_INPUTS/C136'` | `77` | `'f444013dcb957738c22cec3d01c2148114e3953a84ace0a37afce0fa3a2ecbcc'` |
+| `'U15_INPUTS/C137'` | `77` | `'c50abce94f3aece4a34645d541498961b901807c9c22fe272ff5cf3090b381e7'` |
+| `'U15_INPUTS/C138'` | `77` | `'ce9a415745d41981177314603436adfd6e11d14d3d3f457aeb54e9d4f1a51e19'` |
+| `'U15_INPUTS/C139'` | `77` | `'f8543457da90f483c73ed080a15bb38ee171a811a66fc391b60b5a96cc0819ee'` |
+| `'U15_INPUTS/C140'` | `77` | `'f00e05e674a622aed770c65dd5e446771a0f7e7577ac1c6fd7df5d4a33380bbe'` |
+| `'U15_INPUTS/C141'` | `77` | `'59e5fea78f6dece3ccfb7412c9b3adbe982e9ff05a42546b10657c77da0bcdc1'` |
+| `'U15_INPUTS/C142'` | `77` | `'ecd8e7da81bb04678ed7147ab03e914f499bd1ac87b44ec4fcb0b6463c08f3f2'` |
+| `'U15_INPUTS/C143'` | `77` | `'80f934a1262860cadd2f2e0732ac46c617f035d5560f3d5b92076b90b8c7f810'` |
+| `'U15_INPUTS/C144'` | `77` | `'d3f8901eb405ac3e168c078440a1885c4f168413b665472dbb3cdd6c18d87d0b'` |
+| `'U15_INPUTS/C145'` | `77` | `'78f4cd8ca7e9858795f664335547cf92d0a032fcba8923893cae5fd9373532d0'` |
+| `'U15_INPUTS/C146'` | `77` | `'3fbe50b5e6e2de78c74455b5f74cc9b182507c7fee80b371586b682462c6721a'` |
+| `'U15_INPUTS/C147'` | `77` | `'cf073690db575fa03972741de49fb2d4169dbb942b57e127a28b97e3eef61ebf'` |
+| `'U15_INPUTS/C148'` | `77` | `'60953e860f3871ba18c5dbb65b7c188180db6b2936e530f8bfc381ac81a4f4cc'` |
+| `'U15_INPUTS/C149'` | `77` | `'cdccb69bb9b59eead52bd683d488f715b9262b8695926a8ffacaba426c3066bc'` |
+| `'U15_INPUTS/C150'` | `77` | `'322b7ad634bcf3993d574bfe5c46e77f55421e70ebe794c9cd49b72b6d640d52'` |
+| `'U15_INPUTS/C151'` | `77` | `'34ff5fcfb1f506daa791cd49830ba5b2129b66f0abdc090a2d2f4c59fbfd4198'` |
+| `'U15_INPUTS/C152'` | `77` | `'fd4f9fb9b4c78f467c1fc47cb40115a8fdb79bea97d4bb2467aee837d593143a'` |
+| `'U15_INPUTS/C153'` | `77` | `'6bc8e87be5b8d3e261d829c4274c662132c044f771b5497abbe14ccd52aa91ca'` |
+| `'U15_INPUTS/C154'` | `77` | `'9a8493c86bec7ee19e80360c66b8d33746dfa80333da142a8056256eadd7cfc8'` |
+| `'U15_INPUTS/C155'` | `77` | `'8279b890605b59098dac57cbe0b5cdfeea24d5109e7d1db1e45907813bf093a1'` |
+| `'U15_INPUTS/C156'` | `77` | `'63808bcd1d9b311eeda09eb070e09cffdd2dc59651e3b625a5cbfb1aeac30bed'` |
+| `'U15_INPUTS/C157'` | `77` | `'ee2766852079536f93c1286fef359790b04de45009aa9a12838e2b8380049188'` |
+| `'U15_INPUTS/C158'` | `77` | `'a316ece0b976693186e0a13926936824401af1deacba3ae45cb252f64d9fc9b7'` |
+| `'U15_INPUTS/C159'` | `85` | `'26fa467998bff55015ec58383472a9dc8730547ea3677ee122c1efc0b1adb3b3'` |
+| `'U15_INPUTS/C160'` | `85` | `'323372cde28b527c568c9bfdf784d5534cad162641ba338a388f0ba5566274b1'` |
+| `'U15_INPUTS/C161'` | `85` | `'ccd80bbe629677bd8781cd88634cc8be061001087a3882ac517072722f8667a0'` |
+| `'U15_INPUTS/C162'` | `85` | `'ab1dd5e71b7d060bb36cd89bd4467eac99eb04bd31748ffba8885d807a665990'` |
+| `'U15_INPUTS/C163'` | `85` | `'66c276b2e2703488accfcc0b973c5c5b4fecdd075671be8d2e3b75e54e72d7af'` |
+| `'U15_INPUTS/C164'` | `85` | `'15f324ec8f9a372983ce41a0615e618e1be8289d29c58a13e4aff6db325d1848'` |
+| `'U15_INPUTS/C165'` | `85` | `'688e97ada75e3a015173745b2f91b28cec7e108de49bc3e44a1a8308cc4d8500'` |
+| `'U15_INPUTS/C166'` | `85` | `'cafaec57ad6f0b38ab5f527daaf27aa8deb4e054deb5dfddbf1d8a7c3c892b79'` |
+| `'U15_INPUTS/C167'` | `85` | `'a59a36075a06c6e8f41bbd173a7b607c4c1b2bd067b72920de6181f54980cc97'` |
+| `'U15_INPUTS/C168'` | `85` | `'4e7d97526402149b161e41ea7f5afc5b97e6457ba36779481dd1a0484cbdc957'` |
+| `'U15_INPUTS/C169'` | `85` | `'4d3ed8d917a0308ea6c421a238908b40a87e67d45326fc44feb29c9dbe2be433'` |
+| `'U15_INPUTS/C170'` | `85` | `'abcb7d4176f35dfc72dbd43695f55a6454aafccf647b57bdcf1411a279980fca'` |
+| `'U15_INPUTS/C171'` | `85` | `'b48d50a0481875207f61a929788e1caf98b8ecea4b44b9d8648dfc778b84f127'` |
+| `'U15_INPUTS/C172'` | `85` | `'01edad491ddb2e7c4d1262ce6ceaedc7198192929f649a43877affce36c78238'` |
+| `'U15_INPUTS/C173'` | `85` | `'25df8c359f291044a0e28b3a9a3b1a3c76e86e892cbeb9cb468db19a1a31ea4d'` |
+| `'U15_INPUTS/C174'` | `85` | `'461812347a0263328db1a55b96ce98de1017086df63d2d0671e9b01d7885f004'` |
+| `'U15_INPUTS/C175'` | `85` | `'386b62710f9e2f22162f5fbdf20a5dbb263f22e5e0458b48dc675046f00d3b87'` |
+| `'U15_INPUTS/C176'` | `85` | `'500aedcc98da59e918190737f5a7c019edd5492f8c3a39d274546d65073c5ab5'` |
+| `'U15_INPUTS/C177'` | `85` | `'b89fb77d21bc1f2bbdee023a082affee46d71be91d809e88a13b42675f009bdd'` |
+| `'U15_INPUTS/C178'` | `85` | `'90f182c6c3f4fb0f22005a5a6e7ef635fb351be60571bb0644a34d1323f5f1e3'` |
+| `'U15_INPUTS/C179'` | `85` | `'7ca90bab488912bafc6f06782416e5f26add7d7b0cf2937dcc3e88930a84858e'` |
+| `'U15_INPUTS/C180'` | `85` | `'f71dd307b745a2d252ab733217d899dccbac19bb66c448b7e5d794462f98d171'` |
+| `'U15_INPUTS/C181'` | `85` | `'5a8150ed72ea4ea0f5074832a5dcfc5f8b8bbef44211a85d0cdfc0d81d3e3b38'` |
+| `'U15_INPUTS/C182'` | `85` | `'7405d431cb60ddc8748512e122852af13b09aeda080f281f95136a4906b1110d'` |
+| `'U15_INPUTS/C183'` | `85` | `'85d142a6d560c17bbdce4c6967de8f16824d78f72724c67ec1ada624f2548686'` |
+| `'U15_INPUTS/C184'` | `85` | `'e571363f8977b928c45530bc079c57191a98d4b2d6d307e9734ab4b691dfbd31'` |
+| `'U15_INPUTS/C185'` | `85` | `'bab0b6475bd153f14bedd274498a18503854ff619352b3fc25054b3b7c53da1f'` |
+| `'U15_INPUTS/C186'` | `85` | `'3a60e3166c4b268147adc3f155661c74c2cf70f15b8de0687a1909f7618893c2'` |
+| `'U15_INPUTS/C187'` | `85` | `'4bb6e93b3a850399113e73f09d5749752cd419c0f78bd8f15e256f005e04ee67'` |
+| `'U15_INPUTS/C188'` | `85` | `'1e4df56e05caaf75d4888d3d9f9c272425814b7079b3c1a0b69c9152d52e4467'` |
+| `'U15_INPUTS/C189'` | `85` | `'4949dd7eddff2c090539fb2a4436c6f3fcd7e7e7bbb23329cd34ed1449b4d547'` |
+| `'U15_INPUTS/C190'` | `85` | `'41871621bed22f8602401ca069f03f9c0631d4edd299be6b8ec94c4871a377a0'` |
+| `'U15_INPUTS/C191'` | `85` | `'8a6a9ca39527bba6554ecfd8b7c68cb386d62b182f9c5e085e12210af60b3fa4'` |
+| `'U15_INPUTS/C192'` | `85` | `'529cbab4e64f73938ebf5e5e650903e3e0e5f0b0901f63f8f1c9125270368554'` |
+| `'U15_INPUTS/C193'` | `85` | `'7f7eb9b5dad2520699b02384f6fcfbdf91d101b7a64c285b4f22ded2b8dbbb15'` |
+| `'U15_INPUTS/C194'` | `85` | `'64c0dbf7e631e42bc0dfd8df820803895d19e9f781ea3003599e0ce28d5fbb40'` |
+| `'U15_INPUTS/C195'` | `85` | `'d42de2716b5b03d8504cd0fce28e4a84875d41687b4bf7fbfd9cb38e63d2c5be'` |
+| `'U15_INPUTS/C196'` | `85` | `'4699d4a94b35185c030346319226536a4fb212fe2e884eb94a00ac2e2a7daf5f'` |
+| `'U15_INPUTS/C197'` | `85` | `'01f85593575e765a0b765860b5df85d9e1f2fec21d9e05543867a98227f44f14'` |
+| `'U15_INPUTS/C198'` | `85` | `'b0d44fbc0eb9cbe6df59aed05ef6357aeae9dc5c1da68c3c018508d20a54e40e'` |
+| `'U15_INPUTS/C199'` | `85` | `'a381fa17a845791fb05d5d4898f692a0a4d3e3969a9714e7801e190a4ffadc19'` |
+| `'U15_INPUTS/C200'` | `85` | `'9c74a43d756133c19af7207e02114af3f28807b76d8551d43ffea4c26ac2d0a4'` |
+| `'U15_INPUTS/C201'` | `85` | `'5336d4106c2218ef028e70d0606a0e93590f6428226e7e7323db33a616d32572'` |
+| `'U15_INPUTS/C202'` | `85` | `'2671c0f74a4291534aee282b0d87a209bb74f662716a83cfc08285e3bca10494'` |
+| `'U15_INPUTS/C203'` | `85` | `'e3844ca7428113d53c12ba7787f9892c24c04f521b43e8c8fb03b6db0ea18314'` |
+| `'U15_INPUTS/C204'` | `85` | `'00a693ea04d64f440d0a0f39b7fd6c32150d414f95ee273784b9974f49591ca0'` |
+| `'U15_INPUTS/C205'` | `85` | `'00d7f2512cbc98c771578f2560a4757672e1c461105a559a562eeb0eb2af4fff'` |
+| `'U15_INPUTS/C206'` | `85` | `'3b2b6e9d1e694fd9d7f6621c4f1109b398e1525ae532a77c86e7eaa9a5a4013b'` |
+| `'U15_INPUTS/C207'` | `85` | `'45befc5595f86d06c1bf55bc32f1245324fec0a14d421c8bbd637dad9d20abd8'` |
+| `'U15_INPUTS/C208'` | `85` | `'fe8c4296972b3dfcf57b6cec6c5f2f70f41661212afa3cf2a351f687114763b5'` |
+| `'U15_INPUTS/C209'` | `85` | `'8a869228263b9e0f99035f6388b20f2494ee415bc798220817c8f18004541064'` |
+| `'U15_INPUTS/C210'` | `85` | `'f12774fd4eeaf87696855fb21490a5c8457a4cc57864e3a942d4511bfbb4e0d8'` |
+| `'U15_INPUTS/C211'` | `85` | `'22f77d4e53bf83e92872122abad2e3cbbc01b5067802efc78a59f5580304c720'` |
+| `'U15_INPUTS/C212'` | `85` | `'b01e1fc24515a69447e88cd0685fa832fcc8289942d435f2dc141c3c203d5a99'` |
+| `'U15_INPUTS/C213'` | `77` | `'c3932d3dd46e5349b8d1aa6dafd0251e7a8b371d5eb4fa08a25080594bf5702e'` |
+| `'U15_INPUTS/C214'` | `77` | `'45785998f3be74d255da3c70e4d16df2dd5caa248fa7574459908e5d1687b1ed'` |
+| `'U15_INPUTS/C215'` | `77` | `'149bbbf59b5c19640a3eecfee68576c3f7b28e2e372710e5da1520a40246fba0'` |
+| `'U15_INPUTS/C216'` | `77` | `'7ddb2cb87a25358f83e166b23e584ea0b48255043cb1304e1f069013537d6140'` |
+| `'U15_INPUTS/C217'` | `77` | `'20d452129c31d40cd412c99b6d91d228510a1dbc76c92a3d3df62ea0f3d63728'` |
+| `'U15_INPUTS/C218'` | `77` | `'ede3593ca48326099b5728322d7d48b067b619925df4d44923c50fd9de44e59b'` |
+| `'U15_INPUTS/C219'` | `77` | `'18158f6e090debd01586f3b9a40fe6c10a780720d5295bd238de9b7451e84ca8'` |
+| `'U15_INPUTS/C220'` | `77` | `'ce6239b0c42ea07a6ba5c877773f50e4222d6e9531c012b51aa12a4008620b26'` |
+| `'U15_INPUTS/C221'` | `77` | `'8930e6a1fa96446a77318554c12aaef0241381bfb3f937f1b5b4e6619d37bc7a'` |
+| `'U15_INPUTS/C222'` | `77` | `'b4133c2ea829ecfbd35744270e5fcbd107a7ad89e35ca59770f884367a219ae7'` |
+| `'U15_INPUTS/C223'` | `77` | `'1fd05be914a3b49bb4375796b682b7dbb24b21740aa058cc9c655f610f770229'` |
+| `'U15_INPUTS/C224'` | `77` | `'476f0d8cd5766919fbecc2e459faca551ea38464a1c7849102bf85637897f318'` |
+| `'U15_INPUTS/C225'` | `77` | `'aaf2bd6e0ff6ec39c4fd2ecb84abf6701d0504eb7d54cd13190994b41d69dd49'` |
+| `'U15_INPUTS/C226'` | `77` | `'14b726d223102d228a77108d1b258e5c5bee80042856bed6c72cf7fbdf6d95d7'` |
+| `'U15_INPUTS/C227'` | `77` | `'ffda3a353792c2f2dea2d6c8b40e1dd66dd6835de9f596fddce060b8cfeb54ee'` |
+| `'U15_INPUTS/C228'` | `77` | `'11f9748d989186e35d92154517b71f64149cd603bd319f5e6f6ad66fb2fb1dca'` |
+| `'U15_INPUTS/C229'` | `85` | `'479b8c51aeb5f047c4ff032c5dc1085e9564384ea167c49e6d7b8b78367cadd9'` |
+| `'U15_INPUTS/C230'` | `85` | `'5422bb92782e72420481cd8a101a460080f434f12414a4310eb701dbf66b6c3b'` |
+| `'U15_INPUTS/C231'` | `85` | `'92cf277806297488294c192994c7d985d7d9bbe2edfaadd41ea30a3e93571386'` |
+| `'U15_INPUTS/C232'` | `85` | `'563c94e7ffe577d3c3e63b8278aafe24ac6ff5dd998797aff2cc5f4351d329fd'` |
+| `'U15_INPUTS/C233'` | `85` | `'d1145cd98636f0cf98a7a44791ef7d90430674a85ae370e3dcd07f65bed4e87d'` |
+| `'U15_INPUTS/C234'` | `85` | `'9d4592dde0f943506462b4e394f27baac6cb3c7c96b0f79a09e0bb632196d3b1'` |
+| `'U15_INPUTS/C235'` | `85` | `'cac2cfb9d40a7a879e82f35925a4cc44cad2df495322083c6e824b257e1302ef'` |
+| `'U15_INPUTS/C236'` | `85` | `'37bbf92f31866645c0365ee458679823cfdd9da814e7d4ab83c026c695c01e64'` |
+| `'U15_INPUTS/C237'` | `85` | `'fa6023d6ae731a91d5cd7781a785c100d49a0603db7975bf2a0b0f78a7497503'` |
+| `'U15_INPUTS/C238'` | `85` | `'8988c08b7da432c98d03c9f62a87f2d77e78ed0b93521d4297981a3ebf38af0a'` |
+| `'U15_INPUTS/C239'` | `85` | `'9022dbb32ca2289b8c74c0fdbdc459179b1bf6f2f828b662bbb1c1b5355c27bd'` |
+| `'U15_INPUTS/C240'` | `85` | `'65b2bd0d8306ac65d28cfdf45813dcc43c0c2452df4964132be5dd7307e5ff9e'` |
+| `'U15_INPUTS/C241'` | `85` | `'5c311b250d6c44a95d2958a2cb4857c42a979da65e2272cd18b9d2f0295e58b0'` |
+| `'U15_INPUTS/C242'` | `85` | `'2f4f8d5d2000dcabdbe27fced312e846b5566d4aabe9c2e670e521c2731bfcf8'` |
+| `'U15_INPUTS/C243'` | `85` | `'822059294d18e2408b828d7a2c70d98c781075fc386dd022e757528a5df089da'` |
+| `'U15_INPUTS/C244'` | `85` | `'1c2505625c16104f9f3fc242b6390bb8c7566014703c37e1647c86f7d0fd3620'` |
+| `'U15_INPUTS/C245'` | `85` | `'6141dc3a1a0bf34d8a5028e7bd9dd59006f02165f1bf1f4349f00f9a99cf1bc8'` |
+| `'U15_INPUTS/C246'` | `85` | `'3190d60427ba10b45e35770e7efb8459b33bb695c160a1aa47c1415b06758fde'` |
+| `'U15_INPUTS/C247'` | `85` | `'0a7bcc8127cce5f8b089a6a3b3a9e11eaf9ab81bcef0f257668403ad39b7038e'` |
+| `'U15_INPUTS/C248'` | `85` | `'3412d3a7b1d88bee850040246ec1a1b7f223b324bb3656d4da470ab01d324a57'` |
+| `'U15_INPUTS/C249'` | `85` | `'3fbc0949c9836dc63cd3b633ea909ec53f955e083f95b9404bfcedc21dc215f5'` |
+| `'U15_INPUTS/C250'` | `85` | `'38dba6b316a104eed84c046a9087877bdd8591d6aef63363de1614f83af3c3ea'` |
+| `'U15_INPUTS/C251'` | `85` | `'1187b6d73aa16ebfc947f1b0bfba457cba0114c24d575eedff2ada8d12285b62'` |
+| `'U15_INPUTS/C252'` | `85` | `'87a6a792e10a24a5e47853c353f6e81ae809cb6a630abdf8d6bc28ad84d6c5fd'` |
+| `'U15_INPUTS/C253'` | `85` | `'db91969b27ceb6d692961f9fb4de056f22f459a13eb6a6e1d0333d00f3961804'` |
+| `'U15_INPUTS/C254'` | `85` | `'a549ee114abf1dc505f5a53b3ecb846fd28fb763233663b2c3ceccf264088535'` |
+| `'U15_INPUTS/C255'` | `85` | `'0dc7931c0c7be08f9c926f836c4a4230975df988f47cf6c6d3007fb87407a0fa'` |
+| `'U15_INPUTS/C256'` | `85` | `'1862732c9b77d6118258cdd2402f3be98deb443c4b81786647dd29d8bb03bcb3'` |
+| `'U15_INPUTS/C257'` | `85` | `'e7bb764d740dbe7083f9c080831e3291154ec037e705c4a9567554c015a4d79b'` |
+| `'U15_INPUTS/C258'` | `85` | `'71993091a2bcf5cedb22bf3f7a801795a2ffbb020ac89fd4392c143f799dc1c5'` |
+| `'U15_INPUTS/C259'` | `85` | `'ffd06d2342b787f578a9e38ba255d59f9b6fda7e055ea762eb27450aa80ce7d4'` |
+| `'U15_INPUTS/C260'` | `85` | `'630f01f6b947e5ed3e390406ca7aa597756a37f4f4b5a3af5de1328295df9ea8'` |
+| `'U15_INPUTS/C261'` | `85` | `'46e7c3533f09e832f676c93c9e212220b9d368f71e430fefd73aa161ebb301e2'` |
+| `'U15_INPUTS/C262'` | `85` | `'f3163e497ad3032c68bbbced335ef6819178001bb3a9c2d0d8012c719dee6462'` |
+| `'U15_INPUTS/C263'` | `85` | `'b1d501cc1c864a58e25f4e2bb7693a5ec23749bdd65474aab2dd0c71e565670d'` |
+| `'U15_INPUTS/C264'` | `85` | `'7094649472c3414bf86d26cb4db699c741a17715a2bc75bf2e9e19e6fba1cb89'` |
+| `'U15_INPUTS/C265'` | `85` | `'528ce33aa59e8b49fc128fbaa17c3c962f5c48ccaa9c581fc2b6402de45ac44c'` |
+| `'U15_INPUTS/C266'` | `85` | `'6563144484165ae3ad2d255519b43e0ccca6bf612d5728ab58c627ee8d0136e2'` |
+| `'U15_INPUTS/C267'` | `85` | `'4a456762f9c891cbc37c88be5e2aa0bba7fbde7c63ae8aa99b82a2cdff57f057'` |
+| `'U15_INPUTS/C268'` | `85` | `'c984a3585323cef664c6e2ab9c351c6596a2e1138d850f10eaef43a6c30cb9c7'` |
+| `'U15_INPUTS/C269'` | `85` | `'1e67a89120c526a442495018be3f8df6360fbe0cecd2458fd4f3ba64501bac8c'` |
+| `'U15_INPUTS/C270'` | `85` | `'98fb7fe251c14997be7edf5da57672da2987eded2acff6105cece30e0e18472b'` |
+| `'U15_INPUTS/C271'` | `85` | `'eb4813c18de34200ff1942bd2d77bab6778dc957856ea050207278385734d27f'` |
+| `'U15_INPUTS/C272'` | `85` | `'3b0c54b9abdca38099b7af560e5eff63ad62d57dadef3bec6bccc4f3d1fa75e1'` |
+| `'U15_INPUTS/C273'` | `85` | `'937cbdd6b962c9863f8910f374c711ec42c72734b9198e6da5f3df51f9361b73'` |
+| `'U15_INPUTS/C274'` | `85` | `'bd1c661e668db7682558d91619c68eaf5ae466c598705987fc4b116a7395cacf'` |
+| `'U15_INPUTS/C275'` | `85` | `'1187e80ee4683705ec755f13bb438c0f56b943fdd02d04e2e4fe59045c169251'` |
+| `'U15_INPUTS/C276'` | `85` | `'a98ac4d539348faf44b228bd6586e072fe833216dc7cd2b4de00c0cab7ef9484'` |
+| `'U15_INPUTS/C277'` | `85` | `'e73862f372ac31ffdea3fe48cdc15b9614d9fd672df7bd19424d006d4a5e3c0a'` |
+| `'U15_INPUTS/C278'` | `85` | `'8763fd6bf57f40685732bce3261c2f946ed8af75016623b48fe9b50338b610a9'` |
+| `'U15_INPUTS/C279'` | `85` | `'0beb7c0e444c9443b3a7811c312d608a4e1b9ea13cc4ec79c775c5cc09ac856c'` |
+| `'U15_INPUTS/C280'` | `85` | `'a61647dcd544f7315d9bc83352c8b0807288268061592a57710c2ce995f1bf78'` |
+| `'U15_INPUTS/C281'` | `85` | `'c80c7c425e7b0477dff76b75cdc3e6ddd3166e61a896e4d7194a0571a5d7d1b8'` |
+| `'U15_INPUTS/C282'` | `85` | `'1f0804ec957f0e09179ba6ad0334c10e289726c928b00ed2185e4ad0860a42d7'` |
+| `'U15_INPUTS/C283'` | `85` | `'6122e7d8047ac96a479dff0b68402f344bdfd16924bef202815a28e569fe3b43'` |
+| `'U15_INPUTS/C284'` | `85` | `'6a03e8a2374a2035f7fdab4f06619dc1218aed30a92efece57c5deb1faa04236'` |
+| `'U15_INPUTS/C285'` | `85` | `'4ecfe2d48a97fc1fc6ffa45601c64dbe1e591dd89028ad03cb3142ee7a204c9c'` |
+| `'U15_INPUTS/C286'` | `85` | `'ae7cae91a03bde12a944ad13a74ce3452307899a44abb4a9683b780d608992a6'` |
+| `'U15_INPUTS/C287'` | `85` | `'16c9725ff3b2ba0c9ea7bb88af252ae63a50c8599bd2166055858a18fc17b80b'` |
+| `'U15_INPUTS/C288'` | `85` | `'622855ae56dd817ff54144a22e5fe0149402d447fd66f902d98ae36b0725ab5a'` |
+| `'U15_INPUTS/C289'` | `85` | `'ec4a0c918752787d532623ec9dd15ad740299498ae28d94a9961ee4202b75367'` |
+| `'U15_INPUTS/C290'` | `85` | `'02d77a06cff165e614ce05285ba9091e11b8c626e559e18d3780b6d29030db5b'` |
+| `'U15_INPUTS/C291'` | `85` | `'57fc7fc23f1160e18190e3e88eefd4e0f6dab5bc61ee9bbb2575bcae01a74808'` |
+| `'U15_INPUTS/C292'` | `85` | `'59e6dfd8a926fb1170f045e387727f42b37e8c8437d7d67dd02780fd757ae3fa'` |
+| `'U15_INPUTS/C293'` | `85` | `'8d6333af2baa9a764f0581cb2eade5ac2177ccdddd2e7814cfa5e1d4e6b51d76'` |
+| `'U15_INPUTS/C294'` | `85` | `'630ca5f9e5a244f280fa8ece6be542e0d4ec9cd6bc1eedd4871fa2ef9262e034'` |
+| `'U15_INPUTS/C295'` | `85` | `'90968afd8c54fedb66bb363548cbdf1bfeca14d231d85823aa1ea2e65b044d2e'` |
+| `'U15_INPUTS/C296'` | `85` | `'1ad558f2b076045a74440ed13b701388072c5ccdf60055f3af03776b4953ac9d'` |
+| `'U15_INPUTS/C297'` | `85` | `'f211f1e1089661aae2e5fbb730fdccb47e141a9336688f2fcdb28c67c0ad149d'` |
+| `'U15_INPUTS/C298'` | `85` | `'b7c9e8121cd165466856e4abfce5a48f536a56e2d3b3f3a39b951c1493b11ac6'` |
+| `'U15_INPUTS/C299'` | `85` | `'cca33bdf697608821258287d8533cd681e15fcc9c872a9cfb3bf6760532faee5'` |
+| `'U15_INPUTS/C300'` | `85` | `'4e89c20451e682875092719e05104c5a503c8d6793a603d38794629f57d45f03'` |
+| `'U15_INPUTS/C301'` | `85` | `'a2ebfe4ebecffa0768993e654f8cc8d7c72b1bf06184982f6dab97898f4bef6f'` |
+| `'U15_INPUTS/C302'` | `85` | `'2b85c7c72a959e6a498e42a4debf943bf2493edda3b448db181c4b3087860e98'` |
+| `'U15_INPUTS/C303'` | `85` | `'1ae70de72dade1e9c116cc385a82ac4bb4349e8bf14c0440bcfba49ef45b57a7'` |
+| `'U15_INPUTS/C304'` | `85` | `'092d7d350b995ef67ac632789089d35f09f4d8a4ecce4dafadca2b931fb5c314'` |
+| `'U15_INPUTS/C305'` | `85` | `'3cf94be8281eecfc8fdba801225cfedd14b7b90a14305f56f9bb7548b6176005'` |
+| `'U15_INPUTS/C306'` | `85` | `'223119f83d5927bad161b792d43e6677fbe3f4a01a7aa7d8b0ff57883d37bdc6'` |
+| `'U15_INPUTS/C307'` | `85` | `'7f85279d254912042273463b8153f8e6857152087e7a47e623f3ce97b3c8dc77'` |
+| `'U15_INPUTS/C308'` | `85` | `'ede97321c0e912ce2ee102a67fcb24094675e83df29cff79ab7672235c23b83b'` |
+| `'U15_INPUTS/C309'` | `85` | `'d45d51d98231d58553dc17d5db93a1e36bf0ddc0741ff33eb68b2bf9d72f4299'` |
+| `'U15_INPUTS/C310'` | `85` | `'b427416ee6ac7ed4178220a78eaa97b67c15683e811822a92d126976df3d3ac1'` |
+| `'U15_INPUTS/C311'` | `85` | `'4a2f585ea553201e0f1875188b64596ae81c6681eba58e5a3af99b57e6829592'` |
+| `'U15_INPUTS/C312'` | `85` | `'dd8eba11e7209a0dab104109c7377feee7cfe5f8293f7a0dc4c47d1959ac9d1e'` |
+| `'U15_INPUTS/C313'` | `85` | `'735a81dfea8e4022eee7276d03d0b5f39952d2e45a05afa53008c46c4f71ed37'` |
+| `'U15_INPUTS/C314'` | `85` | `'d771cf09e8e0a91718b3e683f79c8699cc4d2352b09520dd63c60cd9054085ab'` |
+| `'U15_INPUTS/C315'` | `85` | `'38106c2360f68da237eb39e575aba89a40cee51883b8eca4c9e6c71123a4d423'` |
+| `'U15_INPUTS/C316'` | `85` | `'9e4f361750431e3bc6af9196fbe2e9b1a3275751b579cf8c141ebb6d67f2840e'` |
+| `'U15_INPUTS/C317'` | `85` | `'bd3178e006b6126d2f0873d8f4a50895f040d695fced4dca0ff4c2f8c88897e9'` |
+| `'U15_INPUTS/C318'` | `85` | `'7a939cdd2577176cbcb08f2aaaeb5012ea8cea49f6f90015971ef1b1b7a9ae9f'` |
+| `'U15_INPUTS/C319'` | `85` | `'0414eb17a0494663d12bff508537c96cc0536ebce74b9bffe6a9ea6a5c674cd0'` |
+| `'U15_INPUTS/C320'` | `85` | `'24893b510262ef73bac98fb201562eccf40cd36f22491f1bba77e05aef155b0e'` |
+| `'U15_INPUTS/C321'` | `85` | `'3652c802eadf80dce61cf1d037d062c9f9680c2103d084f17dec5cc5e3f4977b'` |
+| `'U15_INPUTS/C322'` | `85` | `'40efcc956f98bd480fc79c7dfa6a45376ed91e13c513b901650d2631da084366'` |
+| `'U15_INPUTS/C323'` | `85` | `'b1999354d2ad84ab055959a3558ec6a31f0b87ea3290a43e7f37e4fcc15f9a2b'` |
+| `'U15_INPUTS/C324'` | `85` | `'306d33764d2f30e5f60ca83ea8096879672335e81ca16fa7d418f8cf0fbf719c'` |
+| `'U15_INPUTS/C325'` | `85` | `'5e3ea7ae0e374305c6ecefe25a888ecaa7ee39110bc176bf825bfd218d4985c5'` |
+| `'U15_INPUTS/C326'` | `85` | `'9f883cc3ce608229b8671a1a460c66175b1fb962958d2c380ff6c52be19c5e62'` |
+| `'U15_INPUTS/C327'` | `85` | `'db2f6f3a5c3e0059b2ae2ae43fee9af9929f806ab52a05e7e0a88c920b456805'` |
+| `'U15_INPUTS/C328'` | `85` | `'f1531cd472ad100ed5eb4bba1b8413c2689840aff5377826620fad6b487decac'` |
+| `'U15_INPUTS/N-MATCH2'` | `79` | `'62f80c9d2bee2571dc18ed66093855ce3b6855db7c43622f7b72121fe6492d90'` |
+| `'U15_INPUTS/N-MATCH3-ORDER'` | `91` | `'d13a2255ff7ccb808f099d0e1bfc7f117d2c4c22d6388a7c05de5218ed0a7c41'` |
+| `'U15_INPUTS/N-EVEN-PRIORITY'` | `85` | `'bd1c661e668db7682558d91619c68eaf5ae466c598705987fc4b116a7395cacf'` |
+| `'U15_INPUTS/N-ODD-PRIORITY'` | `85` | `'1570ff9083dfb7a424ea2f88b342d755c1063a52965561ea3df1da768d638a7a'` |
+| `'U15_INPUTS/N-EVEN-FIRST'` | `95` | `'f739dad4abdd2412d151a0785fc588881063f071608b47b37360d252c0422f7c'` |
+| `'U15_INPUTS/N-ODD-FIRST'` | `87` | `'7e66f8cd0c97b106e686c2d1afa83fd317db10cd4820ab236497d62e30031338'` |
+| `'U15_INPUTS/N-H2-LATER-SPLIT'` | `87` | `'cf3cdf5ce8fbf33591a3515da336cab81efb0cae0d750f6afd1c57ec5759d41e'` |
+| `'U15_INPUTS/N-H2-ONE-EDGE'` | `67` | `'90c78c50b3535e57f079046b90125619d7952b0b96f070e73dee93675b1a8d5c'` |
+| `'U15_INPUTS/N-H2-SPLIT-LOSER'` | `85` | `'8ae2c5d242f08d6c7cbb95cfa8b6705be807f4af8763823e557ae482e68feb84'` |
+| `'U15_INPUTS/N-ODD-UPGRADE-ZERO'` | `67` | `'60c58a9399526b48dd27644837706173bae9ee0b423b123e580d24418f76a90f'` |
+| `'U15_INPUTS/N-EVEN-UPGRADE'` | `67` | `'639b42aa06e66c315e88234d0b2902656e20ff2ed3409722e30f324a0c88078d'` |
+| `'U15_INPUTS/N-EVEN-ALL'` | `67` | `'dd716e80f7edc5c621c644eafe1acd32082bd85d19f743a869bdb1c50c950f37'` |
+| `'U15_INPUTS/N-ODD-ALL'` | `67` | `'1d0e5467f35a16d9e17f8241efa25d10f74268f1e238889c0572ca56f53235a3'` |
+| `'U15_INPUTS/N-FULL-H0'` | `85` | `'528ce33aa59e8b49fc128fbaa17c3c962f5c48ccaa9c581fc2b6402de45ac44c'` |
+| `'U15_INPUTS/N-L0-WINNER'` | `67` | `'8c429c93f7adc567fa5495203c79eb6c2b2aecb5c889b2ac6c87761f7fb601e6'` |
+| `'U15_INPUTS/N-L1-WINNER'` | `67` | `'0b31c9fece3ceb7ad09256ca7a0b9b8a962ed7a35c99988aaf3670e17d3f12da'` |
+| `'U15_INPUTS/N-H0-WINNER'` | `95` | `'b82d013f101bf3d4c75f26c05f02f2c55a6e1dca44f200c171ef4dea05622d4b'` |
+| `'U15_INPUTS/N-H1-WINNER'` | `95` | `'1c457cde9004ef35989aef13153e3de909bfe97d2349ddea7e9be90358007800'` |
+| `'U15_INPUTS/N-SEED002-GLOBAL'` | `85` | `'efbd6bba3fd320c90bc8d02d918c0e4e25f44ecde5a3440130c131172c8a539e'` |
+| `'U15_INPUTS/N-DISCONNECTED'` | `97` | `'6e659cf7c7dd985afe027b0d61fd6d7380a8552a1c9b55ff8622262af719cd83'` |
+| `'U15_INPUTS/N-LABEL-STR'` | `108` | `'20412ccbb934f66daa56974fb50d8c8a004e0b9794343cba66aacc3a135a3713'` |
+| `'U15_INPUTS/N-LABEL-MIX'` | `105` | `'bdb31e2a59e7e49fef3ab5416280b50a18460b7eb3ebfd2af0d65ea1f2e200f8'` |
+| `'U15_INPUTS/M-SAT-EVEN-8'` | `73` | `'23f08d940a94b4a50ede15ebd05f6842c7ba889a2100112673e58bdca9d035c0'` |
+| `'U15_INPUTS/M-SAT-ODD-8'` | `73` | `'d9ef3766a337cc2cfb6869f2a4af25fd59c3eda9342b6bc740f440da78412678'` |
+| `'U15_INPUTS/M-L1-8'` | `71` | `'e702f5b81ee206999249ae817b9cc84a8d46f66a566deafa9a2c9ffe18678dc6'` |
+| `'U15_INPUTS/M-L0-8'` | `73` | `'424a4df1539916ef6a62a3009dcb65505feb37deb223864d9e630e3c5b60b560'` |
+| `'U15_INPUTS/M-NEAR-8'` | `91` | `'1924098990d5ea93f92f7b11c5129e1275760b9bd663f4099a43616e64aa8771'` |
+| `'U15_INPUTS/M-H0-8'` | `103` | `'2856adbb1c4961042e317c764bddf3647a8e8b8d4b968d2d46765c5629c9b0b8'` |
+| `'U15_INPUTS/M-H1-8'` | `103` | `'7b9f5439b09c3a91cbf38279ded8082f1d36a865850b6072d99a095c2f1d7543'` |
+| `'U15_INPUTS/M-SAT-EVEN-54'` | `115` | `'8aceb62c87b75d25739f132edf204c51cc55813ed87238005a6e4152e266f4c3'` |
+| `'U15_INPUTS/M-SAT-ODD-54'` | `115` | `'c6b335482a56a2e051d42434e87925ce5c32a5304bc34cd58a7a40ca31a7e8d0'` |
+| `'U15_INPUTS/M-L1-54'` | `99` | `'8b6eaa4e0f207102320134b966091978e479a40474aabe5234fbdc239b019b5e'` |
+| `'U15_INPUTS/M-L0-54'` | `115` | `'7cca7f50327e9537277a69ad0f4d510ae2f779c80b9b6fc8c768af9801a9020d'` |
+| `'U15_INPUTS/M-NEAR-54'` | `175` | `'bb9f3498969a68ccbaceb6855c01270a283c7f11e07db60f618562c00d1157c1'` |
+| `'U15_INPUTS/M-H0-54'` | `159` | `'6150f29397275c20155b19b6c0a0f77e7d637bb178d47293f6b4ffeb190a44a5'` |
+| `'U15_INPUTS/M-H1-54'` | `159` | `'96dcbb1891e69edf4a80c3eda3d253b7bd65e50591a435d210af6e2afac92aad'` |
+| `'U15_INPUTS/M-SAT-EVEN-128'` | `181` | `'c8e2708dc97621177f1fa9014d2eaafefd35769314d964da7ec0f6e1077be54d'` |
+| `'U15_INPUTS/M-SAT-ODD-128'` | `181` | `'d88c446a51233711998cc1e85bf332c07cbed056e793def06388ce9f07eb9a70'` |
+| `'U15_INPUTS/M-L1-128'` | `143` | `'3d57a2dc41f9c384a3a281701fa9f48b55df624ba434bb7f81b30f1665d9d0ea'` |
+| `'U15_INPUTS/M-L0-128'` | `181` | `'ce69c3be8078c9d6c63fa820c93cd48dd0e6239701d8db9d75d0350e45a68b11'` |
+| `'U15_INPUTS/M-NEAR-128'` | `307` | `'fbd92db433b0b10935b4fedcd57995dddc06c093e9caa712a6bbd07dc9336203'` |
+| `'U15_INPUTS/M-H0-128'` | `247` | `'b706b6145668127d5bf88e3b70a930b3f7df10f0ca022ed620e6f774a6d8e2ce'` |
+| `'U15_INPUTS/M-H1-128'` | `247` | `'c4418f6e3d943a712fbb5d6acdf91bfbd7f30acad823a63294eb81aeb7ca349b'` |
+| `'U15_INPUTS/M-SAT-EVEN-512'` | `529` | `'69abc4ee40899b026759b1ca49cd0121ba6713ec2f8e21f1502e1cf1a2edfc55'` |
+| `'U15_INPUTS/M-SAT-ODD-512'` | `529` | `'f55fd6e6696a0f308009a886a648f739bde17fd661cedb666989e5ef6b7e3f92'` |
+| `'U15_INPUTS/M-L1-512'` | `375` | `'d8021f61d425e9892096798d4e23029ce5d8976793708741bc3c22436b7e7f15'` |
+| `'U15_INPUTS/M-L0-512'` | `529` | `'fdc541a2549377c1a5ec66e6c0e2d607efcf97860183540797052d71f1f79429'` |
+| `'U15_INPUTS/M-NEAR-512'` | `1003` | `'07a47a25fb46367786415b68cc43e18f987c5a90d9f90d0f977812336238e2f9'` |
+| `'U15_INPUTS/M-H0-512'` | `711` | `'96159e3d9a760258bf6fcea9090f2ca6a94fecf40e86b08ea5b4e20fab7a1919'` |
+| `'U15_INPUTS/M-H1-512'` | `711` | `'1fbdf5f396e513a14076e01eed2bbd0043eb90eda7541ee98afd653229a44d85'` |
+| `'U16_INPUTS/Q1'` | `67` | `'c396529c56ad576383d4cedb062240742ea0884d949a353fb56c28289a32ab54'` |
+| `'U16_INPUTS/DOUBLE'` | `67` | `'8b39b98c39a8fac822d2cd55a8ab6921059c86a35342704197e56c6c0583f289'` |
+| `'U16_INPUTS/EQUALITY'` | `85` | `'7b7a33b04754dfa5516cfdef4193cc5e82e32fddf24dab98a26291a4d1478ee7'` |
+| `'U16_INPUTS/ZERO'` | `67` | `'60c58a9399526b48dd27644837706173bae9ee0b423b123e580d24418f76a90f'` |
+| `'U16_INPUTS/REJECT0'` | `106` | `'50f3c795f8b11a75bac2820fb979c13e8619e734697fa77195fd1bce309e7660'` |
+| `'U16_INPUTS/ACCEPT3'` | `105` | `'5c3f06f10ec0865c266467f245fc8328f8d25009a2a38c3762cc2f516ef62a3d'` |
+| `'U16_INPUTS/REFLECTROOT1'` | `106` | `'f1727b72f4161d5d33ec14f2059fb34503a791511e2a196ea6de9792fbe3358c'` |
+| `'U16_INPUTS/CANCEL0'` | `96` | `'f1e444e1afbdad0d47483f73bdd71ff7af27aa3fa4260da287a9f9480ff70bdf'` |
+| `'U16_INPUTS/ACCEPTRESET3'` | `113` | `'b0e57e5cea7775c0a09e7cd7989e7c4c0b070f124a25880908372ff029e4cfa4'` |
+| `'U16_INPUTS/LABEL-4096'` | `2549` | `'8bef9d305492f94e81225b88a2cc179cc77e5ba5b455b699dacddc7567a01de1'` |
+| `'U17_INPUTS/GAP'` | `107` | `'5c3c4b57751f41f262fe60aa52b0c29e1ac18d93d4193756e0444dc3c0f351cd'` |
+| `'U17_INPUTS/INTERIOR'` | `67` | `'62c77025afa90151623f41c4243bd9096bdea73b26c77389c0aa3ccd4d21b171'` |
+| `'U17_INPUTS/UTF8'` | `113` | `'077878d8cc9708ef05771aa5294660d024ac00f5342b4639b4d3939614d3f513'` |
+| `'U17_INPUTS/BIG-COUNTS'` | `14467` | `'ecd817a61d5620c82b24e910078b88cd67d3458cad6b92ce2c33c10a38e5a966'` |
+| `'U17_INPUTS/BIG-ZERO'` | `14467` | `'fb65e17427d2c54833812821e8d6ff6106336364b187b721db2a799a3fb5edff'` |
+| `'U17_INPUTS/BIG-N'` | `4867` | `'6e15b139d1c8edb13f5b455ca543e53c114cb043c6d0d867910c007016ae41f6'` |
+| `'U17_INPUTS/BIG-LABEL'` | `9683` | `'026251701dcc23399739ccb4c6921cd65a1f00e97063e9e7760ebaf4f796a5b3'` |
+
+## ORACLE-127 — Independent numerical references and endpoint witnesses
+
+For every nonempty shore U independently compute s=f(U), e=e_q(U), b=b_q(U).
+The least feasible total is 2 for s=1, 1 for positive even s, and 0 for odd s>=3.
+The greatest is b if s+b is odd and b-1 otherwise. Keep only totals in [0,b] with
+s+Y odd and >=3. Lem:interval realizes every total; the complete difference proof
+shows an interior total cannot exceed both extremes. Enumerate all original shores
+privately (increasing binary mask), then least/greatest totals, retaining strict
+improvements, solely to choose the REFERENCE representative below. Greedily allocate
+that total over crossing edges in canonical reference order. This reference rule is
+NOT a solver tie rule and is NEVER imposed on either production selection.
+
+On every registered graph with max q<=6 additionally enumerate every boundary-count
+vector and every feasible scalar total, and cross-check both optima independently.
+Larger multiplicities use finite all-shore endpoints, not q- or Q-copy enumeration.
+These are finite exponential private oracles, not a production complexity claim.
+U15_GLOBAL values are additionally cross-checked numerically, not replaced.
+
+U17_GLOBALS fixes one raw reference pair and attaining witness per qualified entry.
+Solver results may differ in witness/raw scale and must compare by cross multiplication.
+The separate byte verifier does NOT consult this table or prove optimality: it accepts
+any admissible literally attaining certificate, including the suboptimal fixtures.
+
+### Fixture table: U17_GLOBALS
+
+| qualified_id | N | D | reference_U | reference_sparse_y |
+| --- | --- | --- | --- | --- |
+| `'U15_INPUTS/C000'` | `0` | `1` | `None` | `None` |
+| `'U15_INPUTS/C001'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C002'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C003'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C004'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C005'` | `4` | `2` | `(2,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C006'` | `2` | `2` | `(0, 1)` | `((0, 1),)` |
+| `'U15_INPUTS/C007'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C008'` | `4` | `2` | `(1,)` | `((1, 2),)` |
+| `'U15_INPUTS/C009'` | `4` | `2` | `(1,)` | `((1, 2),)` |
+| `'U15_INPUTS/C010'` | `4` | `2` | `(2,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C011'` | `6` | `4` | `(2,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C012'` | `2` | `2` | `(1,)` | `((1, 1),)` |
+| `'U15_INPUTS/C013'` | `6` | `2` | `(0, 2)` | `((1, 1),)` |
+| `'U15_INPUTS/C014'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C015'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C016'` | `4` | `2` | `(2,)` | `((0, 2),)` |
+| `'U15_INPUTS/C017'` | `6` | `4` | `(2,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C018'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C019'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C020'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C021'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C022'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C023'` | `6` | `2` | `(0, 2)` | `((1, 1),)` |
+| `'U15_INPUTS/C024'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C025'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C026'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C027'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C028'` | `4` | `2` | `(1,)` | `((1, 2),)` |
+| `'U15_INPUTS/C029'` | `4` | `2` | `(1,)` | `((1, 2),)` |
+| `'U15_INPUTS/C030'` | `4` | `2` | `(1,)` | `((1, 2),)` |
+| `'U15_INPUTS/C031'` | `4` | `2` | `(2,)` | `((0, 2),)` |
+| `'U15_INPUTS/C032'` | `6` | `4` | `(2,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C033'` | `8` | `6` | `(2,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C034'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C035'` | `4` | `2` | `(1,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C036'` | `2` | `2` | `(1,)` | `((0, 1),)` |
+| `'U15_INPUTS/C037'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C038'` | `4` | `2` | `(1,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C039'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C040'` | `6` | `4` | `(1,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C041'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C042'` | `4` | `4` | `(1,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C043'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C044'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C045'` | `6` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C046'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C047'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C048'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C049'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C050'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C051'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C052'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C053'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C054'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C055'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C056'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C057'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C058'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C059'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C060'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C061'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C062'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C063'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C064'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C065'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C066'` | `6` | `4` | `(1,)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C067'` | `6` | `4` | `(1,)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C068'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C069'` | `6` | `4` | `(2,)` | `((1, 1), (2, 2))` |
+| `'U15_INPUTS/C070'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C071'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C072'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C073'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C074'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C075'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C076'` | `4` | `4` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C077'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C078'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C079'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C080'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C081'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C082'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C083'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C084'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C085'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C086'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C087'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C088'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C089'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C090'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C091'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C092'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C093'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C094'` | `4` | `4` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C095'` | `10` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C096'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C097'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C098'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C099'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C100'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C101'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C102'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C103'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C104'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C105'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C106'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C107'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C108'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C109'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C110'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C111'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C112'` | `10` | `6` | `(0, 2)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C113'` | `10` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C114'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C115'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C116'` | `10` | `6` | `(0, 2)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C117'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C118'` | `6` | `4` | `(0,)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C119'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C120'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C121'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C122'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/C123'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C124'` | `10` | `6` | `(1, 2)` | `((0, 1), (1, 2))` |
+| `'U15_INPUTS/C125'` | `6` | `4` | `(1,)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C126'` | `6` | `4` | `(1,)` | `((0, 1), (2, 2))` |
+| `'U15_INPUTS/C127'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C128'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C129'` | `8` | `6` | `(2,)` | `((1, 2), (2, 2))` |
+| `'U15_INPUTS/C130'` | `4` | `4` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/C131'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C132'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C133'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C134'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C135'` | `6` | `4` | `(1,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C136'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C137'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C138'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C139'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C140'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C141'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C142'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C143'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C144'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C145'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C146'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C147'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C148'` | `6` | `4` | `(1,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C149'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C150'` | `8` | `6` | `(1,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C151'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C152'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U15_INPUTS/C153'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C154'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C155'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C156'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C157'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C158'` | `4` | `4` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C159'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C160'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C161'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C162'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C163'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C164'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C165'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C166'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C167'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C168'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C169'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C170'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C171'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C172'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C173'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C174'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C175'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C176'` | `4` | `4` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C177'` | `10` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C178'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C179'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C180'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C181'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C182'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C183'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C184'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C185'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C186'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C187'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C188'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C189'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C190'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C191'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C192'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C193'` | `10` | `6` | `(0, 1)` | `((1, 1), (2, 2))` |
+| `'U15_INPUTS/C194'` | `10` | `6` | `(0, 1)` | `((1, 1), (2, 2))` |
+| `'U15_INPUTS/C195'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C196'` | `10` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C197'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C198'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C199'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C200'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C201'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C202'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C203'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C204'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C205'` | `10` | `6` | `(1, 2)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C206'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C207'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C208'` | `6` | `4` | `(2,)` | `((1, 1), (2, 2))` |
+| `'U15_INPUTS/C209'` | `8` | `6` | `(1,)` | `((0, 2), (2, 2))` |
+| `'U15_INPUTS/C210'` | `4` | `2` | `(2,)` | `((1, 1), (2, 1))` |
+| `'U15_INPUTS/C211'` | `6` | `4` | `(2,)` | `((1, 1), (2, 2))` |
+| `'U15_INPUTS/C212'` | `4` | `4` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C213'` | `8` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C214'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C215'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C216'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C217'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C218'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C219'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C220'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C221'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C222'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C223'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C224'` | `8` | `6` | `(0,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C225'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C226'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C227'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C228'` | `6` | `6` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C229'` | `10` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C230'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C231'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C232'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C233'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C234'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C235'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C236'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C237'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C238'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C239'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C240'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C241'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C242'` | `10` | `6` | `(0, 1)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C243'` | `10` | `6` | `(0, 1)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C244'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C245'` | `10` | `6` | `(0, 2)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C246'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C247'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C248'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C249'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C250'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C251'` | `10` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C252'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C253'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C254'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C255'` | `8` | `6` | `(0,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C256'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C257'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C258'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C259'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C260'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C261'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C262'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C263'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C264'` | `6` | `6` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C265'` | `12` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C266'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C267'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C268'` | `6` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/C269'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C270'` | `12` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C271'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C272'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C273'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C274'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C275'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C276'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C277'` | `6` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C278'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C279'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C280'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/C281'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C282'` | `12` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C283'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C284'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C285'` | `12` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C286'` | `10` | `6` | `(0, 1)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C287'` | `12` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C288'` | `10` | `6` | `(0, 1)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C289'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C290'` | `12` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C291'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C292'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C293'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C294'` | `10` | `6` | `(0, 2)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C295'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C296'` | `6` | `4` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C297'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C298'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C299'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C300'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C301'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C302'` | `12` | `6` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C303'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C304'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C305'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C306'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C307'` | `12` | `8` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/C308'` | `8` | `6` | `(0,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C309'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C310'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C311'` | `8` | `6` | `(0,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C312'` | `8` | `6` | `(0,)` | `((0, 2), (1, 2))` |
+| `'U15_INPUTS/C313'` | `6` | `2` | `(1, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/C314'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C315'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C316'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/C317'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C318'` | `10` | `6` | `(1, 2)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/C319'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C320'` | `6` | `4` | `(1,)` | `((0, 2), (2, 1))` |
+| `'U15_INPUTS/C321'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C322'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C323'` | `8` | `6` | `(1,)` | `((0, 2), (2, 2))` |
+| `'U15_INPUTS/C324'` | `8` | `6` | `(1,)` | `((0, 2), (2, 2))` |
+| `'U15_INPUTS/C325'` | `4` | `2` | `(2,)` | `((1, 2),)` |
+| `'U15_INPUTS/C326'` | `6` | `4` | `(2,)` | `((1, 2), (2, 1))` |
+| `'U15_INPUTS/C327'` | `8` | `6` | `(2,)` | `((1, 2), (2, 2))` |
+| `'U15_INPUTS/C328'` | `6` | `6` | `(0,)` | `((0, 2), (1, 1))` |
+| `'U15_INPUTS/N-MATCH2'` | `2` | `2` | `(0, 2)` | `((0, 1),)` |
+| `'U15_INPUTS/N-MATCH3-ORDER'` | `2` | `2` | `(0, 1)` | `((0, 1),)` |
+| `'U15_INPUTS/N-EVEN-PRIORITY'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-ODD-PRIORITY'` | `10` | `4` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/N-EVEN-FIRST'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-ODD-FIRST'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-H2-LATER-SPLIT'` | `4` | `2` | `(3,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/N-H2-ONE-EDGE'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-H2-SPLIT-LOSER'` | `6` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/N-ODD-UPGRADE-ZERO'` | `4` | `4` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-EVEN-UPGRADE'` | `6` | `6` | `(0,)` | `((0, 3),)` |
+| `'U15_INPUTS/N-EVEN-ALL'` | `6` | `4` | `(0,)` | `((0, 3),)` |
+| `'U15_INPUTS/N-ODD-ALL'` | `8` | `6` | `(0,)` | `((0, 4),)` |
+| `'U15_INPUTS/N-FULL-H0'` | `12` | `2` | `(0, 1, 2)` | `()` |
+| `'U15_INPUTS/N-L0-WINNER'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-L1-WINNER'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-H0-WINNER'` | `8` | `2` | `(0, 1)` | `()` |
+| `'U15_INPUTS/N-H1-WINNER'` | `10` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/N-SEED002-GLOBAL'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U15_INPUTS/N-DISCONNECTED'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U15_INPUTS/N-LABEL-STR'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/N-LABEL-MIX'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U15_INPUTS/M-SAT-EVEN-8'` | `510` | `510` | `(0,)` | `((0, 255),)` |
+| `'U15_INPUTS/M-SAT-ODD-8'` | `512` | `512` | `(0,)` | `((0, 256),)` |
+| `'U15_INPUTS/M-L1-8'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/M-L0-8'` | `512` | `510` | `(1,)` | `((0, 256),)` |
+| `'U15_INPUTS/M-NEAR-8'` | `512` | `510` | `(0,)` | `((0, 256),)` |
+| `'U15_INPUTS/M-H0-8'` | `512` | `2` | `(0, 1)` | `()` |
+| `'U15_INPUTS/M-H1-8'` | `514` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/M-SAT-EVEN-54'` | `36028797018963966` | `36028797018963966` | `(0,)` | `((0, 18014398509481983),)` |
+| `'U15_INPUTS/M-SAT-ODD-54'` | `36028797018963968` | `36028797018963968` | `(0,)` | `((0, 18014398509481984),)` |
+| `'U15_INPUTS/M-L1-54'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/M-L0-54'` | `36028797018963968` | `36028797018963966` | `(1,)` | `((0, 18014398509481984),)` |
+| `'U15_INPUTS/M-NEAR-54'` | `36028797018963968` | `36028797018963966` | `(0,)` | `((0, 18014398509481984),)` |
+| `'U15_INPUTS/M-H0-54'` | `36028797018963968` | `2` | `(0, 1)` | `()` |
+| `'U15_INPUTS/M-H1-54'` | `36028797018963970` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/M-SAT-EVEN-128'` | `680564733841876926926749214863536422910` | `680564733841876926926749214863536422910` | `(0,)` | `((0, 340282366920938463463374607431768211455),)` |
+| `'U15_INPUTS/M-SAT-ODD-128'` | `680564733841876926926749214863536422912` | `680564733841876926926749214863536422912` | `(0,)` | `((0, 340282366920938463463374607431768211456),)` |
+| `'U15_INPUTS/M-L1-128'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/M-L0-128'` | `680564733841876926926749214863536422912` | `680564733841876926926749214863536422910` | `(1,)` | `((0, 340282366920938463463374607431768211456),)` |
+| `'U15_INPUTS/M-NEAR-128'` | `680564733841876926926749214863536422912` | `680564733841876926926749214863536422910` | `(0,)` | `((0, 340282366920938463463374607431768211456),)` |
+| `'U15_INPUTS/M-H0-128'` | `680564733841876926926749214863536422912` | `2` | `(0, 1)` | `()` |
+| `'U15_INPUTS/M-H1-128'` | `680564733841876926926749214863536422914` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U15_INPUTS/M-SAT-EVEN-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168190` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168190` | `(0,)` | `((0, 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084095),)` |
+| `'U15_INPUTS/M-SAT-ODD-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192` | `(0,)` | `((0, 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096),)` |
+| `'U15_INPUTS/M-L1-512'` | `4` | `2` | `(1,)` | `((0, 2),)` |
+| `'U15_INPUTS/M-L0-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168190` | `(1,)` | `((0, 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096),)` |
+| `'U15_INPUTS/M-NEAR-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168190` | `(0,)` | `((0, 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096),)` |
+| `'U15_INPUTS/M-H0-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192` | `2` | `(0, 1)` | `()` |
+| `'U15_INPUTS/M-H1-512'` | `26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168194` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U16_INPUTS/Q1'` | `0` | `1` | `None` | `None` |
+| `'U16_INPUTS/DOUBLE'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U16_INPUTS/EQUALITY'` | `2` | `2` | `(0,)` | `((0, 1),)` |
+| `'U16_INPUTS/ZERO'` | `4` | `4` | `(0,)` | `((0, 2),)` |
+| `'U16_INPUTS/REJECT0'` | `4` | `2` | `(3,)` | `((1, 1), (4, 1))` |
+| `'U16_INPUTS/ACCEPT3'` | `10` | `4` | `(0, 4)` | `((2, 1),)` |
+| `'U16_INPUTS/REFLECTROOT1'` | `4` | `2` | `(1,)` | `((0, 1), (2, 1))` |
+| `'U16_INPUTS/CANCEL0'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U16_INPUTS/ACCEPTRESET3'` | `8` | `2` | `(0, 1)` | `((1, 1),)` |
+| `'U16_INPUTS/LABEL-4096'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U17_INPUTS/GAP'` | `6` | `2` | `(1, 2)` | `()` |
+| `'U17_INPUTS/INTERIOR'` | `12` | `8` | `(0,)` | `((0, 6),)` |
+| `'U17_INPUTS/UTF8'` | `6` | `2` | `(0, 1, 2)` | `()` |
+| `'U17_INPUTS/BIG-COUNTS'` | `('sym', 'twoTm2')` | `('sym', 'twoTm2')` | `(0,)` | `((0, ('sym', 'Tm1')),)` |
+| `'U17_INPUTS/BIG-ZERO'` | `('sym', 'twoT')` | `('sym', 'twoT')` | `(0,)` | `((0, ('sym', 'T')),)` |
+| `'U17_INPUTS/BIG-N'` | `('sym', 'twoT')` | `2` | `(0, 1)` | `()` |
+| `'U17_INPUTS/BIG-LABEL'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+
+## ORACLE-128 — Independent exact bytes and literal attainment
+
+For each nonempty witness in U17_BYTES the defining raw integers are
+N=2*(e+Y), D=s+Y-1, with odd s+Y>=3, bounded crossing counts and nonempty U.
+U17_WITNESS_MATH lists (s,e,b,Y) independently summed from the primitive graph.
+comparison_to_global is -1 for suboptimal, 0 for optimal; neither is part of the
+certificate. Empty has no witness or sums and requires independently validated Q=1.
+
+Source endpoints have Y=b,b-1,0,1,2 for L0,L1,H0,H1,H2 respectively. Baseline first
+selects its lem:empty shore category, then applies the all/all-minus-one lem:unit
+upgrade. Baseline categories even, odd>=3, unit degree>=2, matching and category/index
+priority traps are explicit. ZERO retains (0,2), U=[0], y=[], not Empty (0,1).
+INTERIOR is a valid nonendpoint: q=6,f=(3,3),Y=2, raw(4,4), below max(12,8).
+
+L1-ZERO-OMIT uses original U=[0,1] in N-SEED002-GLOBAL: the first crossing unit
+edge loses its only copy and disappears from sparse y; the surviving reference is 2.
+SPARSE-GAP uses vertices 2 and 5, selecting references 2 and 4 with reference 3 omitted;
+DISCONNECTED uses reference 3 on the later component. Neither refers to cut coordinates.
+FULL/H0 have no selected boundary copies. Labels never occur in certificate bytes.
+
+H2-ONE and H2-SPLIT are literal (4,2), selecting either one count of two or two counts
+of one. H2-LOSER is attained but suboptimal. Direct H2 cannot be a strict final winner:
+an even boundary gives the same value 2 as L0, and an odd boundary>=3 gives L1 value 2.
+The complete preceding branch sweep thus already dominates/ties H2. Capture the actual
+local reconstruction via test-local bindings, never edit the solver or invent a winner.
+
+TIE-SMALL/TIE-LARGE on C020 legitimately attain (4,2) and (8,4) with different witnesses.
+Their numeric equality does not allow attaching either pair to the unchanged OTHER
+witness. Literal comparison is mandatory even for numerator zero. Repeated identical
+inputs must produce the exact listed bytes; cross-route ties need not produce equal
+bytes. No secondary minimizer, witness canonicalization or extra solve is permitted.
+
+The recipes below are independently specified literals, never an encoder's output as
+its own expected answer. Bytes include literal key/tag spelling, numeric token syntax,
+fixed key/list order, no spaces/BOM, and exactly one final LF. Lengths and hashes bind
+the complete expanded recipes. BIG-COUNTS carries N=D=2T-2 and selected T-1; BIG-ZERO
+has (0,T); BIG-N has (2T,2); BIG-LABEL validates labels T,-T without encoding them in
+the certificate. Fixed support, arbitrary encoded magnitude; no copy expansion.
+
+### Fixture table: U17_BYTES
+
+| key | qualified_id | kind | U | sparse_y | N | D | literal_recipe | length | sha256 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'EMPTY'` | `'U15_INPUTS/C000'` | `'Empty'` | `None` | `None` | `0` | `1` | `('{"format":"exactfrac-certificate/1","empty":true,"N":0,"D":1}\n',)` | `62` | `'96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde'` |
+| `'ZERO'` | `'U15_INPUTS/N-ODD-UPGRADE-ZERO'` | `'H0-local-zero'` | `(0,)` | `()` | `0` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":0,"D":2,"U":[0],"y":[]}\n',)` | `78` | `'397e0f7cf159c003855e8743909f8b89ac4d7fcdbfeec84b0f659354bb0a1c78'` |
+| `'BASE-EVEN'` | `'U15_INPUTS/N-EVEN-ALL'` | `'Baseline-even'` | `(0,)` | `((0, 3),)` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[0],"y":[[0,3]]}\n',)` | `83` | `'01aa612aa23b5f3afdd66a83b5d2797f4b8c0dde3137d375c6c0f85d7c8d3184'` |
+| `'BASE-ODD'` | `'U15_INPUTS/N-ODD-ALL'` | `'Baseline-odd-ge3'` | `(0,)` | `((0, 4),)` | `8` | `6` | `('{"format":"exactfrac-certificate/1","empty":false,"N":8,"D":6,"U":[0],"y":[[0,4]]}\n',)` | `83` | `'147fa2d1e2a07de2d29243e50bfecdb7d92b666bc6b823b1ab7521af734ee865'` |
+| `'BASE-UNIT'` | `'U15_INPUTS/N-H2-ONE-EDGE'` | `'Baseline-unit-degree2'` | `(0,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` |
+| `'BASE-MATCH'` | `'U15_INPUTS/N-MATCH2'` | `'Baseline-matching'` | `(0, 2)` | `((1, 1),)` | `2` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":2,"D":2,"U":[0,2],"y":[[1,1]]}\n',)` | `85` | `'96090bb08237c7d05fef1d49a05aa757b28a58df262dc24d17466ceb183301a8'` |
+| `'BASE-EVEN-UP'` | `'U15_INPUTS/N-EVEN-UPGRADE'` | `'Baseline-even'` | `(0,)` | `((0, 3),)` | `6` | `6` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":6,"U":[0],"y":[[0,3]]}\n',)` | `83` | `'1aafa6b8037d90f0edb42207ba7951bb8a6d98930198343d735e45c600c87e85'` |
+| `'BASE-ODD-UP'` | `'U15_INPUTS/N-ODD-UPGRADE-ZERO'` | `'Baseline-odd-ge3'` | `(0,)` | `((0, 2),)` | `4` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":4,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'123a9074ef7dfb75b529d1c94a6f0c0fac7cd6ad5a5248a77543a6bc9a19f755'` |
+| `'BASE-EVEN-PRIORITY'` | `'U15_INPUTS/N-EVEN-PRIORITY'` | `'Baseline-even'` | `(2,)` | `((1, 1), (2, 2))` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[2],"y":[[1,1],[2,2]]}\n',)` | `89` | `'39967cc4c37d7261c344e6db554c8cb6cb1b5048844017b19b95e10944a4b784'` |
+| `'BASE-ODD-PRIORITY'` | `'U15_INPUTS/N-ODD-PRIORITY'` | `'Baseline-odd-ge3'` | `(1,)` | `((0, 3), (2, 1))` | `8` | `6` | `('{"format":"exactfrac-certificate/1","empty":false,"N":8,"D":6,"U":[1],"y":[[0,3],[2,1]]}\n',)` | `89` | `'b30a614d08f92c84de379ca4e691d48d0f9b8b7ca07702ab12125cc7e236f2b4'` |
+| `'BASE-LATER'` | `'U15_INPUTS/N-H2-LATER-SPLIT'` | `'Baseline-unit-degree2'` | `(3,)` | `((1, 1), (2, 1))` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[3],"y":[[1,1],[2,1]]}\n',)` | `89` | `'bd3044eba33baf1c2ec209a8ac06eda15929ebd8bee0f9fe5ae12d2e3c077fb9'` |
+| `'L0'` | `'U15_INPUTS/N-L0-WINNER'` | `'L0'` | `(1,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[1],"y":[[0,2]]}\n',)` | `83` | `'3b96e87b8156904ea18e821a717f34b116ab9af6cd3eae64a09d6595b5d52321'` |
+| `'L1'` | `'U15_INPUTS/N-L1-WINNER'` | `'L1'` | `(1,)` | `((0, 4),)` | `8` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":8,"D":4,"U":[1],"y":[[0,4]]}\n',)` | `83` | `'b706645fb9b3848a3bd626cbe9b24f2f57e22f49a1d6a65df3442a4c1b8b8c15'` |
+| `'L1-ZERO-OMIT'` | `'U15_INPUTS/N-SEED002-GLOBAL'` | `'L1'` | `(0, 1)` | `((2, 1),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0,1],"y":[[2,1]]}\n',)` | `85` | `'b98ce78ac3e0153663c6e4f9497d8708086df9f292b697e70e06d5ada3a4eb94'` |
+| `'H0'` | `'U15_INPUTS/N-H0-WINNER'` | `'H0'` | `(0, 1)` | `()` | `8` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":8,"D":2,"U":[0,1],"y":[]}\n',)` | `80` | `'0be1968964874e62868b5077071edecc18e6bb62c3afc3fa08d65c46276d7541'` |
+| `'H1'` | `'U15_INPUTS/N-H1-WINNER'` | `'H1'` | `(0, 1)` | `((1, 1),)` | `10` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":10,"D":2,"U":[0,1],"y":[[1,1]]}\n',)` | `86` | `'ba7661b385dc0509f49f82796dc2d38e4b2f85664bc0cb3a5a76749689090999'` |
+| `'H2-ONE'` | `'U15_INPUTS/C002'` | `'H2'` | `(0,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` |
+| `'H2-SPLIT'` | `'U15_INPUTS/N-H2-LATER-SPLIT'` | `'H2'` | `(3,)` | `((0, 1), (1, 1))` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[3],"y":[[0,1],[1,1]]}\n',)` | `89` | `'5f997470c8ba272af3b8b368242b70d989d066e1293b60baf20470b0d84cea2e'` |
+| `'H2-LOSER'` | `'U15_INPUTS/N-H2-SPLIT-LOSER'` | `'H2'` | `(0,)` | `((0, 1), (1, 1))` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,1],[1,1]]}\n',)` | `89` | `'2775764e092165beb2d87e0e9dab0fa5ac8b8b5ee6c52ed5a46b93085f5a64bd'` |
+| `'FULL'` | `'U15_INPUTS/N-FULL-H0'` | `'H0-full'` | `(0, 1, 2)` | `()` | `12` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":12,"D":2,"U":[0,1,2],"y":[]}\n',)` | `83` | `'6462399543b6dbf21611380143eaab1a0da244f886ddb8457bbcdadcc2f2dd55'` |
+| `'TIE-SMALL'` | `'U15_INPUTS/C020'` | `'L0-tie'` | `(0,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` |
+| `'TIE-LARGE'` | `'U15_INPUTS/C020'` | `'L0-tie'` | `(0, 2)` | `((1, 2),)` | `8` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":8,"D":4,"U":[0,2],"y":[[1,2]]}\n',)` | `85` | `'c395be391b40de517e4593a038ef1c01dc3c7c902ab7ce3ef6db7f92c420e02d'` |
+| `'DISCONNECTED'` | `'U15_INPUTS/N-DISCONNECTED'` | `'later-original-ref'` | `(4,)` | `((3, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[4],"y":[[3,2]]}\n',)` | `83` | `'acebf634b7da0907ea2d6efe1849ca52cbd66206411516c694f6d640842d6a93'` |
+| `'MIXED-LABELS'` | `'U15_INPUTS/N-LABEL-MIX'` | `'Baseline-even'` | `(2,)` | `((1, 1), (2, 2))` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[2],"y":[[1,1],[2,2]]}\n',)` | `89` | `'39967cc4c37d7261c344e6db554c8cb6cb1b5048844017b19b95e10944a4b784'` |
+| `'SPARSE-GAP'` | `'U17_INPUTS/GAP'` | `'sparse-gap-local'` | `(2, 5)` | `((2, 1), (4, 1))` | `4` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":4,"U":[2,5],"y":[[2,1],[4,1]]}\n',)` | `91` | `'dc73ad8ad845f04ddd347fbd3b90bd9659bed00e8b83f791b17e98654eb2c2ef'` |
+| `'INTERIOR'` | `'U17_INPUTS/INTERIOR'` | `'nonendpoint-suboptimal'` | `(0,)` | `((0, 2),)` | `4` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":4,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'123a9074ef7dfb75b529d1c94a6f0c0fac7cd6ad5a5248a77543a6bc9a19f755'` |
+| `'UTF8'` | `'U17_INPUTS/UTF8'` | `'H0-full'` | `(0, 1, 2)` | `()` | `6` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":2,"U":[0,1,2],"y":[]}\n',)` | `82` | `'2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9'` |
+| `'BIG-COUNTS'` | `'U17_INPUTS/BIG-COUNTS'` | `'Baseline-even'` | `(0,)` | `((0, ('sym', 'Tm1')),)` | `('sym', 'twoTm2')` | `('sym', 'twoTm2')` | `('{"format":"exactfrac-certificate/1","empty":false,"N":1', ('repeat', '9', 4799), '8,"D":1', ('repeat', '9', 4799), '8,"U":[0],"y":[[0,', ('repeat', '9', 4800), ']]}\n')` | `14482` | `'62cfebb06f2603283409d8189ea9af42f78c7efe7296be69be20d9998953a516'` |
+| `'BIG-ZERO'` | `'U17_INPUTS/BIG-ZERO'` | `'H0-local-zero'` | `(0,)` | `()` | `0` | `('sym', 'T')` | `('{"format":"exactfrac-certificate/1","empty":false,"N":0,"D":1', ('repeat', '0', 4800), ',"U":[0],"y":[]}\n')` | `4878` | `'f93cd513170b3908c865cd2a1e712d10024b41c513cf7e3143edc5af4e3f1026'` |
+| `'BIG-N'` | `'U17_INPUTS/BIG-N'` | `'H0-full'` | `(0, 1)` | `()` | `('sym', 'twoT')` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":2', ('repeat', '0', 4800), ',"D":2,"U":[0,1],"y":[]}\n')` | `4880` | `'bcb57652228e47bde549706f5fd3ac62b9bcd538ab2b17e07984039f29748fb5'` |
+| `'BIG-LABEL'` | `'U17_INPUTS/BIG-LABEL'` | `'H2'` | `(0,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` |
+
+### Fixture table: U17_WITNESS_MATH
+
+| key | s_e_b_Y | comparison_to_global |
+| --- | --- | --- |
+| `'EMPTY'` | `None` | `0` |
+| `'ZERO'` | `(3, 0, 3, 0)` | `-1` |
+| `'BASE-EVEN'` | `(2, 0, 3, 3)` | `0` |
+| `'BASE-ODD'` | `(3, 0, 4, 4)` | `0` |
+| `'BASE-UNIT'` | `(1, 0, 3, 2)` | `0` |
+| `'BASE-MATCH'` | `(2, 0, 2, 1)` | `0` |
+| `'BASE-EVEN-UP'` | `(4, 0, 4, 3)` | `0` |
+| `'BASE-ODD-UP'` | `(3, 0, 3, 2)` | `0` |
+| `'BASE-EVEN-PRIORITY'` | `(2, 0, 4, 3)` | `-1` |
+| `'BASE-ODD-PRIORITY'` | `(3, 0, 4, 4)` | `-1` |
+| `'BASE-LATER'` | `(1, 0, 3, 2)` | `0` |
+| `'L0'` | `(1, 0, 2, 2)` | `0` |
+| `'L1'` | `(1, 0, 5, 4)` | `0` |
+| `'L1-ZERO-OMIT'` | `(2, 1, 2, 1)` | `0` |
+| `'H0'` | `(3, 4, 2, 0)` | `0` |
+| `'H1'` | `(2, 4, 3, 1)` | `0` |
+| `'H2-ONE'` | `(1, 0, 2, 2)` | `0` |
+| `'H2-SPLIT'` | `(1, 0, 3, 2)` | `0` |
+| `'H2-LOSER'` | `(1, 0, 2, 2)` | `-1` |
+| `'FULL'` | `(3, 6, 0, 0)` | `0` |
+| `'TIE-SMALL'` | `(1, 0, 2, 2)` | `0` |
+| `'TIE-LARGE'` | `(3, 2, 2, 2)` | `0` |
+| `'DISCONNECTED'` | `(1, 0, 2, 2)` | `0` |
+| `'MIXED-LABELS'` | `(2, 0, 4, 3)` | `-1` |
+| `'SPARSE-GAP'` | `(3, 0, 6, 2)` | `-1` |
+| `'INTERIOR'` | `(3, 0, 6, 2)` | `-1` |
+| `'UTF8'` | `(3, 3, 0, 0)` | `0` |
+| `'BIG-COUNTS'` | `(('sym', 'T'), 0, ('sym', 'T'), ('sym', 'Tm1'))` | `0` |
+| `'BIG-ZERO'` | `(('sym', 'Tp1'), 0, ('sym', 'Tp1'), 0)` | `-1` |
+| `'BIG-N'` | `(3, ('sym', 'T'), 0, 0)` | `0` |
+| `'BIG-LABEL'` | `(1, 0, 2, 2)` | `0` |
+
+## ORACLE-129 — Independent byte-only route and adversarial inputs
+
+Private independent_wire.verify accepts ONLY (instance_bytes,certificate_bytes),
+validates the complete canonical active instance FIRST, then certificate grammar,
+then original U/edge references, admissibility and both literal raw equalities.
+No exactfrac imports, production object, parser, serializer, validator, expected sums,
+production witness helper or optimality flag enters that function. A fresh subprocess
+blocks all exactfrac and exactfrac_verify imports, checks sys.modules, and exercises it
+with only byte pairs. Phase D integrates a test-only implementation in the single new
+test file; Unit 18 independently implements its own production decoder/checker later.
+
+Instance JSON parsing is duplicate-decoded-key aware before dictionary collapse,
+UTF-8 only, no BOM, exact signed integer tokens (labels may be negative), no -0,
+fractions/exponents/nonfinite values or hidden decimal cutoff. Validate exact keys,
+types/labels, positive q/f, sorted oriented unique edges, nonempty support and active
+condition; never sort/aggregate/repair. Certificate parsing first matches its exact
+lexical grammar; reordered/escaped/duplicate keys cannot match. Semantic checking
+then recomputes s,e,Y and literal N,D; it does not re-encode the object as a grammar test.
+MemoryError/resource failure remains operational and is not converted to invalid data.
+
+Wire operations below act on the indicated stream starting with its base fixture.
+'set'/'delete' use the exact path of dict keys/list indices; re-encode the mutated
+primitive object in its existing key order, retaining the original terminal LF if any.
+'replace' requires exactly one occurrence of the literal old UTF-8 bytes. 'prefix',
+'suffix', 'prefix_hex', 'strip_final_lf', and 'reverse_keys' have their literal meanings.
+'quote_field' quotes the whole unquoted nonnegative number token of that field.
+'pretty' uses ordinary JSON object whitespace; 'utf8_strings' emits decoded non-ASCII
+labels as UTF-8 instead of ASCII escapes. Mutation transport is not a validator or
+production serializer. Every expanded bad/accepted stream is length/SHA-bound below.
+
+Rejection reason families explain the targeted obligation, not stable production error
+messages. The six equal_ratio cases are explicitly cross-multiplied before rejection.
+C-ODD-TOO-SMALL keeps schema N=0,D=1 so the odd-total-1 minimum guard is reached before
+literal denominator checking. C-EVEN-TOTAL uses total 4, with literal N=2,D=3, isolating
+parity. Malformed bytes belong to the TEST-ONLY route now and Unit 18 later; Unit 17's
+object serializer never decodes them or recovers duplicate keys erased by a caller.
+
+### Fixture table: U17_WIRE_REJECT
+
+| key | base_byte_fixture | stream | operations | reason_family | equal_ratio | length | sha256 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `'C-BOM'` | `'H2-ONE'` | `'certificate'` | `(('prefix', '\ufeff'),)` | `'BOM'` | `False` | `86` | `'0afea1ab205bc3cef58a1e53cf07763060bb934cdcbf2dd2a665892d70342916'` |
+| `'C-BAD-UTF8'` | `'H2-ONE'` | `'certificate'` | `(('prefix_hex', 'ff'),)` | `'UTF-8'` | `False` | `84` | `'54b060b3365d26e7b8f1bb7deee7eb0cf0daaf593ba77d337cb7dad7579ecf1d'` |
+| `'C-NO-LF'` | `'H2-ONE'` | `'certificate'` | `(('strip_final_lf',),)` | `'LF'` | `False` | `82` | `'5da5a93e3358a64193170968b7e746ff0ddc15d0985f0631a03c3a5691b65223'` |
+| `'C-DOUBLE-LF'` | `'H2-ONE'` | `'certificate'` | `(('suffix', '\n'),)` | `'LF'` | `False` | `84` | `'343882f963e97fb479eba4fa6bc3cf2918c6a88f4b92d94af7de6b7c22aa1bbe'` |
+| `'C-CRLF'` | `'H2-ONE'` | `'certificate'` | `(('replace', '}\n', '}\r\n'),)` | `'LF'` | `False` | `84` | `'ec09d1da2eae05c8d9d4106f9842481299f58c5a65cd91cbe098fc7622ec283b'` |
+| `'C-LEADING-SPACE'` | `'H2-ONE'` | `'certificate'` | `(('prefix', ' '),)` | `'whitespace'` | `False` | `84` | `'a08262ec32e1dc7f648b73f94bf490dc4cb7cebe846ee3c2740317cf4742319a'` |
+| `'C-INTERNAL-SPACE'` | `'H2-ONE'` | `'certificate'` | `(('replace', ',"empty"', ', "empty"'),)` | `'whitespace'` | `False` | `84` | `'9d655ab9ef2b26e8b320873b7fef4bac19f6d35bf411c7e167a38f5f118285f4'` |
+| `'C-TRAILING-SPACE'` | `'H2-ONE'` | `'certificate'` | `(('replace', '}\n', '} \n'),)` | `'whitespace'` | `False` | `84` | `'6b8dad3cde9bf074f15b34fcfbc8a97201baaf6f900868d2e4d7e334a9c87a1d'` |
+| `'C-TRAILING-DATA'` | `'H2-ONE'` | `'certificate'` | `(('suffix', 'x'),)` | `'trailing data'` | `False` | `84` | `'24fe578929cff22d80e9e992938267d1369ed3e641c20cbb1354d98f32a06ad1'` |
+| `'C-SECOND-DOC'` | `'H2-ONE'` | `'certificate'` | `(('suffix', '{}'),)` | `'multiple documents'` | `False` | `85` | `'3cc630a3c53c9f66fbba8137e49c06ef9ee3fdfda292f063252eb69a3cbcd238'` |
+| `'C-DUP-KEY'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":4,"N":4'),)` | `'duplicate key'` | `False` | `89` | `'69182baa2bc4dc53df7a9a03bf4b003395d0ecf3c815d5b00d5a9ef6213de404'` |
+| `'C-DUP-ESC-KEY'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":4,"\\u004e":4'),)` | `'duplicate decoded key'` | `False` | `94` | `'14a96f9deeef666a5eec8a7fb6854a654018d218af6730f5cf50067e1e62d9f6'` |
+| `'C-ESC-KEY'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"format"', '"\\u0066ormat"'),)` | `'escaped key'` | `False` | `88` | `'ef38d65d14776e62307d4461d49ad6c7789705a8ab04843395dc7a595365461e'` |
+| `'C-ESC-TAG'` | `'H2-ONE'` | `'certificate'` | `(('replace', 'certificate/1', 'certificate\\/1'),)` | `'escaped tag'` | `False` | `84` | `'65ccdcb2ac57e70b87a51d7a180e4292bd1955881b4fa0ae0171e51b2b44113b'` |
+| `'C-ORDER'` | `'H2-ONE'` | `'certificate'` | `(('reverse_keys',),)` | `'field order'` | `False` | `83` | `'9a44dad7d157be1c1bf54412bda0001e3738b607d909ce1e4b0671ecbe0ad89d'` |
+| `'C-VERSION'` | `'H2-ONE'` | `'certificate'` | `(('set', ('format',), 'exactfrac-certificate/2'),)` | `'format version'` | `False` | `83` | `'4dff402a75611f8c1cd72b52e9cd76a72a7909f22c417730c0361fc2fbe1dce2'` |
+| `'C-N-FLOAT'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":4.0'),)` | `'noninteger token'` | `False` | `85` | `'d908bb09485142faeac10e3d0532abb2a4998f3c600cd07df6d6958e609b831e'` |
+| `'C-N-EXPONENT'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":4e0'),)` | `'noninteger token'` | `False` | `85` | `'4c359048ca1009ce43490b945687cb132bdb53ccf6f54af32e19414a315521bf'` |
+| `'C-N-NAN'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":NaN'),)` | `'nonfinite'` | `False` | `85` | `'5b66f24f617dc2aeb1876d4b42ab13aa50ec49f9fb676759e4a0ada6e0a27026'` |
+| `'C-N-INFINITY'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":Infinity'),)` | `'nonfinite'` | `False` | `90` | `'d452f7f9872d53bea0a69d1a0e2015fffdfb7979a9dd2844ef6caa5e4cc7e0ad'` |
+| `'C-N-PLUS'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":+4'),)` | `'non-JSON integer'` | `False` | `84` | `'17da3e3f1eb2b949baca9627da6aa73f87d1475c980c94a8e361e06e2f7e69e0'` |
+| `'C-N-HEX'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":0x4'),)` | `'non-JSON integer'` | `False` | `85` | `'2ec463177040ca4fe1ad742ca255347dc4203333ece19a5c23bcd252c884f0ae'` |
+| `'C-N-LEADING-ZERO'` | `'H2-ONE'` | `'certificate'` | `(('replace', '"N":4', '"N":04'),)` | `'leading zero'` | `False` | `84` | `'183238a681fb5016ec048dbf0a3c2a3ca5063d90c64b8f348f5f830c3bcaecab'` |
+| `'C-N-QUOTE'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), '4'),)` | `'quoted number'` | `False` | `85` | `'e504229fef5efa45967a9d5df1de5b4b90a9e5e81f30fea965164043eba62a9c'` |
+| `'C-N-BOOL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), True),)` | `'integer type'` | `False` | `86` | `'ead64a2aabf98e6df84a3d0aa4ff375fbe8418fed24505b124934fb43c98fc2e'` |
+| `'C-D-BOOL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('D',), True),)` | `'integer type'` | `False` | `86` | `'2db52dde67ed4b64304ef013849da3cb7277e25b5a7d4428163711eeca5ae1d7'` |
+| `'C-EMPTY-INT'` | `'H2-ONE'` | `'certificate'` | `(('set', ('empty',), 0),)` | `'boolean type'` | `False` | `79` | `'0acbb07d553b1c65bc058227c449af3c50a697b897bfcc1ed3749cc07d1b792e'` |
+| `'C-FORMAT-NULL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('format',), None),)` | `'format type'` | `False` | `62` | `'5dec8d51efceea0ed3f5c55dcecdf4a5124dd366a861b655bbf0e1179600f5f0'` |
+| `'C-N-NEG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), -4),)` | `'nonnegative N'` | `False` | `84` | `'8b488b20e2b48962bda7bfa6a295208340d79e0a5f4a802d4bd599ad30f08971'` |
+| `'C-D-ZERO'` | `'H2-ONE'` | `'certificate'` | `(('set', ('D',), 0),)` | `'positive D'` | `False` | `83` | `'fe25eec264be7efcd4083c6d118ba52177feac5c4fb68db984231b08cc549408'` |
+| `'C-D-NEG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('D',), -2),)` | `'positive D'` | `False` | `84` | `'6e2a38847982e5da4494e344fe71ad1d1099ecd76a2eafa4c4dd0f50d140c6a2'` |
+| `'C-U-EMPTY'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), []),)` | `'nonempty shore'` | `False` | `82` | `'98e70eec28b35d2816c052702fc82a3fdf2dc7dd09d48ef1d79c1e3f6e8d13b3'` |
+| `'C-U-MASK'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), 1),)` | `'external U form'` | `False` | `81` | `'9eaf46e9a3d7ca4eb83147d8bd6c5aef043d968702656f85384639ec950dcc92'` |
+| `'C-U-LABEL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), ['0']),)` | `'vertex type'` | `False` | `85` | `'da6cd576b18c12d47a11e29ca49f5f57826d50d8b6aec5807192add686c01c81'` |
+| `'C-U-BOOL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), [True]),)` | `'vertex type'` | `False` | `86` | `'5fbd7334ffd8d4df105b619871d4d27e932b755be39d27c5452afd3e390b56fc'` |
+| `'C-U-NEG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), [-1]),)` | `'vertex range'` | `False` | `84` | `'7d655bc5339bd5e8e866f91910af6b0883fa21b48a8ed13ca1b970e74aee9606'` |
+| `'C-U-HIGH'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), [2]),)` | `'vertex range'` | `False` | `83` | `'38ba566711c46c7c303bf1cd81045664427fc9bd92e399f94b80a49bca5bf32a'` |
+| `'C-U-DUP'` | `'H2-ONE'` | `'certificate'` | `(('set', ('U',), [0, 0]),)` | `'strict U order'` | `False` | `85` | `'af7cc9f4788d1a271585590bc59c21829f02f5985fd59bd3aa3176131c4a9a37'` |
+| `'C-Y-NULL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), None),)` | `'sparse list'` | `False` | `80` | `'21cd3af36e19f9121d0d477871d705b7449ab327292b685b25c9e4985f9e92ac'` |
+| `'C-Y-SHORT'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0]]),)` | `'sparse shape'` | `False` | `81` | `'f674f188cc3a452618c196d6f6a0cb13e5d12a2498d57c759fd90de4f63dd0b4'` |
+| `'C-Y-LONG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, 2, 0]]),)` | `'sparse shape'` | `False` | `85` | `'68d02bf3c63da0b04325f6afc33b7dc9bdebf10a4875ada0c278ef888ccf1c39'` |
+| `'C-Y-ZERO'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, 0]]),)` | `'positive sparse count'` | `False` | `83` | `'7d0c3a476b9350a65b1bc805463c14169f5cb12b9e489b26e3b268e5c72a5e93'` |
+| `'C-Y-NEG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, -1]]),)` | `'positive sparse count'` | `False` | `84` | `'510c09d8905fc10d19107e12afab691bb7e0714c31ed3d1a489e6fb7f8884bfb'` |
+| `'C-Y-COUNT-BOOL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, True]]),)` | `'exact count type'` | `False` | `86` | `'e756e36af0f3c07cf345a3af57ae56fe0f6017937d6c75acbafe26d26bd78a5c'` |
+| `'C-Y-REF-BOOL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[False, 2]]),)` | `'exact reference type'` | `False` | `87` | `'df1a3a6194ded785957f20c419cb2e8998ab12836cc8a70763ea7dcb0a5815e7'` |
+| `'C-Y-REF-HIGH'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[1, 2]]),)` | `'reference range'` | `False` | `83` | `'443f5b8818a864ba361b23b8040c4805d7a5d8509bf53cd9cfffaddac7fb5f17'` |
+| `'C-Y-REF-NEG'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[-1, 2]]),)` | `'reference range'` | `False` | `84` | `'ce77a91da4140daa7117de103c3ed8d9d6f979f6ca3fd6542d00433412d6f80b'` |
+| `'C-Y-OVER'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, 3]]),)` | `'multiplicity bound'` | `False` | `83` | `'c16724a8d3fc254367d907cbcea4169625c7c5cbba95f13ab35181d1832f56e2'` |
+| `'C-Y-DUP'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, 1], [0, 1]]),)` | `'strict reference order'` | `False` | `89` | `'7f954fb6e656303dba2ea40acdee08dc50a2fad7c7d1ae0cfbdb8c6621d69b81'` |
+| `'C-FALSE-EMPTY'` | `'H2-ONE'` | `'certificate'` | `(('set', ('empty',), True), ('set', ('N',), 0), ('set', ('D',), 1), ('delete', ('U',)), ('delete', ('y',)))` | `'Q != 1'` | `False` | `62` | `'96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde'` |
+| `'C-EVEN-TOTAL'` | `'ZERO'` | `'certificate'` | `(('set', ('y',), [[0, 1]]), ('set', ('N',), 2), ('set', ('D',), 3))` | `'odd admissibility'` | `False` | `83` | `'2ad9bebccfbc86ab5f91d68fb107df88c674aefb64e3ea4e57868c01ec91ce76'` |
+| `'C-ODD-TOO-SMALL'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), []), ('set', ('N',), 0), ('set', ('D',), 1))` | `'minimum admissibility'` | `False` | `78` | `'448f50a40094b3fb4aa7443a410c8516fc696f9d2e4a2ae819bf8ec48aba08f9'` |
+| `'C-WRONG-N'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), 6),)` | `'literal N'` | `False` | `83` | `'8d2e108488608737728ab417130cd90f0f4beab33a54a19ccdd5caf27398b575'` |
+| `'C-WRONG-D'` | `'H2-ONE'` | `'certificate'` | `(('set', ('D',), 4),)` | `'literal D'` | `False` | `83` | `'123a9074ef7dfb75b529d1c94a6f0c0fac7cd6ad5a5248a77543a6bc9a19f755'` |
+| `'C-MISSING-format'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('format',)),)` | `'missing key'` | `False` | `48` | `'dece27b73cecdbbedf4a242bd5b886bc20d6111969d704e647350f431ddec5fb'` |
+| `'C-MISSING-empty'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('empty',)),)` | `'missing key'` | `False` | `69` | `'e0487f5513429f4f0eefb562f2414cc4eaa6a7643b836660af9379b75c05ba61'` |
+| `'C-MISSING-N'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('N',)),)` | `'missing key'` | `False` | `77` | `'396393adb65aa289e8165665db558babe9816bbc4692b1a04893ff098473629b'` |
+| `'C-MISSING-D'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('D',)),)` | `'missing key'` | `False` | `77` | `'6e1c605a1ecac49c93f10994397e1c6430c3d26e23676129422927ab19abaeb5'` |
+| `'C-MISSING-U'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('U',)),)` | `'missing key'` | `False` | `75` | `'5db7b3f2c21ed9827ab5b7c561d385c75f30f950e97d8f831560d840d1a12ded'` |
+| `'C-MISSING-y'` | `'H2-ONE'` | `'certificate'` | `(('delete', ('y',)),)` | `'missing key'` | `False` | `71` | `'f8253e501a2ad691ab8e46a8756ea69dd7c8a68f8e13eb03fac9cba655f877b0'` |
+| `'C-EXTRA-digest'` | `'H2-ONE'` | `'certificate'` | `(('set', ('digest',), None),)` | `'unknown envelope field'` | `False` | `97` | `'7e48f03aa487fa7ad3e697048ce6b08f84851b0a6b9293ca7155ef82c52d44f8'` |
+| `'C-EXTRA-instance'` | `'H2-ONE'` | `'certificate'` | `(('set', ('instance',), None),)` | `'unknown envelope field'` | `False` | `99` | `'044c9108f5257cb0fb98dea577794605a372384087b2c490837a7d922238b5d5'` |
+| `'C-EXTRA-instance_id'` | `'H2-ONE'` | `'certificate'` | `(('set', ('instance_id',), None),)` | `'unknown envelope field'` | `False` | `102` | `'e5798cca58d39d85ca68982ae0fcaf6650b85948a36440e005d2548e7db38180'` |
+| `'C-EXTRA-schema_version'` | `'H2-ONE'` | `'certificate'` | `(('set', ('schema_version',), None),)` | `'unknown envelope field'` | `False` | `105` | `'0ace6b68c2b69e6bf127662fffb1263bb3a1a6d3b2ce10442f9db9f3a6b9141e'` |
+| `'C-EXTRA-witness'` | `'H2-ONE'` | `'certificate'` | `(('set', ('witness',), None),)` | `'unknown envelope field'` | `False` | `98` | `'640be661c46194fbd2db296b13b4e7bf13b9803bef5282547cb33a665d28772f'` |
+| `'C-EXTRA-branch'` | `'H2-ONE'` | `'certificate'` | `(('set', ('branch',), None),)` | `'unknown envelope field'` | `False` | `97` | `'7439b646cdf4e8791d86dc546ece0d020d8d8afbd513e8fa6661137c38f7df8d'` |
+| `'C-EXTRA-stats'` | `'H2-ONE'` | `'certificate'` | `(('set', ('stats',), None),)` | `'unknown envelope field'` | `False` | `96` | `'03414d05816835cbc08b9e08fc8a6062ae8fe1f6e77ce4bb0c48341b97480f6d'` |
+| `'C-EXTRA-metadata'` | `'H2-ONE'` | `'certificate'` | `(('set', ('metadata',), None),)` | `'unknown envelope field'` | `False` | `99` | `'6c8b2feb811fdab7d868acb8fdad55ab121be793a37b51853e01595569fb52b0'` |
+| `'C-EXTRA-labels'` | `'H2-ONE'` | `'certificate'` | `(('set', ('labels',), None),)` | `'unknown envelope field'` | `False` | `97` | `'acf8d700248353d82a36804392e8782988fdbebe8ace6d9a595d5cd5245ecd07'` |
+| `'C-EXTRA-elapsed_ns'` | `'H2-ONE'` | `'certificate'` | `(('set', ('elapsed_ns',), None),)` | `'unknown envelope field'` | `False` | `101` | `'addce93b8b420d8e7aba9da6b364aca7ffed1cc5d4371f327a8a762d51651af2'` |
+| `'C-RESCALE-UP'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), 8), ('set', ('D',), 4))` | `'literal raw pair'` | `True` | `83` | `'db0e3e31064e80b1416473f5d18f622fa5ac0d60e8d28781bc6d1cf2f53697ca'` |
+| `'C-RESCALE-DOWN'` | `'H2-ONE'` | `'certificate'` | `(('set', ('N',), 2), ('set', ('D',), 1))` | `'literal raw pair'` | `True` | `83` | `'d39756690c66fe0359d3278fdd82ddc02fad572943cd4af1b1c3408881966242'` |
+| `'C-TIE-RAW-SWAP'` | `'TIE-LARGE'` | `'certificate'` | `(('set', ('N',), 4), ('set', ('D',), 2))` | `'raw pair from another valid tied witness'` | `True` | `85` | `'ab6bbd4912345dda62a6a431b1ca469cbca06c2097e3028719be2fd3f82d76fb'` |
+| `'C-ZERO-RESCALE'` | `'ZERO'` | `'certificate'` | `(('set', ('D',), 4),)` | `'zero raw denominator'` | `True` | `78` | `'2adebae2cacb0a54c8089f7a6ca232b7056da43bfff87465004306604117c904'` |
+| `'C-ZERO-REDUCE'` | `'ZERO'` | `'certificate'` | `(('set', ('D',), 1),)` | `'zero raw denominator'` | `True` | `78` | `'448f50a40094b3fb4aa7443a410c8516fc696f9d2e4a2ae819bf8ec48aba08f9'` |
+| `'C-ZERO-MINUS0'` | `'ZERO'` | `'certificate'` | `(('replace', '"N":0', '"N":-0'),)` | `'negative zero'` | `False` | `79` | `'654209ae4f2f330f5989754e2bbbb174c64573b72311c8b063e9346a92c802dc'` |
+| `'C-U-DESC'` | `'TIE-LARGE'` | `'certificate'` | `(('set', ('U',), [2, 0]),)` | `'strict U order'` | `False` | `85` | `'54a876220c67d6160f51753f8b1f8172b596b97813176323cdc23f9fb2c3856e'` |
+| `'C-Y-DESC'` | `'SPARSE-GAP'` | `'certificate'` | `(('set', ('y',), [[4, 1], [2, 1]]),)` | `'strict reference order'` | `False` | `91` | `'b649aadbee09338747998f5795b1e6feda1af888bf8be626ce7726c8bca447b3'` |
+| `'C-Y-EXTERNAL'` | `'SPARSE-GAP'` | `'certificate'` | `(('set', ('y',), [[0, 1], [4, 1]]),)` | `'noncrossing external edge'` | `False` | `91` | `'cad772bd597b04fbc4f230df6fbc25852f0aa7d078aab8e56c70c2b7c74d69a7'` |
+| `'C-Y-INTERNAL'` | `'H0'` | `'certificate'` | `(('set', ('y',), [[0, 1]]),)` | `'noncrossing internal edge'` | `False` | `85` | `'6b8469b52d6ba6f597da9b5d2b923821c9e6bff2a27f7d031e90570cf69c3838'` |
+| `'C-AUX-REF'` | `'DISCONNECTED'` | `'certificate'` | `(('set', ('y',), [[0, 2]]),)` | `'wrong original-coordinate edge reference'` | `False` | `83` | `'c2c2e12a09346d9d898b22b7cef3f6993943dcd0d0b1a31fd8db1a7ed32c9d7d'` |
+| `'C-EMPTY-U-null'` | `'EMPTY'` | `'certificate'` | `(('set', ('U',), None),)` | `'Empty payload forbidden'` | `False` | `71` | `'21d60d773e0b4f4d8f7565dbab0c5a3671245201258cffc914abae37d89167f9'` |
+| `'C-EMPTY-U-list'` | `'EMPTY'` | `'certificate'` | `(('set', ('U',), []),)` | `'Empty payload forbidden'` | `False` | `69` | `'2b4f5eb995b72db695a1cc4585360970cb0ba04043c5eb8add9b14371aa5eca5'` |
+| `'C-EMPTY-y-null'` | `'EMPTY'` | `'certificate'` | `(('set', ('y',), None),)` | `'Empty payload forbidden'` | `False` | `71` | `'78ba4f41ce45c7e62d035df1353d92d11da32c4e11a6fb7b2ce8044e5062de97'` |
+| `'C-EMPTY-y-list'` | `'EMPTY'` | `'certificate'` | `(('set', ('y',), []),)` | `'Empty payload forbidden'` | `False` | `69` | `'afbc2f22adc86fd78eb078dfa8924447ae4ba8d3d3e9933cacbda9d335c5bec8'` |
+| `'C-EMPTY-RESCALE'` | `'EMPTY'` | `'certificate'` | `(('set', ('D',), 2),)` | `'literal Empty pair'` | `True` | `62` | `'b561e18a6378da80cbbbc2a045b96b6546af867d959b6ab1b1dd2fccee05a987'` |
+| `'C-EMPTY-POS-N'` | `'EMPTY'` | `'certificate'` | `(('set', ('N',), 1),)` | `'literal Empty pair'` | `False` | `62` | `'59ef20a7b769ffd4c6142480168a6e93ec0544ecba7e37ab37324b49242fdead'` |
+| `'C-ZERO-FLAG'` | `'ZERO'` | `'certificate'` | `(('set', ('empty',), True), ('set', ('D',), 1), ('delete', ('U',)), ('delete', ('y',)))` | `'false Empty at Q>1'` | `False` | `62` | `'96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde'` |
+| `'C-BIG-COUNT-CHANGE'` | `'BIG-COUNTS'` | `'certificate'` | `(('set', ('y', 0, 1), 1),)` | `'raw mismatch or admissibility after changing huge count'` | `False` | `9683` | `'c1c32257c320f7cb39152853fac569c77a7e8464ddd0794a1a3b9415c00a6f9f'` |
+| `'C-BIG-N-QUOTED'` | `'BIG-N'` | `'certificate'` | `(('quote_field', 'N'),)` | `'quoted huge number'` | `False` | `4882` | `'de7001125ba101499358ac466f3122da3d17d1a4e3240e2271796116d4e4a90c'` |
+| `'I-BOM'` | `'H2-ONE'` | `'instance'` | `(('prefix', '\ufeff'),)` | `'BOM'` | `False` | `70` | `'1f739fd15ec6db4c2c8abb271b56c367995239c527554f349d407234f5575dde'` |
+| `'I-BAD-UTF8'` | `'H2-ONE'` | `'instance'` | `(('prefix_hex', 'ff'),)` | `'UTF-8'` | `False` | `68` | `'4347e8d0b5b6903c7f72c7e4fdd2ef87807df162a572055015e7679b3bfe5d99'` |
+| `'I-DUP-KEY'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":2,"n":2'),)` | `'duplicate key'` | `False` | `73` | `'c034da7e59f0a94740508f5e2eb9cea3641af3131658bf254547b180d9ff7486'` |
+| `'I-DUP-DECODED'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":2,"\\u006e":2'),)` | `'duplicate decoded key'` | `False` | `78` | `'07bd7f6a969a7f56489310fa292a0f018d41ae1d87fb0633d1a2652262c88870'` |
+| `'I-SECOND-DOC'` | `'H2-ONE'` | `'instance'` | `(('suffix', '{}'),)` | `'multiple documents'` | `False` | `69` | `'af125ea14266f810ff38f430ed8a14a731607e9350629253a8609b9d5cd2cec4'` |
+| `'I-TRAILING'` | `'H2-ONE'` | `'instance'` | `(('suffix', 'x'),)` | `'trailing garbage'` | `False` | `68` | `'a73a381444b72444eeb5614a3a2d41ecad026f02fcd5f9abc9e49de57c34cb53'` |
+| `'I-VERSION'` | `'H2-ONE'` | `'instance'` | `(('set', ('format',), 'exactfrac-instance/2'),)` | `'format version'` | `False` | `67` | `'40f0d93564952c5ce2b9af327769e250693fbc4cd4a087ada3207a48bb9b8f89'` |
+| `'I-UNKNOWN'` | `'H2-ONE'` | `'instance'` | `(('set', ('certificate',), {}),)` | `'unknown envelope field'` | `False` | `84` | `'c6fbec17a77707852b39d466f25b5525cff5eafdc1ae784488f97b6294423386'` |
+| `'I-N-ZERO'` | `'H2-ONE'` | `'instance'` | `(('set', ('n',), 0),)` | `'positive n'` | `False` | `67` | `'479d641b15627acce8e10f399c03569c1cfb5bce9383c5ba7c03c361d5a161f7'` |
+| `'I-N-BOOL'` | `'H2-ONE'` | `'instance'` | `(('set', ('n',), True),)` | `'integer n'` | `False` | `70` | `'852a447774d7ec47e1c3208e56c6d7e917d6d3a18c0bfb72f3a230ca0b543146'` |
+| `'I-N-STRING'` | `'H2-ONE'` | `'instance'` | `(('set', ('n',), '2'),)` | `'integer n'` | `False` | `69` | `'f3b6a22585d05db11ddb135b8818f9dae8719a1ce53b1f9497a7648a6c1f6f9d'` |
+| `'I-N-FLOAT'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":2.0'),)` | `'noninteger'` | `False` | `69` | `'348b326968a05e37907a04363206303d47dee70d8451890c5f814017e507ac00'` |
+| `'I-N-EXP'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":2e0'),)` | `'noninteger'` | `False` | `69` | `'2f56c1c9d34e2218bf763aa0598188589cb1ee8b7620a9f9cdfa611005fca303'` |
+| `'I-N-PLUS'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":+2'),)` | `'non-JSON token'` | `False` | `68` | `'abf5992bbf25a792d89e83dffcebd9e955bdce551c0b590f5c96369d831ca80c'` |
+| `'I-N-LEADING0'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":02'),)` | `'leading zero'` | `False` | `68` | `'4635228bf45e77f257c89229baabf024f87d943c8a33aa35adde8625bceb5a95'` |
+| `'I-NAN'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":NaN'),)` | `'nonfinite'` | `False` | `69` | `'3ab39f35db6afad56f3d70c571543dba1cf782964e9ad4f31f17babfc66cfdd1'` |
+| `'I-INF'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n":2', '"n":Infinity'),)` | `'nonfinite'` | `False` | `74` | `'b4883444637cbfdc8b4dbfccab6ec137b4671a2804704291441335e4e621b5f9'` |
+| `'I-NEGZERO'` | `'H2-ONE'` | `'instance'` | `(('replace', '[[0,1,2]]', '[[-0,1,2]]'),)` | `'negative zero'` | `False` | `68` | `'45fdb1d8da5d4f180976cd6e52357fcbd81a8c4c08de5efd2e15fb65a9da9682'` |
+| `'I-EDGE-EMPTY'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), []),)` | `'nonempty support'` | `False` | `60` | `'5ed88bb3d3d80afba0e2204a0dd9df91d58ec0ffedece02f806c627fd2132d85'` |
+| `'I-EDGE-NULL'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), None),)` | `'support list'` | `False` | `62` | `'488bdd74d9ac0168a64aa5a09ae576ddf40d622eebd2d42fdd9e5ca0408cf323'` |
+| `'I-EDGE-RECORD-SHAPE'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1]]),)` | `'edge triple'` | `False` | `65` | `'30d51f65a16901dc21d5dee1d93c571e2fe205837776e3cb8eca9ca987a1a5cf'` |
+| `'I-EDGE-RECORD-STRING'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), ['0,1,2']),)` | `'edge triple'` | `False` | `67` | `'bcc9e76877b9f5d5937ba3cfc547233e4716271a96107e0e8bc803b1df33df77'` |
+| `'I-LOOP'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 0, 2]]),)` | `'loop'` | `False` | `67` | `'8af46ae6f5c6c32e50b03280e78608f0fa50dc1257fb8dab38e8d63c9ac7fad2'` |
+| `'I-REVERSED'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[1, 0, 2]]),)` | `'orientation'` | `False` | `67` | `'973fdb5651e95d2ef149b7f9eb84e9c353700baa30050994c994960ce18f662e'` |
+| `'I-EDGE-HIGH'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 2, 2]]),)` | `'vertex bound'` | `False` | `67` | `'17f3600675fdcc1aa8b945dcebf4d6bf8b8ae8cfc96849c62a867ead01c4a2ff'` |
+| `'I-EDGE-BOOL'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[False, 1, 2]]),)` | `'edge integer types'` | `False` | `71` | `'e52afbe0d4d34c7ad607c82a088b906ce0c0bc5f52a5eb507574b052d31d8c66'` |
+| `'I-Q-ZERO'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1, 0]]),)` | `'positive q'` | `False` | `67` | `'7035449c34b46be653b15327af7818c2c9accc033f41b03c0180d1fba6c8e0ce'` |
+| `'I-Q-NEG'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1, -1]]),)` | `'positive q'` | `False` | `68` | `'fa4698613281384d64034b3888708d937f508685cd258fb0ba27116018a11579'` |
+| `'I-Q-BOOL'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1, True]]),)` | `'integer q'` | `False` | `70` | `'8381a76509ab2d19ca73fdab49e6da7a88092cb008508a8f29f98663eb45d98f'` |
+| `'I-Q-STRING'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1, '2']]),)` | `'integer q'` | `False` | `69` | `'68f124bba7ae17b265f9fefb140aec4a9efe9ef7f3b913bd4bd9d7559d709ccf'` |
+| `'I-EDGE-DUP'` | `'H2-ONE'` | `'instance'` | `(('set', ('edges',), [[0, 1, 1], [0, 1, 1]]),)` | `'strict edge order/no aggregation'` | `False` | `75` | `'d4d6dd467d465e1ba1f26aa74d667e3755ea89b45724384dd8fad1de9ffd1429'` |
+| `'I-F-SHORT'` | `'H2-ONE'` | `'instance'` | `(('set', ('f',), [1]),)` | `'f length'` | `False` | `65` | `'d874b867e4e7a351aa9afa5a7925e46ba07a64f29a1e120745b07dd738c72655'` |
+| `'I-F-ZERO'` | `'H2-ONE'` | `'instance'` | `(('set', ('f',), [0, 1]),)` | `'positive f'` | `False` | `67` | `'cde7776c32190bdb068569ee7c2847ad2194eca73fb83387b4d8ed2d8b99fc16'` |
+| `'I-F-BOOL'` | `'H2-ONE'` | `'instance'` | `(('set', ('f',), [True, 1]),)` | `'integer f'` | `False` | `70` | `'0ea7ecffbe44f0818901c0525aad69c9b949b8293336eae6e6ced5839ebe3e54'` |
+| `'I-F-NULL'` | `'H2-ONE'` | `'instance'` | `(('set', ('f',), None),)` | `'f list'` | `False` | `66` | `'92c5b2be60b4de9aab1a991f422644b528192e84094012b39bbf1ef13e1f5ba8'` |
+| `'I-INACTIVE'` | `'H2-ONE'` | `'instance'` | `(('set', ('f',), [3, 1]),)` | `'active condition'` | `False` | `67` | `'a3113c5dfcd2bc85864aeb72ed929ae87c8bded7c561a34ff5392e2aa5a2c49d'` |
+| `'I-ISOLATE'` | `'H2-ONE'` | `'instance'` | `(('set', ('n',), 3), ('set', ('f',), [1, 1, 1]))` | `'active excludes isolated vertex'` | `False` | `69` | `'97ad51e24a98288c5026096203ae47918ffcc4f65bc7e81cfe8997277d5bf28d'` |
+| `'I-LABEL-NULL'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), None),)` | `'labels list'` | `False` | `81` | `'2875e1d6ab42392520647f6e06e2c1c88ce623a6974bbede17e6adc85368fe3b'` |
+| `'I-LABEL-SHORT'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), ['a']),)` | `'labels length'` | `False` | `82` | `'b670cc038d637acf7ea4e3335909ede73f4f9561e63a4f29440715c70594250c'` |
+| `'I-LABEL-DUP'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), ['a', 'a']),)` | `'labels distinct'` | `False` | `86` | `'fed07b990af192bd27c42d4fe9dcef680e78cc06027d93bf8b5351ea79ad273f'` |
+| `'I-LABEL-BOOL'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), [True, 'a']),)` | `'label exact type'` | `False` | `87` | `'224f1a5284b193366d903151efe705236bcd318dd0f07f09ea2c6306f123e3cb'` |
+| `'I-LABEL-DICT'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), [{}, 'a']),)` | `'label exact type'` | `False` | `85` | `'2420ccb22aab8de49be56618a96fc4b3a80d5a074e1cbfafd81cb7c87d9db00a'` |
+| `'I-LABEL-NEGZERO'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), [0, 1]), ('replace', '"labels":[0,1]', '"labels":[-0,1]'))` | `'negative zero'` | `False` | `83` | `'038bf28e41c16fd55d7c015720b0c2fa80e4096380610784c6846b212de9ed87'` |
+| `'I-MISSING-format'` | `'H2-ONE'` | `'instance'` | `(('delete', ('format',)),)` | `'missing instance key'` | `False` | `35` | `'0846851e08778ff16ded5afc18a9303e61b8eda926fb345b529ffcf7dfd11e0a'` |
+| `'I-MISSING-n'` | `'H2-ONE'` | `'instance'` | `(('delete', ('n',)),)` | `'missing instance key'` | `False` | `61` | `'1a32e963b599304a8ee9e68eb97f7341dbb2c136ce6e7faa4ae53e9b6b9aa024'` |
+| `'I-MISSING-edges'` | `'H2-ONE'` | `'instance'` | `(('delete', ('edges',)),)` | `'missing instance key'` | `False` | `49` | `'fd4f21d2357e3184f0bf7084c9623b6e9acad87259eebfd581a7d956b77914de'` |
+| `'I-MISSING-f'` | `'H2-ONE'` | `'instance'` | `(('delete', ('f',)),)` | `'missing instance key'` | `False` | `57` | `'7744b273082f758d1e594e36b88beee3f8202691b916870a590ee385233b9b45'` |
+| `'I-UNSORTED'` | `'UTF8'` | `'instance'` | `(('set', ('edges',), [[1, 2, 1], [0, 1, 1], [0, 2, 1]]),)` | `'strict edge order/no sorting'` | `False` | `113` | `'69f6ffc6c66ec21eb27c2d25c883b12f1f46c7ed0083ddc9c08671bace11fcb6'` |
+| `'I-EMPTY-INACTIVE'` | `'EMPTY'` | `'instance'` | `(('set', ('f',), [2, 1]),)` | `'active invalid even though Q=1'` | `False` | `67` | `'b21315a9c466498a762f6949765cceceb7e8b2c41686c0fca4ffba59f65659d7'` |
+| `'C-Y-OVER-GUARD'` | `'H2-ONE'` | `'certificate'` | `(('set', ('y',), [[0, 4]]), ('set', ('N',), 8), ('set', ('D',), 4))` | `'capacity bound isolated from parity and raw equality'` | `False` | `83` | `'36b21cbb9030f46e66019c46cef13084b78459dd7c425e8a8276c3c168ffd722'` |
+
+### Fixture table: U17_WIRE_ACCEPT
+
+| key | base_byte_fixture | stream | operations | length | sha256 |
+| --- | --- | --- | --- | --- | --- |
+| `'A-INSTANCE-ORDER'` | `'H2-ONE'` | `'instance'` | `(('reverse_keys',),)` | `67` | `'eab2f4ddea4e293ee0a0c6f9b6c9860d91e60800287aeebfe0f801729afd612d'` |
+| `'A-INSTANCE-WHITESPACE'` | `'H2-ONE'` | `'instance'` | `(('pretty',),)` | `132` | `'51f9af12cb0e7d9d36480179fb269dc83d8e07056cbc9b9969395169a93f26f9'` |
+| `'A-INSTANCE-ESC-KEY'` | `'H2-ONE'` | `'instance'` | `(('replace', '"n"', '"\\u006e"'),)` | `72` | `'397eeb775a3658a601efe6d26696425aa74d7a32ad3f55d1a495594a891cf033'` |
+| `'A-INSTANCE-ESC-TAG'` | `'H2-ONE'` | `'instance'` | `(('replace', 'instance/1', 'instance\\/1'),)` | `68` | `'4edf3185488b5b027db641cc04114e75f0a6058bf43865843243cfa9fa7508a7'` |
+| `'A-UTF8-LABEL'` | `'UTF8'` | `'instance'` | `(('utf8_strings',),)` | `109` | `'ad34ec1907faadc9df3ed5f40cfab22ad16d08a274ad28aa537f783bb56f9dff'` |
+| `'A-DISTINCT-INT-STRING'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), [0, '0']),)` | `84` | `'f9828da3558c6493eafbf825622ecfcdc11cd0570e74abc2044545ab465cabc6'` |
+| `'A-LABELS-IRRELEVANT'` | `'H2-ONE'` | `'instance'` | `(('set', ('labels',), ['right', 'left']),)` | `93` | `'b4502b664d60095e978c76e61949f64e012323fda9b85a3a2198602c1f7ac9f9'` |
+
+## ORACLE-130 — Supported object boundary, dependency faults and precedence
+
+The following are fixed future Unit 17 object-boundary fixtures, NOT a claim that
+certificate.py exists or has passed them. All JSON-representable schema/math mutations
+above also apply to the serializer object boundary except wire-only lexical/order
+failures. Reversed DICT insertion order is ACCEPTED by the serializer and must emit
+the same fixed bytes; descending U/y remains REJECTED, never repaired. Fresh independent
+objects must serialize without a preceding build. Mutate a successful export into
+C-WRONG-D and require revalidation; mutate U/y in one export and prove other outputs
+and all closed records unchanged. Interleave dissimilar instances and both routes.
+
+Argument recipe kinds identify test-local normally constructed values: None; primitive
+graph dict; the exact bytes or decoded text of the base fixture; list(dict.items());
+closed SolveResult; outer (SolveResult,SolveStats) tuple; subclasses made by normal
+inherited construction; duck objects with matching attributes. No constructor bypass.
+'retype' retains the value but substitutes the named exact-type trap. At 'format-key'
+rebuild the dictionary with an actual str-subclass key (plain reassignment of an equal
+key is insufficient). bool uses True; float uses the numerically equal float; Fraction
+uses the equal rational; coercible-int is a local object with __int__ returning the
+old integer. list-subclass/tuple contain the old members. normal-result means create
+SolveResult(ExactValue(N,D),Witness(U_mask,dense_y)), or None for the witness; every
+listed malformed graph-dependent record is shape-valid through its frozen constructors.
+
+Validation order stays DESIGN 4.14.7: instance, outer result/object, exact-str keys and
+format/empty presence, tag, bool, key set, N then D, then Empty or U/sparse y/Witness/
+witness_value and literal raw comparison. Guard-isolate these stages with local spies;
+do not infer precedence from a later unrelated failure. A dependency's raised exception
+must be the identical object observed by the caller. Only explicitly detected wrong
+normal-return promises raise RuntimeError; no broad exception translation or extra
+forgery-validation domain. Wrong arity/frozen mutation retain Python/dataclass behavior.
+
+### Fixture table: U17_OBJECT_CASES
+
+| key | call | base_byte_fixture | operation | expected | guard |
+| --- | --- | --- | --- | --- | --- |
+| `'build_certificate-instance-None'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'None')` | `'ValueError'` | `'instance before all other reads'` |
+| `'build_certificate-instance-dict-from-primitive'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'dict-from-primitive')` | `'ValueError'` | `'instance before all other reads'` |
+| `'build_certificate-instance-Instance-subclass'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'Instance-subclass')` | `'ValueError'` | `'instance before all other reads'` |
+| `'build_certificate-instance-duck-instance'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'duck-instance')` | `'ValueError'` | `'instance before all other reads'` |
+| `'serialize_certificate-instance-None'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'None')` | `'ValueError'` | `'instance before all other reads'` |
+| `'serialize_certificate-instance-dict-from-primitive'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'dict-from-primitive')` | `'ValueError'` | `'instance before all other reads'` |
+| `'serialize_certificate-instance-Instance-subclass'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'Instance-subclass')` | `'ValueError'` | `'instance before all other reads'` |
+| `'serialize_certificate-instance-duck-instance'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'instance', 'duck-instance')` | `'ValueError'` | `'instance before all other reads'` |
+| `'build-result-None'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'result', 'None')` | `'ValueError'` | `'exact SolveResult'` |
+| `'build-result-outer-(SolveResult,SolveStats)'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'result', 'outer-(SolveResult,SolveStats)')` | `'ValueError'` | `'exact SolveResult'` |
+| `'build-result-SolveResult-subclass'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'result', 'SolveResult-subclass')` | `'ValueError'` | `'exact SolveResult'` |
+| `'build-result-duck-result'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'result', 'duck-result')` | `'ValueError'` | `'exact SolveResult'` |
+| `'build-result-certificate-dict'` | `'build_certificate'` | `'H2-ONE'` | `('argument', 'result', 'certificate-dict')` | `'ValueError'` | `'exact SolveResult'` |
+| `'serialize-object-None'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'None')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `'serialize-object-bytes-of-fixture'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'bytes-of-fixture')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `'serialize-object-str-of-fixture'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'str-of-fixture')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `'serialize-object-dict-subclass'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'dict-subclass')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `'serialize-object-list-of-items'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'list-of-items')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `'serialize-object-SolveResult'` | `'serialize_certificate'` | `'H2-ONE'` | `('argument', 'certificate', 'SolveResult')` | `'ValueError'` | `'exact dict; no decoding'` |
+| `"integer-('N',)-bool"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('N',), 'bool')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('N',)-int-subclass"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('N',), 'int-subclass')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('N',)-float"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('N',), 'float')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('N',)-Fraction"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('N',), 'Fraction')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('N',)-coercible-int"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('N',), 'coercible-int')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('D',)-bool"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('D',), 'bool')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('D',)-int-subclass"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('D',), 'int-subclass')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('D',)-float"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('D',), 'float')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('D',)-Fraction"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('D',), 'Fraction')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('D',)-coercible-int"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('D',), 'coercible-int')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('U', 0)-bool"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U', 0), 'bool')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('U', 0)-int-subclass"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U', 0), 'int-subclass')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('U', 0)-float"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U', 0), 'float')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('U', 0)-Fraction"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U', 0), 'Fraction')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('U', 0)-coercible-int"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U', 0), 'coercible-int')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 0)-bool"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 0), 'bool')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 0)-int-subclass"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 0), 'int-subclass')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 0)-float"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 0), 'float')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 0)-Fraction"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 0), 'Fraction')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 0)-coercible-int"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 0), 'coercible-int')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 1)-bool"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 1), 'bool')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 1)-int-subclass"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 1), 'int-subclass')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 1)-float"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 1), 'float')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 1)-Fraction"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 1), 'Fraction')` | `'ValueError'` | `'exact int; no coercion'` |
+| `"integer-('y', 0, 1)-coercible-int"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0, 1), 'coercible-int')` | `'ValueError'` | `'exact int; no coercion'` |
+| `'container-subclass-()'` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', (), 'dict-subclass')` | `'ValueError'` | `'exact container'` |
+| `"container-subclass-('U',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U',), 'list-subclass')` | `'ValueError'` | `'exact container'` |
+| `"tuple-container-('U',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('U',), 'tuple')` | `'ValueError'` | `'exact list'` |
+| `"container-subclass-('y',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y',), 'list-subclass')` | `'ValueError'` | `'exact container'` |
+| `"tuple-container-('y',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y',), 'tuple')` | `'ValueError'` | `'exact list'` |
+| `"container-subclass-('y', 0)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0), 'list-subclass')` | `'ValueError'` | `'exact container'` |
+| `"tuple-container-('y', 0)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('y', 0), 'tuple')` | `'ValueError'` | `'exact list'` |
+| `"exact-type-('format',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('format',), 'str-subclass')` | `'ValueError'` | `'exact format/key/bool types'` |
+| `"exact-type-('empty',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('empty',), 'int')` | `'ValueError'` | `'exact format/key/bool types'` |
+| `"exact-type-('format-key',)"` | `'serialize_certificate'` | `'H2-ONE'` | `('retype', ('format-key',), 'str-subclass')` | `'ValueError'` | `'exact format/key/bool types'` |
+| `'BUILD-NONE-Q2'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (0, 1), None, None)` | `'ValueError'` | `'false Empty'` |
+| `'BUILD-NEGATIVE-N'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (-4, 2), 1, (2,))` | `'ValueError'` | `'literal raw pair'` |
+| `'BUILD-RAW-SCALE'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (8, 4), 1, (2,))` | `'ValueError'` | `'numerically equal raw mismatch'` |
+| `'BUILD-U-OUTSIDE'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (4, 2), 4, (2,))` | `'ValueError'` | `'original shore range'` |
+| `'BUILD-Y-SHORT'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (4, 2), 1, ())` | `'ValueError'` | `'dense length'` |
+| `'BUILD-Y-OVER'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (4, 2), 1, (3,))` | `'ValueError'` | `'capacity bound'` |
+| `'BUILD-EVEN'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (2, 1), 1, (1,))` | `'ValueError'` | `'parity'` |
+| `'BUILD-TOO-SMALL'` | `'build_certificate'` | `'H2-ONE'` | `('normal-result', (0, 1), 1, (0,))` | `'ValueError'` | `'minimum admissibility'` |
+
+### Fixture table: U17_PROMISE_FAULTS
+
+| key | call | base_byte_fixture | dependency | wrong_normal_return | expected |
+| --- | --- | --- | --- | --- | --- |
+| `'P-EVALUATOR-BUILD'` | `'build_certificate'` | `'H2-ONE'` | `'witness_value'` | `('tuple', 4, 2)` | `'RuntimeError'` |
+| `'P-EVALUATOR-SERIAL'` | `'serialize_certificate'` | `'H2-ONE'` | `'witness_value'` | `('tuple', 4, 2)` | `'RuntimeError'` |
+| `'P-EXPORT-U'` | `'build_certificate'` | `'H2-ONE'` | `'shore_to_list'` | `('tuple', 0)` | `'RuntimeError'` |
+| `'P-EXPORT-U-ELEMENT'` | `'build_certificate'` | `'H2-ONE'` | `'shore_to_list'` | `('list', True)` | `'RuntimeError'` |
+| `'P-EXPORT-Y'` | `'build_certificate'` | `'H2-ONE'` | `'dense_y_to_sparse'` | `('tuple', (0, 2))` | `'RuntimeError'` |
+| `'P-EXPORT-Y-ENTRY'` | `'build_certificate'` | `'H2-ONE'` | `'dense_y_to_sparse'` | `('list', (0, 2))` | `'RuntimeError'` |
+| `'P-EXPORT-Y-FIELD'` | `'build_certificate'` | `'H2-ONE'` | `'dense_y_to_sparse'` | `('list', [0, True])` | `'RuntimeError'` |
+| `'P-DECODE-U'` | `'serialize_certificate'` | `'H2-ONE'` | `'shore_from_list'` | `('bool', True)` | `'RuntimeError'` |
+| `'P-DECODE-Y-TYPE'` | `'serialize_certificate'` | `'H2-ONE'` | `'sparse_y_to_dense'` | `('list', 2)` | `'RuntimeError'` |
+| `'P-DECODE-Y-LENGTH'` | `'serialize_certificate'` | `'H2-ONE'` | `'sparse_y_to_dense'` | `('tuple',)` | `'RuntimeError'` |
+
+### Fixture table: U17_EXCEPTIONS
+
+| call | dependency | base_byte_fixture | exception_class | expectation |
+| --- | --- | --- | --- | --- |
+| `'build_certificate'` | `'witness_value'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'witness_value'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'witness_value'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'witness_value'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'witness_value'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'shore_to_list'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'shore_to_list'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'shore_to_list'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'shore_to_list'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'shore_to_list'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'dense_y_to_sparse'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'dense_y_to_sparse'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'dense_y_to_sparse'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'dense_y_to_sparse'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'build_certificate'` | `'dense_y_to_sparse'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'shore_from_list'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'shore_from_list'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'shore_from_list'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'shore_from_list'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'shore_from_list'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'sparse_y_to_dense'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'sparse_y_to_dense'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'sparse_y_to_dense'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'sparse_y_to_dense'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'sparse_y_to_dense'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'Witness'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'Witness'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'Witness'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'Witness'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'Witness'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'witness_value'` | `'H2-ONE'` | `'ValueError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'witness_value'` | `'H2-ONE'` | `'RuntimeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'witness_value'` | `'H2-ONE'` | `'TypeError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'witness_value'` | `'H2-ONE'` | `'MemoryError'` | `'same object; no result; inputs unchanged'` |
+| `'serialize_certificate'` | `'witness_value'` | `'H2-ONE'` | `'CustomDependencyError'` | `'same object; no result; inputs unchanged'` |
+
+## ORACLE-131 — Determinism, large-integer resources and executed-evidence boundary
+
+Use fresh processes with PYTHONHASHSEED=1 and 73 and with nonzero interpreter integer
+conversion limits 4300 and 640. First establish the limit is active by an intentionally
+failing whole-token conversion, then verify BIG-* inputs/bytes with the independent
+bounded-seven-digit parser. Future production serialization must retain the setting,
+not change it or rely on the caller disabling it. Replay all literal expectations in
+both seeds; repeated identical inputs and reordered input dict keys yield identical
+output bytes. Different tied solver results need only agree numerically.
+
+No schema digit/byte quota is introduced. Actual host exhaustion is not invalid math.
+Inject deterministic MemoryError at each declared dependency boundary instead of
+exhausting resources. Later untrusted-file ingress must disclose its own external
+budgets. Separate structural O(n+m) validation scans from output-sized storage and
+integer conversion bit work; no universal timing/strong-operation certificate claim.
+
+The private audit can additionally run the frozen global solver twice per graph AFTER
+independent fixtures are fixed. Those observed results are transcribed with a private
+transport encoder and verified in the independent audit process from the two byte
+streams. They are explicitly closed-solver mathematical preflight, NOT Unit 17 emitted
+certificates. Actual build/serialize for every run remains mandatory Phase D/E.
+Every final run preserves its OWN raw pair, not this catalogue's representative pair.
+Local Baseline/L0/L1/H0/H1/H2 candidate captures are counted separately from final results.
+No run is added just to force tie equality; no source is edited by those observers.
+
+U17_MUTATIONS preregisters production detectors. Phase C executes byte adversaries and
+may test mutants of the private oracle itself, but reports these SEPARATELY; it cannot
+claim successful mutation testing of an absent production module. CE19 still requires
+executed production faults after GREEN. External/second-model review remains optional.
+
+### Fixture table: U17_MUTATIONS
+
+| id | fault | detector | execution_stage |
+| --- | --- | --- | --- |
+| `'M01'` | `'numerical comparison instead of literal N/D'` | `'C-RESCALE-UP,C-RESCALE-DOWN,C-TIE-RAW-SWAP'` | `'production Phase E'` |
+| `'M02'` | `'skip parity'` | `'C-EVEN-TOTAL'` | `'production Phase E'` |
+| `'M03'` | `'skip minimum total'` | `'C-ODD-TOO-SMALL'` | `'production Phase E'` |
+| `'M04'` | `'trust empty flag'` | `'C-FALSE-EMPTY,I-EMPTY-INACTIVE'` | `'production Phase E plus test-only oracle'` |
+| `'M05'` | `'omit payload whenever N==0'` | `'ZERO,BIG-ZERO'` | `'production Phase E'` |
+| `'M06'` | `'use auxiliary or label coordinates'` | `'DISCONNECTED,SPARSE-GAP,C-AUX-REF'` | `'production Phase E'` |
+| `'M07'` | `'sort/merge sparse y'` | `'C-Y-DESC,C-Y-DUP'` | `'production Phase E'` |
+| `'M08'` | `'silently drop extra envelope keys'` | `'C-EXTRA-digest,C-EXTRA-instance,C-EXTRA-stats'` | `'production Phase E'` |
+| `'M09'` | `'alter key order or terminal newline'` | `'all U17_BYTES,C-ORDER,C-NO-LF,C-CRLF'` | `'production Phase E'` |
+| `'M10'` | `'inherit integer conversion cutoff'` | `'BIG-COUNTS,BIG-N,BIG-ZERO,BIG-LABEL; limits 4300 and 640'` | `'production Phase E'` |
+| `'M11'` | `'hidden solve or secondary tie optimization'` | `'TIE-SMALL,TIE-LARGE; forbid solver calls at certificate boundary'` | `'production Phase E'` |
+| `'M12'` | `'reuse mutable exported nested arrays'` | `'repeated build; mutate U and y lists then rebuild'` | `'production Phase E'` |
+| `'M13'` | `'independent route imports production validation'` | `'fresh import blocker plus source import audit'` | `'test-only oracle now and Phase E'` |
+| `'M14'` | `'ignore current serializer object after prior successful build'` | `'build, mutate to C-WRONG-D, serialize'` | `'production Phase E'` |
+| `'M15'` | `'relabel native resource error as Empty/invalid data'` | `'U17_EXCEPTIONS MemoryError'` | `'production Phase E'` |
+| `'M16'` | `'deduplicate corpus identities'` | `'U17_REGISTRY/U17_CENSUS exact qualified identities'` | `'test/integration Phase E'` |
+| `'M17'` | `'require optimum or value>=1'` | `'ZERO,INTERIOR,H2-LOSER'` | `'production Phase E'` |
+| `'M18'` | `'force equal raw pairs across selections'` | `'TIE-SMALL,TIE-LARGE and own-run equality rule'` | `'test/integration Phase E'` |
+
+### Fixture table: U17_COVERAGE
+
+| obligation | fixture_or_guard |
+| --- | --- |
+| `'CE1'` | `'two signatures; U17_OBJECT_CASES; no new records/exports/checker'` |
+| `'CE2'` | `'U17_OBJECT_CASES normal-result controls; U17_WIRE_REJECT raw/admissibility; 31 exact fixtures'` |
+| `'CE3'` | `'U17_BYTES field order/types; object subclass controls; detached-list mutation'` |
+| `'CE4'` | `'serialize fixed objects without builder; mutate after build; exact ValueError; prescribed precedence'` |
+| `'CE5'` | `'EMPTY; false Empty, payload, rescaled zero and inactive-Q1 rejections'` |
+| `'CE6'` | `'ZERO,INTERIOR,H2-LOSER,BIG-ZERO; suboptimal certificates accepted'` |
+| `'CE7'` | `'SPARSE-GAP,DISCONNECTED,FULL,MIXED-LABELS; sparse/coordinate rejections'` |
+| `'CE8'` | `'C-EVEN-TOTAL,C-ODD-TOO-SMALL and six equal-ratio raw/pair/Empty forgeries'` |
+| `'CE9'` | `'U17_BYTES literal concatenation recipes plus lengths/SHA256'` |
+| `'CE10'` | `'independent_wire.verify(two exact bytes), fresh process import blocker'` |
+| `'CE11'` | `'U17_WIRE_REJECT and U17_WIRE_ACCEPT; no production decoder claimed'` |
+| `'CE12'` | `'U17_REGISTRY/U17_CENSUS: every qualified identity twice; own raw pair, numerical equality'` |
+| `'CE13'` | `'all Baseline categories; L0,L1,H0,H1,H2 candidates; L1 zero omission; H2 both count shapes'` |
+| `'CE14'` | `'TIE-SMALL/TIE-LARGE; identical inputs repeated; key reorder accepted at object boundary only; hash seeds 1/73'` |
+| `'CE15'` | `'T=10**4800 digit recipes; process limits 4300/640; no hidden cap or global mutation'` |
+| `'CE16'` | `'U17_PROMISE_FAULTS and U17_EXCEPTIONS; errors propagate by identity; no partial success'` |
+| `'CE17'` | `'label-invariant fixtures; legacy vs telemetry solve results; no optimizer call in certificate layer'` |
+| `'CE18'` | `'DESIGN 4.14.13 import/source restrictions; private codec loops only for conversion; fresh isolation'` |
+| `'CE19'` | `'U17_MUTATIONS are future production detectors, not already-executed implementation evidence'` |
+| `'CE20'` | `'finite attainment/Empty/bytes only; all prior conformance unchanged; no optimality/checker claim'` |
+
+## ORACLE-132 — Inventory, fingerprints and controlled continuation
+
+The counts below are independently fixed fixture/registry counts. They are not the
+number of future pytest cases. Count actual parsing, rejection, comparison and solver
+executions separately in each audit output. No phantom corpus entry is created from a
+malformed instance, dependency fault or metadata-only scenario. Every valid additional
+graph is registered above; reuse of inherited graph fixtures preserves its identity.
+After oracle-only application, audit/regression/Ruff, review, staging, local commit,
+postcommit checks and remote closure, Phase D may create tests/test_certificate.py.
+It must fail specifically for missing exactfrac.certificate. Until then that test,
+exactfrac/certificate.py and exactfrac_verify/check.py remain absent. No Unit 18 gate,
+production decoding API, current-unit conformance promotion or private-note check.
+
+### Fixture table: U17_CENSUS
+
+| quantity | value |
+| --- | --- |
+| `'inherited_registry_identities'` | `389` |
+| `'new_registry_identities'` | `7` |
+| `'cumulative_registry_identities'` | `396` |
+| `'required_routes_per_identity'` | `2` |
+| `'required_real_solves_per_cumulative_pass'` | `792` |
+| `'byte_fixture_identities'` | `31` |
+| `'wire_rejection_cases'` | `140` |
+| `'wire_acceptance_variants'` | `7` |
+| `'equal_ratio_forgery_cases'` | `6` |
+| `'cumulative_graph_stream_sha256'` | `'d13d9ecd81775a81243cbd11159e9d04bd3b0870583f0f649fa7022c846b6896'` |
+| `'pytest_case_count'` | `'not prescribed: observe live in Phase D/E'` |
+
+### Fixture table: U17_FINGERPRINTS
+
+| table | rows | sha256 |
+| --- | --- | --- |
+| `'U17_SYMBOLS'` | `6` | `'490812148a1a66a257c1dc79aad512deaa13f5c9d9641c0faac32708fd97b43b'` |
+| `'U17_INPUTS'` | `7` | `'41e1fa93ca630950ac49f6d6237c0b44eeac0144969e911e2c33b12e2ad128c6'` |
+| `'U17_REGISTRY'` | `3` | `'162d67ea87ac4cb5e0cb9e2b46daff2383d717aaafe0c9829464703e99e16390'` |
+| `'U17_INSTANCE_BYTES'` | `396` | `'1012ae653b2986256e2f409451a81a3c9c49525286404e9f5e1f4c589a9bdf87'` |
+| `'U17_GLOBALS'` | `396` | `'65f132200d1f456e90693493a8561ac464b67558e3f2491d8be1b1725cd43c09'` |
+| `'U17_BYTES'` | `31` | `'491e86340e5a5d316b30f9d92f0bba2c36423c9b6cfea9f0988882770c573919'` |
+| `'U17_WITNESS_MATH'` | `31` | `'e56e3d1af6ed27c6337ac12913240817e61ea7198adccbbe143c01a4737d3f41'` |
+| `'U17_WIRE_REJECT'` | `140` | `'7ee4a1c7d29a0096918f9252bf5b187f8b3a3aa75a1213a6d54be92e4a33c6ef'` |
+| `'U17_WIRE_ACCEPT'` | `7` | `'72478a7de859afee77c2a78eeb592544bacf4788c22e3a96ff4c08eaac1eae11'` |
+| `'U17_OBJECT_CASES'` | `62` | `'2680c6770259b9ca4efa477abd8e5cbd76bf0fb8501c04ac999de489ef2972f9'` |
+| `'U17_PROMISE_FAULTS'` | `10` | `'430d7dfd5b2fad59b6060d2699a8fb5be00255d31c06c6636b8183043a35813d'` |
+| `'U17_EXCEPTIONS'` | `35` | `'7f94915ad25b9c2a7b31c458e0ded6e317a9f94885324830f5a1f84dccca9f53'` |
+| `'U17_MUTATIONS'` | `18` | `'4061094073985b297f3acefda28c70dfa9b4f043ee38884176b6a62e386eece4'` |
+| `'U17_COVERAGE'` | `20` | `'5ad60aae003c515377c16841626426f72cd9bd6b21769a857b64594f14ad702b'` |
+| `'U17_CENSUS'` | `11` | `'eab84de1e1313eeb9db3eb8af333c101d1940076d0fee3671cb8538958e0d0f9'` |
