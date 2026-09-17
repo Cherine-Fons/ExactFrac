@@ -2847,6 +2847,277 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         Finite conformance covers assembly, exact bytes, admissibility/raw attainment
         checks and integration, not global optimality or a completed Unit 18 checker.
 
+4.15 Unit 18 — independent certificate-byte checker
+    (AUTHORITY R1 PROPOSAL; effective only on its controlled authority commit)
+
+    1. Source basis and affirmative placement ruling.
+       Retain exactfrac_verify/check.py, affirmatively reconciling this choice with
+       section 3, sections 4.4.5/4.4A.1, 4.14 item 11, and section 7. There is no
+       relocation. The earlier starting-gate absence guard authenticated a closed
+       state; it did not adopt a path or interface. This section adopts the Unit 18
+       interface. New consuming test: tests/test_verify_check.py. Both package-root
+       __init__.py files and exactfrac_verify/brute.py remain byte-identical.
+       Mathematical authority is SPEC_LOCK-pinned V2.2 def:instance, ass:active,
+       def:parameter/eq:compact-density, lem:empty with its complete proof, lem:unit,
+       prop:endpoints, and sec:global's reconstruction table, alg:global and proofs.
+       The latter passages explain solver outputs; they do not restrict the checker
+       to endpoint, globally optimal, or solver-originated witnesses. CONTRACT and
+       the closed /1 instance/certificate schemas are preserved, not revised.
+
+    2. Public API, success and ownership.
+       The exact module-level __all__ tuple is ("verify_certificate",).
+       The only public callable is:
+         verify_certificate(instance: bytes, certificate: bytes) -> None
+       Both arguments are required positional-or-keyword parameters with exactly
+       these names, annotations and no defaults. Success returns exactly None.
+       There is no bool verdict, returned quotient, decoded record, new public
+       exception class, path/file overload, callback, mode, solver selection, budget
+       flag, public decoding helper, certificate constructor, or root re-export.
+       Both inputs must have exact built-in type bytes. Reject str, bytearray,
+       memoryview, subclasses, Instance/SolveResult/Witness, dicts, streams and paths;
+       do not coerce or invoke caller conversion/I/O methods. Public decoding is
+       owned by this one verification entry point; any parsers are private.
+       Pure validation returns no independently mutable mathematical state. A
+       caller needing display data retains its original inputs; later CLI policy
+       is separately ruled. No mathematical result is inferred from function names.
+
+    3. Verification claim and instance relationship.
+       Return normally iff the supplied canonical active instance and certificate
+       byte strings satisfy items 4--8, subject to operational/resource failure.
+       The claim is admissibility and LITERAL RAW ATTAINMENT, or genuine Empty.
+       It is not a certificate of global optimality, solver provenance, branch
+       attribution, telemetry integrity, execution correctness or an exact block
+       count. Accept every valid admissible witness with its literal pair, even
+       when suboptimal, nonempty zero-valued, or a losing local endpoint candidate.
+       No solver/optimizer/reference maximizer is invoked by the checker.
+       Verification needs the actual separately supplied instance bytes. A digest,
+       identifier, absent instance or certificate-embedded replacement is invalid.
+       No digest or envelope field is added. This is semantic checking, not a
+       cryptographic unique-instance binding: the same certificate may be valid
+       for two instances. Changing only valid metadata need not cause rejection.
+
+    4. Complete instance validation precedes certificate inspection.
+       First require exact bytes for instance; then decode and validate the entire
+       instance including labels, canonical support order and active condition.
+       Only afterward inspect/type-check/parse certificate or resolve its refs.
+       Thus invalid instance input does not trigger certificate parsing. Malformed
+       instance syntax may fail during decoding; after decoding use this order:
+       outer object/key set and tag; n; f; optional labels; edge records and order;
+       derived Q/degrees and active condition last. No repair/normalization path.
+       Instance bytes use strict UTF-8 with no BOM and exactly one complete JSON
+       document. Ordinary JSON whitespace (space, tab, LF, CR), object key order,
+       valid string escapes and UTF-8 label spellings do not alter decoded meaning.
+       Reject comments, trailing commas, concatenated documents, nonwhitespace
+       trailing content, invalid UTF-8, UTF-16/32 encodings and leading BOM.
+       Detect duplicate DECODED object keys before last-key-wins collapse, including
+       escaped spellings of the same key. Required keys: format,n,edges,f; optional
+       labels only. Decoded format is exactly "exactfrac-instance/1". Reject every
+       unknown/missing key. No raw-record aggregation or label-keyed adapter.
+       Every numeric token in instance data is an integer: 0 or -?[1-9][0-9]*.
+       Reject -0, leading plus/zeros, exponents, fractional/nonfinite tokens and
+       non-JSON number spellings without first creating float approximations.
+       These lexical rules apply throughout the input, including metadata.
+
+    5. Independently implemented instance representation predicates.
+       Require exact int n>=1; exact list f of length n with exact positive ints;
+       nonempty exact list edges, each an exact length-three list of exact ints
+       [u,v,q] with 0<=u<v<n and q>=1. Pairs (u,v) are strictly lexicographically
+       increasing and unique. edge_ref is the position in THIS list. Do not sort,
+       aggregate, reorient or discard serialized records. Booleans are not ints.
+       If labels is present, require an exact length-n list of exact str or int
+       values, pairwise distinct under their decoded values; null is not an absent
+       labels field. Signed integer labels are allowed; 1 and "1" are distinct.
+       Do not normalize strings, case-fold, coerce labels or use labels as indices.
+       Valid JSON string escape decoding supplies the label value, including escaped
+       control code points and escaped unpaired surrogates supported by the inherited
+       str domain; raw invalid UTF-8 remains rejected. No new Unicode scalar-value
+       restriction is silently added. Surrogate-pair escapes decode by JSON rules.
+       Compute Q=sum(q) and each d_q(v) by adding q to both distinct endpoints;
+       require f[v]<=d_q[v] at every vertex. Positive f makes isolates unsupported.
+       Check declared lengths before allocating arrays based only on claimed n.
+       Malformed and non-active instances both raise exact ValueError here. The
+       producer's InvalidInstance/UnsupportedInstance classes are not imported,
+       returned, reproduced or added to this independent public API.
+
+    6. Certificate grammar is the exact closed byte grammar, not merely JSON.
+       Require exactly one ASCII-encoded object, no BOM/spaces/escapes, exactly one
+       terminal LF and no trailing bytes. In the following grammar quoted field
+       names/tags/punctuation are literal bytes; NUM=0|[1-9][0-9]* and POS=[1-9][0-9]*:
+         empty: {"format":"exactfrac-certificate/1","empty":true,"N":NUM,"D":POS} LF
+         full:  {"format":"exactfrac-certificate/1","empty":false,"N":NUM,"D":POS,"U":[NUM(,NUM)*],"y":[PAIR(,PAIR)*]} LF
+         PAIR:  [NUM,POS]; the whole contents of y may instead be empty.
+       U has at least one entry. The printed grammar's spaces/parentheses/NUM/POS
+       are explanatory, not wire bytes. Field order is exactly as shown. No extra
+       envelope, nested witness, digest, embedded instance, metadata, quoted integer,
+       sign, -0, exponent, decimal point, alternate boolean, duplicate/escaped key,
+       escaped tag slash, pretty-printing, CRLF or additional/missing LF is accepted.
+       Recognize the grammar directly with an independently written private lexical
+       parser, not by importing the producer or by reserializing a decoded object
+       and treating its own output as proof of canonical input. A deterministic
+       cursor over the fixed grammar is the selected reference strategy. Parsing
+       full magnitudes into exact ints uses item 9, never full-token int conversion.
+       No third-party parser or production encoding routine is shared.
+
+    7. Nonempty semantic predicates and literal pair.
+       Independently validate each U index in [0,n), strict increase, nonemptiness,
+       and each y=[edge_ref,count] in strictly increasing ref order with 0<=ref<m.
+       Each count is positive and <=q[ref], and exactly one endpoint is in U.
+       Omitted coordinates are zero. Reject duplicate/descending refs or vertices;
+       never merge, sort or repair them. The sparse positions do not renumber refs.
+       Independently compute s=sum(f[v] for v in U), e=sum(q for internal edges),
+       and Y=sum(selected counts). Require s+Y odd AND s+Y>=3 before accepting:
+         N == 2*(e+Y)
+         D == s+Y-1
+       Both equalities are literal integers, not cross-products, reduced fractions
+       or tolerances. N may be zero; D is positive. Do not infer admissibility solely
+       from even D, a positive rational value, or agreement with the producer.
+       No boundary copy is expanded, and no extra shore or count vector is selected.
+       Membership markers plus scans of original lists suffice; dense y need not be
+       allocated because all omitted/noncrossing coordinates are defined to be zero.
+
+    8. Genuine Empty has no witness payload.
+       The empty grammar contains no U or y fields, even with null/[] values.
+       For the already independently validated active instance require Q==1 and
+       literal (N,D)==(0,1), using lem:empty. The flag alone proves nothing.
+       Q>1 with empty true is invalid. Nonempty zero and y=[] remain distinct valid
+       possibilities under item 7. No unit-lower-bound or endpoint-only filter may
+       reject a valid suboptimal witness. The checker does not construct a witness
+       for Empty or invoke lem:unit's constructive procedure.
+
+    9. Exact arithmetic, resources, error translation and determinism.
+       No schema-level limit on integer magnitude, digit count, n/m, or byte length
+       is added. Decode arbitrarily long finite integer tokens subject to available
+       resources, without changing or requiring changes to process-global decimal
+       conversion/recursion settings. Private digit accumulation or bounded chunks
+       are allowed. No float/Fraction/Decimal, GCD, rescaling, sign/zero repair,
+       approximate comparison, true division, hashing as mathematical identity,
+       Q-copy expansion or all-shore search. Digit-driven work is codec work, not
+       magnitude-dependent optimization. Fixed loops/list orders control validation;
+       set membership for uniqueness is allowed but set traversal selects no order.
+       Invalid byte/type/schema/instance/witness data raises exact built-in ValueError.
+       Narrow decoding exception translation is explicitly authorized: a built-in
+       UnicodeDecodeError raised by the strict UTF-8 decode, or json.JSONDecodeError
+       raised by the standard JSON decoding operation, becomes exact ValueError.
+       Limit each catch to that operation; do not blanket-catch ValueError/Exception.
+       Other dependency exceptions propagate unchanged, including identity; in
+       particular MemoryError, RecursionError and injected operational failures are
+       not false/None/Empty or invalid-mathematics verdicts. Private deliberate
+       validation ValueErrors may propagate directly. Wrong call arity retains
+       Python TypeError. Diagnostic text is not stable API and must not stringify
+       arbitrary full-magnitude integers. No partially decoded output is returned.
+       Identical bytes give the same success/rejection semantics across repeat calls
+       and hash seeds, subject to resources; no clock/randomness/global cache/state.
+       Input bytes are immutable; the function retains no caller input or validation
+       token across calls. Instance labels cannot influence certificate mathematics.
+       Structural verification scans O(n+m+|U|+k) entries for k sparse counts, apart
+       from label-uniqueness and byte/numeral-processing costs. Account for L input
+       bytes, large-int bit operations, and decoded storage separately. No universal
+       strong-polynomial byte-runtime, constant memory or denial-of-service claim.
+       Explicit ingress limits belong outside this core, disclosed separately by
+       future CLI/service policy; resource exhaustion is not schema rejection.
+
+    10. Independence boundary and standard-library substrate.
+        New checker runtime imports are limited to optional future annotations and
+        standard-library json. Instance JSON uses independent local object_pairs_hook,
+        parse_int, parse_float and parse_constant handlers; float/constant handlers
+        reject without constructing approximate numbers. This standard-library syntax
+        substrate is not shared project validation. Do not import any exactfrac
+        module, exactfrac_verify.brute, test/handoff material or producer helper,
+        directly, transitively, dynamically or only under TYPE_CHECKING. No dynamic
+        eval/exec/import, file/network/subprocess I/O, optimizer, telemetry or hash
+        lookup. The old test-only oracle is not promoted/copied into the checker.
+        Fresh-process tests block all exactfrac imports and unexpected project
+        imports, check sys.modules and origins, and run with only the independent
+        package physically available where practical. The generator/integration
+        process may use frozen solvers and serializer; it sends only two byte
+        strings to the checker process, never prevalidated objects or expected sums.
+        An AST/source audit complements but cannot replace executed import isolation.
+        No mandatory external/second-model review is introduced.
+
+    11. Narrowly authorized Unit 17 test transition — no other reopening.
+        The author's explicit authorization retains check.py and reopens exactly
+        three temporal checks in tests/test_certificate.py, closed original SHA-256
+        c70f7120fe10d07668fc37624843cc77a02ef58244fbda432d04591123042724.
+        This exception supersedes only those forward-absence/whole-file prohibitions;
+        all mathematical assertions, fingerprints, record contracts and frozen
+        production bytes remain unchanged. Unit 17 closure/evidence stays historical.
+        Phase B changes NO test file. Record this exception in DESIGN/TEST_PLAN and
+        complete the ordinary authority adoption before either edit below.
+
+        Phase C replaces exactly the one original line in
+        test_closed_fixture_authority_and_registry_identity:
+          assert _sha(_CATALOGUE.read_bytes()) == _CATALOGUE_SHA
+        with exactly these three lines at the same indentation:
+          catalogue_bytes = _CATALOGUE.read_bytes()
+          assert len(catalogue_bytes) >= 3_212_040
+          assert _sha(catalogue_bytes[:3_212_040]) == _CATALOGUE_SHA
+        Keep _CATALOGUE_SHA unchanged at
+        04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac.
+        Every other byte in that test file is preserved. The catalogue append keeps
+        that entire original prefix byte-identical; a shorter file must fail length,
+        any prefix change must fail SHA, and appended Unit 18 bytes get their own
+        independently derived identity checks. Retain both checker-absence lines
+        during Phase C. Exact C scope: docs/ORACLE_CATALOG.md plus only this guard
+        replacement in tests/test_certificate.py. Stage/commit/close these two paths
+        together in the existing oracle lifecycle; no additional gate is added.
+
+        Phase D deletes exactly one complete line with its original indentation/LF:
+          assert not (_ROOT / "exactfrac_verify/check.py").exists()
+        from each of test_exact_public_surface_and_closed_record_ownership and
+        test_closed_sources_and_production_import_exactness_boundary. Both enclosing
+        functions otherwise remain BYTE-IDENTICAL. No replacement assertion,
+        whitespace cleanup, altered import, reformatting or incidental edit is
+        permitted. The whole D version must equal the authenticated C version minus
+        those TWO precisely located lines, with every other byte conserved. AST
+        equivalence is insufficient. Exact D scope: add tests/test_verify_check.py
+        and delete only those two lines in tests/test_certificate.py. No checker yet.
+        Record successive complete-file SHA/blob identities and byte-exact transforms
+        in the corresponding evidence. Never rewrite original Unit 17 hashes or
+        authenticated packages/checkpoints. Baseline R1's stale comment is historical,
+        not an authority amendment or reason to regenerate a passed helper.
+
+    12. Coverage, independent expectations and two solver selections.
+        Retain all 396 closed registry identities and both selections: 792 actual
+        final solves before any registered Unit 18 additions. Do not deduplicate
+        mathematical inputs. For each actual result emit the frozen /1 bytes, run
+        this checker from only serialized inputs, and independently recompute the
+        literal pair using a separate test route; compare routes numerically by
+        exact cross-products. Do not require equal witnesses/raw pairs/bytes across
+        ties and do not invoke extra solvers to force equality. Cover real baseline
+        and all endpoint/local reconstructions, both H2 shapes, valid interior and
+        suboptimal/zero witnesses, all 31 literal byte fixtures, 140 inherited wire
+        rejection rows and seven valid instance-wire variants, plus independently
+        fixed Unit 18-specific API/parser/isolation/exception cases. These are
+        inherited fixture/run counts, not a prescribed new pytest count.
+        Oracle fixtures precede production; expected answers cannot be generated by
+        the checker under test or by producer/consumer agreement alone. Source review
+        and the independent implementation audit include executed fault variants and
+        classify their actual targets instead of claiming every variant is production.
+        Stable /1 acceptance is tested, not a new instance byte-canonicalization rule.
+
+    13. Exact lifecycle and final scope.
+        Phase B adds this section and TEST_PLAN 41/42 only; all other 44 committed
+        files remain frozen. Interface probe stays private and is syntax/lint checked
+        without execution; never a production stub. B application leaves docs unstaged,
+        followed by existing review/staging/local commit/postcommit tests/remote closure.
+        Phase C uses item 11's two-path exception and independently fixed catalogue
+        additions; remotely close it before D. Phase D uses its exact two-path scope,
+        requires one missing-exactfrac_verify.check collection error, pytest exit 2,
+        preserves the 2,445-case existing baseline with only the new test ignored,
+        and leaves the old test modified unstaged and new test untracked.
+        Phase E adds only exactfrac_verify/check.py under the frozen D tests, then
+        targeted/full GREEN, repository Ruff, independent audit and isolation review.
+        After GREEN amend only finite scoped CONFORMANCE, preserving previous rows.
+        Final H candidate: docs/CONFORMANCE.md, exactfrac_verify/check.py,
+        tests/test_verify_check.py and tests/test_certificate.py (two D deletions).
+        The C prefix amendment was already committed. Run existing exact staged-tree
+        isolation, local commit/postcommit tests and separate approved-commit closure.
+        New test counts are measured, not guessed; no generic future-path absence
+        assertion becomes a permanent regression constraint in Unit 18 tests.
+        No CLI, new producer/instance codec, later corpus campaign, experiments,
+        release, additional gate, REVIEW_REQUEST, private-note verification, rollback
+        or automatic repair. Unit 17 production remains closed throughout.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin

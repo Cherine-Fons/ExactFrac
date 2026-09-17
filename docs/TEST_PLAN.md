@@ -4030,3 +4030,228 @@ Use only the existing controlled lifecycle:
    Their saved confirmation is conversational, not inspected or asserted by any helper.
    Unit 18 follows only after this existing full-unit transition. No REVIEW_REQUEST,
    external-model gate, automatic repair, frozen-dependency reopening or extra gate.
+
+## 41. Unit 18 — independent byte-checker obligations
+
+Authority: DESIGN 4.15, retaining sections 4.1/4.1A, 4.4/4.4A, 4.14, 7 and 9;
+SPEC_LOCK-pinned V2.2 def:instance, ass:active, def:parameter/eq:compact-density,
+lem:empty, lem:unit, prop:endpoints and sec:global reconstruction/proofs. C1--C10
+remain preregistered checker obligations; Unit 17 object/byte tests do not replace
+this independent production checker. IQ1--IQ20 below are finite obligations, not
+new algorithmic claims or additional workflow gates. Expected fixtures belong to
+Phase C; no checker output supplies its own expected answer.
+
+### IQ1 — affirmative placement, exact public surface and success
+
+Retain exactfrac_verify/check.py per DESIGN 3/4.14.11 and now 4.15.1; new consuming
+file is tests/test_verify_check.py. Require exact __all__=("verify_certificate",),
+verify_certificate(instance: bytes, certificate: bytes) -> None, both required
+positional-or-keyword parameters, no defaults/modes/overloads. Each valid call
+returns exactly None, not True, a dict, decoded pair, or truthy success object.
+Reject non-exact-bytes objects for both parameters without coercion or I/O.
+Both package-root __init__.py files and brute.py remain closed/export-unchanged.
+
+### IQ2 — instance before certificate and independent validation
+
+Establish complete instance parsing/structural/active validation before certificate
+inspection/parsing/reference resolution. Instrument the selected parsing boundary
+in test-only controls with no added public helper hook; malformed or non-active
+instances must not reach a poisoned certificate-parser operation. The API need not
+expose private helper names. Distinguish grammar/type/schema/active failures from
+operational exceptions, without making diagnostic prose stable API.
+
+### IQ3 — instance syntax and decoded keys
+
+Independently fix UTF-8, BOM, duplicate decoded key (including escaped-equivalent
+keys), unknown/missing keys, bad top-level type/tag, concatenated documents, trailing
+content, comments/commas and invalid encoding rejections. Accept ordinary JSON
+whitespace/key-order and valid string-escape variants preserving graph data. Such
+instance acceptance must not authorize relaxed certificate bytes.
+
+### IQ4 — numeric tokens, labels and exact graph shape
+
+Reject booleans in integer positions, nonpositive n/f/q, noninteger number tokens,
+-0, plus/leading-zero/hex spellings, bad container lengths, labels:null, invalid
+label types/duplicates, loops, reversed/out-of-range endpoints, repeated/unordered
+support pairs and empty support. Check active condition only after structure.
+Cover isolates and signed/huge integer labels, mixed 1 and "1", valid Unicode/
+escaped labels, escaped unpaired-surrogate labels from the inherited str domain,
+and rejection of raw invalid UTF-8. Labels may not replace original indices.
+
+### IQ5 — exact certificate grammar and complete document consumption
+
+Independently fix rejection cases for reordered/duplicate/escaped keys, tag slash
+escapes, wrong tag, field omission/addition, digest/embedded-instance/metadata,
+nested witness, quoted/fractional/exponent/negative/-0/leading-zero numeric tokens,
+null/bool substitution, extra whitespace/BOM, absent/extra LF, CRLF, trailing data,
+and truncation at representative lexical boundaries. No re-encode-to-self oracle.
+
+### IQ6 — shores and original-coordinate sparse support
+
+Require nonempty strictly increasing U in range; y list of positive-count pairs
+strictly increasing in original canonical edge_ref order, in range, crossing U
+and bounded by q. Test missing coordinates as zero, empty sparse y, sparse gaps,
+first/last refs, duplicates/descending refs, nonboundary refs, and capacity overflow.
+Changing which coordinates are omitted must not renumber later references.
+
+### IQ7 — full admissibility and literal raw pair
+
+Independently recompute s,e,Y; require s+Y odd and >=3 and exact N=2*(e+Y),
+D=s+Y-1. Register parity/minimum-total controls that isolate those conditions before
+raw mismatch. Reject forged numerator/denominator and numerically equal rescalings,
+including reduced pairs and zero normalization. All C1--C7 obligations apply.
+
+### IQ8 — genuine Empty, nonempty zero and claim limits
+
+After independent active-instance validation, accept Empty iff Q==1, raw (0,1),
+and no payload. Reject false Empty at Q>1, witness/null/[] payload in Empty, missing
+nonempty payload, and confusion of y=[] or N=0 with Empty (C8--C10). Accept literal
+nonempty zero, interior/suboptimal witnesses, and losing endpoint candidates.
+A unit lower bound on the optimum is not a per-witness admission rule.
+
+### IQ9 — actual instance input, not an identifier
+
+Require two actual byte inputs. Reject digest-only, omitted or embedded replacement
+instance data. Register changes to instance capacities/edges that invalidate the
+witness or raw pair. Do not demand that every different valid instance or metadata
+change be rejected: the closed schema has no unique cryptographic instance binding.
+
+### IQ10 — inherited literals and independent checker comparison
+
+Consume all 31 closed literal byte fixtures, 140 inherited malformed-wire rows and
+seven accepted instance-wire variants with their original identities. Fix new
+Unit 18-specific cases independently before tests/code. Compare accepted content
+with the mathematical definition in a separate test-only byte route, not with the
+checker's own parser or a producer/consumer round-trip expectation.
+
+### IQ11 — cumulative registry and both real solver routes
+
+Preserve all 396 current qualified graph identities, including duplicates. Run every
+entry under Standard and Accelerated: 792 real solves before valid Unit 18 additions.
+For every run use the closed builder/serializer to emit actual certificate bytes;
+send only instance and certificate bytes to the checker, requiring success, then
+independently verify that run's literal pair. Count actual graphs/runs separately
+from pytest cases. Cross-route equality is numerical by exact cross-multiplication,
+not raw/witness/byte equality; legal tied scales and distinct witnesses stay valid.
+No registry deduplication, secondary tie rule or hidden extra optimization.
+
+### IQ12 — real local endpoint reconstruction
+
+Capture actual closed baseline and endpoint candidates through test-local
+instrumentation only. Cover L0/L1/H0/H1 and both direct H2 shapes (one count of two
+or two counts of one), original-coordinate lifts and matching/unit baselines.
+Check each local candidate's literal pair, including losers; do not invent a strict
+H2 final winner. No production trace API or closed solver modification.
+
+### IQ13 — large integers, repeats and unchanged settings
+
+Use the inherited 4,801-digit fixtures for N,D,q,f,counts and signed labels where
+applicable. In fresh processes with enabled conversion limits 4,300 and 640 and
+at least two hash seeds, require success and identical accept/reject semantics.
+Check interpreter settings before/after, repeated calls and nonretention of old
+inputs. Full-token decimal int()/str() and silently imposed quotas are prohibited.
+Do not claim unlimited host resources or denial-of-service protection.
+
+### IQ14 — exact error taxonomy and operational propagation
+
+Data rejection must be exact ValueError. Explicit strict UTF-8 and standard JSON
+syntax failures are narrowly translated to that type. Test that MemoryError,
+RecursionError and other injected dependency exceptions propagate unchanged by
+identity, not false/None/Empty or a new invalid-data wrapper. No broad ValueError/
+Exception catch; no enormous integer formatting in diagnostics. Wrong signature
+arity retains Python TypeError. No duplicate producer exception classes.
+
+### IQ15 — executed production-import independence
+
+Fresh checker subprocesses block all exactfrac imports, all test/private-handoff
+imports and unrelated project helpers. Check startup/loaded module origins and
+sys.modules; exercise both acceptance and rejection from byte inputs alone.
+Where practical execute a copy containing only exactfrac_verify with the pinned
+checker, leaving producer code unavailable. Do not accept a static import list as
+proof of runtime independence. Separate integration process may emit bytes using
+frozen production, never share objects/parsers/validation with the checker.
+
+### IQ16 — source/work review and independent implementation audit
+
+Audit direct imports (future annotations/json only), private lexical parsing and
+integer dataflow, absence of I/O/dynamic code/settings changes/hidden optimization,
+and work proportional to compact lists and input digits rather than Q expanded
+copies or all shores. Record actual standard-library usage and resource boundaries.
+No copying/importing/promoting the old test verifier or brute helpers into production.
+Run a separate implementation audit before CONFORMANCE, using independently fixed
+expectations and production-import blocking, with file/nonmutation conservation.
+
+### IQ17 — executed adversarial fault controls
+
+Pre-register and execute detectors for lost duplicate keys, noncanonical byte
+acceptance, float/noninteger tokens, accidental digit cutoff, incomplete instance/
+active validation, premature certificate parsing, incorrect original refs, repaired
+U/y, capacity/parity/minimum omissions, raw-equivalence substitution, false Empty,
+nonempty-zero erasure, hidden solving, contamination by production helpers, swallowed
+resource errors, and overstrong optimality/cross-route/raw-equality requirements.
+Report actual targets, variants and kills; a declared name is not an executed kill.
+Do not require external/second-model review as a gate or inflate finite evidence.
+
+### IQ18 — exact Phase C prefix-guard exception
+
+Record the author's three-check reopening in authority before edits. In Phase C,
+replace only the one whole-catalogue guard in test_closed_fixture_authority_and_registry_identity
+with the exact three lines from DESIGN 4.15.11. Preserve _CATALOGUE_SHA and all other
+bytes, fingerprints and both absence lines. Require at least 3,212,040 catalogue
+bytes and SHA-256 of exactly that prefix equal to
+04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac.
+Controls must reject a shorter file and changes at beginning/interior/end of the
+protected prefix; an authorized append preserves the prefix while its new data are
+separately checked. Compare exact pre/post test bytes, not only ASTs; preserve the
+original Unit 17 closure as history. Phase C scope is catalogue plus this guard.
+
+### IQ19 — exact Phase D two-line retirement exception
+
+In Phase D delete only the two complete checker-absence assertion lines, one from
+test_exact_public_surface_and_closed_record_ownership and one from
+test_closed_sources_and_production_import_exactness_boundary. Both enclosing tests
+otherwise remain byte-identical. Entire postimage equals authenticated Phase C
+bytes minus those two lines; no imports, spacing, formatting or neighboring code
+changes. Apply this alongside only the new tests/test_verify_check.py. New checker
+remains absent. These temporal guards move out of permanent regression semantics;
+no new permanent assertion may prohibit later independently authorized unit files.
+
+### IQ20 — honest conformance and frozen scope
+
+After GREEN preserve all previous CONFORMANCE rows/statuses and add only finite
+checker acceptance/rejection, error, independence and byte-validation evidence.
+Do not claim global optimality, universal correctness/complexity, CLI/corpus campaign,
+experiments or release. The only reopened closed file is tests/test_certificate.py
+for precisely IQ18/IQ19. All closed production files remain byte-identical. Public
+helper names not specified by authority must not become accidental test contracts.
+
+## 42. Unit 18 completion gate — independent checker
+
+Use the existing lifecycle, with only the author's expressly authorized scopes:
+
+1. Phase B changes only docs/DESIGN.md and docs/TEST_PLAN.md. Adopt placement/API,
+   byte/error/resource rules and IQ18/IQ19 exceptions before edits. Apply unstaged,
+   review, stage, commit, run postcommit baseline/Ruff, and remotely close authority.
+2. Phase C independently appends Unit 18 fixtures to docs/ORACLE_CATALOG.md while
+   replacing only the one Unit 17 catalogue guard under IQ18. Both files are one
+   oracle-phase scope, including its existing audit/staging/commit/remote closure.
+   No new test, checker, source/CONFORMANCE edit or other old-test change.
+3. Phase D performs only the two IQ19 deletions and adds tests/test_verify_check.py.
+   Syntax and live repository-context Ruff on both candidate test files precede
+   application. Require exactly one collection failure naming exactfrac_verify.check,
+   ModuleNotFoundError and exit 2; no dummy checker. The 2,445-case inherited suite
+   stays GREEN with only the new test ignored. Leave old test unstaged/new untracked.
+4. Phase E adds only exactfrac_verify/check.py under those frozen tests. Live candidate
+   Ruff precedes application. Require targeted/full GREEN, full repository Ruff,
+   independent implementation/mutation audit and import/source/nonmutation review.
+   Count actual collected/passing new cases; full count equals 2,445 plus that
+   measured new-file count. Do not weaken old tests to obtain GREEN.
+5. Phase G modifies only finite-scoped docs/CONFORMANCE.md after GREEN. Stage the
+   complete four-path candidate: CONFORMANCE, check.py, test_verify_check.py and
+   test_certificate.py (only the two Phase D deletions relative to Phase C commit).
+   Run exact staged-tree isolation, then a separate local implementation commit
+   with postcommit targeted/full/Ruff and a separate approved-commit remote closure.
+6. Require four-reference equality, clean repository and conserved evidence at closure.
+   Deliver private BUILD/LEARNING text blocks; saving is only the user's confirmation,
+   never located/inspected/hashed by helpers. No new gate, private-note check,
+   REVIEW_REQUEST, mandatory external reviewer, reset/rollback/automatic repair.
