@@ -34482,3 +34482,653 @@ production decoding API, current-unit conformance promotion or private-note chec
 | `'U17_MUTATIONS'` | `18` | `'4061094073985b297f3acefda28c70dfa9b4f043ee38884176b6a62e386eece4'` |
 | `'U17_COVERAGE'` | `20` | `'5ad60aae003c515377c16841626426f72cd9bd6b21769a857b64594f14ad702b'` |
 | `'U17_CENSUS'` | `11` | `'eab84de1e1313eeb9db3eb8af333c101d1940076d0fee3671cb8538958e0d0f9'` |
+
+
+## ORACLE-133 — Unit 18 independent-checker fixtures and inherited boundary
+
+Authority: DESIGN 4.15 and TEST_PLAN 41/42 at f5d6d8708fecf51b308b0b12254a78c47b505ce3.
+The production checker and new consuming test are absent. Success of a future verify_certificate
+call is exact None; this catalogue fixes mathematical/byte expectations, not implementation results.
+The existing first 3,212,040 catalogue bytes retain SHA-256 04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac.
+All 396 inherited qualified registry identities and both routes remain required, without deduplication.
+Four new valid metadata/coordinate instances add eight real solves: 400 identities, 800 runs.
+Expected raw values use def:parameter and eq:compact-density; Empty uses lem:empty after ass:active.
+Human tables govern; private JSON is only a byte-authenticated mirror. No producer/checker output
+was used to fix literal expected bytes. Instance bytes are independently encoded test transport;
+certificate literals are written explicitly below and checked by direct sums, not a round trip.
+
+### Fixture table: U18_INPUTS
+
+| id | n | edges | f | labels |
+| --- | --- | --- | --- | --- |
+| `'PAIR32'` | `2` | `((0, 1, 3),)` | `(3, 2)` | `None` |
+| `'TRI-MIX'` | `3` | `((0, 1, 2), (0, 2, 1), (1, 2, 2))` | `(1, 3, 2)` | `(1, '1', '\xe9')` |
+| `'DISJOINT-Q'` | `4` | `((0, 3, 2), (1, 2, 1))` | `(1, 1, 1, 1)` | `('z', 10, 'a', -10)` |
+| `'SURROGATES'` | `3` | `((0, 1, 1), (0, 2, 1), (1, 2, 1))` | `(1, 1, 1)` | `('\ud800', '\udc00', '\U0001f642')` |
+
+
+### Fixture table: U18_INSTANCE_BYTES
+
+| graph | literal_ascii | bytes | sha256 |
+| --- | --- | --- | --- |
+| `'U18_INPUTS/PAIR32'` | `'{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}'` | `67` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'U18_INPUTS/TRI-MIX'` | `'{"format":"exactfrac-instance/1","n":3,"edges":[[0,1,2],[0,2,1],[1,2,2]],"f":[1,3,2],"labels":[1,"1","\\u00e9"]}'` | `111` | `'a27dc1bd32ce3dade53875530e67a794e1a2d29900ec0561904597b1ebfebc27'` |
+| `'U18_INPUTS/DISJOINT-Q'` | `'{"format":"exactfrac-instance/1","n":4,"edges":[[0,3,2],[1,2,1]],"f":[1,1,1,1],"labels":["z",10,"a",-10]}'` | `105` | `'2c4222089d0207d02f5f511e09819ae301e2ffea9054e418237703aa3dc6597c'` |
+| `'U18_INPUTS/SURROGATES'` | `'{"format":"exactfrac-instance/1","n":3,"edges":[[0,1,1],[0,2,1],[1,2,1]],"f":[1,1,1],"labels":["\\ud800","\\udc00","\\ud83d\\ude42"]}'` | `129` | `'db6d547865fa469725a7f6da3572f1d0e261ce8906c784a8a3a0f53b4540c2c0'` |
+
+
+### Fixture table: U18_REGISTRY
+
+| table | identities | fingerprint |
+| --- | --- | --- |
+| `'U15_INPUTS'` | `379` | `'98d3f32c3dde19670e36900525b8bd6623ca4fd932c804d47725d305fd45b90c'` |
+| `'U16_INPUTS'` | `10` | `'231d5dc3d91429aed5c78e890c25ccfb2456dbe1551e59ef566359bfa5a91df9'` |
+| `'U17_INPUTS'` | `7` | `'41e1fa93ca630950ac49f6d6237c0b44eeac0144969e911e2c33b12e2ad128c6'` |
+| `'U18_INPUTS'` | `4` | `'43d476d37ceee1c2fce7c72bc9f7c7f3b0030bfbd3adb2f3293e1c86f6fe2294'` |
+
+## ORACLE-134 — Independently derived literal certificates and numerical references
+
+The new global references are exhaustively derived by shore/count-vector enumeration, cross-checked
+with scalar-total and endpoint enumeration. They are comparison oracles, not a checker optimality
+condition. U17 literals, globals and their fingerprints remain in the protected prefix.
+For a literal witness, s=f(U), e=internal multiplicity, b=boundary multiplicity, and Y=selected count.
+N=2(e+Y), D=s+Y-1. A negative comparison means valid suboptimal attainment and MUST be accepted.
+Certificate byte recipes use literal ASCII strings or (repeat,character,count); exact one LF.
+
+### Fixture table: U18_GLOBALS
+
+| graph | N | D | U | y |
+| --- | --- | --- | --- | --- |
+| `'U18_INPUTS/PAIR32'` | `6` | `4` | `(1,)` | `((0, 3),)` |
+| `'U18_INPUTS/TRI-MIX'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` |
+| `'U18_INPUTS/DISJOINT-Q'` | `4` | `2` | `(0,)` | `((0, 2),)` |
+| `'U18_INPUTS/SURROGATES'` | `6` | `2` | `(0, 1, 2)` | `()` |
+
+
+### Fixture table: U18_LITERALS
+
+| id | graph | kind | U | y | N | D | recipe | bytes | sha256 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'PAIR-ZERO'` | `'U18_INPUTS/PAIR32'` | `'nonempty-zero'` | `(0,)` | `()` | `0` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":0,"D":2,"U":[0],"y":[]}\n',)` | `78` | `'397e0f7cf159c003855e8743909f8b89ac4d7fcdbfeec84b0f659354bb0a1c78'` |
+| `'PAIR-FULL'` | `'U18_INPUTS/PAIR32'` | `'full-shore'` | `(0, 1)` | `()` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[0,1],"y":[]}\n',)` | `80` | `'2eb1d97be541c827c853f7ed30eb64797bdab751316d06ad3227ffe7994448d4'` |
+| `'PAIR-PARTIAL'` | `'U18_INPUTS/PAIR32'` | `'partial-selection'` | `(0,)` | `((0, 2),)` | `4` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":4,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'123a9074ef7dfb75b529d1c94a6f0c0fac7cd6ad5a5248a77543a6bc9a19f755'` |
+| `'MIX-INTERNAL'` | `'U18_INPUTS/TRI-MIX'` | `'internal-loser'` | `(0, 2)` | `()` | `2` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":2,"D":2,"U":[0,2],"y":[]}\n',)` | `80` | `'46945c28895fd895a83be7b23d78d17d0d1dadf4bf5a1990eaccde329d31e761'` |
+| `'MIX-SPLIT'` | `'U18_INPUTS/TRI-MIX'` | `'sparse-first-last'` | `(0, 2)` | `((0, 1), (2, 1))` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[0,2],"y":[[0,1],[2,1]]}\n',)` | `91` | `'0f0ed91a50a0e5caf4be953bd5ad577d1eccae05cb96bcec3b72f441c580deff'` |
+| `'MIX-H1'` | `'U18_INPUTS/TRI-MIX'` | `'H1-loser'` | `(0, 1)` | `((2, 1),)` | `6` | `4` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":4,"U":[0,1],"y":[[2,1]]}\n',)` | `85` | `'3c817862ef5623745e927ee712bc49cb31ab1066ab2cafba2bf8304b53532e6e'` |
+| `'DISJ-LAST'` | `'U18_INPUTS/DISJOINT-Q'` | `'last-ref'` | `(1, 3)` | `((1, 1),)` | `2` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":2,"D":2,"U":[1,3],"y":[[1,1]]}\n',)` | `85` | `'c4661004739552af9d899a8076a666fc89b84bfdd625eb51be46ca4795d12438'` |
+| `'DISJ-H2'` | `'U18_INPUTS/DISJOINT-Q'` | `'H2'` | `(0,)` | `((0, 2),)` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0],"y":[[0,2]]}\n',)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` |
+| `'DISJ-INTERNAL'` | `'U18_INPUTS/DISJOINT-Q'` | `'no-boundary-selected'` | `(0, 1, 3)` | `()` | `4` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":2,"U":[0,1,3],"y":[]}\n',)` | `82` | `'02101826d5f0171929f2880885dcaf8dcf9bc21ebca1a529d5bc0da2659488b8'` |
+| `'SURROGATE-FULL'` | `'U18_INPUTS/SURROGATES'` | `'metadata-only'` | `(0, 1, 2)` | `()` | `6` | `2` | `('{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":2,"U":[0,1,2],"y":[]}\n',)` | `82` | `'2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9'` |
+
+
+### Fixture table: U18_WITNESS_MATH
+
+| id | s_e_b_Y | comparison_to_global |
+| --- | --- | --- |
+| `'PAIR-ZERO'` | `(3, 0, 3, 0)` | `-1` |
+| `'PAIR-FULL'` | `(5, 3, 0, 0)` | `0` |
+| `'PAIR-PARTIAL'` | `(3, 0, 3, 2)` | `-1` |
+| `'MIX-INTERNAL'` | `(3, 1, 4, 0)` | `-1` |
+| `'MIX-SPLIT'` | `(3, 1, 4, 2)` | `-1` |
+| `'MIX-H1'` | `(4, 2, 3, 1)` | `-1` |
+| `'DISJ-LAST'` | `(2, 0, 3, 1)` | `-1` |
+| `'DISJ-H2'` | `(1, 0, 2, 2)` | `0` |
+| `'DISJ-INTERNAL'` | `(3, 2, 1, 0)` | `0` |
+| `'SURROGATE-FULL'` | `(3, 3, 0, 0)` | `0` |
+
+## ORACLE-135 — Serialized acceptance/rejection and exact consumption
+
+Rows reference U17/<literal id> or U18/<literal id>. Apply ops to one stream only. Inherited ops
+retain ORACLE-129 semantics; truncate(k) takes the first k bytes; encoding(name) changes UTF8 text
+encoding; raw_hex supplies literal bytes; replace_hex requires one exact match. Each resulting
+stream has independently computed byte length/SHA. Good=False requires exact ValueError in
+future production; reason is explanatory and does not prescribe diagnostic prose.
+Every inherited 140 rejection and seven acceptance rows is still required independently. All
+strict prefixes of representative full and Empty certificates are registered as truncation errors.
+Y-RENUMBER deliberately ACCEPTS a different but admissible witness with the same total: not every
+coordinate or instance change is invalid. GRAPH-CHANGE-RAW and GRAPH-CHANGE-F isolate changes
+which do invalidate the structural pair. Metadata-only changes cannot create unique binding.
+Escaped unpaired surrogates remain valid inherited string labels; raw invalid UTF8 does not.
+PAIR-RESCALE-UP, PAIR-REDUCE, ZERO-NORMALIZE and six inherited forgeries preserve numerical ratio
+but fail literal attainment. PARITY-ISOLATED has total 4, N=2,D=3. MINIMUM-ISOLATED has total 1
+with schema-valid N=0,D=1 so its minimum predicate precedes the unavoidable raw-D mismatch.
+
+### Fixture table: U18_WIRE_CASES
+
+| id | literal | stream | ops | good | reason | bytes | sha256 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `'SPACE-ENVELOPE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('prefix', ' \t\r\n'), ('suffix', '\n\t '))` | `True` | `'instance lexical equivalence'` | `74` | `'d4dffed8d30d8ecc80a12644a4b2bcd3ceb9385e9d775a1e22ff7f10c2fefacf'` |
+| `'KEY-ORDER'` | `'U18/PAIR-FULL'` | `'instance'` | `(('reverse_keys',),)` | `True` | `'instance lexical equivalence'` | `67` | `'fa794c367e6db1a68880db47ab954aa2da3f6134e8f8775d983108a7ebc8f8a4'` |
+| `'PRETTY-INSTANCE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('pretty',),)` | `True` | `'instance lexical equivalence'` | `132` | `'af76860fdd9132394b7b22d66338009c6723e7fcc67ec8dfd0f627dd9ca7f8ee'` |
+| `'ESCAPED-TAG'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', 'exactfrac-instance/1', 'exactfrac-instance\\/1'),)` | `True` | `'instance lexical equivalence'` | `68` | `'9e282f8504112591aca0b49fdcceb5f814cda1127cf989bcd46bdf27fd5bb43f'` |
+| `'ESCAPED-KEY'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":', '"\\u006e":'),)` | `True` | `'instance lexical equivalence'` | `72` | `'3adf94d0b34b93c9f2d75ebf62d7d699489219ca346b32ef84731dee48639252'` |
+| `'LABEL-MIXED'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[1,"1"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `84` | `'edd53a7c9e7cdcfc6630251639e72252f2af864ece056f0e96680d10d307b2ee'` |
+| `'LABEL-SIGNED'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[-1,0]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `83` | `'b9fad26c6626fa97504cb37544027dc72b373e75a13b5c2bf40cabf8a8145e9d'` |
+| `'LABEL-CONTROLS'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\u0000","\\n\\t"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `94` | `'b8d7da98117459a225969cd010459e0099499a9e378ed57b7aa3813065e10539'` |
+| `'LABEL-LONE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\ud800","\\udc00"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `96` | `'2c6acce7a4fba20495c98b9f236d86b8f20cad6f738ce7212565283fee5991f7'` |
+| `'LABEL-PAIR'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\ud83d\\ude42","other"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `101` | `'2a8488f05afff3028f31819a69d63b2285aee75c2486c37e212131df4dd2d76c'` |
+| `'LABEL-NFC-NFD'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\u00e9","e\\u0301"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `97` | `'eb7a4d42414e3108ae58820a4628653108ca5e69c3f555f31f4b219a85d5dd35'` |
+| `'LABEL-CASE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["A","a"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `86` | `'6a7617635d105dfbbce795ca69868d1e9876449f3969f16af2c9415babd18d39'` |
+| `'LABEL-ESCAPED-SLASH'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\/","x"]}'),)` | `True` | `'valid metadata; no unique-instance binding'` | `87` | `'32a7dc51d1dbfbf426db74b4146b7909790338b8d9381844592193d8ca770435'` |
+| `'LABEL-RAW-UTF8'` | `'U18/MIX-SPLIT'` | `'instance'` | `(('utf8_strings',),)` | `True` | `'valid UTF8 label'` | `107` | `'aa486536ecadab1517a74b21077509127ecc6c6f5bb210d449c7124348cf6529'` |
+| `'GRAPH-EXTRA-CAPACITY-VALID'` | `'U18/PAIR-ZERO'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,4]'),)` | `True` | `'same zero witness valid on another graph'` | `67` | `'5f31192a898501c3474236c2da23541ba71b401c4d026e8c94d4ca4c63d8d4f9'` |
+| `'UTF8-BOM'` | `'U18/PAIR-FULL'` | `'instance'` | `(('prefix_hex', 'efbbbf'),)` | `False` | `'strict single UTF8 JSON document'` | `70` | `'26c74c3b9a15bbb026cf3b8aa57df0428e038b140b32d1a6b0490325f6bc2e1d'` |
+| `'UTF16LE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('encoding', 'utf-16-le'),)` | `False` | `'strict single UTF8 JSON document'` | `134` | `'2dfbd06cc39e4bd63c9c99edb419cec12025e0fc7f2d116a84eed832e50adbf1'` |
+| `'UTF32BE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('encoding', 'utf-32-be'),)` | `False` | `'strict single UTF8 JSON document'` | `268` | `'0ac1f85a51ff2a26e2e445e0a5f86edb95279273baf63a500bd8d681719d94e0'` |
+| `'UTF16-BOM'` | `'U18/PAIR-FULL'` | `'instance'` | `(('encoding', 'utf-16'),)` | `False` | `'strict single UTF8 JSON document'` | `136` | `'bbd0b07f2586ac7652c382bd2a5c0e30f4f3e476ec0f41336c29218dd84b44fc'` |
+| `'INVALID-UTF8'` | `'U18/PAIR-FULL'` | `'instance'` | `(('prefix_hex', 'ff'),)` | `False` | `'strict single UTF8 JSON document'` | `68` | `'49de0e903d0d449d1c347f77b9e37a7390070661d636a50080954aa49b351060'` |
+| `'SECOND-JSON'` | `'U18/PAIR-FULL'` | `'instance'` | `(('suffix', '{}'),)` | `False` | `'strict single UTF8 JSON document'` | `69` | `'62beb8fd6dc19ab5b8212fd6fc9070b4fee8aa0c5a50c07734e1a74e34556dbc'` |
+| `'COMMENT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('prefix', '/*bad*/'),)` | `False` | `'strict single UTF8 JSON document'` | `74` | `'35b4b5aace6974732266c57eabc54de366132eb279e5e603f742f6c34bff8731'` |
+| `'TRAILING-TOKEN'` | `'U18/PAIR-FULL'` | `'instance'` | `(('suffix', 'x'),)` | `False` | `'strict single UTF8 JSON document'` | `68` | `'1f5348dadd5b9cbb201b1e02c236190684a57bf660b7f5d47432579b79267ed1'` |
+| `'TRAILING-COMMA'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],}'),)` | `False` | `'strict single UTF8 JSON document'` | `68` | `'c51d027568d992fdb11a7fee40a8966a4e99a7daf027896a35c6412ce5530221'` |
+| `'DUPLICATE-N'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":2,"n":2'),)` | `False` | `'instance keys/tag/top level'` | `73` | `'7a54057fc2add39207e9fcbde1e8fc9dc0e2c29bb9a5869b6cc65e7745c82f1c'` |
+| `'DUPLICATE-ESCAPED-N'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":2,"\\u006e":2'),)` | `False` | `'instance keys/tag/top level'` | `78` | `'283c204a33d7c994fe4727ac398b8dfbc5c97af2c435647c90b74ab151c4d080'` |
+| `'DUPLICATE-ESCAPED-FORMAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"format":', '"\\u0066ormat":"exactfrac-instance/1","format":'),)` | `False` | `'instance keys/tag/top level'` | `104` | `'be90c02bcd23a633a9ea53ed268fad835937d56682545cd4ed1862daad3edfa0'` |
+| `'UNKNOWN-KEY'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":2,"digest":"x"'),)` | `False` | `'instance keys/tag/top level'` | `80` | `'2fa6de72d3c9e1bca9247e3508e725f6e23df98df6d66d5e3ac0fc7540d55c22'` |
+| `'MISSING-KEY'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2,', ''),)` | `False` | `'instance keys/tag/top level'` | `61` | `'85e8d1c1d25b04be5cd9aa2276874c1e22d779acc09eed09fcc1be3dabc4bf9f'` |
+| `'BAD-FORMAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', 'exactfrac-instance/1', 'exactfrac-instance/2'),)` | `False` | `'instance keys/tag/top level'` | `67` | `'a8f232485f83531392e8baf2b8b2c452c4e001036214fe3ac749ad82594df2af'` |
+| `'NONOBJECT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}', '[]'),)` | `False` | `'instance keys/tag/top level'` | `2` | `'4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945'` |
+| `'NUM-N-FALSE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":false'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `71` | `'f3525344e522cb4396088f4bf2fac57ed85e51f1214a822001cc451b6d7d5560'` |
+| `'NUM-N-TRUE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":true'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'945d9050d8915044476b32cf061d34e590f86c8b83a2ce3af39835565dc14c96'` |
+| `'NUM-N-ZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":0'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `67` | `'8f5382da3b0dffcdb03b45bed282135028f019dcbb19e06c122834ad5f8d3383'` |
+| `'NUM-N-NEG'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":-1'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'49ffce1c8e3e8d6387bb47ee478a5c77616c188e21b895b7acfb8dd00114cbd3'` |
+| `'NUM-N-MINUSZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":-0'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'eb72d8bbf1a0d4bfcc93e8c0e67d72ca2166d511d7d5d00d539d23a56c6f5c45'` |
+| `'NUM-N-FLOAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":3.0'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'caab39dc3deefba4ea69adf330c02b2f9ec93f9221f9baa7042be89d325ff5cc'` |
+| `'NUM-N-EXP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":3e0'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'140c26f441eb59f2933db549654b5292a32aea818797001afaeab72a9cbf1930'` |
+| `'NUM-N-PLUS'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":+3'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'bf683333d2754d32f7848818777a2d8458c3a4f0a13edd29d01ed18442bc23a9'` |
+| `'NUM-N-LEADZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":03'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'a8e6866c273341bdc6454a5d04368a79104cc5a884f469642f7b0cd3ef16da8d'` |
+| `'NUM-N-NAN'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":NaN'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'219631315a2145f67b275ebd0edfda748e211b5ae9f8690a3ccbfc01dd5d03e2'` |
+| `'NUM-N-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":Infinity'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `74` | `'08a126653fcad14a7e6485b126f6e5d53b6d82dda22a8ac115a6d0d8bacc81cb'` |
+| `'NUM-N-NEG-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":-Infinity'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `75` | `'61788250e64a7b9812d18fac0ea1dc59a69b9ed0bf5191d47741f3f79afa6e12'` |
+| `'NUM-N-NULL'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":null'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'636d088dd6baf6e7a5ea4e6838b540633e1009ad578005536132c85f1ea5cc6e'` |
+| `'NUM-N-STR'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":"3"'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'5d931b5dea0b951d0012be2664b33475fb66005db0721c73a3117fb808b3bc96'` |
+| `'NUM-N-HEX'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":0x3'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'ced05c7c39b77196005c0ca966bfa9a78d6bf8446e679f5696dc70fea1a9812c'` |
+| `'NUM-Q-FALSE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,false]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `71` | `'d9635def6fb125dd603c9ba42792b000536d1ad80d7116eea495cbe217a84172'` |
+| `'NUM-Q-TRUE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,true]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'657d24c1e8e48983a83c49fc7a6388dce0e87262c72dd332185b09bae5973e49'` |
+| `'NUM-Q-ZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,0]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `67` | `'c715054d4add81cac1c0b003b80b71a667e4ee179c955bed2e049837e1b6444a'` |
+| `'NUM-Q-NEG'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,-1]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'7881e4a5ceb60f18262f82142a5c073d462b98a90a11a233a508f39c2ea63e2e'` |
+| `'NUM-Q-MINUSZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,-0]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'641b7c77d02eaa41d9d033829f506ded64af847fec2e787863a4224c6b029355'` |
+| `'NUM-Q-FLOAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,3.0]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'061ae719c890cc5ba54a0b0399aa5d2158cf45199f94b2b57d561a556f38561c'` |
+| `'NUM-Q-EXP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,3e0]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'e473e1c6155ba5f439fedef62e7c2217daf5f04d05a9932662eb2d11151e061f'` |
+| `'NUM-Q-PLUS'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,+3]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'050f0fb03b511b4d50833cd726671a28221dce467a14d32f484457f007269ddc'` |
+| `'NUM-Q-LEADZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,03]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'0e27b9c1abb79e2e16cbe91c15e86ebbe9d3219b7be1e659f54e8d172b3a74de'` |
+| `'NUM-Q-NAN'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,NaN]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'d3855f1e2254a85fcc801ff7a86a13e1bf73b54c0d7a440257324267bf0430f3'` |
+| `'NUM-Q-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,Infinity]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `74` | `'7a5600e9c8b82d6ca39069388c316cd408c3da18dac263394618176b0c78946a'` |
+| `'NUM-Q-NEG-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,-Infinity]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `75` | `'58ba00e66a469c63113cf02dc1fc0c6be7d4a5babfcfe9858667fdfc1a96de69'` |
+| `'NUM-Q-NULL'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,null]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'db03f6062f562164a262936b511b79a1d63ceebd1edc269609d85988539c5241'` |
+| `'NUM-Q-STR'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,"3"]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'d3be18765c2188fc9cc3289c3aacb7266e64d16d3ee0bfe55edb6b4463fcadc8'` |
+| `'NUM-Q-HEX'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,0x3]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'88c5b95edcf48569f175c411576b6be558641f75bc7786629466741f9d0cafe3'` |
+| `'NUM-F-FALSE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[false,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `71` | `'19e3f23d25eb0cd8438bde7fa7f68e5fccfde5d5cb9a1034be62abfca890e553'` |
+| `'NUM-F-TRUE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[true,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'570c7e2f073177b8ade5b5c347d3ce69a98cdfed3f0796ed3bcf6d5b4268caa3'` |
+| `'NUM-F-ZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[0,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `67` | `'8f1caedc491ff0f3a8d311665d3c61c981cb54199072fe5f7c841f1fb375b6d9'` |
+| `'NUM-F-NEG'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[-1,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'429b9b8538368aa315a1e6fd2489f0859ae02bd348b70f87b5d1756bf3552b58'` |
+| `'NUM-F-MINUSZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[-0,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'3ad98ca11d2f20d98afe6641c6ff017ab158dd70949fe6d8fd4ada855c7773f7'` |
+| `'NUM-F-FLOAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[3.0,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'9df77abe591f00c374603f5a6f315bef40e61436d8f4550a6e273d8ef749f889'` |
+| `'NUM-F-EXP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[3e0,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'4e6ccd3479f9112d2071b2d564442b32b2cb2dd0fb08a114660bc7dcd10ab7b7'` |
+| `'NUM-F-PLUS'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[+3,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'a469a3ae71bba8b21ae4553f03004c5690d08ef7005c25f3772c3cc80e77b641'` |
+| `'NUM-F-LEADZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[03,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `68` | `'359110d95eb5d5cf2d6fac7f92312a31d6ea5d3e57eb960388d26ff24e613276'` |
+| `'NUM-F-NAN'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[NaN,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'d80e703ee4a256717879b362406dd38ec7cdc49f6dc999876fee07d9d900e7de'` |
+| `'NUM-F-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[Infinity,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `74` | `'23d703a25484de1e88768c5a659e9940d7cfc4ca94cfdb223ff92924fc7034ad'` |
+| `'NUM-F-NEG-INF'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[-Infinity,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `75` | `'94d67bf565fa6f72b6c7d1684b7d0f7823d43a9849d01609245f9dbc282d9d64'` |
+| `'NUM-F-NULL'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[null,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `70` | `'fe26449861c8add6032df57dd0e311720567b2f768a8b6ed2792765c68095554'` |
+| `'NUM-F-STR'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":["3",2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'b15e7fcba7904afb2122f27297e63db1b84b3727dfadc1cd7d9d007b4cddfce4'` |
+| `'NUM-F-HEX'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[0x3,2]'),)` | `False` | `'integer lexical/type/range/shape predicate'` | `69` | `'0ba960bb863e8ab4d291e435b2d6b2d6e0f24adb58b0679cc5230500ce20d391'` |
+| `'BAD-LABEL-NULL'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":null}'),)` | `False` | `'independently validate labels before graph/active'` | `81` | `'dc1fdcea9bb14fb3f70bf853c0d8b9b42f25892cddd686a7ba7a901754cdf0c9'` |
+| `'BAD-LABEL-EMPTY'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[]}'),)` | `False` | `'independently validate labels before graph/active'` | `79` | `'fd64a6fe2a2b9c970657f1ccf2d19c0a4aadfbe42023ff0814721c02b957aace'` |
+| `'BAD-LABEL-SHORT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `82` | `'232176bc384e552ba017493852ea3864b4ea28e0de9f071b5ad4955d6534b818'` |
+| `'BAD-LABEL-BOOL'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[true,"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `87` | `'5c513e7fed8fc36c01338a8435eb3106e8b023f8bc2a7dd82115f045aa15a520'` |
+| `'BAD-LABEL-FLOAT'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[1.0,"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `86` | `'4175773e10d84b58a58ba76e1f84a25038ed4deefe727c93cf3f11a042bd529d'` |
+| `'BAD-LABEL-EXP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[1e0,"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `86` | `'407287a38c57977ce7d6b885f90e1967e9605221c543ffc1f98aef778f1045b2'` |
+| `'BAD-LABEL-MINUSZERO'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[-0,"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `85` | `'3d02bf0ead07496411fd7a4e26ba5a999a32c706b02213ba5e71e05554e1bf5f'` |
+| `'BAD-LABEL-OBJ'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[{},"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `85` | `'7d5cae6e006f381c7090f6ef47be14c3802d4cc3ebcd67c8398cc6941263401c'` |
+| `'BAD-LABEL-LIST'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":[[1],"a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `86` | `'2d5640670a27c4094614ba3ff414c92ca2a4425c83bfb3ec5f38ec0be721cec1'` |
+| `'BAD-LABEL-DUP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["a","a"]}'),)` | `False` | `'independently validate labels before graph/active'` | `86` | `'fc6f400b2d03c985a023cab9e02cab4ed3ea5462e46e61ce1ef90405120f5bf9'` |
+| `'BAD-LABEL-ESCAPED-DUP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["a","\\u0061"]}'),)` | `False` | `'independently validate labels before graph/active'` | `91` | `'6a9c22455054d8fe2b6f4dabc9dc1ebe4f069c90ce4dc266204986a6eab19989'` |
+| `'BAD-LABEL-SURROGATE-DUP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]}', '"f":[3,2],"labels":["\\ud83d\\ude42","\\ud83d\\ude42"]}'),)` | `False` | `'independently validate labels before graph/active'` | `108` | `'2718d504224040be79fff21b7e5894518624fed3c88c9bd1d8a6354091ba1d4d'` |
+| `'EMPTY-EDGES'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[[0,1,3]]', '[]'),)` | `False` | `'graph RI/active predicate'` | `60` | `'421ef24387f6c8425538a7b8afcf72105c3fba59a46b019b00a24e817e85fe3f'` |
+| `'EDGE-SHAPE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[[0,1,3]]', '[[0,1]]'),)` | `False` | `'graph RI/active predicate'` | `65` | `'fbc0a60dadff3229b07c4c17991bb4a5004a780d9931e0e34d75557b54a0dc8b'` |
+| `'EDGE-LOOP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,0,3]'),)` | `False` | `'graph RI/active predicate'` | `67` | `'7ac584d290a19a636e984c4c47c7c6946ba8395e79b413d969e1c34e5bd4039d'` |
+| `'EDGE-REVERSE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[1,0,3]'),)` | `False` | `'graph RI/active predicate'` | `67` | `'daa94ae42531706ac379fb6ef78e039af1d63f8541485f4b82290ae151bfc3a8'` |
+| `'EDGE-RANGE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,2,3]'),)` | `False` | `'graph RI/active predicate'` | `67` | `'ba7458a0eaddd00c02536c0890baaa93b41b86b1c296166ec47455e50dd65f54'` |
+| `'EDGE-DUP'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[[0,1,3]]', '[[0,1,3],[0,1,3]]'),)` | `False` | `'graph RI/active predicate'` | `75` | `'c617e43c2397431b0d92bf8b8078965f1156ed6260b391fe8e5b3b5303f33388'` |
+| `'F-LENGTH'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[3]'),)` | `False` | `'graph RI/active predicate'` | `65` | `'f63bd0a7f0858c1a503d259ad6ef86cabe2df62a25232a8857f034072b2932a8'` |
+| `'HUGE-N-LENGTH'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2', '"n":10000000000000000000000000000000000'),)` | `False` | `'graph RI/active predicate'` | `101` | `'a9da6437b0c5564ad7694ab03b14c7e43e8d4b8d5c3b9d7e6cb791706b327912'` |
+| `'NONACTIVE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[4,2]'),)` | `False` | `'graph RI/active predicate'` | `67` | `'0f3762a20ebfdadbba1bfdf1aa7e5c5b96306e75d1ca764ab5c8186e04268f98'` |
+| `'ACTIVE-ISOLATED'` | `'U18/PAIR-ZERO'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[3,4]'),)` | `False` | `'inactive unused vertex; raw witness otherwise unchanged'` | `67` | `'3bd7a8f89dc36ec7afe24377e943808d3e7d6117aed3d50e2495e890157fcab1'` |
+| `'EDGE-UNSORTED'` | `'U18/MIX-SPLIT'` | `'instance'` | `(('replace', '[[0,1,2],[0,2,1],[1,2,2]]', '[[0,2,1],[0,1,2],[1,2,2]]'),)` | `False` | `'canonical edge order before references'` | `111` | `'a76c523960831c209e201d319531ede7ca6e687f7b8547892bd06e0c0df458fa'` |
+| `'ISOLATE'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"n":2,"edges":[[0,1,3]],"f":[3,2]', '"n":3,"edges":[[0,1,3]],"f":[3,2,1]'),)` | `False` | `'active excludes isolates'` | `69` | `'6531adbf6a80b95dc9a5d51e289669909b6cd1d0cf5e5dd9e0566a98e6b40916'` |
+| `'GRAPH-CHANGE-RAW'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '[0,1,3]', '[0,1,4]'),)` | `False` | `'internal count changes literal numerator'` | `67` | `'5f31192a898501c3474236c2da23541ba71b401c4d026e8c94d4ca4c63d8d4f9'` |
+| `'GRAPH-CHANGE-F'` | `'U18/PAIR-FULL'` | `'instance'` | `(('replace', '"f":[3,2]', '"f":[1,2]'),)` | `False` | `'capacity changes literal denominator'` | `67` | `'0bbf682dd2773d6e479443eb6ec93d5b977945e316b1ee6aceed2ecddcb24f44'` |
+| `'CERT-LEADSPACE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('prefix', ' '),)` | `False` | `'literal certificate grammar'` | `81` | `'5f809e5ffaaea63ab877d1c699be94eb2b29c482d5e03ee33b7230c3e80b0db4'` |
+| `'CERT-EXTRALF'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('suffix', '\n'),)` | `False` | `'literal certificate grammar'` | `81` | `'90710e6d5d89f6104f02f8c9b471ffa2b64b563a36dc7b68b03633cf940f81ff'` |
+| `'CERT-NOLF'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('strip_final_lf',),)` | `False` | `'literal certificate grammar'` | `79` | `'fc20ee82c2beb0dbcec3c3f170ae5c43c000a12ffd1c0e2750b93d9e1f396b46'` |
+| `'CERT-CRLF'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '}\n', '}\r\n'),)` | `False` | `'literal certificate grammar'` | `81` | `'48e5ac1727d511e9933cb6c556d826e59ca7fb65fd04605578a578be5a5af858'` |
+| `'CERT-BOM'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('prefix_hex', 'efbbbf'),)` | `False` | `'literal certificate grammar'` | `83` | `'913ebd246d30da0c96803fcf5674d1e2c408f809c231c91aacfb4f3bf461d0c2'` |
+| `'CERT-KEYORDER'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('reverse_keys',),)` | `False` | `'literal certificate grammar'` | `80` | `'e4c32196563e559adacbc6705fe72edfe27736c80d8b5a5efe8e0bc894fefbde'` |
+| `'CERT-PRETTY'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('pretty',),)` | `False` | `'literal certificate grammar'` | `118` | `'23cf5629de20a45eba657d72fae6abc32dc3785fd2a3a1638744c76a2355397b'` |
+| `'CERT-TRAILING-NUL'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('suffix', '\x00'),)` | `False` | `'literal certificate grammar'` | `81` | `'c66076907a96cc128a00ba2c3d1d21c18fd66a6942e225b3615584ec861152e2'` |
+| `'CERT-CONCAT'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('suffix', '{}'),)` | `False` | `'literal certificate grammar'` | `82` | `'e933179eaca44f1abcfbc900ae23734fba641ac0ac7606ca0517934b177b89c3'` |
+| `'CERT-DUP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":6,"N":6'),)` | `False` | `'exact certificate envelope'` | `86` | `'b547d5cec551a1abe6ab43ff13b6a2db2d40952c1ee7b42b57b1c953c14303c1'` |
+| `'CERT-ESCAPEDKEY'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"\\u004e":6'),)` | `False` | `'exact certificate envelope'` | `85` | `'2c35395006bbc49c8a854e5e9aebc2b155c4b87b55af12445bc92d609c374138'` |
+| `'CERT-SLASH'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', 'exactfrac-certificate/1', 'exactfrac-certificate\\/1'),)` | `False` | `'exact certificate envelope'` | `81` | `'dac9ff4fbb198c41c1ed035d718c3e3827225fb8e1fe38e6187a7f347810b6bf'` |
+| `'CERT-TAG'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', 'exactfrac-certificate/1', 'exactfrac-certificate/2'),)` | `False` | `'exact certificate envelope'` | `80` | `'f433919036fe1a163f719baebbb537d90669230b5bb3e4cb0e6ac61f2dd6d1cb'` |
+| `'CERT-DIGEST'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":4,"digest":"x"'),)` | `False` | `'exact certificate envelope'` | `93` | `'70f138e952c498d31843daf0a029b49af002584792340ee6ba5227fc8c321cca'` |
+| `'CERT-INSTANCE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":4,"instance":{}'),)` | `False` | `'exact certificate envelope'` | `94` | `'c22ca92d2efdcafa8bf292e4cba447c60aadc19710023c9097d80b864fb05cf6'` |
+| `'CERT-STATS'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":4,"stats":{}'),)` | `False` | `'exact certificate envelope'` | `91` | `'98867d7b8dd3c5e08a28f4c413bd615049ed80678bd5025645a3949412406c77'` |
+| `'CERT-MISSING'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4,', ''),)` | `False` | `'exact certificate envelope'` | `74` | `'f629f48978edb160e288f0042a2aae8bfde8cd98d2a40e9d3e7d961372b39998'` |
+| `'CERT-BOOL'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"empty":false', '"empty":0'),)` | `False` | `'exact certificate envelope'` | `76` | `'2c700d4223d70fbd01eea3b28154150ad22dee659b37969400db4542a73407a2'` |
+| `'CERT-EMPTY-PAYLOAD'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"empty":false', '"empty":true'),)` | `False` | `'exact certificate envelope'` | `79` | `'6fce3538be3c264ed53b74b9e6b26d7bc01ffdcf6c630fd01dd93d5e75794813'` |
+| `'CERT-NUM-N-QUOTE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":"2"'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'95b8575434fca7635b98355b47232d248b83f7c569d0212fdb7c312cb723d59b'` |
+| `'CERT-NUM-N-EXP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":2e0'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'054b7e5e437cf7f5debdfdc12cd1910763a10e022fee8f4a28686df417f4bb84'` |
+| `'CERT-NUM-N-FLOAT'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":2.0'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'a7f0fa6d769a992ecc3311cc659a68b1c92aea05d86e9ad695757f525922c3cb'` |
+| `'CERT-NUM-N-MINUSZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":-0'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'c5de67e143674e33012decc0c0ecb390e35295ffb9a530a065f1537c0eda3be4'` |
+| `'CERT-NUM-N-NEG'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":-2'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'98df7d9e7d73cfcb6048586feed5663a94b74c8145f5233378df0991f55b7e0c'` |
+| `'CERT-NUM-N-PLUS'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":+2'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'01e2dfe4ea16f1e8e20134dc55dcf993be606549652837889c49cb59325157e6'` |
+| `'CERT-NUM-N-LEADZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":02'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'3a1e40df9f2c5b2c6118c59bf432435a815c44f1d1102aea2db3aa3ef81d5d5f'` |
+| `'CERT-NUM-N-NULL'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":null'),)` | `False` | `'noncanonical integer token/type'` | `83` | `'aed1b1610249bd2d879d321b069a2d0886a4c98ca2c6f06458d82f20ee2c1dea'` |
+| `'CERT-NUM-N-TRUE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6', '"N":true'),)` | `False` | `'noncanonical integer token/type'` | `83` | `'230ec7f91c99f6ea0cf696bf78a7c457108aad4ce3c187cde89cdaa6109b29a2'` |
+| `'CERT-NUM-D-QUOTE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":"2"'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'b0cf3fa6812fdc656281be867393927e2aaf410e51b3a111a21cfe5f1ff11a25'` |
+| `'CERT-NUM-D-EXP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":2e0'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'51c47810943ffb56d40594a834e9ec0afb6780fc87011a8eb68b80297f00b2f8'` |
+| `'CERT-NUM-D-FLOAT'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":2.0'),)` | `False` | `'noncanonical integer token/type'` | `82` | `'9faf23d6c9400ee6a4bd5d26e2360259d0c86c130efdf6497b44389b00f94df8'` |
+| `'CERT-NUM-D-MINUSZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":-0'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'67ab64fd7b9122a902e25946bfcdb9da42db8ba3318c38ea7da827b11af7dc4e'` |
+| `'CERT-NUM-D-NEG'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":-2'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'fa4df807bfd2a9715417a9b1a487ae0694857fee0c7669e7f6a25dacbdda6b27'` |
+| `'CERT-NUM-D-PLUS'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":+2'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'807e83c03656ff4c5aecf860aeb15083f01fca55b43a1877bc1f926cd22d99d8'` |
+| `'CERT-NUM-D-LEADZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":02'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'549c8677a8a040424251975ee0e9c63d9e696648bffa008388a16087963a2575'` |
+| `'CERT-NUM-D-NULL'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":null'),)` | `False` | `'noncanonical integer token/type'` | `83` | `'beb96b24ee9aa499d654b3a95a7e27db628b864457629d4d2f43c29cb7770bb8'` |
+| `'CERT-NUM-D-TRUE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"D":4', '"D":true'),)` | `False` | `'noncanonical integer token/type'` | `83` | `'b683fca2d66f46b677173b7b0f6d95043b307e3ee9d6d8d6711545c81e0889c2'` |
+| `'CERT-NUM-U-QUOTE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":["2"]'),)` | `False` | `'noncanonical integer token/type'` | `80` | `'ce921692485d9a5d001eeae419af95f30e4bce8b17aeab989fba3c11a7190033'` |
+| `'CERT-NUM-U-EXP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[2e0]'),)` | `False` | `'noncanonical integer token/type'` | `80` | `'2f9505ac9c80989e4e39fff8a9a1811be8fdee35c4729008b14d26c83d15d1ba'` |
+| `'CERT-NUM-U-FLOAT'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[2.0]'),)` | `False` | `'noncanonical integer token/type'` | `80` | `'a4545a2f4eb74c535559b8f2792964615d87340510dffb82a4dcbb2b5af05879'` |
+| `'CERT-NUM-U-MINUSZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[-0]'),)` | `False` | `'noncanonical integer token/type'` | `79` | `'2857f1b852742da9fde5e589215c20640715da73912a808e6d2ec58c700fbfad'` |
+| `'CERT-NUM-U-NEG'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[-2]'),)` | `False` | `'noncanonical integer token/type'` | `79` | `'f7163e1de3fa3553ac28739b21fcabbed4b87e2807223142385460003a60f643'` |
+| `'CERT-NUM-U-PLUS'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[+2]'),)` | `False` | `'noncanonical integer token/type'` | `79` | `'6ba720ee08cd1727efbefa6c3c28967bb2ce31cc3ba93b2c7ff77864de27cc0a'` |
+| `'CERT-NUM-U-LEADZERO'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[02]'),)` | `False` | `'noncanonical integer token/type'` | `79` | `'fb840b8e26c61b48bb4a95f6fa8d37c233bb48f46edacf591bfdfbf3758e28b4'` |
+| `'CERT-NUM-U-NULL'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[null]'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'417b3f5b0290a5f86dc55ec4ffc5f47b366fe25d508a04b54490282b59db65d7'` |
+| `'CERT-NUM-U-TRUE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[true]'),)` | `False` | `'noncanonical integer token/type'` | `81` | `'463745379ca92a84fdaef95e2e27d52150bc47a63c60deb5d1cfe041b1f5c06c'` |
+| `'CERT-NUM-REF-QUOTE'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[["2",2]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'438c02091fc8a512c475f085f87d9f34b3ddb1e0284be876227ee535883b6cbf'` |
+| `'CERT-NUM-REF-EXP'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[2e0,2]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'4c21405ed1525f5cdb9fb6c2e8effd2b0262c803810be24dd46d59c88073c36f'` |
+| `'CERT-NUM-REF-FLOAT'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[2.0,2]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'521495f27644532e0349d2ee821f01cb2a4da7f0001c493882f56d6be28d43cb'` |
+| `'CERT-NUM-REF-MINUSZERO'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[-0,2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'ac49d2b940a2183ebf480ad6d3bff620cf60df199846bbe70513aca44ea77bf9'` |
+| `'CERT-NUM-REF-NEG'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[-2,2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'f59a517db040c541dac65bb084883471bc6377bf51f1368c3436401e1fa57d45'` |
+| `'CERT-NUM-REF-PLUS'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[+2,2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'3ae5f411d933a13afc6c1ed450db8932c4064a2062c6199da5ef85d512e1929d'` |
+| `'CERT-NUM-REF-LEADZERO'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[02,2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'213a795089161b9e53d1e13b1b00a603262bf7a671a2c73ea963c12673d02be5'` |
+| `'CERT-NUM-REF-NULL'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[null,2]]'),)` | `False` | `'noncanonical integer token/type'` | `86` | `'e12bafef57ab5ba612fd3ffb33c98fbf827bd4b98f3579deba27f3bedd9bf0c8'` |
+| `'CERT-NUM-REF-TRUE'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[true,2]]'),)` | `False` | `'noncanonical integer token/type'` | `86` | `'3a6b08b2967f9208f592402e642151cbee9f7c6968f423039a998f0da3a0bbf9'` |
+| `'CERT-NUM-COUNT-QUOTE'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,"2"]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'389c126a1ccaec3c6373bef4901889ab448fe3dad92d5e455b874ab06a494c4f'` |
+| `'CERT-NUM-COUNT-EXP'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,2e0]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'84bcaa568b12d89cbf504f4d422ac233e585477e2fca91ca25fd68c16a07dac0'` |
+| `'CERT-NUM-COUNT-FLOAT'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,2.0]]'),)` | `False` | `'noncanonical integer token/type'` | `85` | `'35d411839946aba7de4c740ff8a660f079572aa53ec530319bf68d27d3cda161'` |
+| `'CERT-NUM-COUNT-MINUSZERO'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,-0]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'27e3153475f437c68ae8067931164d306d28aa7bbde6a16161a7c66c0b01bb1b'` |
+| `'CERT-NUM-COUNT-NEG'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,-2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'f6e479461bf7d818297380cf23ba0e5fac14c64a09e0a889c333da79bae39034'` |
+| `'CERT-NUM-COUNT-PLUS'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,+2]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'db08037f06c376e5a8f16164ec74d8a609557c8e71ea0fe0c5e3003178ebb8e6'` |
+| `'CERT-NUM-COUNT-LEADZERO'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,02]]'),)` | `False` | `'noncanonical integer token/type'` | `84` | `'71a70db2b60de4795668478918e3a9449854e2b51745606345399c199045f5c6'` |
+| `'CERT-NUM-COUNT-NULL'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,null]]'),)` | `False` | `'noncanonical integer token/type'` | `86` | `'be0a66234d3138fabcc3bf7edd2e98ad96f20214e18e066880180f35b70b0af7'` |
+| `'CERT-NUM-COUNT-TRUE'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"y":[[0,2]]', '"y":[[0,true]]'),)` | `False` | `'noncanonical integer token/type'` | `86` | `'dc8c19e77b7e9e25fa9ded6569b9cc2c54941180a3c4e553a23e3cb7e9d73e63'` |
+| `'PAIR-RESCALE-UP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6,"D":4', '"N":12,"D":8'),)` | `False` | `'numerically equal but not literal raw attainment'` | `81` | `'b630232ea62ebe979679f3dddbf6eeb8ae50c5e7b3314e3db32a5aa833571c9c'` |
+| `'PAIR-REDUCE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"N":6,"D":4', '"N":3,"D":2'),)` | `False` | `'numerically equal but not literal raw attainment'` | `80` | `'b06fe5a1bb7bb2ffd4847cbbb8f9a8e0df03491dcab5d5efc469a892a0899ed1'` |
+| `'ZERO-NORMALIZE'` | `'U18/PAIR-ZERO'` | `'certificate'` | `(('replace', '"D":2', '"D":1'),)` | `False` | `'numerically equal but not literal raw attainment'` | `78` | `'448f50a40094b3fb4aa7443a410c8516fc696f9d2e4a2ae819bf8ec48aba08f9'` |
+| `'U-EMPTY'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[]'),)` | `False` | `'shore/sparse coordinates'` | `77` | `'3b26aa7e91a0346b3f0cf14f5cf953970d88f5046556d75bf2931320b6b915a1'` |
+| `'U-DESC'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[1,0]'),)` | `False` | `'shore/sparse coordinates'` | `80` | `'6a88f6e1bfe92b6e4590ed1baf0cb14efdda09b5ba3d2fa364dce0bf2af1aad4'` |
+| `'U-DUP'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[0,0]'),)` | `False` | `'shore/sparse coordinates'` | `80` | `'1f4403bd492736950201d71023686fe7540e95f8c5e356763262dad1be31e4cd'` |
+| `'U-RANGE'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('replace', '"U":[0,1]', '"U":[0,2]'),)` | `False` | `'shore/sparse coordinates'` | `80` | `'ccb990f3c7d900a37d682d219d2eee46ca064fabf52859a65566f14e8d246f86'` |
+| `'Y-RENUMBER'` | `'U18/DISJ-LAST'` | `'certificate'` | `(('replace', '"y":[[1,1]]', '"y":[[0,1]]'),)` | `True` | `'valid alternate witness'` | `85` | `'3cd7b96ed740a43b1314037c4a561a35147439a283fd7118860a935429eddac3'` |
+| `'Y-NONCROSS'` | `'U18/DISJ-INTERNAL'` | `'certificate'` | `(('replace', '"y":[]', '"y":[[0,1]]'),)` | `False` | `'shore/sparse coordinates'` | `87` | `'23cfa5d70c56f2a87f62aac6ed05bc8b1683a04cba11071312f3e8b076e9fd42'` |
+| `'Y-DUP'` | `'U18/MIX-SPLIT'` | `'certificate'` | `(('replace', '"y":[[0,1],[2,1]]', '"y":[[0,1],[0,1]]'),)` | `False` | `'shore/sparse coordinates'` | `91` | `'fe04b5b8d6ca5bcced3afa362205aa797c2c47c3258945d9ca105c1e397337fd'` |
+| `'Y-DESC'` | `'U18/MIX-SPLIT'` | `'certificate'` | `(('replace', '"y":[[0,1],[2,1]]', '"y":[[2,1],[0,1]]'),)` | `False` | `'shore/sparse coordinates'` | `91` | `'8b83a3f5f95d30454a90cb223423ed9036bf81ccd7522a9eadd3e2ce228efc5b'` |
+| `'Y-ZERO'` | `'U18/DISJ-LAST'` | `'certificate'` | `(('replace', '"y":[[1,1]]', '"y":[[1,0]]'),)` | `False` | `'shore/sparse coordinates'` | `85` | `'649b37c75c71b07fffce00627bee4fc775b8836e6dc492da9f3b4da012077517'` |
+| `'Y-RANGE'` | `'U18/DISJ-LAST'` | `'certificate'` | `(('replace', '"y":[[1,1]]', '"y":[[2,1]]'),)` | `False` | `'shore/sparse coordinates'` | `85` | `'1f00cc4a008a8011b170465c479e4d90764e976e7ef3ed731eb9d103692bf379'` |
+| `'Y-OVER-ISOLATED'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"N":4,"D":4,"U":[0],"y":[[0,2]]', '"N":8,"D":6,"U":[0],"y":[[0,4]]'),)` | `False` | `'isolated admissibility/capacity predicate'` | `83` | `'147fa2d1e2a07de2d29243e50bfecdb7d92b666bc6b823b1ab7521af734ee865'` |
+| `'PARITY-ISOLATED'` | `'U18/PAIR-PARTIAL'` | `'certificate'` | `(('replace', '"N":4,"D":4,"U":[0],"y":[[0,2]]', '"N":2,"D":3,"U":[0],"y":[[0,1]]'),)` | `False` | `'isolated admissibility/capacity predicate'` | `83` | `'2ad9bebccfbc86ab5f91d68fb107df88c674aefb64e3ea4e57868c01ec91ce76'` |
+| `'MINIMUM-ISOLATED'` | `'U18/DISJ-H2'` | `'certificate'` | `(('replace', '"N":4,"D":2,"U":[0],"y":[[0,2]]', '"N":0,"D":1,"U":[0],"y":[]'),)` | `False` | `'isolated admissibility/capacity predicate'` | `78` | `'448f50a40094b3fb4aa7443a410c8516fc696f9d2e4a2ae819bf8ec48aba08f9'` |
+| `'TRUNC-FULL-0'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 0),)` | `False` | `'incomplete certificate byte grammar'` | `0` | `'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'` |
+| `'TRUNC-FULL-1'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 1),)` | `False` | `'incomplete certificate byte grammar'` | `1` | `'021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96'` |
+| `'TRUNC-FULL-2'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 2),)` | `False` | `'incomplete certificate byte grammar'` | `2` | `'6017dbca8e3eeb2f73be4123b0032c736d8c8f9bf8c86e6631887342c06fec90'` |
+| `'TRUNC-FULL-3'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 3),)` | `False` | `'incomplete certificate byte grammar'` | `3` | `'60ecfcdc49d551287f77c9060e10f75aee34efdda75ff4e89863f7ca2db218c2'` |
+| `'TRUNC-FULL-4'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 4),)` | `False` | `'incomplete certificate byte grammar'` | `4` | `'f71dff42359961aec34a042733c398109e0ed91e4045bd1882fa6cbbfd821ec0'` |
+| `'TRUNC-FULL-5'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 5),)` | `False` | `'incomplete certificate byte grammar'` | `5` | `'65bc533dd416e20fd09ab66d39927ac244187edb009780cce90b29f5db0f85b5'` |
+| `'TRUNC-FULL-6'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 6),)` | `False` | `'incomplete certificate byte grammar'` | `6` | `'1e52da6b5bf91da2e4e92a4482c299a2b5f57118c21318448d9217f13f75203f'` |
+| `'TRUNC-FULL-7'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 7),)` | `False` | `'incomplete certificate byte grammar'` | `7` | `'bc4a2f3e325c2319dbc4a3a815e4f1e64788bb86c1fab9e9793c7844ee7da164'` |
+| `'TRUNC-FULL-8'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 8),)` | `False` | `'incomplete certificate byte grammar'` | `8` | `'a69dd639142cb9f34a77d63cfa66b8d5b67964a88c51e30a57976ea0910e579f'` |
+| `'TRUNC-FULL-9'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 9),)` | `False` | `'incomplete certificate byte grammar'` | `9` | `'85afed216255635f4f2848dd0ef9c203f5a3e3d475e5e4177e59e68cc2186ba0'` |
+| `'TRUNC-FULL-10'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 10),)` | `False` | `'incomplete certificate byte grammar'` | `10` | `'a4e54678ffcc21fb5b8e89f26ad975d3e07e9b282b211fdcf057f4ff49623e83'` |
+| `'TRUNC-FULL-11'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 11),)` | `False` | `'incomplete certificate byte grammar'` | `11` | `'6f0ba15a6d6c2a19c384fe1438247a91afd538542e0fa70c21a984f8ddf45f02'` |
+| `'TRUNC-FULL-12'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 12),)` | `False` | `'incomplete certificate byte grammar'` | `12` | `'892495d710414023643e98d31a1c057c646b5dc74b7be8c8e4b992cfe97e7c06'` |
+| `'TRUNC-FULL-13'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 13),)` | `False` | `'incomplete certificate byte grammar'` | `13` | `'cfd9ad2e11514d6d2b5766a99eb8ecb6abedebfa359bd5986ee7ba68456954d8'` |
+| `'TRUNC-FULL-14'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 14),)` | `False` | `'incomplete certificate byte grammar'` | `14` | `'9e2b989c36b0bbe227ec4cb659a2cb472b4ee4abc2fde5cca034254184ffd1d2'` |
+| `'TRUNC-FULL-15'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 15),)` | `False` | `'incomplete certificate byte grammar'` | `15` | `'379d01b074b28629591910b506a1c4a7d0ca4ca5f1c8d01353481ac370ecf449'` |
+| `'TRUNC-FULL-16'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 16),)` | `False` | `'incomplete certificate byte grammar'` | `16` | `'af3155dd5171fa4ca0f63a33a3c3288836b9d9d3fa624e3dd5d31dac2dd23740'` |
+| `'TRUNC-FULL-17'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 17),)` | `False` | `'incomplete certificate byte grammar'` | `17` | `'a898fa4497bf3f1652066d11cce78f31cd85dde15324e6da89f8ee53daa212fe'` |
+| `'TRUNC-FULL-18'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 18),)` | `False` | `'incomplete certificate byte grammar'` | `18` | `'cfa6e511ab79f7bf95ca2fab6afb98437157b808254e802194abe94345b24ce9'` |
+| `'TRUNC-FULL-19'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 19),)` | `False` | `'incomplete certificate byte grammar'` | `19` | `'29520966b9aeebb807f3ac3c67e32856fe6201a2a256d31791321491bd615a5f'` |
+| `'TRUNC-FULL-20'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 20),)` | `False` | `'incomplete certificate byte grammar'` | `20` | `'afe53c84e1fcb66b49e50089da746d7bc369b2f614641dbe90929e4b7c779324'` |
+| `'TRUNC-FULL-21'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 21),)` | `False` | `'incomplete certificate byte grammar'` | `21` | `'3c8e23249a91f8e22f97b1a195fd2c234d6cafccf9202b798438c291a160c4a5'` |
+| `'TRUNC-FULL-22'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 22),)` | `False` | `'incomplete certificate byte grammar'` | `22` | `'9c848f71cb73936f879e7cbbf6b65873870cf595f559dae2e01b320bdc72cec3'` |
+| `'TRUNC-FULL-23'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 23),)` | `False` | `'incomplete certificate byte grammar'` | `23` | `'f1b30c4442152866fe3f2037aa716cbfc771c16dc5b3eaf7d64cd50ff1f87108'` |
+| `'TRUNC-FULL-24'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 24),)` | `False` | `'incomplete certificate byte grammar'` | `24` | `'7a4297f18858915b448379dc8a9a59dc034d5025773e3ba906884897f502a7b2'` |
+| `'TRUNC-FULL-25'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 25),)` | `False` | `'incomplete certificate byte grammar'` | `25` | `'b24c1d98a4c685d428dd1831e224fbe1116e4a6cb8a759b060a8e5604e413a4f'` |
+| `'TRUNC-FULL-26'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 26),)` | `False` | `'incomplete certificate byte grammar'` | `26` | `'a34fe59ecd31bff05f068061afb45d80c48259451de5763f5ae0f9a5962a3e41'` |
+| `'TRUNC-FULL-27'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 27),)` | `False` | `'incomplete certificate byte grammar'` | `27` | `'afc62add13642e662ad7d0217b7afe7c3df1b61fd25f4ff714f63472d5e0b499'` |
+| `'TRUNC-FULL-28'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 28),)` | `False` | `'incomplete certificate byte grammar'` | `28` | `'81dd9a9bf33927fb8b40df39f099820ca880fb5d2dce058b4e9e07c1cd565259'` |
+| `'TRUNC-FULL-29'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 29),)` | `False` | `'incomplete certificate byte grammar'` | `29` | `'5c8391105d716a37bdfe4249ea53ed19da093eaa7e51dccf4f26df7b43e524e3'` |
+| `'TRUNC-FULL-30'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 30),)` | `False` | `'incomplete certificate byte grammar'` | `30` | `'dc3ff6cccbae8c323d99d08f00a5cc7a14cb40115584c83a5de3beb229bf802a'` |
+| `'TRUNC-FULL-31'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 31),)` | `False` | `'incomplete certificate byte grammar'` | `31` | `'01f1857e210c2a35013093a7cc56537a1fd15412c556fb05bdc0a35ae13fc4f8'` |
+| `'TRUNC-FULL-32'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 32),)` | `False` | `'incomplete certificate byte grammar'` | `32` | `'597d95bc29b9c5e67ab9a63bbf8e688bdc365ddba3534580c537704e78c982c4'` |
+| `'TRUNC-FULL-33'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 33),)` | `False` | `'incomplete certificate byte grammar'` | `33` | `'ccaff9211a6b1dbb82a2fa36956d71c5b96a922134de93ab2c80431d0a5baeb5'` |
+| `'TRUNC-FULL-34'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 34),)` | `False` | `'incomplete certificate byte grammar'` | `34` | `'a4347c29e4a11c8f5ecffa9fe9911bad8280faba3edae4a96d032bb0dc5918b9'` |
+| `'TRUNC-FULL-35'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 35),)` | `False` | `'incomplete certificate byte grammar'` | `35` | `'4f4d7dc7dfaf7ec5ba8ca20246117cb7d80eade39195ab7d0a87e48be11e248b'` |
+| `'TRUNC-FULL-36'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 36),)` | `False` | `'incomplete certificate byte grammar'` | `36` | `'2c5a7ffeae2d01089a2df68b66c6c1cb197d484d519d4adda53634694c768a97'` |
+| `'TRUNC-FULL-37'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 37),)` | `False` | `'incomplete certificate byte grammar'` | `37` | `'25c3b0fcce6c8cbb16a2e94a3acf8a9cbf12b8ee1e52c375b56483aab96be16e'` |
+| `'TRUNC-FULL-38'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 38),)` | `False` | `'incomplete certificate byte grammar'` | `38` | `'6ae11946863ec09a5c7ff49365d35b079300055cbf2cace9a71f3ced5c7a169e'` |
+| `'TRUNC-FULL-39'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 39),)` | `False` | `'incomplete certificate byte grammar'` | `39` | `'01d09040cfa11c5cce1189508f39d4e555bf90bf0f2541071702ec6ac139c04c'` |
+| `'TRUNC-FULL-40'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 40),)` | `False` | `'incomplete certificate byte grammar'` | `40` | `'f40f0252c589f6d5a4b8cca94a48c0847d02997a3cefc408288cc3d43a2a1a50'` |
+| `'TRUNC-FULL-41'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 41),)` | `False` | `'incomplete certificate byte grammar'` | `41` | `'fc0bbeae801c036541dbaeb0a8e66900e90ff26f13a64a555a0ec7132f31bdb1'` |
+| `'TRUNC-FULL-42'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 42),)` | `False` | `'incomplete certificate byte grammar'` | `42` | `'b20a1a5ea74277bca50eb99a0bb943293e2f6b53cce7f38ea8b85dbaff2e7eb4'` |
+| `'TRUNC-FULL-43'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 43),)` | `False` | `'incomplete certificate byte grammar'` | `43` | `'34de29592ead1e23455ffaf0fa270e2b87b3ee626afcd6d6088ad592baf43484'` |
+| `'TRUNC-FULL-44'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 44),)` | `False` | `'incomplete certificate byte grammar'` | `44` | `'54f12a17eda864446a096abdd3c1b0db8ca9610ef1051813b7fa51b5e754591e'` |
+| `'TRUNC-FULL-45'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 45),)` | `False` | `'incomplete certificate byte grammar'` | `45` | `'670e7cef1cd1c1a68f58e3fdbf5556c12499e2800d8569a5e10728f4ca73d404'` |
+| `'TRUNC-FULL-46'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 46),)` | `False` | `'incomplete certificate byte grammar'` | `46` | `'1da0aa6043c9e061d789ab0e92c9fa8e1382b33b97eea86723afa01374cf9071'` |
+| `'TRUNC-FULL-47'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 47),)` | `False` | `'incomplete certificate byte grammar'` | `47` | `'0669493d489500a33f17bc7a0d539c5b7c21a89ed60e11d56cab4ff03b2309e6'` |
+| `'TRUNC-FULL-48'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 48),)` | `False` | `'incomplete certificate byte grammar'` | `48` | `'6bb499698f9b7d99b9248b4f1440d5c23665d92a028c5402f244cb59cc701053'` |
+| `'TRUNC-FULL-49'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 49),)` | `False` | `'incomplete certificate byte grammar'` | `49` | `'5c8d94a4dc38a5af4bb86080b55145419cbc7d6751cce4c93e36ced186ca023e'` |
+| `'TRUNC-FULL-50'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 50),)` | `False` | `'incomplete certificate byte grammar'` | `50` | `'84d7b750f19b5f70677d6075e669c3d6cf8fb2cc0af9dbff604ffddde5fabeb4'` |
+| `'TRUNC-FULL-51'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 51),)` | `False` | `'incomplete certificate byte grammar'` | `51` | `'2bb4219f36ee3b0e559963b1125f3578a5ad039231025b8dec3e1b19d83d6526'` |
+| `'TRUNC-FULL-52'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 52),)` | `False` | `'incomplete certificate byte grammar'` | `52` | `'447f676cdeaa6e4daf2c7076f72a955d9666ec7c78eb12ce11d14b55e774adfa'` |
+| `'TRUNC-FULL-53'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 53),)` | `False` | `'incomplete certificate byte grammar'` | `53` | `'a7f4eba674199175d4a01cc1580c40da217252aadfa0895427de4469efc0c205'` |
+| `'TRUNC-FULL-54'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 54),)` | `False` | `'incomplete certificate byte grammar'` | `54` | `'9e4501a142ced4f73427afa7312b70d508dabe2f563d16c3607e945e2877b967'` |
+| `'TRUNC-FULL-55'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 55),)` | `False` | `'incomplete certificate byte grammar'` | `55` | `'a181b38020a684c4b727beea4b740725d56f6ced29a1d08d79675aa02b62ba7a'` |
+| `'TRUNC-FULL-56'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 56),)` | `False` | `'incomplete certificate byte grammar'` | `56` | `'d35aee1aaddadf8dd5e5c702adb1f4174b1fbac7bee8eb3dfb0dccdebdbfd16b'` |
+| `'TRUNC-FULL-57'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 57),)` | `False` | `'incomplete certificate byte grammar'` | `57` | `'99187c1357b50cd927b0e00bc0c34110fe85efb9b1c3013f3c7d9432639360d6'` |
+| `'TRUNC-FULL-58'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 58),)` | `False` | `'incomplete certificate byte grammar'` | `58` | `'b3e6cd785f2c611da497ef99875619aa520fa489dd3e1cfdffa3daba986e54e0'` |
+| `'TRUNC-FULL-59'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 59),)` | `False` | `'incomplete certificate byte grammar'` | `59` | `'678c6e0e8f262344818304dd926ed01bb98af4249ef8c81a955181e583abd097'` |
+| `'TRUNC-FULL-60'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 60),)` | `False` | `'incomplete certificate byte grammar'` | `60` | `'8766ef3d1b9fddafead769f18e70db35aa859212d2578dbccd62eb417ebc3992'` |
+| `'TRUNC-FULL-61'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 61),)` | `False` | `'incomplete certificate byte grammar'` | `61` | `'f1257eeb9517300e885ffc54b603522dbe6ef74d25e130c9e9b0915e63ad7dc7'` |
+| `'TRUNC-FULL-62'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 62),)` | `False` | `'incomplete certificate byte grammar'` | `62` | `'9f6be7bb904691f99125d07a6af1da2428fc6ea43b71712d89615703b6a565f1'` |
+| `'TRUNC-FULL-63'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 63),)` | `False` | `'incomplete certificate byte grammar'` | `63` | `'87187201c05c7298d09be17b335ffcb542d2078dfb0915373a6a09339cf1ab1b'` |
+| `'TRUNC-FULL-64'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 64),)` | `False` | `'incomplete certificate byte grammar'` | `64` | `'6b83b6e32cdca9c361cb8f4e104b17127482334ee46adc203958cc889760986f'` |
+| `'TRUNC-FULL-65'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 65),)` | `False` | `'incomplete certificate byte grammar'` | `65` | `'553e6099ca78e898fd8f8a180cfb7ff84a0a530351c837adc1a9be5298d47630'` |
+| `'TRUNC-FULL-66'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 66),)` | `False` | `'incomplete certificate byte grammar'` | `66` | `'ad20086107d0b012a67d17779bc9bf1b576668e377f9d99754ed429ff5204afc'` |
+| `'TRUNC-FULL-67'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 67),)` | `False` | `'incomplete certificate byte grammar'` | `67` | `'1be4918b973c1eb223ea4446215939f4511c94cca8a76022312a42a185a07ef0'` |
+| `'TRUNC-FULL-68'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 68),)` | `False` | `'incomplete certificate byte grammar'` | `68` | `'e38c79b4df861131129cd2d332fd4aa1ef25d1b5f1a28826517edea37919bfbf'` |
+| `'TRUNC-FULL-69'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 69),)` | `False` | `'incomplete certificate byte grammar'` | `69` | `'7dad1f298d5b987889f4dc7ffa1abc3b3e7dd6efedeaae514b31bd8b5bec7918'` |
+| `'TRUNC-FULL-70'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 70),)` | `False` | `'incomplete certificate byte grammar'` | `70` | `'7e5d0c578512d4366b6cd43e09868ffd9a8e52fee87436eb3d62b86b90727cb0'` |
+| `'TRUNC-FULL-71'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 71),)` | `False` | `'incomplete certificate byte grammar'` | `71` | `'3bf4735598c006d4d33a6801c406e9424d5c45279608a37879467cc8d5cfbd45'` |
+| `'TRUNC-FULL-72'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 72),)` | `False` | `'incomplete certificate byte grammar'` | `72` | `'b27e4d134ec89fdbfe966ba93914baf906ed7de094777ec13777d9f555215eca'` |
+| `'TRUNC-FULL-73'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 73),)` | `False` | `'incomplete certificate byte grammar'` | `73` | `'c3e17917f202df6e070907f50e44b4ba984ceca4fcb5eba2affbe6e20cd1e543'` |
+| `'TRUNC-FULL-74'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 74),)` | `False` | `'incomplete certificate byte grammar'` | `74` | `'1aba10452a51013bdc817d1f89262eddd9b715933bb2ae4d2d02625ca842ff32'` |
+| `'TRUNC-FULL-75'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 75),)` | `False` | `'incomplete certificate byte grammar'` | `75` | `'ad39b7800c6d2c1f8502f3f4dba04f1de77503112536a95c6d884ca7e96ef32d'` |
+| `'TRUNC-FULL-76'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 76),)` | `False` | `'incomplete certificate byte grammar'` | `76` | `'18bc558a1af4e243c943e2257eb783781e1ab3b4724035323726805bb7067539'` |
+| `'TRUNC-FULL-77'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 77),)` | `False` | `'incomplete certificate byte grammar'` | `77` | `'02603b2fb83c624791ae3274adefd4a4d84256cdc21b918335bf86c4846fb473'` |
+| `'TRUNC-FULL-78'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 78),)` | `False` | `'incomplete certificate byte grammar'` | `78` | `'0983e3c4b8cfa228997764279f5b43d8d03793c863a5cefcbb08ecd775af5b2f'` |
+| `'TRUNC-FULL-79'` | `'U18/PAIR-FULL'` | `'certificate'` | `(('truncate', 79),)` | `False` | `'incomplete certificate byte grammar'` | `79` | `'fc20ee82c2beb0dbcec3c3f170ae5c43c000a12ffd1c0e2750b93d9e1f396b46'` |
+| `'TRUNC-EMPTY-0'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 0),)` | `False` | `'incomplete certificate byte grammar'` | `0` | `'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'` |
+| `'TRUNC-EMPTY-1'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 1),)` | `False` | `'incomplete certificate byte grammar'` | `1` | `'021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96'` |
+| `'TRUNC-EMPTY-2'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 2),)` | `False` | `'incomplete certificate byte grammar'` | `2` | `'6017dbca8e3eeb2f73be4123b0032c736d8c8f9bf8c86e6631887342c06fec90'` |
+| `'TRUNC-EMPTY-3'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 3),)` | `False` | `'incomplete certificate byte grammar'` | `3` | `'60ecfcdc49d551287f77c9060e10f75aee34efdda75ff4e89863f7ca2db218c2'` |
+| `'TRUNC-EMPTY-4'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 4),)` | `False` | `'incomplete certificate byte grammar'` | `4` | `'f71dff42359961aec34a042733c398109e0ed91e4045bd1882fa6cbbfd821ec0'` |
+| `'TRUNC-EMPTY-5'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 5),)` | `False` | `'incomplete certificate byte grammar'` | `5` | `'65bc533dd416e20fd09ab66d39927ac244187edb009780cce90b29f5db0f85b5'` |
+| `'TRUNC-EMPTY-6'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 6),)` | `False` | `'incomplete certificate byte grammar'` | `6` | `'1e52da6b5bf91da2e4e92a4482c299a2b5f57118c21318448d9217f13f75203f'` |
+| `'TRUNC-EMPTY-7'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 7),)` | `False` | `'incomplete certificate byte grammar'` | `7` | `'bc4a2f3e325c2319dbc4a3a815e4f1e64788bb86c1fab9e9793c7844ee7da164'` |
+| `'TRUNC-EMPTY-8'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 8),)` | `False` | `'incomplete certificate byte grammar'` | `8` | `'a69dd639142cb9f34a77d63cfa66b8d5b67964a88c51e30a57976ea0910e579f'` |
+| `'TRUNC-EMPTY-9'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 9),)` | `False` | `'incomplete certificate byte grammar'` | `9` | `'85afed216255635f4f2848dd0ef9c203f5a3e3d475e5e4177e59e68cc2186ba0'` |
+| `'TRUNC-EMPTY-10'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 10),)` | `False` | `'incomplete certificate byte grammar'` | `10` | `'a4e54678ffcc21fb5b8e89f26ad975d3e07e9b282b211fdcf057f4ff49623e83'` |
+| `'TRUNC-EMPTY-11'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 11),)` | `False` | `'incomplete certificate byte grammar'` | `11` | `'6f0ba15a6d6c2a19c384fe1438247a91afd538542e0fa70c21a984f8ddf45f02'` |
+| `'TRUNC-EMPTY-12'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 12),)` | `False` | `'incomplete certificate byte grammar'` | `12` | `'892495d710414023643e98d31a1c057c646b5dc74b7be8c8e4b992cfe97e7c06'` |
+| `'TRUNC-EMPTY-13'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 13),)` | `False` | `'incomplete certificate byte grammar'` | `13` | `'cfd9ad2e11514d6d2b5766a99eb8ecb6abedebfa359bd5986ee7ba68456954d8'` |
+| `'TRUNC-EMPTY-14'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 14),)` | `False` | `'incomplete certificate byte grammar'` | `14` | `'9e2b989c36b0bbe227ec4cb659a2cb472b4ee4abc2fde5cca034254184ffd1d2'` |
+| `'TRUNC-EMPTY-15'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 15),)` | `False` | `'incomplete certificate byte grammar'` | `15` | `'379d01b074b28629591910b506a1c4a7d0ca4ca5f1c8d01353481ac370ecf449'` |
+| `'TRUNC-EMPTY-16'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 16),)` | `False` | `'incomplete certificate byte grammar'` | `16` | `'af3155dd5171fa4ca0f63a33a3c3288836b9d9d3fa624e3dd5d31dac2dd23740'` |
+| `'TRUNC-EMPTY-17'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 17),)` | `False` | `'incomplete certificate byte grammar'` | `17` | `'a898fa4497bf3f1652066d11cce78f31cd85dde15324e6da89f8ee53daa212fe'` |
+| `'TRUNC-EMPTY-18'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 18),)` | `False` | `'incomplete certificate byte grammar'` | `18` | `'cfa6e511ab79f7bf95ca2fab6afb98437157b808254e802194abe94345b24ce9'` |
+| `'TRUNC-EMPTY-19'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 19),)` | `False` | `'incomplete certificate byte grammar'` | `19` | `'29520966b9aeebb807f3ac3c67e32856fe6201a2a256d31791321491bd615a5f'` |
+| `'TRUNC-EMPTY-20'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 20),)` | `False` | `'incomplete certificate byte grammar'` | `20` | `'afe53c84e1fcb66b49e50089da746d7bc369b2f614641dbe90929e4b7c779324'` |
+| `'TRUNC-EMPTY-21'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 21),)` | `False` | `'incomplete certificate byte grammar'` | `21` | `'3c8e23249a91f8e22f97b1a195fd2c234d6cafccf9202b798438c291a160c4a5'` |
+| `'TRUNC-EMPTY-22'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 22),)` | `False` | `'incomplete certificate byte grammar'` | `22` | `'9c848f71cb73936f879e7cbbf6b65873870cf595f559dae2e01b320bdc72cec3'` |
+| `'TRUNC-EMPTY-23'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 23),)` | `False` | `'incomplete certificate byte grammar'` | `23` | `'f1b30c4442152866fe3f2037aa716cbfc771c16dc5b3eaf7d64cd50ff1f87108'` |
+| `'TRUNC-EMPTY-24'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 24),)` | `False` | `'incomplete certificate byte grammar'` | `24` | `'7a4297f18858915b448379dc8a9a59dc034d5025773e3ba906884897f502a7b2'` |
+| `'TRUNC-EMPTY-25'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 25),)` | `False` | `'incomplete certificate byte grammar'` | `25` | `'b24c1d98a4c685d428dd1831e224fbe1116e4a6cb8a759b060a8e5604e413a4f'` |
+| `'TRUNC-EMPTY-26'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 26),)` | `False` | `'incomplete certificate byte grammar'` | `26` | `'a34fe59ecd31bff05f068061afb45d80c48259451de5763f5ae0f9a5962a3e41'` |
+| `'TRUNC-EMPTY-27'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 27),)` | `False` | `'incomplete certificate byte grammar'` | `27` | `'afc62add13642e662ad7d0217b7afe7c3df1b61fd25f4ff714f63472d5e0b499'` |
+| `'TRUNC-EMPTY-28'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 28),)` | `False` | `'incomplete certificate byte grammar'` | `28` | `'81dd9a9bf33927fb8b40df39f099820ca880fb5d2dce058b4e9e07c1cd565259'` |
+| `'TRUNC-EMPTY-29'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 29),)` | `False` | `'incomplete certificate byte grammar'` | `29` | `'5c8391105d716a37bdfe4249ea53ed19da093eaa7e51dccf4f26df7b43e524e3'` |
+| `'TRUNC-EMPTY-30'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 30),)` | `False` | `'incomplete certificate byte grammar'` | `30` | `'dc3ff6cccbae8c323d99d08f00a5cc7a14cb40115584c83a5de3beb229bf802a'` |
+| `'TRUNC-EMPTY-31'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 31),)` | `False` | `'incomplete certificate byte grammar'` | `31` | `'01f1857e210c2a35013093a7cc56537a1fd15412c556fb05bdc0a35ae13fc4f8'` |
+| `'TRUNC-EMPTY-32'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 32),)` | `False` | `'incomplete certificate byte grammar'` | `32` | `'597d95bc29b9c5e67ab9a63bbf8e688bdc365ddba3534580c537704e78c982c4'` |
+| `'TRUNC-EMPTY-33'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 33),)` | `False` | `'incomplete certificate byte grammar'` | `33` | `'ccaff9211a6b1dbb82a2fa36956d71c5b96a922134de93ab2c80431d0a5baeb5'` |
+| `'TRUNC-EMPTY-34'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 34),)` | `False` | `'incomplete certificate byte grammar'` | `34` | `'a4347c29e4a11c8f5ecffa9fe9911bad8280faba3edae4a96d032bb0dc5918b9'` |
+| `'TRUNC-EMPTY-35'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 35),)` | `False` | `'incomplete certificate byte grammar'` | `35` | `'4f4d7dc7dfaf7ec5ba8ca20246117cb7d80eade39195ab7d0a87e48be11e248b'` |
+| `'TRUNC-EMPTY-36'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 36),)` | `False` | `'incomplete certificate byte grammar'` | `36` | `'2c5a7ffeae2d01089a2df68b66c6c1cb197d484d519d4adda53634694c768a97'` |
+| `'TRUNC-EMPTY-37'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 37),)` | `False` | `'incomplete certificate byte grammar'` | `37` | `'25c3b0fcce6c8cbb16a2e94a3acf8a9cbf12b8ee1e52c375b56483aab96be16e'` |
+| `'TRUNC-EMPTY-38'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 38),)` | `False` | `'incomplete certificate byte grammar'` | `38` | `'6ae11946863ec09a5c7ff49365d35b079300055cbf2cace9a71f3ced5c7a169e'` |
+| `'TRUNC-EMPTY-39'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 39),)` | `False` | `'incomplete certificate byte grammar'` | `39` | `'01d09040cfa11c5cce1189508f39d4e555bf90bf0f2541071702ec6ac139c04c'` |
+| `'TRUNC-EMPTY-40'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 40),)` | `False` | `'incomplete certificate byte grammar'` | `40` | `'f40f0252c589f6d5a4b8cca94a48c0847d02997a3cefc408288cc3d43a2a1a50'` |
+| `'TRUNC-EMPTY-41'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 41),)` | `False` | `'incomplete certificate byte grammar'` | `41` | `'fc0bbeae801c036541dbaeb0a8e66900e90ff26f13a64a555a0ec7132f31bdb1'` |
+| `'TRUNC-EMPTY-42'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 42),)` | `False` | `'incomplete certificate byte grammar'` | `42` | `'b20a1a5ea74277bca50eb99a0bb943293e2f6b53cce7f38ea8b85dbaff2e7eb4'` |
+| `'TRUNC-EMPTY-43'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 43),)` | `False` | `'incomplete certificate byte grammar'` | `43` | `'34de29592ead1e23455ffaf0fa270e2b87b3ee626afcd6d6088ad592baf43484'` |
+| `'TRUNC-EMPTY-44'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 44),)` | `False` | `'incomplete certificate byte grammar'` | `44` | `'54f12a17eda864446a096abdd3c1b0db8ca9610ef1051813b7fa51b5e754591e'` |
+| `'TRUNC-EMPTY-45'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 45),)` | `False` | `'incomplete certificate byte grammar'` | `45` | `'49f3e41338a5185f64e7190d0aeb42abbe08308a9e15c3fca4ef6a9b019efb5b'` |
+| `'TRUNC-EMPTY-46'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 46),)` | `False` | `'incomplete certificate byte grammar'` | `46` | `'46df3821fd4971db32e07b052172b514d99e6685291f8637b440fc6630604fde'` |
+| `'TRUNC-EMPTY-47'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 47),)` | `False` | `'incomplete certificate byte grammar'` | `47` | `'351d14643c47e9a080afb678cd29084440d240d77307cfec66ca75b9d351fa02'` |
+| `'TRUNC-EMPTY-48'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 48),)` | `False` | `'incomplete certificate byte grammar'` | `48` | `'62392c509e47f6d420e1b0e30ebf0c1c7def1cb4452590b22f15c9a31a1e5402'` |
+| `'TRUNC-EMPTY-49'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 49),)` | `False` | `'incomplete certificate byte grammar'` | `49` | `'13ccf9d6961b54cfc5c260330b136528a0a945f003a44b3e56bb5ebc28fcb0e0'` |
+| `'TRUNC-EMPTY-50'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 50),)` | `False` | `'incomplete certificate byte grammar'` | `50` | `'03f0ee0193ad66364e304cfd614de06184ea01d073c36749be56f78c70e8c272'` |
+| `'TRUNC-EMPTY-51'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 51),)` | `False` | `'incomplete certificate byte grammar'` | `51` | `'f8dd92b8698156f1d3bfa616bc46acb02f14210ac1b197d5eef481f9c77a6668'` |
+| `'TRUNC-EMPTY-52'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 52),)` | `False` | `'incomplete certificate byte grammar'` | `52` | `'837a3b8d57c8da542dfe548e9a971ef5ceace1117cb53e3c9415a3b63f594eb3'` |
+| `'TRUNC-EMPTY-53'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 53),)` | `False` | `'incomplete certificate byte grammar'` | `53` | `'556f41d1e36c151778aabc795c3a8c75c68609a66afc79d2f12b86aabeb902dd'` |
+| `'TRUNC-EMPTY-54'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 54),)` | `False` | `'incomplete certificate byte grammar'` | `54` | `'8b8d1d5ffbcd5027c803bad5c87ad6c6dee15eb885f94c51d11491d01ec34b57'` |
+| `'TRUNC-EMPTY-55'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 55),)` | `False` | `'incomplete certificate byte grammar'` | `55` | `'b96141da318ebaac33adca98804a7d3924fe2d872c8a95a69486c6286c63b88a'` |
+| `'TRUNC-EMPTY-56'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 56),)` | `False` | `'incomplete certificate byte grammar'` | `56` | `'1f1a5ae6f02b102cb88d9f053a4f23c3ad63d856176fca59ac6d7a7a2e06dd60'` |
+| `'TRUNC-EMPTY-57'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 57),)` | `False` | `'incomplete certificate byte grammar'` | `57` | `'c323b317f4e1f31ee59fb99e2618b499a2a829de939745f11755e4e175cb4b01'` |
+| `'TRUNC-EMPTY-58'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 58),)` | `False` | `'incomplete certificate byte grammar'` | `58` | `'611dbb6280d6e29d28bc8abbafbdc4d54fbc67f6ea2574c929f79cd4b7e4a075'` |
+| `'TRUNC-EMPTY-59'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 59),)` | `False` | `'incomplete certificate byte grammar'` | `59` | `'e925062fce7d4a4dbc466ed349a31e3fc00166538e2f755b572487b8a003d4f1'` |
+| `'TRUNC-EMPTY-60'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 60),)` | `False` | `'incomplete certificate byte grammar'` | `60` | `'74c5b2d47be7e9d037245f0e630c035ff77c4869dc8484d6b8ec0099583b917c'` |
+| `'TRUNC-EMPTY-61'` | `'U17/EMPTY'` | `'certificate'` | `(('truncate', 61),)` | `False` | `'incomplete certificate byte grammar'` | `61` | `'963744835fae11670052cf68539dd587f9dfbf1a572deff410a8f3e0603ece09'` |
+| `'TRUNC-INSTANCE-0'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 0),)` | `False` | `'incomplete instance document'` | `0` | `'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'` |
+| `'TRUNC-INSTANCE-1'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 1),)` | `False` | `'incomplete instance document'` | `1` | `'021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96'` |
+| `'TRUNC-INSTANCE-2'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 2),)` | `False` | `'incomplete instance document'` | `2` | `'6017dbca8e3eeb2f73be4123b0032c736d8c8f9bf8c86e6631887342c06fec90'` |
+| `'TRUNC-INSTANCE-10'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 10),)` | `False` | `'incomplete instance document'` | `10` | `'a4e54678ffcc21fb5b8e89f26ad975d3e07e9b282b211fdcf057f4ff49623e83'` |
+| `'TRUNC-INSTANCE-33'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 33),)` | `False` | `'incomplete instance document'` | `33` | `'adce66798c20b826195a9c11f81d91c581b4e085fecd2a37b2d331964f56f62f'` |
+| `'TRUNC-INSTANCE-45'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 45),)` | `False` | `'incomplete instance document'` | `45` | `'673b1c5df2f7216ef33e9296626b6292357dcd31ede0fafed0c0d07f75dab2d8'` |
+| `'TRUNC-INSTANCE-66'` | `'U18/PAIR-FULL'` | `'instance'` | `(('truncate', 66),)` | `False` | `'incomplete instance document'` | `66` | `'fd93a8a1c3489a16da1c69c14749687f2156b4b72d2062e00e03fc6505f9249e'` |
+
+## ORACLE-136 — Preregistered production surface, order, exceptions and fault detectors
+
+The following are PROSPECTIVE obligations, not results of running a nonexistent Unit 18 checker.
+Test instrumentation discovers private operation boundaries from actual source; no private helper
+name becomes an API. Invalid instance must precede any certificate inspection. Operational
+exceptions preserve identity, except the two narrowly authorized syntax translations. Fresh
+processes must block all exactfrac/test/handoff imports; AST checks alone do not prove independence.
+Where practical physically omit production and execute only the independent package.
+Both enabled integer conversion limits 4300 and 640, hash seeds 1 and 73, and the inherited
+4801-digit magnitudes are required. Core schema has no added quotas; no DoS guarantee is implied.
+
+### Fixture table: U18_API_CASES
+
+| id | boundary | argument_recipe | expected | obligation |
+| --- | --- | --- | --- | --- |
+| `'instance-str'` | `'instance'` | `'str'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-bytearray'` | `'instance'` | `'bytearray'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-memoryview'` | `'instance'` | `'memoryview'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-bytes-subclass'` | `'instance'` | `'bytes-subclass'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-None'` | `'instance'` | `'None'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-dict'` | `'instance'` | `'dict'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-list'` | `'instance'` | `'list'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-int'` | `'instance'` | `'int'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-bool'` | `'instance'` | `'bool'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-path-object'` | `'instance'` | `'path-object'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-stream'` | `'instance'` | `'stream'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-poison-__bytes__-object'` | `'instance'` | `'poison-__bytes__-object'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-closed-Instance'` | `'instance'` | `'closed-Instance'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-closed-SolveResult'` | `'instance'` | `'closed-SolveResult'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'instance-closed-Witness'` | `'instance'` | `'closed-Witness'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-str'` | `'certificate'` | `'str'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-bytearray'` | `'certificate'` | `'bytearray'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-memoryview'` | `'certificate'` | `'memoryview'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-bytes-subclass'` | `'certificate'` | `'bytes-subclass'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-None'` | `'certificate'` | `'None'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-dict'` | `'certificate'` | `'dict'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-list'` | `'certificate'` | `'list'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-int'` | `'certificate'` | `'int'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-bool'` | `'certificate'` | `'bool'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-path-object'` | `'certificate'` | `'path-object'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-stream'` | `'certificate'` | `'stream'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-poison-__bytes__-object'` | `'certificate'` | `'poison-__bytes__-object'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-closed-Instance'` | `'certificate'` | `'closed-Instance'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-closed-SolveResult'` | `'certificate'` | `'closed-SolveResult'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'certificate-closed-Witness'` | `'certificate'` | `'closed-Witness'` | `'exact ValueError'` | `'do not coerce/access caller methods'` |
+| `'SUCCESS-NONE'` | `'both'` | `'exact bytes'` | `'exact None'` | `'all accepted wire rows'` |
+| `'ARITY-MISSING'` | `'call'` | `'one input'` | `'TypeError'` | `'ordinary Python arity'` |
+| `'ARITY-EXTRA'` | `'call'` | `'three inputs'` | `'TypeError'` | `'ordinary Python arity'` |
+| `'KEYWORD-CALL'` | `'call'` | `'instance/certificate keywords'` | `'exact None'` | `'same acceptance'` |
+
+
+### Fixture table: U18_PRECEDENCE
+
+| id | instance_fault | instrumentation | expected_order |
+| --- | --- | --- | --- |
+| `'INSTANCE-nonbytes'` | `'nonbytes'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-syntax'` | `'syntax'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-duplicate-key'` | `'duplicate-key'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-outer-fields'` | `'outer-fields'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-n'` | `'n'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-f'` | `'f'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-labels'` | `'labels'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-edge-shape'` | `'edge-shape'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-edge-order'` | `'edge-order'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'INSTANCE-nonactive'` | `'nonactive'` | `'poison-certificate-parser'` | `'instance rejected before certificate inspection'` |
+| `'STRUCTURE-BEFORE-ACTIVE'` | `'malformed-labels-and-nonactive'` | `'instrument independent operation boundary'` | `'labels rejected before degree/active'` |
+| `'LENGTH-BEFORE-ALLOC'` | `'huge-n-short-f'` | `'deny allocation based only on claimed n'` | `'reject lengths before claimed-n allocation'` |
+
+
+### Fixture table: U18_EXCEPTIONS
+
+| id | operation | exception | expected |
+| --- | --- | --- | --- |
+| `'JSON-MemoryError'` | `'standard JSON decode operation'` | `'MemoryError'` | `'propagate same exception object'` |
+| `'JSON-RecursionError'` | `'standard JSON decode operation'` | `'RecursionError'` | `'propagate same exception object'` |
+| `'JSON-RuntimeError'` | `'standard JSON decode operation'` | `'RuntimeError'` | `'propagate same exception object'` |
+| `'JSON-OSError'` | `'standard JSON decode operation'` | `'OSError'` | `'propagate same exception object'` |
+| `'JSON-ValueError'` | `'standard JSON decode operation'` | `'ValueError'` | `'propagate same exception object'` |
+| `'JSON-SYNTAX'` | `'standard JSON decode operation'` | `'json.JSONDecodeError'` | `'translate to exact ValueError'` |
+| `'UTF8-SYNTAX'` | `'strict instance UTF8 decode'` | `'UnicodeDecodeError'` | `'translate to exact ValueError'` |
+| `'RESOURCE-CERT'` | `'private certificate-parser dependency discovered by source'` | `'MemoryError'` | `'propagate same exception object; no partial result'` |
+
+
+### Fixture table: U18_MUTATIONS
+
+| id | family | fault | detector_basis | status |
+| --- | --- | --- | --- | --- |
+| `'Q01'` | `'DUP-KEY'` | `'last-key-wins collapse'` | `'U18/DUPLICATE-ESCAPED-N'` | `'prospective; production execution only in E'` |
+| `'Q02'` | `'GRAMMAR'` | `'strip or normalize certificate whitespace'` | `'U18/CERT-LEADSPACE'` | `'prospective; production execution only in E'` |
+| `'Q03'` | `'NUM-FLOAT'` | `'accept float/exponent token'` | `'U18/CERT-NUM-N-FLOAT'` | `'prospective; production execution only in E'` |
+| `'Q04'` | `'DIGIT-CUTOFF'` | `'full-token int under enabled limit'` | `'U17/BIG-N'` | `'prospective; production execution only in E'` |
+| `'Q05'` | `'ACTIVE'` | `'omit active-instance validation'` | `'U18/NONACTIVE'` | `'prospective; production execution only in E'` |
+| `'Q06'` | `'LABELS'` | `'omit metadata validation'` | `'U18/BAD-LABEL-DUP'` | `'prospective; production execution only in E'` |
+| `'Q07'` | `'ORDER'` | `'inspect certificate before active instance'` | `'U18_PRECEDENCE'` | `'prospective; production execution only in E'` |
+| `'Q08'` | `'EDGE-ORDER'` | `'sort/reorient canonical edges'` | `'U18/EDGE-UNSORTED'` | `'prospective; production execution only in E'` |
+| `'Q09'` | `'REFS'` | `'pack sparse refs'` | `'U17/SPARSE-GAP'` | `'prospective; production execution only in E'` |
+| `'Q10'` | `'REPAIR-U'` | `'sort/merge U'` | `'U18/U-DESC'` | `'prospective; production execution only in E'` |
+| `'Q11'` | `'REPAIR-Y'` | `'sort/merge y'` | `'U18/Y-DESC'` | `'prospective; production execution only in E'` |
+| `'Q12'` | `'CAPACITY'` | `'omit y<=q'` | `'U18/Y-OVER-ISOLATED'` | `'prospective; production execution only in E'` |
+| `'Q13'` | `'PARITY'` | `'omit odd total'` | `'U18/PARITY-ISOLATED'` | `'prospective; production execution only in E'` |
+| `'Q14'` | `'MINIMUM'` | `'accept total one as zero'` | `'U18/MINIMUM-ISOLATED'` | `'prospective; production execution only in E'` |
+| `'Q15'` | `'RAW'` | `'ratio equivalence instead of raw fields'` | `'U18/PAIR-REDUCE'` | `'prospective; production execution only in E'` |
+| `'Q16'` | `'EMPTY'` | `'accept empty flag without Q'` | `'U17/C-FALSE-EMPTY'` | `'prospective; production execution only in E'` |
+| `'Q17'` | `'ZERO'` | `'reject or erase nonempty zero'` | `'U18/PAIR-ZERO'` | `'prospective; production execution only in E'` |
+| `'Q18'` | `'HIDDEN-SOLVE'` | `'invoke optimizer to check optimum'` | `'U18/PAIR-ZERO'` | `'prospective; production execution only in E'` |
+| `'Q19'` | `'IMPORT'` | `'import producer/old oracle'` | `'fresh blocked runtime'` | `'prospective; production execution only in E'` |
+| `'Q20'` | `'RESOURCE'` | `'swallow MemoryError'` | `'U18_EXCEPTIONS'` | `'prospective; production execution only in E'` |
+| `'Q21'` | `'GLOBAL'` | `'reject admissible loser'` | `'U18/MIX-INTERNAL'` | `'prospective; production execution only in E'` |
+| `'Q22'` | `'TIE-RAW'` | `'require identical cross-route raws'` | `'U17/TIE-SMALL+TIE-LARGE'` | `'prospective; production execution only in E'` |
+| `'Q23'` | `'REGISTRY'` | `'deduplicate mathematical graphs'` | `'U18_REGISTRY'` | `'prospective; production execution only in E'` |
+| `'Q24'` | `'PREFIX'` | `'accept shorter or changed prefix'` | `'U18_PREFIX_CONTROLS'` | `'prospective; production execution only in E'` |
+
+## ORACLE-137 — Phase C test exception, prefix controls, inventory and completion boundary
+
+Only the authorized whole-catalogue guard is replaced by the three-line length-and-prefix check.
+Every other test byte is unchanged, including both checker-absence lines and fingerprints. Prefix
+controls execute the actual selected guard statements: truncation fails, first/interior/last
+byte alterations fail, and an append preserving the prefix succeeds. Unit18 suffix identities
+and table fingerprints are separately bound; append permission does not waive their validation.
+No absence line is deleted until Phase D; its exact two-deletion byte transform is not applied now.
+Existing phase application/audit/stage/commit/closure owns catalogue plus this one test guard.
+No production checker, new consuming test, authority/CONFORMANCE change or new lifecycle gate.
+Private oracle evidence is a finite reference check; production checker calls and production
+mutation executions remain zero. Actual closed solver emission checks are labeled separately.
+Post-phase frozen regression stays 2445 cases, including 458 certificate cases. Future Unit18
+collected case count must be measured when its new consuming tests actually collect.
+
+### Fixture table: U18_PREFIX_CONTROLS
+
+| id | offset_or_length | expected |
+| --- | --- | --- |
+| `'EXACT'` | `None` | `'pass'` |
+| `'APPEND'` | `None` | `'pass'` |
+| `'EMPTY'` | `0` | `'reject-length'` |
+| `'SHORT-LAST'` | `3212039` | `'reject-length'` |
+| `'CHANGE-FIRST'` | `0` | `'reject-hash'` |
+| `'CHANGE-MIDDLE'` | `1606020` | `'reject-hash'` |
+| `'CHANGE-LAST'` | `3212039` | `'reject-hash'` |
+
+
+### Fixture table: U18_CENSUS
+
+| metric | value |
+| --- | --- |
+| `'registry_identities'` | `400` |
+| `'real_solves_both_routes'` | `800` |
+| `'inherited_literals'` | `31` |
+| `'new_literals'` | `10` |
+| `'inherited_wire_reject'` | `140` |
+| `'inherited_wire_accept'` | `7` |
+| `'new_wire_accept'` | `16` |
+| `'new_wire_reject'` | `315` |
+| `'api_declarations'` | `34` |
+| `'precedence_declarations'` | `12` |
+| `'exception_declarations'` | `8` |
+| `'mutation_declarations'` | `24` |
+| `'registry_fingerprint'` | `'776ed183b5cd778b9e43ce0da08a809149bf233ac1fd9d928c63159d0dde5566'` |
+
+
+### Fixture table: U18_COVERAGE
+
+| obligation | basis | boundary |
+| --- | --- | --- |
+| `'IQ1'` | `'U18_API_CASES'` | `'prospective bytes API/None return and exported names'` |
+| `'IQ2'` | `'U18_PRECEDENCE'` | `'prospective order controls; private reference tested separately'` |
+| `'IQ3'` | `'U18_WIRE_CASES + U17_WIRE_REJECT'` | `'UTF8 JSON/decoded keys'` |
+| `'IQ4'` | `'U18_INPUTS + U18_WIRE_CASES'` | `'graph/labels/numeric lexical domain'` |
+| `'IQ5'` | `'U18_WIRE_CASES'` | `'strict certificate grammar and all representative strict prefixes'` |
+| `'IQ6'` | `'U18_LITERALS + U18_WIRE_CASES + U17_BYTES'` | `'original-coordinate y and shore predicates'` |
+| `'IQ7'` | `'U18_WITNESS_MATH + U18_WIRE_CASES'` | `'literal fields, parity, minimum, rescalings'` |
+| `'IQ8'` | `'U17/EMPTY + U18/PAIR-ZERO + U17_WIRE_REJECT'` | `'genuine Empty, zero and losing witnesses'` |
+| `'IQ9'` | `'GRAPH-CHANGE-RAW + GRAPH-EXTRA-CAPACITY-VALID'` | `'actual instance, no unique-binding claim'` |
+| `'IQ10'` | `'U18_FINGERPRINTS + U17_FINGERPRINTS'` | `'inherited 31/140/7 plus independent new fixtures'` |
+| `'IQ11'` | `'U18_REGISTRY + U18_GLOBALS + U17_GLOBALS'` | `'400 qualified identities and 800 actual solves'` |
+| `'IQ12'` | `'U17_BYTES + local emission capture'` | `'real baseline/all endpoints/both direct H2 shapes'` |
+| `'IQ13'` | `'U17/BIG-N + BIG-ZERO + BIG-COUNTS + BIG-LABEL'` | `'4801-digit byte checks under 4300/640 and seeds 1/73'` |
+| `'IQ14'` | `'U18_EXCEPTIONS'` | `'prospective production identity propagation and narrow translations'` |
+| `'IQ15'` | `'U18_MUTATIONS IMPORT'` | `'prospective checker-only runtime; private oracle is already blocked'` |
+| `'IQ16'` | `'source/work audit plan'` | `'production implementation audit in E, not invented here'` |
+| `'IQ17'` | `'U18_MUTATIONS'` | `'24 detector families preregistered; no production kills claimed'` |
+| `'IQ18'` | `'U18_PREFIX_CONTROLS'` | `'actual three-line guard plus byte-exact whole-file transform'` |
+| `'IQ19'` | `'phase boundary'` | `'both absence assertions retained; no Phase D retirement'` |
+| `'IQ20'` | `'phase boundary'` | `'no CONFORMANCE edit or optimality certification'` |
+
+
+### Fixture table: U18_FINGERPRINTS
+
+| table | rows | fingerprint |
+| --- | --- | --- |
+| `'U18_INPUTS'` | `4` | `'43d476d37ceee1c2fce7c72bc9f7c7f3b0030bfbd3adb2f3293e1c86f6fe2294'` |
+| `'U18_INSTANCE_BYTES'` | `4` | `'0a09ac55dbfe4411e4438fd09825db9e7ff518fbdac86c0fadf86cc9d600313f'` |
+| `'U18_LITERALS'` | `10` | `'15a48e9a13506cecacb5184184e2701e6d523f1aa7cc58e663b3ff8d3b2b2dd8'` |
+| `'U18_WITNESS_MATH'` | `10` | `'2d38bb8c60bef7d194fe10d30ee741093ec9888fa99ba27a1c50ef96ed6591d2'` |
+| `'U18_GLOBALS'` | `4` | `'930515fa9dd3524c7e2222ad0a7d195b2f1dc4cc0ea965f810d9edaf93d770fe'` |
+| `'U18_PREFIX_CONTROLS'` | `7` | `'5aba5db5e6e44389d244965e43d31de30662ae0b1baab5fe79eb2b7c449b549f'` |
+| `'U18_WIRE_CASES'` | `331` | `'a1cc47399582e03b51e45558e61e22b1f63fbe3782976ce1da5ae381d93aa042'` |
+| `'U18_API_CASES'` | `34` | `'505c7304c1b7e237fc9cb53df98ab7f853a62df80638c6e3e2e3f203224cf981'` |
+| `'U18_PRECEDENCE'` | `12` | `'09a18f5b2064d400319d95054b3608582d2551f0b2e540402d7e4811e6c0b76e'` |
+| `'U18_EXCEPTIONS'` | `8` | `'189107fa27ee14be41ea4d8c70eb5e966115180955dba172938c51105ff1689e'` |
+| `'U18_MUTATIONS'` | `24` | `'8a7bb8f5eb17ade044ca964229af63bc7b684a3951741ba333311de4ab108f24'` |
+| `'U18_REGISTRY'` | `4` | `'223d388a7c2c706f7821b1c4893f102f58ca109fef8914e90cef622cfda18363'` |
+| `'U18_CENSUS'` | `13` | `'c005ae43a4fe577280749344ec7823e4720308e7e0ac77567a978f033eb03181'` |
+| `'U18_COVERAGE'` | `20` | `'5ea882913af0d502cb6aaa2f3b81fba43d74e23f8698881313a862bf490ef5ae'` |

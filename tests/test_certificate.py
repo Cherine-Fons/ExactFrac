@@ -549,7 +549,9 @@ def wire():
 
 
 def test_closed_fixture_authority_and_registry_identity():
-    assert _sha(_CATALOGUE.read_bytes()) == _CATALOGUE_SHA
+    catalogue_bytes = _CATALOGUE.read_bytes()
+    assert len(catalogue_bytes) >= 3_212_040
+    assert _sha(catalogue_bytes[:3_212_040]) == _CATALOGUE_SHA
     assert _sha(_INDEPENDENT_SOURCE.encode()) == _INDEPENDENT_SHA
     assert len(_TABLES["U15_INPUTS"]) == 379
     assert _fingerprint(_TABLES["U15_INPUTS"]) == (
