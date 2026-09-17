@@ -1258,3 +1258,238 @@ input timing or public release is promoted here. Unit 16 still requires the
 reviewed complete candidate to be staged, tested from its exact Git index tree,
 committed and separately remotely closed. This appendix changes only CONFORMANCE;
 it does not stage, commit, push, or alter a production/test/fixture identity.
+
+
+## Unit 17 certificate construction and exact serialization — finite conformance
+
+### Basis, status and historical preservation
+
+This appendix records the finite implementation scope of DESIGN 4.14 and
+TEST_PLAN CE1--CE20 / section 40 after the live implementation R2 GREEN gate.
+Every preceding byte, theorem row, status and explanatory note is preserved.
+In particular `prop:branch-invariant`, `prop:global-invariant` and `thm:main`
+remain planned in the historical top table. No new theorem-label row is invented
+for the JSON codec, and no earlier historical deferral is retrospectively edited.
+Earlier certificate deferrals describe their own checkpoints; this appendix
+records the now-tested Unit 17 construction/serialization boundary only.
+
+Authority was remotely closed at
+`2cc8bd16287a3ec6a192c4f0b9249ded73484b99`; the independent oracle catalogue was
+remotely closed at `e68ea1cd3cf4e47645e90d0f14011290aba4bd4c` before the consuming
+test and production implementation. The governing mathematics remains the V2.2
+source pinned in SPEC_LOCK, not a reconstructed interface or earlier snapshot.
+The current candidate is the 160-line production R2 `exactfrac/certificate.py`
+and the byte-frozen R2 `tests/test_certificate.py`.
+
+The live targeted run collected and passed 458 cases. The full run collected
+and passed 2,445 cases, equal to the 1,987-case inherited baseline plus those
+458 cases. Neither run reported collection errors, deselections or xfails;
+all setup, call and teardown reports passed. Candidate production Ruff and
+full repository Ruff passed on Python 3.14.6 / pytest 9.1.1 / ruff 0.16.5.
+These are authenticated live GREEN results, not detached results substituted
+for the Mac gate, and not the 31 top-level test functions counted as cases.
+
+### Implemented object and byte boundary
+
+The exact public surface is `build_certificate(instance, result)` returning a
+detached `dict[str, object]` and `serialize_certificate(instance, certificate)`
+returning exact `bytes`. Both require a normally constructed exact canonical
+active Instance. The builder requires an exact SolveResult, whose only fields
+remain value and witness; an outer result/stats pair is not an accepted input.
+Constructor-bypassing forgeries and concurrent mutation during one synchronous
+call are outside the adopted closed-record/object contract.
+
+For a nonempty certificate, the original-coordinate U is a strictly increasing
+vertex-index list; y is a sparse strictly increasing list of [edge_ref, positive
+count] pairs, with omitted coordinates zero. References resolve by the canonical
+instance edge order, never optional labels, packed sparse positions or auxiliary
+cut coordinates. The reused closed helpers establish boundary membership and
+capacity, nonempty U, odd s+Y and s+Y >= 3, where s=f(U), Y=sum(y_e), and e=e_q(U).
+The certificate then preserves the LITERAL fields N=2*(e+Y) and D=s+Y-1.
+Numerical equality after reducing or rescaling N/D is not literal attainment.
+This is finite implementation evidence for the def:parameter / eq:compact-density
+conditions, not an independently checkable certificate of global optimality.
+
+Genuine Empty requires Q==1 under the active-instance hypotheses of lem:empty,
+literal (N,D)=(0,1), and no U/y fields. A Witness selects the nonempty case even
+when its numerator is zero or sparse y is empty. Valid suboptimal witnesses,
+local candidates that lost a solver comparison, and the nonempty raw (0,2)
+fixture remain accepted. No branch membership, provenance label, density >=1,
+secondary tie key, alternate witness search or extra optimizer call is required.
+
+The format tag is exactly "exactfrac-certificate/1". Nonempty output order is
+format, empty, N, D, U, y; Empty order is format, empty, N, D. Missing/extra fields,
+wrong exact types and additional envelopes are rejected. There is no digest,
+embedded instance, stats, telemetry, time, environment or branch field. Bytes
+use literal ASCII (a UTF-8 subset), unquoted decimal integer tokens, no spaces,
+no BOM, and exactly one final LF. Input dict key order is immaterial; this does
+not authorize sorting, merging or repairing U/y. Builder outputs and nested
+lists are detached, and the serializer revalidates current content on every call.
+
+Public invalid data raises exact ValueError; explicitly checked normal-return
+helper-promise violations raise RuntimeError; raised dependency exceptions retain
+identity. The nine-digit private decimal codec uses bounded conversions rather
+than whole-magnitude str conversion or a process-global cutoff change. Its
+4,801-digit fixtures pass under enabled limits 4,300 and 640 and hash seeds 1
+and 73. Injected resource exceptions are not converted into Empty or success.
+These checks neither exhaust memory nor certify denial-of-service resistance.
+
+### Complete frozen-test engineering crosswalk
+
+Each row identifies an actual top-level function in the frozen consuming file.
+"green" means the stated finite test obligations passed; it is not a new
+mathematical theorem status or a declaration that Unit 17 is remotely closed.
+Parametrizations and loops are distinguished from function counts.
+
+| TEST_PLAN obligations | Frozen test | Finite exercised scope | Status |
+|---|---|---|---|
+| CE9, CE12, CE18 | `tests/test_certificate.py::test_closed_fixture_authority_and_registry_identity` | Fixed table digests, literal recipes and all 396 registered entry identities; no mathematical-input deduplication. | green |
+| CE1, CE20 | `tests/test_certificate.py::test_exact_public_surface_and_closed_record_ownership` | Exactly the two ruled APIs/signatures; unchanged SolveResult fields, empty package roots and absent production checker. | green |
+| CE2, CE3, CE5--CE9 | `tests/test_certificate.py::test_literal_bytes_and_detached_record_construction` | All 31 literal fixtures; exact schema/raw fields, detached nested exports, valid Empty/nonempty zero, original coordinates and rejection after mutation. | green |
+| CE3, CE9, CE14 | `tests/test_certificate.py::test_repeated_and_reordered_object_serialization` | Repeated inputs and reordered dict keys yield the same fixed bytes without repairing witness coordinates. | green |
+| CE8, CE10, CE11 | `tests/test_certificate.py::test_independent_malformed_wire_rejections` | All 140 preregistered raw-byte rejections in the test-only independent route, including equal-ratio raw forgeries. | green |
+| CE10, CE11 | `tests/test_certificate.py::test_independent_instance_wire_variants` | Seven accepted instance-wire variants preserve validated canonical graph data; certificate bytes remain exact. | green |
+| CE4, CE7, CE8 | `tests/test_certificate.py::test_serializer_rejects_registered_object_corruptions` | Only object-semantic corruptions are assigned to the production serializer, separately from raw lexical rejection. | green |
+| CE1--CE5, CE7, CE8 | `tests/test_certificate.py::test_registered_exact_type_and_normal_record_rejections` | The 62 registered object-boundary cases reject unsupported types/records, envelopes and invalid normally constructed claims. | green |
+| CE7, CE16 | `tests/test_certificate.py::test_registered_normal_return_promise_faults` | All ten declared normal-return type/shape violations are classified as RuntimeError rather than caller-data rejection. | green |
+| CE16 | `tests/test_certificate.py::test_registered_dependency_exception_identity` | All 35 dependency-exception cases preserve the actual raised object, including operational resource failures. | green |
+| CE2, CE4, CE16 | `tests/test_certificate.py::test_instance_guard_precedes_every_other_read` | Exact Instance guard precedes other argument or dependency reads. | green |
+| CE2, CE16 | `tests/test_certificate.py::test_builder_exact_result_guard_precedes_dependencies` | Exact SolveResult guard precedes evaluator/export dependencies. | green |
+| CE5, CE16 | `tests/test_certificate.py::test_empty_paths_invoke_no_witness_helpers` | Genuine/false Empty paths use their ruled validation without manufacturing a witness. | green |
+| CE4, CE16 | `tests/test_certificate.py::test_serializer_header_guards_precede_payload_helpers` | Case-specific headers and integer fields are rejected before payload conversion. | green |
+| CE4, CE7, CE16 | `tests/test_certificate.py::test_shore_validation_precedes_sparse_decoding` | Invalid U is rejected before sparse-y decoding. | green |
+| CE4, CE7, CE16 | `tests/test_certificate.py::test_sparse_validation_precedes_witness_construction` | Sparse-y rejection precedes Witness construction and evaluation. | green |
+| CE2, CE4, CE8, CE16 | `tests/test_certificate.py::test_raw_mismatch_does_not_bypass_closed_evaluation` | Closed admissibility/evaluation is not bypassed by a supplied raw-pair mismatch. | green |
+| CE2, CE8, CE16 | `tests/test_certificate.py::test_builder_raw_rejection_precedes_exports` | The builder rejects literal mismatch before export helpers. | green |
+| CE2, CE4, CE16 | `tests/test_certificate.py::test_declared_helper_call_order_and_single_consumption` | The declared evaluator/conversion sequence and single consumption of normal helper outputs are exercised. | green |
+| CE4, CE16 | `tests/test_certificate.py::test_mutation_after_build_is_revalidated` | Later serialization validates current caller-owned content rather than cached/provenance-based approval. | green |
+| CE6, CE8, CE14, CE17 | `tests/test_certificate.py::test_tied_raw_scales_remain_distinct_without_optimization` | Legitimate tied witnesses retain different raw scales and bytes; no optimizer is invoked to force equality. | green |
+| CE6 | `tests/test_certificate.py::test_suboptimal_local_attainment_is_sufficient` | Admissible suboptimal and zero-valued fixtures need not be global winners or have density at least one. | green |
+| CE5--CE10, CE12--CE14, CE17 | `tests/test_certificate.py::test_every_registered_identity_both_routes_and_local_reconstructions` | All 792 actual final solves, own-run raw-pair binding, 396 numerical route comparisons, all endpoint origins and both direct-H2 shapes. | green |
+| CE14, CE17 | `tests/test_certificate.py::test_legacy_and_measured_results_serialize_the_same` | Selected legacy/telemetry result pairs emit the same bytes while diagnostic objects remain separate. | green |
+| CE7, CE14, CE15, CE17 | `tests/test_certificate.py::test_labels_diagnostics_and_interleaved_calls_do_not_enter_bytes` | Optional labels, huge signed labels, diagnostics and interleaving do not contaminate mathematical certificate bytes. | green |
+| CE10, CE11, CE15, CE18 | `tests/test_certificate.py::test_independent_wire_in_fresh_production_blocked_process` | The independent byte route accepts/rejects its fixed inputs with production imports blocked and enabled conversion limits. | green |
+| CE9, CE14, CE15, CE18 | `tests/test_certificate.py::test_exact_large_integer_serialization_in_fresh_process` | Literal large-integer bytes across both enabled conversion limits and hash seeds, without process-setting changes. | green |
+| CE10, CE18 | `tests/test_certificate.py::test_independent_source_is_fixed_and_has_only_standard_library_imports` | The test-only verifier matches its fixed source identity and has no production parser/validation imports. | green |
+| CE1, CE15, CE17, CE18 | `tests/test_certificate.py::test_closed_sources_and_production_import_exactness_boundary` | Frozen dependency bytes, permitted direct imports and isolated production loading; arithmetic/dataflow restrictions distinguish codec work from optimization. | green |
+| CE2, CE8 | `tests/test_certificate.py::test_builder_rejects_numerically_equal_nonempty_raw_forgeries` | Numerical equality is established while the forged literal pair is rejected at the builder boundary. | green |
+| CE2, CE7, CE8 | `tests/test_certificate.py::test_builder_rejects_instance_dependent_normal_witness_faults` | Normally constructed but instance-dependent invalid witnesses are rejected without reopening the closed-record contract. | green |
+
+CE19 is additionally supported by the separate executed implementation audit below,
+not by declaring a mutation name inside a pytest function. CE20 is the scope and
+preservation boundary of this appendix; it does not close the historical future
+independent-checker obligations in TEST_PLAN section 11 (C1--C10).
+
+### Independent serialized-input route and actual dual-solver evidence
+
+The frozen test-only verifier consumes ONLY serialized instance bytes and
+certificate bytes. It validates the canonical active instance, including edge
+order and exact labels, before interpreting certificate references. It shares
+no production parsing, validation, shore or witness helpers. The isolated audit
+reports no exactfrac imports in that verifier. Production imports of normally
+closed dependencies through SolveResult are a separate, legitimate loading path;
+the source review permits only the adopted direct imports and no optimizer calls.
+Import provenance, source restrictions and nonmutation were reviewed as part of
+the existing implementation audit, not a newly inserted lifecycle gate.
+
+All 140 registered malformed-wire cases and seven accepted instance-wire variants
+are exercised by that independent route. Duplicate keys, noncanonical numeric
+spellings, malformed UTF-8 and byte-envelope/newline defects belong to that
+TEST-ONLY byte boundary, not a claimed production decoder in this unit.
+Instance whitespace/key order may vary under the adopted input schema, but its
+edge order is never normalized by verification. Production serialize_certificate
+accepts a dictionary, not bytes/text, and cannot detect duplicates erased by a
+caller's parser. Unit 18 retains independent production decoder/checker ownership;
+`exactfrac_verify/check.py` remains absent and is not a Unit 17 availability gate.
+
+The registry preserves all 389 inherited entry identities and the seven fixed
+Unit 17 additions: 396 entries, including intentional duplicate mathematical
+inputs. The actual independent implementation audit ran each under Standard
+and Accelerated, for 792 final solves and 792 independently verified FINAL
+production certificates. Every run preserves its own literal raw pair. All 396
+cross-route comparisons are exact numerical comparisons, not demands for equal
+witnesses, unreduced pairs or bytes under ties.
+
+The same audit separately emitted and independently verified 3,962 LOCAL
+reconstruction certificates: Baseline 788, L0 608, L1 572, H0 712, H1 750 and
+H2 532. Both direct-H2 count shapes occurred: 374 one-edge and 158 split cases.
+Direct H2 carries raw (4,2); this is local attainment evidence, not an invented
+strict final H2 winner. Complete branch solves already dominate/tie direct H2
+under the existing DESIGN 4.12.10 / ORACLE-111 ruling. Local counts/stream hashes
+are observations of this run and are not additional solver tie rules.
+
+Together with the 31 independently fixed literal fixtures, the audit verified
+4,785 instance/certificate byte pairs: 31 + 792 + 3,962. These are executions,
+not 4,785 distinct graph inputs or pytest cases. It also records 62 main-process
+fixed serializations and 62 production fixed serializations in each of four
+fresh-process checks. Each isolated independent route accepts 38 fixed/variant
+pairs and rejects 140 corruptions with its production-import barrier intact.
+The separate audit records 67 production object-rejection executions; this is
+not a replacement for the parametrized consuming test's object-boundary coverage.
+
+### Executed fault controls and what they establish
+
+The independent audit detected all 18 declared fault families through 20 variants
+and 23 executions: 17 production-behavior variants / 20 production executions,
+one independent-oracle variant, and two integration variants. The extra three
+executions are the repeated enabled-cutoff trials. These categories are not
+collapsed into a claim that all 20 variants changed production source.
+
+Faults cover literal-vs-numerical equality, delegated admissibility, false Empty,
+erased nonempty-zero payload, packed/original-reference confusion, repaired sparse
+order/duplicates, dropped envelope fields, byte order/LF, accidental digit cutoff,
+hidden re-solving, output aliasing, stale validation, resource-to-Empty conversion,
+suboptimal-witness rejection, verifier import contamination, registry deduplication
+and an invalid cross-route raw-equality demand. M03 uses an early return accepting
+a too-small total; its detection is NOT a claim that deletion of a redundant guard
+alone was detected. M13 targets the independent verifier, and M16/M18 target
+integration behavior. All observations are finite adversarial evidence, not a
+complete mutation score over all possible bugs or an exhaustive correctness proof.
+
+### Artifact bindings, preserved dependencies and remaining work
+
+Accepted production package:
+`ExactFrac_UNIT17_CERTIFICATE_IMPLEMENTATION_R2_PACKAGE.zip`
+SHA-256: `fcf1eb29fc39436f2b545ac815cefe0d127d0058b95564529fc0581f0c6ec3ae`.
+Its source-only patch has 166 lines and SHA-256
+`9d3a05465afc54359e92b84bd12601c806b0e05c18dd80d80f6e985ba104ec7e`.
+R1 stopped at live Ruff before source application; R2 changes only operand order
+in its raw-pair comparison. No test, fixture, authority or closed dependency was
+reopened to obtain GREEN. Failed-preflight packages remain historical evidence.
+
+| Bound artifact | SHA-256 |
+|---|---|
+| exactfrac/certificate.py (production R2) | cffab68bf6c9c6c6ef1d4f9cc177b9718298bf12ec5cc16b4ed3353728b318a4 |
+| tests/test_certificate.py (frozen R2) | c70f7120fe10d07668fc37624843cc77a02ef58244fbda432d04591123042724 |
+| docs/DESIGN.md (closed authority) | d4494b201e2f19a9c3c30f919a32c7f5bd5f078422ea14dc37775b6db4612b9a |
+| docs/TEST_PLAN.md (closed authority) | 42d0e0715392ed898624c329a65763555a01fe064c1ef51640d03513bb530224 |
+| docs/ORACLE_CATALOG.md (closed fixtures) | 04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac |
+| IMPLEMENTATION_GREEN_AUDIT.json | 83eedbd48788f02c34d9290068ae25922dd357369df5246a927dfb65edf1a299 |
+| IMPLEMENTATION_GREEN_CHECKPOINT.txt | 287e39b669549f7d3f014bbe80b92b2f6944753aa2759ef9ba6844d21da33921 |
+
+The private controlling GREEN directory is
+`unit17-certificate-implementation-r2-pro-audited/live-green.3ux80b1v/`.
+The audit binds the actual targeted/full/Ruff streams, independent audit report,
+source bytes, frozen test and prior evidence. Source Git blob is
+`2ce3f2f3ae44177141976f84d15ee0a226b3e281`; test Git blob is
+`0cbd94d1dd569c0dea0a434344a7f49a94979b87`. At GREEN all four refs still equal
+`e68ea1cd3cf4e47645e90d0f14011290aba4bd4c`, its committed tree remains
+`387dd07b05998b3ba0f84e8c4afe1238235b8155`, and the 44 committed files/index are
+unchanged. Only the exact production source and frozen test are untracked.
+These private evidence records are not added to the public repository.
+
+The O(n+m) structural-scan/storage statement in DESIGN 4.14 excludes encoded
+integer size. Serialization requires output-sized storage/work plus decimal
+conversion bit cost; finite tests do not establish magnitude-independent codec
+runtime, universal bit-complexity bounds, or end-to-end benchmark scalability.
+No expanded-copy execution is introduced, but a finite large-integer test is not
+a proof of all possible resource trajectories. Deployment quotas remain outside
+this synchronous, in-memory object boundary and must not silently redefine /1.
+
+This amendment changes ONLY CONFORMANCE. Source and test remain unchanged and
+unstaged pending complete-candidate staging, exact staged-tree isolation,
+postcommit checks and separate remote closure. Unit 17 is not yet complete at
+this checkpoint. No Unit 18 checker, CLI, corpus-expansion campaign, experiment,
+release, universal complexity theorem or independently certified optimum is
+claimed complete. Private BUILD/LEARNING notes remain outside every gate and
+are not produced as final Unit 17 notes at this intermediate step.
