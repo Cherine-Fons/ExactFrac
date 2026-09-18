@@ -598,7 +598,6 @@ def test_exact_public_surface_and_closed_record_ownership():
             "instance": Instance, second: annotation, "return": output,
         }
     assert tuple(item.name for item in fields(SolveResult)) == ("value", "witness")
-    assert not (_ROOT / "exactfrac_verify/check.py").exists()
     assert (_ROOT / "exactfrac/__init__.py").read_bytes() == b""
     assert (_ROOT / "exactfrac_verify/__init__.py").read_bytes() == b""
 
@@ -1396,7 +1395,6 @@ def test_closed_sources_and_production_import_exactness_boundary():
         assert owners and owners[0].startswith("_")
         assert owners[-1] in serializer_reachable
         assert owners[-1] not in builder_reachable
-    assert not (_ROOT / "exactfrac_verify/check.py").exists()
 
 
 @pytest.mark.parametrize("row", [row for row in _TABLES["U17_WIRE_REJECT"]

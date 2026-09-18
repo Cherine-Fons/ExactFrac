@@ -1493,3 +1493,237 @@ this checkpoint. No Unit 18 checker, CLI, corpus-expansion campaign, experiment,
 release, universal complexity theorem or independently certified optimum is
 claimed complete. Private BUILD/LEARNING notes remain outside every gate and
 are not produced as final Unit 17 notes at this intermediate step.
+
+
+## Unit 18 — independent checker: finite GREEN conformance (implementation R1 / tests R2)
+
+This appendix records the implemented scope of DESIGN 4.15, TEST_PLAN 41
+(IQ1–IQ20) and the checker cases C1–C10 from TEST_PLAN 11. It is not a new
+mathematical specification, an API revision, or a final unit-closure declaration.
+All earlier CONFORMANCE bytes, rows and statuses are preserved as historical
+records. In particular, earlier statements that the future checker was absent
+remain statements of their earlier checkpoints, not current absence requirements.
+
+Mathematical source remains SPEC_LOCK-pinned canonical V2.2: def:instance,
+ass:active, def:parameter/eq:compact-density, lem:empty and its proof. lem:unit,
+prop:endpoints and sec:global reconstruction/proofs explain producer candidates;
+they do not impose an optimality, endpoint-only or solver-provenance filter here.
+The optional normalization in mathematical exposition does not replace the
+adopted /1 requirement for the witness's literal structural numerator/denominator.
+
+### Implemented boundary and evidence state
+
+`exactfrac_verify/check.py` exports only
+`verify_certificate(instance: bytes, certificate: bytes) -> None`.
+Both required positional-or-keyword inputs have exact built-in type bytes.
+Success is exactly None. The complete instance is validated before certificate
+inspection, including the declared shape, labels, canonical edge order and
+active condition. Invalid input raises exact ValueError; the authorized narrow
+UTF-8/JSON syntax translations are distinct from operational exceptions, which
+propagate unchanged. Diagnostic prose and private parser names are not public API.
+
+The instance substrate is standard-library json with independently written
+local numeric/key hooks. Certificate parsing is a forward fixed-grammar cursor,
+not re-encoding a decoded object to validate itself. Only json and future
+annotations are imported. No producer/test/private reference, brute helper,
+solver, I/O, dynamic code, global cache or process-setting change is used.
+Nine-digit accumulation preserves finite integer tokens without full-token
+int conversion, floating point, quotient reduction or implicit numeric coercion.
+
+For nonempty witnesses, independently validated original indices and sparse
+positive counts determine s=f(U), e=e_q(U) and Y=sum(y). Strict order/range,
+crossing, count capacity, odd s+Y and s+Y>=3 are required, followed by both literal
+identities N=2*(e+Y) and D=s+Y-1. Genuine Empty has no U/y payload and requires
+Q==1 and literal (0,1) after active-instance validation. Nonempty zero and y=[]
+are not Empty. Every admissible literally attaining witness is eligible, including
+suboptimal, interior and losing local endpoint witnesses. No global optimality,
+solver provenance or unique cryptographic instance binding is independently certified.
+
+The live R1 implementation gate reports 1,033 targeted cases and 3,478 full-suite
+cases, all collected and passed. The full total is the inherited 2,445 plus the
+measured 1,033 new cases; it retains all 458 Unit 17 certificate cases. There are
+no skipped collection items, collection errors, deselections or xfails. Candidate
+source Ruff, repository Ruff and the independent implementation audit passed.
+Both R2 tests and all 45 other existing files were conserved. These are executed
+checks on the submitted candidate, not a proof of universal correctness.
+
+### Exact consuming-test crosswalk
+
+All rows below refer to the actual frozen R2 file, not planned names. The
+19 top-level functions collect 1,033 parametrized cases. Function count, pytest
+case count, solver runs, emitted byte pairs and fault executions are distinct.
+The `green` status means the stated finite check passed at the implementation gate.
+
+| Obligations | Actual test | Finite scope | Status |
+|---|---|---|---|
+| IQ10, IQ11, IQ17 | `tests/test_verify_check.py::test_closed_tables_and_qualified_registry_are_preserved` | Closed table fingerprints and 400 qualified registry identities; fault-family names are preregistration, not executed mutation evidence. | green |
+| IQ1 | `tests/test_verify_check.py::test_public_api_success_and_root_ownership` | Exact placement/API, required bytes parameters and None success; unchanged package roots and brute helper. | green |
+| IQ6–IQ8, IQ10; C1, C6, C7 | `tests/test_verify_check.py::test_literal_fixtures_preserve_raw_fields_and_original_coordinates` | 41 fixed literal byte recipes, original coordinates, exact structural raw pairs and valid nonoptimal/zero witnesses. | green |
+| IQ3–IQ10; C1–C10 | `tests/test_verify_check.py::test_all_fixed_wire_verdicts_against_separate_byte_reference` | 519 independently fixed byte verdicts: 64 acceptances and 455 rejections; no producer/consumer self-oracle. | green |
+| IQ1, IQ14 | `tests/test_verify_check.py::test_registered_api_type_arity_and_keyword_cases` | 34 declared API type/arity/keyword cases; exact bytes and ValueError rejection without caller coercion. | green |
+| IQ2 | `tests/test_verify_check.py::test_instance_rejection_precedes_any_certificate_argument_access` | 12 declared invalid-instance cases never access the certificate argument; opcode instrumentation is test-local. | green |
+| IQ2 | `tests/test_verify_check.py::test_certificate_access_trace_has_a_positive_control` | Positive control demonstrates that the certificate-access instrumentation fires on a valid instance. | green |
+| IQ14 | `tests/test_verify_check.py::test_registered_dependency_exception_identity_and_narrow_translation` | Eight registered exception cases, narrow decode translations, and identity-preserving operational propagation. | green |
+| IQ2, IQ4 | `tests/test_verify_check.py::test_bad_labels_reject_before_edge_degree_processing` | Invalid labels reject before edge/degree processing through finite test-local instrumentation. | green |
+| IQ6–IQ8, IQ11, IQ12 | `tests/test_verify_check.py::test_both_real_solver_routes_and_all_local_reconstructions` | Every registry identity under both selections; final and local emitted bytes checked independently with per-run literal pairs. | green |
+| IQ12 | `tests/test_verify_check.py::test_actual_local_origin_and_direct_h2_shapes` | Actual Baseline/L0/L1/H0/H1/H2 captures; both direct-H2 count shapes and losing local candidates. | green |
+| IQ7, IQ8, IQ11; C6, C7 | `tests/test_verify_check.py::test_distinct_tied_raw_pairs_are_valid_but_rescalings_are_not` | Lawful distinct witnesses with equal ratios accepted; rescaling a fixed witness pair rejected. | green |
+| IQ8, IQ16 | `tests/test_verify_check.py::test_no_hidden_solver_invocation_on_suboptimal_witness` | Admissible suboptimal witnesses accepted without hidden solver invocation. | green |
+| IQ15, IQ16 | `tests/test_verify_check.py::test_production_source_import_and_forbidden_operation_surface` | Direct imports and forbidden-operation/dataflow surface; source review complements executed isolation. | green |
+| IQ10, IQ13 | `tests/test_verify_check.py::test_separate_reference_large_integer_semantics` | Separate fixed byte reference under enabled digit limits and two seeds; not checker-only production evidence by itself. | green |
+| IQ13, IQ15 | `tests/test_verify_check.py::test_checker_only_export_large_integer_rejection_and_runtime_isolation` | Checker-only export accepts/rejects fixed pairs with blocked producer/private imports, repeats and unchanged runtime settings. | green |
+| IQ11, IQ12, IQ15 | `tests/test_verify_check.py::test_every_real_emission_is_accepted_with_only_checker_files_available` | All final/local emissions verified where only checker package files are available; serialized inputs only. | green |
+| IQ18, IQ19 | `tests/test_verify_check.py::test_old_prefix_guard_remains_length_checked_and_append_tolerant` | Actual length-checked historical prefix guard: original/append accepted, truncation/three positional corruptions rejected. | green |
+| IQ9 | `tests/test_verify_check.py::test_metadata_changes_can_preserve_attainment_without_digest_binding` | Valid metadata changes may preserve attainment; no cryptographic unique-instance binding is claimed. | green |
+
+IQ16 and IQ17 additionally require the separate executed source/work and fault
+audit summarized below. IQ19's exact full-file transition is bound by the RED
+package/application evidence; a prefix test alone does not prove the two-line
+retirement. IQ20 restricts this appendix to the implemented finite scope.
+
+### C1–C10: independent production-checker scope
+
+| Existing case family | Implemented finite evidence | Status |
+|---|---|---|
+| C1 | Valid nonempty fixtures and every actual final/local emitted certificate are accepted only after independent admissibility and raw-pair checks. | green |
+| C2–C5 | Fixed byte cases reject noncrossing references, duplicates, descending references and counts exceeding original multiplicities. | green |
+| C6–C7 | Forged numerator/denominator and equal-ratio reductions/rescalings are rejected for the same fixed witness. | green |
+| C8–C9 | Exact byte grammar rejects Empty payloads and missing nonempty witness fields. | green |
+| C10 | False Empty is rejected by independent active-instance validation and Q==1, not by trusting the flag. | green |
+
+These rows supplement rather than rewrite the original planned/history rows.
+They do not extend C1 into an optimality claim or require all different instance
+bytes to invalidate an otherwise valid witness. The checker consumes the actual
+supplied instance; optional labels never replace canonical vertex/edge indices.
+
+### Independent bytes, actual producer observations and runtime isolation
+
+The fixed corpus includes 41 literal byte recipes (31 inherited plus ten new)
+within 519 wire cases: 64 acceptances and 455 rejections. The private reference
+uses separate parsing/validation, receives only two serialized inputs and has no
+producer imports. The checker under test is not its own expected-answer source.
+
+All 396 inherited qualified registry identities and four Unit 18 additions are
+preserved: 400 identities including intentional mathematical duplicates. The
+independent audit ran each under Standard and Accelerated, for 800 actual final
+producer solves and 400 exact numerical cross-route comparisons. Each run retains
+its own literal raw pair; tied routes need not share witnesses, pairs or bytes.
+No deduplication, secondary tie rule or extra solve forces equality.
+
+The audit separately checked 4,006 actual local reconstruction certificates:
+Baseline 796, L0 616, L1 578, H0 720, H1 758 and H2 538. Direct H2 includes
+378 one-edge selections and 160 split selections. These are local reconstructed
+witnesses, not invented strict final H2 winners. The 4,806 final/local pairs
+(800+4,006) were both independently recomputed and accepted by the production
+checker in a separate checker-only process. They are executions, not 4,806
+unique graphs or additional pytest cases. Literal fixtures are a separate corpus;
+the count 4,806 does not include an extra addition of those 41 fixtures.
+
+Independent endpoint enumeration supplied 400 numerical references; 369 small
+graphs also received full-vector/scalar enumeration. Those exhaustive private
+reference routines are audit tools, not algorithms imported or run by the checker.
+Producer observations use the frozen Unit 17 builder/serializer in a separate
+process and transmit only instance/certificate byte pairs for checking.
+
+Four fresh checker-only runs, with digit limits 4,300 and 640 and seeds 1 and 73,
+each accepted 64 fixed pairs and rejected 455. The audit records only
+exactfrac_verify and exactfrac_verify.check as loaded project modules, no
+producer imports, unchanged settings and no retained caller inputs. Its exported
+checker/root files were conserved. Separate source/import review complements
+these executed barriers; integration pytest processes may legitimately import
+producer modules to emit bytes and are not themselves checker-only processes.
+The large-integer corpus includes 4,801-digit magnitudes. This is finite resource
+and exactness evidence, not unlimited memory, denial-of-service protection or a
+claim that operational failure is malformed mathematics.
+
+### Executed fault controls and actual targets
+
+The independent audit detected all 24 declared families through 24 variants and
+27 executions: 21 production-behavior variants, two integration variants and one
+test-prefix-guard variant. The accidental digit-cutoff variant accounts for four
+executions over the two enabled limits and two seeds, rather than one.
+
+| Fault families | Actual target and intervention | Executed outcome |
+|---|---|---|
+| Q01–Q06 | Checker source: lose duplicate keys; relax certificate whitespace; erase .0; use full-token int; bypass active or duplicate-label checks. | Detected |
+| Q07–Q09 | Checker source: inspect certificate early; sort invalid edge order; confuse sparse positions with original references. | Detected |
+| Q10–Q13 | Checker source: sort U/y, omit capacity or parity validation. | Detected |
+| Q14 | Checker source: early success at total one, NOT merely deletion of a redundant minimum guard. | Detected |
+| Q15–Q17 | Checker source: use numerical instead of literal equality, omit Q for Empty, forbid valid nonempty zero. | Detected |
+| Q18–Q20 | Checker source: attempt optimizer/dependency imports or swallow an injected MemoryError into success. | Detected |
+| Q21 | Checker source: impose boundary selection and reject a valid losing internal witness. | Detected |
+| Q22–Q23 | Integration: require literal pair equality under a legal tie or deduplicate the mathematical registry (391 instead of 400 identities). | Detected |
+| Q24 | Test-prefix guard: omit the historical prefix hash assertion. | Detected |
+
+The report's generic accept-invalid/reject-valid labels describe detector outcomes;
+its audit source specifies the actual source edits listed above. No variant is
+claimed to execute the forbidden optimizer successfully: the import barrier detects
+the attempt. Operational-failure tests inject faults; they do not demonstrate
+physical memory exhaustion. These are finite adversarial checks, not a universal
+mutation score or proof that every possible omission is detectable.
+
+### Frozen transition, source identity and controlling live evidence
+
+The authority and oracle phases are already separately closed. Phase C made only
+the length-checked fixed-prefix replacement; Phase D removed exactly the two
+checker-absence lines and added the new consuming test. The enclosing old tests
+and every other old-test byte remain unchanged by that retirement. Its prefix
+still requires at least 3,212,040 bytes hashing to
+`04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac`.
+Original/append, empty/short and first/middle/last-corruption controls passed.
+Neither transition grants another test edit during production or CONFORMANCE.
+
+Tests-first R1 stopped at live lint before application. R2 changes only the
+15 identified formatting/lint sites in the new file, with the module AST and all
+embedded string values preserved. Its old-test candidate is unchanged from R1.
+The actual R2 missing-module RED preceded the independently written checker.
+Historical failed packages, prior source/test hashes and closed evidence are not
+rewritten by this appendix. The checker is not a promotion/copy of the embedded
+private reference; its independently written cursor and local JSON hooks implement
+the adopted contract and retain the prescribed standard-library boundary.
+
+| Bound artifact | SHA-256 |
+|---|---|
+| exactfrac_verify/check.py | 5beb9850bf7aeb311178a5f35df1357d8d4a3e801fde5341e2108176bd01f1ad |
+| tests/test_verify_check.py (R2) | 99a66cef83df1c8c5191349e33966230ac21b8fc73e1e071f2f26bde74796dd3 |
+| tests/test_certificate.py (completed two-line retirement) | c94179fdbd3cb106394fd4780f5580664f41068facd65dc15a4f91b5d945a996 |
+| docs/DESIGN.md | 45c5b4cb078b8a45d0a724f0beea036557cb7be1d51bcc8aee07cdda68205c5c |
+| docs/TEST_PLAN.md | 19fd12fbdcaa59c3b00547030f4dd091d18b69558f40a8b74e93307cdc546470 |
+| docs/ORACLE_CATALOG.md | 05255f65148c007278a38df664df5e6ff02db868d63fdafe7d9a016861952840 |
+| IMPLEMENTATION_GREEN_AUDIT.json | 8046729e4f00e942b6e938bf97269153e9a2dd9170c8dac6283b083718512609 |
+| IMPLEMENTATION_GREEN_CHECKPOINT.txt | fa24ffd8e86043e60090809d82721f5825c0e484589da962367286c131f0ec7d |
+
+The private controlling directory is
+`unit18-checker-implementation-r1-pro-audited/live-green.yfmml3yb/`.
+The source Git blob is `1c907b4807f7a24d3c062b21b9d58250b2d969fc`.
+Accepted implementation ZIP SHA-256 is
+`a40f94ac03cde71219ab475f907bf672ff2eeacce42160d7b9be8056a4fddd87`;
+its source-only patch has 232 lines and SHA-256
+`b8dc7f867730abcd21b0bef908008be41b446a63794b0e47033ebcd979f86392`.
+The live toolchain was Python 3.14.6, pytest 9.1.1 and Ruff 0.16.5.
+At GREEN all four refs remained `309ce997b4937e0f1a622303e27a01d10088c2ea`,
+with committed tree `82442a314cf151848c1f9f8ed256e8f38802dbd3`, 46 unchanged
+committed/index entries and divergence 0 0. Checker and new test were untracked;
+the old test's exact two-line retirement was unstaged. Private evidence stays
+outside the repository; this appendix binds it without embedding its files.
+
+### Work bounds and remaining lifecycle
+
+The source performs compact list scans O(n+m+|U|+k) for k sparse entries, apart
+from label uniqueness, input-byte processing, decimal conversion and arbitrary
+integer bit-operation costs. No Q-copy expansion or all-shore optimizer is used.
+Decoded input storage and numeral work are not constant or magnitude-independent;
+this appendix proves no universal strong-polynomial byte-runtime bound.
+
+This step changes only docs/CONFORMANCE.md. It preserves its complete historical
+prefix and all other source/test/governing bytes. The saved pre-CONFORMANCE GREEN
+audit is authenticated, not rerun against its deliberately changed frozen document
+hash. Targeted/full regression and repository Ruff run with this appendix present.
+This neither invalidates nor silently rebases the original audit.
+
+The complete four-path candidate still requires staging, exact staged-tree isolation,
+a separate local implementation commit/postcommit checks and exact-commit remote
+closure under TEST_PLAN 42. Unit 18 is not complete at this documentation checkpoint.
+No CLI, later corpus campaign, experiment, release, independent global-optimality
+certificate or additional review gate is claimed. Private BUILD/LEARNING notes
+remain outside all helper checks and are not final-unit notes at this stage.
