@@ -1727,3 +1727,209 @@ closure under TEST_PLAN 42. Unit 18 is not complete at this documentation checkp
 No CLI, later corpus campaign, experiment, release, independent global-optimality
 certificate or additional review gate is claimed. Private BUILD/LEARNING notes
 remain outside all helper checks and are not final-unit notes at this stage.
+
+
+## Unit 19 — CLI composition: finite GREEN conformance (implementation R1 / tests R2)
+
+This appendix records DESIGN 4.16 and TEST_PLAN 43 (CL1–CL18), under the
+existing completion lifecycle in TEST_PLAN 44. It is a finite engineering
+conformance record, not a new API, theorem, test exception or unit-closure claim.
+The complete earlier CONFORMANCE prefix, including every prior row/status, is
+preserved. Earlier checkpoint statements remain historical, not current bans on
+subsequently authorized files. No original theorem row is promoted by this CLI.
+
+### Implemented contract and mathematical boundary
+
+`exactfrac/cli.py` exports only `main(argv: list[str] | None = None) -> int` and
+is invoked with `python -m exactfrac.cli`. The implemented commands are
+`solve [--solver Standard|Accelerated] INSTANCE` and `verify INSTANCE CERTIFICATE`.
+The explicit CLI default is Accelerated; the closed solver default is unchanged.
+The adopted grammar, end-marker/literal paths, exact help/usage bytes, binary stdin
+operand, and exact built-in argv types are exercised by the frozen consuming test.
+No console-script entry, __main__.py, root re-export, dependency, executable bit,
+configuration or existing test is added/changed by Unit 19 production.
+
+Solve privately decodes only instance syntax using standard-library json, duplicate
+DECODED-key rejection and at-most-nine-digit integer accumulation. It delegates
+schema/label/ordered-edge/active validation to Instance.from_dict, once. It calls
+one selected solve, then build_certificate and serialize_certificate once on the
+same instance/result chain. It checks normal return-type/selected-route promises,
+then calls the public independent checker once on the original input and emitted
+bytes BEFORE accessing stdout. It writes exactly that certificate and flushes;
+there is no stats/banner/envelope, extra LF, retry, fallback or witness rewriting.
+
+Verify acquires instance bytes first and certificate bytes second, then forwards
+them once to the public independent checker, requiring exact None and returning
+0 silently without stdout/stderr buffer access. A certificate read failure may
+precede checking a malformed but acquired instance. This acquisition order does
+not change the checker's instance-before-certificate-inspection rule. It does not
+parse/re-encode input, construct Instance, invoke a solver or use private checker
+helpers. Help/usage load no command dependencies. Route-specific independence is
+established by fresh-process barriers, not a producer-populated integration process.
+
+Canonical V2.2 remains the mathematical source: def:instance, ass:active,
+def:parameter/eq:compact-density, lem:empty and lem:unit, prop:endpoints, and the
+sec:global/alg:global reconstruction table/proofs. For a nonempty admissible witness,
+s=f(U), e=e_q(U), Y=sum(y) and original crossing-edge references determine the
+literal pair N=2*(e+Y), D=s+Y-1, with s+Y odd and at least 3. The CLI preserves
+rather than recomputes/reduces that pair. Genuine Empty uses Q==1 and (0,1) under
+the closed active-instance assumptions. Accepted nonempty zero, suboptimal and
+losing local witnesses remain valid. The checker certifies admissibility and raw
+attainment (a fractional lower bound), NOT global optimality or an exact block count.
+Finite optimum comparisons below use separate exhaustive references.
+
+### Actual frozen test crosswalk
+
+The implementation GREEN gate measured 962 CLI cases, all passed, and 4,440 full
+cases, all passed: the preserved 3,478-case baseline plus the 962 new CLI cases.
+The full run includes 1,033 checker and 458 certificate cases. No collection errors,
+collection skips, deselections or xfails were reported. Source/repository Ruff and
+the separate implementation audit passed. These are saved executed results, not
+new runs performed by this documentation statement. Each green row below means
+only the stated finite scope. Top-level functions, parametrized cases, CLI calls,
+qualified graph identities and mutation executions are different censuses.
+
+| Obligations | Actual frozen consuming tests | Finite scope | Status |
+|---|---|---|---|
+| CL1 | `tests/test_cli.py::test_exact_public_surface_and_invocation_contract`<br>`tests/test_cli.py::test_python_call_exact_types_and_native_arity`<br>`tests/test_cli.py::test_argv_is_not_retained_or_cached_between_calls` | Exact main API, built-in argv types/native arity, unchanged roots/configuration and no retained argv. | green |
+| CL2, CL3 | `tests/test_cli.py::test_registered_argv_grammar_and_literal_paths`<br>`tests/test_cli.py::test_fresh_cli_dependency_isolation_physically_without_producers` | All 98 registered argv rows, literal paths/end-marker, default and explicit routes, six exact help forms and usage rejection before dependencies/input I/O. | green |
+| CL4 | `tests/test_cli.py::test_registered_argv_grammar_and_literal_paths`<br>`tests/test_cli.py::test_verify_operand_acquisition_precedes_checker_validation`<br>`tests/test_cli.py::test_invalid_instance_with_readable_certificate_reaches_only_checker`<br>`tests/test_cli.py::test_verify_checks_each_reader_byte_promise_before_checker` | Binary operand ownership, exact bytes return promises, instance-then-certificate acquisition and no premature checker call. | green |
+| CL5 | `tests/test_cli.py::test_registered_instance_syntax_and_graph_boundary`<br>`tests/test_cli.py::test_actual_json_substrate_decode_error_has_the_ruled_translation` | 52 syntax/schema/domain rows; no normalization; syntax-only adapter delegates once to closed Instance.from_dict. | green |
+| CL6, CL8 | `tests/test_cli.py::test_fixed_literal_solve_result_seams_preserve_raw_identity`<br>`tests/test_cli.py::test_closed_normal_return_promises_fail_before_downstream_work`<br>`tests/test_cli.py::test_registered_operational_exceptions_preserve_identity` | Same-object composition, one selected solve, exact result/stats/build/serialize/checker promises, original literal bytes and no stdout before self-check. | green |
+| CL7, CL12 | `tests/test_cli.py::test_complete_fixed_wire_corpus_through_verify`<br>`tests/test_cli.py::test_verify_command_requires_exact_none_without_stream_access`<br>`tests/test_cli.py::test_all_400_qualified_graphs_both_real_selections_repeats_and_local_candidates` | 519 fixed wire cases and actual local witnesses; silent verification, original reference indices, attainment including valid suboptimal/zero witnesses, not optimality. | green |
+| CL9 | `tests/test_cli.py::test_registered_operational_exceptions_preserve_identity`<br>`tests/test_cli.py::test_syntax_exception_classes_are_not_translated_outside_decoders`<br>`tests/test_cli.py::test_actual_json_substrate_decode_error_has_the_ruled_translation` | 81 registered exception rows and additional scoped decoder controls; injected exception identity is preserved outside the two authorized translations. | green |
+| CL10 | `tests/test_cli.py::test_registered_short_write_progress_flush_and_partial_failure`<br>`tests/test_cli.py::test_help_and_usage_enforce_all_binary_return_promises`<br>`tests/test_cli.py::test_closed_normal_return_promises_fail_before_downstream_work` | 21 registered write plans and promise controls: suffix progress, flush completion, no exception retry/text fallback and honest retained partial prefix. | green |
+| CL11 | `tests/test_cli.py::test_all_400_qualified_graphs_both_real_selections_repeats_and_local_candidates` | All 400 qualified identities under both selections, 800 first plus 800 repeat solves, 400 numerical comparisons and 4,006 local verifies; no deduplication or forced cross-route byte equality. | green |
+| CL13 | `tests/test_cli.py::test_fresh_independent_reference_has_no_project_dependencies`<br>`tests/test_cli.py::test_fresh_huge_solve_both_selections_and_literal_pair_observation`<br>`tests/test_cli.py::test_fresh_cli_dependency_isolation_physically_without_producers` | Fresh seed 1/73 and enabled digit-limit 4,300/640 cases, including inherited 4,801-digit numerals and unchanged process settings. | green |
+| CL14 | `tests/test_cli.py::test_fresh_cli_dependency_isolation_physically_without_producers` | Physically producer-free export plus import-attempt/origin checks; help/usage and verify have different allowed project-module sets. | green |
+| CL15 | `tests/test_cli.py::test_real_module_entry_binary_files_stdin_and_process_status` | Actual python -m entry, binary files/stdin, help/usage, both solve selections, valid and failing verify processes; only normal 0/2 statuses and fixed texts are specified. | green |
+| CL16 | `tests/test_cli.py::test_cli_source_dependency_and_process_setting_boundary`<br>`tests/test_cli.py::test_argv_is_not_retained_or_cached_between_calls`<br>`tests/test_cli.py::test_registered_operational_exceptions_preserve_identity` | Executed source/ownership/nonmutation controls supplemented by independent source review; no new parser API, metadata, telemetry, dynamic code or process-setting mutation. | green |
+| CL17 | `tests/test_cli.py::test_registered_fixture_tables_and_qualified_censuses` | This test checks preregistration/fingerprints only. Actual detection of all 30 families comes from the separate pinned GREEN implementation audit, not this test alone. | green |
+| CL18 | `tests/test_cli.py::test_historical_and_unit19_catalogue_prefixes_are_length_and_hash_guarded`<br>`tests/test_cli.py::test_registered_fixture_tables_and_qualified_censuses` | Historical and Unit 19 length/hash protections, exact table/registry identity, and no closed-test reopening. | green |
+
+Every top-level test in frozen R2 tests/test_cli.py is mapped above; exact source
+line ranges are in the private TEST_CROSSWALK.json. CL17's declared fixture rows
+alone are NOT evidence that mutations were executed or detected.
+
+### Independently observed corpus, bytes and import boundaries
+
+The registry retains 400 qualified identities, including intentional mathematical
+duplicates; no new Unit 19 graphs were added. Its fingerprint remains
+`776ed183b5cd778b9e43ce0da08a809149bf233ac1fd9d928c63159d0dde5566`.
+Independent endpoint references cover all 400; vector/scalar references cover the
+369 declared small graphs. The independent audit executed 800 first CLI solves
+and 800 same-route repeats: 1,600 actual solver calls, one per solve invocation,
+800 repeat byte checks and 400 exact numerical cross-route comparisons. Tied
+routes need not share witness, literal pair or certificate bytes.
+
+The audit additionally exercised 4,006 actual local certificates through CLI verify:
+Baseline 796, L0 616, L1 578, H0 720, H1 758 and H2 538. H2 includes 378 one-edge
+and 160 split selections. These are local reconstructions, including losers, not
+invented strict final H2 winners. The 800 first final plus 4,006 local pairs yield
+4,806 independently evaluated pairs; the independent restricted-export verifier
+also checked those 4,806 emitted pairs. Repeat solves are not another 800 unique
+graphs, and these invocation counts are not additional pytest case counts.
+
+The separate fixed-wire corpus contains 519 cases: 64 acceptances, 455 rejections,
+including 41 fixed literal recipes. Four fresh restricted-export processes at
+limits 4,300/640 and seeds 1/73 exercised those verdicts and 64 help/usage grammar
+cases each. The allowed project files are only the empty exactfrac root, cli.py,
+the empty exactfrac_verify root and check.py; producer implementation files are
+physically absent. Help/usage load only the first two modules; verify may load all
+four. No forbidden import attempts or setting changes were observed. Additional
+fresh huge-solve checks and 12 actual module-entry audit cases passed. Test-local
+instrumentation is not shipped as production code.
+
+### Executed adversarial controls and errors
+
+All 30 preregistered families CLF01–CLF30 were detected. The independent audit
+executed 28 production-source variants with 28 pristine controls, and two
+integration variants. The latter target overstrong cross-route raw equality
+(CLF25) and registry deduplication (CLF26), not production parser branches.
+
+| Families | Tested intervention | Recorded outcome |
+|---|---|---|
+| CLF01–CLF06 | Wrong/default selection, duplicate option, help I/O/extra-token acceptance and end-marker handling. | Detected |
+| CLF07–CLF11 | Duplicate-key loss, -0/float acceptance, edge normalization and full-token integer cutoff. | Detected |
+| CLF12–CLF16 | Second solve, raw rescaling, self-check bypass and stdout/stat/extra-LF leakage. | Detected |
+| CLF17–CLF20 | Verify producer import, input rewriting, swallowed operational error and acquisition order. | Detected |
+| CLF21–CLF24 | Short-write loss/duplication, closing caller streams and missing flush. | Detected |
+| CLF25–CLF26 | Integration-only tied-pair equality and qualified-registry deduplication. | Detected |
+| CLF27–CLF30 | Early stdout access, wrong normal return promise, non-silent verify and process-setting change. | Detected |
+
+Wrong Python argv types raise ValueError; native wrong-arity TypeError remains.
+Normal command/help completion returns exact int 0 and usage rejection exact int 2.
+Only actual strict UTF-8 decode and JSON syntax errors receive the authorized
+InvalidInstance translation. Closed semantic and injected operational exceptions
+otherwise propagate by identity, including ValueError, OSError, MemoryError,
+RecursionError and RuntimeError. Wrong normal-return promises raise RuntimeError,
+not a malformed-data verdict. Injected failures do not demonstrate physical memory
+exhaustion, and interpreter traceback text/failure status is not a fixed wire API.
+
+The writer completes positive short writes with the unwritten suffix, requires
+valid exact-int progress and exact-None flush, and never retries an exception.
+Validation/composition failures precede stdout access. Once emission begins, an
+I/O failure can retain a partial prefix; output is not atomic and is not rolled
+back. Caller process streams remain open/unrebound; no text fallback is provided.
+
+### Frozen identities and preserved archive incident
+
+The R1 tests-only application stopped at live SIM114 before writing any test.
+The first R2 preflight then exposed SIM101. The accepted R2 changes only original
+lines 1890–1893 to the single isinstance type-tuple branch at 1890–1891. Bytes and
+module AST outside that site, and all module constants/embedded reference strings,
+were preserved; AST location attributes were excluded because line numbers move.
+The accepted R2 live Ruff and precise missing-exactfrac.cli RED preceded production.
+Neither this record nor the archive recovery authorizes another source/test edit.
+
+| Bound artifact | SHA-256 |
+|---|---|
+| exactfrac/cli.py (R1) | 0e41e915bb79e88621df84fe335706a40d0a76f196a5f351ce9d9897863644d8 |
+| tests/test_cli.py (R2) | ad1fa1ec0912f0067135176490c8af962d1655057aeaa9618e67e0e4b43e3112 |
+| docs/DESIGN.md | 1a088391ace3fbca767ae83e59b644af1699ac880a26183f744837a44f771289 |
+| docs/TEST_PLAN.md | 9836b2b70de107b4756e95b94620d12a2e8a7c1d5d87f4ce638fbb478d88db63 |
+| docs/ORACLE_CATALOG.md | 523e3025e53fc1676ccd60a8e3e1f1955a8ace545ec34fea0cf4fa5d59dd056b |
+| IMPLEMENTATION_GREEN_AUDIT.json | ccaab83b85b9d0f1866354f992a8362094ce3133bd2cb4ecbcb1ef31448ab917 |
+| IMPLEMENTATION_GREEN_CHECKPOINT.txt | d212c6ff8e917a6c6e5ee490d5e235021c1041d4ac1fa7198484d72c51dc425f |
+| ARCHIVE_RESTORATION_AUDIT.json | b9dbc9cdc6c925954304868fbeff44a02598967ff2f7b279b6feb621007a4161 |
+| ARCHIVE_RESTORATION_CHECKPOINT.txt | c123d354228f0552996f71bbfc1b25ffc6f1625d7f6da08b1cc42628ed3a9040 |
+
+The controlling GREEN directory is
+`unit19-cli-implementation-r1-pro-audited/live-green.vm1clr6n/`.
+The source Git blob is `6a2b0afbae74ffed11715822bfe687559b6744d3`.
+The original 874,328-byte implementation ZIP hashes to
+`9f41b767b0b7578190fb6d90d93b16e29911e47820168da4ea7c9a394ae991dc`.
+After the console-paste incident truncated that ZIP, read-only inspection found
+repository GREEN identities, extracted package and saved evidence intact. Recovery
+restored those exact published archive bytes without extraction or implementation,
+test or audit replay. The zero-byte incident artifact remains TRUNCATED_ORIGINAL.zip
+under `unit19-implementation-archive-restoration-r1/live-restoration.gfy6jq1g/`.
+The recovery is separate evidence, not a rewritten GREEN record or a new implementation.
+
+The historical catalogue prefixes at 3,212,040 and 3,312,641 bytes remain unchanged;
+the Unit 19 catalogue has 3,392,373 bytes. Length-and-hash controls reject truncation
+or prefix alteration while permitting later authorized appendices. This step changes
+no catalogue byte or test guard. Base commit remains
+`25a51a210b117652fecabc0981fbde952675bd3d`, tree
+`6f08edc0952cac7571c83f6293133ebee040e6ab`, four-reference agreement and divergence
+0 0. CLI and frozen test remain untracked/unstaged; CONFORMANCE alone becomes an
+unstaged tracked modification. All other 49 live candidate files are frozen.
+
+### Resource limits and remaining lifecycle
+
+Read-all input/output and decoded JSON incur byte-sized storage and arbitrary
+integer bit costs. Syntax accumulation is driven by bytes/digits, not expansion
+of Q copies or shore enumeration. No universal strong-polynomial byte-runtime,
+constant-memory, unlimited-resource, denial-of-service or regular-file-sandbox
+claim is established. Ordinary host-selected file/symlink/device semantics remain.
+No benchmark timing, RunRecord wire encoding, telemetry output, environment/Git
+metadata discovery, release entry-point packaging, corpus campaign or experiment
+is claimed; the later Unit 21 allocation in DESIGN 4.16.12 remains open.
+
+Phase G appends only docs/CONFORMANCE.md. The saved standalone GREEN audit and
+archive-recovery evidence are authenticated, not rerun/rebased against the changed
+document. Targeted/full regression and repository Ruff must run with this appendix
+present. Phase H still requires exact three-path staging (CONFORMANCE, cli.py,
+test_cli.py), staged-tree isolation, separate implementation commit/postcommit
+checks and separate approved-commit remote closure. Unit 19 is not complete here.
+Private BUILD/LEARNING notes are not inspected or gated by this step.
