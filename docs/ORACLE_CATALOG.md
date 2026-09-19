@@ -35132,3 +35132,562 @@ collected case count must be measured when its new consuming tests actually coll
 | `'U18_REGISTRY'` | `4` | `'223d388a7c2c706f7821b1c4893f102f58ca109fef8914e90cef622cfda18363'` |
 | `'U18_CENSUS'` | `13` | `'c005ae43a4fe577280749344ec7823e4720308e7e0ac77567a978f033eb03181'` |
 | `'U18_COVERAGE'` | `20` | `'5ea882913af0d502cb6aaa2f3b81fba43d74e23f8698881313a862bf490ef5ae'` |
+
+
+## Unit 19 — independent CLI oracle fixtures (R1)
+
+Authority: DESIGN 4.16 and TEST_PLAN 43 (CL1--CL18), completion gate 44.
+These are independently fixed expectations, not claims of executed CLI behavior.
+The closed authority is a43926c7706d8897c2bdddd70fe8d6b51763c2ed.
+Only this appendix is added. No source, test, configuration, or earlier catalogue
+byte is amended. No CLI or consuming CLI test exists at this phase.
+
+### Interpretation and derivation boundaries
+
+Human-readable literal tables below are the committed fixture authority. The
+private JSON mirror is redundant transport and is checked against every table.
+Cells are Python literals; symbols and inherited byte recipes keep their earlier
+meaning. U19 byte recipes additionally allow ('hex', lowercase_hex) for deliberately
+malformed UTF-8 or valid non-ASCII spellings. A repeat run encodes the specified
+ASCII character that many times; no production encoder defines expected bytes.
+
+U19_ARGV gives complete token vectors and independently transcribed normal
+returns/stream outcomes. EMITTED_CERTIFICATE means the already checked emitter
+bytes, not an expected witness guessed from a solver. Grammar acceptances presume
+that selected input acquisition and dependency calls subsequently succeed. Python
+call-type failures are separate from ordinary grammar returns. Expected failure
+tracebacks and interpreter-level numeric failure statuses are not frozen.
+
+U19_INSTANCE_SYNTAX specifies new input encodings, not new mathematical graph
+identities. Valid variants refer to inherited ordered graphs, including exact
+labels, and record their independently decoded canonical transport fingerprint.
+The categories syntax/schema/unsupported correspond respectively to the private
+syntax adapter, closed Instance.from_dict malformed-data rejection, and its active
+condition rejection. These categories do not authorize broad exception catches.
+All operationally injected exceptions keep identity. The syntax cases are derived
+from 4.16.6 and 4.1A, not discovered by asking the proposed CLI for its verdict.
+
+All 400 inherited qualified graph identities and all 519 fixed byte pairs remain
+mandatory. Mathematical duplicate inputs are not deduplicated. The 41 inherited
+literal recipes retain their original field ordering, raw N,D, U and sparse edge
+references. The independent reference recomputes sums and admissibility from bytes;
+exhaustive tiny-shore endpoint values cross-check the finite input registry.
+
+U19_SOLVE_RESULT_SEAMS uses the already fixed literal witnesses as supplied return
+values of a test-local solver seam. In particular zero and losing H2 witnesses are
+not claims about a real final optimum. The exact bytes are inherited by recipe and
+hash. Actual real-solver final output is compared by literal raw preservation to
+its own captured SolveResult and numerically against independent graph references.
+Different legal witnesses/raw pairs across routes under ties remain permitted.
+
+Stream plans constrain ordered events, not an additional import-order rule beyond
+complete grammar validation first. File acquisition precedes checker validation:
+an unreadable second file wins over an already read but malformed first file.
+Write failures can leave a prefix; no atomic stdout or rollback claim is made.
+Descriptors of bad return values/exceptions are prospective test-local seam
+injections, not production execution performed by this catalogue audit.
+
+Independent oracle checks and closed-dependency preflight run before any CLI.
+Every future CLI fault is preregistered, not counted as a killed production mutant.
+No private reference is a future production parser or a replacement checker.
+
+### Fixture table: U19_TEXT
+
+| id | ASCII byte recipe | bytes | SHA256 |
+| --- | --- | --- | --- |
+| `'ROOT_HELP'` | `('usage: python -m exactfrac.cli solve [--solver Standard\x7cAccelerated] INSTANCE\nusage: python -m exactfrac.cli verify INSTANCE CERTIFICATE\nINSTANCE or CERTIFICATE may be - for stdin; verify permits at most one -.\n',)` | `211` | `'fc883957d15481338e278eb644bd79681282f3748b093e83b491a7e47ff57b80'` |
+| `'SOLVE_HELP'` | `('usage: python -m exactfrac.cli solve [--solver Standard\x7cAccelerated] INSTANCE\nWrites one exact certificate to stdout; default solver: Accelerated.\n',)` | `147` | `'4359f50547b7907de46c2cd06089f735833544c62f5e8d95486031b46bcb3102'` |
+| `'VERIFY_HELP'` | `('usage: python -m exactfrac.cli verify INSTANCE CERTIFICATE\nSuccess is silent; verifies admissibility and raw attainment, not optimality.\n',)` | `137` | `'fe1f743a7f746d0904dcae6e91bd895aa2206fb4c46b08de9a3b7b0fd85e0c98'` |
+| `'USAGE_ERROR'` | `('exactfrac: invalid command line; use --help\n',)` | `44` | `'0e2c34910b2790c15bbe5de7550e153729d44b3da8070f6811158c1da3c9f711'` |
+| `'SILENT'` | `('',)` | `0` | `'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'` |
+
+### Fixture table: U19_ARGV
+
+| id | tokens | command or text | selection | literal operands | stdout recipe | stderr recipe | normal return | basis |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'ROOT--h'` | `('-h',)` | `'ROOT_HELP'` | `None` | `()` | `'ROOT_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'SOLVE--h'` | `('solve', '-h')` | `'SOLVE_HELP'` | `None` | `()` | `'SOLVE_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'VERIFY--h'` | `('verify', '-h')` | `'VERIFY_HELP'` | `None` | `()` | `'VERIFY_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'ROOT---help'` | `('--help',)` | `'ROOT_HELP'` | `None` | `()` | `'ROOT_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'SOLVE---help'` | `('solve', '--help')` | `'SOLVE_HELP'` | `None` | `()` | `'SOLVE_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'VERIFY---help'` | `('verify', '--help')` | `'VERIFY_HELP'` | `None` | `()` | `'VERIFY_HELP'` | `'SILENT'` | `0` | `'CL3'` |
+| `'DEFAULT'` | `('solve', 'instance.json')` | `'solve'` | `'Accelerated'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'STD-PRE'` | `('solve', '--solver', 'Standard', 'instance.json')` | `'solve'` | `'Standard'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'STD-POST'` | `('solve', 'instance.json', '--solver', 'Standard')` | `'solve'` | `'Standard'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'ACC-PRE'` | `('solve', '--solver', 'Accelerated', 'instance.json')` | `'solve'` | `'Accelerated'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'ACC-POST'` | `('solve', 'instance.json', '--solver', 'Accelerated')` | `'solve'` | `'Accelerated'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'STDIN'` | `('solve', '-')` | `'solve'` | `'Accelerated'` | `('-',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'STD-STDIN'` | `('solve', '-', '--solver', 'Standard')` | `'solve'` | `'Standard'` | `('-',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'STD-SENTINEL'` | `('solve', '--solver', 'Standard', '--', '-instance')` | `'solve'` | `'Standard'` | `('-instance',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'SENTINEL-STDIN'` | `('solve', '--', '-')` | `'solve'` | `'Accelerated'` | `('-',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LITERAL-DASH'` | `('solve', './-')` | `'solve'` | `'Accelerated'` | `('./-',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LITERAL-SOLVER'` | `('solve', '--', '--solver')` | `'solve'` | `'Accelerated'` | `('--solver',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LITERAL-HELP'` | `('solve', '--', '--help')` | `'solve'` | `'Accelerated'` | `('--help',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LITERAL-SHORT-HELP'` | `('solve', '--', '-h')` | `'solve'` | `'Accelerated'` | `('-h',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LITERAL-SECOND-SENTINEL'` | `('solve', '--', '--')` | `'solve'` | `'Accelerated'` | `('--',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'TRAILING-SENTINEL'` | `('solve', 'instance.json', '--')` | `'solve'` | `'Accelerated'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'OPTION-THEN-END'` | `('solve', 'instance.json', '--solver', 'Standard', '--')` | `'solve'` | `'Standard'` | `('instance.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'SPACE-PATH'` | `('solve', ' input name.json ')` | `'solve'` | `'Accelerated'` | `(' input name.json ',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'TILDE-LITERAL'` | `('solve', '~/input.json')` | `'solve'` | `'Accelerated'` | `('~/input.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'ENV-LITERAL'` | `('solve', '$HOME/input.json')` | `'solve'` | `'Accelerated'` | `('$HOME/input.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'GLOB-LITERAL'` | `('solve', '*.json')` | `'solve'` | `'Accelerated'` | `('*.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'AT-LITERAL'` | `('solve', '@input.json')` | `'solve'` | `'Accelerated'` | `('@input.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'UNICODE-PATH'` | `('solve', 'épreuve.json')` | `'solve'` | `'Accelerated'` | `('épreuve.json',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'LINEFEED-PATH'` | `('solve', 'input\nname')` | `'solve'` | `'Accelerated'` | `('input\nname',)` | `'EMITTED_CERTIFICATE'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-FILES'` | `('verify', 'i', 'c')` | `'verify'` | `None` | `('i', 'c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-STDIN-I'` | `('verify', '-', 'c')` | `'verify'` | `None` | `('-', 'c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-STDIN-C'` | `('verify', 'i', '-')` | `'verify'` | `None` | `('i', '-')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-LITERAL-DASHES'` | `('verify', './-', './-')` | `'verify'` | `None` | `('./-', './-')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-END-PRE'` | `('verify', '--', '-i', '-c')` | `'verify'` | `None` | `('-i', '-c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-END-MIDDLE'` | `('verify', 'i', '--', '-c')` | `'verify'` | `None` | `('i', '-c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-END-LAST'` | `('verify', 'i', 'c', '--')` | `'verify'` | `None` | `('i', 'c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-END-LITERAL'` | `('verify', '--', '--', '-h')` | `'verify'` | `None` | `('--', '-h')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-HELP-FILENAME'` | `('verify', '--', '--help', 'c')` | `'verify'` | `None` | `('--help', 'c')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-STDIN-END'` | `('verify', '--', 'i', '-')` | `'verify'` | `None` | `('i', '-')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'VERIFY-SAME-FILE'` | `('verify', 'same', 'same')` | `'verify'` | `None` | `('same', 'same')` | `'SILENT'` | `'SILENT'` | `0` | `'CL2'` |
+| `'EMPTY'` | `()` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-DASH'` | `('-',)` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-END'` | `('--',)` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-END-CMD'` | `('--', 'solve', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'UNKNOWN'` | `('run', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVE-CASE'` | `('Solve', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-CASE'` | `('VERIFY', 'i', 'c')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'CMD-SPACES'` | `(' solve', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVE-MISSING'` | `('solve',)` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVE-EXTRA'` | `('solve', 'i', 'j')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-MISSING'` | `('verify',)` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-ONE'` | `('verify', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-EXTRA'` | `('verify', 'i', 'c', 'x')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-TWO-STDIN'` | `('verify', '-', '-')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-TWO-STDIN-END'` | `('verify', '--', '-', '-')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-MISSING-VALUE'` | `('solve', '--solver')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-MISSING-INPUT'` | `('solve', '--solver', 'Standard')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-POST-MISSING'` | `('solve', 'i', '--solver')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-EQUALS'` | `('solve', '--solver=Standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-ABBREV'` | `('solve', '--sol', 'Standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-SHORT'` | `('solve', '-s', 'Standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OPTION-CASE'` | `('solve', '--Solver', 'Standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-LOWER'` | `('solve', '--solver', 'standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-UPPER'` | `('solve', '--solver', 'STANDARD', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-ACCLOWER'` | `('solve', '--solver', 'accelerated', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-SPACES'` | `('solve', '--solver', ' Standard', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-END-AS-VALUE'` | `('solve', '--solver', '--', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-HELP-AS-VALUE'` | `('solve', '--solver', '--help', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVER-DASH-AS-VALUE'` | `('solve', '--solver', '-', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'DUP-EQUAL'` | `('solve', '--solver', 'Standard', 'i', '--solver', 'Standard')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'DUP-DIFFERENT'` | `('solve', '--solver', 'Standard', '--solver', 'Accelerated', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'DUP-POST'` | `('solve', 'i', '--solver', 'Accelerated', '--solver', 'Accelerated')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-SOLVER'` | `('verify', '--solver', 'Standard', 'i', 'c')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-OPTION-POST'` | `('verify', 'i', 'c', '--solver', 'Standard')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'UNKNOWN-FLAG'` | `('solve', '--telemetry', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'OUTPUT-FLAG'` | `('solve', 'i', '--output', 'out')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SEED-FLAG'` | `('solve', '--seed', '1', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'NO-INPUT-AFTER-END'` | `('solve', '--')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'END-NO-OPTION'` | `('solve', '--', 'i', '--solver', 'Standard')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-END-EXTRA'` | `('verify', '--', 'i', 'c', '--')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'LEADING-HYPHEN'` | `('solve', '-i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-HYPHEN'` | `('verify', 'i', '-c')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-HELP-EXTRA'` | `('--help', 'x')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-SHORTHELP-EXTRA'` | `('-h', 'solve')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVE-HELP-EXTRA'` | `('solve', '--help', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'SOLVE-INPUT-HELP'` | `('solve', 'i', '--help')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-HELP-EXTRA'` | `('verify', '--help', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'VERIFY-INPUT-HELP'` | `('verify', 'i', '-h')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'HELP-AFTER-SOLVER'` | `('solve', '--solver', 'Standard', '--help')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'DOUBLE-HELP'` | `('solve', '-h', '--help')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'ROOT-NUL'` | `('sol\x00ve', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'EMPTY-CMD'` | `('', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'EMPTY-OPERAND'` | `('solve', '')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'NUL-OPERAND'` | `('verify', 'i', 'c\x00')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'EMPTY-SOLVER'` | `('solve', '--solver', '', 'i')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'EMPTY-AFTER-END'` | `('solve', '--', '')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'NUL-AFTER-END'` | `('solve', '--', 'x\x00y')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+| `'EMPTY-VERIFY'` | `('verify', '', 'c')` | `'usage'` | `None` | `()` | `'SILENT'` | `'USAGE_ERROR'` | `2` | `'CL2/CL3: complete grammar rejection before dependency import/input I/O'` |
+
+### Fixture table: U19_PYTHON_CALL
+
+| id | construction descriptor | expected | constraint |
+| --- | --- | --- | --- |
+| `'TUPLE'` | `('tuple', ('solve', 'i'))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'BYTES'` | `('bytes', 'solve i')` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'STR'` | `('str', 'solve i')` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'FALSE'` | `('bool', False)` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'INT'` | `('int', 0)` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'DICT'` | `('dict',)` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'LIST-SUBCLASS'` | `('list-subclass', ('solve', 'i'))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'ITERATOR'` | `('iterator', ('solve', 'i'))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'ENTRY-STR-SUBCLASS'` | `('list', ('str-subclass', 'solve'))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'ENTRY-BYTES'` | `('list', ('bytes', 'solve'))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'ENTRY-BOOL'` | `('list', ('bool', True))` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'ENTRY-NONE'` | `('list', None)` | `'ValueError'` | `'exact built-in; before command imports or stream access; argument unchanged'` |
+| `'NONE-SNAPSHOT'` | `('None', 'sys.argv=prog,--help')` | `'return 0'` | `'root help; snapshot without mutation'` |
+| `'KEYWORD'` | `('keyword argv', ['--help'])` | `'return 0'` | `'same as positional'` |
+| `'ARITY'` | `('two positional arguments',)` | `'TypeError'` | `'native wrong arity'` |
+| `'UNKNOWN-KW'` | `('unknown keyword',)` | `'TypeError'` | `'native binding error'` |
+
+### Fixture table: U19_INSTANCE_SYNTAX
+
+| id | existing graph family | byte recipe | bytes | SHA256 | expected category | boundary | decoded canonical transport SHA256 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `'CANONICAL'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `67` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` | `'valid'` | `'same ordered graph'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'WHITESPACE'` | `'U18_INPUTS/PAIR32'` | `(' \t\r\n{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}\n \r\t',)` | `75` | `'b4d620c43610cdfecf17a215e7dce2d67bb443f2e22697647e06b611da1b2ee5'` | `'valid'` | `'JSON whitespace permitted'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'KEY-ORDER'` | `'U18_INPUTS/PAIR32'` | `('{"f":[3,2],"edges":[[0,1,3]],"n":2,"format":"exactfrac-instance/1"}',)` | `67` | `'fa794c367e6db1a68880db47ab954aa2da3f6134e8f8775d983108a7ebc8f8a4'` | `'valid'` | `'key order immaterial'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'PRETTY'` | `'U18_INPUTS/PAIR32'` | `('{\n  "format": "exactfrac-instance/1",\n  "n": 2,\n  "edges": [\n    [\n      0,\n      1,\n      3\n    ]\n  ],\n  "f": [\n    3,\n    2\n  ]\n}',)` | `131` | `'b822f4d1f075aa5e2d4de5c8f6a0f5a7094be364dfd57ea097b375ab95d00f00'` | `'valid'` | `'ordinary JSON whitespace'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'ESCAPED-FORMAT-KEY'` | `'U18_INPUTS/PAIR32'` | `('{"for\\u006dat":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `72` | `'600131a3e78434aa495b95b3a1e9cb47f24690ef66ac50288bbff887a3e857cf'` | `'valid'` | `'decoded key unchanged'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'ESCAPED-TAG'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance\\/1","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `68` | `'9e282f8504112591aca0b49fdcceb5f814cda1127cf989bcd46bdf27fd5bb43f'` | `'valid'` | `'tag slash escape allowed for instance'` | `'7cf8bbcbba368d3facec8f1212400dc957100a02d28bcc8eb34c15d07c24eef0'` |
+| `'UTF8-RAW'` | `'U17_INPUTS/UTF8'` | `(('hex', '7b22666f726d6174223a226578616374667261632d696e7374616e63652f31222c226e223a332c226564676573223a5b5b302c312c315d2c5b302c322c315d2c5b312c322c315d5d2c2266223a5b312c312c315d2c226c6162656c73223a5b22c3a95c6e222c372c2237225d7d'),)` | `109` | `'ad34ec1907faadc9df3ed5f40cfab22ad16d08a274ad28aa537f783bb56f9dff'` | `'valid'` | `'inherited graph/labels; no new registry identity'` | `'077878d8cc9708ef05771aa5294660d024ac00f5342b4639b4d3939614d3f513'` |
+| `'ESCAPED-SURROGATES'` | `'U18_INPUTS/SURROGATES'` | `('{"format":"exactfrac-instance/1","n":3,"edges":[[0,1,1],[0,2,1],[1,2,1]],"f":[1,1,1],"labels":["\\ud800","\\udc00","\\ud83d\\ude42"]}',)` | `129` | `'db6d547865fa469725a7f6da3572f1d0e261ce8906c784a8a3a0f53b4540c2c0'` | `'valid'` | `'inherited graph/labels; no new registry identity'` | `'db6d547865fa469725a7f6da3572f1d0e261ce8906c784a8a3a0f53b4540c2c0'` |
+| `'HUGE-SIGNED-LABEL'` | `'U17_INPUTS/BIG-LABEL'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,2]],"f":[1,1],"labels":[1', ('repeat', '0', 4800), ',-1', ('repeat', '0', 4800), ']}')` | `9683` | `'026251701dcc23399739ccb4c6921cd65a1f00e97063e9e7760ebaf4f796a5b3'` | `'valid'` | `'inherited graph/labels; no new registry identity'` | `'026251701dcc23399739ccb4c6921cd65a1f00e97063e9e7760ebaf4f796a5b3'` |
+| `'HUGE-MULTIPLICITY'` | `'U17_INPUTS/BIG-N'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,1', ('repeat', '0', 4800), ']],"f":[1,2]}')` | `4867` | `'6e15b139d1c8edb13f5b455ca543e53c114cb043c6d0d867910c007016ae41f6'` | `'valid'` | `'inherited graph/labels; no new registry identity'` | `'6e15b139d1c8edb13f5b455ca543e53c114cb043c6d0d867910c007016ae41f6'` |
+| `'HUGE-CAPACITY'` | `'U17_INPUTS/BIG-COUNTS'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,1', ('repeat', '0', 4800), ']],"f":[1', ('repeat', '0', 4800), ',1', ('repeat', '0', 4800), ']}')` | `14467` | `'ecd817a61d5620c82b24e910078b88cd67d3458cad6b92ce2c33c10a38e5a966'` | `'valid'` | `'inherited graph/labels; no new registry identity'` | `'ecd817a61d5620c82b24e910078b88cd67d3458cad6b92ce2c33c10a38e5a966'` |
+| `'BOM'` | `'U18_INPUTS/PAIR32'` | `(('hex', 'efbbbf7b22666f726d6174223a226578616374667261632d696e7374616e63652f31222c226e223a322c226564676573223a5b5b302c312c335d5d2c2266223a5b332c325d7d'),)` | `70` | `'26c74c3b9a15bbb026cf3b8aa57df0428e038b140b32d1a6b0490325f6bc2e1d'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'UTF8-BAD'` | `'U18_INPUTS/PAIR32'` | `(('hex', 'ff7b22666f726d6174223a226578616374667261632d696e7374616e63652f31222c226e223a322c226564676573223a5b5b302c312c335d5d2c2266223a5b332c325d7d'),)` | `68` | `'49de0e903d0d449d1c347f77b9e37a7390070661d636a50080954aa49b351060'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'UTF16'` | `'U18_INPUTS/PAIR32'` | `(('hex', 'fffe7b00220066006f0072006d006100740022003a0022006500780061006300740066007200610063002d0069006e007300740061006e00630065002f00310022002c0022006e0022003a0032002c0022006500640067006500730022003a005b005b0030002c0031002c0033005d005d002c002200660022003a005b0033002c0032005d007d00'),)` | `136` | `'bbd0b07f2586ac7652c382bd2a5c0e30f4f3e476ec0f41336c29218dd84b44fc'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'TRAILING-DOC'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}{}',)` | `69` | `'62beb8fd6dc19ab5b8212fd6fc9070b4fee8aa0c5a50c07734e1a74e34556dbc'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'EMPTY-BYTES'` | `'U18_INPUTS/PAIR32'` | `('',)` | `0` | `'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'TRUNCATED'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]',)` | `66` | `'fd93a8a1c3489a16da1c69c14749687f2156b4b72d2062e00e03fc6505f9249e'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'DUP-N'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `73` | `'7a54057fc2add39207e9fcbde1e8fc9dc0e2c29bb9a5869b6cc65e7745c82f1c'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'DUP-ESCAPED-N'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"\\u006e":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `78` | `'283c204a33d7c994fe4727ac398b8dfbc5c97af2c435647c90b74ab151c4d080'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'N-FLOAT'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2.0,"edges":[[0,1,3]],"f":[3,2]}',)` | `69` | `'653cd770cf84328c539082a1b0b7c7aa2a90f5936da5fc2a73c03a5a015d7e79'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'Q-EXP'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3e0]],"f":[3,2]}',)` | `69` | `'e473e1c6155ba5f439fedef62e7c2217daf5f04d05a9932662eb2d11151e061f'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NEGATIVE-ZERO'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[-0,1,3]],"f":[3,2]}',)` | `68` | `'e700a1e6580c3ed360df233ea04e47820f47d187554db9412dfa41e5ad41cde2'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'LEADING-PLUS'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[+0,1,3]],"f":[3,2]}',)` | `68` | `'f571058797b9156b8f1ad8b35ded3b3cad42878913f09e4144e170b46e794d71'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'LEADING-ZERO'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[00,1,3]],"f":[3,2]}',)` | `68` | `'09061141b211dd630e22160c89ca0cec969f4dc85ca0fa31170bde14958588f3'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NONFINITE-NAN'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,NaN]],"f":[3,2]}',)` | `69` | `'d3855f1e2254a85fcc801ff7a86a13e1bf73b54c0d7a440257324267bf0430f3'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NONFINITE-INF'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,Infinity]],"f":[3,2]}',)` | `74` | `'7a5600e9c8b82d6ca39069388c316cd408c3da18dac263394618176b0c78946a'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NONFINITE-NEGINF'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,-Infinity]],"f":[3,2]}',)` | `75` | `'58ba00e66a469c63113cf02dc1fc0c6be7d4a5babfcfe9858667fdfc1a96de69'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NONJSON-WHITESPACE'` | `'U18_INPUTS/PAIR32'` | `('\x0b{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `68` | `'7fa95b0782400b118ca008df91b4f6d12488e8c7fbec13d3ee137201e1d16c4b'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'COMMENT'` | `'U18_INPUTS/PAIR32'` | `('// comment\n{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `78` | `'86937c0284f58a5e4a6ff62790c8dd67828eacf3a3869368522cb7711d33fb5f'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'TRAILING-COMMA'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],}',)` | `68` | `'c51d027568d992fdb11a7fee40a8966a4e99a7daf027896a35c6412ce5530221'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'UNESCAPED-CONTROL'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":["\x01","x"]}',)` | `86` | `'0bc859667965bdf257cf2903604e179d5caf85b2745e81e9a2fcb2b7636a75ea'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'BAD-ESCAPE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":["\\x00","x"]}',)` | `89` | `'1fd3fd555af1ce7e51703d38ad7c56799782a00e0b38bcbf7f67a113eb197f63'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'LABEL-MINUSZERO'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":[-0,1]}',)` | `83` | `'6f48ee2f0e88c586decdee5906438f72141f0f3dca7ff5d74ac8b9510040ecb8'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'NESTED-DUPLICATE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"unknown":{"x":1,"\\u0078":1}}',)` | `96` | `'194e2c5527180e5c630054001055d54a132710c20400945d5c89a334f180ed76'` | `'syntax'` | `'InvalidInstance; no from_dict/solve/self-check or stdout'` | `None` |
+| `'TOP-NULL'` | `'U18_INPUTS/PAIR32'` | `('null',)` | `4` | `'74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'TOP-ARRAY'` | `'U18_INPUTS/PAIR32'` | `('[]',)` | `2` | `'4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'MISSING-F'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]]}',)` | `57` | `'d5332a9e561e5c2dfbc9063fbeae27ad04d1dec8d37190c7942bfd1e29176524'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'EXTRA-KEY'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"digest":"x"}',)` | `80` | `'30fc7c339406f217dd4117895a400bb0211367d4a1bc87cd8907b90b614fff5f'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'WRONG-FORMAT'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/2","n":2,"edges":[[0,1,3]],"f":[3,2]}',)` | `67` | `'a8f232485f83531392e8baf2b8b2c452c4e001036214fe3ac749ad82594df2af'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'N-BOOL'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":true,"edges":[[0,1,3]],"f":[3,2]}',)` | `70` | `'945d9050d8915044476b32cf061d34e590f86c8b83a2ce3af39835565dc14c96'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'Q-BOOL'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,true]],"f":[3,2]}',)` | `70` | `'657d24c1e8e48983a83c49fc7a6388dce0e87262c72dd332185b09bae5973e49'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'Q-ZERO'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,0]],"f":[3,2]}',)` | `67` | `'c715054d4add81cac1c0b003b80b71a667e4ee179c955bed2e049837e1b6444a'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'REVERSED-EDGE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[1,0,3]],"f":[3,2]}',)` | `67` | `'daa94ae42531706ac379fb6ef78e039af1d63f8541485f4b82290ae151bfc3a8'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'DUPLICATE-EDGE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,1],[0,1,2]],"f":[3,2]}',)` | `75` | `'a28cc92e0825c49c8b37da8a1e173cac848412322a1d2f9e3f20f521bb61726f'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'LOOP'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,0,3]],"f":[3,2]}',)` | `67` | `'7ac584d290a19a636e984c4c47c7c6946ba8395e79b413d969e1c34e5bd4039d'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'LABEL-DUP'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":["x","x"]}',)` | `86` | `'6ba10c00de1b9584a4e5476d67500279da8ac97489411400228a095edbaeaa7d'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'LABEL-BOOL'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":[true,1]}',)` | `85` | `'2e74703cf41915473c60c10561ff1f57ee205fc6eb65cad35a22789cf51515fe'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'F-LENGTH'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3]}',)` | `65` | `'f63bd0a7f0858c1a503d259ad6ef86cabe2df62a25232a8857f034072b2932a8'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'LABEL-TYPE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[3,2],"labels":[null,"x"]}',)` | `87` | `'50bbe22a7a1b27da1766c156241ae301b1df88263511b6218538e704d7d83cb9'` | `'schema'` | `'pass decoded object once to from_dict; InvalidInstance; no normalization'` | `None` |
+| `'INACTIVE'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,3]],"f":[4,2]}',)` | `67` | `'0f3762a20ebfdadbba1bfdf1aa7e5c5b96306e75d1ca764ab5c8186e04268f98'` | `'unsupported'` | `'from_dict raises UnsupportedInstance; preserve exception object'` | `None` |
+| `'ISOLATED'` | `'U18_INPUTS/PAIR32'` | `('{"format":"exactfrac-instance/1","n":3,"edges":[[0,1,3]],"f":[3,2,1]}',)` | `69` | `'6531adbf6a80b95dc9a5d51e289669909b6cd1d0cf5e5dd9e0566a98e6b40916'` | `'unsupported'` | `'from_dict raises UnsupportedInstance; preserve exception object'` | `None` |
+| `'UNSORTED-EDGES'` | `'U18_INPUTS/TRI-MIX'` | `('{"format":"exactfrac-instance/1","n":3,"edges":[[1,2,2],[0,2,1],[0,1,2]],"f":[1,3,2],"labels":[1,"1","\\u00e9"]}',)` | `111` | `'ddce342519ed879c0862b8a3d7ba4da56c3137a4ee895fd92ef66cb53add4c17'` | `'schema'` | `'from_dict rejects order; never from_records'` | `None` |
+
+### Fixture table: U19_SOLVE_RESULT_SEAMS
+
+| literal id | graph id | N | D | U | sparse y | stdout bytes | stdout SHA256 | scope |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `'U17/EMPTY'` | `'U15_INPUTS/C000'` | `0` | `1` | `None` | `None` | `62` | `'96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/ZERO'` | `'U15_INPUTS/N-ODD-UPGRADE-ZERO'` | `0` | `2` | `(0,)` | `()` | `78` | `'397e0f7cf159c003855e8743909f8b89ac4d7fcdbfeec84b0f659354bb0a1c78'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BASE-EVEN'` | `'U15_INPUTS/N-EVEN-ALL'` | `6` | `4` | `(0,)` | `((0, 3),)` | `83` | `'01aa612aa23b5f3afdd66a83b5d2797f4b8c0dde3137d375c6c0f85d7c8d3184'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BASE-ODD'` | `'U15_INPUTS/N-ODD-ALL'` | `8` | `6` | `(0,)` | `((0, 4),)` | `83` | `'147fa2d1e2a07de2d29243e50bfecdb7d92b666bc6b823b1ab7521af734ee865'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BASE-UNIT'` | `'U15_INPUTS/N-H2-ONE-EDGE'` | `4` | `2` | `(0,)` | `((0, 2),)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BASE-MATCH'` | `'U15_INPUTS/N-MATCH2'` | `2` | `2` | `(0, 2)` | `((1, 1),)` | `85` | `'96090bb08237c7d05fef1d49a05aa757b28a58df262dc24d17466ceb183301a8'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/L0'` | `'U15_INPUTS/N-L0-WINNER'` | `4` | `2` | `(1,)` | `((0, 2),)` | `83` | `'3b96e87b8156904ea18e821a717f34b116ab9af6cd3eae64a09d6595b5d52321'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/L1'` | `'U15_INPUTS/N-L1-WINNER'` | `8` | `4` | `(1,)` | `((0, 4),)` | `83` | `'b706645fb9b3848a3bd626cbe9b24f2f57e22f49a1d6a65df3442a4c1b8b8c15'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/H0'` | `'U15_INPUTS/N-H0-WINNER'` | `8` | `2` | `(0, 1)` | `()` | `80` | `'0be1968964874e62868b5077071edecc18e6bb62c3afc3fa08d65c46276d7541'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/H1'` | `'U15_INPUTS/N-H1-WINNER'` | `10` | `2` | `(0, 1)` | `((1, 1),)` | `86` | `'ba7661b385dc0509f49f82796dc2d38e4b2f85664bc0cb3a5a76749689090999'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/H2-ONE'` | `'U15_INPUTS/C002'` | `4` | `2` | `(0,)` | `((0, 2),)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/H2-SPLIT'` | `'U15_INPUTS/N-H2-LATER-SPLIT'` | `4` | `2` | `(3,)` | `((0, 1), (1, 1))` | `89` | `'5f997470c8ba272af3b8b368242b70d989d066e1293b60baf20470b0d84cea2e'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/H2-LOSER'` | `'U15_INPUTS/N-H2-SPLIT-LOSER'` | `4` | `2` | `(0,)` | `((0, 1), (1, 1))` | `89` | `'2775764e092165beb2d87e0e9dab0fa5ac8b8b5ee6c52ed5a46b93085f5a64bd'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/TIE-SMALL'` | `'U15_INPUTS/C020'` | `4` | `2` | `(0,)` | `((0, 2),)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/TIE-LARGE'` | `'U15_INPUTS/C020'` | `8` | `4` | `(0, 2)` | `((1, 2),)` | `85` | `'c395be391b40de517e4593a038ef1c01dc3c7c902ab7ce3ef6db7f92c420e02d'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/SPARSE-GAP'` | `'U17_INPUTS/GAP'` | `4` | `4` | `(2, 5)` | `((2, 1), (4, 1))` | `91` | `'dc73ad8ad845f04ddd347fbd3b90bd9659bed00e8b83f791b17e98654eb2c2ef'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BIG-N'` | `'U17_INPUTS/BIG-N'` | `('sym', 'twoT')` | `2` | `(0, 1)` | `()` | `4880` | `'bcb57652228e47bde549706f5fd3ac62b9bcd538ab2b17e07984039f29748fb5'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BIG-COUNTS'` | `'U17_INPUTS/BIG-COUNTS'` | `('sym', 'twoTm2')` | `('sym', 'twoTm2')` | `(0,)` | `((0, ('sym', 'Tm1')),)` | `14482` | `'62cfebb06f2603283409d8189ea9af42f78c7efe7296be69be20d9998953a516'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BIG-ZERO'` | `'U17_INPUTS/BIG-ZERO'` | `0` | `('sym', 'T')` | `(0,)` | `()` | `4878` | `'f93cd513170b3908c865cd2a1e712d10024b41c513cf7e3143edc5af4e3f1026'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U17/BIG-LABEL'` | `'U17_INPUTS/BIG-LABEL'` | `4` | `2` | `(0,)` | `((0, 2),)` | `83` | `'167352af8a9884e268776bf88e45161803a04ce9a5f7f975b4b1113fc9cef820'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U18/PAIR-FULL'` | `'U18_INPUTS/PAIR32'` | `6` | `4` | `(0, 1)` | `()` | `80` | `'2eb1d97be541c827c853f7ed30eb64797bdab751316d06ad3227ffe7994448d4'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+| `'U18/PAIR-PARTIAL'` | `'U18_INPUTS/PAIR32'` | `4` | `4` | `(0,)` | `((0, 2),)` | `83` | `'123a9074ef7dfb75b529d1c94a6f0c0fac7cd6ad5a5248a77543a6bc9a19f755'` | `'both selections; supplied SolveResult seam; not a claim of actual final selection'` |
+
+### Fixture table: U19_STREAMS
+
+| id | command | required ordered events | output/error | ownership |
+| --- | --- | --- | --- | --- |
+| `'SOLVE-FILE'` | `('solve', 'i')` | `('open i rb', 'read i', 'close i', 'syntax', 'from_dict', 'solve', 'build', 'serialize', 'verify original i/emitted c', 'stdout.buffer', 'write', 'flush', 'return 0')` | `'stdout=emitted bytes'` | `'no stderr/input mutation'` |
+| `'SOLVE-STDIN'` | `('solve', '-')` | `('stdin.buffer', 'read stdin', 'syntax', 'from_dict', 'solve', 'build', 'serialize', 'verify original i/emitted c', 'stdout.buffer', 'write', 'flush', 'return 0')` | `'stdout=emitted bytes'` | `'never close stdin'` |
+| `'VERIFY-FILES'` | `('verify', 'i', 'c')` | `('open/read/close i rb', 'open/read/close c rb', 'verify i/c', 'return 0')` | `'no stdout or stderr access'` | `'acquisition precedes validation'` |
+| `'VERIFY-STDIN-I'` | `('verify', '-', 'c')` | `('stdin.buffer/read', 'open/read/close c rb', 'verify i/c', 'return 0')` | `'silent'` | `'stdin not closed'` |
+| `'VERIFY-STDIN-C'` | `('verify', 'i', '-')` | `('open/read/close i rb', 'stdin.buffer/read', 'verify i/c', 'return 0')` | `'silent'` | `'stdin not closed'` |
+| `'INVALID-ARGS'` | `('verify', '-', '-')` | `('grammar rejection', 'stderr.buffer', 'write usage', 'flush', 'return 2')` | `'stdout untouched'` | `'no command dependencies/input access'` |
+| `'BAD-I-MISSING-C'` | `('verify', 'bad-i', 'missing-c')` | `('read/close bad-i', 'open missing-c raises OSError')` | `'same exception identity'` | `'checker not called; no output'` |
+| `'MISSING-I'` | `('verify', 'missing-i', 'c')` | `('open missing-i raises OSError',)` | `'same exception identity'` | `'certificate acquisition/checker not reached'` |
+| `'BAD-I-READ-C'` | `('verify', 'bad-i', 'c')` | `('read/close bad-i', 'read/close c', 'checker rejects instance')` | `'same checker exception'` | `'acquisition distinct from checker instance-first validation'` |
+| `'IMPORT-ONLY'` | `('import exactfrac.cli',)` | `()` | `'no command or I/O'` | `'no command dependency import'` |
+
+### Fixture table: U19_PROMISE_FAULTS
+
+| id | seam | bad normal return | exact error | constraint |
+| --- | --- | --- | --- | --- |
+| `'P01'` | `'reader'` | `'str'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P02'` | `'reader'` | `'bytearray'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P03'` | `'reader'` | `'bytes-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P04'` | `'reader'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P05'` | `'from_dict'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P06'` | `'from_dict'` | `'dict'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P07'` | `'from_dict'` | `'Instance-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P08'` | `'solve outer'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P09'` | `'solve outer'` | `'list pair'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P10'` | `'solve outer'` | `'tuple subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P11'` | `'solve outer'` | `'tuple length one'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P12'` | `'solve outer'` | `'tuple length three'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P13'` | `'solve result'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P14'` | `'solve result'` | `'plain object'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P15'` | `'solve result'` | `'SolveResult-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P16'` | `'solve stats'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P17'` | `'solve stats'` | `'plain object'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P18'` | `'solve stats'` | `'SolveStats-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P19'` | `'stats.branch_solver'` | `'other legal selection'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P20'` | `'build'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P21'` | `'build'` | `'list'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P22'` | `'build'` | `'dict-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P23'` | `'serialize'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P24'` | `'serialize'` | `'str'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P25'` | `'serialize'` | `'bytearray'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P26'` | `'serialize'` | `'bytes-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P27'` | `'verify normal return'` | `'False'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P28'` | `'verify normal return'` | `'0'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P29'` | `'verify normal return'` | `'dict'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P30'` | `'verify normal return'` | `'plain object'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P31'` | `'write return'` | `'None'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P32'` | `'write return'` | `'False'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P33'` | `'write return'` | `'True'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P34'` | `'write return'` | `'zero'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P35'` | `'write return'` | `'negative'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P36'` | `'write return'` | `'remaining plus one'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P37'` | `'write return'` | `'int-subclass'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P38'` | `'flush return'` | `'False'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P39'` | `'flush return'` | `'0'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+| `'P40'` | `'flush return'` | `'plain object'` | `'RuntimeError'` | `'no conversion, fallback, retry or later-stage access'` |
+
+### Fixture table: U19_EXCEPTIONS
+
+| id | seam | exception class | expected | boundary |
+| --- | --- | --- | --- | --- |
+| `'E001'` | `'file open'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E002'` | `'file open'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E003'` | `'file open'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E004'` | `'file open'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E005'` | `'file open'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E006'` | `'file read'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E007'` | `'file read'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E008'` | `'file read'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E009'` | `'file read'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E010'` | `'file read'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E011'` | `'file close'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E012'` | `'file close'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E013'` | `'file close'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E014'` | `'file close'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E015'` | `'file close'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E016'` | `'stdin read'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E017'` | `'stdin read'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E018'` | `'stdin read'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E019'` | `'stdin read'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E020'` | `'stdin read'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E021'` | `'JSON substrate'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E022'` | `'JSON substrate'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E023'` | `'JSON substrate'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E024'` | `'JSON substrate'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E025'` | `'JSON substrate'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E026'` | `'from_dict'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E027'` | `'from_dict'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E028'` | `'from_dict'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E029'` | `'from_dict'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E030'` | `'from_dict'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E031'` | `'solve'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E032'` | `'solve'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E033'` | `'solve'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E034'` | `'solve'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E035'` | `'solve'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E036'` | `'build'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E037'` | `'build'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E038'` | `'build'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E039'` | `'build'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E040'` | `'build'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E041'` | `'serialize'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E042'` | `'serialize'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E043'` | `'serialize'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E044'` | `'serialize'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E045'` | `'serialize'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E046'` | `'self-check'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E047'` | `'self-check'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E048'` | `'self-check'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E049'` | `'self-check'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E050'` | `'self-check'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E051'` | `'verify command'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E052'` | `'verify command'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E053'` | `'verify command'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E054'` | `'verify command'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E055'` | `'verify command'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E056'` | `'stdout write'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E057'` | `'stdout write'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E058'` | `'stdout write'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E059'` | `'stdout write'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E060'` | `'stdout write'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E061'` | `'stdout flush'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E062'` | `'stdout flush'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E063'` | `'stdout flush'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E064'` | `'stdout flush'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E065'` | `'stdout flush'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E066'` | `'help write'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E067'` | `'help write'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E068'` | `'help write'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E069'` | `'help write'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E070'` | `'help write'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E071'` | `'usage flush'` | `'ValueError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E072'` | `'usage flush'` | `'OSError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E073'` | `'usage flush'` | `'MemoryError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E074'` | `'usage flush'` | `'RecursionError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E075'` | `'usage flush'` | `'RuntimeError'` | `'same injected object'` | `'no reclassification/retry; before emission stdout untouched; after write partial prefix allowed'` |
+| `'E076'` | `'from_dict'` | `'InvalidInstance'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+| `'E077'` | `'from_dict'` | `'UnsupportedInstance'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+| `'E078'` | `'sys.stdin.buffer'` | `'AttributeError'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+| `'E079'` | `'sys.stdout.buffer'` | `'AttributeError'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+| `'E080'` | `'sys.stderr.buffer'` | `'AttributeError'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+| `'E081'` | `'read'` | `'KeyboardInterrupt'` | `'same injected object'` | `'no text fallback, closing or stream rebinding'` |
+
+### Fixture table: U19_WRITE_PLANS
+
+| id | route | scheduled writes | expected | ownership |
+| --- | --- | --- | --- | --- |
+| `'solve-FULL'` | `'solve'` | `('remaining',)` | `'success after one flush'` | `'selected process stream never closed or replaced'` |
+| `'solve-SHORT'` | `'solve'` | `('one', 'two', 'remaining')` | `'success; exact concatenation'` | `'selected process stream never closed or replaced'` |
+| `'solve-UNIT'` | `'solve'` | `('one until complete',)` | `'success; no duplication'` | `'selected process stream never closed or replaced'` |
+| `'solve-FAIL-AFTER-PREFIX'` | `'solve'` | `('two', 'raise OSError')` | `'same exception; two-byte prefix retained; no flush'` | `'selected process stream never closed or replaced'` |
+| `'solve-FLUSH-FAIL'` | `'solve'` | `('remaining', 'flush raises OSError')` | `'same exception; complete bytes retained'` | `'selected process stream never closed or replaced'` |
+| `'solve-BAD-COUNT'` | `'solve'` | `('zero',)` | `'RuntimeError; no loop/retry'` | `'selected process stream never closed or replaced'` |
+| `'solve-BAD-FLUSH'` | `'solve'` | `('remaining', 'flush returns False')` | `'RuntimeError'` | `'selected process stream never closed or replaced'` |
+| `'root-help-FULL'` | `'root-help'` | `('remaining',)` | `'success after one flush'` | `'selected process stream never closed or replaced'` |
+| `'root-help-SHORT'` | `'root-help'` | `('one', 'two', 'remaining')` | `'success; exact concatenation'` | `'selected process stream never closed or replaced'` |
+| `'root-help-UNIT'` | `'root-help'` | `('one until complete',)` | `'success; no duplication'` | `'selected process stream never closed or replaced'` |
+| `'root-help-FAIL-AFTER-PREFIX'` | `'root-help'` | `('two', 'raise OSError')` | `'same exception; two-byte prefix retained; no flush'` | `'selected process stream never closed or replaced'` |
+| `'root-help-FLUSH-FAIL'` | `'root-help'` | `('remaining', 'flush raises OSError')` | `'same exception; complete bytes retained'` | `'selected process stream never closed or replaced'` |
+| `'root-help-BAD-COUNT'` | `'root-help'` | `('zero',)` | `'RuntimeError; no loop/retry'` | `'selected process stream never closed or replaced'` |
+| `'root-help-BAD-FLUSH'` | `'root-help'` | `('remaining', 'flush returns False')` | `'RuntimeError'` | `'selected process stream never closed or replaced'` |
+| `'usage-FULL'` | `'usage'` | `('remaining',)` | `'success after one flush'` | `'selected process stream never closed or replaced'` |
+| `'usage-SHORT'` | `'usage'` | `('one', 'two', 'remaining')` | `'success; exact concatenation'` | `'selected process stream never closed or replaced'` |
+| `'usage-UNIT'` | `'usage'` | `('one until complete',)` | `'success; no duplication'` | `'selected process stream never closed or replaced'` |
+| `'usage-FAIL-AFTER-PREFIX'` | `'usage'` | `('two', 'raise OSError')` | `'same exception; two-byte prefix retained; no flush'` | `'selected process stream never closed or replaced'` |
+| `'usage-FLUSH-FAIL'` | `'usage'` | `('remaining', 'flush raises OSError')` | `'same exception; complete bytes retained'` | `'selected process stream never closed or replaced'` |
+| `'usage-BAD-COUNT'` | `'usage'` | `('zero',)` | `'RuntimeError; no loop/retry'` | `'selected process stream never closed or replaced'` |
+| `'usage-BAD-FLUSH'` | `'usage'` | `('remaining', 'flush returns False')` | `'RuntimeError'` | `'selected process stream never closed or replaced'` |
+
+### Fixture table: U19_PROCESS
+
+| id | future executions | project import allowance | byte assertion | qualification |
+| --- | --- | --- | --- | --- |
+| `'IMPORT'` | `('import',)` | `'only exactfrac/cli'` | `'no I/O'` | `'normal import'` |
+| `'HELP'` | `('all six help forms',)` | `'only exactfrac/cli'` | `'fixed bytes'` | `'exit 0'` |
+| `'USAGE'` | `('all invalid grammar rows',)` | `'only exactfrac/cli'` | `'one diagnostic'` | `'exit 2'` |
+| `'VERIFY'` | `('all 519 inherited wire cases',)` | `'exactfrac/cli + exactfrac_verify/check only'` | `'silent if accepted'` | `'0 or uncaught non-success; no fixed traceback/status for failure'` |
+| `'SOLVE'` | `('all 400 identities x Standard/Accelerated',)` | `'only named closed command dependencies'` | `'one exact checked certificate'` | `'one solver call, 0 on success'` |
+| `'FRESH'` | `('seeds 1/73', 'limits 4300/640', 'both selections on huge examples')` | `'authenticated source; unchanged conversion/recursion settings'` | `'same-route byte determinism'` | `'no CLI in Phase C'` |
+| `'MODULE-ENTRY'` | `('representative help/invalid/file/stdin/solve/verify',)` | `'real python -m exactfrac.cli'` | `'same normal bytes and 0/2 as main'` | `'interpreter-dependent failure traceback not fixed'` |
+
+### Fixture table: U19_FAULTS
+
+| id | family | fixture anchor | required detector |
+| --- | --- | --- | --- |
+| `'CLF01'` | `'default-solver'` | `'DEFAULT'` | `'wrong Standard default rather than Accelerated'` |
+| `'CLF02'` | `'selection'` | `'STD-PRE'` | `'ignores explicit Standard'` |
+| `'CLF03'` | `'duplicate-option'` | `'DUP-EQUAL'` | `'accepts duplicate option'` |
+| `'CLF04'` | `'help-io'` | `'ROOT---help'` | `'touches input/command dependencies for help'` |
+| `'CLF05'` | `'help-extra'` | `'SOLVE-HELP-EXTRA'` | `'help suppresses extra-token usage error'` |
+| `'CLF06'` | `'end-marker'` | `'LITERAL-SOLVER'` | `'treats literal operand as an option after --'` |
+| `'CLF07'` | `'duplicate-key'` | `'DUP-ESCAPED-N'` | `'collapses duplicate decoded key'` |
+| `'CLF08'` | `'negative-zero'` | `'NEGATIVE-ZERO'` | `'accepts -0 numeric token'` |
+| `'CLF09'` | `'float'` | `'N-FLOAT'` | `'coerces floating number'` |
+| `'CLF10'` | `'normalize-edge'` | `'REVERSED-EDGE'` | `'routes to from_records/repairs canonical records'` |
+| `'CLF11'` | `'digit-cutoff'` | `'HUGE-MULTIPLICITY'` | `'full token int conversion rejects valid huge input'` |
+| `'CLF12'` | `'second-solve'` | `'SOLVE-FILE'` | `'reruns optimizer/falls back'` |
+| `'CLF13'` | `'raw-rescale'` | `'U17/TIE-LARGE'` | `'changes supplied 8/4 to 4/2'` |
+| `'CLF14'` | `'selfcheck-bypass'` | `'SOLVE-FILE'` | `'writes without independent verification'` |
+| `'CLF15'` | `'stats-leak'` | `'SOLVE-FILE'` | `'adds stats/banner/wrapper to stdout'` |
+| `'CLF16'` | `'extra-lf'` | `'SOLVE-FILE'` | `'appends second LF'` |
+| `'CLF17'` | `'verify-producer'` | `'VERIFY-FILES'` | `'imports producer/private parser for verify'` |
+| `'CLF18'` | `'verify-rewrite'` | `'VERIFY-FILES'` | `'rewrites instance/certificate bytes'` |
+| `'CLF19'` | `'swallow-error'` | `'E001'` | `'converts operational error to success or invalid-data classification'` |
+| `'CLF20'` | `'acquisition-order'` | `'BAD-I-MISSING-C'` | `'prevalidates bad instance before reading certificate'` |
+| `'CLF21'` | `'short-write-loss'` | `'solve-SHORT'` | `'drops unwritten suffix'` |
+| `'CLF22'` | `'short-write-duplicate'` | `'solve-SHORT'` | `'repeats previously written prefix'` |
+| `'CLF23'` | `'close-process-stream'` | `'VERIFY-STDIN-I'` | `'closes caller-owned stdin'` |
+| `'CLF24'` | `'missing-flush'` | `'solve-FULL'` | `'returns before output flush'` |
+| `'CLF25'` | `'cross-route-raw'` | `'U17/TIE-SMALL/U17/TIE-LARGE'` | `'demands identical raw values across ties'` |
+| `'CLF26'` | `'dedup-registry'` | `'all 400 identities'` | `'drops intentional duplicate mathematical graphs'` |
+| `'CLF27'` | `'early-stdout'` | `'SOLVE-FILE'` | `'accesses stdout before successful self-check'` |
+| `'CLF28'` | `'wrong-promise'` | `'P01'` | `'coerces nonbytes read return'` |
+| `'CLF29'` | `'silent-verify'` | `'VERIFY-FILES'` | `'touches stdout/stderr even when nothing is written'` |
+| `'CLF30'` | `'settings'` | `'FRESH'` | `'disables int_max_str_digits/changes recursion limit'` |
+
+### Fixture table: U19_PREFIXES
+
+| owner | bytes | SHA256 |
+| --- | --- | --- |
+| `'Unit17'` | `3212040` | `'04ef6a4b38463aecb0d86731d1873aadb4acb8bc8a8593e0ea82b4325e56e7ac'` |
+| `'Unit18'` | `3312641` | `'05255f65148c007278a38df664df5e6ff02db868d63fdafe7d9a016861952840'` |
+
+### Fixture table: U19_INHERITANCE
+
+| domain | count | fingerprint or interpretation |
+| --- | --- | --- |
+| `'qualified graphs'` | `400` | `'776ed183b5cd778b9e43ce0da08a809149bf233ac1fd9d928c63159d0dde5566'` |
+| `'fixed wire cases'` | `519` | `'0a080728c39a3de3a0c76ac620967ea1cc00b035578d5cd9f0570e893b760bc9'` |
+| `'literal certificates'` | `41` | `'U17_BYTES + U18_LITERALS; recipes unchanged'` |
+| `'accepted wire'` | `64` | `'includes all 41 literals'` |
+| `'rejected wire'` | `455` | `'preserve qualified identities'` |
+| `'new mathematical graph identities'` | `0` | `'encoding/path variants refer to inherited graphs; no U19_INPUTS table'` |
+| `'required real CLI main solve calls'` | `800` | `'Phase E minimum; 400 x 2, not executed in Phase C'` |
+| `'repeat same-route CLI calls'` | `800` | `'Phase E additional 400 x 2 determinism runs'` |
+| `'closed preflight final solver calls'` | `800` | `'observed separately; not CLI calls'` |
+| `'local reconstruction coverage'` | `'Baseline L0 L1 H0 H1 H2'` | `'verify every observed local certificate including losing H2'` |
+
+### Fixture table: U19_COVERAGE
+
+| obligation | fixture tables |
+| --- | --- |
+| `'CL1'` | `('U19_PYTHON_CALL', 'U19_PROCESS')` |
+| `'CL2'` | `('U19_ARGV',)` |
+| `'CL3'` | `('U19_TEXT', 'U19_ARGV')` |
+| `'CL4'` | `('U19_STREAMS', 'U19_EXCEPTIONS')` |
+| `'CL5'` | `('U19_INSTANCE_SYNTAX',)` |
+| `'CL6'` | `('U19_PROMISE_FAULTS', 'U19_STREAMS')` |
+| `'CL7'` | `('U19_INHERITANCE', 'U19_STREAMS')` |
+| `'CL8'` | `('U19_SOLVE_RESULT_SEAMS', 'U19_FAULTS')` |
+| `'CL9'` | `('U19_EXCEPTIONS', 'U19_INSTANCE_SYNTAX')` |
+| `'CL10'` | `('U19_WRITE_PLANS', 'U19_PROMISE_FAULTS')` |
+| `'CL11'` | `('U19_INHERITANCE', 'U19_PROCESS')` |
+| `'CL12'` | `('U19_INHERITANCE', 'U19_SOLVE_RESULT_SEAMS')` |
+| `'CL13'` | `('U19_INSTANCE_SYNTAX', 'U19_PROCESS')` |
+| `'CL14'` | `('U19_PROCESS',)` |
+| `'CL15'` | `('U19_PROCESS', 'U19_ARGV')` |
+| `'CL16'` | `('U19_PREFIXES', 'U19_PROCESS', 'U19_EXCEPTIONS')` |
+| `'CL17'` | `('U19_FAULTS',)` |
+| `'CL18'` | `('U19_PREFIXES',)` |
+
+### Fixture table: U19_FINGERPRINTS
+
+| table | row count | fingerprint |
+| --- | --- | --- |
+| `'U19_TEXT'` | `5` | `'5bb9c4a75c909327366a6c36a40723d5ebe58ae5e4fdcba3cad3724440dda8d5'` |
+| `'U19_ARGV'` | `98` | `'906f64979173ad552421e87dd3650e1899d19531482c174af5ade27c4a198a2d'` |
+| `'U19_PYTHON_CALL'` | `16` | `'031790291e747a76ed0503fcfa133ebcbb8b2cb39778cbbefcad9ba1ea39e560'` |
+| `'U19_INSTANCE_SYNTAX'` | `52` | `'21a0ab5ea1e33475510dc8cd49a0ff796d122c78ead96cb4999b884f20720137'` |
+| `'U19_SOLVE_RESULT_SEAMS'` | `22` | `'df4d5d2f793fa95759f3034584440573c97b834d9a9aa4390d7b373bdec34eaf'` |
+| `'U19_STREAMS'` | `10` | `'a778a8aa42fae468b77643a0d3cf09d84e173cfc5f5caf0b13b9092e0a9072c0'` |
+| `'U19_PROMISE_FAULTS'` | `40` | `'25addd3715fca597b4398118a7480ae43d6f5a97265578ab92732ae1a67565c3'` |
+| `'U19_EXCEPTIONS'` | `81` | `'a62378a4f928d7195915435f550468736de62d98fd6f3dc09d3a912776a746ea'` |
+| `'U19_WRITE_PLANS'` | `21` | `'33e7adaecc789f0a2d7f3b4bc8025d81f6bd8bb4dfe23f5a6f2f9113e67af99b'` |
+| `'U19_PROCESS'` | `7` | `'e91332762eecbcafc4f5b6b065105f6f0a5253c79afbb919c86d79786a22ea72'` |
+| `'U19_FAULTS'` | `30` | `'8d0c94d975b1cdddcc7f563168be31fa5c80f0c28607b4aea13192339bbe1171'` |
+| `'U19_PREFIXES'` | `2` | `'ad677f717a1e30d07a7c95f1a5d6999ac3cf5bafd89591ca6519911a5c170493'` |
+| `'U19_INHERITANCE'` | `10` | `'7722d6e889f48f4ba65da6e6a7b42399fb6c6239ab4dc26106e677a43d6ab69a'` |
+| `'U19_COVERAGE'` | `18` | `'3671733916568330304d465ddd2b7fe346de3da24304569ed94b35dcd44ab34a'` |
