@@ -3118,6 +3118,254 @@ R14 Governing-checksum baseline (adopted Sep 4, 2026):
         release, additional gate, REVIEW_REQUEST, private-note verification, rollback
         or automatic repair. Unit 17 production remains closed throughout.
 
+4.16 CLI composition of the closed solver, certificate emitter and checker
+    (Unit 19 authority R1 — effective only on controlled authority commit)
+    1. Source and scope. Retain exactfrac/cli.py from section 3. The new consuming
+       test is tests/test_cli.py. This unit supplies a local, offline research CLI,
+       not a solver, independent checker, instance normalization tool, benchmark
+       driver or public-service security boundary. Read SPEC_LOCK-pinned V2.2
+       def:instance, ass:active, def:parameter, eq:compact-density, lem:empty,
+       lem:unit, prop:endpoints, sec:global/alg:global, the complete reconstruction
+       table and relevant proofs. Read CONTRACT, 4.1/4.1A, 4.4/4.4A, 4.12--4.15,
+       sections 3, 7--9, and the actual closed APIs before applying this authority.
+       Mathematical semantics come from these sources; command spelling, streams,
+       usage status and composition order below are explicit engineering rulings.
+       Unit 18's three-check exception does not authorize any new test reopening.
+
+    2. Invocation, exports and lifecycle. Invoke with python -m exactfrac.cli using
+       the selected interpreter. Do not add a console-script entry, __main__.py,
+       root re-export, executable bit or dependency; pyproject.toml and both package
+       __init__.py files stay byte-identical. Module __all__ is exactly ("main",).
+       The only public callable defined by this module is
+         main(argv: list[str] | None = None) -> int.
+       argv is positional-or-keyword. None snapshots sys.argv[1:]; an explicit
+       argument must be an exact built-in list of exact built-in str values.
+       Reject other containers, subclasses, bytes, booleans or coercion by exact
+       built-in ValueError before imports of command dependencies or any stream/I/O
+       access. Wrong Python call arity retains native TypeError. Preserve the list
+       and its contents; no retained argument/input/output cache. The module guard
+       raises SystemExit(main()); import alone runs no command and does no I/O.
+       No additional public parser, stream-injection, decoded-record or writer API.
+       main is synchronous; concurrent mutation of argv/process streams is not a
+       supported contract. Tests may substitute those streams in a controlled call.
+
+    3. Closed command grammar. Exactly two commands, case-sensitive:
+         solve [--solver Standard|Accelerated] INSTANCE
+         verify INSTANCE CERTIFICATE
+       The solve option may precede or follow INSTANCE, but occurs at most once;
+       it consumes exactly its next token. Omission selects "Accelerated" explicitly
+       in this CLI, not a new default in solve(). Always pass the exact selected
+       capitalized string to the closed solver. Reject lower-case aliases, whitespace
+       normalization, --solver=VALUE, abbreviations, duplicate options even if equal,
+       unknown options/commands, extra or missing operands and options on verify.
+       Within command arguments, one standalone -- ends option recognition; later
+       tokens are operands literally, including leading hyphens or another --.
+       Before --, a token starting with '-' other than the single '-' is an option
+       and must be recognized as specified above. Empty tokens and NUL-containing
+       tokens are usage errors. There are no environment/config-file defaults,
+       response files, interactive prompts, stdin JSON command protocol, seed,
+       backend/fallback, quota, output-file or telemetry switches.
+       '-' as an operand denotes the process's binary stdin. At most one verify
+       operand may be '-'; reject verify - - before opening/reading either input.
+       './-' denotes a file named '-'. Other names pass unchanged to the filesystem,
+       relative to the invocation directory. No expanduser/expandvars, path repair,
+       case folding, symlink resolution policy, globbing or sorting is added here.
+
+    4. Help and usage bytes. The only help forms are the complete token lists
+       ["-h"], ["--help"], ["solve","-h"], ["solve","--help"],
+       ["verify","-h"] and ["verify","--help"]. They return 0 after writing
+       the corresponding fixed ASCII text below to binary stdout and flushing it.
+       Extra tokens invalidate a help form; help is not a switch that suppresses
+       unrelated argument errors. '-- -h' after a command makes -h an operand.
+       Root help is exactly the following three lines, including the terminal LF:
+         usage: python -m exactfrac.cli solve [--solver Standard|Accelerated] INSTANCE
+         usage: python -m exactfrac.cli verify INSTANCE CERTIFICATE
+         INSTANCE or CERTIFICATE may be - for stdin; verify permits at most one -.
+       Solve help is exactly the first usage line followed by:
+         Writes one exact certificate to stdout; default solver: Accelerated.
+       Verify help is exactly the second usage line followed by:
+         Success is silent; verifies admissibility and raw attainment, not optimality.
+       Help writes nothing to stderr and loads no command dependencies. An empty
+       invocation or other invalid grammar returns exact int 2 after writing exactly
+         exactfrac: invalid command line; use --help\n
+       to binary stderr and flushing it, with stdout untouched. Here and below,
+       '\n' denotes one ASCII LF byte, not two printed characters. Help/usage text
+       has no leading indentation. Validate the complete token list before input
+       I/O or command imports. No parser-library/version-dependent help formatting.
+
+    5. Binary I/O ownership and precedence. After grammar validation, read each
+       operand completely into bytes. For files use read-only binary opens and
+       context-managed closure; for '-' use sys.stdin.buffer without closing it.
+       In verify read INSTANCE first, then CERTIFICATE, then invoke the checker
+       once on those exact byte strings. File acquisition is distinct from checker
+       validation: a failure acquiring CERTIFICATE can occur before a malformed
+       but successfully read instance reaches the checker. This does not alter
+       4.15's complete-instance-before-certificate-inspection order inside that
+       call. Do not probe instance validity with a fake certificate or reuse private
+       checker parsers merely to impose another acquisition precedence.
+       A byte-returning reader must return exact bytes, else RuntimeError. No text
+       newline conversion, BOM stripping, encoding guessing or certificate rewriting.
+       Do not create, overwrite or append any named file. No chdir, Git, subprocess,
+       network, environment discovery or temporary files in runtime CLI production.
+       Explicitly selected symlinks/FIFOs/devices follow ordinary host open/read
+       semantics; this local CLI is not a race-safe path or regular-file sandbox.
+
+    6. Solve input adapter, without reopening Instance. This CLI owns a private
+       syntax-only instance-byte adapter, not a public instance byte writer/parser.
+       Accept the exact instance-byte domain already stated in 4.14.11 and 4.15:
+       strict UTF-8, no BOM, one JSON document, ordinary JSON whitespace/key order
+       and valid equivalent string escapes allowed, duplicate DECODED keys rejected
+       before last-key-wins collapse. Numeric tokens must be canonical integers;
+       reject floats, exponents, nonfinite constants, -0 and non-JSON spellings.
+       Signed integer labels remain permitted; strings preserve decoded values,
+       including valid escaped surrogates. No Unicode normalization or coercion.
+       Use standard-library json with new private syntax hooks and bounded-digit
+       exact integer accumulation; never import/call checker-private helpers or
+       copy a test reference into production. This syntax substrate is not a second
+       implementation of graph/active validation. Send the decoded object once to
+       Instance.from_dict, which owns all closed schema, label, edge-order and
+       active-instance checks. Never use from_records, sort/reorient/aggregate edges,
+       remove vertices or adjust capacities. Normally returned Instance is exact-type
+       checked. Preserve the originally read bytes for the independent output check.
+
+    7. Exactly one selected solve and checked emission. After creating Instance,
+       call exactfrac.solve.solve(instance, selection) exactly once. Do not call
+       solve_with_telemetry or repeat/compare/fallback to another selection. Require
+       an exact returned tuple of length two, exact SolveResult and SolveStats,
+       and native stats.branch_solver equal to the requested selection. Ordinary
+       closed record construction is trusted; constructor-bypassing forgeries and
+       exhaustive revalidation of diagnostic histories are not this unit's job.
+       Pass the same Instance and the exact returned SolveResult to
+       build_certificate exactly once, require an exact dict, and pass that object
+       with the same Instance to serialize_certificate exactly once; require exact
+       bytes. Call verify_certificate(original_instance_bytes, emitted_bytes)
+       exactly once and require normal return to be exactly None. This independent
+       composition check precedes any stdout access/write. A failed self-check is
+       a failure, never an excuse to change the witness, rescale the pair, retry
+       a solver or emit unverified bytes. On normal completion write precisely those
+       emitted bytes to binary stdout, flush, and return exact int 0. No prefix,
+       progress line, suffix, second newline, wrapper JSON, decimal approximation,
+       digest, embedded instance or success banner. stderr is untouched on success.
+       Stats are not serialized, measured, repaired or used to choose a witness.
+       A successful emitted certificate is a certified fractional lower bound with
+       its witness (or genuine Empty); never describe it as an exact block count.
+
+    8. Verify route and import independence. verify reads both inputs and calls
+       only exactfrac_verify.check.verify_certificate once with those exact bytes.
+       Require normal return exactly None, then return int 0 without any output
+       or stdout/stderr buffer access. Do not solve, produce, decode/reencode,
+       normalize, hash as a substitute for input, or prevalidate via Instance.
+       No alternate certificate format, optimality test, unit-lower-bound filter,
+       branch attribution or telemetry is introduced. Valid suboptimal and nonempty
+       zero witnesses remain acceptable under the checker; malformed/rescaled pairs
+       and false Empty remain rejected by its unchanged rules.
+       Import command dependencies lazily after complete grammar validation. A fresh
+       verify invocation may load only exactfrac (its empty root), exactfrac.cli,
+       exactfrac_verify (its empty root) and exactfrac_verify.check as project modules;
+       it must not attempt imports of exactfrac.instance/solve/certificate/telemetry,
+       brute, tests or private handoff helpers. This CLI's location under exactfrac
+       does not weaken the checker's own no-exactfrac-import contract. Help/usage
+       may load only exactfrac and exactfrac.cli. Import/source reviews and actual
+       fresh-process blocking/origin checks must establish these route distinctions.
+       Production CLI runtime imports are limited to sys, json, optional future
+       annotations and the explicitly named closed command dependencies above.
+       No dynamic eval/exec/importlib tricks, global monkeypatching or root exports.
+
+    9. Errors, statuses and closed-dependency propagation. main returns only exact
+       int 0 for normal command/help completion or int 2 for grammar/usage rejection.
+       It does NOT turn input/dependency exceptions into a third mathematical verdict
+       or a stable structured error record. Incorrect Python argv types raise exact
+       ValueError; wrong arity retains Python TypeError. Private deliberate instance
+       syntax rejections raise the closed InvalidInstance class. Translate only a
+       UnicodeDecodeError from the strict decode, or json.JSONDecodeError from that
+       JSON load, into InvalidInstance, with each catch limited to that operation.
+       Instance.from_dict's InvalidInstance and UnsupportedInstance pass unchanged.
+       All other exceptions from reads/open/close, json hooks/substrate, solve,
+       builder, serializer, verification and stream operations propagate unchanged
+       by object identity, including unexpected ValueError, OSError, MemoryError,
+       RecursionError and RuntimeError. No blanket ValueError/Exception catch,
+       empty fallback, diagnostics swallowing or operational-error-to-invalid-data
+       translation. A normally returned value violating a closed return-type or
+       selected-route promise raises RuntimeError; it is not malformed user data.
+       A checker rejection remains its ValueError, whether on verify input or solve
+       self-check. The CLI cannot infer operational versus semantic provenance from
+       that exception's class alone, and makes no new classification claim.
+       Under module invocation, SystemExit(main()) maps normal 0/2 to exit status;
+       uncaught exceptions retain the interpreter's failing process behavior. No
+       exact traceback text or numeric status for interpreter-level failures is
+       frozen, beyond non-success on the tested interpreter. The CLI adds no custom
+       diagnostics for those exceptions. Do not format enormous integers or echo
+       untrusted input in deliberate messages. Interrupts retain native behavior.
+
+    10. Write semantics and resources. A help/usage/solve writer consumes only the
+        selected binary stream. On a positive short write, continue with the unwritten
+        suffix; return 0/2 only after all required bytes and flush succeed. A normal
+        write result must be exact int in 1..remaining bytes; None, bool, zero,
+        negative or overlarge counts violate the blocking-stream promise and raise
+        RuntimeError. A normal flush must return None, else RuntimeError. Never
+        close/rebind process streams, silently fall back to text, retry a failed
+        operation, clear an exception or exit through os._exit. Short-write progress
+        is not a retry of an exception. Missing .buffer or operational stream errors
+        propagate. No stream access at all for a silent successful verify.
+        All validation/composition failures before emission leave stdout untouched.
+        Once a write starts, an I/O failure can leave a partial prefix; stdout cannot
+        be rolled back or promised atomic. Shell redirection is outside CLI ownership.
+        No schema/input-byte/digit/multiplicity quota or hidden decimal-conversion
+        cutoff is added. This local research entry point assumes user-selected inputs
+        and available host resources; it is not suitable as an untrusted service
+        boundary without separately disclosed outer ingress/work limits. Never alter
+        int_max_str_digits, recursion limits, hash seed or other process settings.
+        Read-all input and retained output incur input/output-sized storage, JSON
+        decoded storage and exact-integer bit costs. Syntax/codec loops are driven by
+        bytes/digits, not expansion of Q copies or enumeration of shores. Additional
+        checker scans do not confer a new universal strong-polynomial byte-runtime,
+        constant-memory or denial-of-service-protection claim.
+
+    11. Determinism and both selections. Identical bytes, argv and the same solver
+        selection produce identical certificate bytes, subject to resources and
+        unchanged closed code. Neither output nor acceptance depends on input path,
+        optional label spelling, clock, environment metadata or telemetry counters
+        except insofar as decoded labels must themselves be valid. Different valid
+        instance encodings of the same ordered graph give equal mathematical input;
+        certificates contain no labels or path identity. Across selections compare
+        exact numerical values by cross-multiplication only after independently
+        parsing and recomputing EACH run's literal pair. Do not demand equal witness,
+        raw pair or certificate bytes across ties; do not normalize or canonicalize
+        witnesses to force equality. Both selections must execute every currently
+        registered qualified graph identity, including intentional duplicates, not
+        just a hand-picked command demonstration. Source baseline/endpoint witnesses,
+        including losing direct H2 candidates, also exercise verify independently;
+        no assertion that a strict final H2 winner exists is introduced.
+
+    12. Metadata and future ownership. Resolve 4.13.9's "Unit 19/21" allocation
+        explicitly: Unit 19 is the certificate/verification entry point specified
+        here; Unit 21 owns experiment timing, externally supplied environment data,
+        RunMetadata/RunRecord assembly and the later versioned run-record wire schema.
+        Section 9's versioned run-record requirement remains OPEN for that later
+        authority, not satisfied or cancelled here. No stats JSON, benchmark timing,
+        Git/platform discovery, instance hash or release version enters certificate
+        bytes or this CLI. This allocation changes no Unit 16 record or solver API.
+        Future commands require future authority; do not pre-adopt their syntax.
+
+    13. Independent expectations, frozen scope and phase boundaries. Phase C fixes
+        CLI grammar/help/error/stream expectations and independently derived instance/
+        certificate cases before any CLI implementation or consuming test exists.
+        Append only docs/ORACLE_CATALOG.md. Its existing 3,312,641-byte historical
+        prefix (SHA-256 05255f65148c007278a38df664df5e6ff02db868d63fdafe7d9a016861952840)
+        and the older 3,212,040-byte prefix remain exact. Both closed tests already
+        protect their own prefixes; no test exception/reopening is granted here.
+        Phase D adds only tests/test_cli.py and establishes missing exactfrac.cli
+        RED before production. Phase E adds only exactfrac/cli.py under the frozen
+        test; Phase F import/source/nonmutation and independent audit belong to its
+        GREEN checkpoint. Phase G appends only finite-scoped CONFORMANCE, preserving
+        earlier rows. Phase H stages only that CONFORMANCE, cli.py and test_cli.py,
+        then exact staged-tree isolation, separate local commit and remote closure.
+        All 48 existing files are frozen outside these explicitly scheduled document
+        additions; no closed test, producer, checker, configuration or root package
+        amendment. If a genuine conflict is found, STOP and report it; do not infer
+        permission to weaken an old test. No REVIEW_REQUEST, mandatory second model,
+        private-note inspection, new gate, automatic repair/rollback or later-unit work.
+
 ## 5. Algorithm map (by label)
 
     ExactBranchMin          alg:branch-min          per-branch exact residual argmin

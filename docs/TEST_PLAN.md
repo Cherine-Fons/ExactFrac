@@ -4255,3 +4255,219 @@ Use the existing lifecycle, with only the author's expressly authorized scopes:
    Deliver private BUILD/LEARNING text blocks; saving is only the user's confirmation,
    never located/inspected/hashed by helpers. No new gate, private-note check,
    REVIEW_REQUEST, mandatory external reviewer, reset/rollback/automatic repair.
+
+## 43. Unit 19 obligations — CLI composition
+
+Authority: DESIGN 4.16, CONTRACT, the pinned V2.2 definitions/reconstruction, and
+closed Units 1--18. These are obligations, not claims of already executed CLI tests.
+The starting suite has 3,478 cases, including 1,033 checker and 458 certificate cases.
+Freeze independent command/byte expectations before tests/code; do not derive expected
+answers by asking the future CLI, its parser, or its own serializer wrapper.
+
+### CL1 — public surface, invocation and exact argv types
+
+Require only main(argv: list[str] | None = None) -> int and __all__=("main",).
+Check positional-or-keyword/default/type hints, list and str exactness, rejected
+subclasses/tuples/bytes/bools, native wrong-arity behavior, and no argv mutation or
+retention. None snapshots process argv. Import alone performs no command/I/O and
+leaves package roots/configuration unchanged. Exercise actual python -m exactfrac.cli
+from an authenticated isolated tree, not merely a private direct-call surrogate.
+
+### CL2 — grammar and explicit selection
+
+Freeze positive/negative token tables for both commands, one optional --solver at
+either operand position, exact Standard/Accelerated and explicit Accelerated default.
+Reject duplicate, malformed, abbreviated, unknown, wrong-case and extra arguments;
+no automatic fallback or environment/config defaults. Cover -- and literal leading
+hyphens, empty/NUL tokens and literal './-'. Verify receives no solver option. No
+argument failure may open/read inputs or import command dependencies.
+
+### CL3 — exact help, usage status and streams
+
+Test all six and only the six complete help forms, all fixed ASCII help lines,
+terminal LF, exact int 0, empty stderr and no command imports. Empty/invalid grammar
+returns exact int 2 with the one specified diagnostic and stdout untouched. Help
+must not mask other errors. No parser-version-dependent text, executable path,
+locale, environment or terminal width changes these deliberately fixed bytes.
+
+### CL4 — file/stdin acquisition and ownership
+
+Use actual temporary input files plus controlled binary process streams. '-' reads
+stdin once without closing it; verify permits at most one '-' and rejects two
+before any read. Verify acquires instance then certificate and only then calls the
+checker. Establish the documented acquisition-versus-mathematical-validation
+precedence, including invalid instance plus unreadable certificate. File inputs
+close on success/failure; process streams remain owned by their caller. No named
+output creation, overwriting, chdir, path normalization or text-mode newline changes.
+Test the byte-return promise separately from operational reader exceptions.
+
+### CL5 — independent instance syntax expectations
+
+Before production fix accepted UTF-8 whitespace/key-order/string-escape variants
+and rejections for BOM, duplicate decoded keys, malformed encoding/JSON, trailing
+values, float/exponent/nonfinite/-0 tokens. Preserve huge/signed integer labels
+and exact decoded strings. No full-token int conversion or accidental digit limit.
+Use the closed Instance.from_dict once for object/graph/active validation, never
+from_records or checker-private parsing. Independently check that decoded objects
+preserve canonical edge coordinates; reject-not-repair at the inherited boundary.
+
+### CL6 — exact solve pipeline and closed promises
+
+Instrument test-local seams to require read/decode/from_dict, one selected solve,
+one build, one serialize, one independent verify on original instance bytes, then
+write/flush. Preserve Instance and returned SolveResult identities, literal raw
+integers and emitted bytes. Check tuple/record/selection/dict/bytes/None promises
+with deliberately wrong normal returns. Raise RuntimeError, not success, fallback,
+or invalid-user-data reclassification. No telemetry solve or diagnostic selection.
+
+### CL7 — solver-independent verification command
+
+Verify forwards the actual two byte strings once to the public independent checker,
+requires exact None and returns 0 silently, without stdout/stderr buffer access.
+No Instance construction, optimizer, producer parsing or reserialization. Include
+accepted suboptimal/nonempty-zero/losing-endpoint certificates, genuine Empty and
+rejected equal-ratio raw-pair forgeries. The verify verdict is attainment, not a
+new optimality certificate or claim that all changed instance bytes must reject.
+
+### CL8 — no output before a successful solve self-check
+
+Use failures at syntax, object/active validation, solve, build, serialization and
+independent self-check to demonstrate stdout has not been accessed or written.
+No banner, stats, envelope, digest, extra LF or partial mathematical result. Confirm
+normal result byte equality against independently fixed literals, including Empty,
+nonempty zero when supplied through a test-local solve seam, and unreduced pairs.
+Do not use the emitter under test as its own expected-byte derivation.
+
+### CL9 — error identity and narrow syntax translation
+
+Wrong argv types raise exact ValueError. Deliberate solve syntax errors and only
+authenticated UTF-8/JSON syntax decoder errors map to the closed InvalidInstance.
+Instance InvalidInstance/UnsupportedInstance otherwise propagate as the same objects.
+Verify ValueError and ALL other named dependency/reader/stream exceptions propagate
+unchanged, including injected operational ValueError, MemoryError, RecursionError,
+RuntimeError and OSError. Scope translation catches to actual decode/JSON operations;
+no blanket wrapper, fixed data-error exit mapping, false Empty or misleading verdict.
+Subprocess invalid-input/resource cases fail; interpreter tracebacks/status numbers
+are not fixed text fixtures. Help/usage normal exits 0/2 ARE fixed.
+
+### CL10 — binary output completion and honest partial-failure boundary
+
+Use short positive writes to require progress without duplication/omission and a
+successful final flush before return. Wrong normal write counts (None/bool/zero/
+negative/overlarge) and non-None flush violate promises. Inject write/flush errors
+by identity; verify no automatic exception retry/stream rebinding/closing. After
+an emission I/O failure, any already written prefix is preserved, not declared
+atomic or rolled back. Missing binary buffers must not trigger text fallback.
+
+### CL11 — cumulative qualified corpus and both real selections
+
+Consume all 400 currently registered qualified graph identities, without deduplication,
+and any independently registered valid Unit 19 additions. Exercise actual CLI main
+solve invocations under both selections: at least 800 real CLI/solver runs before
+new identities. Capture each run's original literal pair through test-local
+instrumentation, independently parse/recompute each stdout certificate, and require
+one actual solve per command. Compare routes by exact cross multiplication only;
+retain lawful distinct witnesses/raw pairs/bytes under ties. Repeat same-route runs
+for byte determinism. Count invocation, identity and pytest-case censuses separately.
+
+### CL12 — complete fixed verification corpus and endpoint coverage
+
+Consume all 519 current fixed wire cases (64 accepted, 455 rejected, including 41
+literal fixtures) through CLI verify; preserve their qualified identities and byte
+recipes. Fix new CLI input/stream fixtures independently. Include original edge
+reference gaps, sparse ordering, capacities, parity/minimum, all endpoint shapes,
+baselines and direct H2 one-edge/split local reconstructions, including losers.
+Distinguish local candidate verification from any assertion about a final winner.
+No altered or repacked refs, normalized zeros or hidden witness tie-breaking.
+
+### CL13 — large integers, encoding variants and deterministic processes
+
+Exercise inherited 4,801-digit numerals in valid instance/certificate positions,
+including signed labels, with conversion limits 4,300 and 640 and hash seeds 1/73.
+Run valid solve examples under both selections and verify full fixed wire cases
+in fresh processes. Verify process conversion/recursion settings stay unchanged.
+Compare repeat certificate bytes without requiring path/label metadata in outputs.
+Runtime/memory limits are host constraints, not undocumented mathematical rejection.
+
+### CL14 — executed help/verify dependency isolation
+
+Fresh help/usage runs permit only exactfrac and exactfrac.cli project modules.
+Fresh verify runs additionally permit only exactfrac_verify and its check module;
+block every other producer module, brute, tests and handoff helpers, including
+attempted dynamic or swallowed forbidden imports. Check sys.modules and origins.
+Where practical use an export physically lacking producer implementation files.
+A separate solve integration process may load its closed dependencies. Static
+imports alone or a producer-populated pytest process do not establish independence.
+
+### CL15 — main and real module entry agreement
+
+Run representative valid/invalid command, help, stdin/file, both solver and verify
+cases through the actual module entry, using captured binary stdout/stderr and
+process status. Ensure the same grammar, bytes and normal 0/2 returns as main.
+Avoid replacing all subprocess tests with a mock main, dummy CLI or a test oracle.
+Fresh processes must use authenticated candidate source and repository config.
+
+### CL16 — source, nonmutation, resource and ownership audit
+
+Review all CLI imports (sys/json/future and the named lazy command dependencies),
+no dynamic code, no private checker access, no copied test reference, no I/O in
+import/help beyond required output, no hidden solver/telemetry/metadata path, no
+float/tolerance/GCD/rescaling/Q expansion or globals settings changes. Audit private
+numeric operations as bounded syntax conversion only. Test conservation of all
+closed files, input files, arguments and caller-owned streams. Disclose read-all
+storage and byte/bit costs; no universal security/performance or optimality claim.
+
+### CL17 — declared and executed adversarial controls
+
+Phase C pre-registers representative faults: wrong/default solver, duplicate option
+acceptance, help with premature I/O, duplicate-key loss, -0/float acceptance, edge
+normalization, accidental digit cutoff, hidden second solve, altered raw pair,
+bypassed self-check, stats/banner/extra LF leakage, verify producer import, checker
+byte rewriting, swallowed operational error, early read precedence, short-write
+loss/duplication, stream closure, missing flush, overstrong cross-route equality
+and qualified-registry deduplication. Execute independent detectors in Phase E;
+report variants/targets and failures actually detected, not declared names as kills.
+No external/second-model review gate or numerical expectation copied from the CLI.
+
+### CL18 — historical prefixes and exact frozen scope
+
+Preserve every current closed source/test/configuration byte. Unit 17's 3,212,040-byte
+and Unit 18's 3,312,641-byte catalogue prefixes remain length-and-hash protected;
+new oracle appendix receives its own prefix/fixture identity. Existing tests require
+no amendment and MUST NOT be weakened for CLI. Do not add a permanent absence test
+that bans future separately authorized files. CONFORMANCE records only executed
+finite CLI composition, bytes, error and import evidence. RunRecord wire encoding,
+measurements, public entry-point packaging, corpus campaign and experiments remain
+later work, not implicit Unit 19 accomplishments.
+
+## 44. Unit 19 completion gate — CLI
+
+Use the existing controlled lifecycle without adding steps or reopening closed tests:
+
+1. Phase B changes only docs/DESIGN.md and docs/TEST_PLAN.md. Authenticate the passed
+   Phase A and current V2.2 source; adopt 4.16 and CL1--CL18. Run a nonexecuted main
+   interface probe through repository-context Ruff before application; apply exact
+   documentation unstaged, run the full 3,478-case regression and repository Ruff,
+   and reauthenticate all frozen bytes. Review, exact staging, local documentation
+   commit/postcommit regression and separate remote closure precede Phase C.
+2. Phase C appends only docs/ORACLE_CATALOG.md with independently fixed expectations
+   and audit. Preserve historical bytes; no test/source/config changes. Complete
+   ordinary oracle application, review/audit, staging, commit and remote closure.
+3. Phase D adds only tests/test_cli.py. Live candidate Ruff precedes application;
+   require precisely one collection error, ModuleNotFoundError naming exactfrac.cli,
+   exit 2, with production absent. No dummy CLI. The inherited 3,478 cases remain
+   GREEN with only the new test ignored; leave the new test untracked/unstaged.
+4. Phase E adds only exactfrac/cli.py under the frozen test. Candidate Ruff precedes
+   application. Require targeted/full GREEN, full repository Ruff and independently
+   executed CL17 controls plus Phase F source/import/nonmutation review. Count actual
+   collected new cases; full expected count is 3,478 plus that measured count, not
+   a number inferred from function count or command-invocation totals.
+5. Phase G appends only finite-scoped docs/CONFORMANCE.md after GREEN, preserving all
+   previous bytes/rows/statuses. Phase H stages exactly CONFORMANCE, cli.py and
+   test_cli.py, performs exact staged-tree isolation, then a separate implementation
+   commit with postcommit tests/Ruff and separate approved-commit remote closure.
+6. Require clean state/four-reference agreement and conserved evidence at closure.
+   All 48 pre-existing files outside the named documentation amendments remain
+   frozen. Deliver private BUILD/LEARNING text only after full closure; user save
+   confirmation is not a file/hash gate. No REVIEW_REQUEST, extra approval gate,
+   mandatory outside reviewer, automatic repair/rollback, or next-unit work.
