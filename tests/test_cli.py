@@ -518,7 +518,6 @@ _FROZEN_SOURCE_HASHES = {
     ),
     'exactfrac_verify/brute.py': 'b31e53a8b16a37ef8827141a78169ffe9b0a84762843a3ad45c89d9344f98bf6',
     'exactfrac_verify/check.py': '5beb9850bf7aeb311178a5f35df1357d8d4a3e801fde5341e2108176bd01f1ad',
-    'instances/MANIFEST': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
     'pyproject.toml': '89977766c002fd79f1c75de93621062b4e7a042debe95ab9d238987fc9469da6',
     'tests/_telemetry_source_audit.py': (
         '7d737818adfb193c8335a123b4fdc38735260dd0006c4a0cdb9b5def945e1d77'

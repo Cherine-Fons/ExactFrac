@@ -1933,3 +1933,182 @@ present. Phase H still requires exact three-path staging (CONFORMANCE, cli.py,
 test_cli.py), staged-tree isolation, separate implementation commit/postcommit
 checks and separate approved-commit remote closure. Unit 19 is not complete here.
 Private BUILD/LEARNING notes are not inspected or gated by this step.
+
+## Unit 20 — reproducible initial corpus: finite engineering conformance
+
+This append-only entry records the Unit 20 Phase E/F audited GREEN candidate under
+DESIGN §13 (D20-C1–D20-C10), its D20-M1–D20-M3 addendum, and TEST_PLAN §§45–46
+(CP1–CP18). It adds an engineering conformance record, not a new mathematical
+source label. Every preceding theorem row, status and historical record remains
+unchanged. In particular, this finite corpus does not promote a previously planned
+invariant or `thm:main` row or replace the historical 400-identity registry.
+
+The governing mathematical labels `def:instance`, `ass:active`, `def:parameter`,
+`lem:aggregation`, `lem:interval`, `prop:expanded-equivalence`, `lem:empty`,
+`lem:endpoint-difference` and `prop:endpoints` supply the semantics consumed by
+independent references. The versioned recipe grid, seeded support, generator API
+and serialization are separately adopted engineering contracts, not source theorems.
+
+### Implemented surface and observed GREEN
+
+| Engineering obligation | Implemented and exercised scope | Status |
+|---|---|---|
+| D20-C2–C7; CP1–CP12 | Pure deterministic `exactfrac.corpus` generator; exact finite registry, canonical payload bytes, immutable fresh-build result and owning-suite integrity/extension checks. | green |
+| D20-C8–C9; CP13–CP16 | Independently registered finite mathematical references, required both-solver subset, certificate attainment/checking and separately counted adversarial controls. | green |
+| D20-M1–M3; CP17–CP18 | Witnessed tests-first RED, exact authorized predecessor-test retirement, and scoped rather than aggregate-wide integrity checks. | green |
+
+The production public surface is exactly `recipe_ids() -> tuple[str, ...]`,
+`generate_instance(recipe_id: str) -> bytes`, and
+`build_corpus() -> tuple[tuple[str, bytes], ...]`; `__all__` is
+`("build_corpus", "generate_instance", "recipe_ids")`. The one input parameter is
+positional-or-keyword and requires an exact built-in str equal to an adopted ID.
+Nonmembers and other types raise plain ValueError without coercion or repair.
+No writer, reader, merge API, CLI, public error class or solver call is added.
+
+The live implementation gate observed 72 collected/passed corpus cases from 16
+module-level test functions and 4,512 collected/passed full-suite cases, exactly
+4,440 inherited plus 72 new. CLI/checker/certificate-file counts remained
+962/1,033/458. Setup, call and teardown all passed, with no collection errors,
+skips, deselections or xfails. Live source preflight and full-repository Ruff passed;
+project import paths and bytes were authenticated. These are case counts, not counts
+of graph instances, solves, certificates or fault injections.
+
+The authenticated live toolchain was Python 3.14.6, pytest 9.1.1 and Ruff 0.16.5.
+Both targeted and full runs reported one nonfatal PytestRemovedIn10Warning about
+`itertools.product` used as parametrization argvalues in
+`test_fresh_process_full_generation_purity_and_settings`. The warning was not
+suppressed and the frozen R2 consumer was not edited. This record does not claim
+warning-free execution, pytest 10 compatibility or minimum-interpreter reproduction.
+
+### Frozen-test crosswalk
+
+All function names below belong to `tests/test_corpus.py` unless a private saved
+phase record is explicitly named. CP16 and CP17 require their separately recorded
+audit/transition evidence; a declared test name alone is not proof of execution.
+
+| Obligation | Frozen consuming test or authenticated phase evidence | Finite evidence boundary |
+|---|---|---|
+| CP1 | `test_public_surface`; `test_invalid_recipe_domain` | Exact exports, signatures, types and rejection cases, including hostile coercion and U+FF11. |
+| CP2 | `test_complete_inventory_and_immutable_build` | 655 ordered identities retained without deduplicating equal payloads; immutable deterministic results. |
+| CP3 | `test_all_payloads_and_closed_instance_boundary` | Independently constructed supports, canonical edge order and edge-index-dependent multiplicities. |
+| CP4 | `test_all_payloads_and_closed_instance_boundary`; `test_private_exact_sha_threshold_control` | Exact seed messages/backbone and strict first-byte threshold; injected byte 64 is excluded. |
+| CP5 | `test_all_payloads_and_closed_instance_boundary` | Exact q/f formulas, support counts, degrees and active-regime closed Instance construction for every recipe. |
+| CP6 | `test_all_payloads_and_closed_instance_boundary`; `test_complete_inventory_and_immutable_build` | Independent payload bytes, lengths/digests and historical initial MANIFEST, not producer self-certification. |
+| CP7 | `test_fresh_process_full_generation_purity_and_settings`; `test_operational_sha_failure_is_not_partial_success` | Full generation with existing digit limits 640/4,300; resource-exception injection and no setting changes. |
+| CP8 | `test_complete_inventory_and_immutable_build` | Exactly 656 immutable fresh-build records: initial MANIFEST first, then 655 owned payloads. |
+| CP9 | `test_manifest_parser_guard_isolation`; `test_live_aggregate_owning_projection` | Strict independent aggregate schema, duplicate/numeric/order rejection and exact Unit 20 projection. |
+| CP10 | `test_owned_namespace_guard_isolation`; `test_live_aggregate_owning_projection` | Missing/extra/altered/renamed/nested/redirected/special/executable owned payload checks. |
+| CP11 | `test_future_extension_and_formatting_nonmutation`; `test_consumer_mutants_do_not_freeze_or_rewrite_foreign_data` | Temporary foreign-suite/root-document additions and aggregate formatting variation pass; own corruption still fails. |
+| CP12 | `test_source_stdlib_exactness_and_dependency_boundary`; `test_fresh_process_full_generation_purity_and_settings`; `test_operational_sha_failure_is_not_partial_success` | Actual standalone production source under blocked I/O/dependencies/state access; failures are not partial successful builds. |
+| CP13 | `test_full_endpoint_and_micro_cross_model_references` | All 379 microinstances checked across compact vectors, scalar totals, distinguishable copies and endpoints. |
+| CP14 | `test_both_closed_solvers_384_inputs_768_solves`; `test_same_route_repetition_and_numeric_tie_semantics` | Required 384-input subset; independent optimum/attainment/certificate checks, numeric cross-route equality and same-route repetition. |
+| CP15 | `test_full_endpoint_and_micro_cross_model_references` | Independent finite shore/endpoint references for all 655 recipes; no huge-copy enumeration. |
+| CP16 | Separate authenticated `AUDIT_IMPLEMENTATION.py` execution and GREEN record | 26 actual production-source variants and 27 integration cases with pristine controls; three Phase D preservation families have separate provenance. |
+| CP17 | Saved R2 `TESTS_RED_AUDIT.json` and checkpoint; `CHECK_TRANSITION.py` controls | Both test preflights, exact 94-byte retirement, specific missing-module RED and unchanged 4,440-case inherited baseline. |
+| CP18 | `test_future_extension_and_formatting_nonmutation`; `test_consumer_mutants_do_not_freeze_or_rewrite_foreign_data`; phase-local pin classification | Own immutable versioned payloads stay checkable without a lasting global MANIFEST/root inventory freeze. |
+
+### Independently fixed bytes and mathematical comparisons
+
+The retained registry contains 55 two-vertex microinstances, 324 triangle-support
+microinstances, 120 structural-family recipes, 120 bit-width-sweep recipes and 36
+seeded recipes. These total 655 recipe identities and 599 distinct payload byte
+strings, not 655 distinct graphs. The 655 owned files contain 794,072 bytes.
+The separately preregistered initial MANIFEST contains 126,935 bytes and has SHA-256
+`866541ba2ab7a4d5f2a1e6a4cb0a24da769392e8bb8747a8fe1997a8bb8640d8`.
+This is the historical initial build-product identity, not a continuing whole-file
+pin on the evolving `instances/MANIFEST`.
+
+The consumer reconstructs expected payloads independently and checks committed Phase C
+tables fixed at oracle commit `b9c931b4f3d3c1f473e8f1681544286bae3051fe`, before
+consuming tests and production existed. Neither producer output nor a producer-derived
+MANIFEST establishes the expected answer. Every recipe is independently decoded and
+accepted by the closed Instance boundary. The finite endpoint reference examined
+21,549 nonempty shores: 20,704 feasible and 845 infeasible, with 39,056 endpoint
+evaluations. The 379 microinstances additionally compared 2,433 shores, examining
+13,179 compact vectors, 8,787 scalar totals and 21,487 distinguishable-copy subsets;
+the respective admissible counts were 6,183, 3,981 and 10,349. The sole global Empty
+recipe was `edge-q01-f01-01`; a zero-valued local witness is not global Empty.
+
+For a tested nonempty shore U and boundary total Y, the independent reference checks
+`0 <= Y <= b_q(U)`, odd `f(U)+Y >= 3`, and the raw pair
+`(N,D) = (2(e_q(U)+Y), f(U)+Y-1)`. Positive-denominator cross multiplication
+compares values; raw pairs and tied witnesses need not be equal across solver routes.
+The five adopted `bits-{family}-n04-b16384-qramp-fdegree` stress recipes each have
+independently registered optimum 1.
+
+Each targeted/full/standalone audit execution ran Standard and Accelerated on the
+same required 384 inputs: the 379 microinstances plus those five stress recipes.
+Each execution therefore made 768 required solves and checked 768 serialized
+certificates, with direct raw witness attainment and independent optimum comparison.
+Checker acceptance alone is not an optimality proof. An additional two-recipe,
+two-route repetition check made eight separately counted solves and checked four
+certificates. These campaigns were repeated in different gate executions; 768 is
+not the sum across all executions, and repetitions are not new unique instances.
+No solve campaign on the other structural or seeded recipes is credited here.
+
+### Pure generation and separately counted adversarial evidence
+
+The generator uses only stdlib dependencies and exact integers. Its decimal encoder
+uses base-1,000,000,000 chunks, with each direct conversion bounded by nine digits;
+its output work and storage depend on encoded length. Source review found no
+multiplicity-copy expansion, scan through 0..Q or 0..f(v), mutable global state,
+optimizer invocation, filesystem/environment/clock access or interpreter-setting
+change. Complete generation was exercised in four fresh processes at digit limits
+640/4,300 and hash seeds 1/73, with no project imports and 656 output records each.
+Four additional fresh scenarios exercised the SHA threshold boundary and injected
+MemoryError, RecursionError and OSError; the settings remained unchanged. Injected
+exceptions are not evidence of actual physical resource exhaustion.
+
+The standalone audit detected 26 production-source mutation cases across 24 declared
+families, with pristine controls. It separately detected 27 owning-integration cases
+across 13 families, including manifest/schema/filesystem corruption, forbidden global
+freezes, foreign-row loss and overstrong raw-pair equality. These are not 53 production
+mutants. The remaining three of the 40 preregistered families, U20F34/U20F35/U20F36,
+are Phase D preservation obligations authenticated from the prior RED evidence,
+not replayed or counted as production-source mutations. All frozen consumer/source
+identities remained unchanged by the audit.
+
+The owning integration validates exactly `instances/unit20-v1/` and its 655 manifest
+rows against independent bytes. It rejects corruptions inside that namespace while
+accepting a well-formed temporary foreign suite and unrelated root documents. JSON
+whitespace/object-key order may vary in the live aggregate; entry order and schema
+may not. No production manifest parser or merger is implied. Future suite science
+and authorization are responsibilities of the owning future unit.
+
+### Evidence identities and remaining lifecycle
+
+| Bound artifact | SHA-256 |
+|---|---|
+| `exactfrac/corpus.py` (implementation R1) | `64b04625b219b5de260f08e481e766358bdf39da8280880f563320c05000e369` |
+| `tests/test_corpus.py` (RED R2) | `afe19fa4ef4a2fcb1562ecc6012c97b64464832651604d45c34ed0314eeced80` |
+| `tests/test_cli.py` (exact D20-M1 postimage) | `02a63b0f95000aab30405a979034bdb628e37b69c635094f4cd0e7190796f42d` |
+| `IMPLEMENTATION_GREEN_AUDIT.json` | `c2be2f7b4649b8b7ff4f6f6407e5341d3aad27494736364f043a0b4f2434a21e` |
+| `IMPLEMENTATION_GREEN_CHECKPOINT.txt` | `e718f9544ba30ead644cf5cc299248f1144de332b9524417030ffa9595e3b74d` |
+
+The source Git blob is `15af37506690414421989d3bf0ee9e3340491167`.
+The controlling private GREEN record is
+`unit20-corpus-implementation-r1/live-green.bc8vjkfj/`.
+The original Unit 19 CLI-test identity remains valid for its historical snapshot;
+D20-M1 authorized only the 94-byte MANIFEST-pin deletion, leaving `_CLOSED_PATHS`,
+its MANIFEST membership, the other 41 hashes and every other CLI-test byte intact.
+R1's preapplication lint STOP, R2's lint-only correction, and the earlier oracle
+symbolic-reference closure recovery remain separate preserved provenance records.
+This appendix changes none of those records and authorizes no further test revision.
+
+Phase G changes only `docs/CONFORMANCE.md`, preserving its entire prior prefix.
+The original GREEN audit and saved results are authenticated rather than rewritten
+against this documentation postimage; targeted/full regression and repository Ruff
+run again with the appendix present. All 707 other candidate files and the original
+50-entry index remain unchanged. Complete-candidate staging, staged-tree isolation,
+local implementation commit/postcommit checks and remote closure are still required.
+Unit 20 is not remotely closed by this entry. Final private BUILD/LEARNING notes are
+not produced or inspected in this phase.
+
+Finite checks establish only the enumerated byte, schema, arithmetic, composition
+and fault-detection behavior. They do not prove universal solver correctness, strong
+polynomiality, bit-complexity bounds, performance/scalability, constant memory,
+look-ahead coverage, uniform random sampling or application-domain suitability.
+Unit 21 experimental execution, timings, comparative/operation/bit-growth results and
+Unit 22 minimum-interpreter reproduction, packaging, privacy/licensing and release
+remain outside this entry. Mutable aggregates and future-owned artifacts are not
+permanently frozen by these phase-local identities.
