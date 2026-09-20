@@ -4471,3 +4471,323 @@ Use the existing controlled lifecycle without adding steps or reopening closed t
    frozen. Deliver private BUILD/LEARNING text only after full closure; user save
    confirmation is not a file/hash gate. No REVIEW_REQUEST, extra approval gate,
    mandatory outside reviewer, automatic repair/rollback, or next-unit work.
+
+## Unit 20 transition obligations: MANIFEST pin and lifecycle-aware preservation
+
+These conditions form part of the existing Unit 20 Phase B authority, not an additional
+gate. They specify the narrowly authorized predecessor-test transition and future-pin
+policy; the complete corpus interface, recipe inventory, and consuming-test coverage are
+specified by the rest of the Unit 20 authority and its independently registered oracles.
+
+### U20-TR1. Original R2 authentication and unique deletion
+
+Before the ordinary Phase D application, require `tests/test_cli.py` to contain exactly
+99,918 bytes and 2,000 lines with SHA-256:
+
+```text
+ad1fa1ec0912f0067135176490c8af962d1655057aeaa9618e67e0e4b43e3112
+```
+
+Require exactly one occurrence of this complete line, including four leading spaces and LF:
+
+```python
+    'instances/MANIFEST': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+```
+
+Authenticate its ownership by `_FROZEN_SOURCE_HASHES`, its original line 521, and its
+zero-based half-open byte interval [33538, 33632). The line is exactly 94 bytes, with
+SHA-256 `c1901d71b9bf7003a0fc821a9fca6b45cba3f04ed78407a7c365ff85dd549e78`.
+A preimage mismatch, missing/duplicate line, wrong ownership, or already-retired state
+must stop rather than trigger repair, rebaselining, rollback, or an automatic replay.
+
+### U20-TR2. Full postimage, not a permissive semantic comparison
+
+The only permitted postimage equals the authenticated original with that one complete
+line removed. Require exactly 99,824 bytes and 1,999 lines with SHA-256:
+
+```text
+02a63b0f95000aab30405a979034bdb628e37b69c635094f4cd0e7190796f42d
+```
+
+Require byte-length delta -94 and `new == old[:33538] + old[33632:]`. Record the two
+full-image hashes, sizes, removed-line identity, and byte comparison in Phase D evidence.
+The prefix and suffix outside the deletion must be identical. Reject alternate quote
+styles, whitespace normalization, shifted deletion sites, replacements, and incidental
+edits even when they produce an otherwise equivalent Python module.
+
+As an additional structural check, parse without importing/executing the candidate and
+compare the module AST to the original with only the one dictionary entry removed;
+exclude line/column attributes. Do not use AST equality to excuse any byte mismatch.
+
+### U20-TR3. Preservation of the remaining test behavior
+
+Require the entire `_CLOSED_PATHS` assignment to be byte-identical and to retain
+`instances/MANIFEST`. Preserve all 41 other frozen-hash entries and their existing values.
+Require the complete hash-checking loop, every CLI behavioral assertion, and every
+function/class definition to retain its original bytes. No test deletion, skip, xfail,
+broader dependency exception, or alteration to the embedded reference sources is allowed.
+The user-authorized transition is not permission to silence a genuine CLI regression.
+
+During Phases B and C the CLI test remains at the original R2 hash. In Phase D lint the
+exact authorized candidate under the repository's own Ruff and configuration before
+application, then retain the existing tests-first RED and inherited-regression procedure.
+A successful byte-transition check is not GREEN, implementation completion, or evidence
+that new corpus assertions have executed. Preserve all earlier evidence unchanged.
+
+### U20-TR4. Negative controls for the transition checker
+
+Exercise at least the exact permitted deletion as a positive control and guard-isolated
+rejections of: wrong original bytes; the unchanged original as the alleged postimage;
+deleting a different line; deleting the `_CLOSED_PATHS` entry as well; altering another
+pin; changing/removing the hash loop; changing a CLI assertion; and a whitespace-only
+extra edit. Expected rejection cannot be satisfied by an unrelated earlier fixture error.
+These controls belong to the existing Phase D package/transition review, not a new gate.
+
+### U20-TR5. Future-population pin audit through Units 21-22
+
+Review each newly proposed enduring executable hash pin against the remaining schedule.
+Reject a pin on any file scheduled to be populated, extended, regenerated, or replaced
+later, including `instances/MANIFEST`, planned `instances/` payloads, experiment outputs,
+and scheduled release artifacts. Also reject a blanket directory digest, permanent
+empty/absence assertion, or fixed global inventory that has the same blocking effect.
+
+Preserve a distinction between immutable historical evidence/phase-local before-and-after
+authentication and enduring live-file assertions. Approved expected hashes for an
+explicitly immutable, finalized versioned payload are not placeholder pins; they must be
+scoped to that payload and must not lock later-populated aggregate files or directories.
+Do not automatically retire any other legacy pin under the present exception.
+
+The owning corpus/experiment tests must instead check their adopted schemas, exact scoped
+membership and order, independently fixed hashes/content, deterministic regeneration,
+and rejection of missing, extra, or altered data. A generator and its own self-produced
+checksums are not independent expected answers. Record which future-mutable paths were
+reviewed and how integrity remains checked without blocking scheduled population.
+
+## 45. Unit 20 obligations — reproducible initial corpus
+
+These obligations implement DESIGN D20-C1--C10 together with the unchanged preceding
+U20-TR1--TR5 addendum. They prospectively adopt `tests/test_corpus.py`; no new tests,
+corpus module, MANIFEST bytes, or payloads exist as a consequence of Phase B.
+The 655-recipe inventory is an input-data scope, not a pytest census or performance result.
+
+### CP1 — public surface and strict recipe domain
+
+Require precisely the three functions/signatures/annotations and `__all__` in D20-C2.
+Test exact return containers and leaf types. Reject non-string, bool, str-subclass,
+unknown ID, alternate case, whitespace, altered padding, Unicode lookalike, path-like,
+and malformed IDs with plain ValueError, without output, repair or side effects.
+No artificial resource limit may silently delete an adopted recipe.
+
+### CP2 — qualified inventory and non-deduplication
+
+Independently reconstruct the D20-C3 ID set from the registered table, with exact stratum
+counts 55,324,120,120,36 and total 655. Require strict ASCII ordering and unique IDs.
+Keep every qualified recipe even when instance bytes happen to coincide. Guard-isolated
+controls must detect missing/repeated IDs, reordered enumeration, or payload-based
+merging; do not equate distinct identities with distinct mathematical inputs.
+Neither the inherited 400-entry registry nor the 50-file closed repository is rebaselined.
+
+### CP3 — support construction and canonical edge references
+
+Directly derive the five deterministic supports, micro support slots, and seeded support
+from the prose and compare endpoint pairs, order and support count. Zero triangle slots
+are absent, not q=0 edges. Include disconnected matchings, full cliques, cycle closure,
+strict orientation, no duplicates/loops/isolates, and the n/2 bipartition boundary.
+Assign ramp multiplicities after final edge sorting, not in pair-discovery order.
+A deterministic wrong ordering is still wrong.
+
+### CP4 — seeded recipe independent of runtime randomness
+
+Recompute the exact message/LF/SHA-256 first-byte threshold from D20-C4 without importing
+production generation. Both adopted seeds and every adopted n must be covered.
+Check include threshold `<64`, not `<=64`; check that the backbone cannot be discarded.
+A guard-isolated threshold mutation must use a private boundary control by injecting an actual first byte 64 at a nonbackbone pair
+for an adopted seeded ID; do not invent a new public recipe to make that mutation detectable.
+Record seeds explicitly and reject undeclared seeded IDs. No Python hash(), global RNG,
+time, entropy, rejection sampling or process-order dependency is permitted.
+
+### CP5 — exact q and f construction; active regime
+
+For every recipe independently recompute q, Q and d_q; check exact binary widths, ramp
+edge_ref/seed roles, and each f formula. Verify all integer/shape/ordering/active
+conditions before calling a closed solver or interpreting a certificate. Micro capacities
+are taken exactly from the ID. Test b=1, degree-one near/half cases, alternating dense
+indices, disconnected support and large integers. Distinguish construction from
+validation: no unsupported externally supplied capacity is clamped into validity.
+
+### CP6 — independently pinned instance bytes
+
+Compare every generated payload byte-for-byte, by length and digest against independently
+preregistered Phase C expectations. Require exact instance schema and order, canonical
+integer tokens, compact separators and final LF. Derive the expected byte stream without
+production serialization. Detect a coherent change to both a payload and its self-produced
+manifest; the wrong file plus its matching checksum must not pass.
+Validate every decoded payload using a separate reference and the closed Instance boundary.
+
+### CP7 — big-integer codec and resource boundary
+
+Exercise all declared bit widths including 16384; check no full-value decimal conversions,
+no digit truncation, and no leading-zero chunk errors. Run deterministic generation in
+fresh processes at decimal limits 640 and 4300 and hash seeds 1 and 73, compare all
+655 payload identities and the initial MANIFEST in each run, and require settings
+unchanged. Before/after snapshots cannot substitute for exercising the large inputs.
+Propagate MemoryError/RecursionError and operational exceptions rather than interpreting
+them as malformed recipes, silently skipping rows, or returning a partial successful build.
+
+### CP8 — build return value and initial MANIFEST
+
+Require exactly 656 immutable records from build_corpus: MANIFEST first, then the 655
+owned relative paths in order. No README or source is included in this pure build return.
+Independently validate each manifest row, recipe-to-path relation, byte count and digest.
+Compare the initial manifest to its independent Phase C byte recipe/length/digest.
+This exact return/initial-byte assertion is scoped to the isolated generator product,
+not the live aggregate MANIFEST after a later unit adds another suite.
+
+### CP9 — strict aggregate schema and owning-suite projection
+
+The consuming test's independent parser must reject duplicate decoded keys, wrong or
+unknown fields, wrong format, bool/float/string byte counts, noncanonical numeric tokens,
+invalid lower-case SHA-256, invalid suite/recipe/path grammar, duplicate identities,
+unsorted paths, traversal and symlink redirection. Parse an external MANIFEST independently;
+do not accept it solely because build_corpus emits the same value.
+For the live aggregate require its unit20-v1 projection to match the independently fixed
+655 rows and their payloads, not whole-file equality to the initial MANIFEST.
+Whitespace and object-key-order variation are acceptable to the aggregate consumer;
+entry order is not. There is no new production manifest-reader API to test by implication.
+
+### CP10 — exact owned filesystem inventory, not a global freeze
+
+Under `instances/unit20-v1/` reject missing, extra, changed, renamed, nested, symlinked,
+special or executable payload files. Compare actual bytes independently to Phase C,
+not only to the live MANIFEST. Validate parent path nonredirection before reading.
+Do not apply the owned namespace's count/digest/absence checks to all of `instances/`,
+`experiments/`, `results/` or the repository. No ongoing pin covers instances/README.md.
+Owning tests may enforce the declared immutable unit20-v1 scope; they cannot block
+separately authorized suites or later root-level documentation.
+
+### CP11 — explicit future-extension positive and negative controls
+
+Starting from a valid temporary aggregate, add a well-formed foreign suite (for example
+unit21-v1) with a new payload, matching digest/length and correctly sorted row. Require
+all Unit 20 owning-scope checks to continue to pass. Additional unrelated root-level
+documentation also must not break those checks. This is a temporary integration control,
+not production creation of a Unit 21 artifact or authorization of its semantics.
+In the same fixture keep failures for an extra file/row inside unit20-v1, a wrong own
+payload even with its recomputed digest, a missing own entry, or a duplicate path.
+No fixed aggregate digest, full-directory tree hash, global row count, or permanent
+future-file absence check is allowed to substitute for this boundary.
+
+### CP12 — no I/O, hidden dependencies or mutable state in generation
+
+Audit source and execute the three public functions with filesystem/environment/network/
+subprocess/randomness access blocked. No solver, checker, test, catalogue or handoff
+import is allowed. Require no changes to caller state, process settings, or repository
+files. The module remains loadable on its own with only its stdlib dependencies.
+Test operation exceptions by controlled dependency injection when applicable; a failed
+build raises, never reports a subset as a complete successful corpus.
+
+### CP13 — microinstance mathematical cross-model reference
+
+For all 379 microinstances independently enumerate nonempty shores and compact boundary
+count vectors; compare scalar-total and expanded distinguishable-copy subsets (Q<=6).
+Recompute admissibility and N=2(e+Y), D=f(U)+Y-1 from definitions. Compare with the
+independent endpoint enumeration. Count exact inputs and evaluations separately from
+pytest items. The two-vertex q=1,f=(1,1) recipe is the sole Empty instance in this corpus;
+other zero-valued local witnesses must not be mistaken for global Empty.
+These finite cross-model references are not a general expanded-copy benchmark solver.
+
+### CP14 — both closed solvers on the declared audit subset
+
+The mandatory implementation audit subset is all 379 microinstances plus the five
+`bits-{family}-n04-b16384-qramp-fdegree` recipes, for 384 inputs and 768 actual solves.
+Execute Standard and Accelerated on each; require numeric equality to the independently
+registered optimum and to one another. Independently build/serialize/check each output
+certificate and re-evaluate its raw attainment. Do not require equal tied raw pairs or
+identical witnesses across routes. Do require deterministic repetition when testing the
+same route. The checker alone does not establish optimality.
+No claim of solving/timing all 655 or of equal operation counts across bit widths is
+licensed by this subset. Preserve source/CLI configuration and all telemetry semantics.
+
+### CP15 — full finite endpoint reference and honest evidence
+
+Independently enumerate shores/endpoints for every declared recipe and register its exact
+optimum or Empty result in Phase C. For huge q use attainable endpoint totals, never a
+scan through 0..Q, all boundary counts, or unit-copy expansion. Report actual executed
+counts and reference modes. Match expected quotients by positive-denominator cross
+multiplication; phase-local hashes certify byte identity, not mathematical validity.
+No output timing or empirical support-size promise is part of this authority.
+
+### CP16 — adversarial implementations and preservation controls
+
+Preregister at least one guard-isolated detection case for each of: omitted/duplicated
+recipe; deduplication of equal inputs; edge-order/ramp mismatch; wrong seed message;
+wrong threshold boundary; missing cycle edge; wrong q width; half/near/off-by-one f;
+full-token decimal conversion; altered digit chunk; truncated LF; wrong manifest size;
+wrong path; changed own payload with a recomputed hash; missing/extra own file; symlink
+redirection; global-MANIFEST freeze; accidental deletion of foreign rows in a consumer;
+solver/test/handoff dependency; hidden I/O; and partial successful build after failure.
+
+Use actual production mutants when the fault lies in production. Filesystem and
+aggregate-extension faults target the owning test/validation integration, which must be
+reported separately rather than called production-generator mutants. Include a pristine
+passing control and show that the intended assertion, not an unrelated prior error,
+detects each fault. A source-only absence assertion is not an executed adversarial audit.
+The D20-M/U20-TR transition controls remain required in their ordinary Phase D review.
+
+### CP17 — exact Phase D transition and tests-first RED
+
+Authenticate the full original CLI R2 bytes, remove exactly the authorized 94-byte line,
+and require the full postimage SHA-256
+`02a63b0f95000aab30405a979034bdb628e37b69c635094f4cd0e7190796f42d`.
+Retain `_CLOSED_PATHS`, its MANIFEST entry, the remaining 41 pins and every other byte.
+Run the repository's live Ruff on both test postimages before application.
+
+The new consuming test imports `exactfrac.corpus` before accessing future corpus paths
+or collecting fixture-dependent cases. With no production module present, require
+exactly one collection error, ModuleNotFoundError naming `exactfrac.corpus`, pytest
+exit 2, zero collected new cases and zero new assertions executed. Missing payload
+errors, malformed catalogue data, or another import failure do not count as intended RED.
+The inherited suite excluding tests/test_corpus.py must remain 4440 collected/passed,
+with CLI 962, checker 1033 and certificate 458, no skips/deselections/xfails.
+No skeleton module or corpus population is permitted in this tests-first transition.
+
+### CP18 — prospective mutable-path classification
+
+Before any enduring pin is added, classify it against Units 21--22. Root MANIFEST,
+instances/README.md, future suite directories, experiment/result outputs and scheduled
+release documentation are mutable or future-owned; no placeholder pin or equivalent
+blanket membership/digest check is adopted. The finalized unit20-v1 payloads are scoped
+immutable data; their independent expected bytes remain checkable. Historical package
+hashes, source hashes and phase-local conservation records are not removed by this rule.
+An unexpected pre-existing conflict requires explicit bounded authority, not automatic
+retirement under the single already-approved exception.
+
+## 46. Unit 20 completion gate — initial corpus
+
+Follow the existing unit lifecycle. This section adds no extra approval, audit-service,
+subcommit or background monitoring gate. Phase B is documentation-only and incomplete
+until the combined two-document authority is reviewed, committed and remotely closed.
+Phase C separately fixes and closes independent human-readable oracle tables before
+new consuming tests and production. Do not rewrite the prior 400-entry registry or
+protected catalogue prefixes. Phase D has exactly the two test paths specified above.
+
+Before Phase E, preserve the new tests-first image and the precise retired CLI-test
+image. GREEN requires actual consuming tests, the unchanged inherited baseline,
+repository Ruff and authenticated imports, exact data/manifest validation, independent
+reference comparisons, the 384-input/768-solve audit, fresh-process generation checks,
+and declared adversarial controls with honest separate counts. No finite assertions
+or collected-case count alone substitute for those substantive obligations.
+
+Implementation/data scope is `exactfrac/corpus.py`, `instances/MANIFEST`,
+`instances/README.md`, and the 655 payloads under `instances/unit20-v1/`; no experiments,
+results, solver/CLI/configuration/source rewrite, release or legacy evidence rewrite.
+Only the already-authorized test retirement and the new owning test belong to Phase D.
+The new CONFORMANCE entry records what was actually exercised and what remains for
+Unit 21/22; it does not mark future campaign or release work as done.
+
+After GREEN/conformance, separately stage exactly the complete authorized candidate,
+record its tree, test the isolated staged-tree export with import origins, commit the
+same index without restaging, run postcommit regression/Ruff, and remotely close the
+exact commit. Preserve all predecessor evidence including Unit 19's original GREEN,
+archive restoration and staged export. Deliver final Unit 20 BUILD/LEARNING notes only
+after unit remote closure. Their content remains outside every repository gate.

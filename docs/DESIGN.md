@@ -3461,3 +3461,391 @@ the development interpreter. If the private history contains anything that shoul
 clean public release repo is created (the Foundation Portfolio precedent). Target: the
 audit runs Sep 7–8 so a passing candidate can still go public at CPF start; a private
 week beats a premature public repo.
+
+## Unit 20 authority addendum: MANIFEST transition and future-population safeguards
+
+Status: author-authorized conditions for incorporation into the existing documentation-only
+Unit 20 Phase B authority. This addendum does not execute Phase D or create a separate
+application, approval, commit, or review gate. It does not, by itself, specify the complete
+corpus interface or corpus recipe inventory.
+
+### D20-M1. Exact, phase-limited retirement of the empty MANIFEST pin
+
+The sole authorized amendment to the closed Unit 19 CLI test is deletion of one complete
+line from the literal `_FROZEN_SOURCE_HASHES` dictionary in `tests/test_cli.py`:
+
+```python
+    'instances/MANIFEST': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+```
+
+The line includes four leading ASCII spaces, the trailing comma, and its single LF
+terminator. Its exact UTF-8 byte length, including LF, is **94 bytes**. No substitute
+assertion, replacement digest, formatting change, or other test amendment is authorized.
+
+| Identity | Frozen Unit 19 R2 preimage | Required Unit 20 Phase D post-retirement image |
+|---|---|---|
+| SHA-256 | `ad1fa1ec0912f0067135176490c8af962d1655057aeaa9618e67e0e4b43e3112` | `02a63b0f95000aab30405a979034bdb628e37b69c635094f4cd0e7190796f42d` |
+| Bytes | 99,918 | 99,824 |
+| Lines | 2,000 | 1,999 |
+
+The signed byte-length difference (postimage minus preimage) is **-94**. In the
+hash-authenticated preimage, the removed line is line 521 and occupies the zero-based,
+half-open byte interval **[33538, 33632)**. Line number and offset locate the deletion;
+they do not replace the full-preimage hash, unique-line check, or exact postimage check.
+
+Let `old` denote the complete authenticated R2 bytes. The mandatory comparison is:
+
+```text
+new == old[:33538] + old[33632:]
+```
+
+The removed slice must equal the exact line above with its LF, must occur exactly once
+in `old`, and must be the `instances/MANIFEST` entry in `_FROZEN_SOURCE_HASHES`.
+Require both full hashes, both lengths, and exact equality, not merely AST equivalence.
+The Phase D postimage must be rejected if any other byte differs. No newline conversion,
+whitespace cleanup, reordering, rename, altered quote style, or reserialization is allowed.
+
+Record and close this exception with the ordinary Phase B documentation authority before
+its use. Phase B still changes only `docs/DESIGN.md` and `docs/TEST_PLAN.md`; the test
+retains its complete original R2 bytes in Phases B and C. The one-line retirement occurs
+only in the normal Unit 20 Phase D tests-first transition, together with the consuming
+tests adopted by the complete Unit 20 authority. It does not populate the MANIFEST or
+introduce corpus implementation in Phase D. Phase C independently registers expectations;
+Phase E remains responsible for the separately authorized corpus implementation/data.
+
+### D20-M2. Everything outside that entry is preserved
+
+`instances/MANIFEST` remains in `_CLOSED_PATHS`; that complete assignment is byte-identical.
+The hash-checking loop, all **41** remaining `_FROZEN_SOURCE_HASHES` entries, all CLI
+behavioral assertions, imports, embedded reference sources, functions, and classes are
+untouched. The original dictionary has 42 entries; only the named entry is retired.
+The module AST must equal the original AST with only that dictionary key/value pair
+removed, disregarding source-location attributes that shift after the deleted line.
+AST equivalence supplements, never substitutes for, byte conservation.
+
+The Unit 19 R2 hash remains the valid historical identity in its original packages,
+checkpoints, snapshots, and notes. Do not rewrite those records. The Phase D evidence
+records the new post-retirement hash and the explicit relation to the original R2 image.
+This authorization does not reopen any other existing test pin, including pins on
+source, configuration, release documentation, or other files.
+
+### D20-M3. No premature frozen-hash pins on future-populated artifacts
+
+No new enduring executable frozen-hash pin may be placed on a file that a later scheduled
+unit is to populate, extend, regenerate, or replace. This applies in particular to
+`instances/MANIFEST`, planned corpus files under `instances/`, experiment outputs, and
+other scheduled Unit 21-22 artifacts. Do not recreate the same restriction indirectly
+with a directory-tree digest, blanket frozen inventory, permanent empty/absence assertion,
+or fixed global membership/count that rejects separately authorized future population.
+The exact bytes of a placeholder are not a lasting functional requirement.
+
+Before adopting a new pin, classify the path against the remaining unit schedule. Keep
+lifecycle-mutable artifacts out of enduring predecessor-test frozen-hash dictionaries.
+Use the owning unit's declared schema, exact membership/order rules for its scoped data,
+independently established expected content, reproducibility checks, and adversarial
+missing/extra/altered-file checks. These must preserve substantive integrity without
+forbidding later authorized work. Merely testing existence is insufficient.
+
+This rule does not ban historical byte-identity records or phase-local authentication.
+An immutable prior snapshot/package may retain its hashes, and a controlled operation may
+pin its complete preimage and expected postimage. Independently preregistered hashes of
+finalized, explicitly immutable versioned corpus payloads remain valid within their
+owning scope, provided those exact paths are not scheduled for later population or change.
+Such checks must not become a freeze of a mutable aggregate MANIFEST, future output file,
+or the entire `instances/` or experiment-output directory across later units.
+
+The same classification and source-intake check applies prospectively in Units 21 and 22.
+Any already-existing pin that conflicts with their scheduled work must be surfaced and
+resolved under explicit, bounded authority, not silently removed or refreshed. This
+addendum authorizes no further legacy-pin retirement and grants no release permission.
+
+## 13. Unit 20 corpus authority — versioned, reproducible initial corpus
+
+Status: remaining documentation-only Unit 20 Phase B authority. This section completes
+corpus interface and inventory decisions alongside, not instead of, the preceding
+D20-M1--D20-M3 addendum. Its adoption does not perform the authorized Phase D deletion.
+The complete preceding document, including that addendum, is preserved byte-for-byte.
+
+### D20-C1. Source boundary and ownership
+
+The governing V2.2 labels are `def:instance`, `ass:active`, `def:parameter`,
+`def:complexities`, `lem:aggregation`, `lem:interval`, `prop:expanded-equivalence`,
+`lem:empty`, `lem:endpoint-difference`, `prop:endpoints`, and `thm:main`.
+They fix mathematical semantics, not a software corpus schema or a benchmark grid.
+The API, names, finite grids, seeded support recipe, serialization, and scoped manifest
+rules below are new Unit 20 engineering rulings. They are not quotations from the
+mathematical source or implementations already completed by a predecessor.
+
+Unit 20 delivers an initial reproducible input corpus, its pure generator, owning tests,
+and data-integrity evidence. Unit 21 owns experimental execution, run metadata, timings,
+operation/bit-growth observations, comparative campaigns, and result tables. Unit 22
+owns release, minimum-interpreter reproduction, privacy/licensing and public-export
+checks. Existing experiment and release placeholders are not silently implemented here.
+Neither a private paper-planning proposal nor the source's historical 11,503-instance
+falsification study becomes an extra Unit 20 deliverable by reference.
+
+### D20-C2. Exact production surface; no filesystem interface
+
+Adopt `exactfrac/corpus.py` and `tests/test_corpus.py`. The production module is a
+stdlib-only, deterministic input generator; it is not on the solver's correctness path.
+Its `__all__` is exactly the following tuple, in this order:
+
+```python
+("build_corpus", "generate_instance", "recipe_ids")
+
+def recipe_ids() -> tuple[str, ...]: ...
+def generate_instance(recipe_id: str) -> bytes: ...
+def build_corpus() -> tuple[tuple[str, bytes], ...]: ...
+```
+
+There are no other public callables, public record/error classes, mutable public
+registries, default parameters, keyword-only parameters, or variadic parameters.
+`generate_instance` has one positional-or-keyword parameter. It accepts only an exact
+built-in `str` equal to one of the 655 IDs in D20-C3; nonmembers and all other types,
+including subclasses, raise plain `ValueError`. Reject rather than strip, case-fold,
+coerce, normalize, or interpret arbitrary paths. This deliberately finite interface is
+not an undocumented general-purpose graph generator.
+
+`recipe_ids` returns the exact tuple of qualified IDs, strictly sorted by ASCII bytes.
+`generate_instance` returns the exact instance bytes fixed by its recipe.
+`build_corpus` returns an exact tuple of `(relative_path, exact_bytes)` tuples: first
+`("MANIFEST", initial_manifest_bytes)`, then every owned payload, sorted by ASCII path.
+All returned objects are immutable. There is no generator object, delayed I/O, shared
+mutable buffer, or optimizer call. Calling any of these functions performs no filesystem
+read/write, environment/clock access, subprocess, network operation, or random-state use.
+No `main`, module-entry CLI, installation entry point, writer, reader, or merge API is
+adopted. A caller materializes a build only into a fresh destination it owns.
+
+The initial MANIFEST returned by `build_corpus` describes only this suite. It is a
+reproduction product for a fresh directory, not permission to overwrite a later aggregate
+MANIFEST, drop other suites, or assert whole-file identity against that later aggregate.
+
+### D20-C3. Exhaustive finite recipe inventory and identifiers
+
+The owning suite is `unit20-v1`, with 655 distinct recipe IDs. The five rows below are
+ordered here for exposition; the public registry and payload enumeration use ASCII ID
+order. Integers in IDs use ordinary decimal without signs; only the indicated fields
+are zero-padded. Braces describe substitutions, not literal filename characters.
+
+| Stratum | Exact parameter domain | ID recipe | Count |
+| --- | --- | --- | --- |
+| Two-vertex micro | q in 1..5; f0,f1 each in 1..q | `edge-q{q:02d}-f{f0:02d}-{f1:02d}` | 55 |
+| Three-vertex micro | a,b,c in 0..2; all of a+b,a+c,b+c positive; f0 in 1..a+b, f1 in 1..a+c, f2 in 1..b+c | `tri-q{a}-{b}-{c}-f{f0}-{f1}-{f2}` | 324 |
+| Structural | family in path,cycle,complete,bipartite,matching; n in 4,6,8; bits in 1,8; fmode in unit,half,near,degree | `struct-{family}-n{n:02d}-b{bits:05d}-f{fmode}` | 120 |
+| Fixed-support bit sweep | same five families; n=4; bits in 1,8,64,256,4096,16384; qmode in flat,ramp; fmode in unit,degree | `bits-{family}-n04-b{bits:05d}-q{qmode}-f{fmode}` | 120 |
+| Seeded support | n in 4,6,8; bits in 1,8,64; fmode in half,alternating; seed in 1,73 | `seeded-n{n:02d}-b{bits:05d}-f{fmode}-s{seed:02d}` | 36 |
+
+Counts are 55+324+120+120+36=655, including 379 microinstances. For the triangle
+stratum, exactly two positive support slots contribute 90 capacity assignments and
+three positive slots contribute 234. Zero slots are omitted from the serialized support.
+Repeated mathematical inputs across different recipe IDs are intentional. Do not
+deduplicate by payload bytes, graph isomorphism, digest, objective value, or witness.
+The prior 400-identity solver/checker registry remains an unchanged historical registry;
+these 655 IDs neither replace it nor claim 655 previously unseen mathematical graphs.
+
+The micro edge is `(0,1,q)` with f=(f0,f1). Triangle slots a,b,c mean (0,1), (0,2),
+(1,2), respectively; retain only positive slots in that order and use f=(f0,f1,f2).
+Micro recipes have no pseudorandom choices. Their exact supplied capacities are not
+clamped or repaired. Every other parameter combination or alternate ID spelling is
+outside this version's generator domain, even if it would describe a valid graph.
+
+### D20-C4. Support recipes and explicit seed semantics
+
+All vertices are dense indices 0..n-1. All supports are sorted lexicographically by
+(u,v), with u<v, before edge_ref-dependent multiplicities are assigned.
+
+- `path`: (i,i+1) for 0<=i<n-1.
+- `cycle`: that path plus (0,n-1).
+- `complete`: every (u,v) with 0<=u<v<n.
+- `bipartite`: every (u,v) with 0<=u<n/2<=v<n; all adopted n are even.
+- `matching`: (0,1),(2,3),...,(n-2,n-1). Disconnection is intentional; isolation is not.
+
+The seeded family starts with the cycle support. For each remaining pair u<v, compute
+SHA-256 of this exact ASCII message, with LF after every line including the last:
+
+```text
+exactfrac-u20-seeded/1
+{seed}
+{n}
+{u}
+{v}
+```
+
+Here the substitutions are unpadded decimal integers. Include that pair iff the first
+digest byte, interpreted as an integer 0..255, is less than 64. This is a fixed,
+seed-indexed deterministic recipe, not a claim of independent uniform graph sampling.
+It has no resampling loop, entropy source, Python `hash`, or unspecified PRNG algorithm.
+Visit candidate pairs in lexicographic order. The cycle backbone guarantees no isolated
+vertices; q/f generation occurs after the final canonical support is known.
+Structural and bit-sweep recipes have seed 0 by definition, not an unrecorded RNG default.
+Micro recipes are explicit. Seed 0 is not an accepted seeded-stratum identifier.
+
+### D20-C5. Multiplicity and capacity recipes
+
+For nonmicro recipes write b=bits and j=edge_ref in the final support. Structural
+recipes use flat multiplicities. Bit-sweep recipes use their declared qmode. Seeded
+recipes use ramp multiplicities. Set:
+
+```text
+flat: q_j = 2^b - 1
+ramp: q_j = 2^(b-1) + ((j + seed) mod 2^(b-1))
+```
+
+Thus all q_j are positive and have exactly b binary digits, including b=1. The seed
+in a bit-sweep ramp is 0. Edge count remains the support-edge count, never Q.
+Compute d_q(v) by summing incident q_j once at each endpoint. Then:
+
+```text
+unit:        f(v) = 1
+half:        f(v) = (d_q(v) + 1) // 2
+near:        f(v) = max(1, d_q(v) - 1)
+degree:      f(v) = d_q(v)
+alternating: f(v) = 1 for even v; d_q(v) for odd v
+```
+
+These are input-construction formulas, not changes to Instance validation. Since every
+support has positive degree, each formula yields 1<=f(v)<=d_q(v). The names `half`,
+`near`, and `alternating` describe those formulas only; do not infer balanced capacities,
+uniform sampling, a guaranteed parity mix, or an optimizer execution path from a name.
+No multiplicity expansion or iteration over 0..q_j, 0..Q, or 0..f(v) is permitted in
+production generation. Output encoding necessarily scales with encoded length; this
+module has no strong-polynomiality claim. The bit sweep does not require constant
+objective values, identical witnesses, or identical operation counts as bits vary.
+
+### D20-C6. Exact instance-byte contract
+
+Each payload is one `exactfrac-instance/1` object with keys, in order, `format`, `n`,
+`edges`, `f`; no labels or extra metadata. Use canonical edge order, compact comma/colon
+separators, ordinary ASCII integer tokens (no leading zeros or negative zero), and
+exactly one trailing LF. There is no BOM, indentation, comment, alternate numeric
+notation, quoted integer, platform newline, or trailing whitespace beyond that LF.
+No labels are needed for these recipes; their absence does not narrow the Instance API.
+
+Large integer serialization must work under the interpreter's existing decimal-conversion
+limit, including 640 and 4300, without changing that setting. Use a bounded-chunk
+integer-to-decimal algorithm, not `str(huge_int)`, formatting a full huge integer, or
+`json.dumps` on an object containing huge integers. Every direct decimal conversion is
+of at most nine digits. JSON metadata with bounded integers may use the stdlib encoder.
+No use of floats, Fraction, decimal, eval, exec, dynamic imports, producer codecs, or
+private verifier routines is needed. Imports are restricted to stdlib modules; no
+`exactfrac.*`, `exactfrac_verify.*`, tests, catalogue, or private handoff dependency.
+
+### D20-C7. Versioned MANIFEST and immutable owned payload namespace
+
+A payload's path relative to `instances/` is `unit20-v1/{recipe_id}.json`.
+The aggregate `instances/MANIFEST` has schema:
+
+```json
+{"format":"exactfrac-corpus-manifest/1","entries":[{"suite":"unit20-v1","recipe":"...","path":"unit20-v1/....json","bytes":123,"sha256":"..."}]}
+```
+
+The example's ellipses, byte count, and digest are illustrative, not oracle values.
+The root has exactly `format` and `entries`. Entries have exactly `suite`, `recipe`,
+`path`, `bytes`, `sha256`. Required types are exact dict/list/str/int after a strict JSON
+parse; bool is not a byte count. `bytes` is positive; `sha256` is exactly 64 lowercase
+hex digits. Root and entry duplicate decoded keys are invalid. Numeric byte counts
+are nonnegative ordinary integer tokens, not floats, exponent notation, or strings.
+
+A suite matches `unit[1-9][0-9]*-v[1-9][0-9]*`, with no leading-zero component.
+A recipe matches `[a-z0-9]+(?:-[a-z0-9]+)*`. A path equals
+`suite + "/" + recipe + ".json"` exactly: no absolute path, `..`, backslash,
+empty segment, encoded separator, alternate suffix, or nested directory. Entries are
+strictly ascending by ASCII path; paths and (suite,recipe) pairs are unique. The owning
+suite has exactly the D20-C3 registry. All its payloads are regular nonexecutable files,
+not symlinks or paths reached through symlinked parents.
+
+The generator emits the initial root/entry key order displayed above, compact ASCII
+JSON and one LF. Phase C fixes its exact expected bytes independently. This initial
+encoding is a historical reproduction identity, not a permanent byte pin on the live
+aggregate. A consumer of the evolving aggregate accepts JSON whitespace/key order
+variation but rejects invalid schema, duplicate keys, invalid ordering, and duplicate
+identity. Its Unit 20 projection must match the independently declared 655 entries and
+the exact files in `instances/unit20-v1/`, including hashes and lengths.
+
+The versioned Unit 20 payload paths are finalized by this unit and are not scheduled
+for mutation by Units 21--22. New suites or changed datasets use a different namespace;
+future work may extend the aggregate MANIFEST or add root-level documentation without
+invalidating the Unit 20 projection. Do not assert a global directory digest, global
+file count, a fixed aggregate digest, or absence of future suites. Missing, extra,
+nested, changed, renamed, or redirected files inside the owned namespace must still
+fail. A syntactically valid foreign suite is not a claim of authorization or scientific
+validity; its owning unit supplies its expected inventory and substantive checks.
+
+`build_corpus` emits only MANIFEST and the 655 payloads: exactly 656 records for this
+isolated build product. It neither reads nor merges any live aggregate. The count is
+scoped to its own return value and must never be applied to the entire repository or
+to an aggregate MANIFEST after other suites are added.
+
+### D20-C8. Independent oracle registration, not checksum self-certification
+
+Before new consuming tests or production, Phase C adds independently derived tables to
+ORACLE_CATALOG. Register every recipe ID, path, instance length/digest, support count,
+Q, degree/capacity data or bounded summaries sufficient to cross-check the construction,
+and independent exact optimum/Empty status. Huge values use compact unambiguous recipes
+in human tables; never a full-token decimal conversion that requires changing limits.
+Also preregister exact initial MANIFEST bytes/length/digest and the inventory fingerprint.
+The production generator and its generated manifest cannot serve as their own oracle.
+
+Derive support/multiplicity/capacity and expected bytes from this prose using a separate
+private implementation. Validate all 655 independently against the active input model.
+For all 379 microinstances, enumerate admissible compact count vectors and independently
+selected expanded unit-copy subsets (Q<=6), compare to scalar totals and endpoint extrema.
+For every recipe, an independent nonempty-shore endpoint enumeration is feasible as a
+bounded reference (n<=8); it never enumerates all integer totals for huge multiplicities.
+Use `lem:interval` and `lem:endpoint-difference`, not production branch logic. Register
+numeric quotient expectations by cross multiplication, not equality of tied raw pairs.
+These are prospective finite oracle obligations, not executions claimed in Phase B.
+
+Preregister generator, serialization, scoped-manifest, nonmutation and future-extension
+fault families. Include guard-isolated missing/extra/wrong-content/wrong-recipe files,
+seed/order changes, altered large-digit chunks, a digest recomputed from wrong payload,
+foreign-suite extension, and the D20-M1--M3/U20-TR1--TR5 preservation boundary.
+
+### D20-C9. Verification scope and claim boundary
+
+Every materialized payload is checked against the independent Phase C expectations,
+not just the self-emitted manifest; independently parse and validate all 655.
+During implementation audit run both closed Standard and Accelerated solvers on all
+379 microinstances and on each of these five stress recipes:
+`bits-{family}-n04-b16384-qramp-fdegree`, for the five families in D20-C3.
+This is 384 inputs and 768 actual solves, separately counted from pytest items.
+For each output, independently verify the emitted certificate and compare its attained
+value with the registered endpoint optimum. Repeat generation in fresh processes under
+both hash seeds 1,73 and both decimal limits 640,4300 without changing either setting.
+Record actual work; do not claim the larger structural instances were timed or solved
+unless those executions actually occurred. Unit 21 retains the full campaign.
+
+The C0 checker proves admissibility and attainment (or the valid Empty case), not
+optimality. Optimality comparisons here come from the separate finite reference.
+The source theorem supplies the universal mathematical carrier. A finite corpus neither
+proves universal correctness/strong polynomiality nor establishes practical support
+limits, favorable wall-clock scaling, application validity, or release readiness.
+Neither input strata nor their names promise all branch paths/look-ahead outcomes.
+Any such claim requires explicit observed or independently proved coverage later.
+
+### D20-C10. Phase scopes, evolution, and preservation
+
+Phase B now changes only DESIGN/TEST_PLAN; all prior bytes including the approved
+addenda remain exact prefixes. Keep both documents unstaged for the ordinary review.
+The complete authority, including the addenda, follows ordinary staging/local commit/
+regression/push closure. No separate addendum subcommit or extra unit gate is introduced.
+Phase C changes only ORACLE_CATALOG under append-only historical protections. The empty
+MANIFEST and full original Unit 19 R2 test remain unchanged through Phases B and C.
+
+Phase D introduces only `tests/test_corpus.py` and applies exactly the already-authorized
+94-byte deletion in `tests/test_cli.py`; no other predecessor edit is permitted.
+The intended initial RED is exactly the missing `exactfrac.corpus` import. No stub is
+installed to bypass that RED. Phase E may add only `exactfrac/corpus.py`, the 655 owned
+payloads, and `instances/README.md`, and populate `instances/MANIFEST`. The README explains
+recipes, fresh-directory reproduction, scoped integrity and claim limits; it is later-
+mutable documentation, not an enduring byte pin. Phase F's existing conformance step
+appends CONFORMANCE only after the appropriate GREEN/audit evidence. Existing isolation,
+local commit, remote closure, and final notes follow without collapsing phases.
+
+Closed solver, telemetry, certificate, checker, CLI, configuration, SPEC_LOCK, CONTRACT,
+and other predecessor tests remain frozen. `exactfrac.__init__` stays export-free.
+No experiment/result file, CLI command, runtime dependency, LICENSE, release version,
+public publication, or existing package/evidence rewrite is authorized here.
+Prospective corpus/experiment/output paths must be reviewed under D20-M3 rather than
+reintroduced into an enduring frozen-placeholder dictionary. Phase-local before/after
+hashes and historical snapshots remain mandatory and distinct from those forbidden pins.
