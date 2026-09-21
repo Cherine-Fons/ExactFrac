@@ -36727,3 +36727,20712 @@ admissibility and attainment, not optimality; these finite endpoint comparisons
 supply the latter for this declared set. There is no claim of solving all 655
 with production, universal correctness, strong polynomiality from finite tests,
 practical scalability, timings, look-ahead coverage, or release readiness.
+
+## Unit 21 independent experiment oracle fixtures — U21-OR1
+
+Status: Phase C preregistration, prior to consuming tests and experiment production.
+The governing authority is DESIGN §14 D21-E1–D21-E16 and TEST_PLAN §47 EP1–EP20,
+remotely closed in 4fe522e0283a39ae773e2cb27cd5f1b8be410d81.
+No preceding catalogue byte is changed. These are finite reference expectations,
+not a record of running the initial experiment campaign and not a theorem promotion.
+
+### Provenance and representation
+
+The Unit 20 independent input/optimum table remains the mathematical reference.
+Its 655 identities, including the 599 byte-distinct payloads, are not deduplicated.
+The inherited independent reference A reconstructs those inputs from D20 rules;
+independent reference B rechecks the inputs, exact endpoint optima and all 379
+microinstances by compact vectors, scalar totals and expanded-copy subsets.
+Neither uses an ExactFrac solver or the future experiment implementation.
+The complete input-summary bank below adds only the D21-E9 bit-width proxy,
+original recipe index and the existing exact optimum expressions.
+For expression_bits B>=64, T means 2^(B-2) in that row. Smaller literal integers
+retain their meanings. No full-token conversion of enormous integers is required.
+
+The canonical source definitions def:instance, ass:active and def:parameter govern
+admissibility and density; lem:empty distinguishes the valid Q=1 Empty case.
+The distinction in def:complexities and thm:main is not proved by these fixtures.
+Field names are independently inspected from the already-closed record classes,
+not learned from a future serializer. Their file identities are recorded below.
+The computations here are separate reference constructions by the same build
+assistant, not an unrecorded external review or a separate-model endorsement.
+
+### Schedule expectations, not observed invocations
+
+For even i the two-route orders at r=-1,0,1,2 are AS, SA, AS, SA.
+For odd i the orders are SA, AS, SA, AS. A means Accelerated; S means Standard.
+All indices are those of the entire ASCII-sorted 655-recipe registry, even when a
+small synthetic fixture extracts a subset. Measured rounds are 0,1,2; warmup has
+round -1 and wire repeat 0. SCHEDULE.tsv fixes all scheduled identities, not calls.
+
+| Quantity | Required complete schedule / conditional report count |
+| --- | ---: |
+| Recipe identities | 655 |
+| Warmups per route / both routes | 655 / 1310 |
+| Measured calls per route / both routes | 1965 / 3930 |
+| Total scheduled telemetry calls and per-call checks | 5240 each |
+| Clock reads for successful measured calls | 7860 |
+| Expected summary rows | 1310 |
+| Expected comparison rows | 655 |
+| Branch rows if the independently nonempty cases are returned as nonempty | 5232 |
+| Certificate files | 1310 |
+| Output files including COMPLETE.json | 1317 |
+| COMPLETE file-ledger entries, excluding itself | 1316 |
+
+These numbers do not substitute for later observed raw rows, dependency/checker
+invocations, output membership and completion. No campaign completion marker is
+provided for the synthetic subset below. A subset is not an adopted public mode.
+The presence or absence of actual look-ahead on any campaign input is not fixed by
+this schedule, a family label, n, or synthetic traces.
+
+### Exact schemas, source paths and constant strings
+
+FIELD_REGISTRY fixes nine already-closed dataclass field lists. W is the ordered
+25 WorkStats fields. Its first 20 fields are summed across branch/nonbranch buckets;
+the final five are maxima. Diagnostic values are NOT summed across repeated trials.
+BranchOracleStats.max_flow_calls is a computed property, not an eighth native key.
+AlgorithmStats.branch_solver and attaining_branch are computed properties, not
+extra algorithm keys. Standard/Accelerated native field sets remain distinct.
+
+WIRE_SCHEMAS fixes the explicit wire field sets and expanded CSV headers from
+D21-E9/E10/E12. It introduces no public decoder/encoder API. E3 specifies fixed
+non-echoing usage behavior but not a complete literal help/usage sentence; this
+oracle does not invent an additional exact-message requirement.
+
+The source fingerprint fixture uses the actual 20 closed source-file hashes and
+TWO COMMENT-ONLY SYNTHETIC placeholders for the not-yet-existing experiment module
+and wrapper. The placeholders are fixture strings, not repository files, not a
+production implementation, and not the final campaign code identity. The ordered
+22-entry identity is hashed using E8's NUL/LF framing; the binary fixture is shown
+as base64 solely to preserve its NUL bytes. An output path does not enter this hash.
+A runtime source fingerprint must be measured from actual source bytes later.
+
+SYNTHETIC_RUN_INFO contains explicitly synthetic platform/interpreter labels and
+a fake clock description. Its protocol strings and schemas are exact E10 constants.
+Its inputs.recipes=655 specifies the adopted campaign, not evidence that the small
+row subset executed it. Its source hash binds only the disclosed fixture sources.
+Finite environmental floats are example spellings, not cross-machine measurements.
+
+### Small scripted record and table fixture
+
+All diagnostic work and times in this bank are SYNTHETIC. Each of three real tiny
+input identities supplies one fake warmup and three fake measured calls per route:
+24 scripted records = 6 warmups + 18 measured records. These are independent data,
+not outputs from running an experiment module, which does not yet exist.
+The exact subset tables have 6 summary rows, 16 branch rows and 3 comparison rows.
+The real tiny certificate witnesses below establish independent admissibility and
+literal attainment; a closed checker may validate them without a solver call.
+
+| Recipe | Route | Measured nanoseconds (synthetic, in repeat order) | Median |
+| --- | --- | --- | ---: |
+| edge-q01-f01-01 | Standard | 13, 3, 7 | 7 |
+| edge-q01-f01-01 | Accelerated | 19, 0, 5 | 5 |
+| struct-cycle-n04-b00001-fdegree | Standard | 90, 4, 21 | 21 |
+| struct-cycle-n04-b00001-fdegree | Accelerated | 55, 9, 18 | 18 |
+| tri-q1-1-1-f1-1-1 | Standard | 88, 6, 20 | 20 |
+| tri-q1-1-1-f1-1-1 | Accelerated | 77, 2, 15 | 15 |
+
+Every main median differs from its first sample and arithmetic mean. Warmups are
+null and make no clock reads; the measured zero remains zero. Separate timing
+vectors include repeated values and zero medians. Scripted positive clock values
+and their paired differences are prescribed solely for interval spies.
+
+On the unit-capacity triangle the full shore has N/D=6/2. On the degree-capacity
+four-cycle the Standard fixture chooses U={0}, y_0=1 giving 2/2, whereas the
+Accelerated fixture chooses U={0,1}, y_1=1 giving 4/4. These distinct admissible raw
+pairs have equal quotients, but neither may be normalized while retaining its old
+literal witness. They are NOT a prediction of either solver's actual tie choice.
+The Empty single-copy input has exactly (0,1), no branches and no fake witness.
+
+Each nonempty synthetic Standard trace has branch oracle counts 2,4,3,1 and
+outer counts 1,3,2,0. The last branch is infeasible and still appears in the table.
+Each nonempty synthetic Accelerated trace has branch oracle counts 2,7,6,1.
+Branch 0 is an initialization return; branch 1 has one accepted and one rejected
+look-ahead followed by Newton termination; branch 2 has accepted look-ahead then
+look-ahead termination; branch 3 is infeasible. Per-trace total look-ahead queries
+are 4 = 2 accepted + 1 rejected + 1 terminal. The record constructor checks the
+native/count algebra, not the occurrence of those paths on these inputs.
+
+The small synthetic nonbranch peaks 70,80,90 dominate the relevant branch peaks.
+A separate giant-row fixture puts 10^4400+17 in a native flow maximum, producing
+4401 decimal digits, flow_peak_bits=14617 and whole peak 14620. It is a codec and
+max-aggregation trap, not a claim that the tiny input generates that integer.
+The entire-token integer limit remains unchanged; this fixture is audited at 640.
+No timing comparison, speedup, hypothesis verdict or memory claim follows.
+
+### Prospective isolated faults
+
+The following declaration bank fixes the positive control, single intended fault,
+and required future observation for each family. These are preregistrations, not
+claims that nonexistent production mutants were executed. Private reference-auditor
+controls are reported separately in handoff evidence. Pristine and fault cases must
+reach the owning guard: a missing-file failure does not test a later hash mismatch.
+
+| ID | Family | Contract | Required future observation |
+| --- | --- | --- | --- |
+| U21F01 | argv-type | E2/EP1 | plain ValueError before I/O, environment, clock, solver |
+| U21F02 | usage-grammar | E3/EP1 | return 2, fixed non-echoing stderr, no discovery |
+| U21F03 | import-purity | E2/EP1 | side-effect spy detects access; do not run campaign |
+| U21F04 | recipe-dedup | E4-E5/EP2,5 | reject missing 56 design identities |
+| U21F05 | omitted-route | E5/EP5 | ordered call sequence detects omission |
+| U21F06 | cached-repeat | E5/EP5 | call-spy count/identity detects cache |
+| U21F07 | alternating-order | E5/EP5 | ordered sequence differs even if counts match |
+| U21F08 | repeat-or-empty-omission | E5/EP5 | full identities and actual counts reject |
+| U21F09 | aggregate-json | E4/EP3 | plain ValueError at external input boundary |
+| U21F10 | aggregate-global-freeze | E4/EP3,20 | positive valid input must be accepted; foreign file not opened |
+| U21F11 | coherent-wrong-input | E4/EP2 | plain ValueError from independent-byte/projection check |
+| U21F12 | input-binding-reread | E4/EP2 | buffer-binding spy catches mismatch; no successful row |
+| U21F13 | input-ownership | E4/EP4 | appropriate isolated membership/kind rejection before solving |
+| U21F14 | symlink-redirection | E3-E4/EP4 | path rejection before solving/writing; preserve target |
+| U21F15 | output-overwrite | E3,E12/EP4,12 | reject before first output or solve; never overwrite |
+| U21F16 | output-overlap | E3/EP4 | plain ValueError; no path repair |
+| U21F17 | source-fingerprint | E8/EP9 | fingerprint mismatch; no global snapshot pin |
+| U21F18 | mixed-import-origin | E8/EP9 | RuntimeError before successful campaign |
+| U21F19 | source-input-drift | E4,E8,E12/EP9,12 | RuntimeError before COMPLETE; preserve attempt |
+| U21F20 | clock-boundary | E6/EP6 | spies detect wrong interval/read order |
+| U21F21 | clock-zero-type | E6/EP6 | zero retained; inconsistent normal return RuntimeError |
+| U21F22 | warmup-contamination | E5,E10/EP6,11 | independent integer median/identity check rejects |
+| U21F23 | native-field-loss | E7,E9/EP7,10 | schema guard rejects |
+| U21F24 | sum-of-peaks | E7/EP7,11 | native/total aggregate guard rejects |
+| U21F25 | sum-over-repetitions | E7,E10/EP11 | rederived summary rejects despite valid checksums |
+| U21F26 | infeasible-branch-drop | E7,E10/EP7,11 | branch inventory/order guard rejects |
+| U21F27 | unchecked-certificate | E7/EP8 | spy detects omission; inconsistent normal return RuntimeError |
+| U21F28 | certificate-binding | E7,E9/EP8 | binding guard rejects before row |
+| U21F29 | same-route-drift | E7/EP8 | RuntimeError; no normalization/averaging |
+| U21F30 | cross-route-raw-pair | E7/EP8 | positive tie must pass; actual quotient disagreement RuntimeError |
+| U21F31 | exception-masking | E11/EP13 | same exception object propagates; no successful row |
+| U21F32 | huge-int-codec | E4,E9/EP10 | chunked byte contract fails; no global limit workaround |
+| U21F33 | float-field-leakage | E9/EP10 | reject; exact integer arithmetic preserved |
+| U21F34 | completion-premature | E12/EP12 | incomplete attempt must have no legitimate completion |
+| U21F35 | coherent-wrong-report | E10,E12/EP11 | semantic table audit rejects |
+| U21F36 | phantom-count-success | E5,E12/EP12,17 | missing raw identities/checker count rejects |
+| U21F37 | short-write-failure | E3,E12/EP12 | normal contradictions RuntimeError; raised object unchanged |
+| U21F38 | settings-mutation | E6,E11/EP13,15 | conservation spies reject; no silent repair |
+| U21F39 | future-aggregate-pin | E15/EP20 | prospective scope check rejects overbroad pin |
+| U21F40 | synthetic-as-observed | E13-E14/EP7,17,18 | report must distinguish synthetic from measured evidence |
+| U21F41 | wrapper-duplicate-logic | E2/EP1,9 | fresh-process invocation/origin guard detects |
+| U21F42 | file-ledger-self-reference | E12/EP12 | strict membership/binding audit rejects |
+
+### Committed exact fixture bank
+
+Each block below is the authoritative representation of the named companion.
+For encoding=raw, the bytes are the literal fenced contents, including the final LF.
+For encoding=base64, decode the fenced ASCII base64 and do not include its display LF.
+Block labels, byte lengths and SHA-256 values bind the readable bank to companion
+files; the companion files remain private handoff material, not runtime dependencies.
+The historical Unit 20 oracle table remains unchanged and is the reference for its
+optimum expressions. No requirement here pins a future whole aggregate or results
+root. The initial MANIFEST identity in the fixture is provenance for the synthetic
+info example, not a production acceptance hash for an evolving aggregate.
+
+#### U21-OR1 / CENSUS.json
+
+<!-- U21-FIXTURE CENSUS.json encoding=raw bytes=1057 sha256=e2f7cceaff71ee18d0b878f0dda2a49f9a5421220ff9edade7acbbd29dbadc16 -->
+```json
+{
+  "actual_campaigns": 0,
+  "actual_experiment_solves": 0,
+  "actual_timing_observations": 0,
+  "branch_rows_if_registered_nonempty_cases_return_nonempty": 5232,
+  "certificate_files": 1310,
+  "comparison_rows": 655,
+  "completion_ledger_entries": 1316,
+  "distinct_payloads": 599,
+  "empty": 1,
+  "full_schedule_identities": 5240,
+  "giant_value_bits": 14617,
+  "giant_value_decimal_digits": 4401,
+  "giant_value_expression": "10^4400+17",
+  "inherited_reference_census": {
+    "endpoint_evaluations": 39056,
+    "feasible_shores": 20704,
+    "infeasible_shores": 845,
+    "shores": 21549
+  },
+  "nonempty": 654,
+  "owned_files_including_complete": 1317,
+  "recipes": 655,
+  "scheduled_checker_compositions": 5240,
+  "scheduled_clock_reads": 7860,
+  "scheduled_measured": 3930,
+  "scheduled_warmups": 1310,
+  "source_paths": 22,
+  "summary_rows": 1310,
+  "synthetic_branch_rows": 16,
+  "synthetic_calls": 24,
+  "synthetic_comparison_rows": 3,
+  "synthetic_measured": 18,
+  "synthetic_recipes": 3,
+  "synthetic_summary_rows": 6,
+  "synthetic_warmups": 6
+}
+```
+
+#### U21-OR1 / FAULT_DECLARATIONS.json
+
+<!-- U21-FIXTURE FAULT_DECLARATIONS.json encoding=raw bytes=16457 sha256=79943f129d0896821935fc0523481ca0bea6bd4b262a25e01b9b5f715e7779ec -->
+```json
+[
+  {
+    "authority": "E2/EP1",
+    "id": "U21F01",
+    "isolated_fault": "Use tuple/list subclass/string subclass/bool/mixed values",
+    "name": "argv-type",
+    "pristine_control": "Exact list of exact strings; spies initially zero",
+    "required_observation": "plain ValueError before I/O, environment, clock, solver",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E3/EP1",
+    "id": "U21F02",
+    "isolated_fault": "Duplicate/order/missing/= form/NUL/help combination",
+    "name": "usage-grammar",
+    "pristine_control": "Valid --all or lone --help",
+    "required_observation": "return 2, fixed non-echoing stderr, no discovery",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E2/EP1",
+    "id": "U21F03",
+    "isolated_fault": "Read input or discover environment on import",
+    "name": "import-purity",
+    "pristine_control": "Sterile module/direct-wrapper import",
+    "required_observation": "side-effect spy detects access; do not run campaign",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4-E5/EP2,5",
+    "id": "U21F04",
+    "isolated_fault": "Deduplicate payloads to 599 identities",
+    "name": "recipe-dedup",
+    "pristine_control": "655 distinct design identities including 599 distinct bytes",
+    "required_observation": "reject missing 56 design identities",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5/EP5",
+    "id": "U21F05",
+    "isolated_fault": "Drop Standard or Accelerated",
+    "name": "omitted-route",
+    "pristine_control": "Both routes once in each required round",
+    "required_observation": "ordered call sequence detects omission",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5/EP5",
+    "id": "U21F06",
+    "isolated_fault": "Reuse a previous result instead of invoking again",
+    "name": "cached-repeat",
+    "pristine_control": "Four real dependency invocations per recipe/route",
+    "required_observation": "call-spy count/identity detects cache",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5/EP5",
+    "id": "U21F07",
+    "isolated_fault": "Always Standard first or misindex warmup",
+    "name": "alternating-order",
+    "pristine_control": "Even-index AS/SA/AS/SA; odd-index SA/AS/SA/AS",
+    "required_observation": "ordered sequence differs even if counts match",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5/EP5",
+    "id": "U21F08",
+    "isolated_fault": "Skip warmup/one measured round/Empty",
+    "name": "repeat-or-empty-omission",
+    "pristine_control": "All -1,0,1,2 rounds and Q=1 recipe retained",
+    "required_observation": "full identities and actual counts reject",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4/EP3",
+    "id": "U21F09",
+    "isolated_fault": "Duplicate decoded key or bool/float/exponent/string count",
+    "name": "aggregate-json",
+    "pristine_control": "Valid aggregate with own projection complete",
+    "required_observation": "plain ValueError at external input boundary",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4/EP3,20",
+    "id": "U21F10",
+    "isolated_fault": "Pin initial whole-file hash or reject foreign suite",
+    "name": "aggregate-global-freeze",
+    "pristine_control": "Equivalent aggregate whitespace/order plus valid foreign entry",
+    "required_observation": "positive valid input must be accepted; foreign file not opened",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4/EP2",
+    "id": "U21F11",
+    "isolated_fault": "Alter own payload plus recompute its self hash/length",
+    "name": "coherent-wrong-input",
+    "pristine_control": "Exact independently fixed own bytes",
+    "required_observation": "plain ValueError from independent-byte/projection check",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4/EP2",
+    "id": "U21F12",
+    "isolated_fault": "Replace later read with different bytes",
+    "name": "input-binding-reread",
+    "pristine_control": "Retained buffer validated and sent to Instance/checker",
+    "required_observation": "buffer-binding spy catches mismatch; no successful row",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4/EP4",
+    "id": "U21F13",
+    "isolated_fault": "Extra/nested/renamed/missing/executable/FIFO object",
+    "name": "input-ownership",
+    "pristine_control": "Complete 655 regular owned files",
+    "required_observation": "appropriate isolated membership/kind rejection before solving",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E3-E4/EP4",
+    "id": "U21F14",
+    "isolated_fault": "Redirect one component with symlink",
+    "name": "symlink-redirection",
+    "pristine_control": "Real parent/root/leaf components",
+    "required_observation": "path rejection before solving/writing; preserve target",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E3,E12/EP4,12",
+    "id": "U21F15",
+    "isolated_fault": "Preexisting even-empty leaf",
+    "name": "output-overwrite",
+    "pristine_control": "Absent disjoint output leaf",
+    "required_observation": "reject before first output or solve; never overwrite",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E3/EP4",
+    "id": "U21F16",
+    "isolated_fault": "Output under inputs/source/tests/.git or ancestor source",
+    "name": "output-overlap",
+    "pristine_control": "External disjoint or source results subtree",
+    "required_observation": "plain ValueError; no path repair",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E8/EP9",
+    "id": "U21F17",
+    "isolated_fault": "Omit wrapper or substitute delimiter/order/hash",
+    "name": "source-fingerprint",
+    "pristine_control": "22 exact ASCII paths NUL/hash/LF",
+    "required_observation": "fingerprint mismatch; no global snapshot pin",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E8/EP9",
+    "id": "U21F18",
+    "isolated_fault": "Installed or changed module/loader source",
+    "name": "mixed-import-origin",
+    "pristine_control": "Each module from bound local source",
+    "required_observation": "RuntimeError before successful campaign",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4,E8,E12/EP9,12",
+    "id": "U21F19",
+    "isolated_fault": "Alter consumed input/source after validation",
+    "name": "source-input-drift",
+    "pristine_control": "Original identities unchanged after run",
+    "required_observation": "RuntimeError before COMPLETE; preserve attempt",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E6/EP6",
+    "id": "U21F20",
+    "isolated_fault": "Time certificates/verification/output or warmup",
+    "name": "clock-boundary",
+    "pristine_control": "Two clock reads around successful measured telemetry call",
+    "required_observation": "spies detect wrong interval/read order",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E6/EP6",
+    "id": "U21F21",
+    "isolated_fault": "Treat zero as None; return bool/float/negative or decreasing pair",
+    "name": "clock-zero-type",
+    "pristine_control": "Zero nonnegative exact-int elapsed accepted",
+    "required_observation": "zero retained; inconsistent normal return RuntimeError",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5,E10/EP6,11",
+    "id": "U21F22",
+    "isolated_fault": "Include warmup or discard slow sample",
+    "name": "warmup-contamination",
+    "pristine_control": "Null warmup and three measured times only",
+    "required_observation": "independent integer median/identity check rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7,E9/EP7,10",
+    "id": "U21F23",
+    "isolated_fault": "Uniformize route schema or add computed property",
+    "name": "native-field-loss",
+    "pristine_control": "Exact route-specific native dataclass keys",
+    "required_observation": "schema guard rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7/EP7,11",
+    "id": "U21F24",
+    "isolated_fault": "Sum flow/integer peaks or drop nonbranch maximum",
+    "name": "sum-of-peaks",
+    "pristine_control": "Sum 20 events; max five peaks across all buckets",
+    "required_observation": "native/total aggregate guard rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7,E10/EP11",
+    "id": "U21F25",
+    "isolated_fault": "Triple diagnostic fields or use winning branch only",
+    "name": "sum-over-repetitions",
+    "pristine_control": "Common repeated-identical diagnostics, repeat_count=3",
+    "required_observation": "rederived summary rejects despite valid checksums",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7,E10/EP7,11",
+    "id": "U21F26",
+    "isolated_fault": "Drop infeasible row or add nonbranch as branch",
+    "name": "infeasible-branch-drop",
+    "pristine_control": "All four actual branch rows including infeasible",
+    "required_observation": "branch inventory/order guard rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7/EP8",
+    "id": "U21F27",
+    "isolated_fault": "Omit checker or accept non-None normal return",
+    "name": "unchecked-certificate",
+    "pristine_control": "Checker receives bound input and emitted certificate every call",
+    "required_observation": "spy detects omission; inconsistent normal return RuntimeError",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7,E9/EP8",
+    "id": "U21F28",
+    "isolated_fault": "Reuse another input or stale certificate bytes",
+    "name": "certificate-binding",
+    "pristine_control": "Exact recipe/route certificate path, length, hash",
+    "required_observation": "binding guard rejects before row",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7/EP8",
+    "id": "U21F29",
+    "isolated_fault": "Alter one repeat pair/stats/witness/certificate",
+    "name": "same-route-drift",
+    "pristine_control": "Same-route result/stats/certificate identical to warmup",
+    "required_observation": "RuntimeError; no normalization/averaging",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E7/EP8",
+    "id": "U21F30",
+    "isolated_fault": "Require raw or witness equality between routes",
+    "name": "cross-route-raw-pair",
+    "pristine_control": "Admissible cycle ties 2/2 versus 4/4",
+    "required_observation": "positive tie must pass; actual quotient disagreement RuntimeError",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E11/EP13",
+    "id": "U21F31",
+    "isolated_fault": "Catch/translate/retry/skip or fake Empty/zero stats",
+    "name": "exception-masking",
+    "pristine_control": "Dependency raises sentinel object",
+    "required_observation": "same exception object propagates; no successful row",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E4,E9/EP10",
+    "id": "U21F32",
+    "isolated_fault": "Full-token str/repr/int or quote/float conversion",
+    "name": "huge-int-codec",
+    "pristine_control": "4401-digit native integer under 640 digit limit",
+    "required_observation": "chunked byte contract fails; no global limit workaround",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E9/EP10",
+    "id": "U21F33",
+    "isolated_fault": "NaN/inf or float diagnostic/numeric instance",
+    "name": "float-field-leakage",
+    "pristine_control": "Floats only environmental resolution/wall clock",
+    "required_observation": "reject; exact integer arithmetic preserved",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E12/EP12",
+    "id": "U21F34",
+    "isolated_fault": "Marker written before final check/write/close",
+    "name": "completion-premature",
+    "pristine_control": "All outputs closed/rechecked before marker",
+    "required_observation": "incomplete attempt must have no legitimate completion",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E10,E12/EP11",
+    "id": "U21F35",
+    "isolated_fault": "Alter median/branch/join and update own ledger hash",
+    "name": "coherent-wrong-report",
+    "pristine_control": "CSV rederived independently from retained measured rows",
+    "required_observation": "semantic table audit rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E5,E12/EP12,17",
+    "id": "U21F36",
+    "isolated_fault": "Emit schedule constants after fewer actual calls",
+    "name": "phantom-count-success",
+    "pristine_control": "Observed complete raw call set and checked files",
+    "required_observation": "missing raw identities/checker count rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E3,E12/EP12",
+    "id": "U21F37",
+    "isolated_fault": "Invalid count/flush return; raised open/write/flush/close",
+    "name": "short-write-failure",
+    "pristine_control": "Positive short writes finish; no failed call retry",
+    "required_observation": "normal contradictions RuntimeError; raised object unchanged",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E6,E11/EP13,15",
+    "id": "U21F38",
+    "isolated_fault": "Relax limits, disable GC, rewrite environment",
+    "name": "settings-mutation",
+    "pristine_control": "Digit/recursion/hash/GC policy not changed",
+    "required_observation": "conservation spies reject; no silent repair",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E15/EP20",
+    "id": "U21F39",
+    "isolated_fault": "Enduring pin on results root/readme/live aggregate",
+    "name": "future-aggregate-pin",
+    "pristine_control": "Closed source/own suite only scoped",
+    "required_observation": "prospective scope check rejects overbroad pin",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E13-E14/EP7,17,18",
+    "id": "U21F40",
+    "isolated_fault": "Count fixture traces as observed lookahead or campaign",
+    "name": "synthetic-as-observed",
+    "pristine_control": "Synthetic fixture labeled outside wire; actual campaign deferred",
+    "required_observation": "report must distinguish synthetic from measured evidence",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E2/EP1,9",
+    "id": "U21F41",
+    "isolated_fault": "Second experiment implementation or installed shadow",
+    "name": "wrapper-duplicate-logic",
+    "pristine_control": "Thin direct entry calls exact main",
+    "required_observation": "fresh-process invocation/origin guard detects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  },
+  {
+    "authority": "E12/EP12",
+    "id": "U21F42",
+    "isolated_fault": "Self hash, omitted certificate, extra external path",
+    "name": "file-ledger-self-reference",
+    "pristine_control": "COMPLETE excludes itself and owns every output exactly once",
+    "required_observation": "strict membership/binding audit rejects",
+    "status": "PREREGISTERED; future production/test execution not claimed"
+  }
+]
+```
+
+#### U21-OR1 / FIELD_REGISTRY.json
+
+<!-- U21-FIXTURE FIELD_REGISTRY.json encoding=raw bytes=3472 sha256=71e877b9812070cf1ec96b7207411f5c8ffffa84d8829037a433cb57b5d47932 -->
+```json
+{
+  "AcceleratedBranchStats": {
+    "computed_properties": [],
+    "fields": [
+      "oracle_calls",
+      "outer_iterations",
+      "newton_queries",
+      "lookahead_queries",
+      "lookahead_accepted",
+      "lookahead_rejected",
+      "early_returns",
+      "oracle_stats"
+    ],
+    "path": "exactfrac/branch.py",
+    "sha256": "584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057"
+  },
+  "AlgorithmStats": {
+    "computed_properties": [
+      "branch_solver",
+      "attaining_branch"
+    ],
+    "fields": [
+      "native",
+      "total",
+      "nonbranch",
+      "branches",
+      "output_numerator_bits",
+      "output_denominator_bits"
+    ],
+    "path": "exactfrac/telemetry.py",
+    "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+  },
+  "BranchOracleStats": {
+    "computed_properties": [
+      "max_flow_calls"
+    ],
+    "fields": [
+      "atomic_families_examined",
+      "atomic_families_feasible",
+      "parity_cut_calls",
+      "ordinary_min_cut_calls",
+      "flow_augmentations",
+      "flow_bfs_scans",
+      "flow_peak_generated_value"
+    ],
+    "path": "exactfrac/oracle.py",
+    "sha256": "fa8885689608cc216e131cdc63573f698f628b1a9e313bde521e1f3feff88913"
+  },
+  "BranchTelemetry": {
+    "computed_properties": [],
+    "fields": [
+      "branch",
+      "feasible",
+      "work"
+    ],
+    "path": "exactfrac/telemetry.py",
+    "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+  },
+  "RunMetadata": {
+    "computed_properties": [],
+    "fields": [
+      "wall_clock_s",
+      "python_version",
+      "platform",
+      "cpu",
+      "code_version",
+      "instance_sha256"
+    ],
+    "path": "exactfrac/telemetry.py",
+    "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+  },
+  "RunRecord": {
+    "computed_properties": [],
+    "fields": [
+      "algorithm",
+      "metadata"
+    ],
+    "path": "exactfrac/telemetry.py",
+    "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+  },
+  "SolveStats": {
+    "computed_properties": [],
+    "fields": [
+      "branch_solver",
+      "branch_stats",
+      "attaining_candidate"
+    ],
+    "path": "exactfrac/solve.py",
+    "sha256": "46773d6f2247025220712e967315a33ff36bea60328bcc2b9b149d824f4d6e51"
+  },
+  "StandardBranchStats": {
+    "computed_properties": [],
+    "fields": [
+      "oracle_calls",
+      "outer_iterations",
+      "newton_updates",
+      "oracle_stats"
+    ],
+    "path": "exactfrac/branch.py",
+    "sha256": "584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057"
+  },
+  "WorkStats": {
+    "computed_properties": [],
+    "fields": [
+      "outer_iterations",
+      "oracle_calls",
+      "newton_updates",
+      "newton_queries",
+      "newton_candidates",
+      "lookahead_queries",
+      "lookahead_accepted",
+      "lookahead_rejected",
+      "lookahead_terminal",
+      "newton_terminal",
+      "initialization_returns",
+      "early_returns",
+      "atomic_families_enumerated",
+      "atomic_families_examined",
+      "atomic_families_feasible",
+      "parity_cut_calls",
+      "ordinary_min_cut_calls",
+      "max_flow_calls",
+      "augmentations",
+      "bfs_scans",
+      "flow_peak_generated_value",
+      "flow_peak_bits",
+      "peak_numerator_bits",
+      "peak_denominator_bits",
+      "peak_integer_bits"
+    ],
+    "path": "exactfrac/telemetry.py",
+    "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+  }
+}
+```
+
+#### U21-OR1 / INPUT_EXPECTATIONS.json
+
+<!-- U21-FIXTURE INPUT_EXPECTATIONS.json encoding=raw bytes=350371 sha256=d90b810d8ba587a1c95495cb231bb5be22e197e958083ec9e7449114ae0cd3f2 -->
+```json
+[
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00001-qflat-fdegree.json",
+      "sha256": "10e39ba6ea66ccbe2744c047514962a9d6333908b662c00bf6aca892b270d257",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00001-qflat-fdegree",
+    "recipe_index": 0,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00001-qflat-funit.json",
+      "sha256": "bc9a7be77da2a3d8e78734fc4da2e612fe5235deac9a566c717428ca967f9f5b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00001-qflat-funit",
+    "recipe_index": 1,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00001-qramp-fdegree.json",
+      "sha256": "10e39ba6ea66ccbe2744c047514962a9d6333908b662c00bf6aca892b270d257",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00001-qramp-fdegree",
+    "recipe_index": 2,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00001-qramp-funit.json",
+      "sha256": "bc9a7be77da2a3d8e78734fc4da2e612fe5235deac9a566c717428ca967f9f5b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00001-qramp-funit",
+    "recipe_index": 3,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00008-qflat-fdegree.json",
+      "sha256": "011cbcabfa306fbd939c50f380d8033d020fa426278d70cb0f762a8f0cbd6acd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00008-qflat-fdegree",
+    "recipe_index": 4,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00008-qflat-funit.json",
+      "sha256": "ec8b921c0a79e5c68d737e6c8d87e722937a7848c7ba6a333bf08dbb77fbd288",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00008-qflat-funit",
+    "recipe_index": 5,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "512",
+    "N_expression": "512",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00008-qramp-fdegree.json",
+      "sha256": "c4e5658274789e4cb96fef2e341bfbd78d26fed0f2d46f9de31fe72e86678e15",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00008-qramp-fdegree",
+    "recipe_index": 6,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "522",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00008-qramp-funit.json",
+      "sha256": "6442f6fbdf9e1aa05a8ba891a8a161001c580c7832ee865caba15d6386f0ce07",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00008-qramp-funit",
+    "recipe_index": 7,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 248,
+      "input_integer_bits_sum": 534,
+      "m": 4,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00064-qflat-fdegree.json",
+      "sha256": "b2580d3986add3cbdcd0a315aab9642fc78ceef5a2f784438c7c7f5e669c731f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00064-qflat-fdegree",
+    "recipe_index": 8,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 172,
+      "input_integer_bits_sum": 278,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00064-qflat-funit.json",
+      "sha256": "a15d618d0cd93e345203e674291d5484add3804f959c8b37d9f723f553e05228",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00064-qflat-funit",
+    "recipe_index": 9,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 244,
+      "input_integer_bits_sum": 534,
+      "m": 4,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00064-qramp-fdegree.json",
+      "sha256": "04324071280e8d42b1857e726d52de178e0ed7480d62fdf605f38f53370e331d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00064-qramp-fdegree",
+    "recipe_index": 10,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 168,
+      "input_integer_bits_sum": 278,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00064-qramp-funit.json",
+      "sha256": "c46ae57b21c08cb4250ec15e657fdd42cffe0dc34ef480c7d22c2855955ea5c7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00064-qramp-funit",
+    "recipe_index": 11,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 712,
+      "input_integer_bits_sum": 2070,
+      "m": 4,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00256-qflat-fdegree.json",
+      "sha256": "ab37e3c90b82800f148644bb459500d904b65f7482f3b11b0320bed15ecda248",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00256-qflat-fdegree",
+    "recipe_index": 12,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 404,
+      "input_integer_bits_sum": 1046,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00256-qflat-funit.json",
+      "sha256": "f690a0b4e445052b156f6a78836bfd3425ff61b535cd4d467c21751de61a7ed0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00256-qflat-funit",
+    "recipe_index": 13,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 708,
+      "input_integer_bits_sum": 2070,
+      "m": 4,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00256-qramp-fdegree.json",
+      "sha256": "d4d92e2f8f2e3d833edd1f4b66b700199204addc4db5b888a0d40e2b5fd999c3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00256-qramp-fdegree",
+    "recipe_index": 14,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 400,
+      "input_integer_bits_sum": 1046,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b00256-qramp-funit.json",
+      "sha256": "7a84af2774e46d408cd4b8ef3f6085a16c8f2b725c3f9fa16a50838271895436",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b00256-qramp-funit",
+    "recipe_index": 15,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 9960,
+      "input_integer_bits_sum": 32790,
+      "m": 4,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b04096-qflat-fdegree.json",
+      "sha256": "810b22e23f4af0ed63021c671e0ae7948b9c8198fd797a65602a6b987f853245",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b04096-qflat-fdegree",
+    "recipe_index": 16,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 5028,
+      "input_integer_bits_sum": 16406,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b04096-qflat-funit.json",
+      "sha256": "862f5620f0d731bb825bf8278b0fa8531adb40d853c9b86a671760e0a62fb76f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b04096-qflat-funit",
+    "recipe_index": 17,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 9956,
+      "input_integer_bits_sum": 32790,
+      "m": 4,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b04096-qramp-fdegree.json",
+      "sha256": "4588b78edaa2022e4b7595249f10f4249c1c6482345e753532b04923b65252e0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b04096-qramp-fdegree",
+    "recipe_index": 18,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 5024,
+      "input_integer_bits_sum": 16406,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b04096-qramp-funit.json",
+      "sha256": "ab38bf16ccf3360f60b1be96215962ee617427dd6df56e2058958c65e5794223",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b04096-qramp-funit",
+    "recipe_index": 19,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 39552,
+      "input_integer_bits_sum": 131094,
+      "m": 4,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b16384-qflat-fdegree.json",
+      "sha256": "20e34379899b79728ac2a8e8435ab21892f99726ac46c5133d42fda5f43aa27a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b16384-qflat-fdegree",
+    "recipe_index": 20,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 19824,
+      "input_integer_bits_sum": 65558,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b16384-qflat-funit.json",
+      "sha256": "847d360722acc31df48c78fe0c45e959b2a1b6a285b1a41fc9698399ea528e49",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b16384-qflat-funit",
+    "recipe_index": 21,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 39548,
+      "input_integer_bits_sum": 131094,
+      "m": 4,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b16384-qramp-fdegree.json",
+      "sha256": "61a1b3678912f3a0f49c75657d125dfa367dadb0d1584dea4f99751ea4c113aa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b16384-qramp-fdegree",
+    "recipe_index": 22,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 19820,
+      "input_integer_bits_sum": 65558,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-bipartite-n04-b16384-qramp-funit.json",
+      "sha256": "67fab4fb7f126dae188b89e768028ab1cf4e1d2243d30e7e2146a7026482dd52",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-bipartite-n04-b16384-qramp-funit",
+    "recipe_index": 23,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 38,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00001-qflat-fdegree.json",
+      "sha256": "c6d2ec493cc15b16c67bb2e1b2b6e50b80e698587e46d13e38f51b695da48482",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00001-qflat-fdegree",
+    "recipe_index": 24,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 34,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00001-qflat-funit.json",
+      "sha256": "7dbc69cd460016cf3132980e55f08ad41bf8b8e951627c4abf8676ddb0d29213",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00001-qflat-funit",
+    "recipe_index": 25,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 38,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00001-qramp-fdegree.json",
+      "sha256": "c6d2ec493cc15b16c67bb2e1b2b6e50b80e698587e46d13e38f51b695da48482",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00001-qramp-fdegree",
+    "recipe_index": 26,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 34,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00001-qramp-funit.json",
+      "sha256": "7dbc69cd460016cf3132980e55f08ad41bf8b8e951627c4abf8676ddb0d29213",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00001-qramp-funit",
+    "recipe_index": 27,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "1528",
+    "N_expression": "1528",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 132,
+      "input_integer_bits_sum": 112,
+      "m": 6,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00008-qflat-fdegree.json",
+      "sha256": "6dcb8ece3240e2d67d8a4fcebf91a248b58656196a8408c716b420a13df3c8b9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00008-qflat-fdegree",
+    "recipe_index": 28,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 124,
+      "input_integer_bits_sum": 76,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00008-qflat-funit.json",
+      "sha256": "665655b2f8672cf0c62a55291f4b358dd5bb4aa1f80939ea1e2ac361c087d5c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00008-qflat-funit",
+    "recipe_index": 29,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "772",
+    "N_expression": "772",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 132,
+      "input_integer_bits_sum": 108,
+      "m": 6,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00008-qramp-fdegree.json",
+      "sha256": "2bf9002cecef93e3d25e2fbd3a68daa5829069d026dbf91931af09a4d081b03e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00008-qramp-fdegree",
+    "recipe_index": 30,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "792",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 124,
+      "input_integer_bits_sum": 76,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00008-qramp-funit.json",
+      "sha256": "102e692db5d9b39f6b8fef153b2c6c1db9f0a0c8dbf2814c5810a358abd58049",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00008-qramp-funit",
+    "recipe_index": 31,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "24*T-8",
+    "N_expression": "24*T-8",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 302,
+      "input_integer_bits_sum": 672,
+      "m": 6,
+      "max_f_bits": 66,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00064-qflat-fdegree.json",
+      "sha256": "9f23296a8c23ceb5dd4da916783a0c5a2426c1c7b789d274b80f6e7fa2750911",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00064-qflat-fdegree",
+    "recipe_index": 32,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "24*T-6",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 226,
+      "input_integer_bits_sum": 412,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00064-qflat-funit.json",
+      "sha256": "fcdce6d37fc5d573e6643e847c74ecb22864a65a4b14bc2ee8fc1ea3257d9546",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00064-qflat-funit",
+    "recipe_index": 33,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "12*T+4",
+    "N_expression": "12*T+4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 296,
+      "input_integer_bits_sum": 668,
+      "m": 6,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00064-qramp-fdegree.json",
+      "sha256": "6f66fb7d995a0e0d4ecdcc0c0b3ca7b59549d74b40beff812b180c1a9f5662e9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00064-qramp-fdegree",
+    "recipe_index": 34,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "12*T+24",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 220,
+      "input_integer_bits_sum": 412,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00064-qramp-funit.json",
+      "sha256": "0ec1052c61e67f30ed68fb479852f6f4e3af7777a3d25b38bd6649452104e61b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00064-qramp-funit",
+    "recipe_index": 35,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "24*T-8",
+    "N_expression": "24*T-8",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 259,
+      "bytes": 882,
+      "input_integer_bits_sum": 2592,
+      "m": 6,
+      "max_f_bits": 258,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00256-qflat-fdegree.json",
+      "sha256": "4cb6846247c7330ba8c5aedb5531a4a4233720d63da42bca48c971b9ee1ef2a9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00256-qflat-fdegree",
+    "recipe_index": 36,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "24*T-6",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 259,
+      "bytes": 574,
+      "input_integer_bits_sum": 1564,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00256-qflat-funit.json",
+      "sha256": "897bd2b186094dd142f4d71fe8e0fb6d93bd950c88291a62251a2d8527694099",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00256-qflat-funit",
+    "recipe_index": 37,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "12*T+4",
+    "N_expression": "12*T+4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 876,
+      "input_integer_bits_sum": 2588,
+      "m": 6,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00256-qramp-fdegree.json",
+      "sha256": "0d4639ee98407d75df3ff85528416ab316712bfa71c269348304c1b468bfe212",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00256-qramp-fdegree",
+    "recipe_index": 38,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "12*T+24",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 568,
+      "input_integer_bits_sum": 1564,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b00256-qramp-funit.json",
+      "sha256": "c43df903206269949a6443bb40b8a2ec855130470ff81e799703ddb90e0071d7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b00256-qramp-funit",
+    "recipe_index": 39,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "24*T-8",
+    "N_expression": "24*T-8",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4099,
+      "bytes": 12442,
+      "input_integer_bits_sum": 40992,
+      "m": 6,
+      "max_f_bits": 4098,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b04096-qflat-fdegree.json",
+      "sha256": "1a68aa7c3734e002d5e2f1af301cc2e7ee25b4f84584bfb54f1b7211f8d11b9b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b04096-qflat-fdegree",
+    "recipe_index": 40,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "24*T-6",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4099,
+      "bytes": 7510,
+      "input_integer_bits_sum": 24604,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b04096-qflat-funit.json",
+      "sha256": "048cb27eb96f0a2c518c6399c86be1e824043d063d7e933db0a067497c732b59",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b04096-qflat-funit",
+    "recipe_index": 41,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "12*T+4",
+    "N_expression": "12*T+4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 12436,
+      "input_integer_bits_sum": 40988,
+      "m": 6,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b04096-qramp-fdegree.json",
+      "sha256": "50428ce56c47bb64a885a557174586134898ec9ace4bd9a8bc53abb8d54a3d7d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b04096-qramp-fdegree",
+    "recipe_index": 42,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "12*T+24",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 7504,
+      "input_integer_bits_sum": 24604,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b04096-qramp-funit.json",
+      "sha256": "b3e2e0ac472f3073eba4337ed53c67fe1c1a79f69a4609c1e52a0462c738a01d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b04096-qramp-funit",
+    "recipe_index": 43,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "24*T-8",
+    "N_expression": "24*T-8",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16387,
+      "bytes": 49432,
+      "input_integer_bits_sum": 163872,
+      "m": 6,
+      "max_f_bits": 16386,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b16384-qflat-fdegree.json",
+      "sha256": "ffacbd4dc42cff0efe0faa4531d1c8871435449f3fdf5649bd9e3702751c943f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b16384-qflat-fdegree",
+    "recipe_index": 44,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "24*T-6",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16387,
+      "bytes": 29704,
+      "input_integer_bits_sum": 98332,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b16384-qflat-funit.json",
+      "sha256": "aacb76f35d95c3cc864c84c19582e395636326dfc1fbc39ea7996f05a108c0fd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b16384-qflat-funit",
+    "recipe_index": 45,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "12*T+4",
+    "N_expression": "12*T+4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 49426,
+      "input_integer_bits_sum": 163868,
+      "m": 6,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b16384-qramp-fdegree.json",
+      "sha256": "7fd3600b5447328c1dd0b4ea5a7f21d26847c819e618c88229e4ad3381e32a69",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b16384-qramp-fdegree",
+    "recipe_index": 46,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "12*T+24",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 29698,
+      "input_integer_bits_sum": 98332,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-complete-n04-b16384-qramp-funit.json",
+      "sha256": "b011e7de65f66d86de35e17b7e09272f71bdecd350387707f7ceae3e215f3262",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-complete-n04-b16384-qramp-funit",
+    "recipe_index": 47,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00001-qflat-fdegree.json",
+      "sha256": "6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00001-qflat-fdegree",
+    "recipe_index": 48,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00001-qflat-funit.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00001-qflat-funit",
+    "recipe_index": 49,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00001-qramp-fdegree.json",
+      "sha256": "6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00001-qramp-fdegree",
+    "recipe_index": 50,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00001-qramp-funit.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00001-qramp-funit",
+    "recipe_index": 51,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00008-qflat-fdegree.json",
+      "sha256": "f6b5f107d4a7fade3faf7afbf2b492b80d2ba13746f1554e74fc4ca185f0a9a8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00008-qflat-fdegree",
+    "recipe_index": 52,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00008-qflat-funit.json",
+      "sha256": "ffbcacd5dfd85f08f9ead5a98a35384736e8839a401e3199e69f51b5fd67c0f1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00008-qflat-funit",
+    "recipe_index": 53,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "512",
+    "N_expression": "512",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00008-qramp-fdegree.json",
+      "sha256": "d7a4d567f900b30b5d5508bc4d343b0a4ff045602e7c555d0911d0fbb419fdff",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00008-qramp-fdegree",
+    "recipe_index": 54,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "522",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00008-qramp-funit.json",
+      "sha256": "0c6875687624a727dc4f48e97578c0d80397fe5a619095e778dcc872388616c3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00008-qramp-funit",
+    "recipe_index": 55,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 248,
+      "input_integer_bits_sum": 534,
+      "m": 4,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00064-qflat-fdegree.json",
+      "sha256": "443e154c6116df780c7f6286b55b300bbfd0893bff073b36bba996f9c031e419",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00064-qflat-fdegree",
+    "recipe_index": 56,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 172,
+      "input_integer_bits_sum": 278,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00064-qflat-funit.json",
+      "sha256": "e242ec8d36acb589ce8a98d43ebe8726498603c30e71351d1778360f28c9ee7b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00064-qflat-funit",
+    "recipe_index": 57,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 244,
+      "input_integer_bits_sum": 534,
+      "m": 4,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00064-qramp-fdegree.json",
+      "sha256": "eecb5aac29b45c59f764010da03ecd8d54102d01dc5e809c0524c2cdef979052",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00064-qramp-fdegree",
+    "recipe_index": 58,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 168,
+      "input_integer_bits_sum": 278,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00064-qramp-funit.json",
+      "sha256": "f6684c0db5d7026b3d038df60c7969b2e0b53fad6f012aeb18fe256c9f8acc5a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00064-qramp-funit",
+    "recipe_index": 59,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 712,
+      "input_integer_bits_sum": 2070,
+      "m": 4,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00256-qflat-fdegree.json",
+      "sha256": "97faa8fb447435f1962515f731499b3f1cfd9c6dd6c119752bba783b431041cd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00256-qflat-fdegree",
+    "recipe_index": 60,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 404,
+      "input_integer_bits_sum": 1046,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00256-qflat-funit.json",
+      "sha256": "c042ccf8ed87eaa3d17b7196d5247691d763a225ec8395b355fbca3140513010",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00256-qflat-funit",
+    "recipe_index": 61,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 708,
+      "input_integer_bits_sum": 2070,
+      "m": 4,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00256-qramp-fdegree.json",
+      "sha256": "1f8793f33b03525846b16ca709abe597b6cb122b543c1f6f67c15d398355ef11",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00256-qramp-fdegree",
+    "recipe_index": 62,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 400,
+      "input_integer_bits_sum": 1046,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b00256-qramp-funit.json",
+      "sha256": "5cdec9c6744921a55d7306fef6e96740ba72e1dfac36faa8fa1c36fb9bb7e403",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b00256-qramp-funit",
+    "recipe_index": 63,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 9960,
+      "input_integer_bits_sum": 32790,
+      "m": 4,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b04096-qflat-fdegree.json",
+      "sha256": "75c82cd5a2dc3e44aa124a7ed1ad3a3cc3f46baebedae45ce583242b2839874d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b04096-qflat-fdegree",
+    "recipe_index": 64,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 5028,
+      "input_integer_bits_sum": 16406,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b04096-qflat-funit.json",
+      "sha256": "5d2d7539ab4723bed2f307d6f227b5750432817f0d17f5d1c9a61dccd003ee0d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b04096-qflat-funit",
+    "recipe_index": 65,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 9956,
+      "input_integer_bits_sum": 32790,
+      "m": 4,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b04096-qramp-fdegree.json",
+      "sha256": "4c5cd7e8b5306b2c272a7b3f888676f5692d54e8d90c210c2f14997fa7f69f66",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b04096-qramp-fdegree",
+    "recipe_index": 66,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 5024,
+      "input_integer_bits_sum": 16406,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b04096-qramp-funit.json",
+      "sha256": "c87df374a1fe47a26db1b15ca3672b4ac9ca8c0fe62c9f10640c6efd6a4b979c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b04096-qramp-funit",
+    "recipe_index": 67,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "16*T-6",
+    "N_expression": "16*T-6",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 39552,
+      "input_integer_bits_sum": 131094,
+      "m": 4,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b16384-qflat-fdegree.json",
+      "sha256": "b9c14e1df7a6dbcbb3d769a0975763a30c4a57ac3057d44bdba10f6d75ef612b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b16384-qflat-fdegree",
+    "recipe_index": 68,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 19824,
+      "input_integer_bits_sum": 65558,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b16384-qflat-funit.json",
+      "sha256": "e59107774f1d2a306895064e869b1a12c2ea741dec0aae0c0dea54f2dbeb7f0e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b16384-qflat-funit",
+    "recipe_index": 69,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T",
+    "N_expression": "8*T",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 39548,
+      "input_integer_bits_sum": 131094,
+      "m": 4,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b16384-qramp-fdegree.json",
+      "sha256": "4750af4125225a7451c657cb16659b4cc2238d92700a5d0d9bb529c3e2eb8a9e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b16384-qramp-fdegree",
+    "recipe_index": 70,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+10",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 19820,
+      "input_integer_bits_sum": 65558,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-cycle-n04-b16384-qramp-funit.json",
+      "sha256": "7af9879f84e467a488daf1dbf1e55923fdba333b98f697f2cbeac5ff3ae99f56",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-cycle-n04-b16384-qramp-funit",
+    "recipe_index": 71,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00001-qflat-fdegree.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00001-qflat-fdegree",
+    "recipe_index": 72,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00001-qflat-funit.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00001-qflat-funit",
+    "recipe_index": 73,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00001-qramp-fdegree.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00001-qramp-fdegree",
+    "recipe_index": 74,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00001-qramp-funit.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00001-qramp-funit",
+    "recipe_index": 75,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 92,
+      "input_integer_bits_sum": 59,
+      "m": 2,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00008-qflat-fdegree.json",
+      "sha256": "4ceacae51a23b590a5d1262606a8d3ef74b0906c000e1282a9ffe3607ac30c9a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00008-qflat-fdegree",
+    "recipe_index": 76,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 84,
+      "input_integer_bits_sum": 31,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00008-qflat-funit.json",
+      "sha256": "e7867d2f4c92933747490ff3c9391f1e581ba41b5555dada9955183ae14ca397",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00008-qflat-funit",
+    "recipe_index": 77,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "254",
+    "N_expression": "254",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 92,
+      "input_integer_bits_sum": 59,
+      "m": 2,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00008-qramp-fdegree.json",
+      "sha256": "b0c5eb6818f07b0a3a6aab5e7c4687be5219c62a54f14a4a3d0a9ea8a20cd917",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00008-qramp-fdegree",
+    "recipe_index": 78,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "258",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 84,
+      "input_integer_bits_sum": 31,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00008-qramp-funit.json",
+      "sha256": "72e80cd6335e5299c13f8b66a108a4c3d82334a379957a2c809d209fb14607bb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00008-qramp-funit",
+    "recipe_index": 79,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 194,
+      "input_integer_bits_sum": 395,
+      "m": 2,
+      "max_f_bits": 64,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00064-qflat-fdegree.json",
+      "sha256": "fa56ed6b005e2d552b2a6d1bd2c35f6df67f77c3c9f6a326edf997b3c466aa75",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00064-qflat-fdegree",
+    "recipe_index": 80,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T-2",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 118,
+      "input_integer_bits_sum": 143,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00064-qflat-funit.json",
+      "sha256": "d87577911f2106f87d060fadec5d91ed06b90772d5c8cd3c1b1de86ac56574ad",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00064-qflat-funit",
+    "recipe_index": 81,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 188,
+      "input_integer_bits_sum": 395,
+      "m": 2,
+      "max_f_bits": 64,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00064-qramp-fdegree.json",
+      "sha256": "7bc22c7753d9d6e431cac5f050f93ec4b29d2306e5f88f487d3980ff308d7d40",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00064-qramp-fdegree",
+    "recipe_index": 82,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4*T+2",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 116,
+      "input_integer_bits_sum": 143,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00064-qramp-funit.json",
+      "sha256": "74d2cf776c75de3edb4933754cb472a04a9a60899800633ba011635ea941744b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00064-qramp-funit",
+    "recipe_index": 83,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 542,
+      "input_integer_bits_sum": 1547,
+      "m": 2,
+      "max_f_bits": 256,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00256-qflat-fdegree.json",
+      "sha256": "98fbd661ad0285f78c479646218106b0e06cb370c3cb2d5894be3edef192a3d3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00256-qflat-fdegree",
+    "recipe_index": 84,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T-2",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 234,
+      "input_integer_bits_sum": 527,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00256-qflat-funit.json",
+      "sha256": "e7cea02d77aae36e9f764e52791c156f5dfc5b859116727353166b9ee660b3f4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00256-qflat-funit",
+    "recipe_index": 85,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 536,
+      "input_integer_bits_sum": 1547,
+      "m": 2,
+      "max_f_bits": 256,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00256-qramp-fdegree.json",
+      "sha256": "ea3be4171b882186ed8e0257ccbc103c647c585e10d98c1842c96055672cbe08",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00256-qramp-fdegree",
+    "recipe_index": 86,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4*T+2",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 232,
+      "input_integer_bits_sum": 527,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b00256-qramp-funit.json",
+      "sha256": "c071dd19c784ab73961d1432ab24d448791e75c3c47e3ec050922fabe53960e7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b00256-qramp-funit",
+    "recipe_index": 87,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 7478,
+      "input_integer_bits_sum": 24587,
+      "m": 2,
+      "max_f_bits": 4096,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b04096-qflat-fdegree.json",
+      "sha256": "08f05d3a74d5f5210bb50fbbf3b64a5e153e7f6614ef2e51696622b46b8db166",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b04096-qflat-fdegree",
+    "recipe_index": 88,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T-2",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 2546,
+      "input_integer_bits_sum": 8207,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b04096-qflat-funit.json",
+      "sha256": "745a9d1fac061c5a30d39f2d145156d3097e0a305f617c144c3b47dd4ad65367",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b04096-qflat-funit",
+    "recipe_index": 89,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 7472,
+      "input_integer_bits_sum": 24587,
+      "m": 2,
+      "max_f_bits": 4096,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b04096-qramp-fdegree.json",
+      "sha256": "ad5c484fe937b54e2936f2a8e5c294d0d334c764d24dd081100b50f491b08efa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b04096-qramp-fdegree",
+    "recipe_index": 90,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4*T+2",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 2544,
+      "input_integer_bits_sum": 8207,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b04096-qramp-funit.json",
+      "sha256": "20530867f961fd7384282eb4f63a0712d4e390da4c2d73dbb500670979c8b3a0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b04096-qramp-funit",
+    "recipe_index": 91,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 29672,
+      "input_integer_bits_sum": 98315,
+      "m": 2,
+      "max_f_bits": 16384,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b16384-qflat-fdegree.json",
+      "sha256": "6a09a14405dc31666944e3b359565ad5388c2414ab0ca534e7dee2266accd6fc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b16384-qflat-fdegree",
+    "recipe_index": 92,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T-2",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 9944,
+      "input_integer_bits_sum": 32783,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b16384-qflat-funit.json",
+      "sha256": "22abbcad958440e47b959fbdaa5c406ac4c24295eec323ab60e6f1faf1f1c833",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b16384-qflat-funit",
+    "recipe_index": 93,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 29666,
+      "input_integer_bits_sum": 98315,
+      "m": 2,
+      "max_f_bits": 16384,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b16384-qramp-fdegree.json",
+      "sha256": "1572dee067dfb6919c81b9a4f61d9591e7f83bf8da92e96528d4ece75130856e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b16384-qramp-fdegree",
+    "recipe_index": 94,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4*T+2",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 9942,
+      "input_integer_bits_sum": 32783,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-matching-n04-b16384-qramp-funit.json",
+      "sha256": "fce4df5ca474feb784aabb4e891e953c0e02c49395e9d6b2ad911de5abba0f55",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-matching-n04-b16384-qramp-funit",
+    "recipe_index": 95,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00001-qflat-fdegree.json",
+      "sha256": "9cde01c5e13ad14721c73bbde913796db37463000cd5254ad7ee8f38916e4d38",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00001-qflat-fdegree",
+    "recipe_index": 96,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00001-qflat-funit.json",
+      "sha256": "1d29bc79a664f03078eaa26311955df5bf5102db7c8eaa01b64672a3251f30b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00001-qflat-funit",
+    "recipe_index": 97,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00001-qramp-fdegree.json",
+      "sha256": "9cde01c5e13ad14721c73bbde913796db37463000cd5254ad7ee8f38916e4d38",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00001-qramp-fdegree",
+    "recipe_index": 98,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00001-qramp-funit.json",
+      "sha256": "1d29bc79a664f03078eaa26311955df5bf5102db7c8eaa01b64672a3251f30b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00001-qramp-funit",
+    "recipe_index": 99,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 102,
+      "input_integer_bits_sum": 72,
+      "m": 3,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00008-qflat-fdegree.json",
+      "sha256": "9486a4cda50dcb743ae3ad36365dd7b08f40438f08b730d04fb4d6b84bfee2a4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00008-qflat-fdegree",
+    "recipe_index": 100,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 94,
+      "input_integer_bits_sum": 42,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00008-qflat-funit.json",
+      "sha256": "69181be7be275dbc32c31a5ccbcd94ea582cc32de65bef2ecdcfe6a571ed452b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00008-qflat-funit",
+    "recipe_index": 101,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "254",
+    "N_expression": "254",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 102,
+      "input_integer_bits_sum": 72,
+      "m": 3,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00008-qramp-fdegree.json",
+      "sha256": "105bbf06669aad109810ba728c926cc01d0c9eade9194c58e07a36e62b321208",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00008-qramp-fdegree",
+    "recipe_index": 102,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "518",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 94,
+      "input_integer_bits_sum": 42,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00008-qramp-funit.json",
+      "sha256": "13f884c9887041cc2a12d111b3d561037bc51e7deee988ad4e922396b922abab",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00008-qramp-funit",
+    "recipe_index": 103,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 221,
+      "input_integer_bits_sum": 464,
+      "m": 3,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00064-qflat-fdegree.json",
+      "sha256": "58c3ad356a905b081a5520b6e15a271210502de83ebbf39c0e35baccea97af31",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00064-qflat-fdegree",
+    "recipe_index": 104,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 145,
+      "input_integer_bits_sum": 210,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00064-qflat-funit.json",
+      "sha256": "d43288cfd87d0b2785182da908824c5c2bacc63aa92910b1f8a3d31da08f2258",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00064-qflat-funit",
+    "recipe_index": 105,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 216,
+      "input_integer_bits_sum": 464,
+      "m": 3,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00064-qramp-fdegree.json",
+      "sha256": "dcf49ac92df35cdfc7c81168eafd6ed3f0ef22e7b277cbadf45f8ff25e91967c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00064-qramp-fdegree",
+    "recipe_index": 106,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+6",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 65,
+      "bytes": 142,
+      "input_integer_bits_sum": 210,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00064-qramp-funit.json",
+      "sha256": "57743e69b6125b8af0bef4820659f783dbfad8c9df22a6dbab090a4f58cf56a7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00064-qramp-funit",
+    "recipe_index": 107,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 627,
+      "input_integer_bits_sum": 1808,
+      "m": 3,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00256-qflat-fdegree.json",
+      "sha256": "f898079e846d87f074a918bca3724fe5e2f8542f62da418880759802bcf69b09",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00256-qflat-fdegree",
+    "recipe_index": 108,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 258,
+      "bytes": 319,
+      "input_integer_bits_sum": 786,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00256-qflat-funit.json",
+      "sha256": "b8588080fefdf30abbedce225eb75059ee680e1023f7d6204d7d0513b08c8ee1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00256-qflat-funit",
+    "recipe_index": 109,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 622,
+      "input_integer_bits_sum": 1808,
+      "m": 3,
+      "max_f_bits": 257,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00256-qramp-fdegree.json",
+      "sha256": "ba41265f7274dffba49c7ce0dceb2b76390fc0dc9a1174d4df4d3f65dbfd036a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00256-qramp-fdegree",
+    "recipe_index": 110,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+6",
+    "empty": false,
+    "expression_bits": 256,
+    "input": {
+      "Q_bits": 257,
+      "bytes": 316,
+      "input_integer_bits_sum": 786,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 256,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b00256-qramp-funit.json",
+      "sha256": "61b6eca3a1c158c137c0d171245b5df805ff545f28133c85d68eb40b5e7830b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b00256-qramp-funit",
+    "recipe_index": 111,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 8719,
+      "input_integer_bits_sum": 28688,
+      "m": 3,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b04096-qflat-fdegree.json",
+      "sha256": "d0b3c033540ae7a250957ba12554f378bca1929bb0bf693efacbd645a30dd552",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b04096-qflat-fdegree",
+    "recipe_index": 112,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4098,
+      "bytes": 3787,
+      "input_integer_bits_sum": 12306,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b04096-qflat-funit.json",
+      "sha256": "0b4c98edeb46b1589030c2835605ed6d04b01daf3519b2bf307598299312f944",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b04096-qflat-funit",
+    "recipe_index": 113,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 8714,
+      "input_integer_bits_sum": 28688,
+      "m": 3,
+      "max_f_bits": 4097,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b04096-qramp-fdegree.json",
+      "sha256": "cb3dfc5f90a85c9d9aafc21fb60ff2e408cabe91795db4b7d246384ef966e376",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b04096-qramp-fdegree",
+    "recipe_index": 114,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+6",
+    "empty": false,
+    "expression_bits": 4096,
+    "input": {
+      "Q_bits": 4097,
+      "bytes": 3784,
+      "input_integer_bits_sum": 12306,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 4096,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b04096-qramp-funit.json",
+      "sha256": "b8a75547004aa9b52b28b46f7fd77771f14f5248494efd3ae9e2cfa1764613f2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b04096-qramp-funit",
+    "recipe_index": 115,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "8*T-4",
+    "N_expression": "8*T-4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 34612,
+      "input_integer_bits_sum": 114704,
+      "m": 3,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b16384-qflat-fdegree.json",
+      "sha256": "6ac415db67ed386b26ccabb8afeea3b9ab141a0b16068851891a0be2994f46b9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b16384-qflat-fdegree",
+    "recipe_index": 116,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "16*T-4",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16386,
+      "bytes": 14884,
+      "input_integer_bits_sum": 49170,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b16384-qflat-funit.json",
+      "sha256": "00698badc47fb6492a074bf85eb5457d59d8b42104f35da1892ec0e5baf36561",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b16384-qflat-funit",
+    "recipe_index": 117,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "4*T-2",
+    "N_expression": "4*T-2",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 34607,
+      "input_integer_bits_sum": 114704,
+      "m": 3,
+      "max_f_bits": 16385,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b16384-qramp-fdegree.json",
+      "sha256": "23c6ac47565b2ce952b3747a009aafb811ea1f873855093e294ac966f4858b22",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b16384-qramp-fdegree",
+    "recipe_index": 118,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+6",
+    "empty": false,
+    "expression_bits": 16384,
+    "input": {
+      "Q_bits": 16385,
+      "bytes": 14881,
+      "input_integer_bits_sum": 49170,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 16384,
+      "n": 4,
+      "path": "unit20-v1/bits-path-n04-b16384-qramp-funit.json",
+      "sha256": "016c571064e64eb4401628a02d2464f7c663bcc37f958d8548ad097127d9422d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "bits-path-n04-b16384-qramp-funit",
+    "recipe_index": 119,
+    "stratum": "bits"
+  },
+  {
+    "D_expression": "1",
+    "N_expression": "0",
+    "empty": true,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 1,
+      "bytes": 68,
+      "input_integer_bits_sum": 8,
+      "m": 1,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 2,
+      "path": "unit20-v1/edge-q01-f01-01.json",
+      "sha256": "389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q01-f01-01",
+    "recipe_index": 120,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 9,
+      "m": 1,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q02-f01-01.json",
+      "sha256": "3e2de3a8dbe77553054cca8670d352ea9e1cf0f475c589914429ca93091dbdd4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q02-f01-01",
+    "recipe_index": 121,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q02-f01-02.json",
+      "sha256": "0177b0d66263ec09ef23d4ac6fc07c1a03604ab9b38bedcfb0b0977a26b723ae",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q02-f01-02",
+    "recipe_index": 122,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q02-f02-01.json",
+      "sha256": "8f83470d990e1c2a43b7c94ecabb96c0c4caaf54f243296c3124c77c45dd50a6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q02-f02-01",
+    "recipe_index": 123,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q02-f02-02.json",
+      "sha256": "bff550edab3d611a53993be8376cff29719cb2b4236c6f34a944192c67f60b6a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q02-f02-02",
+    "recipe_index": 124,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 9,
+      "m": 1,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f01-01.json",
+      "sha256": "d066f87dfdd885b419a6058cd94b9b255e8b293451538a827095f6c49688d1f8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f01-01",
+    "recipe_index": 125,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f01-02.json",
+      "sha256": "555c16adf04eb65c5e07b3aa45f69748848bf254abea53ae367eef22ff180a12",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f01-02",
+    "recipe_index": 126,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f01-03.json",
+      "sha256": "ea69bd545692107e15fbcb6cd8ca24e9fe3c77c602334c8dcbfa771c1bd7554e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f01-03",
+    "recipe_index": 127,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f02-01.json",
+      "sha256": "29d18668d650e64283ff1a5fed99f074c566059c8ea721239f6bedec01665a2c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f02-01",
+    "recipe_index": 128,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f02-02.json",
+      "sha256": "302582352a021feba60234cdca1be2d09616412691eb238d87e8009e8e0ce9be",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f02-02",
+    "recipe_index": 129,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f02-03.json",
+      "sha256": "766aa9f22b1e970dc1c1475647640058b0b84fbdf1e7bd3abf7852eec5962379",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f02-03",
+    "recipe_index": 130,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f03-01.json",
+      "sha256": "6fbddde97170272fca6442f755d037347c595274ce5c3ec2835e361058e1e48e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f03-01",
+    "recipe_index": 131,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f03-02.json",
+      "sha256": "b9cba93bd2241f1e5e2085963299db66ad2d5cce4f23f871ffdf44ccf812e9fb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f03-02",
+    "recipe_index": 132,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 2,
+      "path": "unit20-v1/edge-q03-f03-03.json",
+      "sha256": "c382ceab2c7da34fe0bd564ce1ef40c0eec81b237a7b96de80d3fea5e42b9fc6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q03-f03-03",
+    "recipe_index": 133,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 1,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f01-01.json",
+      "sha256": "11b82d1c848246fa6b0ba43ef4de7491f24a45331b5df6dd6069c7876e8f141a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f01-01",
+    "recipe_index": 134,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f01-02.json",
+      "sha256": "ed084da1802afc5f87d0bec0dbb6cc5207639c9bc7b316dca8ee9f5f527b7d6c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f01-02",
+    "recipe_index": 135,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f01-03.json",
+      "sha256": "039bb757cc7fed13408f77a6ab3eb6939607002753903a4b9bcfa177e81a0729",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f01-03",
+    "recipe_index": 136,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f01-04.json",
+      "sha256": "c1feb3a8b0ce0aef02124c75c6d37b7d015eaff52dc628460ac3f98b989333a7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f01-04",
+    "recipe_index": 137,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f02-01.json",
+      "sha256": "554ae3044646fb89bdda37ac581eac8e8821276f1737ce962dc82e7b3f16fd86",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f02-01",
+    "recipe_index": 138,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f02-02.json",
+      "sha256": "2df43ef6afe3acb8428e6cd6201c485485d1551ee45e57171a27495274b1166d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f02-02",
+    "recipe_index": 139,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f02-03.json",
+      "sha256": "6f61523a8ade5d61a478bc7c41e0f66349b9aac9e32590a895bbd1ad2d9ad7fd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f02-03",
+    "recipe_index": 140,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f02-04.json",
+      "sha256": "332752c82429fe89bd0adcf1a618b5add01b6eaeb734b8a4509ef6abd47adfad",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f02-04",
+    "recipe_index": 141,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f03-01.json",
+      "sha256": "7fdac3a655afe18f74aa25bc0a8eeef410ab280a08ec7c7676fac9583be8baeb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f03-01",
+    "recipe_index": 142,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f03-02.json",
+      "sha256": "1e60820525a1ac2acfc301c0f8f67694319dc72ab62d38e58fcac30a3111a6ae",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f03-02",
+    "recipe_index": 143,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f03-03.json",
+      "sha256": "4aad5d8cbfbfcb19187910e08e28c55c5f26ad43055152e8cc0f805393a66756",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f03-03",
+    "recipe_index": 144,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f03-04.json",
+      "sha256": "4f7fb3c29eb74251a5d7a4dc18c23fa14469a4dd2e979707bd881eaffdb84187",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f03-04",
+    "recipe_index": 145,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f04-01.json",
+      "sha256": "3485cd5c4b561cb5f2c295456e47b9cdb2286a5fc4ff5e689f56aee674600898",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f04-01",
+    "recipe_index": 146,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f04-02.json",
+      "sha256": "8154cc152526f7eddbcee89831857a042c53d4569e898655553d0443b9d98360",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f04-02",
+    "recipe_index": 147,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f04-03.json",
+      "sha256": "0f7ec87079567e63c288c4bf2645aee61551c269b2984040466ddf0a448f265d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f04-03",
+    "recipe_index": 148,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 14,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q04-f04-04.json",
+      "sha256": "0979b3d8c67703997d7215cfcc23ab098f20a843d0f195bc0001bf05eb05ace2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q04-f04-04",
+    "recipe_index": 149,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 10,
+      "m": 1,
+      "max_f_bits": 1,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f01-01.json",
+      "sha256": "da0775bf119e5566be14c4c9abb7b6186d46ab86529188392e98257cb20aa718",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f01-01",
+    "recipe_index": 150,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f01-02.json",
+      "sha256": "6a881b6d25f3e7247be733df110a5fc43b464de9f83c9c173a63cc044497c17a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f01-02",
+    "recipe_index": 151,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f01-03.json",
+      "sha256": "9b994dbff2eb6108d8a27fe583d425451268b8b794e6aad3b870ea46ff8547ac",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f01-03",
+    "recipe_index": 152,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f01-04.json",
+      "sha256": "b01f181bcfa6b47fe4828a414a31c7352ff49e9c25ccf64f4ff44d8b29cf6517",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f01-04",
+    "recipe_index": 153,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f01-05.json",
+      "sha256": "16e85887b2ae005c6f5237f3a00137cdd60b766f5a465030d5f477d20a4a3cf5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f01-05",
+    "recipe_index": 154,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f02-01.json",
+      "sha256": "906f9f4ceef945efbbab1d343a43fd302a9cc0668115e4efbde1c5e282d06b00",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f02-01",
+    "recipe_index": 155,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f02-02.json",
+      "sha256": "ff170eada9f1433fa701bc9a23f91c0bf4ac452a582c4466f59c1d0c504dbccd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f02-02",
+    "recipe_index": 156,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f02-03.json",
+      "sha256": "55c63582a7e3142ba411b06714113ff631d443479b9264a2fbc38b1f234d918b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f02-03",
+    "recipe_index": 157,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f02-04.json",
+      "sha256": "d3ef34217a3e994805fe260598bee01e89da417a080e823034011d51952e6e64",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f02-04",
+    "recipe_index": 158,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f02-05.json",
+      "sha256": "87d94aafac692db7a5277ff7ed4c8e7c210095cfabd1cb83cae59aff3a7258f7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f02-05",
+    "recipe_index": 159,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 11,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f03-01.json",
+      "sha256": "dbc017706787df12a1c49b4a321ecdc38a127901fcacee77c39ac31f86718c3f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f03-01",
+    "recipe_index": 160,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f03-02.json",
+      "sha256": "00fa15f9e3867ec05cecb8fa359276b3d68380d31eb065c267c53a33f7bee16d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f03-02",
+    "recipe_index": 161,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 2,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f03-03.json",
+      "sha256": "a25afad4980cde7ce2d56b0959123c685e6a560a1c7e18155e881c1271fbb7d7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f03-03",
+    "recipe_index": 162,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f03-04.json",
+      "sha256": "dd519766df371d8231bbbf1f8bb3ad11fd3246d7c1faaf028524b7b3fbb5cc2c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f03-04",
+    "recipe_index": 163,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f03-05.json",
+      "sha256": "f61c0dd1c1ac6cf9eed1e1384222a5430fa3bbf4e7da27df4837df8af2925b7b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f03-05",
+    "recipe_index": 164,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f04-01.json",
+      "sha256": "4d6cd70f4d1df5eb674839eb44c4ea411ab57240cb13472eef208ec067f1bfa2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f04-01",
+    "recipe_index": 165,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f04-02.json",
+      "sha256": "d36db6ec39903242d598ff8ada73aabbcee835644894ced8da30bac682659c38",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f04-02",
+    "recipe_index": 166,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f04-03.json",
+      "sha256": "31c1908e556e9320e794af5afba3b868c56e21ab8933fafa8eb82bbab9b2e640",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f04-03",
+    "recipe_index": 167,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 14,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f04-04.json",
+      "sha256": "498d1a1ccc70019377328b705c0f770012c3a07dd6e872c00000f77f2f95fddf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f04-04",
+    "recipe_index": 168,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 14,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f04-05.json",
+      "sha256": "d41872a4648efc52c58685ffcd7ee99c76b490cb627e1ddcb4ab77b35b782707",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f04-05",
+    "recipe_index": 169,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 12,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f05-01.json",
+      "sha256": "857065b796e75fd8dd8b0a9f8d3111592dff529a976ed98144f6c6c8b6b17e2f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f05-01",
+    "recipe_index": 170,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f05-02.json",
+      "sha256": "e3dbabf5e238711441a919b2affd83bdc9e8cecd94d5c94bf24d5448d3f885d7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f05-02",
+    "recipe_index": 171,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 13,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f05-03.json",
+      "sha256": "0f7d6249fbb3144ff9b7bee3f77ddf6f11a1ec345e0d49ccb386cb9e8a9d2619",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f05-03",
+    "recipe_index": 172,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 14,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f05-04.json",
+      "sha256": "579c1e0b416efff0aff19f257a2d37156f8dde6dd406d5274ee8b48076b33932",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f05-04",
+    "recipe_index": 173,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 68,
+      "input_integer_bits_sum": 14,
+      "m": 1,
+      "max_f_bits": 3,
+      "max_q_bits": 3,
+      "n": 2,
+      "path": "unit20-v1/edge-q05-f05-05.json",
+      "sha256": "c6ba6146df0ed44207871c23a26d373a6520a8af906083798ed994d0b9ce002e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "edge-q05-f05-05",
+    "recipe_index": 174,
+    "stratum": "edge"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 32,
+      "m": 5,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00001-falternating-s01.json",
+      "sha256": "66775b5c3f379cb8a50ea9fd601ffba3c3a43b21302a03b6a979a44e23da96d8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00001-falternating-s01",
+    "recipe_index": 175,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 28,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00001-falternating-s73.json",
+      "sha256": "27a39bbb667b4596f62d4089cd73cae2e7dfc259f8551f6acaf6c4ce6ff472e8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00001-falternating-s73",
+    "recipe_index": 176,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 32,
+      "m": 5,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00001-fhalf-s01.json",
+      "sha256": "a23860b9fba0476590b4c0540c54c4af7c69d3e8744796b28660fc878c3d2a4d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00001-fhalf-s01",
+    "recipe_index": 177,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00001-fhalf-s73.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00001-fhalf-s73",
+    "recipe_index": 178,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 118,
+      "input_integer_bits_sum": 81,
+      "m": 5,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00008-falternating-s01.json",
+      "sha256": "9454e14807ad712f9bde83a69494f2d9406d16b5773c5cf863285d6fcad5990e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00008-falternating-s01",
+    "recipe_index": 179,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 108,
+      "input_integer_bits_sum": 70,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00008-falternating-s73.json",
+      "sha256": "f5bdb96863ede7abd40aa19b3b5abee16e12938bc3e8c42ffc294cae18fb175a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00008-falternating-s73",
+    "recipe_index": 180,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "784",
+    "N_expression": "1310",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 122,
+      "input_integer_bits_sum": 93,
+      "m": 5,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00008-fhalf-s01.json",
+      "sha256": "beca2b19fa3f92a75378b3d2f92bf3cd8b5ea467e1d07168ef7ef48bec1a121c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00008-fhalf-s01",
+    "recipe_index": 181,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "810",
+    "N_expression": "1620",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 82,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00008-fhalf-s73.json",
+      "sha256": "d2de617470da33f2b786fe74f2011544c963f1e95de1bcf68b05c8c2cd68bd86",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00008-fhalf-s73",
+    "recipe_index": 182,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 232,
+      "input_integer_bits_sum": 473,
+      "m": 5,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00064-falternating-s01.json",
+      "sha256": "de2abf74006486ea570a96103f61520664e70a983bcf4665f619259004c9540a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00064-falternating-s01",
+    "recipe_index": 183,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 206,
+      "input_integer_bits_sum": 406,
+      "m": 4,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00064-falternating-s73.json",
+      "sha256": "90389d93a132853ca614d6221913e000df419279eee400a2714344012c379035",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00064-falternating-s73",
+    "recipe_index": 184,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "12*T+16",
+    "N_expression": "20*T+30",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 268,
+      "input_integer_bits_sum": 597,
+      "m": 5,
+      "max_f_bits": 64,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00064-fhalf-s01.json",
+      "sha256": "ecbc37afe1df502ab859f69be5936d60e8f8784b078bf4591d3276c01b8712dc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00064-fhalf-s01",
+    "recipe_index": 185,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "8*T+298",
+    "N_expression": "16*T+596",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 66,
+      "bytes": 240,
+      "input_integer_bits_sum": 530,
+      "m": 4,
+      "max_f_bits": 64,
+      "max_q_bits": 64,
+      "n": 4,
+      "path": "unit20-v1/seeded-n04-b00064-fhalf-s73.json",
+      "sha256": "e220f7e098cc4bc109a61e37f504536a34d2d879d044d7ecb869e50af976f260",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n04-b00064-fhalf-s73",
+    "recipe_index": 186,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 148,
+      "input_integer_bits_sum": 66,
+      "m": 10,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00001-falternating-s01.json",
+      "sha256": "fe8eb3e56cde8ed0367b640d044341b0dc9e12267322d9a431faf734467e6cb5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00001-falternating-s01",
+    "recipe_index": 187,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 156,
+      "input_integer_bits_sum": 73,
+      "m": 11,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00001-falternating-s73.json",
+      "sha256": "8bd3cf61c498210f00ce1f6b6b3ca854dab15790b00a1ab63a5805b8323ce206",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00001-falternating-s73",
+    "recipe_index": 188,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 148,
+      "input_integer_bits_sum": 67,
+      "m": 10,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00001-fhalf-s01.json",
+      "sha256": "e9c3ffdce90206c8e47e4426c635b495440ec090c7e437ba872cc582fb9c66f5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00001-fhalf-s01",
+    "recipe_index": 189,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "12",
+    "N_expression": "22",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 156,
+      "input_integer_bits_sum": 74,
+      "m": 11,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00001-fhalf-s73.json",
+      "sha256": "1b62f21de964b885246acf410033d20778164baca5c89e6f4203bd1df9263f55",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00001-fhalf-s73",
+    "recipe_index": 190,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "534",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 174,
+      "input_integer_bits_sum": 157,
+      "m": 10,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00008-falternating-s01.json",
+      "sha256": "083a1175fd6d2df70009c3063575647043d0a7ca2535b1519d21acd50b5ac910",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00008-falternating-s01",
+    "recipe_index": 191,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "810",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 184,
+      "input_integer_bits_sum": 172,
+      "m": 11,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00008-falternating-s73.json",
+      "sha256": "e18cd27093ce7297b09ba6fe1c32aa1ee6e04fcccb16cb6eeff1a35041534eaf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00008-falternating-s73",
+    "recipe_index": 192,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "1334",
+    "N_expression": "2670",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 180,
+      "input_integer_bits_sum": 177,
+      "m": 10,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00008-fhalf-s01.json",
+      "sha256": "f0c939ba5a96e4b2df846594f96c9bd1de93242f081549134f4a7b2bd39fd998",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00008-fhalf-s01",
+    "recipe_index": 193,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2266",
+    "N_expression": "4532",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 190,
+      "input_integer_bits_sum": 193,
+      "m": 11,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00008-fhalf-s73.json",
+      "sha256": "97295631c7c34a903cf951125456f7d651386cefa15e1819316b461e4b63c689",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00008-fhalf-s73",
+    "recipe_index": 194,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+22",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 385,
+      "input_integer_bits_sum": 885,
+      "m": 10,
+      "max_f_bits": 66,
+      "max_q_bits": 64,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00064-falternating-s01.json",
+      "sha256": "e932e32ccb88e48e9e915892050400824bd9c192468f29dd272cc5c0fd206aaf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00064-falternating-s01",
+    "recipe_index": 195,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8*T+298",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 411,
+      "input_integer_bits_sum": 955,
+      "m": 11,
+      "max_f_bits": 66,
+      "max_q_bits": 64,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00064-falternating-s73.json",
+      "sha256": "c59b76d35b5a6f3b50d8f873f370ffda74ce12c087eac0d5a58c33b3a2eb4f82",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00064-falternating-s73",
+    "recipe_index": 196,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "20*T+54",
+    "N_expression": "40*T+110",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 441,
+      "input_integer_bits_sum": 1073,
+      "m": 10,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00064-fhalf-s01.json",
+      "sha256": "6f12c3a881a5c2d67b5a100f12d8cd28f27d0c8743aa70d04e3ae0d47c13ac17",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00064-fhalf-s01",
+    "recipe_index": 197,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "22*T+858",
+    "N_expression": "44*T+1716",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 468,
+      "input_integer_bits_sum": 1143,
+      "m": 11,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 6,
+      "path": "unit20-v1/seeded-n06-b00064-fhalf-s73.json",
+      "sha256": "1e08e3b672493806aac0701d58ac0438a73f7bbe640a43d312318d6dea13481a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n06-b00064-fhalf-s73",
+    "recipe_index": 198,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 176,
+      "input_integer_bits_sum": 96,
+      "m": 13,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00001-falternating-s01.json",
+      "sha256": "f593acddd3ab69f0a4123638fcda1f0d58c9373bdce25329a96d65c130158082",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00001-falternating-s01",
+    "recipe_index": 199,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 144,
+      "input_integer_bits_sum": 69,
+      "m": 9,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00001-falternating-s73.json",
+      "sha256": "96b4cd837602ef01db64ac8af8d230b1d2d036e0c1312f585dbf16b98bbdc0f3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00001-falternating-s73",
+    "recipe_index": 200,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 176,
+      "input_integer_bits_sum": 97,
+      "m": 13,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00001-fhalf-s01.json",
+      "sha256": "56eabf1d1311b741d7ec4ff481610eb2bfc0f5806f2655bc53f7b097e7edae14",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00001-fhalf-s01",
+    "recipe_index": 201,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 144,
+      "input_integer_bits_sum": 67,
+      "m": 9,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00001-fhalf-s73.json",
+      "sha256": "8358a07496619b8c7b4bdd385b2b53f305161ed262cf3bdf21a42be3cf2ac64b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00001-fhalf-s73",
+    "recipe_index": 202,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "278",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 210,
+      "input_integer_bits_sum": 215,
+      "m": 13,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00008-falternating-s01.json",
+      "sha256": "9ece3d7a9de4b3d096f335b50c0b8ac03591b5893172efff2709671bc95a8ea5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00008-falternating-s01",
+    "recipe_index": 203,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 170,
+      "input_integer_bits_sum": 162,
+      "m": 9,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00008-falternating-s73.json",
+      "sha256": "2a1df24fd86975feba0c0a31d7662c016a5aed049a7e507f24973c39b9b8b469",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00008-falternating-s73",
+    "recipe_index": 204,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "1884",
+    "N_expression": "3510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 218,
+      "input_integer_bits_sum": 239,
+      "m": 13,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00008-fhalf-s01.json",
+      "sha256": "247eed57c71a281e0e4ab5b283448999410109b114a4d5c7add5f9cb7cba54b1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00008-fhalf-s01",
+    "recipe_index": 205,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2048",
+    "N_expression": "3690",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 178,
+      "input_integer_bits_sum": 186,
+      "m": 9,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00008-fhalf-s73.json",
+      "sha256": "4d992bfdabd96213e740ba912d78ee16138e3e0c0c233850aeb1598a7a96de4e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00008-fhalf-s73",
+    "recipe_index": 206,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4*T+22",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 486,
+      "input_integer_bits_sum": 1167,
+      "m": 13,
+      "max_f_bits": 66,
+      "max_q_bits": 64,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00064-falternating-s01.json",
+      "sha256": "486347f847dc0128e59aed673dc66e5078fe28796aa6373369af64534c81af8a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00064-falternating-s01",
+    "recipe_index": 207,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 382,
+      "input_integer_bits_sum": 888,
+      "m": 9,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00064-falternating-s73.json",
+      "sha256": "54f58549e786f27116445c78688a94d5a0cdc5275386288a751820adb2e6fcf9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00064-falternating-s73",
+    "recipe_index": 208,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "28*T+92",
+    "N_expression": "52*T+182",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 561,
+      "input_integer_bits_sum": 1415,
+      "m": 13,
+      "max_f_bits": 65,
+      "max_q_bits": 64,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00064-fhalf-s01.json",
+      "sha256": "1c5d448bbfc6507280464edeb8032c4fbd27cbd2c933ce95b0fd6f42a1543179",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00064-fhalf-s01",
+    "recipe_index": 209,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "20*T+768",
+    "N_expression": "36*T+1386",
+    "empty": false,
+    "expression_bits": 64,
+    "input": {
+      "Q_bits": 67,
+      "bytes": 452,
+      "input_integer_bits_sum": 1136,
+      "m": 9,
+      "max_f_bits": 64,
+      "max_q_bits": 64,
+      "n": 8,
+      "path": "unit20-v1/seeded-n08-b00064-fhalf-s73.json",
+      "sha256": "99385b785b67708f6f62811eab1bd9121e234936fdfe399d420c4801b15cf17a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "seeded-n08-b00064-fhalf-s73",
+    "recipe_index": 210,
+    "stratum": "seeded"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00001-fdegree.json",
+      "sha256": "10e39ba6ea66ccbe2744c047514962a9d6333908b662c00bf6aca892b270d257",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00001-fdegree",
+    "recipe_index": 211,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00001-fhalf.json",
+      "sha256": "bc9a7be77da2a3d8e78734fc4da2e612fe5235deac9a566c717428ca967f9f5b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00001-fhalf",
+    "recipe_index": 212,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00001-fnear.json",
+      "sha256": "bc9a7be77da2a3d8e78734fc4da2e612fe5235deac9a566c717428ca967f9f5b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00001-fnear",
+    "recipe_index": 213,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00001-funit.json",
+      "sha256": "bc9a7be77da2a3d8e78734fc4da2e612fe5235deac9a566c717428ca967f9f5b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00001-funit",
+    "recipe_index": 214,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00008-fdegree.json",
+      "sha256": "011cbcabfa306fbd939c50f380d8033d020fa426278d70cb0f762a8f0cbd6acd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00008-fdegree",
+    "recipe_index": 215,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1274",
+    "N_expression": "2040",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 82,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00008-fhalf.json",
+      "sha256": "4244008e563a4633edc1e67005ef4e60d4a6cfd930ebf4804836c2b4cb201840",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00008-fhalf",
+    "recipe_index": 216,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00008-fnear.json",
+      "sha256": "8ce2415dc3a4f01e0339550f305f33ad498a463375f3e8db319286b5c37c3ea3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00008-fnear",
+    "recipe_index": 217,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-bipartite-n04-b00008-funit.json",
+      "sha256": "ec8b921c0a79e5c68d737e6c8d87e722937a7848c7ba6a333bf08dbb77fbd288",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n04-b00008-funit",
+    "recipe_index": 218,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 140,
+      "input_integer_bits_sum": 64,
+      "m": 9,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00001-fdegree.json",
+      "sha256": "8d9109f999ea3e2aabeb67791c2e8354b408a6bd2f5f1080fe6df5952ca28d2d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00001-fdegree",
+    "recipe_index": 219,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 140,
+      "input_integer_bits_sum": 64,
+      "m": 9,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00001-fhalf.json",
+      "sha256": "f72591db24929bdc062d34aa9e04d728a7a27f7db925e2a72ce03adb1d2592a1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00001-fhalf",
+    "recipe_index": 220,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 140,
+      "input_integer_bits_sum": 64,
+      "m": 9,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00001-fnear.json",
+      "sha256": "f72591db24929bdc062d34aa9e04d728a7a27f7db925e2a72ce03adb1d2592a1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00001-fnear",
+    "recipe_index": 221,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 140,
+      "input_integer_bits_sum": 58,
+      "m": 9,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00001-funit.json",
+      "sha256": "8d23440ad0fb493786f5ebfc630a4dbc40a31256352b8352657830d011aeb479",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00001-funit",
+    "recipe_index": 222,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1528",
+    "N_expression": "1528",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 170,
+      "input_integer_bits_sum": 175,
+      "m": 9,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00008-fdegree.json",
+      "sha256": "a6157642e5a97e26c2d01b9e581c080b01467bbd0d1241c2200945cf6b6e5021",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00008-fdegree",
+    "recipe_index": 223,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2678",
+    "N_expression": "4588",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 170,
+      "input_integer_bits_sum": 169,
+      "m": 9,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00008-fhalf.json",
+      "sha256": "f51a08bf24a1f506d7dd6af1c116701febbd2fc8d826cd3ea2cd01dbb4819ba1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00008-fhalf",
+    "recipe_index": 224,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1528",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 170,
+      "input_integer_bits_sum": 175,
+      "m": 9,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00008-fnear.json",
+      "sha256": "25c3221247284886210fa5230244f79186d2788718b98e38c3a756f9c127d16b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00008-fnear",
+    "recipe_index": 225,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "3060",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 158,
+      "input_integer_bits_sum": 121,
+      "m": 9,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-bipartite-n06-b00008-funit.json",
+      "sha256": "80d7472413e34086e1c0df0d8fb4c05b8eeed08e4a077b85df06a5157acb94d8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n06-b00008-funit",
+    "recipe_index": 226,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 200,
+      "input_integer_bits_sum": 121,
+      "m": 16,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00001-fdegree.json",
+      "sha256": "cee1f53f60e268be62c260c202ee6f608f93f7ee8207e1a1e75323a10fa64f9b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00001-fdegree",
+    "recipe_index": 227,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "16",
+    "N_expression": "30",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 200,
+      "input_integer_bits_sum": 113,
+      "m": 16,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00001-fhalf.json",
+      "sha256": "521ecd4c1db432301a76265438971bc1f38e48da0f3389fc6b43cd78e996e9bd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00001-fhalf",
+    "recipe_index": 228,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 200,
+      "input_integer_bits_sum": 113,
+      "m": 16,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00001-fnear.json",
+      "sha256": "c691146a84fe6277328ae5da9278cefaa55bf6d23f23117c76ba29909fb1ce1f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00001-fnear",
+    "recipe_index": 229,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "24",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 200,
+      "input_integer_bits_sum": 105,
+      "m": 16,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00001-funit.json",
+      "sha256": "18ec129272d4bf61c6fb01fa2a17410aa53542972e217855efa7219fe4732dde",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00001-funit",
+    "recipe_index": 230,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2038",
+    "N_expression": "2038",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 256,
+      "input_integer_bits_sum": 289,
+      "m": 16,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00008-fdegree.json",
+      "sha256": "a67547c1ad0a1e1ed92f59d7cf5151827f1a018beeefa951cee008ddad827659",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00008-fdegree",
+    "recipe_index": 231,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4588",
+    "N_expression": "8158",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 248,
+      "input_integer_bits_sum": 281,
+      "m": 16,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00008-fhalf.json",
+      "sha256": "12fc26ae9fce9f976990a08e1efbe302793d298f2a0851c516977a91dc7a9f3f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00008-fhalf",
+    "recipe_index": 232,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2038",
+    "N_expression": "2040",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 256,
+      "input_integer_bits_sum": 289,
+      "m": 16,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00008-fnear.json",
+      "sha256": "d381d812f0656f657d9789ce2d2df38e6e4e9ac9f7ed59ae64374254b54f4edb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00008-fnear",
+    "recipe_index": 233,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6120",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 232,
+      "input_integer_bits_sum": 217,
+      "m": 16,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-bipartite-n08-b00008-funit.json",
+      "sha256": "2de7e38ba40deaa313c889d9021513e7f4537fb8ccbbe0031aa11a6229ce3c5e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-bipartite-n08-b00008-funit",
+    "recipe_index": 234,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 38,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00001-fdegree.json",
+      "sha256": "c6d2ec493cc15b16c67bb2e1b2b6e50b80e698587e46d13e38f51b695da48482",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00001-fdegree",
+    "recipe_index": 235,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 38,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00001-fhalf.json",
+      "sha256": "5dbb58f527199b638867265190c01e4143b55eeba3865d95d8eca9e2e6b26232",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00001-fhalf",
+    "recipe_index": 236,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 38,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00001-fnear.json",
+      "sha256": "5dbb58f527199b638867265190c01e4143b55eeba3865d95d8eca9e2e6b26232",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00001-fnear",
+    "recipe_index": 237,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 112,
+      "input_integer_bits_sum": 34,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00001-funit.json",
+      "sha256": "7dbc69cd460016cf3132980e55f08ad41bf8b8e951627c4abf8676ddb0d29213",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00001-funit",
+    "recipe_index": 238,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1528",
+    "N_expression": "1528",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 132,
+      "input_integer_bits_sum": 112,
+      "m": 6,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00008-fdegree.json",
+      "sha256": "6dcb8ece3240e2d67d8a4fcebf91a248b58656196a8408c716b420a13df3c8b9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00008-fdegree",
+    "recipe_index": 239,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1912",
+    "N_expression": "3058",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 132,
+      "input_integer_bits_sum": 108,
+      "m": 6,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00008-fhalf.json",
+      "sha256": "5ed863ca97e5506c543a8213a690606910f4ebb9465d47b85cd82313da88054e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00008-fhalf",
+    "recipe_index": 240,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1528",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 132,
+      "input_integer_bits_sum": 112,
+      "m": 6,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00008-fnear.json",
+      "sha256": "6f88a97491036ddd93ff3e984c8a99e79d43fd2a81973eca31f774ebb34851db",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00008-fnear",
+    "recipe_index": 241,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 124,
+      "input_integer_bits_sum": 76,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-complete-n04-b00008-funit.json",
+      "sha256": "665655b2f8672cf0c62a55291f4b358dd5bb4aa1f80939ea1e2ac361c087d5c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n04-b00008-funit",
+    "recipe_index": 242,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 188,
+      "input_integer_bits_sum": 100,
+      "m": 15,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00001-fdegree.json",
+      "sha256": "ec0f9fbead4add50088d86b5a9775d8ab5e39082e255dca7d3929b197e5fcb98",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00001-fdegree",
+    "recipe_index": 243,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "18",
+    "N_expression": "28",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 188,
+      "input_integer_bits_sum": 94,
+      "m": 15,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00001-fhalf.json",
+      "sha256": "cf849cccd51551be9f1d1d909eeb077cb0acf733b1eef912bd33176ee0e2cb41",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00001-fhalf",
+    "recipe_index": 244,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 188,
+      "input_integer_bits_sum": 100,
+      "m": 15,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00001-fnear.json",
+      "sha256": "95140aec62aa997207ebd548e3b56f8de4018372face2186510572929826d726",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00001-fnear",
+    "recipe_index": 245,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "20",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 188,
+      "input_integer_bits_sum": 88,
+      "m": 15,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00001-funit.json",
+      "sha256": "3fa1c61288987cff4d92097a167dc26ba9c0286915aca11279ce852ad30b3722",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00001-funit",
+    "recipe_index": 246,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2548",
+    "N_expression": "2548",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 236,
+      "input_integer_bits_sum": 253,
+      "m": 15,
+      "max_f_bits": 11,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00008-fdegree.json",
+      "sha256": "ec6d89d9b0e0014e19b0d18d51e9fda8e9245803fc734c9631139de3bda8e0ba",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00008-fdegree",
+    "recipe_index": 247,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4464",
+    "N_expression": "7650",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 230,
+      "input_integer_bits_sum": 247,
+      "m": 15,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00008-fhalf.json",
+      "sha256": "19bd869cac5093a041064f7f44ed085c7fd25942f3d412ce29cc3fb0e1d6eec1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00008-fhalf",
+    "recipe_index": 248,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2548",
+    "N_expression": "2550",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 236,
+      "input_integer_bits_sum": 253,
+      "m": 15,
+      "max_f_bits": 11,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00008-fnear.json",
+      "sha256": "16b4e172c21f1256c1860b6babe983bd7c9f84f0b1dcd1d235a865b0cc60c115",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00008-fnear",
+    "recipe_index": 249,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "5100",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 12,
+      "bytes": 218,
+      "input_integer_bits_sum": 193,
+      "m": 15,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-complete-n06-b00008-funit.json",
+      "sha256": "cd1a32b0a44be5d1ef8c993086a2cd09ab9167ec0ff9239ea2da77b9b2bb11ec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n06-b00008-funit",
+    "recipe_index": 250,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "12",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 296,
+      "input_integer_bits_sum": 187,
+      "m": 28,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00001-fdegree.json",
+      "sha256": "1365cdbb873ca509968527f36cfb03ff2bb7396bfd76379af8d2cb8a82412ebc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00001-fdegree",
+    "recipe_index": 251,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "34",
+    "N_expression": "56",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 296,
+      "input_integer_bits_sum": 187,
+      "m": 28,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00001-fhalf.json",
+      "sha256": "acb3b4989a08dac00df759911ecf573e3565c2331920e8565ccc117382995ef0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00001-fhalf",
+    "recipe_index": 252,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "12",
+    "N_expression": "14",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 296,
+      "input_integer_bits_sum": 187,
+      "m": 28,
+      "max_f_bits": 3,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00001-fnear.json",
+      "sha256": "21df3d548fb84514a4da7738bd1928520aa5b3e441138bd5c9686c8e7d314ca5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00001-fnear",
+    "recipe_index": 253,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "42",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 5,
+      "bytes": 296,
+      "input_integer_bits_sum": 171,
+      "m": 28,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00001-funit.json",
+      "sha256": "9c26c4a49c2ece0c51d36483236fb82c8cf6353cfbdf77030b48fb6d9db5b968",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00001-funit",
+    "recipe_index": 254,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "3568",
+    "N_expression": "3568",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 13,
+      "bytes": 376,
+      "input_integer_bits_sum": 447,
+      "m": 28,
+      "max_f_bits": 11,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00008-fdegree.json",
+      "sha256": "e18b13e0e2e4ccd9b793b342709378bfef881484bd479418306126d63064baa5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00008-fdegree",
+    "recipe_index": 255,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "8034",
+    "N_expression": "14278",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 13,
+      "bytes": 368,
+      "input_integer_bits_sum": 439,
+      "m": 28,
+      "max_f_bits": 10,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00008-fhalf.json",
+      "sha256": "af89505ca6aeec653449c0e81aa047d0ce32df82372d3e200b915aa6c39a4b16",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00008-fhalf",
+    "recipe_index": 256,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "3568",
+    "N_expression": "3570",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 13,
+      "bytes": 376,
+      "input_integer_bits_sum": 447,
+      "m": 28,
+      "max_f_bits": 11,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00008-fnear.json",
+      "sha256": "78a095cda258f3c99f9d76c18fbc91556f3c11791890389852d638f346cf99ec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00008-fnear",
+    "recipe_index": 257,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10710",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 13,
+      "bytes": 352,
+      "input_integer_bits_sum": 367,
+      "m": 28,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-complete-n08-b00008-funit.json",
+      "sha256": "7c8334ddbc1ade86b96301fd437a8366d9671529ddb130ed6399a1f9b168ef36",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-complete-n08-b00008-funit",
+    "recipe_index": 258,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 30,
+      "m": 4,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00001-fdegree.json",
+      "sha256": "6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00001-fdegree",
+    "recipe_index": 259,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00001-fhalf.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00001-fhalf",
+    "recipe_index": 260,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00001-fnear.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00001-fnear",
+    "recipe_index": 261,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 96,
+      "input_integer_bits_sum": 26,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00001-funit.json",
+      "sha256": "ac01949e506b286033f7040d89001e2693a732a0c318bec3b993c2123c694ea0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00001-funit",
+    "recipe_index": 262,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00008-fdegree.json",
+      "sha256": "f6b5f107d4a7fade3faf7afbf2b492b80d2ba13746f1554e74fc4ca185f0a9a8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00008-fdegree",
+    "recipe_index": 263,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1274",
+    "N_expression": "2040",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 82,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00008-fhalf.json",
+      "sha256": "aec24a33ec2edda21a889b3f37650d4711ff9f5469f7101a223f4f5360551656",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00008-fhalf",
+    "recipe_index": 264,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 86,
+      "m": 4,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00008-fnear.json",
+      "sha256": "1f04aca273dea5d2bcffe5e2ce2d32de21d7c764932b283bfdfebaacd2028b62",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00008-fnear",
+    "recipe_index": 265,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 104,
+      "input_integer_bits_sum": 54,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-cycle-n04-b00008-funit.json",
+      "sha256": "ffbcacd5dfd85f08f9ead5a98a35384736e8839a401e3199e69f51b5fd67c0f1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n04-b00008-funit",
+    "recipe_index": 266,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 116,
+      "input_integer_bits_sum": 48,
+      "m": 6,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00001-fdegree.json",
+      "sha256": "6a54efbb59ab0b396799211bebbf84284ff78cd035ffd6bd1b1bf8e843f86f9f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00001-fdegree",
+    "recipe_index": 267,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 116,
+      "input_integer_bits_sum": 42,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00001-fhalf.json",
+      "sha256": "a33a8d1d2ecb0caf28daf15f92cda09fd48b926846acdb618701f3a26761fdec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00001-fhalf",
+    "recipe_index": 268,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 116,
+      "input_integer_bits_sum": 42,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00001-fnear.json",
+      "sha256": "a33a8d1d2ecb0caf28daf15f92cda09fd48b926846acdb618701f3a26761fdec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00001-fnear",
+    "recipe_index": 269,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 116,
+      "input_integer_bits_sum": 42,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00001-funit.json",
+      "sha256": "a33a8d1d2ecb0caf28daf15f92cda09fd48b926846acdb618701f3a26761fdec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00001-funit",
+    "recipe_index": 270,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 140,
+      "input_integer_bits_sum": 132,
+      "m": 6,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00008-fdegree.json",
+      "sha256": "3a8049325fc963af5f602188a77feb549881aabc3352329625ef6c4b550e1253",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00008-fdegree",
+    "recipe_index": 271,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1784",
+    "N_expression": "3060",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 140,
+      "input_integer_bits_sum": 126,
+      "m": 6,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00008-fhalf.json",
+      "sha256": "cd9360457ce26294d2c3ee89cfccbcc80feb2ca8e2a0e045af5b61c932bc01e9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00008-fhalf",
+    "recipe_index": 272,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 140,
+      "input_integer_bits_sum": 132,
+      "m": 6,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00008-fnear.json",
+      "sha256": "5d83f460955484a9e3c3525485402c58aadbefc4b387cb6863acd792d3647079",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00008-fnear",
+    "recipe_index": 273,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 128,
+      "input_integer_bits_sum": 84,
+      "m": 6,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-cycle-n06-b00008-funit.json",
+      "sha256": "bf3113609483c68d90cde3f5c24bac2d4eb2b44654a562733441b43c73f9b2cd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n06-b00008-funit",
+    "recipe_index": 274,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 136,
+      "input_integer_bits_sum": 68,
+      "m": 8,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00001-fdegree.json",
+      "sha256": "9cbd81ce008816fd7200341205a61419846d097487861a489452972245ba6d0e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00001-fdegree",
+    "recipe_index": 275,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 136,
+      "input_integer_bits_sum": 60,
+      "m": 8,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00001-fhalf.json",
+      "sha256": "ad031b313cee8196744f066d3b0d05af433a5224ae58c35e37397819fda1d426",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00001-fhalf",
+    "recipe_index": 276,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 136,
+      "input_integer_bits_sum": 60,
+      "m": 8,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00001-fnear.json",
+      "sha256": "ad031b313cee8196744f066d3b0d05af433a5224ae58c35e37397819fda1d426",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00001-fnear",
+    "recipe_index": 277,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 4,
+      "bytes": 136,
+      "input_integer_bits_sum": 60,
+      "m": 8,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00001-funit.json",
+      "sha256": "ad031b313cee8196744f066d3b0d05af433a5224ae58c35e37397819fda1d426",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00001-funit",
+    "recipe_index": 278,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1018",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 168,
+      "input_integer_bits_sum": 180,
+      "m": 8,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00008-fdegree.json",
+      "sha256": "b444a4df2637c73f228f52eb75fcd7de71b0fa4257ab3a14c180da2f1b482a0a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00008-fdegree",
+    "recipe_index": 279,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2294",
+    "N_expression": "4080",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 168,
+      "input_integer_bits_sum": 172,
+      "m": 8,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00008-fhalf.json",
+      "sha256": "9ce09e1485bbdb038c21e68201d3a6642020fe1a37f415f018cb7c20d48ef590",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00008-fhalf",
+    "recipe_index": 280,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1018",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 168,
+      "input_integer_bits_sum": 180,
+      "m": 8,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00008-fnear.json",
+      "sha256": "8f3e730b961d3c95d065b484d1b5fa4ba99f33a5f8baddca8e3db637d9421402",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00008-fnear",
+    "recipe_index": 281,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 152,
+      "input_integer_bits_sum": 116,
+      "m": 8,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-cycle-n08-b00008-funit.json",
+      "sha256": "7a879782d3b9aa0bd400e4406130049246149099f5728ee33a19560eb138d10c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-cycle-n08-b00008-funit",
+    "recipe_index": 282,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00001-fdegree.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00001-fdegree",
+    "recipe_index": 283,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00001-fhalf.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00001-fhalf",
+    "recipe_index": 284,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00001-fnear.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00001-fnear",
+    "recipe_index": 285,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 80,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00001-funit.json",
+      "sha256": "624ef80b2dc19f0bdd1c5f952107f5f4cb3074c6447a27039727cf33d05fe55c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00001-funit",
+    "recipe_index": 286,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 92,
+      "input_integer_bits_sum": 59,
+      "m": 2,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00008-fdegree.json",
+      "sha256": "4ceacae51a23b590a5d1262606a8d3ef74b0906c000e1282a9ffe3607ac30c9a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00008-fdegree",
+    "recipe_index": 287,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "638",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 92,
+      "input_integer_bits_sum": 59,
+      "m": 2,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00008-fhalf.json",
+      "sha256": "f2d3d099248d9fe7365b14dea51033edcfa854c2b90c0495c7f834f8c6135a98",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00008-fhalf",
+    "recipe_index": 288,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 92,
+      "input_integer_bits_sum": 59,
+      "m": 2,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00008-fnear.json",
+      "sha256": "fd6ad48049472a5f9105d1a82d6e6f2da004ca1c33be19fb4bc8a43c8af9c8d9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00008-fnear",
+    "recipe_index": 289,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 9,
+      "bytes": 84,
+      "input_integer_bits_sum": 31,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-matching-n04-b00008-funit.json",
+      "sha256": "e7867d2f4c92933747490ff3c9391f1e581ba41b5555dada9955183ae14ca397",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n04-b00008-funit",
+    "recipe_index": 290,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 92,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00001-fdegree.json",
+      "sha256": "9acd040ad03ae47222301cff5cedf67be0cfaad12d0d57850893086f0835b577",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00001-fdegree",
+    "recipe_index": 291,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 92,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00001-fhalf.json",
+      "sha256": "9acd040ad03ae47222301cff5cedf67be0cfaad12d0d57850893086f0835b577",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00001-fhalf",
+    "recipe_index": 292,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 92,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00001-fnear.json",
+      "sha256": "9acd040ad03ae47222301cff5cedf67be0cfaad12d0d57850893086f0835b577",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00001-fnear",
+    "recipe_index": 293,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 92,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00001-funit.json",
+      "sha256": "9acd040ad03ae47222301cff5cedf67be0cfaad12d0d57850893086f0835b577",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00001-funit",
+    "recipe_index": 294,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 110,
+      "input_integer_bits_sum": 89,
+      "m": 3,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00008-fdegree.json",
+      "sha256": "ff891d8aabd7e307a42e8b8e8a8322c416f2b71d366266463110a81e3a6ec41a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00008-fdegree",
+    "recipe_index": 295,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "894",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 110,
+      "input_integer_bits_sum": 89,
+      "m": 3,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00008-fhalf.json",
+      "sha256": "83d2c42ba9bb551fb0ab30ebe1a8f9acfd308f5075e9964f58dd2095e7a03ee9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00008-fhalf",
+    "recipe_index": 296,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 110,
+      "input_integer_bits_sum": 89,
+      "m": 3,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00008-fnear.json",
+      "sha256": "01389286493d07315a308abd7592c89bd8f4fb84f8a68d1aa9f9265b48bd0ccd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00008-fnear",
+    "recipe_index": 297,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 98,
+      "input_integer_bits_sum": 47,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-matching-n06-b00008-funit.json",
+      "sha256": "7255259fb6c183ac5407b6342fdc830392f3ef1f2ed7f8bc4a513f718d2d08c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n06-b00008-funit",
+    "recipe_index": 298,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 37,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00001-fdegree.json",
+      "sha256": "537bf56bae5ff4588c03bee3ddad16eb87dc64e500d2d96a735cdcd7bab5d73a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00001-fdegree",
+    "recipe_index": 299,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 37,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00001-fhalf.json",
+      "sha256": "537bf56bae5ff4588c03bee3ddad16eb87dc64e500d2d96a735cdcd7bab5d73a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00001-fhalf",
+    "recipe_index": 300,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 37,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00001-fnear.json",
+      "sha256": "537bf56bae5ff4588c03bee3ddad16eb87dc64e500d2d96a735cdcd7bab5d73a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00001-fnear",
+    "recipe_index": 301,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 104,
+      "input_integer_bits_sum": 37,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00001-funit.json",
+      "sha256": "537bf56bae5ff4588c03bee3ddad16eb87dc64e500d2d96a735cdcd7bab5d73a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00001-funit",
+    "recipe_index": 302,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 128,
+      "input_integer_bits_sum": 121,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00008-fdegree.json",
+      "sha256": "1f3d0ba275fde8dd5245baeb11eab27d5f28f932fe2521c2ac3d3a94e5052225",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00008-fdegree",
+    "recipe_index": 303,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1150",
+    "N_expression": "2040",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 128,
+      "input_integer_bits_sum": 121,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00008-fhalf.json",
+      "sha256": "a05b7a4b1057e9255e946b046f6bea71ab3fb945f070f54e500f6092c9971086",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00008-fhalf",
+    "recipe_index": 304,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 128,
+      "input_integer_bits_sum": 121,
+      "m": 4,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00008-fnear.json",
+      "sha256": "211e4d2cc86ec5a9df995b09c3d6f485db00f6d0b2fb9ea10de9c0ecee9b0c24",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00008-fnear",
+    "recipe_index": 305,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 112,
+      "input_integer_bits_sum": 65,
+      "m": 4,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-matching-n08-b00008-funit.json",
+      "sha256": "9bd00a7dcc110be5c2c970c8042ec9d9904cd32c802f3687a8d11bae5e6b32d0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-matching-n08-b00008-funit",
+    "recipe_index": 306,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00001-fdegree.json",
+      "sha256": "9cde01c5e13ad14721c73bbde913796db37463000cd5254ad7ee8f38916e4d38",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00001-fdegree",
+    "recipe_index": 307,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00001-fhalf.json",
+      "sha256": "1d29bc79a664f03078eaa26311955df5bf5102db7c8eaa01b64672a3251f30b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00001-fhalf",
+    "recipe_index": 308,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00001-fnear.json",
+      "sha256": "1d29bc79a664f03078eaa26311955df5bf5102db7c8eaa01b64672a3251f30b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00001-fnear",
+    "recipe_index": 309,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 88,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00001-funit.json",
+      "sha256": "1d29bc79a664f03078eaa26311955df5bf5102db7c8eaa01b64672a3251f30b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00001-funit",
+    "recipe_index": 310,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 102,
+      "input_integer_bits_sum": 72,
+      "m": 3,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00008-fdegree.json",
+      "sha256": "9486a4cda50dcb743ae3ad36365dd7b08f40438f08b730d04fb4d6b84bfee2a4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00008-fdegree",
+    "recipe_index": 311,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "892",
+    "N_expression": "1530",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 102,
+      "input_integer_bits_sum": 70,
+      "m": 3,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00008-fhalf.json",
+      "sha256": "41995d412bebb81de782823711c4a4d022aa6f6b4a4a322cf9fd91fbe5c024d5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00008-fhalf",
+    "recipe_index": 312,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 102,
+      "input_integer_bits_sum": 72,
+      "m": 3,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00008-fnear.json",
+      "sha256": "8d6e21ad100671d174e37152e8c10fabe395b686665bc86ec059b8093a2e42c2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00008-fnear",
+    "recipe_index": 313,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 10,
+      "bytes": 94,
+      "input_integer_bits_sum": 42,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 4,
+      "path": "unit20-v1/struct-path-n04-b00008-funit.json",
+      "sha256": "69181be7be275dbc32c31a5ccbcd94ea582cc32de65bef2ecdcfe6a571ed452b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n04-b00008-funit",
+    "recipe_index": 314,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 108,
+      "input_integer_bits_sum": 41,
+      "m": 5,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00001-fdegree.json",
+      "sha256": "e86d2fdc2b828b26e4e6d80fc11f92ec37b700309d646cac78ea0234729719ef",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00001-fdegree",
+    "recipe_index": 315,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 108,
+      "input_integer_bits_sum": 37,
+      "m": 5,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00001-fhalf.json",
+      "sha256": "5b77e63708298101934cff340d499c51ee3e37c7dd1f8ed08509459c896daf53",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00001-fhalf",
+    "recipe_index": 316,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 108,
+      "input_integer_bits_sum": 37,
+      "m": 5,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00001-fnear.json",
+      "sha256": "5b77e63708298101934cff340d499c51ee3e37c7dd1f8ed08509459c896daf53",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00001-fnear",
+    "recipe_index": 317,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 108,
+      "input_integer_bits_sum": 37,
+      "m": 5,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00001-funit.json",
+      "sha256": "5b77e63708298101934cff340d499c51ee3e37c7dd1f8ed08509459c896daf53",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00001-funit",
+    "recipe_index": 318,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 130,
+      "input_integer_bits_sum": 118,
+      "m": 5,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00008-fdegree.json",
+      "sha256": "89d8933c783970a2624e527dc3d1f1dd0b615e74f0e0c8384f7d7c2a974462a0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00008-fdegree",
+    "recipe_index": 319,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1402",
+    "N_expression": "2550",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 130,
+      "input_integer_bits_sum": 114,
+      "m": 5,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00008-fhalf.json",
+      "sha256": "3cdd2ed1c68e0853945bd4d8fe6a9b8dda1ef4743dc9f17d229c47c917e4efc4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00008-fhalf",
+    "recipe_index": 320,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 130,
+      "input_integer_bits_sum": 118,
+      "m": 5,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00008-fnear.json",
+      "sha256": "5a411c97b70e26d1864a9a53fb3d40024b2c766c10549607e115ec61aa85f84d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00008-fnear",
+    "recipe_index": 321,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 118,
+      "input_integer_bits_sum": 72,
+      "m": 5,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 6,
+      "path": "unit20-v1/struct-path-n06-b00008-funit.json",
+      "sha256": "8344090ec2c34793593bc593d997916d89f511c868610d6ee24be6b4a5b15cbf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n06-b00008-funit",
+    "recipe_index": 322,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 128,
+      "input_integer_bits_sum": 60,
+      "m": 7,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00001-fdegree.json",
+      "sha256": "f1615e133c00778c80903db7637c488e11e3f589b7c560f4c5764303ed444f97",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00001-fdegree",
+    "recipe_index": 323,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 128,
+      "input_integer_bits_sum": 54,
+      "m": 7,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00001-fhalf.json",
+      "sha256": "3fb9a30d2b5ab18a8c718072f2c1b84d306d4c6db15dc42a4d3ed2bdd93b6150",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00001-fhalf",
+    "recipe_index": 324,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 128,
+      "input_integer_bits_sum": 54,
+      "m": 7,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00001-fnear.json",
+      "sha256": "3fb9a30d2b5ab18a8c718072f2c1b84d306d4c6db15dc42a4d3ed2bdd93b6150",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00001-fnear",
+    "recipe_index": 325,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 1,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 128,
+      "input_integer_bits_sum": 54,
+      "m": 7,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00001-funit.json",
+      "sha256": "3fb9a30d2b5ab18a8c718072f2c1b84d306d4c6db15dc42a4d3ed2bdd93b6150",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00001-funit",
+    "recipe_index": 326,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "508",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 158,
+      "input_integer_bits_sum": 165,
+      "m": 7,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00008-fdegree.json",
+      "sha256": "ed3898617d6700e9726e3459906ff4bca66c029bf50aa78585be6635db830443",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00008-fdegree",
+    "recipe_index": 327,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "1912",
+    "N_expression": "3570",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 158,
+      "input_integer_bits_sum": 159,
+      "m": 7,
+      "max_f_bits": 8,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00008-fhalf.json",
+      "sha256": "d800eeecc5b6a694f4c9a309be73ba2e62e1190930d117b3cae7d7849fcf2c60",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00008-fhalf",
+    "recipe_index": 328,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "508",
+    "N_expression": "510",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 158,
+      "input_integer_bits_sum": 165,
+      "m": 7,
+      "max_f_bits": 9,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00008-fnear.json",
+      "sha256": "cb99e98f84c6446d6fafb9135d4a6646460815fa6cd9f24367944eb412b5538a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00008-fnear",
+    "recipe_index": 329,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "1020",
+    "empty": false,
+    "expression_bits": 8,
+    "input": {
+      "Q_bits": 11,
+      "bytes": 142,
+      "input_integer_bits_sum": 103,
+      "m": 7,
+      "max_f_bits": 1,
+      "max_q_bits": 8,
+      "n": 8,
+      "path": "unit20-v1/struct-path-n08-b00008-funit.json",
+      "sha256": "164ca529781d7ef485ce850c5788af83401ca0f919c0b40b91753e5a9a719688",
+      "suite": "unit20-v1"
+    },
+    "recipe": "struct-path-n08-b00008-funit",
+    "recipe_index": 330,
+    "stratum": "struct"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-1-f1-1-1.json",
+      "sha256": "21c732b7de27247e014f6069ab9c457f48f9236f3a1fea99de9885dd3d3c5f21",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-1-f1-1-1",
+    "recipe_index": 331,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-1-f1-1-2.json",
+      "sha256": "c8f9124bfa630a0caafa0a7cafa0fa409efbd9a91d39e3f638a4c434ec977c37",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-1-f1-1-2",
+    "recipe_index": 332,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-1-1.json",
+      "sha256": "ae79d1775979aa02a638ffe195bebaf54c0462553e0b16f2fd7e7c0ef77da232",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-1-1",
+    "recipe_index": 333,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-1-2.json",
+      "sha256": "48a3d7116c76388a4f57e4a4f1e537849ef01a174e5bc43988f061a14ac37508",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-1-2",
+    "recipe_index": 334,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-1-3.json",
+      "sha256": "7c0bfaa9e8ac37c46e7a286390a435f35db3239af72f2923913c6005668d4735",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-1-3",
+    "recipe_index": 335,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-2-1.json",
+      "sha256": "21d3aa5bbdc12b294c33b09c5d1c45081a24ed98453c741371a374bbee2128a7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-2-1",
+    "recipe_index": 336,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-2-2.json",
+      "sha256": "bdaab2c788657a90bbe5d72476e8b78bb3cbe1d6d4a29e7ff5f8f4dd57491a61",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-2-2",
+    "recipe_index": 337,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-1-2-f1-2-3.json",
+      "sha256": "d4c989c06bda6ec1eef59e2a31bad47ba935ee3a885a0431164f055e839b0f9f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-1-2-f1-2-3",
+    "recipe_index": 338,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f1-1-1.json",
+      "sha256": "e5bab04aa0cda90f9c52e15898cde545069c2020fa6665ef6ebb9854f0201486",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f1-1-1",
+    "recipe_index": 339,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f1-1-2.json",
+      "sha256": "c78d12ff2bcc778d145ed96ab2d5e79fb4112e1daf698fab82690b9a13d3884b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f1-1-2",
+    "recipe_index": 340,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f1-1-3.json",
+      "sha256": "2d1f577b4acda52e8390827a5b835f1aa9100541c4b9dfb7bf115fba5c2685aa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f1-1-3",
+    "recipe_index": 341,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f2-1-1.json",
+      "sha256": "7961cdcc4d7d3cef22fef2968cbb5099bdaac42131b0db27fd2f07aba2a21530",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f2-1-1",
+    "recipe_index": 342,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f2-1-2.json",
+      "sha256": "5f056f8c33753f0ed8081abb54d686105417378b9d213fbae815ee13c4385fab",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f2-1-2",
+    "recipe_index": 343,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-1-f2-1-3.json",
+      "sha256": "2d033416780b3766b90281d4c712a379020b3bcd80c16a3dfd5716994de333eb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-1-f2-1-3",
+    "recipe_index": 344,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-1-1.json",
+      "sha256": "6d7b3305088d26cbaddc760ab9f1ee2b54c983450609c76076fc4447bf50b701",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-1-1",
+    "recipe_index": 345,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-1-2.json",
+      "sha256": "9ad4a112631caf9e650a0af1471df32d3b12060b15944ca44038ea9653112257",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-1-2",
+    "recipe_index": 346,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-1-3.json",
+      "sha256": "ed7e2947e239600089da73cf9e6d5b95e217bec1cd58f2b09d02d4c0aa3bb56a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-1-3",
+    "recipe_index": 347,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-1-4.json",
+      "sha256": "38f7018fe11f9d2f28466fe6ea0029a0aa8dab4589a1751d97c21b9887be204c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-1-4",
+    "recipe_index": 348,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-2-1.json",
+      "sha256": "1b830cd384d09b15f45affebf18fa9ec4cc64f51c6e46fed2a3d4e65812314f2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-2-1",
+    "recipe_index": 349,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-2-2.json",
+      "sha256": "cd8a24a6aaf8b9f3e7a53cff022a0002bf04cdfeae43c31132848154b04d7868",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-2-2",
+    "recipe_index": 350,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-2-3.json",
+      "sha256": "6d4bd134cb9c1442e79f533b0f129e33bf06dc0006c9ca00d934ec5ee4b3e002",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-2-3",
+    "recipe_index": 351,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f1-2-4.json",
+      "sha256": "c396d7fa7d8fa171a83d033d35b1343f072be713df83364dbffec43bfbde5c6b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f1-2-4",
+    "recipe_index": 352,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-1-1.json",
+      "sha256": "4078f84d9c749483fa54f3e72d27faaeaacf39b5dd0b5fc386ba766983ae1243",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-1-1",
+    "recipe_index": 353,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-1-2.json",
+      "sha256": "4844c52cb2912b9912f690815a3bff49255eccf2b59bbbd7f30cf109465025e8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-1-2",
+    "recipe_index": 354,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-1-3.json",
+      "sha256": "f8886ad74e9561699b3f440e548b189d7ede050bb524d451c63327691f4efa6c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-1-3",
+    "recipe_index": 355,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-1-4.json",
+      "sha256": "c94e7a4b8b2886237023d688b704714488ce172a2f55eff41f936b6ce44818c1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-1-4",
+    "recipe_index": 356,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-2-1.json",
+      "sha256": "4c358150b20e642f08b3fc955e7bb854aaaaecab1cd48cf592e23b98c8e610c9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-2-1",
+    "recipe_index": 357,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-2-2.json",
+      "sha256": "e7634ce3a58395b89799e5a6fabbac7dac2b0f0aabdd877e05e259155351fb57",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-2-2",
+    "recipe_index": 358,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-2-3.json",
+      "sha256": "4b4ce3ba597890c00e3f8b18bdd396662650acbd7b30b8ab83fa8d73d473cd2c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-2-3",
+    "recipe_index": 359,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 21,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q0-2-2-f2-2-4.json",
+      "sha256": "1725c2add54d12f3dc22e0c6555a347c73cb2e799940576e9606208415299512",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q0-2-2-f2-2-4",
+    "recipe_index": 360,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 14,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-1-f1-1-1.json",
+      "sha256": "b5e0571dcd4c62994f5d632a6fb77d4947b4715145570d1c9312f5e400e34aad",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-1-f1-1-1",
+    "recipe_index": 361,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-1-f1-2-1.json",
+      "sha256": "d723fa64ce52264052d7b17c08d1a33a37137e55ff1695637b7498ec027f9136",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-1-f1-2-1",
+    "recipe_index": 362,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-1-1.json",
+      "sha256": "9c3f595f83b59090b6b9a2752a8cab91c5711c9198a0c4840c65227483308b7c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-1-1",
+    "recipe_index": 363,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-1-2.json",
+      "sha256": "767909c2396e36f8e976d2ff2d223f56e8fd372478445a0e9a228eeb41bfb6ba",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-1-2",
+    "recipe_index": 364,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-2-1.json",
+      "sha256": "1922225bd66c210be38f7f85efa3e3ee1c7e68a5750a0a45b010e171faeefa61",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-2-1",
+    "recipe_index": 365,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-2-2.json",
+      "sha256": "035bfd1e01b65a166517564186d162ce7e1d02e60facd11871168efded2a60d5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-2-2",
+    "recipe_index": 366,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-3-1.json",
+      "sha256": "3e536834f21ce94064e4452823af9ddb2d9d10e6505fb2aca252e9591eae95e4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-3-1",
+    "recipe_index": 367,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-0-2-f1-3-2.json",
+      "sha256": "fc51d0e19bca1271442b4fdba15ccd947a39b65e228da4501f69609eaccb78f3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-0-2-f1-3-2",
+    "recipe_index": 368,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 14,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-0-f1-1-1.json",
+      "sha256": "9fc3c2fe93630fde3e96f7622e1e8b01ce354176c13af9c7acdbb333ec343cc6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-0-f1-1-1",
+    "recipe_index": 369,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-0-f2-1-1.json",
+      "sha256": "e3d967c2177e3185928a4e3fea2744c16dc9c5b4cb22a5250b2d79275c8b3610",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-0-f2-1-1",
+    "recipe_index": 370,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 18,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f1-1-1.json",
+      "sha256": "345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f1-1-1",
+    "recipe_index": 371,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f1-1-2.json",
+      "sha256": "01d0cf2bd5945ac8391bb68d3c2146eec6a510c7801e47aea2b67d77d1aa97a4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f1-1-2",
+    "recipe_index": 372,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f1-2-1.json",
+      "sha256": "679fd19e24f9497435fcffa2d279c4986e5e9df2dcfa0025c34f268a4d439634",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f1-2-1",
+    "recipe_index": 373,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f1-2-2.json",
+      "sha256": "f147de8d46909c213ed39561cd584db55f8b28bbb8df273076bc91b6dba5dcc8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f1-2-2",
+    "recipe_index": 374,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f2-1-1.json",
+      "sha256": "f5f5d1ccf3d87d230573cc35ad148622c3e51cf114b61c3096bf59ceb078df75",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f2-1-1",
+    "recipe_index": 375,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f2-1-2.json",
+      "sha256": "16fb3f651bc8afcd563a6c82984b0ddec6e977808f53c6a4b0e716e9f69efdce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f2-1-2",
+    "recipe_index": 376,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f2-2-1.json",
+      "sha256": "4f923cbdd95ee85e100b0c2027408682b84018af167a33a4c93e9a5ceee99df5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f2-2-1",
+    "recipe_index": 377,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 1,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-1-f2-2-2.json",
+      "sha256": "2c51774bfb3c8caa278ffc8a9ea0b2c8781a46fa9f3d0a91b6d0979a3d4c7f4f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-1-f2-2-2",
+    "recipe_index": 378,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-1-1.json",
+      "sha256": "33420d680a8c84019e908ee5925d1eda0eca5deef1db726785cb1fa782a81d3a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-1-1",
+    "recipe_index": 379,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-1-2.json",
+      "sha256": "2acec943c61197afc0b3897c22a3128924a40c0e038eac01ca778e392693267b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-1-2",
+    "recipe_index": 380,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-1-3.json",
+      "sha256": "45ce4866d7d8fddfcfeed4e1b1bb36c76d108974cfd8706acf80dc557a18df2f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-1-3",
+    "recipe_index": 381,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-2-1.json",
+      "sha256": "4b54d450f1f7fd8a1192c5959c02919ea689f7e0f2bc78cc3fd6d28dea009c2e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-2-1",
+    "recipe_index": 382,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-2-2.json",
+      "sha256": "78b3ac35875cc55578fcacd5977b2c0327b79b4aa72a24e1cd8bffd61d3cfa86",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-2-2",
+    "recipe_index": 383,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-2-3.json",
+      "sha256": "e2d43a24234f09876c2414d871df02bb4121e4c291deb6d494b687aff5048b86",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-2-3",
+    "recipe_index": 384,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-3-1.json",
+      "sha256": "89e99c0778f7c0e7bd146a4a569d36e30a71daa295388cc6771ee32f9c531d17",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-3-1",
+    "recipe_index": 385,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-3-2.json",
+      "sha256": "3e4bb9a9421a0adfe9f576afb4fb88f17b52d7b10b2799a28f9ad0654434a597",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-3-2",
+    "recipe_index": 386,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f1-3-3.json",
+      "sha256": "7f6268469614107ccfd9e41804a6da5dc4d42d780291b7b9ae0d8d62ca916203",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f1-3-3",
+    "recipe_index": 387,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-1-1.json",
+      "sha256": "c7e57c5ef0041b09dbb8fd28f0f29e52b29fc563e4c826670fffe7b1b4ab1f85",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-1-1",
+    "recipe_index": 388,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-1-2.json",
+      "sha256": "fe6142dbaa38c21b8d763d9f040f458bcf09169ea85b11db23e33266540e03f2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-1-2",
+    "recipe_index": 389,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-1-3.json",
+      "sha256": "123eb64a1f5d9fa97b31ec68ebdf5d8195ec41f5281cf5eab75bafdf704e5806",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-1-3",
+    "recipe_index": 390,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-2-1.json",
+      "sha256": "1589deeb3c7a8ea3b4a2edadf0b23eeb385e76c42e135328f036f6f039630416",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-2-1",
+    "recipe_index": 391,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-2-2.json",
+      "sha256": "756520ef45abde9a469d4dd18461c7125beb2c338f906fb6e81c59d07229fe26",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-2-2",
+    "recipe_index": 392,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-2-3.json",
+      "sha256": "5bb392a1a329213e614dc85c56dee1e5caa65da30834b1cd6d3526b6199b4da8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-2-3",
+    "recipe_index": 393,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-3-1.json",
+      "sha256": "e9d522aa0146098ae439a5daa6bf7f5c63c05f1797d76bba4cbbc12897c9b3a5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-3-1",
+    "recipe_index": 394,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-3-2.json",
+      "sha256": "b3cec3e28d7d4a306723887bcddee8498fe68721e6f212d24fcd69f5f9b48fbc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-3-2",
+    "recipe_index": 395,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-1-2-f2-3-3.json",
+      "sha256": "32a41179b0440d3a0b709e690bc61603dab07bf171d41f287c2a607c756427e6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-1-2-f2-3-3",
+    "recipe_index": 396,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f1-1-1.json",
+      "sha256": "f57b32b39836f2d07927663c44b4253ddc094883156a58853d8ce0335042906b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f1-1-1",
+    "recipe_index": 397,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f1-1-2.json",
+      "sha256": "a8cdda02ce6999e9aa1f5c14e55a6d41d1355d082ef2e9b839cd36d9289cd5b9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f1-1-2",
+    "recipe_index": 398,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f2-1-1.json",
+      "sha256": "9cacf70acf13b49fea8075f222c7cb8dcc0c887b8948c10fe29350394679066b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f2-1-1",
+    "recipe_index": 399,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f2-1-2.json",
+      "sha256": "273fe1177788d582ba704841b86b6767c441fa461a314af0ae7ed9504bb5cc85",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f2-1-2",
+    "recipe_index": 400,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f3-1-1.json",
+      "sha256": "4627c27bf2f8950cff19749bebda97f885195f802988e4e93eaf0d937bcbd2cf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f3-1-1",
+    "recipe_index": 401,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-0-f3-1-2.json",
+      "sha256": "2824887a6add79e7a8ac607c58a89edaab937d16ca1e9a4272bd1a4e80ff83a2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-0-f3-1-2",
+    "recipe_index": 402,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-1-1.json",
+      "sha256": "d1e489d4e6ceb42442b89c907dfd88c85efd55253c31f70b06b5a663af872e5a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-1-1",
+    "recipe_index": 403,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-1-2.json",
+      "sha256": "81b08a3a6e306579f8e771fa79964c9e1043a6eb4aa8f84220ef1dd4d8b8ad66",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-1-2",
+    "recipe_index": 404,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-1-3.json",
+      "sha256": "5400fc613807dc9dc8eb31e24e840790b893851558daa8866e156531a1fcb6e9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-1-3",
+    "recipe_index": 405,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-2-1.json",
+      "sha256": "ff10cee898634032698e3a2c2ca9f45a3e32b1f962485bf1cd98ed5466cde34a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-2-1",
+    "recipe_index": 406,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-2-2.json",
+      "sha256": "2387a73c3aa04cb5a08abf2da1c063f5952d13722ec84f359c7b72d38f70ee9e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-2-2",
+    "recipe_index": 407,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f1-2-3.json",
+      "sha256": "c9e8a5bb499add61f443cb838b627bbdd9afb27df133bf3b2d545825ca4f4ca5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f1-2-3",
+    "recipe_index": 408,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-1-1.json",
+      "sha256": "7de99405c2bffe4adef4b608c5135f048a7bbfb8fe4e38f5a6e40cb3190a52fd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-1-1",
+    "recipe_index": 409,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-1-2.json",
+      "sha256": "3113be22f923c199b0095be4f97c73d6cf342027bfdb2627748512d8301d528f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-1-2",
+    "recipe_index": 410,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-1-3.json",
+      "sha256": "41e70c7c713425be5e16e4c9a121ffdc0c71beba806c7c698022da9ecddb982b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-1-3",
+    "recipe_index": 411,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-2-1.json",
+      "sha256": "e67ecc1812b41cf8cc9e160cbe58bdfeb047bdc2aeca8deb693d1d302929ca9a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-2-1",
+    "recipe_index": 412,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-2-2.json",
+      "sha256": "0724bfc4f811bdff5b4fb3e9d9704e062a36569d0ef16dde728fd154c422e292",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-2-2",
+    "recipe_index": 413,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f2-2-3.json",
+      "sha256": "1206181a05b852975f8a7e0cd091b629cb88072efb00c87ca3475b02494286ce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f2-2-3",
+    "recipe_index": 414,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-1-1.json",
+      "sha256": "523798fb143aa7723509f8f698b2f45b37885da93c823f82ab905ad94457f4d8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-1-1",
+    "recipe_index": 415,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-1-2.json",
+      "sha256": "0adbd688541d8fd07e5f29be646b22ce011df08f477b9725468901804e0d7f35",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-1-2",
+    "recipe_index": 416,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-1-3.json",
+      "sha256": "c9d17a36be22f0c289f5329c0b15e8ca8ad7e70cbfe00bc8b245668eae39afb0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-1-3",
+    "recipe_index": 417,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-2-1.json",
+      "sha256": "404d846d51712d6f11c5ed8bf87ad686a46f11d44c013ac987091be5b547d7c9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-2-1",
+    "recipe_index": 418,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-2-2.json",
+      "sha256": "91a847b056c3134cb3ab731788cd4052e2dcc4c8a8799696fdd8a1d6c590d09b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-2-2",
+    "recipe_index": 419,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-1-f3-2-3.json",
+      "sha256": "07aaeee4d53bf5946a1323027902c76b6260adaefa41b4038350e9260d729781",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-1-f3-2-3",
+    "recipe_index": 420,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-1-1.json",
+      "sha256": "5276d532559fe708c2986049b98e3beb9662a08ac837713a7bdbdcc5c808b605",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-1-1",
+    "recipe_index": 421,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-1-2.json",
+      "sha256": "071e666ef3732888cf90772abd0b08780ccef2d3e7ba1ecb5ec81ab763523847",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-1-2",
+    "recipe_index": 422,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-1-3.json",
+      "sha256": "e0e31a2647af920974bdf360793027dccf595eb2ee25d77463c998415b2deec6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-1-3",
+    "recipe_index": 423,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-1-4.json",
+      "sha256": "16d36007ff42720f45361c7698b7ad3061a0f8eb8d34e897048782077941c988",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-1-4",
+    "recipe_index": 424,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-2-1.json",
+      "sha256": "c2c2f860b5e47286bc35a17015db133129edc3cec76cd860407efc578c1152c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-2-1",
+    "recipe_index": 425,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-2-2.json",
+      "sha256": "393d897fe74caebd1270b1058f30731de0aa1aa500cf1a8b8415ce7887b1e3bc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-2-2",
+    "recipe_index": 426,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-2-3.json",
+      "sha256": "0afe28f86f61ed153905d06df5afc103b396d98486c14ea8e049d3509b9a8b5f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-2-3",
+    "recipe_index": 427,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-2-4.json",
+      "sha256": "3f3337f6c454ccca233f69726138fed7325a233465cc579aa76eaadbe6047c80",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-2-4",
+    "recipe_index": 428,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-3-1.json",
+      "sha256": "430504a47afbb53376bd234b2b04fe7632a4a59e5255aed2679919a013dd0478",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-3-1",
+    "recipe_index": 429,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-3-2.json",
+      "sha256": "f650b5a6bbddb17c6345ec4abcb6d5b171ebdc7d11567fb59d748ffdb7353c85",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-3-2",
+    "recipe_index": 430,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-3-3.json",
+      "sha256": "20ea69e979570161ff91c531d3f8a7c9744fed2b33244c374d38b1fdb2f31dfd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-3-3",
+    "recipe_index": 431,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f1-3-4.json",
+      "sha256": "0f63c195112ef92ced399ceed25bb6183feca5927d1788dd1322d948b753d083",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f1-3-4",
+    "recipe_index": 432,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-1-1.json",
+      "sha256": "7a4c1190a58e8c1d6028e4776f15c241781731abdfe3a27fd5a90cc13c60ff63",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-1-1",
+    "recipe_index": 433,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-1-2.json",
+      "sha256": "4234645739ff808a037382f289cf71ef23798e4e1ff36c42657c734948153813",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-1-2",
+    "recipe_index": 434,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-1-3.json",
+      "sha256": "961bafa781f84496ba142443f26a0955a881013549a56578a68030580eba1f0c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-1-3",
+    "recipe_index": 435,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-1-4.json",
+      "sha256": "2bf3674c622afc640f411efb67c06c163fe4dbae4ea8d432be5d1bd4b4b9ec28",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-1-4",
+    "recipe_index": 436,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-2-1.json",
+      "sha256": "ed6087e5d005f5d3249c00451336e81fcbab5a09658e51173d485e70b8a663dd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-2-1",
+    "recipe_index": 437,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-2-2.json",
+      "sha256": "0e7b5c38b3e4140624a46c7828ec3ba8616ef17681c77d22801289d1e05b4eb2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-2-2",
+    "recipe_index": 438,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-2-3.json",
+      "sha256": "8e9c91ef0d52e50a111364da046fa19f18987812fbcfd6d57168c35c57cac21f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-2-3",
+    "recipe_index": 439,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-2-4.json",
+      "sha256": "a2944ca3673da926515414bb43012d69b377704532954a3dff6ae7578a4a272d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-2-4",
+    "recipe_index": 440,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-3-1.json",
+      "sha256": "2dd731b36d0caaa0c7b85b489050cbde90d751c20f553cd1d645b3f55b7d0e94",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-3-1",
+    "recipe_index": 441,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-3-2.json",
+      "sha256": "40d683956ba3ea4bc68d93cf3ecfd56e4d239f9ef54abc0aab12303f7991b73a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-3-2",
+    "recipe_index": 442,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-3-3.json",
+      "sha256": "c563f93910c9733cc66f7a0378fd26f3877a9cfac1bdd154eb96dafc08d62b3f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-3-3",
+    "recipe_index": 443,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f2-3-4.json",
+      "sha256": "84e3996f987b9f44f65ad95cda1022fbc86d1e326cc96720a93bdace63a255ee",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f2-3-4",
+    "recipe_index": 444,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-1-1.json",
+      "sha256": "b2f739063c7c28e563d2e6ebb8a713edd437a60c5c0d495bd7ea2487ab7209d3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-1-1",
+    "recipe_index": 445,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-1-2.json",
+      "sha256": "e0c0af3a832d3e7979ebbd906126f6a41d60c781c0ea3bb3d3e901337eab0917",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-1-2",
+    "recipe_index": 446,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-1-3.json",
+      "sha256": "d2ae7ccd64de906c08d7a2c141791acfdcb57ccc358ebc00bd2e059d5a27abd0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-1-3",
+    "recipe_index": 447,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-1-4.json",
+      "sha256": "a09a30dc86f87164b33e7e73f5cfbdaf7cf912c855e40ee33c948b0e0df20ebc",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-1-4",
+    "recipe_index": 448,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-2-1.json",
+      "sha256": "9fdd3065948933a901c1815bb7570f3743cf9f10c5fc3418c5dd955f8cbfc22b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-2-1",
+    "recipe_index": 449,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-2-2.json",
+      "sha256": "bbb92f95b3af159febf25c12b486175c63e0aa4ded1a3d3c1f769724abad4a10",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-2-2",
+    "recipe_index": 450,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-2-3.json",
+      "sha256": "cc7fced8630fcd51b15a408dd15d242e89439fe06fa934138051c247e78398f5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-2-3",
+    "recipe_index": 451,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-2-4.json",
+      "sha256": "b7acb494fa5fbb1bf0568c9269f7ee77a483a42e7a1ee54d0682f076e30974b2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-2-4",
+    "recipe_index": 452,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-3-1.json",
+      "sha256": "c08bfac90e1ce140709fb08eee18c68f4b58eb1193cb0297212636daf8f7c8c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-3-1",
+    "recipe_index": 453,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-3-2.json",
+      "sha256": "054bdcaa7677fc8afccd7ec10d090ac71412c37659af156a43dbc4217b4f2054",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-3-2",
+    "recipe_index": 454,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-3-3.json",
+      "sha256": "77982da4a2151345309ef1265c8bfdfb0b3b13d8cf978d003a8cfb3433ba6303",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-3-3",
+    "recipe_index": 455,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q1-2-2-f3-3-4.json",
+      "sha256": "026e957b7795c6f14b3e3ac50489ef159ab0e86475bdeb2dcd6da79130a49be1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q1-2-2-f3-3-4",
+    "recipe_index": 456,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f1-1-1.json",
+      "sha256": "5b11dd0e9b0a57d78e3d9ac19f348897e91f6ae28ec54949f539975b5abbe387",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f1-1-1",
+    "recipe_index": 457,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f1-2-1.json",
+      "sha256": "d21079ffe1dd01a1ea5f2f14be0a2f9d48e42e2f70ab08f3bbecfb39ffb9f2ce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f1-2-1",
+    "recipe_index": 458,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f1-3-1.json",
+      "sha256": "b0ca031e12e03f81034951bc40607b86e2a8b68d44ed30b236c4c5cdc8d562c1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f1-3-1",
+    "recipe_index": 459,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f2-1-1.json",
+      "sha256": "62fd0caa3d7eee01d0e8f2447ab8dee0e5ca728079cdc1cf2102e2629869dea7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f2-1-1",
+    "recipe_index": 460,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f2-2-1.json",
+      "sha256": "da0e2cad3547081e27be97f69c98ba25b1d0b21e7b815c66e3dcafba8e6167ba",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f2-2-1",
+    "recipe_index": 461,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-1-f2-3-1.json",
+      "sha256": "2471b84451eb045f28c19d9c948d38482e80dafe7f8dbf729890432b93337658",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-1-f2-3-1",
+    "recipe_index": 462,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-1-1.json",
+      "sha256": "3fd6f405eeccfa99e0c53724374167f6b9790816daab70763e786b99b8595682",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-1-1",
+    "recipe_index": 463,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-1-2.json",
+      "sha256": "32aa0b0651475a7992b1a4f48e0e5c01fc7fd5c232514ad4cf4757575eb4f43d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-1-2",
+    "recipe_index": 464,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-2-1.json",
+      "sha256": "3b215602176827a361c1fa1e59a020309fc85e3a992e55f9d3e214f00afae18a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-2-1",
+    "recipe_index": 465,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-2-2.json",
+      "sha256": "c4668fde7a0f1de8a655e31ec265839ba817b1a428573a450509f76dc045f105",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-2-2",
+    "recipe_index": 466,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-3-1.json",
+      "sha256": "ae8c8ea5d6abe4a0a89996cb6bd68474833ab6f9df835a7c58704affaf4e7e09",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-3-1",
+    "recipe_index": 467,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-3-2.json",
+      "sha256": "8d0c463f80200c3d5f781366bf67fa020bfc383b8d4fc52d201ce01900409ec9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-3-2",
+    "recipe_index": 468,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-4-1.json",
+      "sha256": "3162ec82271b0780b7e7becd21d223f65cbe28610b96a67f264708057c096f4e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-4-1",
+    "recipe_index": 469,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f1-4-2.json",
+      "sha256": "91304854ce7495e7374950e55b7f317ab1d943b290c1ae26ae3b1f891b9df825",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f1-4-2",
+    "recipe_index": 470,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-1-1.json",
+      "sha256": "98a4de2d41a2dc1a447b4dffd0d91f9c0a6bc1defbc4ea82ecb169bac51c41aa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-1-1",
+    "recipe_index": 471,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-1-2.json",
+      "sha256": "dc78b084c6bd22338ac109a2a340e2aed06b3e2e398e8b5589d68e77f5a216f5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-1-2",
+    "recipe_index": 472,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-2-1.json",
+      "sha256": "e17cfd5315f14152bbc9e9b047b05f5bfc15e92837b03d53f56fdac265785ac4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-2-1",
+    "recipe_index": 473,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-2-2.json",
+      "sha256": "65f5ebba211afdb1bd4cdd42fe583cca0d16d3c2735556aa7d164c13c998239e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-2-2",
+    "recipe_index": 474,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-3-1.json",
+      "sha256": "dd60bad29c5e88425f7383fb8e90bfeb8e2e8311047ad5785b3bf66a8a9279ed",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-3-1",
+    "recipe_index": 475,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-3-2.json",
+      "sha256": "900fbef9872338356081bede11a2a1990332e1b380ee48f33624eaf291b63ef7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-3-2",
+    "recipe_index": 476,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-4-1.json",
+      "sha256": "b0cf8bd1e93eb89a598a91ca77e4c8afe1a0078a8c245ac524d0c85e62d401e0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-4-1",
+    "recipe_index": 477,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "2",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-0-2-f2-4-2.json",
+      "sha256": "fc423d885b38bf489ac910e6941f443d8f074f3b2e2482d33819c3654d3e966f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-0-2-f2-4-2",
+    "recipe_index": 478,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 15,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f1-1-1.json",
+      "sha256": "5e44b91792cae3b577868d44dd59b7c1fa9261d4aea422ace81eaa4c6edd9e8f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f1-1-1",
+    "recipe_index": 479,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f1-2-1.json",
+      "sha256": "df3758150c8b4eff11f6506c0fe91a0d3c825548ece35bc7a4bafa010410c473",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f1-2-1",
+    "recipe_index": 480,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f2-1-1.json",
+      "sha256": "55bbf0189dbcc4e3080f3b68a6024af76baee63129dfb86e71c06ddc2c726344",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f2-1-1",
+    "recipe_index": 481,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f2-2-1.json",
+      "sha256": "80062f14b82545bb029665c520660a44a0cf118c4d53bd30cf0eaa88addd64ee",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f2-2-1",
+    "recipe_index": 482,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f3-1-1.json",
+      "sha256": "60149a33a426b59499b55b5a8056fc72cef2a9a9e14afa50189809d2009a16d3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f3-1-1",
+    "recipe_index": 483,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 2,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-0-f3-2-1.json",
+      "sha256": "ca03020ebc163735934fe579f965fd0a6ccdec82007b39645ecd767ab156e395",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-0-f3-2-1",
+    "recipe_index": 484,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 19,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-1-1.json",
+      "sha256": "0b142abf2eca873acfe47061fe417a9c43e40cc92112e314fe437640eeb8a312",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-1-1",
+    "recipe_index": 485,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-1-2.json",
+      "sha256": "d983e52ed60f5452f0d38b482896c7699b8f911ae83776e20a0ae7831bf49d83",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-1-2",
+    "recipe_index": 486,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-2-1.json",
+      "sha256": "d3e4c90c62ed763cbc771d6546a628893ea84a20fd06dab58855f8f3b775fca7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-2-1",
+    "recipe_index": 487,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-2-2.json",
+      "sha256": "96b21ed07d2cc21d4dc1c38053c2fef5aabd2cbf37f633f0677402a0fdb9d1cb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-2-2",
+    "recipe_index": 488,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-3-1.json",
+      "sha256": "b261989248d6c9ba99914b008925fea025d8de0742a24a6bc355e765551c8c8b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-3-1",
+    "recipe_index": 489,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f1-3-2.json",
+      "sha256": "2d0e3b5bbb5e19824f23b99624ec375810e5734eae9f3593d56af9f29690d030",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f1-3-2",
+    "recipe_index": 490,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-1-1.json",
+      "sha256": "301479c10897545216621183ecd330ee4011f46cc11998651484e1d231759118",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-1-1",
+    "recipe_index": 491,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-1-2.json",
+      "sha256": "886e50b7268e10bc7b95e0990eb6c2e5b3935ecba3db2eabb0bc4e49e09c79c5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-1-2",
+    "recipe_index": 492,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-2-1.json",
+      "sha256": "173f2626f5ce9cef5d0df2132f12f6fc0eb897644bdfedc986b6e55c3377c17e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-2-1",
+    "recipe_index": 493,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-2-2.json",
+      "sha256": "71339e17caa8270e227bfee63cec18f5885d3eaeeba0a6febdcd1ee1da16b368",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-2-2",
+    "recipe_index": 494,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-3-1.json",
+      "sha256": "1bd65308bb50c87b346c47c80fc1ad3d25b4163a79fd1e3967c2299380a77199",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-3-1",
+    "recipe_index": 495,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f2-3-2.json",
+      "sha256": "fb7883e743a8c8312ed8572b6874ca0cdc54b2f2a158c1ee7cf5a86ca857ac6b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f2-3-2",
+    "recipe_index": 496,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-1-1.json",
+      "sha256": "57e8e0a0287df11b4c66b436bad16db22298601b9faaf4763b020f746e202d5e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-1-1",
+    "recipe_index": 497,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-1-2.json",
+      "sha256": "f16d69fcaf56875a1e61afcfbc45bd24276aaca5fe1bb67a37ee339ee5183ec4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-1-2",
+    "recipe_index": 498,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-2-1.json",
+      "sha256": "27c3948cf7d0f1767019825d7072250170ac4525d477d984eb160052e1e6e37f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-2-1",
+    "recipe_index": 499,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-2-2.json",
+      "sha256": "50a22c7feb211f3722d6eddb93cd854e9d9c71c0fd864243d42435360e19beec",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-2-2",
+    "recipe_index": 500,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-3-1.json",
+      "sha256": "d3c625fb3782aeee22bc6f2be84d8b690507dced6fbb44728c46b3787046c242",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-3-1",
+    "recipe_index": 501,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-1-f3-3-2.json",
+      "sha256": "c91d41f6724249f4af5657c975d6f6271e0239648849a254a1873b04d216ca69",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-1-f3-3-2",
+    "recipe_index": 502,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-1-1.json",
+      "sha256": "27e3e78b8bd81300c188362eef1c1036fc10beb3c283336e1b64ddcb6e2a21b7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-1-1",
+    "recipe_index": 503,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-1-2.json",
+      "sha256": "5144b5fc79d5c3e3158dc2fd1bb4d32a721c6e87b346f96f7a948e459ef56214",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-1-2",
+    "recipe_index": 504,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-1-3.json",
+      "sha256": "bb029f398bc298353b149ff96242a9c3fdbca952bc8bac6ab763b28e3a26f2df",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-1-3",
+    "recipe_index": 505,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-2-1.json",
+      "sha256": "f08ab877281f2612f8e7972e8052eceb503e532fb54732a2d556ea84abc47ae3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-2-1",
+    "recipe_index": 506,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-2-2.json",
+      "sha256": "658ed15ad8fca3ffac186c0e59e9ee56d8d14e5e886c2ad24b64d37929eaab18",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-2-2",
+    "recipe_index": 507,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-2-3.json",
+      "sha256": "f6410d654c067a1592f094a7c06d0911892da53df7ed859a9dbcea996940e999",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-2-3",
+    "recipe_index": 508,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-3-1.json",
+      "sha256": "46d1641816e52c1b5a43cf9e27ca2f0bf036f2368114609ad980696ad84d58cd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-3-1",
+    "recipe_index": 509,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-3-2.json",
+      "sha256": "842a9f30380abd45206270e437720854d293c2c1bf74b2d452ff452cd518b961",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-3-2",
+    "recipe_index": 510,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-3-3.json",
+      "sha256": "7c7a164a57ab4183afff20407b03ded9f34819619919c4fd659275581363b8c6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-3-3",
+    "recipe_index": 511,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-4-1.json",
+      "sha256": "78b7ef2e570d4b213063bf9cb36125714e7de783fd0ff050cda5626f98de1eed",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-4-1",
+    "recipe_index": 512,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-4-2.json",
+      "sha256": "2131206ee3dddebca0657b646805f7b863a6ec9676f4144aef899c8cfbaf0f35",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-4-2",
+    "recipe_index": 513,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f1-4-3.json",
+      "sha256": "ef2109cbd09ad492b5177c689d312392bae4feba2ba86cd9cd3b3559889c6ba0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f1-4-3",
+    "recipe_index": 514,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-1-1.json",
+      "sha256": "1f237b21963068ec17439c5a3df660ad30fa1136249d3d7800bee72a604220c9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-1-1",
+    "recipe_index": 515,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-1-2.json",
+      "sha256": "67fae2f9bf046ee4aa97331440549e20701546f15f35344a0cc2f1eaedb1c102",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-1-2",
+    "recipe_index": 516,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-1-3.json",
+      "sha256": "2808f569d96ed0639e1bd0ec92619daff7ad70c0766f085609f8ad7cf59d9bef",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-1-3",
+    "recipe_index": 517,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-2-1.json",
+      "sha256": "0b0b5ac8afd8b4dec71994bbebd812daf3507db4cf7505165e0cdec38a9d6465",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-2-1",
+    "recipe_index": 518,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-2-2.json",
+      "sha256": "5d3d60c89cefa21546c6cabcebda79493bf453bba03c3eb2968716be112138d0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-2-2",
+    "recipe_index": 519,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-2-3.json",
+      "sha256": "3027b691838abcc3ca1dcead68823ee500d008d1bdcc81d70d1e372f70fe791b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-2-3",
+    "recipe_index": 520,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-3-1.json",
+      "sha256": "de56f0749cb79cd8054da6cdf3d1c881dc72f6b0c8b60da99caefb75f921fb85",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-3-1",
+    "recipe_index": 521,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-3-2.json",
+      "sha256": "0ed1c2312f27ff07d64979d77526825abb4cebb9a430c9eb2ad1ccda226b8566",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-3-2",
+    "recipe_index": 522,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-3-3.json",
+      "sha256": "947f35ffbaac5b5f4cb07003104a83ca594e90bbaee1fb42755aac72b65b95f6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-3-3",
+    "recipe_index": 523,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-4-1.json",
+      "sha256": "918c8719350e0766c9dc53b54358532bd9a41661ff94b68041716b07a3a1fde9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-4-1",
+    "recipe_index": 524,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-4-2.json",
+      "sha256": "11ecba05fed619f56673b7e5756567e1156f06935ebbde802fa34a53112de591",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-4-2",
+    "recipe_index": 525,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f2-4-3.json",
+      "sha256": "b7b32f10c3c44f04c7701647a7b5d4ec8e324d3492abe2821db540e8eba32b4e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f2-4-3",
+    "recipe_index": 526,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-1-1.json",
+      "sha256": "8340eb4e3cbe6c9ac8ee82050cfb89d4fbd19fb79c7460dbcfa55362c65c3032",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-1-1",
+    "recipe_index": 527,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-1-2.json",
+      "sha256": "ba7269e9b5bc5a61f1ea767a9f41351c2488cb6a2764f0decf243b4d87b25636",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-1-2",
+    "recipe_index": 528,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-1-3.json",
+      "sha256": "a21435b3984ac356ad5a7003e2df3eea3ad8d87866e2b43bf0e2773991d8d1b9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-1-3",
+    "recipe_index": 529,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-2-1.json",
+      "sha256": "753f80a5d8dbf854cfcff12031f6fb2e6347d646e65a8e5d34a97abce99553c1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-2-1",
+    "recipe_index": 530,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-2-2.json",
+      "sha256": "22687292d07bb38446880884a8b24f662516d5f5357cc120c1b3dd351cddb14a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-2-2",
+    "recipe_index": 531,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-2-3.json",
+      "sha256": "51044b9cf289a73337d18ad1de03b5b5565e8ee927d40a2a1f54b4e62847fb9d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-2-3",
+    "recipe_index": 532,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-3-1.json",
+      "sha256": "7b0e96bc8c281c6f60384a8d1000c6d0f0e6baade531f863eab4e03b01ef797f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-3-1",
+    "recipe_index": 533,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-3-2.json",
+      "sha256": "804635b7a177b33fd084e5bc05e1718e33963a5a8e80bb6b835468d9e0b074ce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-3-2",
+    "recipe_index": 534,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-3-3.json",
+      "sha256": "e4e428f865400b0fd78e20196cf22144f94c48cc4287069d2f281efde8ba9708",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-3-3",
+    "recipe_index": 535,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-4-1.json",
+      "sha256": "8a4d59f78a7a1b591df570892beb7b3390e23876946e6b342514d0699ee1d6ca",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-4-1",
+    "recipe_index": 536,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-4-2.json",
+      "sha256": "3beacc2d473e094b0866361426d4e4ed99d68d019f3d4c995ae114fbfc97a349",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-4-2",
+    "recipe_index": 537,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-1-2-f3-4-3.json",
+      "sha256": "a37fb0b552d7757682827d34c8aca46b1a96efa4dc2e64bfd37901c7e75632de",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-1-2-f3-4-3",
+    "recipe_index": 538,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 16,
+      "m": 2,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f1-1-1.json",
+      "sha256": "ef19858ddd05795982c55bef3fa0a9a2d0018dfd99f5ef37b26d00a82a5657ff",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f1-1-1",
+    "recipe_index": 539,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f1-1-2.json",
+      "sha256": "49e5efaa25e36b455a02035f4c5ab079894e496c5b8652fef99d9e42ecad5214",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f1-1-2",
+    "recipe_index": 540,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f1-2-1.json",
+      "sha256": "192352e787813d73d25139b062c0e870bec5c0b29f9439a064e671a0ce239de9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f1-2-1",
+    "recipe_index": 541,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f1-2-2.json",
+      "sha256": "e3ee0df7252af725d818e307fe7333db38936f9f833b523f2f22a562a357ca67",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f1-2-2",
+    "recipe_index": 542,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f2-1-1.json",
+      "sha256": "68b43dbee5193ff3fdbb26ce1f25721a2a09ea57c431d14474800c5901f0a154",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f2-1-1",
+    "recipe_index": 543,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f2-1-2.json",
+      "sha256": "c40cba93f0913296821ea87c001723e02ea6529c7779e184ebe33257f5d43d4a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f2-1-2",
+    "recipe_index": 544,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f2-2-1.json",
+      "sha256": "898938ba6ecb82b3c034ffccb6675f408a79e630472a213065f993a9e75f7be2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f2-2-1",
+    "recipe_index": 545,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f2-2-2.json",
+      "sha256": "628236d9bc637c667f96ccfce89add566434eeb5ccda35324ffd627287710b65",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f2-2-2",
+    "recipe_index": 546,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 17,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f3-1-1.json",
+      "sha256": "282664a96f648af7e5e60836ce99d42345286edbed23ff6ff574c5d38ec59d45",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f3-1-1",
+    "recipe_index": 547,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f3-1-2.json",
+      "sha256": "23b84f627f8d9b1cb001dd67b1c59637c742f1b685444f51e52b64e35f40f802",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f3-1-2",
+    "recipe_index": 548,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f3-2-1.json",
+      "sha256": "759d00ffc556605194135d424eac457042a6010a6c425b1c4bdeeb204775564e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f3-2-1",
+    "recipe_index": 549,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f3-2-2.json",
+      "sha256": "b45eb930720e19d38088f56bba1d7899dbe679cd060fdfa7c1bf51c806232a14",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f3-2-2",
+    "recipe_index": 550,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 18,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f4-1-1.json",
+      "sha256": "75788499b72ffaa3c31f9b00e7525ea0e1b196a79e7e31e2f1ab6e7fb9827c8f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f4-1-1",
+    "recipe_index": 551,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f4-1-2.json",
+      "sha256": "fa3d4f7f7289f5cb836c86e1a0786ff8dc9e9dd047b671f95eefdd0c32ce46bf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f4-1-2",
+    "recipe_index": 552,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 19,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f4-2-1.json",
+      "sha256": "31779554d4f32812a6c6d21e6c5c83e4769266406fbded8a6b3fa8050f62f72e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f4-2-1",
+    "recipe_index": 553,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 78,
+      "input_integer_bits_sum": 20,
+      "m": 2,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-0-f4-2-2.json",
+      "sha256": "666902be397cb861f039d9ed5c566b72a38dbb5fe4acfb4a427442a05d8d4d84",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-0-f4-2-2",
+    "recipe_index": 554,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 20,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-1-1.json",
+      "sha256": "4a2782e1d78fdc2d1f3007312503bc596df6b85505577fa36f6142f370ab2926",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-1-1",
+    "recipe_index": 555,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-1-2.json",
+      "sha256": "5288338672560e469ee8d77b287453c073be26ab0fc0c2065a695482fe697ae2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-1-2",
+    "recipe_index": 556,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-1-3.json",
+      "sha256": "2f78fae8d9fb480492acf9a05fea71d99f100954433701b115a158f551db530a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-1-3",
+    "recipe_index": 557,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-2-1.json",
+      "sha256": "deaf803852237528f4c28f81015117fed0c9630b5e62b04659a878036bcebd6c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-2-1",
+    "recipe_index": 558,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-2-2.json",
+      "sha256": "a7a2557482fe0fe895375f708f29da98a6f0c0baae4915523621c7c9294ff4fb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-2-2",
+    "recipe_index": 559,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-2-3.json",
+      "sha256": "321857eeebcfe62259d66be41c4092d67edccaa5f61492759ed877d33945f099",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-2-3",
+    "recipe_index": 560,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-3-1.json",
+      "sha256": "90f60c5adbafef2679e301b876c96068372835dad27cbd19d25ff2e87bf024d1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-3-1",
+    "recipe_index": 561,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-3-2.json",
+      "sha256": "96e912288b6e60f73087cbc59ca701c3c51ccd266d80a34a1246daf0dee33bdf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-3-2",
+    "recipe_index": 562,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f1-3-3.json",
+      "sha256": "e2a31b0ff717c7a0fb922e6673fabdd21e41f02816ead2e06755d6fabac075aa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f1-3-3",
+    "recipe_index": 563,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-1-1.json",
+      "sha256": "832b11452e2b318b61cd605129f98805ad5392846a572d254f43c7a0b44e4438",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-1-1",
+    "recipe_index": 564,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-1-2.json",
+      "sha256": "649f026d65abdd3b0ac65f3244a8e59b9234462a52cbc1adbdec1378f6ae605b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-1-2",
+    "recipe_index": 565,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-1-3.json",
+      "sha256": "8cbd75609654eb4c444df416bb4b1fa15984dd853a98863b7331d79ef473ae4c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-1-3",
+    "recipe_index": 566,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-2-1.json",
+      "sha256": "32bf59e3ba602ea9f5fdd39c267adf516d8bd989dda80a90a9160dd31e7c449e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-2-1",
+    "recipe_index": 567,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-2-2.json",
+      "sha256": "5f1b07c2c1dbc6e560548266627aa1b6508e396a798070bc9e02d75503123b58",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-2-2",
+    "recipe_index": 568,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-2-3.json",
+      "sha256": "9d08c6c8947398f744210d27c1144e055eb96bb57ff3df8decfa64afde52f2c8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-2-3",
+    "recipe_index": 569,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-3-1.json",
+      "sha256": "876f8062db2667e1200d111fb5920d3574ec23308895e216509bae9b6fcbb65d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-3-1",
+    "recipe_index": 570,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-3-2.json",
+      "sha256": "a4a2872c17dbfe183db136227d4ef02859619aea5be28e09f27ddd255537adb6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-3-2",
+    "recipe_index": 571,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f2-3-3.json",
+      "sha256": "035a53aad6fc77066478d09aef8e9731a7f7359f1616afde105479fdde84a0a5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f2-3-3",
+    "recipe_index": 572,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-1-1.json",
+      "sha256": "05f01e9a89141a6e4f3d66f6baef2fcfe5b1a17f6b41b872e8ea62659a7ab6a8",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-1-1",
+    "recipe_index": 573,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-1-2.json",
+      "sha256": "57cc01e09b5ec22d185d5aecf8157ca5c10fea6fbe2e06b787cf18efb1662ef4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-1-2",
+    "recipe_index": 574,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-1-3.json",
+      "sha256": "4c54ea919a5e4b7b9d6f3afa52a7c0071cc42fc8128b94ebd8742065e500eb89",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-1-3",
+    "recipe_index": 575,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-2-1.json",
+      "sha256": "8ed12074fc7c07944fba19954de01823cc23d6780b4dfab6936c0f2c9e7ac3ce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-2-1",
+    "recipe_index": 576,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-2-2.json",
+      "sha256": "b464e4662af83004239cecb2a1cc65ff148b4ceafba13df62aaef71048c97f93",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-2-2",
+    "recipe_index": 577,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-2-3.json",
+      "sha256": "560243ee7f6d5ae10c9839cbcd2dda9c3aebd1f3220176952cf38c8be426637e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-2-3",
+    "recipe_index": 578,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-3-1.json",
+      "sha256": "6d7db93a9e7cd9945105f040249a75aaffc4bdb2892d586303007457cf505fac",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-3-1",
+    "recipe_index": 579,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-3-2.json",
+      "sha256": "51a86c0b39c0531ad35df0b30580ba42d7637c8b49ea940f4105c5b75dca918d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-3-2",
+    "recipe_index": 580,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f3-3-3.json",
+      "sha256": "dfe403310842a859b49308649cff161fb3c9924f7e35297c4b5ad03d20f6cd60",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f3-3-3",
+    "recipe_index": 581,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-1-1.json",
+      "sha256": "52a94b6e0e7b8a63b33534ca1c162a38c3b86fdc9224ca256fccdd10cac92d73",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-1-1",
+    "recipe_index": 582,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-1-2.json",
+      "sha256": "9247e9ae0a0e5fc8a4fc1a2141c5b62423f3515b5ba6efdc0d12db764947e4d1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-1-2",
+    "recipe_index": 583,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-1-3.json",
+      "sha256": "22906832631b5306af37e256778e0c07a67756a63fcea55aef8698de7e63416f",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-1-3",
+    "recipe_index": 584,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-2-1.json",
+      "sha256": "96fd7d4a027b15ecb0c98b5c9ad14de581d6cd3aeb448eedcaeb5b13d23c0c34",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-2-1",
+    "recipe_index": 585,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-2-2.json",
+      "sha256": "491dc179c5b85052250a23d93b977dd8aefee54ccd2bb18bb47e1b3492e13fbe",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-2-2",
+    "recipe_index": 586,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-2-3.json",
+      "sha256": "01978e939f7158f83a95cde99e11d9066352b154a3f96243adb1dd332a94ae61",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-2-3",
+    "recipe_index": 587,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-3-1.json",
+      "sha256": "97617bbaa67fd6b3773335b63495d29c9acc283cd8829f0bfef62768f950f1e0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-3-1",
+    "recipe_index": 588,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-3-2.json",
+      "sha256": "6c29f90e45ff6b1964115cfbd8587cb5dea68892e774f0dd84f64de880ffc450",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-3-2",
+    "recipe_index": 589,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-1-f4-3-3.json",
+      "sha256": "69217a5be3bc2de9a1694440a24f51df590bf354d54f8f47f990c59cbb850f9a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-1-f4-3-3",
+    "recipe_index": 590,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 21,
+      "m": 3,
+      "max_f_bits": 1,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-1-1.json",
+      "sha256": "5ba32f129ddc45c0bd79697290e3d9ca10c9981c1f01301f01f1505573c94815",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-1-1",
+    "recipe_index": 591,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-1-2.json",
+      "sha256": "567b217c29c9a9c41861debaddbc599f82523e2a73e80be711c3909a1b2221ce",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-1-2",
+    "recipe_index": 592,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-1-3.json",
+      "sha256": "2d2aac01c4132106dfe2da77b90a0777afc40340c905c63e8140b7aaefa9ce00",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-1-3",
+    "recipe_index": 593,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-1-4.json",
+      "sha256": "0c133113dd8c72e4a1d6fa4532deb35f91c50ebd611d00a704de247a09ccfffe",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-1-4",
+    "recipe_index": 594,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-2-1.json",
+      "sha256": "8026d4346b5e3d6f4d270a84ce3f390593e0b1e0880995fce5740e94d5961ff1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-2-1",
+    "recipe_index": 595,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-2-2.json",
+      "sha256": "8d2f38c403010fabc541f1e50f3bef8aafca103335d19593a7eaf335f6bb7cbf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-2-2",
+    "recipe_index": 596,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-2-3.json",
+      "sha256": "84ee9039e0b048a1afd11df529aa166fd12edf0533f1e82f4dd47923d3a11caa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-2-3",
+    "recipe_index": 597,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-2-4.json",
+      "sha256": "39a5ff7a5836824cfe7246282dd1ebb49416dbed194706239a53327820665d53",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-2-4",
+    "recipe_index": 598,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-3-1.json",
+      "sha256": "8caaa16e3b131fa5255a056222a35efa532e0b075671760f103826ed1f8a06ee",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-3-1",
+    "recipe_index": 599,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-3-2.json",
+      "sha256": "9821678400af67b924aa8184e494a61e9d6ff53d8cb1999fe2a8966db5091fdf",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-3-2",
+    "recipe_index": 600,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-3-3.json",
+      "sha256": "c39f383742dd9471655fad7aceba04881202a08ee2ed3e425ad274117635d266",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-3-3",
+    "recipe_index": 601,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-3-4.json",
+      "sha256": "29db990a50af73d316aa9381f206eb36fcece11dc672ec2f69526c51ce00a052",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-3-4",
+    "recipe_index": 602,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-4-1.json",
+      "sha256": "d37ca01d4e1f0749c336056e249bfc949b6d93d66d67422d5ae56a7687f43a23",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-4-1",
+    "recipe_index": 603,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-4-2.json",
+      "sha256": "babfa3d0a2d2716dbafbfe0a7abd23e1227e5ecdd34f6f361a4ee4287883019a",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-4-2",
+    "recipe_index": 604,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-4-3.json",
+      "sha256": "df7e48b55021a19b2344f22da914aa3552ccab27c0823547b85d952f88300563",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-4-3",
+    "recipe_index": 605,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f1-4-4.json",
+      "sha256": "bd2523edbf9e1d5ebd4e354868c9a6f0207dbaf7efeda0b3cb5c7e797679f8c2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f1-4-4",
+    "recipe_index": 606,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-1-1.json",
+      "sha256": "f515891e763d8b8e2751008b5590884121c26d4b2e992f6a56ae0a92f50df41d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-1-1",
+    "recipe_index": 607,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-1-2.json",
+      "sha256": "1b26a4184c8766e23e7719ef217ac59717ecd4141bd66e1ae645550129b13148",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-1-2",
+    "recipe_index": 608,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-1-3.json",
+      "sha256": "adef6a2b591d880f308cf0a59df8e699ddc9cb2e2e06649becb23dcb4927d021",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-1-3",
+    "recipe_index": 609,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-1-4.json",
+      "sha256": "44960c9744146460270f6b053be8b768a97b6f1ae2f7c7725c9e4a5d0d50b151",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-1-4",
+    "recipe_index": 610,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-2-1.json",
+      "sha256": "5aa4fb43ed733298439ddb60bad91f65753c6de862c43b476244196341c33ed6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-2-1",
+    "recipe_index": 611,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-2-2.json",
+      "sha256": "9a5b037634bb64a3275a55ff27b9a525547cf3ad4183b406ab2186880f91fcb9",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-2-2",
+    "recipe_index": 612,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-2-3.json",
+      "sha256": "d5bcd7c423d2a1539d4d595a13b90aefef8f342c780d23cebff8af6b45084e27",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-2-3",
+    "recipe_index": 613,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-2-4.json",
+      "sha256": "9e445f7c087614e7aa2049d33436de552182666ed54ed3386d2256b6d2e5cfcb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-2-4",
+    "recipe_index": 614,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-3-1.json",
+      "sha256": "0af8737496d525d530a02fdfd4a2641cecd8d73e9315f4776f6dc29e8f9206d5",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-3-1",
+    "recipe_index": 615,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-3-2.json",
+      "sha256": "9e7f515e374fc9f8bcdcad89971f860ff485a6d5b45507568484fa89b17f6105",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-3-2",
+    "recipe_index": 616,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-3-3.json",
+      "sha256": "07d792551b22f16f58b03972ad80403eac2236a7887bc97d25c500a33375ec1b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-3-3",
+    "recipe_index": 617,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-3-4.json",
+      "sha256": "4020eac8da9f5dc8bc167027a0658a73d17874558a9737a3a92e9a42946161d7",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-3-4",
+    "recipe_index": 618,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-4-1.json",
+      "sha256": "90a7d49bfe313f3e82a0992e38f3534134c0ce16a8cecd39da0724a40ba765d4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-4-1",
+    "recipe_index": 619,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-4-2.json",
+      "sha256": "24897cfcd245242cd795a239caa138f415140c47ee63693f6c9be60bce742361",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-4-2",
+    "recipe_index": 620,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-4-3.json",
+      "sha256": "d8c3a8e0356c2d82740808b702863b88e38025749203098d565b45d39b0ddb55",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-4-3",
+    "recipe_index": 621,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f2-4-4.json",
+      "sha256": "ae5c0185a1d8411f0ad22146091740abd3e2d4809d22117f87db2e18ee162245",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f2-4-4",
+    "recipe_index": 622,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 22,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-1-1.json",
+      "sha256": "4a8e3df8bca393f7e50080a8ce027007288fa476b9fbfff727bcb457a1ae513d",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-1-1",
+    "recipe_index": 623,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-1-2.json",
+      "sha256": "255f301bf4bad0a3d2b5b083fef36d14d3d6ddde5775aa2460e89b823be8d49e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-1-2",
+    "recipe_index": 624,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-1-3.json",
+      "sha256": "fe07def92e072b8d5e9f5c140b7395150c63685ecf69d649bdeae485756512e6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-1-3",
+    "recipe_index": 625,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-1-4.json",
+      "sha256": "20393a8beba9b2c1b993fc3ab639adc11becb1c0df0f27eebce7d8f7c7aaaa1c",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-1-4",
+    "recipe_index": 626,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-2-1.json",
+      "sha256": "92fd3bf9cf45b08747b0b73ec4d72a4d40f3025d0b0b1ef8b2609d319d5fe9d1",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-2-1",
+    "recipe_index": 627,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-2-2.json",
+      "sha256": "a7a8e1c144fd05f0db1ba4d8843defc02e3fb2c6d0b62253885a168d600c8040",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-2-2",
+    "recipe_index": 628,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-2-3.json",
+      "sha256": "cbe0cd200a0bd1a0f72a693d1258b6377ad6e9c8d625fd9d85b45d1f6777eb98",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-2-3",
+    "recipe_index": 629,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-2-4.json",
+      "sha256": "f9b14845718e1ceacfbe70f720e0ad25f81e417044733c09b31113cbdab78fb3",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-2-4",
+    "recipe_index": 630,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-3-1.json",
+      "sha256": "15375469c590dbd24a7799a7f92b980d7a97b4bd4271c8f0a21f26e488685834",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-3-1",
+    "recipe_index": 631,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-3-2.json",
+      "sha256": "1353879fe33a2cd01e91224b161991efa40a7270fc097939174f42ee061ccf8b",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-3-2",
+    "recipe_index": 632,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "8",
+    "N_expression": "12",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 2,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-3-3.json",
+      "sha256": "3e860c0b865609588bc778945b3c324e9f56b53bb618ed8c9a48188a50a66274",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-3-3",
+    "recipe_index": 633,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-3-4.json",
+      "sha256": "e4dba540814ae37e6a5aa0ab8c200f93530f7ccc5dc518bd71050af060a022bb",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-3-4",
+    "recipe_index": 634,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-4-1.json",
+      "sha256": "e44bd4a5a7a8f8ed67e6681576a98a595983fa0a2c131006ce152ca878812785",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-4-1",
+    "recipe_index": 635,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-4-2.json",
+      "sha256": "9a6d3ee51ee0fb89e4197981ac6cd4ff1b191b76c8b13c7da7ca1af43612b9bd",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-4-2",
+    "recipe_index": 636,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-4-3.json",
+      "sha256": "20d4c3f7f5a5cf904cd75ec4bf35b2bfdc71425167f6f5ba6cfe4d7c5780d103",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-4-3",
+    "recipe_index": 637,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f3-4-4.json",
+      "sha256": "400cb8921641b175ed340c6227260286bc84d7b6b690b83a72c19c36b5b871da",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f3-4-4",
+    "recipe_index": 638,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 23,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-1-1.json",
+      "sha256": "7d0084e22452efb0f345683f0e23ca78d0108a9a2f69a09890cb0000db186480",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-1-1",
+    "recipe_index": 639,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-1-2.json",
+      "sha256": "145ddb0ea1ba0791fb60964c5d30439b17ca82b71166ea9df16d583014d836f2",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-1-2",
+    "recipe_index": 640,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-1-3.json",
+      "sha256": "8b1d7cec4dca84e42c3a2c1bcaa2711757fb6787516c87d7c5b318459445b4c6",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-1-3",
+    "recipe_index": 641,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-1-4.json",
+      "sha256": "50e0c2c40085091f8de0844d18171e06b33b94460dc1b9ac2b8a991c5ceb6094",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-1-4",
+    "recipe_index": 642,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-2-1.json",
+      "sha256": "2e13afb0e82af3d6e47264be51398f1845c2ddfdc661f9271ecf24e3eb2a7689",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-2-1",
+    "recipe_index": 643,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "10",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-2-2.json",
+      "sha256": "0c4f6e83b603b67a35db5f96b11711fef15280c7a03c51cac692a88d2c7bb9b4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-2-2",
+    "recipe_index": 644,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-2-3.json",
+      "sha256": "1998bb0e47198c002d71a2f719b4e65b1a70b52fb78b1c43729b95b93c42f98e",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-2-3",
+    "recipe_index": 645,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-2-4.json",
+      "sha256": "c9da051ecfd92db084e3a26704df4be87590d31acb9b8f42a5157091d5b2e9f0",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-2-4",
+    "recipe_index": 646,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 24,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-3-1.json",
+      "sha256": "f63b212c1e0f1b3f69e0720891e09485b47d2dc77b7fbe6a69c29b92944ab914",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-3-1",
+    "recipe_index": 647,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-3-2.json",
+      "sha256": "fb041902cbd49126ee7f646de0bc37f3ef3ebbfce0ceec82b58ff68e2289b192",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-3-2",
+    "recipe_index": 648,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-3-3.json",
+      "sha256": "6295c5cf9b2e6fb7e441452ee07a7dec1d6cd5c81587fc04e586cf3d1273e7e4",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-3-3",
+    "recipe_index": 649,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-3-4.json",
+      "sha256": "75f7681c65768565eb18bcdcd4067ff3457ba69eef331f168d91fca4ee7adc25",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-3-4",
+    "recipe_index": 650,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "2",
+    "N_expression": "4",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 25,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-4-1.json",
+      "sha256": "e58f60d1e1bdf8f58db8b606d043ccb97ab09d10546a4d6b042c5a7f16952790",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-4-1",
+    "recipe_index": 651,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "4",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-4-2.json",
+      "sha256": "1d61f29116d21beec3215f18e2ac56bcfa1a8672a605c7c34d06c6e7d3dc0406",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-4-2",
+    "recipe_index": 652,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "8",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 26,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-4-3.json",
+      "sha256": "a9e4e6861d3ad33ba561129d3e5365bb0c5e084e4a5684591d103e0495f26784",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-4-3",
+    "recipe_index": 653,
+    "stratum": "tri"
+  },
+  {
+    "D_expression": "6",
+    "N_expression": "6",
+    "empty": false,
+    "expression_bits": 0,
+    "input": {
+      "Q_bits": 3,
+      "bytes": 86,
+      "input_integer_bits_sum": 27,
+      "m": 3,
+      "max_f_bits": 3,
+      "max_q_bits": 2,
+      "n": 3,
+      "path": "unit20-v1/tri-q2-2-2-f4-4-4.json",
+      "sha256": "410b5ec961c84ea79a9ea585df54bfa1544c67746861a04ad1ebb45b695178aa",
+      "suite": "unit20-v1"
+    },
+    "recipe": "tri-q2-2-2-f4-4-4",
+    "recipe_index": 654,
+    "stratum": "tri"
+  }
+]
+```
+
+#### U21-OR1 / SCHEDULE.tsv
+
+<!-- U21-FIXTURE SCHEDULE.tsv encoding=raw bytes=296159 sha256=4d40c71d688455ce86fdcf2fecd085b7143330aa80875f57da6a20ff1c3b1b59 -->
+```text
+sequence	recipe_index	recipe	round	solver	phase	repeat
+0	0	bits-bipartite-n04-b00001-qflat-fdegree	-1	Accelerated	warmup	0
+1	0	bits-bipartite-n04-b00001-qflat-fdegree	-1	Standard	warmup	0
+2	0	bits-bipartite-n04-b00001-qflat-fdegree	0	Standard	measured	0
+3	0	bits-bipartite-n04-b00001-qflat-fdegree	0	Accelerated	measured	0
+4	0	bits-bipartite-n04-b00001-qflat-fdegree	1	Accelerated	measured	1
+5	0	bits-bipartite-n04-b00001-qflat-fdegree	1	Standard	measured	1
+6	0	bits-bipartite-n04-b00001-qflat-fdegree	2	Standard	measured	2
+7	0	bits-bipartite-n04-b00001-qflat-fdegree	2	Accelerated	measured	2
+8	1	bits-bipartite-n04-b00001-qflat-funit	-1	Standard	warmup	0
+9	1	bits-bipartite-n04-b00001-qflat-funit	-1	Accelerated	warmup	0
+10	1	bits-bipartite-n04-b00001-qflat-funit	0	Accelerated	measured	0
+11	1	bits-bipartite-n04-b00001-qflat-funit	0	Standard	measured	0
+12	1	bits-bipartite-n04-b00001-qflat-funit	1	Standard	measured	1
+13	1	bits-bipartite-n04-b00001-qflat-funit	1	Accelerated	measured	1
+14	1	bits-bipartite-n04-b00001-qflat-funit	2	Accelerated	measured	2
+15	1	bits-bipartite-n04-b00001-qflat-funit	2	Standard	measured	2
+16	2	bits-bipartite-n04-b00001-qramp-fdegree	-1	Accelerated	warmup	0
+17	2	bits-bipartite-n04-b00001-qramp-fdegree	-1	Standard	warmup	0
+18	2	bits-bipartite-n04-b00001-qramp-fdegree	0	Standard	measured	0
+19	2	bits-bipartite-n04-b00001-qramp-fdegree	0	Accelerated	measured	0
+20	2	bits-bipartite-n04-b00001-qramp-fdegree	1	Accelerated	measured	1
+21	2	bits-bipartite-n04-b00001-qramp-fdegree	1	Standard	measured	1
+22	2	bits-bipartite-n04-b00001-qramp-fdegree	2	Standard	measured	2
+23	2	bits-bipartite-n04-b00001-qramp-fdegree	2	Accelerated	measured	2
+24	3	bits-bipartite-n04-b00001-qramp-funit	-1	Standard	warmup	0
+25	3	bits-bipartite-n04-b00001-qramp-funit	-1	Accelerated	warmup	0
+26	3	bits-bipartite-n04-b00001-qramp-funit	0	Accelerated	measured	0
+27	3	bits-bipartite-n04-b00001-qramp-funit	0	Standard	measured	0
+28	3	bits-bipartite-n04-b00001-qramp-funit	1	Standard	measured	1
+29	3	bits-bipartite-n04-b00001-qramp-funit	1	Accelerated	measured	1
+30	3	bits-bipartite-n04-b00001-qramp-funit	2	Accelerated	measured	2
+31	3	bits-bipartite-n04-b00001-qramp-funit	2	Standard	measured	2
+32	4	bits-bipartite-n04-b00008-qflat-fdegree	-1	Accelerated	warmup	0
+33	4	bits-bipartite-n04-b00008-qflat-fdegree	-1	Standard	warmup	0
+34	4	bits-bipartite-n04-b00008-qflat-fdegree	0	Standard	measured	0
+35	4	bits-bipartite-n04-b00008-qflat-fdegree	0	Accelerated	measured	0
+36	4	bits-bipartite-n04-b00008-qflat-fdegree	1	Accelerated	measured	1
+37	4	bits-bipartite-n04-b00008-qflat-fdegree	1	Standard	measured	1
+38	4	bits-bipartite-n04-b00008-qflat-fdegree	2	Standard	measured	2
+39	4	bits-bipartite-n04-b00008-qflat-fdegree	2	Accelerated	measured	2
+40	5	bits-bipartite-n04-b00008-qflat-funit	-1	Standard	warmup	0
+41	5	bits-bipartite-n04-b00008-qflat-funit	-1	Accelerated	warmup	0
+42	5	bits-bipartite-n04-b00008-qflat-funit	0	Accelerated	measured	0
+43	5	bits-bipartite-n04-b00008-qflat-funit	0	Standard	measured	0
+44	5	bits-bipartite-n04-b00008-qflat-funit	1	Standard	measured	1
+45	5	bits-bipartite-n04-b00008-qflat-funit	1	Accelerated	measured	1
+46	5	bits-bipartite-n04-b00008-qflat-funit	2	Accelerated	measured	2
+47	5	bits-bipartite-n04-b00008-qflat-funit	2	Standard	measured	2
+48	6	bits-bipartite-n04-b00008-qramp-fdegree	-1	Accelerated	warmup	0
+49	6	bits-bipartite-n04-b00008-qramp-fdegree	-1	Standard	warmup	0
+50	6	bits-bipartite-n04-b00008-qramp-fdegree	0	Standard	measured	0
+51	6	bits-bipartite-n04-b00008-qramp-fdegree	0	Accelerated	measured	0
+52	6	bits-bipartite-n04-b00008-qramp-fdegree	1	Accelerated	measured	1
+53	6	bits-bipartite-n04-b00008-qramp-fdegree	1	Standard	measured	1
+54	6	bits-bipartite-n04-b00008-qramp-fdegree	2	Standard	measured	2
+55	6	bits-bipartite-n04-b00008-qramp-fdegree	2	Accelerated	measured	2
+56	7	bits-bipartite-n04-b00008-qramp-funit	-1	Standard	warmup	0
+57	7	bits-bipartite-n04-b00008-qramp-funit	-1	Accelerated	warmup	0
+58	7	bits-bipartite-n04-b00008-qramp-funit	0	Accelerated	measured	0
+59	7	bits-bipartite-n04-b00008-qramp-funit	0	Standard	measured	0
+60	7	bits-bipartite-n04-b00008-qramp-funit	1	Standard	measured	1
+61	7	bits-bipartite-n04-b00008-qramp-funit	1	Accelerated	measured	1
+62	7	bits-bipartite-n04-b00008-qramp-funit	2	Accelerated	measured	2
+63	7	bits-bipartite-n04-b00008-qramp-funit	2	Standard	measured	2
+64	8	bits-bipartite-n04-b00064-qflat-fdegree	-1	Accelerated	warmup	0
+65	8	bits-bipartite-n04-b00064-qflat-fdegree	-1	Standard	warmup	0
+66	8	bits-bipartite-n04-b00064-qflat-fdegree	0	Standard	measured	0
+67	8	bits-bipartite-n04-b00064-qflat-fdegree	0	Accelerated	measured	0
+68	8	bits-bipartite-n04-b00064-qflat-fdegree	1	Accelerated	measured	1
+69	8	bits-bipartite-n04-b00064-qflat-fdegree	1	Standard	measured	1
+70	8	bits-bipartite-n04-b00064-qflat-fdegree	2	Standard	measured	2
+71	8	bits-bipartite-n04-b00064-qflat-fdegree	2	Accelerated	measured	2
+72	9	bits-bipartite-n04-b00064-qflat-funit	-1	Standard	warmup	0
+73	9	bits-bipartite-n04-b00064-qflat-funit	-1	Accelerated	warmup	0
+74	9	bits-bipartite-n04-b00064-qflat-funit	0	Accelerated	measured	0
+75	9	bits-bipartite-n04-b00064-qflat-funit	0	Standard	measured	0
+76	9	bits-bipartite-n04-b00064-qflat-funit	1	Standard	measured	1
+77	9	bits-bipartite-n04-b00064-qflat-funit	1	Accelerated	measured	1
+78	9	bits-bipartite-n04-b00064-qflat-funit	2	Accelerated	measured	2
+79	9	bits-bipartite-n04-b00064-qflat-funit	2	Standard	measured	2
+80	10	bits-bipartite-n04-b00064-qramp-fdegree	-1	Accelerated	warmup	0
+81	10	bits-bipartite-n04-b00064-qramp-fdegree	-1	Standard	warmup	0
+82	10	bits-bipartite-n04-b00064-qramp-fdegree	0	Standard	measured	0
+83	10	bits-bipartite-n04-b00064-qramp-fdegree	0	Accelerated	measured	0
+84	10	bits-bipartite-n04-b00064-qramp-fdegree	1	Accelerated	measured	1
+85	10	bits-bipartite-n04-b00064-qramp-fdegree	1	Standard	measured	1
+86	10	bits-bipartite-n04-b00064-qramp-fdegree	2	Standard	measured	2
+87	10	bits-bipartite-n04-b00064-qramp-fdegree	2	Accelerated	measured	2
+88	11	bits-bipartite-n04-b00064-qramp-funit	-1	Standard	warmup	0
+89	11	bits-bipartite-n04-b00064-qramp-funit	-1	Accelerated	warmup	0
+90	11	bits-bipartite-n04-b00064-qramp-funit	0	Accelerated	measured	0
+91	11	bits-bipartite-n04-b00064-qramp-funit	0	Standard	measured	0
+92	11	bits-bipartite-n04-b00064-qramp-funit	1	Standard	measured	1
+93	11	bits-bipartite-n04-b00064-qramp-funit	1	Accelerated	measured	1
+94	11	bits-bipartite-n04-b00064-qramp-funit	2	Accelerated	measured	2
+95	11	bits-bipartite-n04-b00064-qramp-funit	2	Standard	measured	2
+96	12	bits-bipartite-n04-b00256-qflat-fdegree	-1	Accelerated	warmup	0
+97	12	bits-bipartite-n04-b00256-qflat-fdegree	-1	Standard	warmup	0
+98	12	bits-bipartite-n04-b00256-qflat-fdegree	0	Standard	measured	0
+99	12	bits-bipartite-n04-b00256-qflat-fdegree	0	Accelerated	measured	0
+100	12	bits-bipartite-n04-b00256-qflat-fdegree	1	Accelerated	measured	1
+101	12	bits-bipartite-n04-b00256-qflat-fdegree	1	Standard	measured	1
+102	12	bits-bipartite-n04-b00256-qflat-fdegree	2	Standard	measured	2
+103	12	bits-bipartite-n04-b00256-qflat-fdegree	2	Accelerated	measured	2
+104	13	bits-bipartite-n04-b00256-qflat-funit	-1	Standard	warmup	0
+105	13	bits-bipartite-n04-b00256-qflat-funit	-1	Accelerated	warmup	0
+106	13	bits-bipartite-n04-b00256-qflat-funit	0	Accelerated	measured	0
+107	13	bits-bipartite-n04-b00256-qflat-funit	0	Standard	measured	0
+108	13	bits-bipartite-n04-b00256-qflat-funit	1	Standard	measured	1
+109	13	bits-bipartite-n04-b00256-qflat-funit	1	Accelerated	measured	1
+110	13	bits-bipartite-n04-b00256-qflat-funit	2	Accelerated	measured	2
+111	13	bits-bipartite-n04-b00256-qflat-funit	2	Standard	measured	2
+112	14	bits-bipartite-n04-b00256-qramp-fdegree	-1	Accelerated	warmup	0
+113	14	bits-bipartite-n04-b00256-qramp-fdegree	-1	Standard	warmup	0
+114	14	bits-bipartite-n04-b00256-qramp-fdegree	0	Standard	measured	0
+115	14	bits-bipartite-n04-b00256-qramp-fdegree	0	Accelerated	measured	0
+116	14	bits-bipartite-n04-b00256-qramp-fdegree	1	Accelerated	measured	1
+117	14	bits-bipartite-n04-b00256-qramp-fdegree	1	Standard	measured	1
+118	14	bits-bipartite-n04-b00256-qramp-fdegree	2	Standard	measured	2
+119	14	bits-bipartite-n04-b00256-qramp-fdegree	2	Accelerated	measured	2
+120	15	bits-bipartite-n04-b00256-qramp-funit	-1	Standard	warmup	0
+121	15	bits-bipartite-n04-b00256-qramp-funit	-1	Accelerated	warmup	0
+122	15	bits-bipartite-n04-b00256-qramp-funit	0	Accelerated	measured	0
+123	15	bits-bipartite-n04-b00256-qramp-funit	0	Standard	measured	0
+124	15	bits-bipartite-n04-b00256-qramp-funit	1	Standard	measured	1
+125	15	bits-bipartite-n04-b00256-qramp-funit	1	Accelerated	measured	1
+126	15	bits-bipartite-n04-b00256-qramp-funit	2	Accelerated	measured	2
+127	15	bits-bipartite-n04-b00256-qramp-funit	2	Standard	measured	2
+128	16	bits-bipartite-n04-b04096-qflat-fdegree	-1	Accelerated	warmup	0
+129	16	bits-bipartite-n04-b04096-qflat-fdegree	-1	Standard	warmup	0
+130	16	bits-bipartite-n04-b04096-qflat-fdegree	0	Standard	measured	0
+131	16	bits-bipartite-n04-b04096-qflat-fdegree	0	Accelerated	measured	0
+132	16	bits-bipartite-n04-b04096-qflat-fdegree	1	Accelerated	measured	1
+133	16	bits-bipartite-n04-b04096-qflat-fdegree	1	Standard	measured	1
+134	16	bits-bipartite-n04-b04096-qflat-fdegree	2	Standard	measured	2
+135	16	bits-bipartite-n04-b04096-qflat-fdegree	2	Accelerated	measured	2
+136	17	bits-bipartite-n04-b04096-qflat-funit	-1	Standard	warmup	0
+137	17	bits-bipartite-n04-b04096-qflat-funit	-1	Accelerated	warmup	0
+138	17	bits-bipartite-n04-b04096-qflat-funit	0	Accelerated	measured	0
+139	17	bits-bipartite-n04-b04096-qflat-funit	0	Standard	measured	0
+140	17	bits-bipartite-n04-b04096-qflat-funit	1	Standard	measured	1
+141	17	bits-bipartite-n04-b04096-qflat-funit	1	Accelerated	measured	1
+142	17	bits-bipartite-n04-b04096-qflat-funit	2	Accelerated	measured	2
+143	17	bits-bipartite-n04-b04096-qflat-funit	2	Standard	measured	2
+144	18	bits-bipartite-n04-b04096-qramp-fdegree	-1	Accelerated	warmup	0
+145	18	bits-bipartite-n04-b04096-qramp-fdegree	-1	Standard	warmup	0
+146	18	bits-bipartite-n04-b04096-qramp-fdegree	0	Standard	measured	0
+147	18	bits-bipartite-n04-b04096-qramp-fdegree	0	Accelerated	measured	0
+148	18	bits-bipartite-n04-b04096-qramp-fdegree	1	Accelerated	measured	1
+149	18	bits-bipartite-n04-b04096-qramp-fdegree	1	Standard	measured	1
+150	18	bits-bipartite-n04-b04096-qramp-fdegree	2	Standard	measured	2
+151	18	bits-bipartite-n04-b04096-qramp-fdegree	2	Accelerated	measured	2
+152	19	bits-bipartite-n04-b04096-qramp-funit	-1	Standard	warmup	0
+153	19	bits-bipartite-n04-b04096-qramp-funit	-1	Accelerated	warmup	0
+154	19	bits-bipartite-n04-b04096-qramp-funit	0	Accelerated	measured	0
+155	19	bits-bipartite-n04-b04096-qramp-funit	0	Standard	measured	0
+156	19	bits-bipartite-n04-b04096-qramp-funit	1	Standard	measured	1
+157	19	bits-bipartite-n04-b04096-qramp-funit	1	Accelerated	measured	1
+158	19	bits-bipartite-n04-b04096-qramp-funit	2	Accelerated	measured	2
+159	19	bits-bipartite-n04-b04096-qramp-funit	2	Standard	measured	2
+160	20	bits-bipartite-n04-b16384-qflat-fdegree	-1	Accelerated	warmup	0
+161	20	bits-bipartite-n04-b16384-qflat-fdegree	-1	Standard	warmup	0
+162	20	bits-bipartite-n04-b16384-qflat-fdegree	0	Standard	measured	0
+163	20	bits-bipartite-n04-b16384-qflat-fdegree	0	Accelerated	measured	0
+164	20	bits-bipartite-n04-b16384-qflat-fdegree	1	Accelerated	measured	1
+165	20	bits-bipartite-n04-b16384-qflat-fdegree	1	Standard	measured	1
+166	20	bits-bipartite-n04-b16384-qflat-fdegree	2	Standard	measured	2
+167	20	bits-bipartite-n04-b16384-qflat-fdegree	2	Accelerated	measured	2
+168	21	bits-bipartite-n04-b16384-qflat-funit	-1	Standard	warmup	0
+169	21	bits-bipartite-n04-b16384-qflat-funit	-1	Accelerated	warmup	0
+170	21	bits-bipartite-n04-b16384-qflat-funit	0	Accelerated	measured	0
+171	21	bits-bipartite-n04-b16384-qflat-funit	0	Standard	measured	0
+172	21	bits-bipartite-n04-b16384-qflat-funit	1	Standard	measured	1
+173	21	bits-bipartite-n04-b16384-qflat-funit	1	Accelerated	measured	1
+174	21	bits-bipartite-n04-b16384-qflat-funit	2	Accelerated	measured	2
+175	21	bits-bipartite-n04-b16384-qflat-funit	2	Standard	measured	2
+176	22	bits-bipartite-n04-b16384-qramp-fdegree	-1	Accelerated	warmup	0
+177	22	bits-bipartite-n04-b16384-qramp-fdegree	-1	Standard	warmup	0
+178	22	bits-bipartite-n04-b16384-qramp-fdegree	0	Standard	measured	0
+179	22	bits-bipartite-n04-b16384-qramp-fdegree	0	Accelerated	measured	0
+180	22	bits-bipartite-n04-b16384-qramp-fdegree	1	Accelerated	measured	1
+181	22	bits-bipartite-n04-b16384-qramp-fdegree	1	Standard	measured	1
+182	22	bits-bipartite-n04-b16384-qramp-fdegree	2	Standard	measured	2
+183	22	bits-bipartite-n04-b16384-qramp-fdegree	2	Accelerated	measured	2
+184	23	bits-bipartite-n04-b16384-qramp-funit	-1	Standard	warmup	0
+185	23	bits-bipartite-n04-b16384-qramp-funit	-1	Accelerated	warmup	0
+186	23	bits-bipartite-n04-b16384-qramp-funit	0	Accelerated	measured	0
+187	23	bits-bipartite-n04-b16384-qramp-funit	0	Standard	measured	0
+188	23	bits-bipartite-n04-b16384-qramp-funit	1	Standard	measured	1
+189	23	bits-bipartite-n04-b16384-qramp-funit	1	Accelerated	measured	1
+190	23	bits-bipartite-n04-b16384-qramp-funit	2	Accelerated	measured	2
+191	23	bits-bipartite-n04-b16384-qramp-funit	2	Standard	measured	2
+192	24	bits-complete-n04-b00001-qflat-fdegree	-1	Accelerated	warmup	0
+193	24	bits-complete-n04-b00001-qflat-fdegree	-1	Standard	warmup	0
+194	24	bits-complete-n04-b00001-qflat-fdegree	0	Standard	measured	0
+195	24	bits-complete-n04-b00001-qflat-fdegree	0	Accelerated	measured	0
+196	24	bits-complete-n04-b00001-qflat-fdegree	1	Accelerated	measured	1
+197	24	bits-complete-n04-b00001-qflat-fdegree	1	Standard	measured	1
+198	24	bits-complete-n04-b00001-qflat-fdegree	2	Standard	measured	2
+199	24	bits-complete-n04-b00001-qflat-fdegree	2	Accelerated	measured	2
+200	25	bits-complete-n04-b00001-qflat-funit	-1	Standard	warmup	0
+201	25	bits-complete-n04-b00001-qflat-funit	-1	Accelerated	warmup	0
+202	25	bits-complete-n04-b00001-qflat-funit	0	Accelerated	measured	0
+203	25	bits-complete-n04-b00001-qflat-funit	0	Standard	measured	0
+204	25	bits-complete-n04-b00001-qflat-funit	1	Standard	measured	1
+205	25	bits-complete-n04-b00001-qflat-funit	1	Accelerated	measured	1
+206	25	bits-complete-n04-b00001-qflat-funit	2	Accelerated	measured	2
+207	25	bits-complete-n04-b00001-qflat-funit	2	Standard	measured	2
+208	26	bits-complete-n04-b00001-qramp-fdegree	-1	Accelerated	warmup	0
+209	26	bits-complete-n04-b00001-qramp-fdegree	-1	Standard	warmup	0
+210	26	bits-complete-n04-b00001-qramp-fdegree	0	Standard	measured	0
+211	26	bits-complete-n04-b00001-qramp-fdegree	0	Accelerated	measured	0
+212	26	bits-complete-n04-b00001-qramp-fdegree	1	Accelerated	measured	1
+213	26	bits-complete-n04-b00001-qramp-fdegree	1	Standard	measured	1
+214	26	bits-complete-n04-b00001-qramp-fdegree	2	Standard	measured	2
+215	26	bits-complete-n04-b00001-qramp-fdegree	2	Accelerated	measured	2
+216	27	bits-complete-n04-b00001-qramp-funit	-1	Standard	warmup	0
+217	27	bits-complete-n04-b00001-qramp-funit	-1	Accelerated	warmup	0
+218	27	bits-complete-n04-b00001-qramp-funit	0	Accelerated	measured	0
+219	27	bits-complete-n04-b00001-qramp-funit	0	Standard	measured	0
+220	27	bits-complete-n04-b00001-qramp-funit	1	Standard	measured	1
+221	27	bits-complete-n04-b00001-qramp-funit	1	Accelerated	measured	1
+222	27	bits-complete-n04-b00001-qramp-funit	2	Accelerated	measured	2
+223	27	bits-complete-n04-b00001-qramp-funit	2	Standard	measured	2
+224	28	bits-complete-n04-b00008-qflat-fdegree	-1	Accelerated	warmup	0
+225	28	bits-complete-n04-b00008-qflat-fdegree	-1	Standard	warmup	0
+226	28	bits-complete-n04-b00008-qflat-fdegree	0	Standard	measured	0
+227	28	bits-complete-n04-b00008-qflat-fdegree	0	Accelerated	measured	0
+228	28	bits-complete-n04-b00008-qflat-fdegree	1	Accelerated	measured	1
+229	28	bits-complete-n04-b00008-qflat-fdegree	1	Standard	measured	1
+230	28	bits-complete-n04-b00008-qflat-fdegree	2	Standard	measured	2
+231	28	bits-complete-n04-b00008-qflat-fdegree	2	Accelerated	measured	2
+232	29	bits-complete-n04-b00008-qflat-funit	-1	Standard	warmup	0
+233	29	bits-complete-n04-b00008-qflat-funit	-1	Accelerated	warmup	0
+234	29	bits-complete-n04-b00008-qflat-funit	0	Accelerated	measured	0
+235	29	bits-complete-n04-b00008-qflat-funit	0	Standard	measured	0
+236	29	bits-complete-n04-b00008-qflat-funit	1	Standard	measured	1
+237	29	bits-complete-n04-b00008-qflat-funit	1	Accelerated	measured	1
+238	29	bits-complete-n04-b00008-qflat-funit	2	Accelerated	measured	2
+239	29	bits-complete-n04-b00008-qflat-funit	2	Standard	measured	2
+240	30	bits-complete-n04-b00008-qramp-fdegree	-1	Accelerated	warmup	0
+241	30	bits-complete-n04-b00008-qramp-fdegree	-1	Standard	warmup	0
+242	30	bits-complete-n04-b00008-qramp-fdegree	0	Standard	measured	0
+243	30	bits-complete-n04-b00008-qramp-fdegree	0	Accelerated	measured	0
+244	30	bits-complete-n04-b00008-qramp-fdegree	1	Accelerated	measured	1
+245	30	bits-complete-n04-b00008-qramp-fdegree	1	Standard	measured	1
+246	30	bits-complete-n04-b00008-qramp-fdegree	2	Standard	measured	2
+247	30	bits-complete-n04-b00008-qramp-fdegree	2	Accelerated	measured	2
+248	31	bits-complete-n04-b00008-qramp-funit	-1	Standard	warmup	0
+249	31	bits-complete-n04-b00008-qramp-funit	-1	Accelerated	warmup	0
+250	31	bits-complete-n04-b00008-qramp-funit	0	Accelerated	measured	0
+251	31	bits-complete-n04-b00008-qramp-funit	0	Standard	measured	0
+252	31	bits-complete-n04-b00008-qramp-funit	1	Standard	measured	1
+253	31	bits-complete-n04-b00008-qramp-funit	1	Accelerated	measured	1
+254	31	bits-complete-n04-b00008-qramp-funit	2	Accelerated	measured	2
+255	31	bits-complete-n04-b00008-qramp-funit	2	Standard	measured	2
+256	32	bits-complete-n04-b00064-qflat-fdegree	-1	Accelerated	warmup	0
+257	32	bits-complete-n04-b00064-qflat-fdegree	-1	Standard	warmup	0
+258	32	bits-complete-n04-b00064-qflat-fdegree	0	Standard	measured	0
+259	32	bits-complete-n04-b00064-qflat-fdegree	0	Accelerated	measured	0
+260	32	bits-complete-n04-b00064-qflat-fdegree	1	Accelerated	measured	1
+261	32	bits-complete-n04-b00064-qflat-fdegree	1	Standard	measured	1
+262	32	bits-complete-n04-b00064-qflat-fdegree	2	Standard	measured	2
+263	32	bits-complete-n04-b00064-qflat-fdegree	2	Accelerated	measured	2
+264	33	bits-complete-n04-b00064-qflat-funit	-1	Standard	warmup	0
+265	33	bits-complete-n04-b00064-qflat-funit	-1	Accelerated	warmup	0
+266	33	bits-complete-n04-b00064-qflat-funit	0	Accelerated	measured	0
+267	33	bits-complete-n04-b00064-qflat-funit	0	Standard	measured	0
+268	33	bits-complete-n04-b00064-qflat-funit	1	Standard	measured	1
+269	33	bits-complete-n04-b00064-qflat-funit	1	Accelerated	measured	1
+270	33	bits-complete-n04-b00064-qflat-funit	2	Accelerated	measured	2
+271	33	bits-complete-n04-b00064-qflat-funit	2	Standard	measured	2
+272	34	bits-complete-n04-b00064-qramp-fdegree	-1	Accelerated	warmup	0
+273	34	bits-complete-n04-b00064-qramp-fdegree	-1	Standard	warmup	0
+274	34	bits-complete-n04-b00064-qramp-fdegree	0	Standard	measured	0
+275	34	bits-complete-n04-b00064-qramp-fdegree	0	Accelerated	measured	0
+276	34	bits-complete-n04-b00064-qramp-fdegree	1	Accelerated	measured	1
+277	34	bits-complete-n04-b00064-qramp-fdegree	1	Standard	measured	1
+278	34	bits-complete-n04-b00064-qramp-fdegree	2	Standard	measured	2
+279	34	bits-complete-n04-b00064-qramp-fdegree	2	Accelerated	measured	2
+280	35	bits-complete-n04-b00064-qramp-funit	-1	Standard	warmup	0
+281	35	bits-complete-n04-b00064-qramp-funit	-1	Accelerated	warmup	0
+282	35	bits-complete-n04-b00064-qramp-funit	0	Accelerated	measured	0
+283	35	bits-complete-n04-b00064-qramp-funit	0	Standard	measured	0
+284	35	bits-complete-n04-b00064-qramp-funit	1	Standard	measured	1
+285	35	bits-complete-n04-b00064-qramp-funit	1	Accelerated	measured	1
+286	35	bits-complete-n04-b00064-qramp-funit	2	Accelerated	measured	2
+287	35	bits-complete-n04-b00064-qramp-funit	2	Standard	measured	2
+288	36	bits-complete-n04-b00256-qflat-fdegree	-1	Accelerated	warmup	0
+289	36	bits-complete-n04-b00256-qflat-fdegree	-1	Standard	warmup	0
+290	36	bits-complete-n04-b00256-qflat-fdegree	0	Standard	measured	0
+291	36	bits-complete-n04-b00256-qflat-fdegree	0	Accelerated	measured	0
+292	36	bits-complete-n04-b00256-qflat-fdegree	1	Accelerated	measured	1
+293	36	bits-complete-n04-b00256-qflat-fdegree	1	Standard	measured	1
+294	36	bits-complete-n04-b00256-qflat-fdegree	2	Standard	measured	2
+295	36	bits-complete-n04-b00256-qflat-fdegree	2	Accelerated	measured	2
+296	37	bits-complete-n04-b00256-qflat-funit	-1	Standard	warmup	0
+297	37	bits-complete-n04-b00256-qflat-funit	-1	Accelerated	warmup	0
+298	37	bits-complete-n04-b00256-qflat-funit	0	Accelerated	measured	0
+299	37	bits-complete-n04-b00256-qflat-funit	0	Standard	measured	0
+300	37	bits-complete-n04-b00256-qflat-funit	1	Standard	measured	1
+301	37	bits-complete-n04-b00256-qflat-funit	1	Accelerated	measured	1
+302	37	bits-complete-n04-b00256-qflat-funit	2	Accelerated	measured	2
+303	37	bits-complete-n04-b00256-qflat-funit	2	Standard	measured	2
+304	38	bits-complete-n04-b00256-qramp-fdegree	-1	Accelerated	warmup	0
+305	38	bits-complete-n04-b00256-qramp-fdegree	-1	Standard	warmup	0
+306	38	bits-complete-n04-b00256-qramp-fdegree	0	Standard	measured	0
+307	38	bits-complete-n04-b00256-qramp-fdegree	0	Accelerated	measured	0
+308	38	bits-complete-n04-b00256-qramp-fdegree	1	Accelerated	measured	1
+309	38	bits-complete-n04-b00256-qramp-fdegree	1	Standard	measured	1
+310	38	bits-complete-n04-b00256-qramp-fdegree	2	Standard	measured	2
+311	38	bits-complete-n04-b00256-qramp-fdegree	2	Accelerated	measured	2
+312	39	bits-complete-n04-b00256-qramp-funit	-1	Standard	warmup	0
+313	39	bits-complete-n04-b00256-qramp-funit	-1	Accelerated	warmup	0
+314	39	bits-complete-n04-b00256-qramp-funit	0	Accelerated	measured	0
+315	39	bits-complete-n04-b00256-qramp-funit	0	Standard	measured	0
+316	39	bits-complete-n04-b00256-qramp-funit	1	Standard	measured	1
+317	39	bits-complete-n04-b00256-qramp-funit	1	Accelerated	measured	1
+318	39	bits-complete-n04-b00256-qramp-funit	2	Accelerated	measured	2
+319	39	bits-complete-n04-b00256-qramp-funit	2	Standard	measured	2
+320	40	bits-complete-n04-b04096-qflat-fdegree	-1	Accelerated	warmup	0
+321	40	bits-complete-n04-b04096-qflat-fdegree	-1	Standard	warmup	0
+322	40	bits-complete-n04-b04096-qflat-fdegree	0	Standard	measured	0
+323	40	bits-complete-n04-b04096-qflat-fdegree	0	Accelerated	measured	0
+324	40	bits-complete-n04-b04096-qflat-fdegree	1	Accelerated	measured	1
+325	40	bits-complete-n04-b04096-qflat-fdegree	1	Standard	measured	1
+326	40	bits-complete-n04-b04096-qflat-fdegree	2	Standard	measured	2
+327	40	bits-complete-n04-b04096-qflat-fdegree	2	Accelerated	measured	2
+328	41	bits-complete-n04-b04096-qflat-funit	-1	Standard	warmup	0
+329	41	bits-complete-n04-b04096-qflat-funit	-1	Accelerated	warmup	0
+330	41	bits-complete-n04-b04096-qflat-funit	0	Accelerated	measured	0
+331	41	bits-complete-n04-b04096-qflat-funit	0	Standard	measured	0
+332	41	bits-complete-n04-b04096-qflat-funit	1	Standard	measured	1
+333	41	bits-complete-n04-b04096-qflat-funit	1	Accelerated	measured	1
+334	41	bits-complete-n04-b04096-qflat-funit	2	Accelerated	measured	2
+335	41	bits-complete-n04-b04096-qflat-funit	2	Standard	measured	2
+336	42	bits-complete-n04-b04096-qramp-fdegree	-1	Accelerated	warmup	0
+337	42	bits-complete-n04-b04096-qramp-fdegree	-1	Standard	warmup	0
+338	42	bits-complete-n04-b04096-qramp-fdegree	0	Standard	measured	0
+339	42	bits-complete-n04-b04096-qramp-fdegree	0	Accelerated	measured	0
+340	42	bits-complete-n04-b04096-qramp-fdegree	1	Accelerated	measured	1
+341	42	bits-complete-n04-b04096-qramp-fdegree	1	Standard	measured	1
+342	42	bits-complete-n04-b04096-qramp-fdegree	2	Standard	measured	2
+343	42	bits-complete-n04-b04096-qramp-fdegree	2	Accelerated	measured	2
+344	43	bits-complete-n04-b04096-qramp-funit	-1	Standard	warmup	0
+345	43	bits-complete-n04-b04096-qramp-funit	-1	Accelerated	warmup	0
+346	43	bits-complete-n04-b04096-qramp-funit	0	Accelerated	measured	0
+347	43	bits-complete-n04-b04096-qramp-funit	0	Standard	measured	0
+348	43	bits-complete-n04-b04096-qramp-funit	1	Standard	measured	1
+349	43	bits-complete-n04-b04096-qramp-funit	1	Accelerated	measured	1
+350	43	bits-complete-n04-b04096-qramp-funit	2	Accelerated	measured	2
+351	43	bits-complete-n04-b04096-qramp-funit	2	Standard	measured	2
+352	44	bits-complete-n04-b16384-qflat-fdegree	-1	Accelerated	warmup	0
+353	44	bits-complete-n04-b16384-qflat-fdegree	-1	Standard	warmup	0
+354	44	bits-complete-n04-b16384-qflat-fdegree	0	Standard	measured	0
+355	44	bits-complete-n04-b16384-qflat-fdegree	0	Accelerated	measured	0
+356	44	bits-complete-n04-b16384-qflat-fdegree	1	Accelerated	measured	1
+357	44	bits-complete-n04-b16384-qflat-fdegree	1	Standard	measured	1
+358	44	bits-complete-n04-b16384-qflat-fdegree	2	Standard	measured	2
+359	44	bits-complete-n04-b16384-qflat-fdegree	2	Accelerated	measured	2
+360	45	bits-complete-n04-b16384-qflat-funit	-1	Standard	warmup	0
+361	45	bits-complete-n04-b16384-qflat-funit	-1	Accelerated	warmup	0
+362	45	bits-complete-n04-b16384-qflat-funit	0	Accelerated	measured	0
+363	45	bits-complete-n04-b16384-qflat-funit	0	Standard	measured	0
+364	45	bits-complete-n04-b16384-qflat-funit	1	Standard	measured	1
+365	45	bits-complete-n04-b16384-qflat-funit	1	Accelerated	measured	1
+366	45	bits-complete-n04-b16384-qflat-funit	2	Accelerated	measured	2
+367	45	bits-complete-n04-b16384-qflat-funit	2	Standard	measured	2
+368	46	bits-complete-n04-b16384-qramp-fdegree	-1	Accelerated	warmup	0
+369	46	bits-complete-n04-b16384-qramp-fdegree	-1	Standard	warmup	0
+370	46	bits-complete-n04-b16384-qramp-fdegree	0	Standard	measured	0
+371	46	bits-complete-n04-b16384-qramp-fdegree	0	Accelerated	measured	0
+372	46	bits-complete-n04-b16384-qramp-fdegree	1	Accelerated	measured	1
+373	46	bits-complete-n04-b16384-qramp-fdegree	1	Standard	measured	1
+374	46	bits-complete-n04-b16384-qramp-fdegree	2	Standard	measured	2
+375	46	bits-complete-n04-b16384-qramp-fdegree	2	Accelerated	measured	2
+376	47	bits-complete-n04-b16384-qramp-funit	-1	Standard	warmup	0
+377	47	bits-complete-n04-b16384-qramp-funit	-1	Accelerated	warmup	0
+378	47	bits-complete-n04-b16384-qramp-funit	0	Accelerated	measured	0
+379	47	bits-complete-n04-b16384-qramp-funit	0	Standard	measured	0
+380	47	bits-complete-n04-b16384-qramp-funit	1	Standard	measured	1
+381	47	bits-complete-n04-b16384-qramp-funit	1	Accelerated	measured	1
+382	47	bits-complete-n04-b16384-qramp-funit	2	Accelerated	measured	2
+383	47	bits-complete-n04-b16384-qramp-funit	2	Standard	measured	2
+384	48	bits-cycle-n04-b00001-qflat-fdegree	-1	Accelerated	warmup	0
+385	48	bits-cycle-n04-b00001-qflat-fdegree	-1	Standard	warmup	0
+386	48	bits-cycle-n04-b00001-qflat-fdegree	0	Standard	measured	0
+387	48	bits-cycle-n04-b00001-qflat-fdegree	0	Accelerated	measured	0
+388	48	bits-cycle-n04-b00001-qflat-fdegree	1	Accelerated	measured	1
+389	48	bits-cycle-n04-b00001-qflat-fdegree	1	Standard	measured	1
+390	48	bits-cycle-n04-b00001-qflat-fdegree	2	Standard	measured	2
+391	48	bits-cycle-n04-b00001-qflat-fdegree	2	Accelerated	measured	2
+392	49	bits-cycle-n04-b00001-qflat-funit	-1	Standard	warmup	0
+393	49	bits-cycle-n04-b00001-qflat-funit	-1	Accelerated	warmup	0
+394	49	bits-cycle-n04-b00001-qflat-funit	0	Accelerated	measured	0
+395	49	bits-cycle-n04-b00001-qflat-funit	0	Standard	measured	0
+396	49	bits-cycle-n04-b00001-qflat-funit	1	Standard	measured	1
+397	49	bits-cycle-n04-b00001-qflat-funit	1	Accelerated	measured	1
+398	49	bits-cycle-n04-b00001-qflat-funit	2	Accelerated	measured	2
+399	49	bits-cycle-n04-b00001-qflat-funit	2	Standard	measured	2
+400	50	bits-cycle-n04-b00001-qramp-fdegree	-1	Accelerated	warmup	0
+401	50	bits-cycle-n04-b00001-qramp-fdegree	-1	Standard	warmup	0
+402	50	bits-cycle-n04-b00001-qramp-fdegree	0	Standard	measured	0
+403	50	bits-cycle-n04-b00001-qramp-fdegree	0	Accelerated	measured	0
+404	50	bits-cycle-n04-b00001-qramp-fdegree	1	Accelerated	measured	1
+405	50	bits-cycle-n04-b00001-qramp-fdegree	1	Standard	measured	1
+406	50	bits-cycle-n04-b00001-qramp-fdegree	2	Standard	measured	2
+407	50	bits-cycle-n04-b00001-qramp-fdegree	2	Accelerated	measured	2
+408	51	bits-cycle-n04-b00001-qramp-funit	-1	Standard	warmup	0
+409	51	bits-cycle-n04-b00001-qramp-funit	-1	Accelerated	warmup	0
+410	51	bits-cycle-n04-b00001-qramp-funit	0	Accelerated	measured	0
+411	51	bits-cycle-n04-b00001-qramp-funit	0	Standard	measured	0
+412	51	bits-cycle-n04-b00001-qramp-funit	1	Standard	measured	1
+413	51	bits-cycle-n04-b00001-qramp-funit	1	Accelerated	measured	1
+414	51	bits-cycle-n04-b00001-qramp-funit	2	Accelerated	measured	2
+415	51	bits-cycle-n04-b00001-qramp-funit	2	Standard	measured	2
+416	52	bits-cycle-n04-b00008-qflat-fdegree	-1	Accelerated	warmup	0
+417	52	bits-cycle-n04-b00008-qflat-fdegree	-1	Standard	warmup	0
+418	52	bits-cycle-n04-b00008-qflat-fdegree	0	Standard	measured	0
+419	52	bits-cycle-n04-b00008-qflat-fdegree	0	Accelerated	measured	0
+420	52	bits-cycle-n04-b00008-qflat-fdegree	1	Accelerated	measured	1
+421	52	bits-cycle-n04-b00008-qflat-fdegree	1	Standard	measured	1
+422	52	bits-cycle-n04-b00008-qflat-fdegree	2	Standard	measured	2
+423	52	bits-cycle-n04-b00008-qflat-fdegree	2	Accelerated	measured	2
+424	53	bits-cycle-n04-b00008-qflat-funit	-1	Standard	warmup	0
+425	53	bits-cycle-n04-b00008-qflat-funit	-1	Accelerated	warmup	0
+426	53	bits-cycle-n04-b00008-qflat-funit	0	Accelerated	measured	0
+427	53	bits-cycle-n04-b00008-qflat-funit	0	Standard	measured	0
+428	53	bits-cycle-n04-b00008-qflat-funit	1	Standard	measured	1
+429	53	bits-cycle-n04-b00008-qflat-funit	1	Accelerated	measured	1
+430	53	bits-cycle-n04-b00008-qflat-funit	2	Accelerated	measured	2
+431	53	bits-cycle-n04-b00008-qflat-funit	2	Standard	measured	2
+432	54	bits-cycle-n04-b00008-qramp-fdegree	-1	Accelerated	warmup	0
+433	54	bits-cycle-n04-b00008-qramp-fdegree	-1	Standard	warmup	0
+434	54	bits-cycle-n04-b00008-qramp-fdegree	0	Standard	measured	0
+435	54	bits-cycle-n04-b00008-qramp-fdegree	0	Accelerated	measured	0
+436	54	bits-cycle-n04-b00008-qramp-fdegree	1	Accelerated	measured	1
+437	54	bits-cycle-n04-b00008-qramp-fdegree	1	Standard	measured	1
+438	54	bits-cycle-n04-b00008-qramp-fdegree	2	Standard	measured	2
+439	54	bits-cycle-n04-b00008-qramp-fdegree	2	Accelerated	measured	2
+440	55	bits-cycle-n04-b00008-qramp-funit	-1	Standard	warmup	0
+441	55	bits-cycle-n04-b00008-qramp-funit	-1	Accelerated	warmup	0
+442	55	bits-cycle-n04-b00008-qramp-funit	0	Accelerated	measured	0
+443	55	bits-cycle-n04-b00008-qramp-funit	0	Standard	measured	0
+444	55	bits-cycle-n04-b00008-qramp-funit	1	Standard	measured	1
+445	55	bits-cycle-n04-b00008-qramp-funit	1	Accelerated	measured	1
+446	55	bits-cycle-n04-b00008-qramp-funit	2	Accelerated	measured	2
+447	55	bits-cycle-n04-b00008-qramp-funit	2	Standard	measured	2
+448	56	bits-cycle-n04-b00064-qflat-fdegree	-1	Accelerated	warmup	0
+449	56	bits-cycle-n04-b00064-qflat-fdegree	-1	Standard	warmup	0
+450	56	bits-cycle-n04-b00064-qflat-fdegree	0	Standard	measured	0
+451	56	bits-cycle-n04-b00064-qflat-fdegree	0	Accelerated	measured	0
+452	56	bits-cycle-n04-b00064-qflat-fdegree	1	Accelerated	measured	1
+453	56	bits-cycle-n04-b00064-qflat-fdegree	1	Standard	measured	1
+454	56	bits-cycle-n04-b00064-qflat-fdegree	2	Standard	measured	2
+455	56	bits-cycle-n04-b00064-qflat-fdegree	2	Accelerated	measured	2
+456	57	bits-cycle-n04-b00064-qflat-funit	-1	Standard	warmup	0
+457	57	bits-cycle-n04-b00064-qflat-funit	-1	Accelerated	warmup	0
+458	57	bits-cycle-n04-b00064-qflat-funit	0	Accelerated	measured	0
+459	57	bits-cycle-n04-b00064-qflat-funit	0	Standard	measured	0
+460	57	bits-cycle-n04-b00064-qflat-funit	1	Standard	measured	1
+461	57	bits-cycle-n04-b00064-qflat-funit	1	Accelerated	measured	1
+462	57	bits-cycle-n04-b00064-qflat-funit	2	Accelerated	measured	2
+463	57	bits-cycle-n04-b00064-qflat-funit	2	Standard	measured	2
+464	58	bits-cycle-n04-b00064-qramp-fdegree	-1	Accelerated	warmup	0
+465	58	bits-cycle-n04-b00064-qramp-fdegree	-1	Standard	warmup	0
+466	58	bits-cycle-n04-b00064-qramp-fdegree	0	Standard	measured	0
+467	58	bits-cycle-n04-b00064-qramp-fdegree	0	Accelerated	measured	0
+468	58	bits-cycle-n04-b00064-qramp-fdegree	1	Accelerated	measured	1
+469	58	bits-cycle-n04-b00064-qramp-fdegree	1	Standard	measured	1
+470	58	bits-cycle-n04-b00064-qramp-fdegree	2	Standard	measured	2
+471	58	bits-cycle-n04-b00064-qramp-fdegree	2	Accelerated	measured	2
+472	59	bits-cycle-n04-b00064-qramp-funit	-1	Standard	warmup	0
+473	59	bits-cycle-n04-b00064-qramp-funit	-1	Accelerated	warmup	0
+474	59	bits-cycle-n04-b00064-qramp-funit	0	Accelerated	measured	0
+475	59	bits-cycle-n04-b00064-qramp-funit	0	Standard	measured	0
+476	59	bits-cycle-n04-b00064-qramp-funit	1	Standard	measured	1
+477	59	bits-cycle-n04-b00064-qramp-funit	1	Accelerated	measured	1
+478	59	bits-cycle-n04-b00064-qramp-funit	2	Accelerated	measured	2
+479	59	bits-cycle-n04-b00064-qramp-funit	2	Standard	measured	2
+480	60	bits-cycle-n04-b00256-qflat-fdegree	-1	Accelerated	warmup	0
+481	60	bits-cycle-n04-b00256-qflat-fdegree	-1	Standard	warmup	0
+482	60	bits-cycle-n04-b00256-qflat-fdegree	0	Standard	measured	0
+483	60	bits-cycle-n04-b00256-qflat-fdegree	0	Accelerated	measured	0
+484	60	bits-cycle-n04-b00256-qflat-fdegree	1	Accelerated	measured	1
+485	60	bits-cycle-n04-b00256-qflat-fdegree	1	Standard	measured	1
+486	60	bits-cycle-n04-b00256-qflat-fdegree	2	Standard	measured	2
+487	60	bits-cycle-n04-b00256-qflat-fdegree	2	Accelerated	measured	2
+488	61	bits-cycle-n04-b00256-qflat-funit	-1	Standard	warmup	0
+489	61	bits-cycle-n04-b00256-qflat-funit	-1	Accelerated	warmup	0
+490	61	bits-cycle-n04-b00256-qflat-funit	0	Accelerated	measured	0
+491	61	bits-cycle-n04-b00256-qflat-funit	0	Standard	measured	0
+492	61	bits-cycle-n04-b00256-qflat-funit	1	Standard	measured	1
+493	61	bits-cycle-n04-b00256-qflat-funit	1	Accelerated	measured	1
+494	61	bits-cycle-n04-b00256-qflat-funit	2	Accelerated	measured	2
+495	61	bits-cycle-n04-b00256-qflat-funit	2	Standard	measured	2
+496	62	bits-cycle-n04-b00256-qramp-fdegree	-1	Accelerated	warmup	0
+497	62	bits-cycle-n04-b00256-qramp-fdegree	-1	Standard	warmup	0
+498	62	bits-cycle-n04-b00256-qramp-fdegree	0	Standard	measured	0
+499	62	bits-cycle-n04-b00256-qramp-fdegree	0	Accelerated	measured	0
+500	62	bits-cycle-n04-b00256-qramp-fdegree	1	Accelerated	measured	1
+501	62	bits-cycle-n04-b00256-qramp-fdegree	1	Standard	measured	1
+502	62	bits-cycle-n04-b00256-qramp-fdegree	2	Standard	measured	2
+503	62	bits-cycle-n04-b00256-qramp-fdegree	2	Accelerated	measured	2
+504	63	bits-cycle-n04-b00256-qramp-funit	-1	Standard	warmup	0
+505	63	bits-cycle-n04-b00256-qramp-funit	-1	Accelerated	warmup	0
+506	63	bits-cycle-n04-b00256-qramp-funit	0	Accelerated	measured	0
+507	63	bits-cycle-n04-b00256-qramp-funit	0	Standard	measured	0
+508	63	bits-cycle-n04-b00256-qramp-funit	1	Standard	measured	1
+509	63	bits-cycle-n04-b00256-qramp-funit	1	Accelerated	measured	1
+510	63	bits-cycle-n04-b00256-qramp-funit	2	Accelerated	measured	2
+511	63	bits-cycle-n04-b00256-qramp-funit	2	Standard	measured	2
+512	64	bits-cycle-n04-b04096-qflat-fdegree	-1	Accelerated	warmup	0
+513	64	bits-cycle-n04-b04096-qflat-fdegree	-1	Standard	warmup	0
+514	64	bits-cycle-n04-b04096-qflat-fdegree	0	Standard	measured	0
+515	64	bits-cycle-n04-b04096-qflat-fdegree	0	Accelerated	measured	0
+516	64	bits-cycle-n04-b04096-qflat-fdegree	1	Accelerated	measured	1
+517	64	bits-cycle-n04-b04096-qflat-fdegree	1	Standard	measured	1
+518	64	bits-cycle-n04-b04096-qflat-fdegree	2	Standard	measured	2
+519	64	bits-cycle-n04-b04096-qflat-fdegree	2	Accelerated	measured	2
+520	65	bits-cycle-n04-b04096-qflat-funit	-1	Standard	warmup	0
+521	65	bits-cycle-n04-b04096-qflat-funit	-1	Accelerated	warmup	0
+522	65	bits-cycle-n04-b04096-qflat-funit	0	Accelerated	measured	0
+523	65	bits-cycle-n04-b04096-qflat-funit	0	Standard	measured	0
+524	65	bits-cycle-n04-b04096-qflat-funit	1	Standard	measured	1
+525	65	bits-cycle-n04-b04096-qflat-funit	1	Accelerated	measured	1
+526	65	bits-cycle-n04-b04096-qflat-funit	2	Accelerated	measured	2
+527	65	bits-cycle-n04-b04096-qflat-funit	2	Standard	measured	2
+528	66	bits-cycle-n04-b04096-qramp-fdegree	-1	Accelerated	warmup	0
+529	66	bits-cycle-n04-b04096-qramp-fdegree	-1	Standard	warmup	0
+530	66	bits-cycle-n04-b04096-qramp-fdegree	0	Standard	measured	0
+531	66	bits-cycle-n04-b04096-qramp-fdegree	0	Accelerated	measured	0
+532	66	bits-cycle-n04-b04096-qramp-fdegree	1	Accelerated	measured	1
+533	66	bits-cycle-n04-b04096-qramp-fdegree	1	Standard	measured	1
+534	66	bits-cycle-n04-b04096-qramp-fdegree	2	Standard	measured	2
+535	66	bits-cycle-n04-b04096-qramp-fdegree	2	Accelerated	measured	2
+536	67	bits-cycle-n04-b04096-qramp-funit	-1	Standard	warmup	0
+537	67	bits-cycle-n04-b04096-qramp-funit	-1	Accelerated	warmup	0
+538	67	bits-cycle-n04-b04096-qramp-funit	0	Accelerated	measured	0
+539	67	bits-cycle-n04-b04096-qramp-funit	0	Standard	measured	0
+540	67	bits-cycle-n04-b04096-qramp-funit	1	Standard	measured	1
+541	67	bits-cycle-n04-b04096-qramp-funit	1	Accelerated	measured	1
+542	67	bits-cycle-n04-b04096-qramp-funit	2	Accelerated	measured	2
+543	67	bits-cycle-n04-b04096-qramp-funit	2	Standard	measured	2
+544	68	bits-cycle-n04-b16384-qflat-fdegree	-1	Accelerated	warmup	0
+545	68	bits-cycle-n04-b16384-qflat-fdegree	-1	Standard	warmup	0
+546	68	bits-cycle-n04-b16384-qflat-fdegree	0	Standard	measured	0
+547	68	bits-cycle-n04-b16384-qflat-fdegree	0	Accelerated	measured	0
+548	68	bits-cycle-n04-b16384-qflat-fdegree	1	Accelerated	measured	1
+549	68	bits-cycle-n04-b16384-qflat-fdegree	1	Standard	measured	1
+550	68	bits-cycle-n04-b16384-qflat-fdegree	2	Standard	measured	2
+551	68	bits-cycle-n04-b16384-qflat-fdegree	2	Accelerated	measured	2
+552	69	bits-cycle-n04-b16384-qflat-funit	-1	Standard	warmup	0
+553	69	bits-cycle-n04-b16384-qflat-funit	-1	Accelerated	warmup	0
+554	69	bits-cycle-n04-b16384-qflat-funit	0	Accelerated	measured	0
+555	69	bits-cycle-n04-b16384-qflat-funit	0	Standard	measured	0
+556	69	bits-cycle-n04-b16384-qflat-funit	1	Standard	measured	1
+557	69	bits-cycle-n04-b16384-qflat-funit	1	Accelerated	measured	1
+558	69	bits-cycle-n04-b16384-qflat-funit	2	Accelerated	measured	2
+559	69	bits-cycle-n04-b16384-qflat-funit	2	Standard	measured	2
+560	70	bits-cycle-n04-b16384-qramp-fdegree	-1	Accelerated	warmup	0
+561	70	bits-cycle-n04-b16384-qramp-fdegree	-1	Standard	warmup	0
+562	70	bits-cycle-n04-b16384-qramp-fdegree	0	Standard	measured	0
+563	70	bits-cycle-n04-b16384-qramp-fdegree	0	Accelerated	measured	0
+564	70	bits-cycle-n04-b16384-qramp-fdegree	1	Accelerated	measured	1
+565	70	bits-cycle-n04-b16384-qramp-fdegree	1	Standard	measured	1
+566	70	bits-cycle-n04-b16384-qramp-fdegree	2	Standard	measured	2
+567	70	bits-cycle-n04-b16384-qramp-fdegree	2	Accelerated	measured	2
+568	71	bits-cycle-n04-b16384-qramp-funit	-1	Standard	warmup	0
+569	71	bits-cycle-n04-b16384-qramp-funit	-1	Accelerated	warmup	0
+570	71	bits-cycle-n04-b16384-qramp-funit	0	Accelerated	measured	0
+571	71	bits-cycle-n04-b16384-qramp-funit	0	Standard	measured	0
+572	71	bits-cycle-n04-b16384-qramp-funit	1	Standard	measured	1
+573	71	bits-cycle-n04-b16384-qramp-funit	1	Accelerated	measured	1
+574	71	bits-cycle-n04-b16384-qramp-funit	2	Accelerated	measured	2
+575	71	bits-cycle-n04-b16384-qramp-funit	2	Standard	measured	2
+576	72	bits-matching-n04-b00001-qflat-fdegree	-1	Accelerated	warmup	0
+577	72	bits-matching-n04-b00001-qflat-fdegree	-1	Standard	warmup	0
+578	72	bits-matching-n04-b00001-qflat-fdegree	0	Standard	measured	0
+579	72	bits-matching-n04-b00001-qflat-fdegree	0	Accelerated	measured	0
+580	72	bits-matching-n04-b00001-qflat-fdegree	1	Accelerated	measured	1
+581	72	bits-matching-n04-b00001-qflat-fdegree	1	Standard	measured	1
+582	72	bits-matching-n04-b00001-qflat-fdegree	2	Standard	measured	2
+583	72	bits-matching-n04-b00001-qflat-fdegree	2	Accelerated	measured	2
+584	73	bits-matching-n04-b00001-qflat-funit	-1	Standard	warmup	0
+585	73	bits-matching-n04-b00001-qflat-funit	-1	Accelerated	warmup	0
+586	73	bits-matching-n04-b00001-qflat-funit	0	Accelerated	measured	0
+587	73	bits-matching-n04-b00001-qflat-funit	0	Standard	measured	0
+588	73	bits-matching-n04-b00001-qflat-funit	1	Standard	measured	1
+589	73	bits-matching-n04-b00001-qflat-funit	1	Accelerated	measured	1
+590	73	bits-matching-n04-b00001-qflat-funit	2	Accelerated	measured	2
+591	73	bits-matching-n04-b00001-qflat-funit	2	Standard	measured	2
+592	74	bits-matching-n04-b00001-qramp-fdegree	-1	Accelerated	warmup	0
+593	74	bits-matching-n04-b00001-qramp-fdegree	-1	Standard	warmup	0
+594	74	bits-matching-n04-b00001-qramp-fdegree	0	Standard	measured	0
+595	74	bits-matching-n04-b00001-qramp-fdegree	0	Accelerated	measured	0
+596	74	bits-matching-n04-b00001-qramp-fdegree	1	Accelerated	measured	1
+597	74	bits-matching-n04-b00001-qramp-fdegree	1	Standard	measured	1
+598	74	bits-matching-n04-b00001-qramp-fdegree	2	Standard	measured	2
+599	74	bits-matching-n04-b00001-qramp-fdegree	2	Accelerated	measured	2
+600	75	bits-matching-n04-b00001-qramp-funit	-1	Standard	warmup	0
+601	75	bits-matching-n04-b00001-qramp-funit	-1	Accelerated	warmup	0
+602	75	bits-matching-n04-b00001-qramp-funit	0	Accelerated	measured	0
+603	75	bits-matching-n04-b00001-qramp-funit	0	Standard	measured	0
+604	75	bits-matching-n04-b00001-qramp-funit	1	Standard	measured	1
+605	75	bits-matching-n04-b00001-qramp-funit	1	Accelerated	measured	1
+606	75	bits-matching-n04-b00001-qramp-funit	2	Accelerated	measured	2
+607	75	bits-matching-n04-b00001-qramp-funit	2	Standard	measured	2
+608	76	bits-matching-n04-b00008-qflat-fdegree	-1	Accelerated	warmup	0
+609	76	bits-matching-n04-b00008-qflat-fdegree	-1	Standard	warmup	0
+610	76	bits-matching-n04-b00008-qflat-fdegree	0	Standard	measured	0
+611	76	bits-matching-n04-b00008-qflat-fdegree	0	Accelerated	measured	0
+612	76	bits-matching-n04-b00008-qflat-fdegree	1	Accelerated	measured	1
+613	76	bits-matching-n04-b00008-qflat-fdegree	1	Standard	measured	1
+614	76	bits-matching-n04-b00008-qflat-fdegree	2	Standard	measured	2
+615	76	bits-matching-n04-b00008-qflat-fdegree	2	Accelerated	measured	2
+616	77	bits-matching-n04-b00008-qflat-funit	-1	Standard	warmup	0
+617	77	bits-matching-n04-b00008-qflat-funit	-1	Accelerated	warmup	0
+618	77	bits-matching-n04-b00008-qflat-funit	0	Accelerated	measured	0
+619	77	bits-matching-n04-b00008-qflat-funit	0	Standard	measured	0
+620	77	bits-matching-n04-b00008-qflat-funit	1	Standard	measured	1
+621	77	bits-matching-n04-b00008-qflat-funit	1	Accelerated	measured	1
+622	77	bits-matching-n04-b00008-qflat-funit	2	Accelerated	measured	2
+623	77	bits-matching-n04-b00008-qflat-funit	2	Standard	measured	2
+624	78	bits-matching-n04-b00008-qramp-fdegree	-1	Accelerated	warmup	0
+625	78	bits-matching-n04-b00008-qramp-fdegree	-1	Standard	warmup	0
+626	78	bits-matching-n04-b00008-qramp-fdegree	0	Standard	measured	0
+627	78	bits-matching-n04-b00008-qramp-fdegree	0	Accelerated	measured	0
+628	78	bits-matching-n04-b00008-qramp-fdegree	1	Accelerated	measured	1
+629	78	bits-matching-n04-b00008-qramp-fdegree	1	Standard	measured	1
+630	78	bits-matching-n04-b00008-qramp-fdegree	2	Standard	measured	2
+631	78	bits-matching-n04-b00008-qramp-fdegree	2	Accelerated	measured	2
+632	79	bits-matching-n04-b00008-qramp-funit	-1	Standard	warmup	0
+633	79	bits-matching-n04-b00008-qramp-funit	-1	Accelerated	warmup	0
+634	79	bits-matching-n04-b00008-qramp-funit	0	Accelerated	measured	0
+635	79	bits-matching-n04-b00008-qramp-funit	0	Standard	measured	0
+636	79	bits-matching-n04-b00008-qramp-funit	1	Standard	measured	1
+637	79	bits-matching-n04-b00008-qramp-funit	1	Accelerated	measured	1
+638	79	bits-matching-n04-b00008-qramp-funit	2	Accelerated	measured	2
+639	79	bits-matching-n04-b00008-qramp-funit	2	Standard	measured	2
+640	80	bits-matching-n04-b00064-qflat-fdegree	-1	Accelerated	warmup	0
+641	80	bits-matching-n04-b00064-qflat-fdegree	-1	Standard	warmup	0
+642	80	bits-matching-n04-b00064-qflat-fdegree	0	Standard	measured	0
+643	80	bits-matching-n04-b00064-qflat-fdegree	0	Accelerated	measured	0
+644	80	bits-matching-n04-b00064-qflat-fdegree	1	Accelerated	measured	1
+645	80	bits-matching-n04-b00064-qflat-fdegree	1	Standard	measured	1
+646	80	bits-matching-n04-b00064-qflat-fdegree	2	Standard	measured	2
+647	80	bits-matching-n04-b00064-qflat-fdegree	2	Accelerated	measured	2
+648	81	bits-matching-n04-b00064-qflat-funit	-1	Standard	warmup	0
+649	81	bits-matching-n04-b00064-qflat-funit	-1	Accelerated	warmup	0
+650	81	bits-matching-n04-b00064-qflat-funit	0	Accelerated	measured	0
+651	81	bits-matching-n04-b00064-qflat-funit	0	Standard	measured	0
+652	81	bits-matching-n04-b00064-qflat-funit	1	Standard	measured	1
+653	81	bits-matching-n04-b00064-qflat-funit	1	Accelerated	measured	1
+654	81	bits-matching-n04-b00064-qflat-funit	2	Accelerated	measured	2
+655	81	bits-matching-n04-b00064-qflat-funit	2	Standard	measured	2
+656	82	bits-matching-n04-b00064-qramp-fdegree	-1	Accelerated	warmup	0
+657	82	bits-matching-n04-b00064-qramp-fdegree	-1	Standard	warmup	0
+658	82	bits-matching-n04-b00064-qramp-fdegree	0	Standard	measured	0
+659	82	bits-matching-n04-b00064-qramp-fdegree	0	Accelerated	measured	0
+660	82	bits-matching-n04-b00064-qramp-fdegree	1	Accelerated	measured	1
+661	82	bits-matching-n04-b00064-qramp-fdegree	1	Standard	measured	1
+662	82	bits-matching-n04-b00064-qramp-fdegree	2	Standard	measured	2
+663	82	bits-matching-n04-b00064-qramp-fdegree	2	Accelerated	measured	2
+664	83	bits-matching-n04-b00064-qramp-funit	-1	Standard	warmup	0
+665	83	bits-matching-n04-b00064-qramp-funit	-1	Accelerated	warmup	0
+666	83	bits-matching-n04-b00064-qramp-funit	0	Accelerated	measured	0
+667	83	bits-matching-n04-b00064-qramp-funit	0	Standard	measured	0
+668	83	bits-matching-n04-b00064-qramp-funit	1	Standard	measured	1
+669	83	bits-matching-n04-b00064-qramp-funit	1	Accelerated	measured	1
+670	83	bits-matching-n04-b00064-qramp-funit	2	Accelerated	measured	2
+671	83	bits-matching-n04-b00064-qramp-funit	2	Standard	measured	2
+672	84	bits-matching-n04-b00256-qflat-fdegree	-1	Accelerated	warmup	0
+673	84	bits-matching-n04-b00256-qflat-fdegree	-1	Standard	warmup	0
+674	84	bits-matching-n04-b00256-qflat-fdegree	0	Standard	measured	0
+675	84	bits-matching-n04-b00256-qflat-fdegree	0	Accelerated	measured	0
+676	84	bits-matching-n04-b00256-qflat-fdegree	1	Accelerated	measured	1
+677	84	bits-matching-n04-b00256-qflat-fdegree	1	Standard	measured	1
+678	84	bits-matching-n04-b00256-qflat-fdegree	2	Standard	measured	2
+679	84	bits-matching-n04-b00256-qflat-fdegree	2	Accelerated	measured	2
+680	85	bits-matching-n04-b00256-qflat-funit	-1	Standard	warmup	0
+681	85	bits-matching-n04-b00256-qflat-funit	-1	Accelerated	warmup	0
+682	85	bits-matching-n04-b00256-qflat-funit	0	Accelerated	measured	0
+683	85	bits-matching-n04-b00256-qflat-funit	0	Standard	measured	0
+684	85	bits-matching-n04-b00256-qflat-funit	1	Standard	measured	1
+685	85	bits-matching-n04-b00256-qflat-funit	1	Accelerated	measured	1
+686	85	bits-matching-n04-b00256-qflat-funit	2	Accelerated	measured	2
+687	85	bits-matching-n04-b00256-qflat-funit	2	Standard	measured	2
+688	86	bits-matching-n04-b00256-qramp-fdegree	-1	Accelerated	warmup	0
+689	86	bits-matching-n04-b00256-qramp-fdegree	-1	Standard	warmup	0
+690	86	bits-matching-n04-b00256-qramp-fdegree	0	Standard	measured	0
+691	86	bits-matching-n04-b00256-qramp-fdegree	0	Accelerated	measured	0
+692	86	bits-matching-n04-b00256-qramp-fdegree	1	Accelerated	measured	1
+693	86	bits-matching-n04-b00256-qramp-fdegree	1	Standard	measured	1
+694	86	bits-matching-n04-b00256-qramp-fdegree	2	Standard	measured	2
+695	86	bits-matching-n04-b00256-qramp-fdegree	2	Accelerated	measured	2
+696	87	bits-matching-n04-b00256-qramp-funit	-1	Standard	warmup	0
+697	87	bits-matching-n04-b00256-qramp-funit	-1	Accelerated	warmup	0
+698	87	bits-matching-n04-b00256-qramp-funit	0	Accelerated	measured	0
+699	87	bits-matching-n04-b00256-qramp-funit	0	Standard	measured	0
+700	87	bits-matching-n04-b00256-qramp-funit	1	Standard	measured	1
+701	87	bits-matching-n04-b00256-qramp-funit	1	Accelerated	measured	1
+702	87	bits-matching-n04-b00256-qramp-funit	2	Accelerated	measured	2
+703	87	bits-matching-n04-b00256-qramp-funit	2	Standard	measured	2
+704	88	bits-matching-n04-b04096-qflat-fdegree	-1	Accelerated	warmup	0
+705	88	bits-matching-n04-b04096-qflat-fdegree	-1	Standard	warmup	0
+706	88	bits-matching-n04-b04096-qflat-fdegree	0	Standard	measured	0
+707	88	bits-matching-n04-b04096-qflat-fdegree	0	Accelerated	measured	0
+708	88	bits-matching-n04-b04096-qflat-fdegree	1	Accelerated	measured	1
+709	88	bits-matching-n04-b04096-qflat-fdegree	1	Standard	measured	1
+710	88	bits-matching-n04-b04096-qflat-fdegree	2	Standard	measured	2
+711	88	bits-matching-n04-b04096-qflat-fdegree	2	Accelerated	measured	2
+712	89	bits-matching-n04-b04096-qflat-funit	-1	Standard	warmup	0
+713	89	bits-matching-n04-b04096-qflat-funit	-1	Accelerated	warmup	0
+714	89	bits-matching-n04-b04096-qflat-funit	0	Accelerated	measured	0
+715	89	bits-matching-n04-b04096-qflat-funit	0	Standard	measured	0
+716	89	bits-matching-n04-b04096-qflat-funit	1	Standard	measured	1
+717	89	bits-matching-n04-b04096-qflat-funit	1	Accelerated	measured	1
+718	89	bits-matching-n04-b04096-qflat-funit	2	Accelerated	measured	2
+719	89	bits-matching-n04-b04096-qflat-funit	2	Standard	measured	2
+720	90	bits-matching-n04-b04096-qramp-fdegree	-1	Accelerated	warmup	0
+721	90	bits-matching-n04-b04096-qramp-fdegree	-1	Standard	warmup	0
+722	90	bits-matching-n04-b04096-qramp-fdegree	0	Standard	measured	0
+723	90	bits-matching-n04-b04096-qramp-fdegree	0	Accelerated	measured	0
+724	90	bits-matching-n04-b04096-qramp-fdegree	1	Accelerated	measured	1
+725	90	bits-matching-n04-b04096-qramp-fdegree	1	Standard	measured	1
+726	90	bits-matching-n04-b04096-qramp-fdegree	2	Standard	measured	2
+727	90	bits-matching-n04-b04096-qramp-fdegree	2	Accelerated	measured	2
+728	91	bits-matching-n04-b04096-qramp-funit	-1	Standard	warmup	0
+729	91	bits-matching-n04-b04096-qramp-funit	-1	Accelerated	warmup	0
+730	91	bits-matching-n04-b04096-qramp-funit	0	Accelerated	measured	0
+731	91	bits-matching-n04-b04096-qramp-funit	0	Standard	measured	0
+732	91	bits-matching-n04-b04096-qramp-funit	1	Standard	measured	1
+733	91	bits-matching-n04-b04096-qramp-funit	1	Accelerated	measured	1
+734	91	bits-matching-n04-b04096-qramp-funit	2	Accelerated	measured	2
+735	91	bits-matching-n04-b04096-qramp-funit	2	Standard	measured	2
+736	92	bits-matching-n04-b16384-qflat-fdegree	-1	Accelerated	warmup	0
+737	92	bits-matching-n04-b16384-qflat-fdegree	-1	Standard	warmup	0
+738	92	bits-matching-n04-b16384-qflat-fdegree	0	Standard	measured	0
+739	92	bits-matching-n04-b16384-qflat-fdegree	0	Accelerated	measured	0
+740	92	bits-matching-n04-b16384-qflat-fdegree	1	Accelerated	measured	1
+741	92	bits-matching-n04-b16384-qflat-fdegree	1	Standard	measured	1
+742	92	bits-matching-n04-b16384-qflat-fdegree	2	Standard	measured	2
+743	92	bits-matching-n04-b16384-qflat-fdegree	2	Accelerated	measured	2
+744	93	bits-matching-n04-b16384-qflat-funit	-1	Standard	warmup	0
+745	93	bits-matching-n04-b16384-qflat-funit	-1	Accelerated	warmup	0
+746	93	bits-matching-n04-b16384-qflat-funit	0	Accelerated	measured	0
+747	93	bits-matching-n04-b16384-qflat-funit	0	Standard	measured	0
+748	93	bits-matching-n04-b16384-qflat-funit	1	Standard	measured	1
+749	93	bits-matching-n04-b16384-qflat-funit	1	Accelerated	measured	1
+750	93	bits-matching-n04-b16384-qflat-funit	2	Accelerated	measured	2
+751	93	bits-matching-n04-b16384-qflat-funit	2	Standard	measured	2
+752	94	bits-matching-n04-b16384-qramp-fdegree	-1	Accelerated	warmup	0
+753	94	bits-matching-n04-b16384-qramp-fdegree	-1	Standard	warmup	0
+754	94	bits-matching-n04-b16384-qramp-fdegree	0	Standard	measured	0
+755	94	bits-matching-n04-b16384-qramp-fdegree	0	Accelerated	measured	0
+756	94	bits-matching-n04-b16384-qramp-fdegree	1	Accelerated	measured	1
+757	94	bits-matching-n04-b16384-qramp-fdegree	1	Standard	measured	1
+758	94	bits-matching-n04-b16384-qramp-fdegree	2	Standard	measured	2
+759	94	bits-matching-n04-b16384-qramp-fdegree	2	Accelerated	measured	2
+760	95	bits-matching-n04-b16384-qramp-funit	-1	Standard	warmup	0
+761	95	bits-matching-n04-b16384-qramp-funit	-1	Accelerated	warmup	0
+762	95	bits-matching-n04-b16384-qramp-funit	0	Accelerated	measured	0
+763	95	bits-matching-n04-b16384-qramp-funit	0	Standard	measured	0
+764	95	bits-matching-n04-b16384-qramp-funit	1	Standard	measured	1
+765	95	bits-matching-n04-b16384-qramp-funit	1	Accelerated	measured	1
+766	95	bits-matching-n04-b16384-qramp-funit	2	Accelerated	measured	2
+767	95	bits-matching-n04-b16384-qramp-funit	2	Standard	measured	2
+768	96	bits-path-n04-b00001-qflat-fdegree	-1	Accelerated	warmup	0
+769	96	bits-path-n04-b00001-qflat-fdegree	-1	Standard	warmup	0
+770	96	bits-path-n04-b00001-qflat-fdegree	0	Standard	measured	0
+771	96	bits-path-n04-b00001-qflat-fdegree	0	Accelerated	measured	0
+772	96	bits-path-n04-b00001-qflat-fdegree	1	Accelerated	measured	1
+773	96	bits-path-n04-b00001-qflat-fdegree	1	Standard	measured	1
+774	96	bits-path-n04-b00001-qflat-fdegree	2	Standard	measured	2
+775	96	bits-path-n04-b00001-qflat-fdegree	2	Accelerated	measured	2
+776	97	bits-path-n04-b00001-qflat-funit	-1	Standard	warmup	0
+777	97	bits-path-n04-b00001-qflat-funit	-1	Accelerated	warmup	0
+778	97	bits-path-n04-b00001-qflat-funit	0	Accelerated	measured	0
+779	97	bits-path-n04-b00001-qflat-funit	0	Standard	measured	0
+780	97	bits-path-n04-b00001-qflat-funit	1	Standard	measured	1
+781	97	bits-path-n04-b00001-qflat-funit	1	Accelerated	measured	1
+782	97	bits-path-n04-b00001-qflat-funit	2	Accelerated	measured	2
+783	97	bits-path-n04-b00001-qflat-funit	2	Standard	measured	2
+784	98	bits-path-n04-b00001-qramp-fdegree	-1	Accelerated	warmup	0
+785	98	bits-path-n04-b00001-qramp-fdegree	-1	Standard	warmup	0
+786	98	bits-path-n04-b00001-qramp-fdegree	0	Standard	measured	0
+787	98	bits-path-n04-b00001-qramp-fdegree	0	Accelerated	measured	0
+788	98	bits-path-n04-b00001-qramp-fdegree	1	Accelerated	measured	1
+789	98	bits-path-n04-b00001-qramp-fdegree	1	Standard	measured	1
+790	98	bits-path-n04-b00001-qramp-fdegree	2	Standard	measured	2
+791	98	bits-path-n04-b00001-qramp-fdegree	2	Accelerated	measured	2
+792	99	bits-path-n04-b00001-qramp-funit	-1	Standard	warmup	0
+793	99	bits-path-n04-b00001-qramp-funit	-1	Accelerated	warmup	0
+794	99	bits-path-n04-b00001-qramp-funit	0	Accelerated	measured	0
+795	99	bits-path-n04-b00001-qramp-funit	0	Standard	measured	0
+796	99	bits-path-n04-b00001-qramp-funit	1	Standard	measured	1
+797	99	bits-path-n04-b00001-qramp-funit	1	Accelerated	measured	1
+798	99	bits-path-n04-b00001-qramp-funit	2	Accelerated	measured	2
+799	99	bits-path-n04-b00001-qramp-funit	2	Standard	measured	2
+800	100	bits-path-n04-b00008-qflat-fdegree	-1	Accelerated	warmup	0
+801	100	bits-path-n04-b00008-qflat-fdegree	-1	Standard	warmup	0
+802	100	bits-path-n04-b00008-qflat-fdegree	0	Standard	measured	0
+803	100	bits-path-n04-b00008-qflat-fdegree	0	Accelerated	measured	0
+804	100	bits-path-n04-b00008-qflat-fdegree	1	Accelerated	measured	1
+805	100	bits-path-n04-b00008-qflat-fdegree	1	Standard	measured	1
+806	100	bits-path-n04-b00008-qflat-fdegree	2	Standard	measured	2
+807	100	bits-path-n04-b00008-qflat-fdegree	2	Accelerated	measured	2
+808	101	bits-path-n04-b00008-qflat-funit	-1	Standard	warmup	0
+809	101	bits-path-n04-b00008-qflat-funit	-1	Accelerated	warmup	0
+810	101	bits-path-n04-b00008-qflat-funit	0	Accelerated	measured	0
+811	101	bits-path-n04-b00008-qflat-funit	0	Standard	measured	0
+812	101	bits-path-n04-b00008-qflat-funit	1	Standard	measured	1
+813	101	bits-path-n04-b00008-qflat-funit	1	Accelerated	measured	1
+814	101	bits-path-n04-b00008-qflat-funit	2	Accelerated	measured	2
+815	101	bits-path-n04-b00008-qflat-funit	2	Standard	measured	2
+816	102	bits-path-n04-b00008-qramp-fdegree	-1	Accelerated	warmup	0
+817	102	bits-path-n04-b00008-qramp-fdegree	-1	Standard	warmup	0
+818	102	bits-path-n04-b00008-qramp-fdegree	0	Standard	measured	0
+819	102	bits-path-n04-b00008-qramp-fdegree	0	Accelerated	measured	0
+820	102	bits-path-n04-b00008-qramp-fdegree	1	Accelerated	measured	1
+821	102	bits-path-n04-b00008-qramp-fdegree	1	Standard	measured	1
+822	102	bits-path-n04-b00008-qramp-fdegree	2	Standard	measured	2
+823	102	bits-path-n04-b00008-qramp-fdegree	2	Accelerated	measured	2
+824	103	bits-path-n04-b00008-qramp-funit	-1	Standard	warmup	0
+825	103	bits-path-n04-b00008-qramp-funit	-1	Accelerated	warmup	0
+826	103	bits-path-n04-b00008-qramp-funit	0	Accelerated	measured	0
+827	103	bits-path-n04-b00008-qramp-funit	0	Standard	measured	0
+828	103	bits-path-n04-b00008-qramp-funit	1	Standard	measured	1
+829	103	bits-path-n04-b00008-qramp-funit	1	Accelerated	measured	1
+830	103	bits-path-n04-b00008-qramp-funit	2	Accelerated	measured	2
+831	103	bits-path-n04-b00008-qramp-funit	2	Standard	measured	2
+832	104	bits-path-n04-b00064-qflat-fdegree	-1	Accelerated	warmup	0
+833	104	bits-path-n04-b00064-qflat-fdegree	-1	Standard	warmup	0
+834	104	bits-path-n04-b00064-qflat-fdegree	0	Standard	measured	0
+835	104	bits-path-n04-b00064-qflat-fdegree	0	Accelerated	measured	0
+836	104	bits-path-n04-b00064-qflat-fdegree	1	Accelerated	measured	1
+837	104	bits-path-n04-b00064-qflat-fdegree	1	Standard	measured	1
+838	104	bits-path-n04-b00064-qflat-fdegree	2	Standard	measured	2
+839	104	bits-path-n04-b00064-qflat-fdegree	2	Accelerated	measured	2
+840	105	bits-path-n04-b00064-qflat-funit	-1	Standard	warmup	0
+841	105	bits-path-n04-b00064-qflat-funit	-1	Accelerated	warmup	0
+842	105	bits-path-n04-b00064-qflat-funit	0	Accelerated	measured	0
+843	105	bits-path-n04-b00064-qflat-funit	0	Standard	measured	0
+844	105	bits-path-n04-b00064-qflat-funit	1	Standard	measured	1
+845	105	bits-path-n04-b00064-qflat-funit	1	Accelerated	measured	1
+846	105	bits-path-n04-b00064-qflat-funit	2	Accelerated	measured	2
+847	105	bits-path-n04-b00064-qflat-funit	2	Standard	measured	2
+848	106	bits-path-n04-b00064-qramp-fdegree	-1	Accelerated	warmup	0
+849	106	bits-path-n04-b00064-qramp-fdegree	-1	Standard	warmup	0
+850	106	bits-path-n04-b00064-qramp-fdegree	0	Standard	measured	0
+851	106	bits-path-n04-b00064-qramp-fdegree	0	Accelerated	measured	0
+852	106	bits-path-n04-b00064-qramp-fdegree	1	Accelerated	measured	1
+853	106	bits-path-n04-b00064-qramp-fdegree	1	Standard	measured	1
+854	106	bits-path-n04-b00064-qramp-fdegree	2	Standard	measured	2
+855	106	bits-path-n04-b00064-qramp-fdegree	2	Accelerated	measured	2
+856	107	bits-path-n04-b00064-qramp-funit	-1	Standard	warmup	0
+857	107	bits-path-n04-b00064-qramp-funit	-1	Accelerated	warmup	0
+858	107	bits-path-n04-b00064-qramp-funit	0	Accelerated	measured	0
+859	107	bits-path-n04-b00064-qramp-funit	0	Standard	measured	0
+860	107	bits-path-n04-b00064-qramp-funit	1	Standard	measured	1
+861	107	bits-path-n04-b00064-qramp-funit	1	Accelerated	measured	1
+862	107	bits-path-n04-b00064-qramp-funit	2	Accelerated	measured	2
+863	107	bits-path-n04-b00064-qramp-funit	2	Standard	measured	2
+864	108	bits-path-n04-b00256-qflat-fdegree	-1	Accelerated	warmup	0
+865	108	bits-path-n04-b00256-qflat-fdegree	-1	Standard	warmup	0
+866	108	bits-path-n04-b00256-qflat-fdegree	0	Standard	measured	0
+867	108	bits-path-n04-b00256-qflat-fdegree	0	Accelerated	measured	0
+868	108	bits-path-n04-b00256-qflat-fdegree	1	Accelerated	measured	1
+869	108	bits-path-n04-b00256-qflat-fdegree	1	Standard	measured	1
+870	108	bits-path-n04-b00256-qflat-fdegree	2	Standard	measured	2
+871	108	bits-path-n04-b00256-qflat-fdegree	2	Accelerated	measured	2
+872	109	bits-path-n04-b00256-qflat-funit	-1	Standard	warmup	0
+873	109	bits-path-n04-b00256-qflat-funit	-1	Accelerated	warmup	0
+874	109	bits-path-n04-b00256-qflat-funit	0	Accelerated	measured	0
+875	109	bits-path-n04-b00256-qflat-funit	0	Standard	measured	0
+876	109	bits-path-n04-b00256-qflat-funit	1	Standard	measured	1
+877	109	bits-path-n04-b00256-qflat-funit	1	Accelerated	measured	1
+878	109	bits-path-n04-b00256-qflat-funit	2	Accelerated	measured	2
+879	109	bits-path-n04-b00256-qflat-funit	2	Standard	measured	2
+880	110	bits-path-n04-b00256-qramp-fdegree	-1	Accelerated	warmup	0
+881	110	bits-path-n04-b00256-qramp-fdegree	-1	Standard	warmup	0
+882	110	bits-path-n04-b00256-qramp-fdegree	0	Standard	measured	0
+883	110	bits-path-n04-b00256-qramp-fdegree	0	Accelerated	measured	0
+884	110	bits-path-n04-b00256-qramp-fdegree	1	Accelerated	measured	1
+885	110	bits-path-n04-b00256-qramp-fdegree	1	Standard	measured	1
+886	110	bits-path-n04-b00256-qramp-fdegree	2	Standard	measured	2
+887	110	bits-path-n04-b00256-qramp-fdegree	2	Accelerated	measured	2
+888	111	bits-path-n04-b00256-qramp-funit	-1	Standard	warmup	0
+889	111	bits-path-n04-b00256-qramp-funit	-1	Accelerated	warmup	0
+890	111	bits-path-n04-b00256-qramp-funit	0	Accelerated	measured	0
+891	111	bits-path-n04-b00256-qramp-funit	0	Standard	measured	0
+892	111	bits-path-n04-b00256-qramp-funit	1	Standard	measured	1
+893	111	bits-path-n04-b00256-qramp-funit	1	Accelerated	measured	1
+894	111	bits-path-n04-b00256-qramp-funit	2	Accelerated	measured	2
+895	111	bits-path-n04-b00256-qramp-funit	2	Standard	measured	2
+896	112	bits-path-n04-b04096-qflat-fdegree	-1	Accelerated	warmup	0
+897	112	bits-path-n04-b04096-qflat-fdegree	-1	Standard	warmup	0
+898	112	bits-path-n04-b04096-qflat-fdegree	0	Standard	measured	0
+899	112	bits-path-n04-b04096-qflat-fdegree	0	Accelerated	measured	0
+900	112	bits-path-n04-b04096-qflat-fdegree	1	Accelerated	measured	1
+901	112	bits-path-n04-b04096-qflat-fdegree	1	Standard	measured	1
+902	112	bits-path-n04-b04096-qflat-fdegree	2	Standard	measured	2
+903	112	bits-path-n04-b04096-qflat-fdegree	2	Accelerated	measured	2
+904	113	bits-path-n04-b04096-qflat-funit	-1	Standard	warmup	0
+905	113	bits-path-n04-b04096-qflat-funit	-1	Accelerated	warmup	0
+906	113	bits-path-n04-b04096-qflat-funit	0	Accelerated	measured	0
+907	113	bits-path-n04-b04096-qflat-funit	0	Standard	measured	0
+908	113	bits-path-n04-b04096-qflat-funit	1	Standard	measured	1
+909	113	bits-path-n04-b04096-qflat-funit	1	Accelerated	measured	1
+910	113	bits-path-n04-b04096-qflat-funit	2	Accelerated	measured	2
+911	113	bits-path-n04-b04096-qflat-funit	2	Standard	measured	2
+912	114	bits-path-n04-b04096-qramp-fdegree	-1	Accelerated	warmup	0
+913	114	bits-path-n04-b04096-qramp-fdegree	-1	Standard	warmup	0
+914	114	bits-path-n04-b04096-qramp-fdegree	0	Standard	measured	0
+915	114	bits-path-n04-b04096-qramp-fdegree	0	Accelerated	measured	0
+916	114	bits-path-n04-b04096-qramp-fdegree	1	Accelerated	measured	1
+917	114	bits-path-n04-b04096-qramp-fdegree	1	Standard	measured	1
+918	114	bits-path-n04-b04096-qramp-fdegree	2	Standard	measured	2
+919	114	bits-path-n04-b04096-qramp-fdegree	2	Accelerated	measured	2
+920	115	bits-path-n04-b04096-qramp-funit	-1	Standard	warmup	0
+921	115	bits-path-n04-b04096-qramp-funit	-1	Accelerated	warmup	0
+922	115	bits-path-n04-b04096-qramp-funit	0	Accelerated	measured	0
+923	115	bits-path-n04-b04096-qramp-funit	0	Standard	measured	0
+924	115	bits-path-n04-b04096-qramp-funit	1	Standard	measured	1
+925	115	bits-path-n04-b04096-qramp-funit	1	Accelerated	measured	1
+926	115	bits-path-n04-b04096-qramp-funit	2	Accelerated	measured	2
+927	115	bits-path-n04-b04096-qramp-funit	2	Standard	measured	2
+928	116	bits-path-n04-b16384-qflat-fdegree	-1	Accelerated	warmup	0
+929	116	bits-path-n04-b16384-qflat-fdegree	-1	Standard	warmup	0
+930	116	bits-path-n04-b16384-qflat-fdegree	0	Standard	measured	0
+931	116	bits-path-n04-b16384-qflat-fdegree	0	Accelerated	measured	0
+932	116	bits-path-n04-b16384-qflat-fdegree	1	Accelerated	measured	1
+933	116	bits-path-n04-b16384-qflat-fdegree	1	Standard	measured	1
+934	116	bits-path-n04-b16384-qflat-fdegree	2	Standard	measured	2
+935	116	bits-path-n04-b16384-qflat-fdegree	2	Accelerated	measured	2
+936	117	bits-path-n04-b16384-qflat-funit	-1	Standard	warmup	0
+937	117	bits-path-n04-b16384-qflat-funit	-1	Accelerated	warmup	0
+938	117	bits-path-n04-b16384-qflat-funit	0	Accelerated	measured	0
+939	117	bits-path-n04-b16384-qflat-funit	0	Standard	measured	0
+940	117	bits-path-n04-b16384-qflat-funit	1	Standard	measured	1
+941	117	bits-path-n04-b16384-qflat-funit	1	Accelerated	measured	1
+942	117	bits-path-n04-b16384-qflat-funit	2	Accelerated	measured	2
+943	117	bits-path-n04-b16384-qflat-funit	2	Standard	measured	2
+944	118	bits-path-n04-b16384-qramp-fdegree	-1	Accelerated	warmup	0
+945	118	bits-path-n04-b16384-qramp-fdegree	-1	Standard	warmup	0
+946	118	bits-path-n04-b16384-qramp-fdegree	0	Standard	measured	0
+947	118	bits-path-n04-b16384-qramp-fdegree	0	Accelerated	measured	0
+948	118	bits-path-n04-b16384-qramp-fdegree	1	Accelerated	measured	1
+949	118	bits-path-n04-b16384-qramp-fdegree	1	Standard	measured	1
+950	118	bits-path-n04-b16384-qramp-fdegree	2	Standard	measured	2
+951	118	bits-path-n04-b16384-qramp-fdegree	2	Accelerated	measured	2
+952	119	bits-path-n04-b16384-qramp-funit	-1	Standard	warmup	0
+953	119	bits-path-n04-b16384-qramp-funit	-1	Accelerated	warmup	0
+954	119	bits-path-n04-b16384-qramp-funit	0	Accelerated	measured	0
+955	119	bits-path-n04-b16384-qramp-funit	0	Standard	measured	0
+956	119	bits-path-n04-b16384-qramp-funit	1	Standard	measured	1
+957	119	bits-path-n04-b16384-qramp-funit	1	Accelerated	measured	1
+958	119	bits-path-n04-b16384-qramp-funit	2	Accelerated	measured	2
+959	119	bits-path-n04-b16384-qramp-funit	2	Standard	measured	2
+960	120	edge-q01-f01-01	-1	Accelerated	warmup	0
+961	120	edge-q01-f01-01	-1	Standard	warmup	0
+962	120	edge-q01-f01-01	0	Standard	measured	0
+963	120	edge-q01-f01-01	0	Accelerated	measured	0
+964	120	edge-q01-f01-01	1	Accelerated	measured	1
+965	120	edge-q01-f01-01	1	Standard	measured	1
+966	120	edge-q01-f01-01	2	Standard	measured	2
+967	120	edge-q01-f01-01	2	Accelerated	measured	2
+968	121	edge-q02-f01-01	-1	Standard	warmup	0
+969	121	edge-q02-f01-01	-1	Accelerated	warmup	0
+970	121	edge-q02-f01-01	0	Accelerated	measured	0
+971	121	edge-q02-f01-01	0	Standard	measured	0
+972	121	edge-q02-f01-01	1	Standard	measured	1
+973	121	edge-q02-f01-01	1	Accelerated	measured	1
+974	121	edge-q02-f01-01	2	Accelerated	measured	2
+975	121	edge-q02-f01-01	2	Standard	measured	2
+976	122	edge-q02-f01-02	-1	Accelerated	warmup	0
+977	122	edge-q02-f01-02	-1	Standard	warmup	0
+978	122	edge-q02-f01-02	0	Standard	measured	0
+979	122	edge-q02-f01-02	0	Accelerated	measured	0
+980	122	edge-q02-f01-02	1	Accelerated	measured	1
+981	122	edge-q02-f01-02	1	Standard	measured	1
+982	122	edge-q02-f01-02	2	Standard	measured	2
+983	122	edge-q02-f01-02	2	Accelerated	measured	2
+984	123	edge-q02-f02-01	-1	Standard	warmup	0
+985	123	edge-q02-f02-01	-1	Accelerated	warmup	0
+986	123	edge-q02-f02-01	0	Accelerated	measured	0
+987	123	edge-q02-f02-01	0	Standard	measured	0
+988	123	edge-q02-f02-01	1	Standard	measured	1
+989	123	edge-q02-f02-01	1	Accelerated	measured	1
+990	123	edge-q02-f02-01	2	Accelerated	measured	2
+991	123	edge-q02-f02-01	2	Standard	measured	2
+992	124	edge-q02-f02-02	-1	Accelerated	warmup	0
+993	124	edge-q02-f02-02	-1	Standard	warmup	0
+994	124	edge-q02-f02-02	0	Standard	measured	0
+995	124	edge-q02-f02-02	0	Accelerated	measured	0
+996	124	edge-q02-f02-02	1	Accelerated	measured	1
+997	124	edge-q02-f02-02	1	Standard	measured	1
+998	124	edge-q02-f02-02	2	Standard	measured	2
+999	124	edge-q02-f02-02	2	Accelerated	measured	2
+1000	125	edge-q03-f01-01	-1	Standard	warmup	0
+1001	125	edge-q03-f01-01	-1	Accelerated	warmup	0
+1002	125	edge-q03-f01-01	0	Accelerated	measured	0
+1003	125	edge-q03-f01-01	0	Standard	measured	0
+1004	125	edge-q03-f01-01	1	Standard	measured	1
+1005	125	edge-q03-f01-01	1	Accelerated	measured	1
+1006	125	edge-q03-f01-01	2	Accelerated	measured	2
+1007	125	edge-q03-f01-01	2	Standard	measured	2
+1008	126	edge-q03-f01-02	-1	Accelerated	warmup	0
+1009	126	edge-q03-f01-02	-1	Standard	warmup	0
+1010	126	edge-q03-f01-02	0	Standard	measured	0
+1011	126	edge-q03-f01-02	0	Accelerated	measured	0
+1012	126	edge-q03-f01-02	1	Accelerated	measured	1
+1013	126	edge-q03-f01-02	1	Standard	measured	1
+1014	126	edge-q03-f01-02	2	Standard	measured	2
+1015	126	edge-q03-f01-02	2	Accelerated	measured	2
+1016	127	edge-q03-f01-03	-1	Standard	warmup	0
+1017	127	edge-q03-f01-03	-1	Accelerated	warmup	0
+1018	127	edge-q03-f01-03	0	Accelerated	measured	0
+1019	127	edge-q03-f01-03	0	Standard	measured	0
+1020	127	edge-q03-f01-03	1	Standard	measured	1
+1021	127	edge-q03-f01-03	1	Accelerated	measured	1
+1022	127	edge-q03-f01-03	2	Accelerated	measured	2
+1023	127	edge-q03-f01-03	2	Standard	measured	2
+1024	128	edge-q03-f02-01	-1	Accelerated	warmup	0
+1025	128	edge-q03-f02-01	-1	Standard	warmup	0
+1026	128	edge-q03-f02-01	0	Standard	measured	0
+1027	128	edge-q03-f02-01	0	Accelerated	measured	0
+1028	128	edge-q03-f02-01	1	Accelerated	measured	1
+1029	128	edge-q03-f02-01	1	Standard	measured	1
+1030	128	edge-q03-f02-01	2	Standard	measured	2
+1031	128	edge-q03-f02-01	2	Accelerated	measured	2
+1032	129	edge-q03-f02-02	-1	Standard	warmup	0
+1033	129	edge-q03-f02-02	-1	Accelerated	warmup	0
+1034	129	edge-q03-f02-02	0	Accelerated	measured	0
+1035	129	edge-q03-f02-02	0	Standard	measured	0
+1036	129	edge-q03-f02-02	1	Standard	measured	1
+1037	129	edge-q03-f02-02	1	Accelerated	measured	1
+1038	129	edge-q03-f02-02	2	Accelerated	measured	2
+1039	129	edge-q03-f02-02	2	Standard	measured	2
+1040	130	edge-q03-f02-03	-1	Accelerated	warmup	0
+1041	130	edge-q03-f02-03	-1	Standard	warmup	0
+1042	130	edge-q03-f02-03	0	Standard	measured	0
+1043	130	edge-q03-f02-03	0	Accelerated	measured	0
+1044	130	edge-q03-f02-03	1	Accelerated	measured	1
+1045	130	edge-q03-f02-03	1	Standard	measured	1
+1046	130	edge-q03-f02-03	2	Standard	measured	2
+1047	130	edge-q03-f02-03	2	Accelerated	measured	2
+1048	131	edge-q03-f03-01	-1	Standard	warmup	0
+1049	131	edge-q03-f03-01	-1	Accelerated	warmup	0
+1050	131	edge-q03-f03-01	0	Accelerated	measured	0
+1051	131	edge-q03-f03-01	0	Standard	measured	0
+1052	131	edge-q03-f03-01	1	Standard	measured	1
+1053	131	edge-q03-f03-01	1	Accelerated	measured	1
+1054	131	edge-q03-f03-01	2	Accelerated	measured	2
+1055	131	edge-q03-f03-01	2	Standard	measured	2
+1056	132	edge-q03-f03-02	-1	Accelerated	warmup	0
+1057	132	edge-q03-f03-02	-1	Standard	warmup	0
+1058	132	edge-q03-f03-02	0	Standard	measured	0
+1059	132	edge-q03-f03-02	0	Accelerated	measured	0
+1060	132	edge-q03-f03-02	1	Accelerated	measured	1
+1061	132	edge-q03-f03-02	1	Standard	measured	1
+1062	132	edge-q03-f03-02	2	Standard	measured	2
+1063	132	edge-q03-f03-02	2	Accelerated	measured	2
+1064	133	edge-q03-f03-03	-1	Standard	warmup	0
+1065	133	edge-q03-f03-03	-1	Accelerated	warmup	0
+1066	133	edge-q03-f03-03	0	Accelerated	measured	0
+1067	133	edge-q03-f03-03	0	Standard	measured	0
+1068	133	edge-q03-f03-03	1	Standard	measured	1
+1069	133	edge-q03-f03-03	1	Accelerated	measured	1
+1070	133	edge-q03-f03-03	2	Accelerated	measured	2
+1071	133	edge-q03-f03-03	2	Standard	measured	2
+1072	134	edge-q04-f01-01	-1	Accelerated	warmup	0
+1073	134	edge-q04-f01-01	-1	Standard	warmup	0
+1074	134	edge-q04-f01-01	0	Standard	measured	0
+1075	134	edge-q04-f01-01	0	Accelerated	measured	0
+1076	134	edge-q04-f01-01	1	Accelerated	measured	1
+1077	134	edge-q04-f01-01	1	Standard	measured	1
+1078	134	edge-q04-f01-01	2	Standard	measured	2
+1079	134	edge-q04-f01-01	2	Accelerated	measured	2
+1080	135	edge-q04-f01-02	-1	Standard	warmup	0
+1081	135	edge-q04-f01-02	-1	Accelerated	warmup	0
+1082	135	edge-q04-f01-02	0	Accelerated	measured	0
+1083	135	edge-q04-f01-02	0	Standard	measured	0
+1084	135	edge-q04-f01-02	1	Standard	measured	1
+1085	135	edge-q04-f01-02	1	Accelerated	measured	1
+1086	135	edge-q04-f01-02	2	Accelerated	measured	2
+1087	135	edge-q04-f01-02	2	Standard	measured	2
+1088	136	edge-q04-f01-03	-1	Accelerated	warmup	0
+1089	136	edge-q04-f01-03	-1	Standard	warmup	0
+1090	136	edge-q04-f01-03	0	Standard	measured	0
+1091	136	edge-q04-f01-03	0	Accelerated	measured	0
+1092	136	edge-q04-f01-03	1	Accelerated	measured	1
+1093	136	edge-q04-f01-03	1	Standard	measured	1
+1094	136	edge-q04-f01-03	2	Standard	measured	2
+1095	136	edge-q04-f01-03	2	Accelerated	measured	2
+1096	137	edge-q04-f01-04	-1	Standard	warmup	0
+1097	137	edge-q04-f01-04	-1	Accelerated	warmup	0
+1098	137	edge-q04-f01-04	0	Accelerated	measured	0
+1099	137	edge-q04-f01-04	0	Standard	measured	0
+1100	137	edge-q04-f01-04	1	Standard	measured	1
+1101	137	edge-q04-f01-04	1	Accelerated	measured	1
+1102	137	edge-q04-f01-04	2	Accelerated	measured	2
+1103	137	edge-q04-f01-04	2	Standard	measured	2
+1104	138	edge-q04-f02-01	-1	Accelerated	warmup	0
+1105	138	edge-q04-f02-01	-1	Standard	warmup	0
+1106	138	edge-q04-f02-01	0	Standard	measured	0
+1107	138	edge-q04-f02-01	0	Accelerated	measured	0
+1108	138	edge-q04-f02-01	1	Accelerated	measured	1
+1109	138	edge-q04-f02-01	1	Standard	measured	1
+1110	138	edge-q04-f02-01	2	Standard	measured	2
+1111	138	edge-q04-f02-01	2	Accelerated	measured	2
+1112	139	edge-q04-f02-02	-1	Standard	warmup	0
+1113	139	edge-q04-f02-02	-1	Accelerated	warmup	0
+1114	139	edge-q04-f02-02	0	Accelerated	measured	0
+1115	139	edge-q04-f02-02	0	Standard	measured	0
+1116	139	edge-q04-f02-02	1	Standard	measured	1
+1117	139	edge-q04-f02-02	1	Accelerated	measured	1
+1118	139	edge-q04-f02-02	2	Accelerated	measured	2
+1119	139	edge-q04-f02-02	2	Standard	measured	2
+1120	140	edge-q04-f02-03	-1	Accelerated	warmup	0
+1121	140	edge-q04-f02-03	-1	Standard	warmup	0
+1122	140	edge-q04-f02-03	0	Standard	measured	0
+1123	140	edge-q04-f02-03	0	Accelerated	measured	0
+1124	140	edge-q04-f02-03	1	Accelerated	measured	1
+1125	140	edge-q04-f02-03	1	Standard	measured	1
+1126	140	edge-q04-f02-03	2	Standard	measured	2
+1127	140	edge-q04-f02-03	2	Accelerated	measured	2
+1128	141	edge-q04-f02-04	-1	Standard	warmup	0
+1129	141	edge-q04-f02-04	-1	Accelerated	warmup	0
+1130	141	edge-q04-f02-04	0	Accelerated	measured	0
+1131	141	edge-q04-f02-04	0	Standard	measured	0
+1132	141	edge-q04-f02-04	1	Standard	measured	1
+1133	141	edge-q04-f02-04	1	Accelerated	measured	1
+1134	141	edge-q04-f02-04	2	Accelerated	measured	2
+1135	141	edge-q04-f02-04	2	Standard	measured	2
+1136	142	edge-q04-f03-01	-1	Accelerated	warmup	0
+1137	142	edge-q04-f03-01	-1	Standard	warmup	0
+1138	142	edge-q04-f03-01	0	Standard	measured	0
+1139	142	edge-q04-f03-01	0	Accelerated	measured	0
+1140	142	edge-q04-f03-01	1	Accelerated	measured	1
+1141	142	edge-q04-f03-01	1	Standard	measured	1
+1142	142	edge-q04-f03-01	2	Standard	measured	2
+1143	142	edge-q04-f03-01	2	Accelerated	measured	2
+1144	143	edge-q04-f03-02	-1	Standard	warmup	0
+1145	143	edge-q04-f03-02	-1	Accelerated	warmup	0
+1146	143	edge-q04-f03-02	0	Accelerated	measured	0
+1147	143	edge-q04-f03-02	0	Standard	measured	0
+1148	143	edge-q04-f03-02	1	Standard	measured	1
+1149	143	edge-q04-f03-02	1	Accelerated	measured	1
+1150	143	edge-q04-f03-02	2	Accelerated	measured	2
+1151	143	edge-q04-f03-02	2	Standard	measured	2
+1152	144	edge-q04-f03-03	-1	Accelerated	warmup	0
+1153	144	edge-q04-f03-03	-1	Standard	warmup	0
+1154	144	edge-q04-f03-03	0	Standard	measured	0
+1155	144	edge-q04-f03-03	0	Accelerated	measured	0
+1156	144	edge-q04-f03-03	1	Accelerated	measured	1
+1157	144	edge-q04-f03-03	1	Standard	measured	1
+1158	144	edge-q04-f03-03	2	Standard	measured	2
+1159	144	edge-q04-f03-03	2	Accelerated	measured	2
+1160	145	edge-q04-f03-04	-1	Standard	warmup	0
+1161	145	edge-q04-f03-04	-1	Accelerated	warmup	0
+1162	145	edge-q04-f03-04	0	Accelerated	measured	0
+1163	145	edge-q04-f03-04	0	Standard	measured	0
+1164	145	edge-q04-f03-04	1	Standard	measured	1
+1165	145	edge-q04-f03-04	1	Accelerated	measured	1
+1166	145	edge-q04-f03-04	2	Accelerated	measured	2
+1167	145	edge-q04-f03-04	2	Standard	measured	2
+1168	146	edge-q04-f04-01	-1	Accelerated	warmup	0
+1169	146	edge-q04-f04-01	-1	Standard	warmup	0
+1170	146	edge-q04-f04-01	0	Standard	measured	0
+1171	146	edge-q04-f04-01	0	Accelerated	measured	0
+1172	146	edge-q04-f04-01	1	Accelerated	measured	1
+1173	146	edge-q04-f04-01	1	Standard	measured	1
+1174	146	edge-q04-f04-01	2	Standard	measured	2
+1175	146	edge-q04-f04-01	2	Accelerated	measured	2
+1176	147	edge-q04-f04-02	-1	Standard	warmup	0
+1177	147	edge-q04-f04-02	-1	Accelerated	warmup	0
+1178	147	edge-q04-f04-02	0	Accelerated	measured	0
+1179	147	edge-q04-f04-02	0	Standard	measured	0
+1180	147	edge-q04-f04-02	1	Standard	measured	1
+1181	147	edge-q04-f04-02	1	Accelerated	measured	1
+1182	147	edge-q04-f04-02	2	Accelerated	measured	2
+1183	147	edge-q04-f04-02	2	Standard	measured	2
+1184	148	edge-q04-f04-03	-1	Accelerated	warmup	0
+1185	148	edge-q04-f04-03	-1	Standard	warmup	0
+1186	148	edge-q04-f04-03	0	Standard	measured	0
+1187	148	edge-q04-f04-03	0	Accelerated	measured	0
+1188	148	edge-q04-f04-03	1	Accelerated	measured	1
+1189	148	edge-q04-f04-03	1	Standard	measured	1
+1190	148	edge-q04-f04-03	2	Standard	measured	2
+1191	148	edge-q04-f04-03	2	Accelerated	measured	2
+1192	149	edge-q04-f04-04	-1	Standard	warmup	0
+1193	149	edge-q04-f04-04	-1	Accelerated	warmup	0
+1194	149	edge-q04-f04-04	0	Accelerated	measured	0
+1195	149	edge-q04-f04-04	0	Standard	measured	0
+1196	149	edge-q04-f04-04	1	Standard	measured	1
+1197	149	edge-q04-f04-04	1	Accelerated	measured	1
+1198	149	edge-q04-f04-04	2	Accelerated	measured	2
+1199	149	edge-q04-f04-04	2	Standard	measured	2
+1200	150	edge-q05-f01-01	-1	Accelerated	warmup	0
+1201	150	edge-q05-f01-01	-1	Standard	warmup	0
+1202	150	edge-q05-f01-01	0	Standard	measured	0
+1203	150	edge-q05-f01-01	0	Accelerated	measured	0
+1204	150	edge-q05-f01-01	1	Accelerated	measured	1
+1205	150	edge-q05-f01-01	1	Standard	measured	1
+1206	150	edge-q05-f01-01	2	Standard	measured	2
+1207	150	edge-q05-f01-01	2	Accelerated	measured	2
+1208	151	edge-q05-f01-02	-1	Standard	warmup	0
+1209	151	edge-q05-f01-02	-1	Accelerated	warmup	0
+1210	151	edge-q05-f01-02	0	Accelerated	measured	0
+1211	151	edge-q05-f01-02	0	Standard	measured	0
+1212	151	edge-q05-f01-02	1	Standard	measured	1
+1213	151	edge-q05-f01-02	1	Accelerated	measured	1
+1214	151	edge-q05-f01-02	2	Accelerated	measured	2
+1215	151	edge-q05-f01-02	2	Standard	measured	2
+1216	152	edge-q05-f01-03	-1	Accelerated	warmup	0
+1217	152	edge-q05-f01-03	-1	Standard	warmup	0
+1218	152	edge-q05-f01-03	0	Standard	measured	0
+1219	152	edge-q05-f01-03	0	Accelerated	measured	0
+1220	152	edge-q05-f01-03	1	Accelerated	measured	1
+1221	152	edge-q05-f01-03	1	Standard	measured	1
+1222	152	edge-q05-f01-03	2	Standard	measured	2
+1223	152	edge-q05-f01-03	2	Accelerated	measured	2
+1224	153	edge-q05-f01-04	-1	Standard	warmup	0
+1225	153	edge-q05-f01-04	-1	Accelerated	warmup	0
+1226	153	edge-q05-f01-04	0	Accelerated	measured	0
+1227	153	edge-q05-f01-04	0	Standard	measured	0
+1228	153	edge-q05-f01-04	1	Standard	measured	1
+1229	153	edge-q05-f01-04	1	Accelerated	measured	1
+1230	153	edge-q05-f01-04	2	Accelerated	measured	2
+1231	153	edge-q05-f01-04	2	Standard	measured	2
+1232	154	edge-q05-f01-05	-1	Accelerated	warmup	0
+1233	154	edge-q05-f01-05	-1	Standard	warmup	0
+1234	154	edge-q05-f01-05	0	Standard	measured	0
+1235	154	edge-q05-f01-05	0	Accelerated	measured	0
+1236	154	edge-q05-f01-05	1	Accelerated	measured	1
+1237	154	edge-q05-f01-05	1	Standard	measured	1
+1238	154	edge-q05-f01-05	2	Standard	measured	2
+1239	154	edge-q05-f01-05	2	Accelerated	measured	2
+1240	155	edge-q05-f02-01	-1	Standard	warmup	0
+1241	155	edge-q05-f02-01	-1	Accelerated	warmup	0
+1242	155	edge-q05-f02-01	0	Accelerated	measured	0
+1243	155	edge-q05-f02-01	0	Standard	measured	0
+1244	155	edge-q05-f02-01	1	Standard	measured	1
+1245	155	edge-q05-f02-01	1	Accelerated	measured	1
+1246	155	edge-q05-f02-01	2	Accelerated	measured	2
+1247	155	edge-q05-f02-01	2	Standard	measured	2
+1248	156	edge-q05-f02-02	-1	Accelerated	warmup	0
+1249	156	edge-q05-f02-02	-1	Standard	warmup	0
+1250	156	edge-q05-f02-02	0	Standard	measured	0
+1251	156	edge-q05-f02-02	0	Accelerated	measured	0
+1252	156	edge-q05-f02-02	1	Accelerated	measured	1
+1253	156	edge-q05-f02-02	1	Standard	measured	1
+1254	156	edge-q05-f02-02	2	Standard	measured	2
+1255	156	edge-q05-f02-02	2	Accelerated	measured	2
+1256	157	edge-q05-f02-03	-1	Standard	warmup	0
+1257	157	edge-q05-f02-03	-1	Accelerated	warmup	0
+1258	157	edge-q05-f02-03	0	Accelerated	measured	0
+1259	157	edge-q05-f02-03	0	Standard	measured	0
+1260	157	edge-q05-f02-03	1	Standard	measured	1
+1261	157	edge-q05-f02-03	1	Accelerated	measured	1
+1262	157	edge-q05-f02-03	2	Accelerated	measured	2
+1263	157	edge-q05-f02-03	2	Standard	measured	2
+1264	158	edge-q05-f02-04	-1	Accelerated	warmup	0
+1265	158	edge-q05-f02-04	-1	Standard	warmup	0
+1266	158	edge-q05-f02-04	0	Standard	measured	0
+1267	158	edge-q05-f02-04	0	Accelerated	measured	0
+1268	158	edge-q05-f02-04	1	Accelerated	measured	1
+1269	158	edge-q05-f02-04	1	Standard	measured	1
+1270	158	edge-q05-f02-04	2	Standard	measured	2
+1271	158	edge-q05-f02-04	2	Accelerated	measured	2
+1272	159	edge-q05-f02-05	-1	Standard	warmup	0
+1273	159	edge-q05-f02-05	-1	Accelerated	warmup	0
+1274	159	edge-q05-f02-05	0	Accelerated	measured	0
+1275	159	edge-q05-f02-05	0	Standard	measured	0
+1276	159	edge-q05-f02-05	1	Standard	measured	1
+1277	159	edge-q05-f02-05	1	Accelerated	measured	1
+1278	159	edge-q05-f02-05	2	Accelerated	measured	2
+1279	159	edge-q05-f02-05	2	Standard	measured	2
+1280	160	edge-q05-f03-01	-1	Accelerated	warmup	0
+1281	160	edge-q05-f03-01	-1	Standard	warmup	0
+1282	160	edge-q05-f03-01	0	Standard	measured	0
+1283	160	edge-q05-f03-01	0	Accelerated	measured	0
+1284	160	edge-q05-f03-01	1	Accelerated	measured	1
+1285	160	edge-q05-f03-01	1	Standard	measured	1
+1286	160	edge-q05-f03-01	2	Standard	measured	2
+1287	160	edge-q05-f03-01	2	Accelerated	measured	2
+1288	161	edge-q05-f03-02	-1	Standard	warmup	0
+1289	161	edge-q05-f03-02	-1	Accelerated	warmup	0
+1290	161	edge-q05-f03-02	0	Accelerated	measured	0
+1291	161	edge-q05-f03-02	0	Standard	measured	0
+1292	161	edge-q05-f03-02	1	Standard	measured	1
+1293	161	edge-q05-f03-02	1	Accelerated	measured	1
+1294	161	edge-q05-f03-02	2	Accelerated	measured	2
+1295	161	edge-q05-f03-02	2	Standard	measured	2
+1296	162	edge-q05-f03-03	-1	Accelerated	warmup	0
+1297	162	edge-q05-f03-03	-1	Standard	warmup	0
+1298	162	edge-q05-f03-03	0	Standard	measured	0
+1299	162	edge-q05-f03-03	0	Accelerated	measured	0
+1300	162	edge-q05-f03-03	1	Accelerated	measured	1
+1301	162	edge-q05-f03-03	1	Standard	measured	1
+1302	162	edge-q05-f03-03	2	Standard	measured	2
+1303	162	edge-q05-f03-03	2	Accelerated	measured	2
+1304	163	edge-q05-f03-04	-1	Standard	warmup	0
+1305	163	edge-q05-f03-04	-1	Accelerated	warmup	0
+1306	163	edge-q05-f03-04	0	Accelerated	measured	0
+1307	163	edge-q05-f03-04	0	Standard	measured	0
+1308	163	edge-q05-f03-04	1	Standard	measured	1
+1309	163	edge-q05-f03-04	1	Accelerated	measured	1
+1310	163	edge-q05-f03-04	2	Accelerated	measured	2
+1311	163	edge-q05-f03-04	2	Standard	measured	2
+1312	164	edge-q05-f03-05	-1	Accelerated	warmup	0
+1313	164	edge-q05-f03-05	-1	Standard	warmup	0
+1314	164	edge-q05-f03-05	0	Standard	measured	0
+1315	164	edge-q05-f03-05	0	Accelerated	measured	0
+1316	164	edge-q05-f03-05	1	Accelerated	measured	1
+1317	164	edge-q05-f03-05	1	Standard	measured	1
+1318	164	edge-q05-f03-05	2	Standard	measured	2
+1319	164	edge-q05-f03-05	2	Accelerated	measured	2
+1320	165	edge-q05-f04-01	-1	Standard	warmup	0
+1321	165	edge-q05-f04-01	-1	Accelerated	warmup	0
+1322	165	edge-q05-f04-01	0	Accelerated	measured	0
+1323	165	edge-q05-f04-01	0	Standard	measured	0
+1324	165	edge-q05-f04-01	1	Standard	measured	1
+1325	165	edge-q05-f04-01	1	Accelerated	measured	1
+1326	165	edge-q05-f04-01	2	Accelerated	measured	2
+1327	165	edge-q05-f04-01	2	Standard	measured	2
+1328	166	edge-q05-f04-02	-1	Accelerated	warmup	0
+1329	166	edge-q05-f04-02	-1	Standard	warmup	0
+1330	166	edge-q05-f04-02	0	Standard	measured	0
+1331	166	edge-q05-f04-02	0	Accelerated	measured	0
+1332	166	edge-q05-f04-02	1	Accelerated	measured	1
+1333	166	edge-q05-f04-02	1	Standard	measured	1
+1334	166	edge-q05-f04-02	2	Standard	measured	2
+1335	166	edge-q05-f04-02	2	Accelerated	measured	2
+1336	167	edge-q05-f04-03	-1	Standard	warmup	0
+1337	167	edge-q05-f04-03	-1	Accelerated	warmup	0
+1338	167	edge-q05-f04-03	0	Accelerated	measured	0
+1339	167	edge-q05-f04-03	0	Standard	measured	0
+1340	167	edge-q05-f04-03	1	Standard	measured	1
+1341	167	edge-q05-f04-03	1	Accelerated	measured	1
+1342	167	edge-q05-f04-03	2	Accelerated	measured	2
+1343	167	edge-q05-f04-03	2	Standard	measured	2
+1344	168	edge-q05-f04-04	-1	Accelerated	warmup	0
+1345	168	edge-q05-f04-04	-1	Standard	warmup	0
+1346	168	edge-q05-f04-04	0	Standard	measured	0
+1347	168	edge-q05-f04-04	0	Accelerated	measured	0
+1348	168	edge-q05-f04-04	1	Accelerated	measured	1
+1349	168	edge-q05-f04-04	1	Standard	measured	1
+1350	168	edge-q05-f04-04	2	Standard	measured	2
+1351	168	edge-q05-f04-04	2	Accelerated	measured	2
+1352	169	edge-q05-f04-05	-1	Standard	warmup	0
+1353	169	edge-q05-f04-05	-1	Accelerated	warmup	0
+1354	169	edge-q05-f04-05	0	Accelerated	measured	0
+1355	169	edge-q05-f04-05	0	Standard	measured	0
+1356	169	edge-q05-f04-05	1	Standard	measured	1
+1357	169	edge-q05-f04-05	1	Accelerated	measured	1
+1358	169	edge-q05-f04-05	2	Accelerated	measured	2
+1359	169	edge-q05-f04-05	2	Standard	measured	2
+1360	170	edge-q05-f05-01	-1	Accelerated	warmup	0
+1361	170	edge-q05-f05-01	-1	Standard	warmup	0
+1362	170	edge-q05-f05-01	0	Standard	measured	0
+1363	170	edge-q05-f05-01	0	Accelerated	measured	0
+1364	170	edge-q05-f05-01	1	Accelerated	measured	1
+1365	170	edge-q05-f05-01	1	Standard	measured	1
+1366	170	edge-q05-f05-01	2	Standard	measured	2
+1367	170	edge-q05-f05-01	2	Accelerated	measured	2
+1368	171	edge-q05-f05-02	-1	Standard	warmup	0
+1369	171	edge-q05-f05-02	-1	Accelerated	warmup	0
+1370	171	edge-q05-f05-02	0	Accelerated	measured	0
+1371	171	edge-q05-f05-02	0	Standard	measured	0
+1372	171	edge-q05-f05-02	1	Standard	measured	1
+1373	171	edge-q05-f05-02	1	Accelerated	measured	1
+1374	171	edge-q05-f05-02	2	Accelerated	measured	2
+1375	171	edge-q05-f05-02	2	Standard	measured	2
+1376	172	edge-q05-f05-03	-1	Accelerated	warmup	0
+1377	172	edge-q05-f05-03	-1	Standard	warmup	0
+1378	172	edge-q05-f05-03	0	Standard	measured	0
+1379	172	edge-q05-f05-03	0	Accelerated	measured	0
+1380	172	edge-q05-f05-03	1	Accelerated	measured	1
+1381	172	edge-q05-f05-03	1	Standard	measured	1
+1382	172	edge-q05-f05-03	2	Standard	measured	2
+1383	172	edge-q05-f05-03	2	Accelerated	measured	2
+1384	173	edge-q05-f05-04	-1	Standard	warmup	0
+1385	173	edge-q05-f05-04	-1	Accelerated	warmup	0
+1386	173	edge-q05-f05-04	0	Accelerated	measured	0
+1387	173	edge-q05-f05-04	0	Standard	measured	0
+1388	173	edge-q05-f05-04	1	Standard	measured	1
+1389	173	edge-q05-f05-04	1	Accelerated	measured	1
+1390	173	edge-q05-f05-04	2	Accelerated	measured	2
+1391	173	edge-q05-f05-04	2	Standard	measured	2
+1392	174	edge-q05-f05-05	-1	Accelerated	warmup	0
+1393	174	edge-q05-f05-05	-1	Standard	warmup	0
+1394	174	edge-q05-f05-05	0	Standard	measured	0
+1395	174	edge-q05-f05-05	0	Accelerated	measured	0
+1396	174	edge-q05-f05-05	1	Accelerated	measured	1
+1397	174	edge-q05-f05-05	1	Standard	measured	1
+1398	174	edge-q05-f05-05	2	Standard	measured	2
+1399	174	edge-q05-f05-05	2	Accelerated	measured	2
+1400	175	seeded-n04-b00001-falternating-s01	-1	Standard	warmup	0
+1401	175	seeded-n04-b00001-falternating-s01	-1	Accelerated	warmup	0
+1402	175	seeded-n04-b00001-falternating-s01	0	Accelerated	measured	0
+1403	175	seeded-n04-b00001-falternating-s01	0	Standard	measured	0
+1404	175	seeded-n04-b00001-falternating-s01	1	Standard	measured	1
+1405	175	seeded-n04-b00001-falternating-s01	1	Accelerated	measured	1
+1406	175	seeded-n04-b00001-falternating-s01	2	Accelerated	measured	2
+1407	175	seeded-n04-b00001-falternating-s01	2	Standard	measured	2
+1408	176	seeded-n04-b00001-falternating-s73	-1	Accelerated	warmup	0
+1409	176	seeded-n04-b00001-falternating-s73	-1	Standard	warmup	0
+1410	176	seeded-n04-b00001-falternating-s73	0	Standard	measured	0
+1411	176	seeded-n04-b00001-falternating-s73	0	Accelerated	measured	0
+1412	176	seeded-n04-b00001-falternating-s73	1	Accelerated	measured	1
+1413	176	seeded-n04-b00001-falternating-s73	1	Standard	measured	1
+1414	176	seeded-n04-b00001-falternating-s73	2	Standard	measured	2
+1415	176	seeded-n04-b00001-falternating-s73	2	Accelerated	measured	2
+1416	177	seeded-n04-b00001-fhalf-s01	-1	Standard	warmup	0
+1417	177	seeded-n04-b00001-fhalf-s01	-1	Accelerated	warmup	0
+1418	177	seeded-n04-b00001-fhalf-s01	0	Accelerated	measured	0
+1419	177	seeded-n04-b00001-fhalf-s01	0	Standard	measured	0
+1420	177	seeded-n04-b00001-fhalf-s01	1	Standard	measured	1
+1421	177	seeded-n04-b00001-fhalf-s01	1	Accelerated	measured	1
+1422	177	seeded-n04-b00001-fhalf-s01	2	Accelerated	measured	2
+1423	177	seeded-n04-b00001-fhalf-s01	2	Standard	measured	2
+1424	178	seeded-n04-b00001-fhalf-s73	-1	Accelerated	warmup	0
+1425	178	seeded-n04-b00001-fhalf-s73	-1	Standard	warmup	0
+1426	178	seeded-n04-b00001-fhalf-s73	0	Standard	measured	0
+1427	178	seeded-n04-b00001-fhalf-s73	0	Accelerated	measured	0
+1428	178	seeded-n04-b00001-fhalf-s73	1	Accelerated	measured	1
+1429	178	seeded-n04-b00001-fhalf-s73	1	Standard	measured	1
+1430	178	seeded-n04-b00001-fhalf-s73	2	Standard	measured	2
+1431	178	seeded-n04-b00001-fhalf-s73	2	Accelerated	measured	2
+1432	179	seeded-n04-b00008-falternating-s01	-1	Standard	warmup	0
+1433	179	seeded-n04-b00008-falternating-s01	-1	Accelerated	warmup	0
+1434	179	seeded-n04-b00008-falternating-s01	0	Accelerated	measured	0
+1435	179	seeded-n04-b00008-falternating-s01	0	Standard	measured	0
+1436	179	seeded-n04-b00008-falternating-s01	1	Standard	measured	1
+1437	179	seeded-n04-b00008-falternating-s01	1	Accelerated	measured	1
+1438	179	seeded-n04-b00008-falternating-s01	2	Accelerated	measured	2
+1439	179	seeded-n04-b00008-falternating-s01	2	Standard	measured	2
+1440	180	seeded-n04-b00008-falternating-s73	-1	Accelerated	warmup	0
+1441	180	seeded-n04-b00008-falternating-s73	-1	Standard	warmup	0
+1442	180	seeded-n04-b00008-falternating-s73	0	Standard	measured	0
+1443	180	seeded-n04-b00008-falternating-s73	0	Accelerated	measured	0
+1444	180	seeded-n04-b00008-falternating-s73	1	Accelerated	measured	1
+1445	180	seeded-n04-b00008-falternating-s73	1	Standard	measured	1
+1446	180	seeded-n04-b00008-falternating-s73	2	Standard	measured	2
+1447	180	seeded-n04-b00008-falternating-s73	2	Accelerated	measured	2
+1448	181	seeded-n04-b00008-fhalf-s01	-1	Standard	warmup	0
+1449	181	seeded-n04-b00008-fhalf-s01	-1	Accelerated	warmup	0
+1450	181	seeded-n04-b00008-fhalf-s01	0	Accelerated	measured	0
+1451	181	seeded-n04-b00008-fhalf-s01	0	Standard	measured	0
+1452	181	seeded-n04-b00008-fhalf-s01	1	Standard	measured	1
+1453	181	seeded-n04-b00008-fhalf-s01	1	Accelerated	measured	1
+1454	181	seeded-n04-b00008-fhalf-s01	2	Accelerated	measured	2
+1455	181	seeded-n04-b00008-fhalf-s01	2	Standard	measured	2
+1456	182	seeded-n04-b00008-fhalf-s73	-1	Accelerated	warmup	0
+1457	182	seeded-n04-b00008-fhalf-s73	-1	Standard	warmup	0
+1458	182	seeded-n04-b00008-fhalf-s73	0	Standard	measured	0
+1459	182	seeded-n04-b00008-fhalf-s73	0	Accelerated	measured	0
+1460	182	seeded-n04-b00008-fhalf-s73	1	Accelerated	measured	1
+1461	182	seeded-n04-b00008-fhalf-s73	1	Standard	measured	1
+1462	182	seeded-n04-b00008-fhalf-s73	2	Standard	measured	2
+1463	182	seeded-n04-b00008-fhalf-s73	2	Accelerated	measured	2
+1464	183	seeded-n04-b00064-falternating-s01	-1	Standard	warmup	0
+1465	183	seeded-n04-b00064-falternating-s01	-1	Accelerated	warmup	0
+1466	183	seeded-n04-b00064-falternating-s01	0	Accelerated	measured	0
+1467	183	seeded-n04-b00064-falternating-s01	0	Standard	measured	0
+1468	183	seeded-n04-b00064-falternating-s01	1	Standard	measured	1
+1469	183	seeded-n04-b00064-falternating-s01	1	Accelerated	measured	1
+1470	183	seeded-n04-b00064-falternating-s01	2	Accelerated	measured	2
+1471	183	seeded-n04-b00064-falternating-s01	2	Standard	measured	2
+1472	184	seeded-n04-b00064-falternating-s73	-1	Accelerated	warmup	0
+1473	184	seeded-n04-b00064-falternating-s73	-1	Standard	warmup	0
+1474	184	seeded-n04-b00064-falternating-s73	0	Standard	measured	0
+1475	184	seeded-n04-b00064-falternating-s73	0	Accelerated	measured	0
+1476	184	seeded-n04-b00064-falternating-s73	1	Accelerated	measured	1
+1477	184	seeded-n04-b00064-falternating-s73	1	Standard	measured	1
+1478	184	seeded-n04-b00064-falternating-s73	2	Standard	measured	2
+1479	184	seeded-n04-b00064-falternating-s73	2	Accelerated	measured	2
+1480	185	seeded-n04-b00064-fhalf-s01	-1	Standard	warmup	0
+1481	185	seeded-n04-b00064-fhalf-s01	-1	Accelerated	warmup	0
+1482	185	seeded-n04-b00064-fhalf-s01	0	Accelerated	measured	0
+1483	185	seeded-n04-b00064-fhalf-s01	0	Standard	measured	0
+1484	185	seeded-n04-b00064-fhalf-s01	1	Standard	measured	1
+1485	185	seeded-n04-b00064-fhalf-s01	1	Accelerated	measured	1
+1486	185	seeded-n04-b00064-fhalf-s01	2	Accelerated	measured	2
+1487	185	seeded-n04-b00064-fhalf-s01	2	Standard	measured	2
+1488	186	seeded-n04-b00064-fhalf-s73	-1	Accelerated	warmup	0
+1489	186	seeded-n04-b00064-fhalf-s73	-1	Standard	warmup	0
+1490	186	seeded-n04-b00064-fhalf-s73	0	Standard	measured	0
+1491	186	seeded-n04-b00064-fhalf-s73	0	Accelerated	measured	0
+1492	186	seeded-n04-b00064-fhalf-s73	1	Accelerated	measured	1
+1493	186	seeded-n04-b00064-fhalf-s73	1	Standard	measured	1
+1494	186	seeded-n04-b00064-fhalf-s73	2	Standard	measured	2
+1495	186	seeded-n04-b00064-fhalf-s73	2	Accelerated	measured	2
+1496	187	seeded-n06-b00001-falternating-s01	-1	Standard	warmup	0
+1497	187	seeded-n06-b00001-falternating-s01	-1	Accelerated	warmup	0
+1498	187	seeded-n06-b00001-falternating-s01	0	Accelerated	measured	0
+1499	187	seeded-n06-b00001-falternating-s01	0	Standard	measured	0
+1500	187	seeded-n06-b00001-falternating-s01	1	Standard	measured	1
+1501	187	seeded-n06-b00001-falternating-s01	1	Accelerated	measured	1
+1502	187	seeded-n06-b00001-falternating-s01	2	Accelerated	measured	2
+1503	187	seeded-n06-b00001-falternating-s01	2	Standard	measured	2
+1504	188	seeded-n06-b00001-falternating-s73	-1	Accelerated	warmup	0
+1505	188	seeded-n06-b00001-falternating-s73	-1	Standard	warmup	0
+1506	188	seeded-n06-b00001-falternating-s73	0	Standard	measured	0
+1507	188	seeded-n06-b00001-falternating-s73	0	Accelerated	measured	0
+1508	188	seeded-n06-b00001-falternating-s73	1	Accelerated	measured	1
+1509	188	seeded-n06-b00001-falternating-s73	1	Standard	measured	1
+1510	188	seeded-n06-b00001-falternating-s73	2	Standard	measured	2
+1511	188	seeded-n06-b00001-falternating-s73	2	Accelerated	measured	2
+1512	189	seeded-n06-b00001-fhalf-s01	-1	Standard	warmup	0
+1513	189	seeded-n06-b00001-fhalf-s01	-1	Accelerated	warmup	0
+1514	189	seeded-n06-b00001-fhalf-s01	0	Accelerated	measured	0
+1515	189	seeded-n06-b00001-fhalf-s01	0	Standard	measured	0
+1516	189	seeded-n06-b00001-fhalf-s01	1	Standard	measured	1
+1517	189	seeded-n06-b00001-fhalf-s01	1	Accelerated	measured	1
+1518	189	seeded-n06-b00001-fhalf-s01	2	Accelerated	measured	2
+1519	189	seeded-n06-b00001-fhalf-s01	2	Standard	measured	2
+1520	190	seeded-n06-b00001-fhalf-s73	-1	Accelerated	warmup	0
+1521	190	seeded-n06-b00001-fhalf-s73	-1	Standard	warmup	0
+1522	190	seeded-n06-b00001-fhalf-s73	0	Standard	measured	0
+1523	190	seeded-n06-b00001-fhalf-s73	0	Accelerated	measured	0
+1524	190	seeded-n06-b00001-fhalf-s73	1	Accelerated	measured	1
+1525	190	seeded-n06-b00001-fhalf-s73	1	Standard	measured	1
+1526	190	seeded-n06-b00001-fhalf-s73	2	Standard	measured	2
+1527	190	seeded-n06-b00001-fhalf-s73	2	Accelerated	measured	2
+1528	191	seeded-n06-b00008-falternating-s01	-1	Standard	warmup	0
+1529	191	seeded-n06-b00008-falternating-s01	-1	Accelerated	warmup	0
+1530	191	seeded-n06-b00008-falternating-s01	0	Accelerated	measured	0
+1531	191	seeded-n06-b00008-falternating-s01	0	Standard	measured	0
+1532	191	seeded-n06-b00008-falternating-s01	1	Standard	measured	1
+1533	191	seeded-n06-b00008-falternating-s01	1	Accelerated	measured	1
+1534	191	seeded-n06-b00008-falternating-s01	2	Accelerated	measured	2
+1535	191	seeded-n06-b00008-falternating-s01	2	Standard	measured	2
+1536	192	seeded-n06-b00008-falternating-s73	-1	Accelerated	warmup	0
+1537	192	seeded-n06-b00008-falternating-s73	-1	Standard	warmup	0
+1538	192	seeded-n06-b00008-falternating-s73	0	Standard	measured	0
+1539	192	seeded-n06-b00008-falternating-s73	0	Accelerated	measured	0
+1540	192	seeded-n06-b00008-falternating-s73	1	Accelerated	measured	1
+1541	192	seeded-n06-b00008-falternating-s73	1	Standard	measured	1
+1542	192	seeded-n06-b00008-falternating-s73	2	Standard	measured	2
+1543	192	seeded-n06-b00008-falternating-s73	2	Accelerated	measured	2
+1544	193	seeded-n06-b00008-fhalf-s01	-1	Standard	warmup	0
+1545	193	seeded-n06-b00008-fhalf-s01	-1	Accelerated	warmup	0
+1546	193	seeded-n06-b00008-fhalf-s01	0	Accelerated	measured	0
+1547	193	seeded-n06-b00008-fhalf-s01	0	Standard	measured	0
+1548	193	seeded-n06-b00008-fhalf-s01	1	Standard	measured	1
+1549	193	seeded-n06-b00008-fhalf-s01	1	Accelerated	measured	1
+1550	193	seeded-n06-b00008-fhalf-s01	2	Accelerated	measured	2
+1551	193	seeded-n06-b00008-fhalf-s01	2	Standard	measured	2
+1552	194	seeded-n06-b00008-fhalf-s73	-1	Accelerated	warmup	0
+1553	194	seeded-n06-b00008-fhalf-s73	-1	Standard	warmup	0
+1554	194	seeded-n06-b00008-fhalf-s73	0	Standard	measured	0
+1555	194	seeded-n06-b00008-fhalf-s73	0	Accelerated	measured	0
+1556	194	seeded-n06-b00008-fhalf-s73	1	Accelerated	measured	1
+1557	194	seeded-n06-b00008-fhalf-s73	1	Standard	measured	1
+1558	194	seeded-n06-b00008-fhalf-s73	2	Standard	measured	2
+1559	194	seeded-n06-b00008-fhalf-s73	2	Accelerated	measured	2
+1560	195	seeded-n06-b00064-falternating-s01	-1	Standard	warmup	0
+1561	195	seeded-n06-b00064-falternating-s01	-1	Accelerated	warmup	0
+1562	195	seeded-n06-b00064-falternating-s01	0	Accelerated	measured	0
+1563	195	seeded-n06-b00064-falternating-s01	0	Standard	measured	0
+1564	195	seeded-n06-b00064-falternating-s01	1	Standard	measured	1
+1565	195	seeded-n06-b00064-falternating-s01	1	Accelerated	measured	1
+1566	195	seeded-n06-b00064-falternating-s01	2	Accelerated	measured	2
+1567	195	seeded-n06-b00064-falternating-s01	2	Standard	measured	2
+1568	196	seeded-n06-b00064-falternating-s73	-1	Accelerated	warmup	0
+1569	196	seeded-n06-b00064-falternating-s73	-1	Standard	warmup	0
+1570	196	seeded-n06-b00064-falternating-s73	0	Standard	measured	0
+1571	196	seeded-n06-b00064-falternating-s73	0	Accelerated	measured	0
+1572	196	seeded-n06-b00064-falternating-s73	1	Accelerated	measured	1
+1573	196	seeded-n06-b00064-falternating-s73	1	Standard	measured	1
+1574	196	seeded-n06-b00064-falternating-s73	2	Standard	measured	2
+1575	196	seeded-n06-b00064-falternating-s73	2	Accelerated	measured	2
+1576	197	seeded-n06-b00064-fhalf-s01	-1	Standard	warmup	0
+1577	197	seeded-n06-b00064-fhalf-s01	-1	Accelerated	warmup	0
+1578	197	seeded-n06-b00064-fhalf-s01	0	Accelerated	measured	0
+1579	197	seeded-n06-b00064-fhalf-s01	0	Standard	measured	0
+1580	197	seeded-n06-b00064-fhalf-s01	1	Standard	measured	1
+1581	197	seeded-n06-b00064-fhalf-s01	1	Accelerated	measured	1
+1582	197	seeded-n06-b00064-fhalf-s01	2	Accelerated	measured	2
+1583	197	seeded-n06-b00064-fhalf-s01	2	Standard	measured	2
+1584	198	seeded-n06-b00064-fhalf-s73	-1	Accelerated	warmup	0
+1585	198	seeded-n06-b00064-fhalf-s73	-1	Standard	warmup	0
+1586	198	seeded-n06-b00064-fhalf-s73	0	Standard	measured	0
+1587	198	seeded-n06-b00064-fhalf-s73	0	Accelerated	measured	0
+1588	198	seeded-n06-b00064-fhalf-s73	1	Accelerated	measured	1
+1589	198	seeded-n06-b00064-fhalf-s73	1	Standard	measured	1
+1590	198	seeded-n06-b00064-fhalf-s73	2	Standard	measured	2
+1591	198	seeded-n06-b00064-fhalf-s73	2	Accelerated	measured	2
+1592	199	seeded-n08-b00001-falternating-s01	-1	Standard	warmup	0
+1593	199	seeded-n08-b00001-falternating-s01	-1	Accelerated	warmup	0
+1594	199	seeded-n08-b00001-falternating-s01	0	Accelerated	measured	0
+1595	199	seeded-n08-b00001-falternating-s01	0	Standard	measured	0
+1596	199	seeded-n08-b00001-falternating-s01	1	Standard	measured	1
+1597	199	seeded-n08-b00001-falternating-s01	1	Accelerated	measured	1
+1598	199	seeded-n08-b00001-falternating-s01	2	Accelerated	measured	2
+1599	199	seeded-n08-b00001-falternating-s01	2	Standard	measured	2
+1600	200	seeded-n08-b00001-falternating-s73	-1	Accelerated	warmup	0
+1601	200	seeded-n08-b00001-falternating-s73	-1	Standard	warmup	0
+1602	200	seeded-n08-b00001-falternating-s73	0	Standard	measured	0
+1603	200	seeded-n08-b00001-falternating-s73	0	Accelerated	measured	0
+1604	200	seeded-n08-b00001-falternating-s73	1	Accelerated	measured	1
+1605	200	seeded-n08-b00001-falternating-s73	1	Standard	measured	1
+1606	200	seeded-n08-b00001-falternating-s73	2	Standard	measured	2
+1607	200	seeded-n08-b00001-falternating-s73	2	Accelerated	measured	2
+1608	201	seeded-n08-b00001-fhalf-s01	-1	Standard	warmup	0
+1609	201	seeded-n08-b00001-fhalf-s01	-1	Accelerated	warmup	0
+1610	201	seeded-n08-b00001-fhalf-s01	0	Accelerated	measured	0
+1611	201	seeded-n08-b00001-fhalf-s01	0	Standard	measured	0
+1612	201	seeded-n08-b00001-fhalf-s01	1	Standard	measured	1
+1613	201	seeded-n08-b00001-fhalf-s01	1	Accelerated	measured	1
+1614	201	seeded-n08-b00001-fhalf-s01	2	Accelerated	measured	2
+1615	201	seeded-n08-b00001-fhalf-s01	2	Standard	measured	2
+1616	202	seeded-n08-b00001-fhalf-s73	-1	Accelerated	warmup	0
+1617	202	seeded-n08-b00001-fhalf-s73	-1	Standard	warmup	0
+1618	202	seeded-n08-b00001-fhalf-s73	0	Standard	measured	0
+1619	202	seeded-n08-b00001-fhalf-s73	0	Accelerated	measured	0
+1620	202	seeded-n08-b00001-fhalf-s73	1	Accelerated	measured	1
+1621	202	seeded-n08-b00001-fhalf-s73	1	Standard	measured	1
+1622	202	seeded-n08-b00001-fhalf-s73	2	Standard	measured	2
+1623	202	seeded-n08-b00001-fhalf-s73	2	Accelerated	measured	2
+1624	203	seeded-n08-b00008-falternating-s01	-1	Standard	warmup	0
+1625	203	seeded-n08-b00008-falternating-s01	-1	Accelerated	warmup	0
+1626	203	seeded-n08-b00008-falternating-s01	0	Accelerated	measured	0
+1627	203	seeded-n08-b00008-falternating-s01	0	Standard	measured	0
+1628	203	seeded-n08-b00008-falternating-s01	1	Standard	measured	1
+1629	203	seeded-n08-b00008-falternating-s01	1	Accelerated	measured	1
+1630	203	seeded-n08-b00008-falternating-s01	2	Accelerated	measured	2
+1631	203	seeded-n08-b00008-falternating-s01	2	Standard	measured	2
+1632	204	seeded-n08-b00008-falternating-s73	-1	Accelerated	warmup	0
+1633	204	seeded-n08-b00008-falternating-s73	-1	Standard	warmup	0
+1634	204	seeded-n08-b00008-falternating-s73	0	Standard	measured	0
+1635	204	seeded-n08-b00008-falternating-s73	0	Accelerated	measured	0
+1636	204	seeded-n08-b00008-falternating-s73	1	Accelerated	measured	1
+1637	204	seeded-n08-b00008-falternating-s73	1	Standard	measured	1
+1638	204	seeded-n08-b00008-falternating-s73	2	Standard	measured	2
+1639	204	seeded-n08-b00008-falternating-s73	2	Accelerated	measured	2
+1640	205	seeded-n08-b00008-fhalf-s01	-1	Standard	warmup	0
+1641	205	seeded-n08-b00008-fhalf-s01	-1	Accelerated	warmup	0
+1642	205	seeded-n08-b00008-fhalf-s01	0	Accelerated	measured	0
+1643	205	seeded-n08-b00008-fhalf-s01	0	Standard	measured	0
+1644	205	seeded-n08-b00008-fhalf-s01	1	Standard	measured	1
+1645	205	seeded-n08-b00008-fhalf-s01	1	Accelerated	measured	1
+1646	205	seeded-n08-b00008-fhalf-s01	2	Accelerated	measured	2
+1647	205	seeded-n08-b00008-fhalf-s01	2	Standard	measured	2
+1648	206	seeded-n08-b00008-fhalf-s73	-1	Accelerated	warmup	0
+1649	206	seeded-n08-b00008-fhalf-s73	-1	Standard	warmup	0
+1650	206	seeded-n08-b00008-fhalf-s73	0	Standard	measured	0
+1651	206	seeded-n08-b00008-fhalf-s73	0	Accelerated	measured	0
+1652	206	seeded-n08-b00008-fhalf-s73	1	Accelerated	measured	1
+1653	206	seeded-n08-b00008-fhalf-s73	1	Standard	measured	1
+1654	206	seeded-n08-b00008-fhalf-s73	2	Standard	measured	2
+1655	206	seeded-n08-b00008-fhalf-s73	2	Accelerated	measured	2
+1656	207	seeded-n08-b00064-falternating-s01	-1	Standard	warmup	0
+1657	207	seeded-n08-b00064-falternating-s01	-1	Accelerated	warmup	0
+1658	207	seeded-n08-b00064-falternating-s01	0	Accelerated	measured	0
+1659	207	seeded-n08-b00064-falternating-s01	0	Standard	measured	0
+1660	207	seeded-n08-b00064-falternating-s01	1	Standard	measured	1
+1661	207	seeded-n08-b00064-falternating-s01	1	Accelerated	measured	1
+1662	207	seeded-n08-b00064-falternating-s01	2	Accelerated	measured	2
+1663	207	seeded-n08-b00064-falternating-s01	2	Standard	measured	2
+1664	208	seeded-n08-b00064-falternating-s73	-1	Accelerated	warmup	0
+1665	208	seeded-n08-b00064-falternating-s73	-1	Standard	warmup	0
+1666	208	seeded-n08-b00064-falternating-s73	0	Standard	measured	0
+1667	208	seeded-n08-b00064-falternating-s73	0	Accelerated	measured	0
+1668	208	seeded-n08-b00064-falternating-s73	1	Accelerated	measured	1
+1669	208	seeded-n08-b00064-falternating-s73	1	Standard	measured	1
+1670	208	seeded-n08-b00064-falternating-s73	2	Standard	measured	2
+1671	208	seeded-n08-b00064-falternating-s73	2	Accelerated	measured	2
+1672	209	seeded-n08-b00064-fhalf-s01	-1	Standard	warmup	0
+1673	209	seeded-n08-b00064-fhalf-s01	-1	Accelerated	warmup	0
+1674	209	seeded-n08-b00064-fhalf-s01	0	Accelerated	measured	0
+1675	209	seeded-n08-b00064-fhalf-s01	0	Standard	measured	0
+1676	209	seeded-n08-b00064-fhalf-s01	1	Standard	measured	1
+1677	209	seeded-n08-b00064-fhalf-s01	1	Accelerated	measured	1
+1678	209	seeded-n08-b00064-fhalf-s01	2	Accelerated	measured	2
+1679	209	seeded-n08-b00064-fhalf-s01	2	Standard	measured	2
+1680	210	seeded-n08-b00064-fhalf-s73	-1	Accelerated	warmup	0
+1681	210	seeded-n08-b00064-fhalf-s73	-1	Standard	warmup	0
+1682	210	seeded-n08-b00064-fhalf-s73	0	Standard	measured	0
+1683	210	seeded-n08-b00064-fhalf-s73	0	Accelerated	measured	0
+1684	210	seeded-n08-b00064-fhalf-s73	1	Accelerated	measured	1
+1685	210	seeded-n08-b00064-fhalf-s73	1	Standard	measured	1
+1686	210	seeded-n08-b00064-fhalf-s73	2	Standard	measured	2
+1687	210	seeded-n08-b00064-fhalf-s73	2	Accelerated	measured	2
+1688	211	struct-bipartite-n04-b00001-fdegree	-1	Standard	warmup	0
+1689	211	struct-bipartite-n04-b00001-fdegree	-1	Accelerated	warmup	0
+1690	211	struct-bipartite-n04-b00001-fdegree	0	Accelerated	measured	0
+1691	211	struct-bipartite-n04-b00001-fdegree	0	Standard	measured	0
+1692	211	struct-bipartite-n04-b00001-fdegree	1	Standard	measured	1
+1693	211	struct-bipartite-n04-b00001-fdegree	1	Accelerated	measured	1
+1694	211	struct-bipartite-n04-b00001-fdegree	2	Accelerated	measured	2
+1695	211	struct-bipartite-n04-b00001-fdegree	2	Standard	measured	2
+1696	212	struct-bipartite-n04-b00001-fhalf	-1	Accelerated	warmup	0
+1697	212	struct-bipartite-n04-b00001-fhalf	-1	Standard	warmup	0
+1698	212	struct-bipartite-n04-b00001-fhalf	0	Standard	measured	0
+1699	212	struct-bipartite-n04-b00001-fhalf	0	Accelerated	measured	0
+1700	212	struct-bipartite-n04-b00001-fhalf	1	Accelerated	measured	1
+1701	212	struct-bipartite-n04-b00001-fhalf	1	Standard	measured	1
+1702	212	struct-bipartite-n04-b00001-fhalf	2	Standard	measured	2
+1703	212	struct-bipartite-n04-b00001-fhalf	2	Accelerated	measured	2
+1704	213	struct-bipartite-n04-b00001-fnear	-1	Standard	warmup	0
+1705	213	struct-bipartite-n04-b00001-fnear	-1	Accelerated	warmup	0
+1706	213	struct-bipartite-n04-b00001-fnear	0	Accelerated	measured	0
+1707	213	struct-bipartite-n04-b00001-fnear	0	Standard	measured	0
+1708	213	struct-bipartite-n04-b00001-fnear	1	Standard	measured	1
+1709	213	struct-bipartite-n04-b00001-fnear	1	Accelerated	measured	1
+1710	213	struct-bipartite-n04-b00001-fnear	2	Accelerated	measured	2
+1711	213	struct-bipartite-n04-b00001-fnear	2	Standard	measured	2
+1712	214	struct-bipartite-n04-b00001-funit	-1	Accelerated	warmup	0
+1713	214	struct-bipartite-n04-b00001-funit	-1	Standard	warmup	0
+1714	214	struct-bipartite-n04-b00001-funit	0	Standard	measured	0
+1715	214	struct-bipartite-n04-b00001-funit	0	Accelerated	measured	0
+1716	214	struct-bipartite-n04-b00001-funit	1	Accelerated	measured	1
+1717	214	struct-bipartite-n04-b00001-funit	1	Standard	measured	1
+1718	214	struct-bipartite-n04-b00001-funit	2	Standard	measured	2
+1719	214	struct-bipartite-n04-b00001-funit	2	Accelerated	measured	2
+1720	215	struct-bipartite-n04-b00008-fdegree	-1	Standard	warmup	0
+1721	215	struct-bipartite-n04-b00008-fdegree	-1	Accelerated	warmup	0
+1722	215	struct-bipartite-n04-b00008-fdegree	0	Accelerated	measured	0
+1723	215	struct-bipartite-n04-b00008-fdegree	0	Standard	measured	0
+1724	215	struct-bipartite-n04-b00008-fdegree	1	Standard	measured	1
+1725	215	struct-bipartite-n04-b00008-fdegree	1	Accelerated	measured	1
+1726	215	struct-bipartite-n04-b00008-fdegree	2	Accelerated	measured	2
+1727	215	struct-bipartite-n04-b00008-fdegree	2	Standard	measured	2
+1728	216	struct-bipartite-n04-b00008-fhalf	-1	Accelerated	warmup	0
+1729	216	struct-bipartite-n04-b00008-fhalf	-1	Standard	warmup	0
+1730	216	struct-bipartite-n04-b00008-fhalf	0	Standard	measured	0
+1731	216	struct-bipartite-n04-b00008-fhalf	0	Accelerated	measured	0
+1732	216	struct-bipartite-n04-b00008-fhalf	1	Accelerated	measured	1
+1733	216	struct-bipartite-n04-b00008-fhalf	1	Standard	measured	1
+1734	216	struct-bipartite-n04-b00008-fhalf	2	Standard	measured	2
+1735	216	struct-bipartite-n04-b00008-fhalf	2	Accelerated	measured	2
+1736	217	struct-bipartite-n04-b00008-fnear	-1	Standard	warmup	0
+1737	217	struct-bipartite-n04-b00008-fnear	-1	Accelerated	warmup	0
+1738	217	struct-bipartite-n04-b00008-fnear	0	Accelerated	measured	0
+1739	217	struct-bipartite-n04-b00008-fnear	0	Standard	measured	0
+1740	217	struct-bipartite-n04-b00008-fnear	1	Standard	measured	1
+1741	217	struct-bipartite-n04-b00008-fnear	1	Accelerated	measured	1
+1742	217	struct-bipartite-n04-b00008-fnear	2	Accelerated	measured	2
+1743	217	struct-bipartite-n04-b00008-fnear	2	Standard	measured	2
+1744	218	struct-bipartite-n04-b00008-funit	-1	Accelerated	warmup	0
+1745	218	struct-bipartite-n04-b00008-funit	-1	Standard	warmup	0
+1746	218	struct-bipartite-n04-b00008-funit	0	Standard	measured	0
+1747	218	struct-bipartite-n04-b00008-funit	0	Accelerated	measured	0
+1748	218	struct-bipartite-n04-b00008-funit	1	Accelerated	measured	1
+1749	218	struct-bipartite-n04-b00008-funit	1	Standard	measured	1
+1750	218	struct-bipartite-n04-b00008-funit	2	Standard	measured	2
+1751	218	struct-bipartite-n04-b00008-funit	2	Accelerated	measured	2
+1752	219	struct-bipartite-n06-b00001-fdegree	-1	Standard	warmup	0
+1753	219	struct-bipartite-n06-b00001-fdegree	-1	Accelerated	warmup	0
+1754	219	struct-bipartite-n06-b00001-fdegree	0	Accelerated	measured	0
+1755	219	struct-bipartite-n06-b00001-fdegree	0	Standard	measured	0
+1756	219	struct-bipartite-n06-b00001-fdegree	1	Standard	measured	1
+1757	219	struct-bipartite-n06-b00001-fdegree	1	Accelerated	measured	1
+1758	219	struct-bipartite-n06-b00001-fdegree	2	Accelerated	measured	2
+1759	219	struct-bipartite-n06-b00001-fdegree	2	Standard	measured	2
+1760	220	struct-bipartite-n06-b00001-fhalf	-1	Accelerated	warmup	0
+1761	220	struct-bipartite-n06-b00001-fhalf	-1	Standard	warmup	0
+1762	220	struct-bipartite-n06-b00001-fhalf	0	Standard	measured	0
+1763	220	struct-bipartite-n06-b00001-fhalf	0	Accelerated	measured	0
+1764	220	struct-bipartite-n06-b00001-fhalf	1	Accelerated	measured	1
+1765	220	struct-bipartite-n06-b00001-fhalf	1	Standard	measured	1
+1766	220	struct-bipartite-n06-b00001-fhalf	2	Standard	measured	2
+1767	220	struct-bipartite-n06-b00001-fhalf	2	Accelerated	measured	2
+1768	221	struct-bipartite-n06-b00001-fnear	-1	Standard	warmup	0
+1769	221	struct-bipartite-n06-b00001-fnear	-1	Accelerated	warmup	0
+1770	221	struct-bipartite-n06-b00001-fnear	0	Accelerated	measured	0
+1771	221	struct-bipartite-n06-b00001-fnear	0	Standard	measured	0
+1772	221	struct-bipartite-n06-b00001-fnear	1	Standard	measured	1
+1773	221	struct-bipartite-n06-b00001-fnear	1	Accelerated	measured	1
+1774	221	struct-bipartite-n06-b00001-fnear	2	Accelerated	measured	2
+1775	221	struct-bipartite-n06-b00001-fnear	2	Standard	measured	2
+1776	222	struct-bipartite-n06-b00001-funit	-1	Accelerated	warmup	0
+1777	222	struct-bipartite-n06-b00001-funit	-1	Standard	warmup	0
+1778	222	struct-bipartite-n06-b00001-funit	0	Standard	measured	0
+1779	222	struct-bipartite-n06-b00001-funit	0	Accelerated	measured	0
+1780	222	struct-bipartite-n06-b00001-funit	1	Accelerated	measured	1
+1781	222	struct-bipartite-n06-b00001-funit	1	Standard	measured	1
+1782	222	struct-bipartite-n06-b00001-funit	2	Standard	measured	2
+1783	222	struct-bipartite-n06-b00001-funit	2	Accelerated	measured	2
+1784	223	struct-bipartite-n06-b00008-fdegree	-1	Standard	warmup	0
+1785	223	struct-bipartite-n06-b00008-fdegree	-1	Accelerated	warmup	0
+1786	223	struct-bipartite-n06-b00008-fdegree	0	Accelerated	measured	0
+1787	223	struct-bipartite-n06-b00008-fdegree	0	Standard	measured	0
+1788	223	struct-bipartite-n06-b00008-fdegree	1	Standard	measured	1
+1789	223	struct-bipartite-n06-b00008-fdegree	1	Accelerated	measured	1
+1790	223	struct-bipartite-n06-b00008-fdegree	2	Accelerated	measured	2
+1791	223	struct-bipartite-n06-b00008-fdegree	2	Standard	measured	2
+1792	224	struct-bipartite-n06-b00008-fhalf	-1	Accelerated	warmup	0
+1793	224	struct-bipartite-n06-b00008-fhalf	-1	Standard	warmup	0
+1794	224	struct-bipartite-n06-b00008-fhalf	0	Standard	measured	0
+1795	224	struct-bipartite-n06-b00008-fhalf	0	Accelerated	measured	0
+1796	224	struct-bipartite-n06-b00008-fhalf	1	Accelerated	measured	1
+1797	224	struct-bipartite-n06-b00008-fhalf	1	Standard	measured	1
+1798	224	struct-bipartite-n06-b00008-fhalf	2	Standard	measured	2
+1799	224	struct-bipartite-n06-b00008-fhalf	2	Accelerated	measured	2
+1800	225	struct-bipartite-n06-b00008-fnear	-1	Standard	warmup	0
+1801	225	struct-bipartite-n06-b00008-fnear	-1	Accelerated	warmup	0
+1802	225	struct-bipartite-n06-b00008-fnear	0	Accelerated	measured	0
+1803	225	struct-bipartite-n06-b00008-fnear	0	Standard	measured	0
+1804	225	struct-bipartite-n06-b00008-fnear	1	Standard	measured	1
+1805	225	struct-bipartite-n06-b00008-fnear	1	Accelerated	measured	1
+1806	225	struct-bipartite-n06-b00008-fnear	2	Accelerated	measured	2
+1807	225	struct-bipartite-n06-b00008-fnear	2	Standard	measured	2
+1808	226	struct-bipartite-n06-b00008-funit	-1	Accelerated	warmup	0
+1809	226	struct-bipartite-n06-b00008-funit	-1	Standard	warmup	0
+1810	226	struct-bipartite-n06-b00008-funit	0	Standard	measured	0
+1811	226	struct-bipartite-n06-b00008-funit	0	Accelerated	measured	0
+1812	226	struct-bipartite-n06-b00008-funit	1	Accelerated	measured	1
+1813	226	struct-bipartite-n06-b00008-funit	1	Standard	measured	1
+1814	226	struct-bipartite-n06-b00008-funit	2	Standard	measured	2
+1815	226	struct-bipartite-n06-b00008-funit	2	Accelerated	measured	2
+1816	227	struct-bipartite-n08-b00001-fdegree	-1	Standard	warmup	0
+1817	227	struct-bipartite-n08-b00001-fdegree	-1	Accelerated	warmup	0
+1818	227	struct-bipartite-n08-b00001-fdegree	0	Accelerated	measured	0
+1819	227	struct-bipartite-n08-b00001-fdegree	0	Standard	measured	0
+1820	227	struct-bipartite-n08-b00001-fdegree	1	Standard	measured	1
+1821	227	struct-bipartite-n08-b00001-fdegree	1	Accelerated	measured	1
+1822	227	struct-bipartite-n08-b00001-fdegree	2	Accelerated	measured	2
+1823	227	struct-bipartite-n08-b00001-fdegree	2	Standard	measured	2
+1824	228	struct-bipartite-n08-b00001-fhalf	-1	Accelerated	warmup	0
+1825	228	struct-bipartite-n08-b00001-fhalf	-1	Standard	warmup	0
+1826	228	struct-bipartite-n08-b00001-fhalf	0	Standard	measured	0
+1827	228	struct-bipartite-n08-b00001-fhalf	0	Accelerated	measured	0
+1828	228	struct-bipartite-n08-b00001-fhalf	1	Accelerated	measured	1
+1829	228	struct-bipartite-n08-b00001-fhalf	1	Standard	measured	1
+1830	228	struct-bipartite-n08-b00001-fhalf	2	Standard	measured	2
+1831	228	struct-bipartite-n08-b00001-fhalf	2	Accelerated	measured	2
+1832	229	struct-bipartite-n08-b00001-fnear	-1	Standard	warmup	0
+1833	229	struct-bipartite-n08-b00001-fnear	-1	Accelerated	warmup	0
+1834	229	struct-bipartite-n08-b00001-fnear	0	Accelerated	measured	0
+1835	229	struct-bipartite-n08-b00001-fnear	0	Standard	measured	0
+1836	229	struct-bipartite-n08-b00001-fnear	1	Standard	measured	1
+1837	229	struct-bipartite-n08-b00001-fnear	1	Accelerated	measured	1
+1838	229	struct-bipartite-n08-b00001-fnear	2	Accelerated	measured	2
+1839	229	struct-bipartite-n08-b00001-fnear	2	Standard	measured	2
+1840	230	struct-bipartite-n08-b00001-funit	-1	Accelerated	warmup	0
+1841	230	struct-bipartite-n08-b00001-funit	-1	Standard	warmup	0
+1842	230	struct-bipartite-n08-b00001-funit	0	Standard	measured	0
+1843	230	struct-bipartite-n08-b00001-funit	0	Accelerated	measured	0
+1844	230	struct-bipartite-n08-b00001-funit	1	Accelerated	measured	1
+1845	230	struct-bipartite-n08-b00001-funit	1	Standard	measured	1
+1846	230	struct-bipartite-n08-b00001-funit	2	Standard	measured	2
+1847	230	struct-bipartite-n08-b00001-funit	2	Accelerated	measured	2
+1848	231	struct-bipartite-n08-b00008-fdegree	-1	Standard	warmup	0
+1849	231	struct-bipartite-n08-b00008-fdegree	-1	Accelerated	warmup	0
+1850	231	struct-bipartite-n08-b00008-fdegree	0	Accelerated	measured	0
+1851	231	struct-bipartite-n08-b00008-fdegree	0	Standard	measured	0
+1852	231	struct-bipartite-n08-b00008-fdegree	1	Standard	measured	1
+1853	231	struct-bipartite-n08-b00008-fdegree	1	Accelerated	measured	1
+1854	231	struct-bipartite-n08-b00008-fdegree	2	Accelerated	measured	2
+1855	231	struct-bipartite-n08-b00008-fdegree	2	Standard	measured	2
+1856	232	struct-bipartite-n08-b00008-fhalf	-1	Accelerated	warmup	0
+1857	232	struct-bipartite-n08-b00008-fhalf	-1	Standard	warmup	0
+1858	232	struct-bipartite-n08-b00008-fhalf	0	Standard	measured	0
+1859	232	struct-bipartite-n08-b00008-fhalf	0	Accelerated	measured	0
+1860	232	struct-bipartite-n08-b00008-fhalf	1	Accelerated	measured	1
+1861	232	struct-bipartite-n08-b00008-fhalf	1	Standard	measured	1
+1862	232	struct-bipartite-n08-b00008-fhalf	2	Standard	measured	2
+1863	232	struct-bipartite-n08-b00008-fhalf	2	Accelerated	measured	2
+1864	233	struct-bipartite-n08-b00008-fnear	-1	Standard	warmup	0
+1865	233	struct-bipartite-n08-b00008-fnear	-1	Accelerated	warmup	0
+1866	233	struct-bipartite-n08-b00008-fnear	0	Accelerated	measured	0
+1867	233	struct-bipartite-n08-b00008-fnear	0	Standard	measured	0
+1868	233	struct-bipartite-n08-b00008-fnear	1	Standard	measured	1
+1869	233	struct-bipartite-n08-b00008-fnear	1	Accelerated	measured	1
+1870	233	struct-bipartite-n08-b00008-fnear	2	Accelerated	measured	2
+1871	233	struct-bipartite-n08-b00008-fnear	2	Standard	measured	2
+1872	234	struct-bipartite-n08-b00008-funit	-1	Accelerated	warmup	0
+1873	234	struct-bipartite-n08-b00008-funit	-1	Standard	warmup	0
+1874	234	struct-bipartite-n08-b00008-funit	0	Standard	measured	0
+1875	234	struct-bipartite-n08-b00008-funit	0	Accelerated	measured	0
+1876	234	struct-bipartite-n08-b00008-funit	1	Accelerated	measured	1
+1877	234	struct-bipartite-n08-b00008-funit	1	Standard	measured	1
+1878	234	struct-bipartite-n08-b00008-funit	2	Standard	measured	2
+1879	234	struct-bipartite-n08-b00008-funit	2	Accelerated	measured	2
+1880	235	struct-complete-n04-b00001-fdegree	-1	Standard	warmup	0
+1881	235	struct-complete-n04-b00001-fdegree	-1	Accelerated	warmup	0
+1882	235	struct-complete-n04-b00001-fdegree	0	Accelerated	measured	0
+1883	235	struct-complete-n04-b00001-fdegree	0	Standard	measured	0
+1884	235	struct-complete-n04-b00001-fdegree	1	Standard	measured	1
+1885	235	struct-complete-n04-b00001-fdegree	1	Accelerated	measured	1
+1886	235	struct-complete-n04-b00001-fdegree	2	Accelerated	measured	2
+1887	235	struct-complete-n04-b00001-fdegree	2	Standard	measured	2
+1888	236	struct-complete-n04-b00001-fhalf	-1	Accelerated	warmup	0
+1889	236	struct-complete-n04-b00001-fhalf	-1	Standard	warmup	0
+1890	236	struct-complete-n04-b00001-fhalf	0	Standard	measured	0
+1891	236	struct-complete-n04-b00001-fhalf	0	Accelerated	measured	0
+1892	236	struct-complete-n04-b00001-fhalf	1	Accelerated	measured	1
+1893	236	struct-complete-n04-b00001-fhalf	1	Standard	measured	1
+1894	236	struct-complete-n04-b00001-fhalf	2	Standard	measured	2
+1895	236	struct-complete-n04-b00001-fhalf	2	Accelerated	measured	2
+1896	237	struct-complete-n04-b00001-fnear	-1	Standard	warmup	0
+1897	237	struct-complete-n04-b00001-fnear	-1	Accelerated	warmup	0
+1898	237	struct-complete-n04-b00001-fnear	0	Accelerated	measured	0
+1899	237	struct-complete-n04-b00001-fnear	0	Standard	measured	0
+1900	237	struct-complete-n04-b00001-fnear	1	Standard	measured	1
+1901	237	struct-complete-n04-b00001-fnear	1	Accelerated	measured	1
+1902	237	struct-complete-n04-b00001-fnear	2	Accelerated	measured	2
+1903	237	struct-complete-n04-b00001-fnear	2	Standard	measured	2
+1904	238	struct-complete-n04-b00001-funit	-1	Accelerated	warmup	0
+1905	238	struct-complete-n04-b00001-funit	-1	Standard	warmup	0
+1906	238	struct-complete-n04-b00001-funit	0	Standard	measured	0
+1907	238	struct-complete-n04-b00001-funit	0	Accelerated	measured	0
+1908	238	struct-complete-n04-b00001-funit	1	Accelerated	measured	1
+1909	238	struct-complete-n04-b00001-funit	1	Standard	measured	1
+1910	238	struct-complete-n04-b00001-funit	2	Standard	measured	2
+1911	238	struct-complete-n04-b00001-funit	2	Accelerated	measured	2
+1912	239	struct-complete-n04-b00008-fdegree	-1	Standard	warmup	0
+1913	239	struct-complete-n04-b00008-fdegree	-1	Accelerated	warmup	0
+1914	239	struct-complete-n04-b00008-fdegree	0	Accelerated	measured	0
+1915	239	struct-complete-n04-b00008-fdegree	0	Standard	measured	0
+1916	239	struct-complete-n04-b00008-fdegree	1	Standard	measured	1
+1917	239	struct-complete-n04-b00008-fdegree	1	Accelerated	measured	1
+1918	239	struct-complete-n04-b00008-fdegree	2	Accelerated	measured	2
+1919	239	struct-complete-n04-b00008-fdegree	2	Standard	measured	2
+1920	240	struct-complete-n04-b00008-fhalf	-1	Accelerated	warmup	0
+1921	240	struct-complete-n04-b00008-fhalf	-1	Standard	warmup	0
+1922	240	struct-complete-n04-b00008-fhalf	0	Standard	measured	0
+1923	240	struct-complete-n04-b00008-fhalf	0	Accelerated	measured	0
+1924	240	struct-complete-n04-b00008-fhalf	1	Accelerated	measured	1
+1925	240	struct-complete-n04-b00008-fhalf	1	Standard	measured	1
+1926	240	struct-complete-n04-b00008-fhalf	2	Standard	measured	2
+1927	240	struct-complete-n04-b00008-fhalf	2	Accelerated	measured	2
+1928	241	struct-complete-n04-b00008-fnear	-1	Standard	warmup	0
+1929	241	struct-complete-n04-b00008-fnear	-1	Accelerated	warmup	0
+1930	241	struct-complete-n04-b00008-fnear	0	Accelerated	measured	0
+1931	241	struct-complete-n04-b00008-fnear	0	Standard	measured	0
+1932	241	struct-complete-n04-b00008-fnear	1	Standard	measured	1
+1933	241	struct-complete-n04-b00008-fnear	1	Accelerated	measured	1
+1934	241	struct-complete-n04-b00008-fnear	2	Accelerated	measured	2
+1935	241	struct-complete-n04-b00008-fnear	2	Standard	measured	2
+1936	242	struct-complete-n04-b00008-funit	-1	Accelerated	warmup	0
+1937	242	struct-complete-n04-b00008-funit	-1	Standard	warmup	0
+1938	242	struct-complete-n04-b00008-funit	0	Standard	measured	0
+1939	242	struct-complete-n04-b00008-funit	0	Accelerated	measured	0
+1940	242	struct-complete-n04-b00008-funit	1	Accelerated	measured	1
+1941	242	struct-complete-n04-b00008-funit	1	Standard	measured	1
+1942	242	struct-complete-n04-b00008-funit	2	Standard	measured	2
+1943	242	struct-complete-n04-b00008-funit	2	Accelerated	measured	2
+1944	243	struct-complete-n06-b00001-fdegree	-1	Standard	warmup	0
+1945	243	struct-complete-n06-b00001-fdegree	-1	Accelerated	warmup	0
+1946	243	struct-complete-n06-b00001-fdegree	0	Accelerated	measured	0
+1947	243	struct-complete-n06-b00001-fdegree	0	Standard	measured	0
+1948	243	struct-complete-n06-b00001-fdegree	1	Standard	measured	1
+1949	243	struct-complete-n06-b00001-fdegree	1	Accelerated	measured	1
+1950	243	struct-complete-n06-b00001-fdegree	2	Accelerated	measured	2
+1951	243	struct-complete-n06-b00001-fdegree	2	Standard	measured	2
+1952	244	struct-complete-n06-b00001-fhalf	-1	Accelerated	warmup	0
+1953	244	struct-complete-n06-b00001-fhalf	-1	Standard	warmup	0
+1954	244	struct-complete-n06-b00001-fhalf	0	Standard	measured	0
+1955	244	struct-complete-n06-b00001-fhalf	0	Accelerated	measured	0
+1956	244	struct-complete-n06-b00001-fhalf	1	Accelerated	measured	1
+1957	244	struct-complete-n06-b00001-fhalf	1	Standard	measured	1
+1958	244	struct-complete-n06-b00001-fhalf	2	Standard	measured	2
+1959	244	struct-complete-n06-b00001-fhalf	2	Accelerated	measured	2
+1960	245	struct-complete-n06-b00001-fnear	-1	Standard	warmup	0
+1961	245	struct-complete-n06-b00001-fnear	-1	Accelerated	warmup	0
+1962	245	struct-complete-n06-b00001-fnear	0	Accelerated	measured	0
+1963	245	struct-complete-n06-b00001-fnear	0	Standard	measured	0
+1964	245	struct-complete-n06-b00001-fnear	1	Standard	measured	1
+1965	245	struct-complete-n06-b00001-fnear	1	Accelerated	measured	1
+1966	245	struct-complete-n06-b00001-fnear	2	Accelerated	measured	2
+1967	245	struct-complete-n06-b00001-fnear	2	Standard	measured	2
+1968	246	struct-complete-n06-b00001-funit	-1	Accelerated	warmup	0
+1969	246	struct-complete-n06-b00001-funit	-1	Standard	warmup	0
+1970	246	struct-complete-n06-b00001-funit	0	Standard	measured	0
+1971	246	struct-complete-n06-b00001-funit	0	Accelerated	measured	0
+1972	246	struct-complete-n06-b00001-funit	1	Accelerated	measured	1
+1973	246	struct-complete-n06-b00001-funit	1	Standard	measured	1
+1974	246	struct-complete-n06-b00001-funit	2	Standard	measured	2
+1975	246	struct-complete-n06-b00001-funit	2	Accelerated	measured	2
+1976	247	struct-complete-n06-b00008-fdegree	-1	Standard	warmup	0
+1977	247	struct-complete-n06-b00008-fdegree	-1	Accelerated	warmup	0
+1978	247	struct-complete-n06-b00008-fdegree	0	Accelerated	measured	0
+1979	247	struct-complete-n06-b00008-fdegree	0	Standard	measured	0
+1980	247	struct-complete-n06-b00008-fdegree	1	Standard	measured	1
+1981	247	struct-complete-n06-b00008-fdegree	1	Accelerated	measured	1
+1982	247	struct-complete-n06-b00008-fdegree	2	Accelerated	measured	2
+1983	247	struct-complete-n06-b00008-fdegree	2	Standard	measured	2
+1984	248	struct-complete-n06-b00008-fhalf	-1	Accelerated	warmup	0
+1985	248	struct-complete-n06-b00008-fhalf	-1	Standard	warmup	0
+1986	248	struct-complete-n06-b00008-fhalf	0	Standard	measured	0
+1987	248	struct-complete-n06-b00008-fhalf	0	Accelerated	measured	0
+1988	248	struct-complete-n06-b00008-fhalf	1	Accelerated	measured	1
+1989	248	struct-complete-n06-b00008-fhalf	1	Standard	measured	1
+1990	248	struct-complete-n06-b00008-fhalf	2	Standard	measured	2
+1991	248	struct-complete-n06-b00008-fhalf	2	Accelerated	measured	2
+1992	249	struct-complete-n06-b00008-fnear	-1	Standard	warmup	0
+1993	249	struct-complete-n06-b00008-fnear	-1	Accelerated	warmup	0
+1994	249	struct-complete-n06-b00008-fnear	0	Accelerated	measured	0
+1995	249	struct-complete-n06-b00008-fnear	0	Standard	measured	0
+1996	249	struct-complete-n06-b00008-fnear	1	Standard	measured	1
+1997	249	struct-complete-n06-b00008-fnear	1	Accelerated	measured	1
+1998	249	struct-complete-n06-b00008-fnear	2	Accelerated	measured	2
+1999	249	struct-complete-n06-b00008-fnear	2	Standard	measured	2
+2000	250	struct-complete-n06-b00008-funit	-1	Accelerated	warmup	0
+2001	250	struct-complete-n06-b00008-funit	-1	Standard	warmup	0
+2002	250	struct-complete-n06-b00008-funit	0	Standard	measured	0
+2003	250	struct-complete-n06-b00008-funit	0	Accelerated	measured	0
+2004	250	struct-complete-n06-b00008-funit	1	Accelerated	measured	1
+2005	250	struct-complete-n06-b00008-funit	1	Standard	measured	1
+2006	250	struct-complete-n06-b00008-funit	2	Standard	measured	2
+2007	250	struct-complete-n06-b00008-funit	2	Accelerated	measured	2
+2008	251	struct-complete-n08-b00001-fdegree	-1	Standard	warmup	0
+2009	251	struct-complete-n08-b00001-fdegree	-1	Accelerated	warmup	0
+2010	251	struct-complete-n08-b00001-fdegree	0	Accelerated	measured	0
+2011	251	struct-complete-n08-b00001-fdegree	0	Standard	measured	0
+2012	251	struct-complete-n08-b00001-fdegree	1	Standard	measured	1
+2013	251	struct-complete-n08-b00001-fdegree	1	Accelerated	measured	1
+2014	251	struct-complete-n08-b00001-fdegree	2	Accelerated	measured	2
+2015	251	struct-complete-n08-b00001-fdegree	2	Standard	measured	2
+2016	252	struct-complete-n08-b00001-fhalf	-1	Accelerated	warmup	0
+2017	252	struct-complete-n08-b00001-fhalf	-1	Standard	warmup	0
+2018	252	struct-complete-n08-b00001-fhalf	0	Standard	measured	0
+2019	252	struct-complete-n08-b00001-fhalf	0	Accelerated	measured	0
+2020	252	struct-complete-n08-b00001-fhalf	1	Accelerated	measured	1
+2021	252	struct-complete-n08-b00001-fhalf	1	Standard	measured	1
+2022	252	struct-complete-n08-b00001-fhalf	2	Standard	measured	2
+2023	252	struct-complete-n08-b00001-fhalf	2	Accelerated	measured	2
+2024	253	struct-complete-n08-b00001-fnear	-1	Standard	warmup	0
+2025	253	struct-complete-n08-b00001-fnear	-1	Accelerated	warmup	0
+2026	253	struct-complete-n08-b00001-fnear	0	Accelerated	measured	0
+2027	253	struct-complete-n08-b00001-fnear	0	Standard	measured	0
+2028	253	struct-complete-n08-b00001-fnear	1	Standard	measured	1
+2029	253	struct-complete-n08-b00001-fnear	1	Accelerated	measured	1
+2030	253	struct-complete-n08-b00001-fnear	2	Accelerated	measured	2
+2031	253	struct-complete-n08-b00001-fnear	2	Standard	measured	2
+2032	254	struct-complete-n08-b00001-funit	-1	Accelerated	warmup	0
+2033	254	struct-complete-n08-b00001-funit	-1	Standard	warmup	0
+2034	254	struct-complete-n08-b00001-funit	0	Standard	measured	0
+2035	254	struct-complete-n08-b00001-funit	0	Accelerated	measured	0
+2036	254	struct-complete-n08-b00001-funit	1	Accelerated	measured	1
+2037	254	struct-complete-n08-b00001-funit	1	Standard	measured	1
+2038	254	struct-complete-n08-b00001-funit	2	Standard	measured	2
+2039	254	struct-complete-n08-b00001-funit	2	Accelerated	measured	2
+2040	255	struct-complete-n08-b00008-fdegree	-1	Standard	warmup	0
+2041	255	struct-complete-n08-b00008-fdegree	-1	Accelerated	warmup	0
+2042	255	struct-complete-n08-b00008-fdegree	0	Accelerated	measured	0
+2043	255	struct-complete-n08-b00008-fdegree	0	Standard	measured	0
+2044	255	struct-complete-n08-b00008-fdegree	1	Standard	measured	1
+2045	255	struct-complete-n08-b00008-fdegree	1	Accelerated	measured	1
+2046	255	struct-complete-n08-b00008-fdegree	2	Accelerated	measured	2
+2047	255	struct-complete-n08-b00008-fdegree	2	Standard	measured	2
+2048	256	struct-complete-n08-b00008-fhalf	-1	Accelerated	warmup	0
+2049	256	struct-complete-n08-b00008-fhalf	-1	Standard	warmup	0
+2050	256	struct-complete-n08-b00008-fhalf	0	Standard	measured	0
+2051	256	struct-complete-n08-b00008-fhalf	0	Accelerated	measured	0
+2052	256	struct-complete-n08-b00008-fhalf	1	Accelerated	measured	1
+2053	256	struct-complete-n08-b00008-fhalf	1	Standard	measured	1
+2054	256	struct-complete-n08-b00008-fhalf	2	Standard	measured	2
+2055	256	struct-complete-n08-b00008-fhalf	2	Accelerated	measured	2
+2056	257	struct-complete-n08-b00008-fnear	-1	Standard	warmup	0
+2057	257	struct-complete-n08-b00008-fnear	-1	Accelerated	warmup	0
+2058	257	struct-complete-n08-b00008-fnear	0	Accelerated	measured	0
+2059	257	struct-complete-n08-b00008-fnear	0	Standard	measured	0
+2060	257	struct-complete-n08-b00008-fnear	1	Standard	measured	1
+2061	257	struct-complete-n08-b00008-fnear	1	Accelerated	measured	1
+2062	257	struct-complete-n08-b00008-fnear	2	Accelerated	measured	2
+2063	257	struct-complete-n08-b00008-fnear	2	Standard	measured	2
+2064	258	struct-complete-n08-b00008-funit	-1	Accelerated	warmup	0
+2065	258	struct-complete-n08-b00008-funit	-1	Standard	warmup	0
+2066	258	struct-complete-n08-b00008-funit	0	Standard	measured	0
+2067	258	struct-complete-n08-b00008-funit	0	Accelerated	measured	0
+2068	258	struct-complete-n08-b00008-funit	1	Accelerated	measured	1
+2069	258	struct-complete-n08-b00008-funit	1	Standard	measured	1
+2070	258	struct-complete-n08-b00008-funit	2	Standard	measured	2
+2071	258	struct-complete-n08-b00008-funit	2	Accelerated	measured	2
+2072	259	struct-cycle-n04-b00001-fdegree	-1	Standard	warmup	0
+2073	259	struct-cycle-n04-b00001-fdegree	-1	Accelerated	warmup	0
+2074	259	struct-cycle-n04-b00001-fdegree	0	Accelerated	measured	0
+2075	259	struct-cycle-n04-b00001-fdegree	0	Standard	measured	0
+2076	259	struct-cycle-n04-b00001-fdegree	1	Standard	measured	1
+2077	259	struct-cycle-n04-b00001-fdegree	1	Accelerated	measured	1
+2078	259	struct-cycle-n04-b00001-fdegree	2	Accelerated	measured	2
+2079	259	struct-cycle-n04-b00001-fdegree	2	Standard	measured	2
+2080	260	struct-cycle-n04-b00001-fhalf	-1	Accelerated	warmup	0
+2081	260	struct-cycle-n04-b00001-fhalf	-1	Standard	warmup	0
+2082	260	struct-cycle-n04-b00001-fhalf	0	Standard	measured	0
+2083	260	struct-cycle-n04-b00001-fhalf	0	Accelerated	measured	0
+2084	260	struct-cycle-n04-b00001-fhalf	1	Accelerated	measured	1
+2085	260	struct-cycle-n04-b00001-fhalf	1	Standard	measured	1
+2086	260	struct-cycle-n04-b00001-fhalf	2	Standard	measured	2
+2087	260	struct-cycle-n04-b00001-fhalf	2	Accelerated	measured	2
+2088	261	struct-cycle-n04-b00001-fnear	-1	Standard	warmup	0
+2089	261	struct-cycle-n04-b00001-fnear	-1	Accelerated	warmup	0
+2090	261	struct-cycle-n04-b00001-fnear	0	Accelerated	measured	0
+2091	261	struct-cycle-n04-b00001-fnear	0	Standard	measured	0
+2092	261	struct-cycle-n04-b00001-fnear	1	Standard	measured	1
+2093	261	struct-cycle-n04-b00001-fnear	1	Accelerated	measured	1
+2094	261	struct-cycle-n04-b00001-fnear	2	Accelerated	measured	2
+2095	261	struct-cycle-n04-b00001-fnear	2	Standard	measured	2
+2096	262	struct-cycle-n04-b00001-funit	-1	Accelerated	warmup	0
+2097	262	struct-cycle-n04-b00001-funit	-1	Standard	warmup	0
+2098	262	struct-cycle-n04-b00001-funit	0	Standard	measured	0
+2099	262	struct-cycle-n04-b00001-funit	0	Accelerated	measured	0
+2100	262	struct-cycle-n04-b00001-funit	1	Accelerated	measured	1
+2101	262	struct-cycle-n04-b00001-funit	1	Standard	measured	1
+2102	262	struct-cycle-n04-b00001-funit	2	Standard	measured	2
+2103	262	struct-cycle-n04-b00001-funit	2	Accelerated	measured	2
+2104	263	struct-cycle-n04-b00008-fdegree	-1	Standard	warmup	0
+2105	263	struct-cycle-n04-b00008-fdegree	-1	Accelerated	warmup	0
+2106	263	struct-cycle-n04-b00008-fdegree	0	Accelerated	measured	0
+2107	263	struct-cycle-n04-b00008-fdegree	0	Standard	measured	0
+2108	263	struct-cycle-n04-b00008-fdegree	1	Standard	measured	1
+2109	263	struct-cycle-n04-b00008-fdegree	1	Accelerated	measured	1
+2110	263	struct-cycle-n04-b00008-fdegree	2	Accelerated	measured	2
+2111	263	struct-cycle-n04-b00008-fdegree	2	Standard	measured	2
+2112	264	struct-cycle-n04-b00008-fhalf	-1	Accelerated	warmup	0
+2113	264	struct-cycle-n04-b00008-fhalf	-1	Standard	warmup	0
+2114	264	struct-cycle-n04-b00008-fhalf	0	Standard	measured	0
+2115	264	struct-cycle-n04-b00008-fhalf	0	Accelerated	measured	0
+2116	264	struct-cycle-n04-b00008-fhalf	1	Accelerated	measured	1
+2117	264	struct-cycle-n04-b00008-fhalf	1	Standard	measured	1
+2118	264	struct-cycle-n04-b00008-fhalf	2	Standard	measured	2
+2119	264	struct-cycle-n04-b00008-fhalf	2	Accelerated	measured	2
+2120	265	struct-cycle-n04-b00008-fnear	-1	Standard	warmup	0
+2121	265	struct-cycle-n04-b00008-fnear	-1	Accelerated	warmup	0
+2122	265	struct-cycle-n04-b00008-fnear	0	Accelerated	measured	0
+2123	265	struct-cycle-n04-b00008-fnear	0	Standard	measured	0
+2124	265	struct-cycle-n04-b00008-fnear	1	Standard	measured	1
+2125	265	struct-cycle-n04-b00008-fnear	1	Accelerated	measured	1
+2126	265	struct-cycle-n04-b00008-fnear	2	Accelerated	measured	2
+2127	265	struct-cycle-n04-b00008-fnear	2	Standard	measured	2
+2128	266	struct-cycle-n04-b00008-funit	-1	Accelerated	warmup	0
+2129	266	struct-cycle-n04-b00008-funit	-1	Standard	warmup	0
+2130	266	struct-cycle-n04-b00008-funit	0	Standard	measured	0
+2131	266	struct-cycle-n04-b00008-funit	0	Accelerated	measured	0
+2132	266	struct-cycle-n04-b00008-funit	1	Accelerated	measured	1
+2133	266	struct-cycle-n04-b00008-funit	1	Standard	measured	1
+2134	266	struct-cycle-n04-b00008-funit	2	Standard	measured	2
+2135	266	struct-cycle-n04-b00008-funit	2	Accelerated	measured	2
+2136	267	struct-cycle-n06-b00001-fdegree	-1	Standard	warmup	0
+2137	267	struct-cycle-n06-b00001-fdegree	-1	Accelerated	warmup	0
+2138	267	struct-cycle-n06-b00001-fdegree	0	Accelerated	measured	0
+2139	267	struct-cycle-n06-b00001-fdegree	0	Standard	measured	0
+2140	267	struct-cycle-n06-b00001-fdegree	1	Standard	measured	1
+2141	267	struct-cycle-n06-b00001-fdegree	1	Accelerated	measured	1
+2142	267	struct-cycle-n06-b00001-fdegree	2	Accelerated	measured	2
+2143	267	struct-cycle-n06-b00001-fdegree	2	Standard	measured	2
+2144	268	struct-cycle-n06-b00001-fhalf	-1	Accelerated	warmup	0
+2145	268	struct-cycle-n06-b00001-fhalf	-1	Standard	warmup	0
+2146	268	struct-cycle-n06-b00001-fhalf	0	Standard	measured	0
+2147	268	struct-cycle-n06-b00001-fhalf	0	Accelerated	measured	0
+2148	268	struct-cycle-n06-b00001-fhalf	1	Accelerated	measured	1
+2149	268	struct-cycle-n06-b00001-fhalf	1	Standard	measured	1
+2150	268	struct-cycle-n06-b00001-fhalf	2	Standard	measured	2
+2151	268	struct-cycle-n06-b00001-fhalf	2	Accelerated	measured	2
+2152	269	struct-cycle-n06-b00001-fnear	-1	Standard	warmup	0
+2153	269	struct-cycle-n06-b00001-fnear	-1	Accelerated	warmup	0
+2154	269	struct-cycle-n06-b00001-fnear	0	Accelerated	measured	0
+2155	269	struct-cycle-n06-b00001-fnear	0	Standard	measured	0
+2156	269	struct-cycle-n06-b00001-fnear	1	Standard	measured	1
+2157	269	struct-cycle-n06-b00001-fnear	1	Accelerated	measured	1
+2158	269	struct-cycle-n06-b00001-fnear	2	Accelerated	measured	2
+2159	269	struct-cycle-n06-b00001-fnear	2	Standard	measured	2
+2160	270	struct-cycle-n06-b00001-funit	-1	Accelerated	warmup	0
+2161	270	struct-cycle-n06-b00001-funit	-1	Standard	warmup	0
+2162	270	struct-cycle-n06-b00001-funit	0	Standard	measured	0
+2163	270	struct-cycle-n06-b00001-funit	0	Accelerated	measured	0
+2164	270	struct-cycle-n06-b00001-funit	1	Accelerated	measured	1
+2165	270	struct-cycle-n06-b00001-funit	1	Standard	measured	1
+2166	270	struct-cycle-n06-b00001-funit	2	Standard	measured	2
+2167	270	struct-cycle-n06-b00001-funit	2	Accelerated	measured	2
+2168	271	struct-cycle-n06-b00008-fdegree	-1	Standard	warmup	0
+2169	271	struct-cycle-n06-b00008-fdegree	-1	Accelerated	warmup	0
+2170	271	struct-cycle-n06-b00008-fdegree	0	Accelerated	measured	0
+2171	271	struct-cycle-n06-b00008-fdegree	0	Standard	measured	0
+2172	271	struct-cycle-n06-b00008-fdegree	1	Standard	measured	1
+2173	271	struct-cycle-n06-b00008-fdegree	1	Accelerated	measured	1
+2174	271	struct-cycle-n06-b00008-fdegree	2	Accelerated	measured	2
+2175	271	struct-cycle-n06-b00008-fdegree	2	Standard	measured	2
+2176	272	struct-cycle-n06-b00008-fhalf	-1	Accelerated	warmup	0
+2177	272	struct-cycle-n06-b00008-fhalf	-1	Standard	warmup	0
+2178	272	struct-cycle-n06-b00008-fhalf	0	Standard	measured	0
+2179	272	struct-cycle-n06-b00008-fhalf	0	Accelerated	measured	0
+2180	272	struct-cycle-n06-b00008-fhalf	1	Accelerated	measured	1
+2181	272	struct-cycle-n06-b00008-fhalf	1	Standard	measured	1
+2182	272	struct-cycle-n06-b00008-fhalf	2	Standard	measured	2
+2183	272	struct-cycle-n06-b00008-fhalf	2	Accelerated	measured	2
+2184	273	struct-cycle-n06-b00008-fnear	-1	Standard	warmup	0
+2185	273	struct-cycle-n06-b00008-fnear	-1	Accelerated	warmup	0
+2186	273	struct-cycle-n06-b00008-fnear	0	Accelerated	measured	0
+2187	273	struct-cycle-n06-b00008-fnear	0	Standard	measured	0
+2188	273	struct-cycle-n06-b00008-fnear	1	Standard	measured	1
+2189	273	struct-cycle-n06-b00008-fnear	1	Accelerated	measured	1
+2190	273	struct-cycle-n06-b00008-fnear	2	Accelerated	measured	2
+2191	273	struct-cycle-n06-b00008-fnear	2	Standard	measured	2
+2192	274	struct-cycle-n06-b00008-funit	-1	Accelerated	warmup	0
+2193	274	struct-cycle-n06-b00008-funit	-1	Standard	warmup	0
+2194	274	struct-cycle-n06-b00008-funit	0	Standard	measured	0
+2195	274	struct-cycle-n06-b00008-funit	0	Accelerated	measured	0
+2196	274	struct-cycle-n06-b00008-funit	1	Accelerated	measured	1
+2197	274	struct-cycle-n06-b00008-funit	1	Standard	measured	1
+2198	274	struct-cycle-n06-b00008-funit	2	Standard	measured	2
+2199	274	struct-cycle-n06-b00008-funit	2	Accelerated	measured	2
+2200	275	struct-cycle-n08-b00001-fdegree	-1	Standard	warmup	0
+2201	275	struct-cycle-n08-b00001-fdegree	-1	Accelerated	warmup	0
+2202	275	struct-cycle-n08-b00001-fdegree	0	Accelerated	measured	0
+2203	275	struct-cycle-n08-b00001-fdegree	0	Standard	measured	0
+2204	275	struct-cycle-n08-b00001-fdegree	1	Standard	measured	1
+2205	275	struct-cycle-n08-b00001-fdegree	1	Accelerated	measured	1
+2206	275	struct-cycle-n08-b00001-fdegree	2	Accelerated	measured	2
+2207	275	struct-cycle-n08-b00001-fdegree	2	Standard	measured	2
+2208	276	struct-cycle-n08-b00001-fhalf	-1	Accelerated	warmup	0
+2209	276	struct-cycle-n08-b00001-fhalf	-1	Standard	warmup	0
+2210	276	struct-cycle-n08-b00001-fhalf	0	Standard	measured	0
+2211	276	struct-cycle-n08-b00001-fhalf	0	Accelerated	measured	0
+2212	276	struct-cycle-n08-b00001-fhalf	1	Accelerated	measured	1
+2213	276	struct-cycle-n08-b00001-fhalf	1	Standard	measured	1
+2214	276	struct-cycle-n08-b00001-fhalf	2	Standard	measured	2
+2215	276	struct-cycle-n08-b00001-fhalf	2	Accelerated	measured	2
+2216	277	struct-cycle-n08-b00001-fnear	-1	Standard	warmup	0
+2217	277	struct-cycle-n08-b00001-fnear	-1	Accelerated	warmup	0
+2218	277	struct-cycle-n08-b00001-fnear	0	Accelerated	measured	0
+2219	277	struct-cycle-n08-b00001-fnear	0	Standard	measured	0
+2220	277	struct-cycle-n08-b00001-fnear	1	Standard	measured	1
+2221	277	struct-cycle-n08-b00001-fnear	1	Accelerated	measured	1
+2222	277	struct-cycle-n08-b00001-fnear	2	Accelerated	measured	2
+2223	277	struct-cycle-n08-b00001-fnear	2	Standard	measured	2
+2224	278	struct-cycle-n08-b00001-funit	-1	Accelerated	warmup	0
+2225	278	struct-cycle-n08-b00001-funit	-1	Standard	warmup	0
+2226	278	struct-cycle-n08-b00001-funit	0	Standard	measured	0
+2227	278	struct-cycle-n08-b00001-funit	0	Accelerated	measured	0
+2228	278	struct-cycle-n08-b00001-funit	1	Accelerated	measured	1
+2229	278	struct-cycle-n08-b00001-funit	1	Standard	measured	1
+2230	278	struct-cycle-n08-b00001-funit	2	Standard	measured	2
+2231	278	struct-cycle-n08-b00001-funit	2	Accelerated	measured	2
+2232	279	struct-cycle-n08-b00008-fdegree	-1	Standard	warmup	0
+2233	279	struct-cycle-n08-b00008-fdegree	-1	Accelerated	warmup	0
+2234	279	struct-cycle-n08-b00008-fdegree	0	Accelerated	measured	0
+2235	279	struct-cycle-n08-b00008-fdegree	0	Standard	measured	0
+2236	279	struct-cycle-n08-b00008-fdegree	1	Standard	measured	1
+2237	279	struct-cycle-n08-b00008-fdegree	1	Accelerated	measured	1
+2238	279	struct-cycle-n08-b00008-fdegree	2	Accelerated	measured	2
+2239	279	struct-cycle-n08-b00008-fdegree	2	Standard	measured	2
+2240	280	struct-cycle-n08-b00008-fhalf	-1	Accelerated	warmup	0
+2241	280	struct-cycle-n08-b00008-fhalf	-1	Standard	warmup	0
+2242	280	struct-cycle-n08-b00008-fhalf	0	Standard	measured	0
+2243	280	struct-cycle-n08-b00008-fhalf	0	Accelerated	measured	0
+2244	280	struct-cycle-n08-b00008-fhalf	1	Accelerated	measured	1
+2245	280	struct-cycle-n08-b00008-fhalf	1	Standard	measured	1
+2246	280	struct-cycle-n08-b00008-fhalf	2	Standard	measured	2
+2247	280	struct-cycle-n08-b00008-fhalf	2	Accelerated	measured	2
+2248	281	struct-cycle-n08-b00008-fnear	-1	Standard	warmup	0
+2249	281	struct-cycle-n08-b00008-fnear	-1	Accelerated	warmup	0
+2250	281	struct-cycle-n08-b00008-fnear	0	Accelerated	measured	0
+2251	281	struct-cycle-n08-b00008-fnear	0	Standard	measured	0
+2252	281	struct-cycle-n08-b00008-fnear	1	Standard	measured	1
+2253	281	struct-cycle-n08-b00008-fnear	1	Accelerated	measured	1
+2254	281	struct-cycle-n08-b00008-fnear	2	Accelerated	measured	2
+2255	281	struct-cycle-n08-b00008-fnear	2	Standard	measured	2
+2256	282	struct-cycle-n08-b00008-funit	-1	Accelerated	warmup	0
+2257	282	struct-cycle-n08-b00008-funit	-1	Standard	warmup	0
+2258	282	struct-cycle-n08-b00008-funit	0	Standard	measured	0
+2259	282	struct-cycle-n08-b00008-funit	0	Accelerated	measured	0
+2260	282	struct-cycle-n08-b00008-funit	1	Accelerated	measured	1
+2261	282	struct-cycle-n08-b00008-funit	1	Standard	measured	1
+2262	282	struct-cycle-n08-b00008-funit	2	Standard	measured	2
+2263	282	struct-cycle-n08-b00008-funit	2	Accelerated	measured	2
+2264	283	struct-matching-n04-b00001-fdegree	-1	Standard	warmup	0
+2265	283	struct-matching-n04-b00001-fdegree	-1	Accelerated	warmup	0
+2266	283	struct-matching-n04-b00001-fdegree	0	Accelerated	measured	0
+2267	283	struct-matching-n04-b00001-fdegree	0	Standard	measured	0
+2268	283	struct-matching-n04-b00001-fdegree	1	Standard	measured	1
+2269	283	struct-matching-n04-b00001-fdegree	1	Accelerated	measured	1
+2270	283	struct-matching-n04-b00001-fdegree	2	Accelerated	measured	2
+2271	283	struct-matching-n04-b00001-fdegree	2	Standard	measured	2
+2272	284	struct-matching-n04-b00001-fhalf	-1	Accelerated	warmup	0
+2273	284	struct-matching-n04-b00001-fhalf	-1	Standard	warmup	0
+2274	284	struct-matching-n04-b00001-fhalf	0	Standard	measured	0
+2275	284	struct-matching-n04-b00001-fhalf	0	Accelerated	measured	0
+2276	284	struct-matching-n04-b00001-fhalf	1	Accelerated	measured	1
+2277	284	struct-matching-n04-b00001-fhalf	1	Standard	measured	1
+2278	284	struct-matching-n04-b00001-fhalf	2	Standard	measured	2
+2279	284	struct-matching-n04-b00001-fhalf	2	Accelerated	measured	2
+2280	285	struct-matching-n04-b00001-fnear	-1	Standard	warmup	0
+2281	285	struct-matching-n04-b00001-fnear	-1	Accelerated	warmup	0
+2282	285	struct-matching-n04-b00001-fnear	0	Accelerated	measured	0
+2283	285	struct-matching-n04-b00001-fnear	0	Standard	measured	0
+2284	285	struct-matching-n04-b00001-fnear	1	Standard	measured	1
+2285	285	struct-matching-n04-b00001-fnear	1	Accelerated	measured	1
+2286	285	struct-matching-n04-b00001-fnear	2	Accelerated	measured	2
+2287	285	struct-matching-n04-b00001-fnear	2	Standard	measured	2
+2288	286	struct-matching-n04-b00001-funit	-1	Accelerated	warmup	0
+2289	286	struct-matching-n04-b00001-funit	-1	Standard	warmup	0
+2290	286	struct-matching-n04-b00001-funit	0	Standard	measured	0
+2291	286	struct-matching-n04-b00001-funit	0	Accelerated	measured	0
+2292	286	struct-matching-n04-b00001-funit	1	Accelerated	measured	1
+2293	286	struct-matching-n04-b00001-funit	1	Standard	measured	1
+2294	286	struct-matching-n04-b00001-funit	2	Standard	measured	2
+2295	286	struct-matching-n04-b00001-funit	2	Accelerated	measured	2
+2296	287	struct-matching-n04-b00008-fdegree	-1	Standard	warmup	0
+2297	287	struct-matching-n04-b00008-fdegree	-1	Accelerated	warmup	0
+2298	287	struct-matching-n04-b00008-fdegree	0	Accelerated	measured	0
+2299	287	struct-matching-n04-b00008-fdegree	0	Standard	measured	0
+2300	287	struct-matching-n04-b00008-fdegree	1	Standard	measured	1
+2301	287	struct-matching-n04-b00008-fdegree	1	Accelerated	measured	1
+2302	287	struct-matching-n04-b00008-fdegree	2	Accelerated	measured	2
+2303	287	struct-matching-n04-b00008-fdegree	2	Standard	measured	2
+2304	288	struct-matching-n04-b00008-fhalf	-1	Accelerated	warmup	0
+2305	288	struct-matching-n04-b00008-fhalf	-1	Standard	warmup	0
+2306	288	struct-matching-n04-b00008-fhalf	0	Standard	measured	0
+2307	288	struct-matching-n04-b00008-fhalf	0	Accelerated	measured	0
+2308	288	struct-matching-n04-b00008-fhalf	1	Accelerated	measured	1
+2309	288	struct-matching-n04-b00008-fhalf	1	Standard	measured	1
+2310	288	struct-matching-n04-b00008-fhalf	2	Standard	measured	2
+2311	288	struct-matching-n04-b00008-fhalf	2	Accelerated	measured	2
+2312	289	struct-matching-n04-b00008-fnear	-1	Standard	warmup	0
+2313	289	struct-matching-n04-b00008-fnear	-1	Accelerated	warmup	0
+2314	289	struct-matching-n04-b00008-fnear	0	Accelerated	measured	0
+2315	289	struct-matching-n04-b00008-fnear	0	Standard	measured	0
+2316	289	struct-matching-n04-b00008-fnear	1	Standard	measured	1
+2317	289	struct-matching-n04-b00008-fnear	1	Accelerated	measured	1
+2318	289	struct-matching-n04-b00008-fnear	2	Accelerated	measured	2
+2319	289	struct-matching-n04-b00008-fnear	2	Standard	measured	2
+2320	290	struct-matching-n04-b00008-funit	-1	Accelerated	warmup	0
+2321	290	struct-matching-n04-b00008-funit	-1	Standard	warmup	0
+2322	290	struct-matching-n04-b00008-funit	0	Standard	measured	0
+2323	290	struct-matching-n04-b00008-funit	0	Accelerated	measured	0
+2324	290	struct-matching-n04-b00008-funit	1	Accelerated	measured	1
+2325	290	struct-matching-n04-b00008-funit	1	Standard	measured	1
+2326	290	struct-matching-n04-b00008-funit	2	Standard	measured	2
+2327	290	struct-matching-n04-b00008-funit	2	Accelerated	measured	2
+2328	291	struct-matching-n06-b00001-fdegree	-1	Standard	warmup	0
+2329	291	struct-matching-n06-b00001-fdegree	-1	Accelerated	warmup	0
+2330	291	struct-matching-n06-b00001-fdegree	0	Accelerated	measured	0
+2331	291	struct-matching-n06-b00001-fdegree	0	Standard	measured	0
+2332	291	struct-matching-n06-b00001-fdegree	1	Standard	measured	1
+2333	291	struct-matching-n06-b00001-fdegree	1	Accelerated	measured	1
+2334	291	struct-matching-n06-b00001-fdegree	2	Accelerated	measured	2
+2335	291	struct-matching-n06-b00001-fdegree	2	Standard	measured	2
+2336	292	struct-matching-n06-b00001-fhalf	-1	Accelerated	warmup	0
+2337	292	struct-matching-n06-b00001-fhalf	-1	Standard	warmup	0
+2338	292	struct-matching-n06-b00001-fhalf	0	Standard	measured	0
+2339	292	struct-matching-n06-b00001-fhalf	0	Accelerated	measured	0
+2340	292	struct-matching-n06-b00001-fhalf	1	Accelerated	measured	1
+2341	292	struct-matching-n06-b00001-fhalf	1	Standard	measured	1
+2342	292	struct-matching-n06-b00001-fhalf	2	Standard	measured	2
+2343	292	struct-matching-n06-b00001-fhalf	2	Accelerated	measured	2
+2344	293	struct-matching-n06-b00001-fnear	-1	Standard	warmup	0
+2345	293	struct-matching-n06-b00001-fnear	-1	Accelerated	warmup	0
+2346	293	struct-matching-n06-b00001-fnear	0	Accelerated	measured	0
+2347	293	struct-matching-n06-b00001-fnear	0	Standard	measured	0
+2348	293	struct-matching-n06-b00001-fnear	1	Standard	measured	1
+2349	293	struct-matching-n06-b00001-fnear	1	Accelerated	measured	1
+2350	293	struct-matching-n06-b00001-fnear	2	Accelerated	measured	2
+2351	293	struct-matching-n06-b00001-fnear	2	Standard	measured	2
+2352	294	struct-matching-n06-b00001-funit	-1	Accelerated	warmup	0
+2353	294	struct-matching-n06-b00001-funit	-1	Standard	warmup	0
+2354	294	struct-matching-n06-b00001-funit	0	Standard	measured	0
+2355	294	struct-matching-n06-b00001-funit	0	Accelerated	measured	0
+2356	294	struct-matching-n06-b00001-funit	1	Accelerated	measured	1
+2357	294	struct-matching-n06-b00001-funit	1	Standard	measured	1
+2358	294	struct-matching-n06-b00001-funit	2	Standard	measured	2
+2359	294	struct-matching-n06-b00001-funit	2	Accelerated	measured	2
+2360	295	struct-matching-n06-b00008-fdegree	-1	Standard	warmup	0
+2361	295	struct-matching-n06-b00008-fdegree	-1	Accelerated	warmup	0
+2362	295	struct-matching-n06-b00008-fdegree	0	Accelerated	measured	0
+2363	295	struct-matching-n06-b00008-fdegree	0	Standard	measured	0
+2364	295	struct-matching-n06-b00008-fdegree	1	Standard	measured	1
+2365	295	struct-matching-n06-b00008-fdegree	1	Accelerated	measured	1
+2366	295	struct-matching-n06-b00008-fdegree	2	Accelerated	measured	2
+2367	295	struct-matching-n06-b00008-fdegree	2	Standard	measured	2
+2368	296	struct-matching-n06-b00008-fhalf	-1	Accelerated	warmup	0
+2369	296	struct-matching-n06-b00008-fhalf	-1	Standard	warmup	0
+2370	296	struct-matching-n06-b00008-fhalf	0	Standard	measured	0
+2371	296	struct-matching-n06-b00008-fhalf	0	Accelerated	measured	0
+2372	296	struct-matching-n06-b00008-fhalf	1	Accelerated	measured	1
+2373	296	struct-matching-n06-b00008-fhalf	1	Standard	measured	1
+2374	296	struct-matching-n06-b00008-fhalf	2	Standard	measured	2
+2375	296	struct-matching-n06-b00008-fhalf	2	Accelerated	measured	2
+2376	297	struct-matching-n06-b00008-fnear	-1	Standard	warmup	0
+2377	297	struct-matching-n06-b00008-fnear	-1	Accelerated	warmup	0
+2378	297	struct-matching-n06-b00008-fnear	0	Accelerated	measured	0
+2379	297	struct-matching-n06-b00008-fnear	0	Standard	measured	0
+2380	297	struct-matching-n06-b00008-fnear	1	Standard	measured	1
+2381	297	struct-matching-n06-b00008-fnear	1	Accelerated	measured	1
+2382	297	struct-matching-n06-b00008-fnear	2	Accelerated	measured	2
+2383	297	struct-matching-n06-b00008-fnear	2	Standard	measured	2
+2384	298	struct-matching-n06-b00008-funit	-1	Accelerated	warmup	0
+2385	298	struct-matching-n06-b00008-funit	-1	Standard	warmup	0
+2386	298	struct-matching-n06-b00008-funit	0	Standard	measured	0
+2387	298	struct-matching-n06-b00008-funit	0	Accelerated	measured	0
+2388	298	struct-matching-n06-b00008-funit	1	Accelerated	measured	1
+2389	298	struct-matching-n06-b00008-funit	1	Standard	measured	1
+2390	298	struct-matching-n06-b00008-funit	2	Standard	measured	2
+2391	298	struct-matching-n06-b00008-funit	2	Accelerated	measured	2
+2392	299	struct-matching-n08-b00001-fdegree	-1	Standard	warmup	0
+2393	299	struct-matching-n08-b00001-fdegree	-1	Accelerated	warmup	0
+2394	299	struct-matching-n08-b00001-fdegree	0	Accelerated	measured	0
+2395	299	struct-matching-n08-b00001-fdegree	0	Standard	measured	0
+2396	299	struct-matching-n08-b00001-fdegree	1	Standard	measured	1
+2397	299	struct-matching-n08-b00001-fdegree	1	Accelerated	measured	1
+2398	299	struct-matching-n08-b00001-fdegree	2	Accelerated	measured	2
+2399	299	struct-matching-n08-b00001-fdegree	2	Standard	measured	2
+2400	300	struct-matching-n08-b00001-fhalf	-1	Accelerated	warmup	0
+2401	300	struct-matching-n08-b00001-fhalf	-1	Standard	warmup	0
+2402	300	struct-matching-n08-b00001-fhalf	0	Standard	measured	0
+2403	300	struct-matching-n08-b00001-fhalf	0	Accelerated	measured	0
+2404	300	struct-matching-n08-b00001-fhalf	1	Accelerated	measured	1
+2405	300	struct-matching-n08-b00001-fhalf	1	Standard	measured	1
+2406	300	struct-matching-n08-b00001-fhalf	2	Standard	measured	2
+2407	300	struct-matching-n08-b00001-fhalf	2	Accelerated	measured	2
+2408	301	struct-matching-n08-b00001-fnear	-1	Standard	warmup	0
+2409	301	struct-matching-n08-b00001-fnear	-1	Accelerated	warmup	0
+2410	301	struct-matching-n08-b00001-fnear	0	Accelerated	measured	0
+2411	301	struct-matching-n08-b00001-fnear	0	Standard	measured	0
+2412	301	struct-matching-n08-b00001-fnear	1	Standard	measured	1
+2413	301	struct-matching-n08-b00001-fnear	1	Accelerated	measured	1
+2414	301	struct-matching-n08-b00001-fnear	2	Accelerated	measured	2
+2415	301	struct-matching-n08-b00001-fnear	2	Standard	measured	2
+2416	302	struct-matching-n08-b00001-funit	-1	Accelerated	warmup	0
+2417	302	struct-matching-n08-b00001-funit	-1	Standard	warmup	0
+2418	302	struct-matching-n08-b00001-funit	0	Standard	measured	0
+2419	302	struct-matching-n08-b00001-funit	0	Accelerated	measured	0
+2420	302	struct-matching-n08-b00001-funit	1	Accelerated	measured	1
+2421	302	struct-matching-n08-b00001-funit	1	Standard	measured	1
+2422	302	struct-matching-n08-b00001-funit	2	Standard	measured	2
+2423	302	struct-matching-n08-b00001-funit	2	Accelerated	measured	2
+2424	303	struct-matching-n08-b00008-fdegree	-1	Standard	warmup	0
+2425	303	struct-matching-n08-b00008-fdegree	-1	Accelerated	warmup	0
+2426	303	struct-matching-n08-b00008-fdegree	0	Accelerated	measured	0
+2427	303	struct-matching-n08-b00008-fdegree	0	Standard	measured	0
+2428	303	struct-matching-n08-b00008-fdegree	1	Standard	measured	1
+2429	303	struct-matching-n08-b00008-fdegree	1	Accelerated	measured	1
+2430	303	struct-matching-n08-b00008-fdegree	2	Accelerated	measured	2
+2431	303	struct-matching-n08-b00008-fdegree	2	Standard	measured	2
+2432	304	struct-matching-n08-b00008-fhalf	-1	Accelerated	warmup	0
+2433	304	struct-matching-n08-b00008-fhalf	-1	Standard	warmup	0
+2434	304	struct-matching-n08-b00008-fhalf	0	Standard	measured	0
+2435	304	struct-matching-n08-b00008-fhalf	0	Accelerated	measured	0
+2436	304	struct-matching-n08-b00008-fhalf	1	Accelerated	measured	1
+2437	304	struct-matching-n08-b00008-fhalf	1	Standard	measured	1
+2438	304	struct-matching-n08-b00008-fhalf	2	Standard	measured	2
+2439	304	struct-matching-n08-b00008-fhalf	2	Accelerated	measured	2
+2440	305	struct-matching-n08-b00008-fnear	-1	Standard	warmup	0
+2441	305	struct-matching-n08-b00008-fnear	-1	Accelerated	warmup	0
+2442	305	struct-matching-n08-b00008-fnear	0	Accelerated	measured	0
+2443	305	struct-matching-n08-b00008-fnear	0	Standard	measured	0
+2444	305	struct-matching-n08-b00008-fnear	1	Standard	measured	1
+2445	305	struct-matching-n08-b00008-fnear	1	Accelerated	measured	1
+2446	305	struct-matching-n08-b00008-fnear	2	Accelerated	measured	2
+2447	305	struct-matching-n08-b00008-fnear	2	Standard	measured	2
+2448	306	struct-matching-n08-b00008-funit	-1	Accelerated	warmup	0
+2449	306	struct-matching-n08-b00008-funit	-1	Standard	warmup	0
+2450	306	struct-matching-n08-b00008-funit	0	Standard	measured	0
+2451	306	struct-matching-n08-b00008-funit	0	Accelerated	measured	0
+2452	306	struct-matching-n08-b00008-funit	1	Accelerated	measured	1
+2453	306	struct-matching-n08-b00008-funit	1	Standard	measured	1
+2454	306	struct-matching-n08-b00008-funit	2	Standard	measured	2
+2455	306	struct-matching-n08-b00008-funit	2	Accelerated	measured	2
+2456	307	struct-path-n04-b00001-fdegree	-1	Standard	warmup	0
+2457	307	struct-path-n04-b00001-fdegree	-1	Accelerated	warmup	0
+2458	307	struct-path-n04-b00001-fdegree	0	Accelerated	measured	0
+2459	307	struct-path-n04-b00001-fdegree	0	Standard	measured	0
+2460	307	struct-path-n04-b00001-fdegree	1	Standard	measured	1
+2461	307	struct-path-n04-b00001-fdegree	1	Accelerated	measured	1
+2462	307	struct-path-n04-b00001-fdegree	2	Accelerated	measured	2
+2463	307	struct-path-n04-b00001-fdegree	2	Standard	measured	2
+2464	308	struct-path-n04-b00001-fhalf	-1	Accelerated	warmup	0
+2465	308	struct-path-n04-b00001-fhalf	-1	Standard	warmup	0
+2466	308	struct-path-n04-b00001-fhalf	0	Standard	measured	0
+2467	308	struct-path-n04-b00001-fhalf	0	Accelerated	measured	0
+2468	308	struct-path-n04-b00001-fhalf	1	Accelerated	measured	1
+2469	308	struct-path-n04-b00001-fhalf	1	Standard	measured	1
+2470	308	struct-path-n04-b00001-fhalf	2	Standard	measured	2
+2471	308	struct-path-n04-b00001-fhalf	2	Accelerated	measured	2
+2472	309	struct-path-n04-b00001-fnear	-1	Standard	warmup	0
+2473	309	struct-path-n04-b00001-fnear	-1	Accelerated	warmup	0
+2474	309	struct-path-n04-b00001-fnear	0	Accelerated	measured	0
+2475	309	struct-path-n04-b00001-fnear	0	Standard	measured	0
+2476	309	struct-path-n04-b00001-fnear	1	Standard	measured	1
+2477	309	struct-path-n04-b00001-fnear	1	Accelerated	measured	1
+2478	309	struct-path-n04-b00001-fnear	2	Accelerated	measured	2
+2479	309	struct-path-n04-b00001-fnear	2	Standard	measured	2
+2480	310	struct-path-n04-b00001-funit	-1	Accelerated	warmup	0
+2481	310	struct-path-n04-b00001-funit	-1	Standard	warmup	0
+2482	310	struct-path-n04-b00001-funit	0	Standard	measured	0
+2483	310	struct-path-n04-b00001-funit	0	Accelerated	measured	0
+2484	310	struct-path-n04-b00001-funit	1	Accelerated	measured	1
+2485	310	struct-path-n04-b00001-funit	1	Standard	measured	1
+2486	310	struct-path-n04-b00001-funit	2	Standard	measured	2
+2487	310	struct-path-n04-b00001-funit	2	Accelerated	measured	2
+2488	311	struct-path-n04-b00008-fdegree	-1	Standard	warmup	0
+2489	311	struct-path-n04-b00008-fdegree	-1	Accelerated	warmup	0
+2490	311	struct-path-n04-b00008-fdegree	0	Accelerated	measured	0
+2491	311	struct-path-n04-b00008-fdegree	0	Standard	measured	0
+2492	311	struct-path-n04-b00008-fdegree	1	Standard	measured	1
+2493	311	struct-path-n04-b00008-fdegree	1	Accelerated	measured	1
+2494	311	struct-path-n04-b00008-fdegree	2	Accelerated	measured	2
+2495	311	struct-path-n04-b00008-fdegree	2	Standard	measured	2
+2496	312	struct-path-n04-b00008-fhalf	-1	Accelerated	warmup	0
+2497	312	struct-path-n04-b00008-fhalf	-1	Standard	warmup	0
+2498	312	struct-path-n04-b00008-fhalf	0	Standard	measured	0
+2499	312	struct-path-n04-b00008-fhalf	0	Accelerated	measured	0
+2500	312	struct-path-n04-b00008-fhalf	1	Accelerated	measured	1
+2501	312	struct-path-n04-b00008-fhalf	1	Standard	measured	1
+2502	312	struct-path-n04-b00008-fhalf	2	Standard	measured	2
+2503	312	struct-path-n04-b00008-fhalf	2	Accelerated	measured	2
+2504	313	struct-path-n04-b00008-fnear	-1	Standard	warmup	0
+2505	313	struct-path-n04-b00008-fnear	-1	Accelerated	warmup	0
+2506	313	struct-path-n04-b00008-fnear	0	Accelerated	measured	0
+2507	313	struct-path-n04-b00008-fnear	0	Standard	measured	0
+2508	313	struct-path-n04-b00008-fnear	1	Standard	measured	1
+2509	313	struct-path-n04-b00008-fnear	1	Accelerated	measured	1
+2510	313	struct-path-n04-b00008-fnear	2	Accelerated	measured	2
+2511	313	struct-path-n04-b00008-fnear	2	Standard	measured	2
+2512	314	struct-path-n04-b00008-funit	-1	Accelerated	warmup	0
+2513	314	struct-path-n04-b00008-funit	-1	Standard	warmup	0
+2514	314	struct-path-n04-b00008-funit	0	Standard	measured	0
+2515	314	struct-path-n04-b00008-funit	0	Accelerated	measured	0
+2516	314	struct-path-n04-b00008-funit	1	Accelerated	measured	1
+2517	314	struct-path-n04-b00008-funit	1	Standard	measured	1
+2518	314	struct-path-n04-b00008-funit	2	Standard	measured	2
+2519	314	struct-path-n04-b00008-funit	2	Accelerated	measured	2
+2520	315	struct-path-n06-b00001-fdegree	-1	Standard	warmup	0
+2521	315	struct-path-n06-b00001-fdegree	-1	Accelerated	warmup	0
+2522	315	struct-path-n06-b00001-fdegree	0	Accelerated	measured	0
+2523	315	struct-path-n06-b00001-fdegree	0	Standard	measured	0
+2524	315	struct-path-n06-b00001-fdegree	1	Standard	measured	1
+2525	315	struct-path-n06-b00001-fdegree	1	Accelerated	measured	1
+2526	315	struct-path-n06-b00001-fdegree	2	Accelerated	measured	2
+2527	315	struct-path-n06-b00001-fdegree	2	Standard	measured	2
+2528	316	struct-path-n06-b00001-fhalf	-1	Accelerated	warmup	0
+2529	316	struct-path-n06-b00001-fhalf	-1	Standard	warmup	0
+2530	316	struct-path-n06-b00001-fhalf	0	Standard	measured	0
+2531	316	struct-path-n06-b00001-fhalf	0	Accelerated	measured	0
+2532	316	struct-path-n06-b00001-fhalf	1	Accelerated	measured	1
+2533	316	struct-path-n06-b00001-fhalf	1	Standard	measured	1
+2534	316	struct-path-n06-b00001-fhalf	2	Standard	measured	2
+2535	316	struct-path-n06-b00001-fhalf	2	Accelerated	measured	2
+2536	317	struct-path-n06-b00001-fnear	-1	Standard	warmup	0
+2537	317	struct-path-n06-b00001-fnear	-1	Accelerated	warmup	0
+2538	317	struct-path-n06-b00001-fnear	0	Accelerated	measured	0
+2539	317	struct-path-n06-b00001-fnear	0	Standard	measured	0
+2540	317	struct-path-n06-b00001-fnear	1	Standard	measured	1
+2541	317	struct-path-n06-b00001-fnear	1	Accelerated	measured	1
+2542	317	struct-path-n06-b00001-fnear	2	Accelerated	measured	2
+2543	317	struct-path-n06-b00001-fnear	2	Standard	measured	2
+2544	318	struct-path-n06-b00001-funit	-1	Accelerated	warmup	0
+2545	318	struct-path-n06-b00001-funit	-1	Standard	warmup	0
+2546	318	struct-path-n06-b00001-funit	0	Standard	measured	0
+2547	318	struct-path-n06-b00001-funit	0	Accelerated	measured	0
+2548	318	struct-path-n06-b00001-funit	1	Accelerated	measured	1
+2549	318	struct-path-n06-b00001-funit	1	Standard	measured	1
+2550	318	struct-path-n06-b00001-funit	2	Standard	measured	2
+2551	318	struct-path-n06-b00001-funit	2	Accelerated	measured	2
+2552	319	struct-path-n06-b00008-fdegree	-1	Standard	warmup	0
+2553	319	struct-path-n06-b00008-fdegree	-1	Accelerated	warmup	0
+2554	319	struct-path-n06-b00008-fdegree	0	Accelerated	measured	0
+2555	319	struct-path-n06-b00008-fdegree	0	Standard	measured	0
+2556	319	struct-path-n06-b00008-fdegree	1	Standard	measured	1
+2557	319	struct-path-n06-b00008-fdegree	1	Accelerated	measured	1
+2558	319	struct-path-n06-b00008-fdegree	2	Accelerated	measured	2
+2559	319	struct-path-n06-b00008-fdegree	2	Standard	measured	2
+2560	320	struct-path-n06-b00008-fhalf	-1	Accelerated	warmup	0
+2561	320	struct-path-n06-b00008-fhalf	-1	Standard	warmup	0
+2562	320	struct-path-n06-b00008-fhalf	0	Standard	measured	0
+2563	320	struct-path-n06-b00008-fhalf	0	Accelerated	measured	0
+2564	320	struct-path-n06-b00008-fhalf	1	Accelerated	measured	1
+2565	320	struct-path-n06-b00008-fhalf	1	Standard	measured	1
+2566	320	struct-path-n06-b00008-fhalf	2	Standard	measured	2
+2567	320	struct-path-n06-b00008-fhalf	2	Accelerated	measured	2
+2568	321	struct-path-n06-b00008-fnear	-1	Standard	warmup	0
+2569	321	struct-path-n06-b00008-fnear	-1	Accelerated	warmup	0
+2570	321	struct-path-n06-b00008-fnear	0	Accelerated	measured	0
+2571	321	struct-path-n06-b00008-fnear	0	Standard	measured	0
+2572	321	struct-path-n06-b00008-fnear	1	Standard	measured	1
+2573	321	struct-path-n06-b00008-fnear	1	Accelerated	measured	1
+2574	321	struct-path-n06-b00008-fnear	2	Accelerated	measured	2
+2575	321	struct-path-n06-b00008-fnear	2	Standard	measured	2
+2576	322	struct-path-n06-b00008-funit	-1	Accelerated	warmup	0
+2577	322	struct-path-n06-b00008-funit	-1	Standard	warmup	0
+2578	322	struct-path-n06-b00008-funit	0	Standard	measured	0
+2579	322	struct-path-n06-b00008-funit	0	Accelerated	measured	0
+2580	322	struct-path-n06-b00008-funit	1	Accelerated	measured	1
+2581	322	struct-path-n06-b00008-funit	1	Standard	measured	1
+2582	322	struct-path-n06-b00008-funit	2	Standard	measured	2
+2583	322	struct-path-n06-b00008-funit	2	Accelerated	measured	2
+2584	323	struct-path-n08-b00001-fdegree	-1	Standard	warmup	0
+2585	323	struct-path-n08-b00001-fdegree	-1	Accelerated	warmup	0
+2586	323	struct-path-n08-b00001-fdegree	0	Accelerated	measured	0
+2587	323	struct-path-n08-b00001-fdegree	0	Standard	measured	0
+2588	323	struct-path-n08-b00001-fdegree	1	Standard	measured	1
+2589	323	struct-path-n08-b00001-fdegree	1	Accelerated	measured	1
+2590	323	struct-path-n08-b00001-fdegree	2	Accelerated	measured	2
+2591	323	struct-path-n08-b00001-fdegree	2	Standard	measured	2
+2592	324	struct-path-n08-b00001-fhalf	-1	Accelerated	warmup	0
+2593	324	struct-path-n08-b00001-fhalf	-1	Standard	warmup	0
+2594	324	struct-path-n08-b00001-fhalf	0	Standard	measured	0
+2595	324	struct-path-n08-b00001-fhalf	0	Accelerated	measured	0
+2596	324	struct-path-n08-b00001-fhalf	1	Accelerated	measured	1
+2597	324	struct-path-n08-b00001-fhalf	1	Standard	measured	1
+2598	324	struct-path-n08-b00001-fhalf	2	Standard	measured	2
+2599	324	struct-path-n08-b00001-fhalf	2	Accelerated	measured	2
+2600	325	struct-path-n08-b00001-fnear	-1	Standard	warmup	0
+2601	325	struct-path-n08-b00001-fnear	-1	Accelerated	warmup	0
+2602	325	struct-path-n08-b00001-fnear	0	Accelerated	measured	0
+2603	325	struct-path-n08-b00001-fnear	0	Standard	measured	0
+2604	325	struct-path-n08-b00001-fnear	1	Standard	measured	1
+2605	325	struct-path-n08-b00001-fnear	1	Accelerated	measured	1
+2606	325	struct-path-n08-b00001-fnear	2	Accelerated	measured	2
+2607	325	struct-path-n08-b00001-fnear	2	Standard	measured	2
+2608	326	struct-path-n08-b00001-funit	-1	Accelerated	warmup	0
+2609	326	struct-path-n08-b00001-funit	-1	Standard	warmup	0
+2610	326	struct-path-n08-b00001-funit	0	Standard	measured	0
+2611	326	struct-path-n08-b00001-funit	0	Accelerated	measured	0
+2612	326	struct-path-n08-b00001-funit	1	Accelerated	measured	1
+2613	326	struct-path-n08-b00001-funit	1	Standard	measured	1
+2614	326	struct-path-n08-b00001-funit	2	Standard	measured	2
+2615	326	struct-path-n08-b00001-funit	2	Accelerated	measured	2
+2616	327	struct-path-n08-b00008-fdegree	-1	Standard	warmup	0
+2617	327	struct-path-n08-b00008-fdegree	-1	Accelerated	warmup	0
+2618	327	struct-path-n08-b00008-fdegree	0	Accelerated	measured	0
+2619	327	struct-path-n08-b00008-fdegree	0	Standard	measured	0
+2620	327	struct-path-n08-b00008-fdegree	1	Standard	measured	1
+2621	327	struct-path-n08-b00008-fdegree	1	Accelerated	measured	1
+2622	327	struct-path-n08-b00008-fdegree	2	Accelerated	measured	2
+2623	327	struct-path-n08-b00008-fdegree	2	Standard	measured	2
+2624	328	struct-path-n08-b00008-fhalf	-1	Accelerated	warmup	0
+2625	328	struct-path-n08-b00008-fhalf	-1	Standard	warmup	0
+2626	328	struct-path-n08-b00008-fhalf	0	Standard	measured	0
+2627	328	struct-path-n08-b00008-fhalf	0	Accelerated	measured	0
+2628	328	struct-path-n08-b00008-fhalf	1	Accelerated	measured	1
+2629	328	struct-path-n08-b00008-fhalf	1	Standard	measured	1
+2630	328	struct-path-n08-b00008-fhalf	2	Standard	measured	2
+2631	328	struct-path-n08-b00008-fhalf	2	Accelerated	measured	2
+2632	329	struct-path-n08-b00008-fnear	-1	Standard	warmup	0
+2633	329	struct-path-n08-b00008-fnear	-1	Accelerated	warmup	0
+2634	329	struct-path-n08-b00008-fnear	0	Accelerated	measured	0
+2635	329	struct-path-n08-b00008-fnear	0	Standard	measured	0
+2636	329	struct-path-n08-b00008-fnear	1	Standard	measured	1
+2637	329	struct-path-n08-b00008-fnear	1	Accelerated	measured	1
+2638	329	struct-path-n08-b00008-fnear	2	Accelerated	measured	2
+2639	329	struct-path-n08-b00008-fnear	2	Standard	measured	2
+2640	330	struct-path-n08-b00008-funit	-1	Accelerated	warmup	0
+2641	330	struct-path-n08-b00008-funit	-1	Standard	warmup	0
+2642	330	struct-path-n08-b00008-funit	0	Standard	measured	0
+2643	330	struct-path-n08-b00008-funit	0	Accelerated	measured	0
+2644	330	struct-path-n08-b00008-funit	1	Accelerated	measured	1
+2645	330	struct-path-n08-b00008-funit	1	Standard	measured	1
+2646	330	struct-path-n08-b00008-funit	2	Standard	measured	2
+2647	330	struct-path-n08-b00008-funit	2	Accelerated	measured	2
+2648	331	tri-q0-1-1-f1-1-1	-1	Standard	warmup	0
+2649	331	tri-q0-1-1-f1-1-1	-1	Accelerated	warmup	0
+2650	331	tri-q0-1-1-f1-1-1	0	Accelerated	measured	0
+2651	331	tri-q0-1-1-f1-1-1	0	Standard	measured	0
+2652	331	tri-q0-1-1-f1-1-1	1	Standard	measured	1
+2653	331	tri-q0-1-1-f1-1-1	1	Accelerated	measured	1
+2654	331	tri-q0-1-1-f1-1-1	2	Accelerated	measured	2
+2655	331	tri-q0-1-1-f1-1-1	2	Standard	measured	2
+2656	332	tri-q0-1-1-f1-1-2	-1	Accelerated	warmup	0
+2657	332	tri-q0-1-1-f1-1-2	-1	Standard	warmup	0
+2658	332	tri-q0-1-1-f1-1-2	0	Standard	measured	0
+2659	332	tri-q0-1-1-f1-1-2	0	Accelerated	measured	0
+2660	332	tri-q0-1-1-f1-1-2	1	Accelerated	measured	1
+2661	332	tri-q0-1-1-f1-1-2	1	Standard	measured	1
+2662	332	tri-q0-1-1-f1-1-2	2	Standard	measured	2
+2663	332	tri-q0-1-1-f1-1-2	2	Accelerated	measured	2
+2664	333	tri-q0-1-2-f1-1-1	-1	Standard	warmup	0
+2665	333	tri-q0-1-2-f1-1-1	-1	Accelerated	warmup	0
+2666	333	tri-q0-1-2-f1-1-1	0	Accelerated	measured	0
+2667	333	tri-q0-1-2-f1-1-1	0	Standard	measured	0
+2668	333	tri-q0-1-2-f1-1-1	1	Standard	measured	1
+2669	333	tri-q0-1-2-f1-1-1	1	Accelerated	measured	1
+2670	333	tri-q0-1-2-f1-1-1	2	Accelerated	measured	2
+2671	333	tri-q0-1-2-f1-1-1	2	Standard	measured	2
+2672	334	tri-q0-1-2-f1-1-2	-1	Accelerated	warmup	0
+2673	334	tri-q0-1-2-f1-1-2	-1	Standard	warmup	0
+2674	334	tri-q0-1-2-f1-1-2	0	Standard	measured	0
+2675	334	tri-q0-1-2-f1-1-2	0	Accelerated	measured	0
+2676	334	tri-q0-1-2-f1-1-2	1	Accelerated	measured	1
+2677	334	tri-q0-1-2-f1-1-2	1	Standard	measured	1
+2678	334	tri-q0-1-2-f1-1-2	2	Standard	measured	2
+2679	334	tri-q0-1-2-f1-1-2	2	Accelerated	measured	2
+2680	335	tri-q0-1-2-f1-1-3	-1	Standard	warmup	0
+2681	335	tri-q0-1-2-f1-1-3	-1	Accelerated	warmup	0
+2682	335	tri-q0-1-2-f1-1-3	0	Accelerated	measured	0
+2683	335	tri-q0-1-2-f1-1-3	0	Standard	measured	0
+2684	335	tri-q0-1-2-f1-1-3	1	Standard	measured	1
+2685	335	tri-q0-1-2-f1-1-3	1	Accelerated	measured	1
+2686	335	tri-q0-1-2-f1-1-3	2	Accelerated	measured	2
+2687	335	tri-q0-1-2-f1-1-3	2	Standard	measured	2
+2688	336	tri-q0-1-2-f1-2-1	-1	Accelerated	warmup	0
+2689	336	tri-q0-1-2-f1-2-1	-1	Standard	warmup	0
+2690	336	tri-q0-1-2-f1-2-1	0	Standard	measured	0
+2691	336	tri-q0-1-2-f1-2-1	0	Accelerated	measured	0
+2692	336	tri-q0-1-2-f1-2-1	1	Accelerated	measured	1
+2693	336	tri-q0-1-2-f1-2-1	1	Standard	measured	1
+2694	336	tri-q0-1-2-f1-2-1	2	Standard	measured	2
+2695	336	tri-q0-1-2-f1-2-1	2	Accelerated	measured	2
+2696	337	tri-q0-1-2-f1-2-2	-1	Standard	warmup	0
+2697	337	tri-q0-1-2-f1-2-2	-1	Accelerated	warmup	0
+2698	337	tri-q0-1-2-f1-2-2	0	Accelerated	measured	0
+2699	337	tri-q0-1-2-f1-2-2	0	Standard	measured	0
+2700	337	tri-q0-1-2-f1-2-2	1	Standard	measured	1
+2701	337	tri-q0-1-2-f1-2-2	1	Accelerated	measured	1
+2702	337	tri-q0-1-2-f1-2-2	2	Accelerated	measured	2
+2703	337	tri-q0-1-2-f1-2-2	2	Standard	measured	2
+2704	338	tri-q0-1-2-f1-2-3	-1	Accelerated	warmup	0
+2705	338	tri-q0-1-2-f1-2-3	-1	Standard	warmup	0
+2706	338	tri-q0-1-2-f1-2-3	0	Standard	measured	0
+2707	338	tri-q0-1-2-f1-2-3	0	Accelerated	measured	0
+2708	338	tri-q0-1-2-f1-2-3	1	Accelerated	measured	1
+2709	338	tri-q0-1-2-f1-2-3	1	Standard	measured	1
+2710	338	tri-q0-1-2-f1-2-3	2	Standard	measured	2
+2711	338	tri-q0-1-2-f1-2-3	2	Accelerated	measured	2
+2712	339	tri-q0-2-1-f1-1-1	-1	Standard	warmup	0
+2713	339	tri-q0-2-1-f1-1-1	-1	Accelerated	warmup	0
+2714	339	tri-q0-2-1-f1-1-1	0	Accelerated	measured	0
+2715	339	tri-q0-2-1-f1-1-1	0	Standard	measured	0
+2716	339	tri-q0-2-1-f1-1-1	1	Standard	measured	1
+2717	339	tri-q0-2-1-f1-1-1	1	Accelerated	measured	1
+2718	339	tri-q0-2-1-f1-1-1	2	Accelerated	measured	2
+2719	339	tri-q0-2-1-f1-1-1	2	Standard	measured	2
+2720	340	tri-q0-2-1-f1-1-2	-1	Accelerated	warmup	0
+2721	340	tri-q0-2-1-f1-1-2	-1	Standard	warmup	0
+2722	340	tri-q0-2-1-f1-1-2	0	Standard	measured	0
+2723	340	tri-q0-2-1-f1-1-2	0	Accelerated	measured	0
+2724	340	tri-q0-2-1-f1-1-2	1	Accelerated	measured	1
+2725	340	tri-q0-2-1-f1-1-2	1	Standard	measured	1
+2726	340	tri-q0-2-1-f1-1-2	2	Standard	measured	2
+2727	340	tri-q0-2-1-f1-1-2	2	Accelerated	measured	2
+2728	341	tri-q0-2-1-f1-1-3	-1	Standard	warmup	0
+2729	341	tri-q0-2-1-f1-1-3	-1	Accelerated	warmup	0
+2730	341	tri-q0-2-1-f1-1-3	0	Accelerated	measured	0
+2731	341	tri-q0-2-1-f1-1-3	0	Standard	measured	0
+2732	341	tri-q0-2-1-f1-1-3	1	Standard	measured	1
+2733	341	tri-q0-2-1-f1-1-3	1	Accelerated	measured	1
+2734	341	tri-q0-2-1-f1-1-3	2	Accelerated	measured	2
+2735	341	tri-q0-2-1-f1-1-3	2	Standard	measured	2
+2736	342	tri-q0-2-1-f2-1-1	-1	Accelerated	warmup	0
+2737	342	tri-q0-2-1-f2-1-1	-1	Standard	warmup	0
+2738	342	tri-q0-2-1-f2-1-1	0	Standard	measured	0
+2739	342	tri-q0-2-1-f2-1-1	0	Accelerated	measured	0
+2740	342	tri-q0-2-1-f2-1-1	1	Accelerated	measured	1
+2741	342	tri-q0-2-1-f2-1-1	1	Standard	measured	1
+2742	342	tri-q0-2-1-f2-1-1	2	Standard	measured	2
+2743	342	tri-q0-2-1-f2-1-1	2	Accelerated	measured	2
+2744	343	tri-q0-2-1-f2-1-2	-1	Standard	warmup	0
+2745	343	tri-q0-2-1-f2-1-2	-1	Accelerated	warmup	0
+2746	343	tri-q0-2-1-f2-1-2	0	Accelerated	measured	0
+2747	343	tri-q0-2-1-f2-1-2	0	Standard	measured	0
+2748	343	tri-q0-2-1-f2-1-2	1	Standard	measured	1
+2749	343	tri-q0-2-1-f2-1-2	1	Accelerated	measured	1
+2750	343	tri-q0-2-1-f2-1-2	2	Accelerated	measured	2
+2751	343	tri-q0-2-1-f2-1-2	2	Standard	measured	2
+2752	344	tri-q0-2-1-f2-1-3	-1	Accelerated	warmup	0
+2753	344	tri-q0-2-1-f2-1-3	-1	Standard	warmup	0
+2754	344	tri-q0-2-1-f2-1-3	0	Standard	measured	0
+2755	344	tri-q0-2-1-f2-1-3	0	Accelerated	measured	0
+2756	344	tri-q0-2-1-f2-1-3	1	Accelerated	measured	1
+2757	344	tri-q0-2-1-f2-1-3	1	Standard	measured	1
+2758	344	tri-q0-2-1-f2-1-3	2	Standard	measured	2
+2759	344	tri-q0-2-1-f2-1-3	2	Accelerated	measured	2
+2760	345	tri-q0-2-2-f1-1-1	-1	Standard	warmup	0
+2761	345	tri-q0-2-2-f1-1-1	-1	Accelerated	warmup	0
+2762	345	tri-q0-2-2-f1-1-1	0	Accelerated	measured	0
+2763	345	tri-q0-2-2-f1-1-1	0	Standard	measured	0
+2764	345	tri-q0-2-2-f1-1-1	1	Standard	measured	1
+2765	345	tri-q0-2-2-f1-1-1	1	Accelerated	measured	1
+2766	345	tri-q0-2-2-f1-1-1	2	Accelerated	measured	2
+2767	345	tri-q0-2-2-f1-1-1	2	Standard	measured	2
+2768	346	tri-q0-2-2-f1-1-2	-1	Accelerated	warmup	0
+2769	346	tri-q0-2-2-f1-1-2	-1	Standard	warmup	0
+2770	346	tri-q0-2-2-f1-1-2	0	Standard	measured	0
+2771	346	tri-q0-2-2-f1-1-2	0	Accelerated	measured	0
+2772	346	tri-q0-2-2-f1-1-2	1	Accelerated	measured	1
+2773	346	tri-q0-2-2-f1-1-2	1	Standard	measured	1
+2774	346	tri-q0-2-2-f1-1-2	2	Standard	measured	2
+2775	346	tri-q0-2-2-f1-1-2	2	Accelerated	measured	2
+2776	347	tri-q0-2-2-f1-1-3	-1	Standard	warmup	0
+2777	347	tri-q0-2-2-f1-1-3	-1	Accelerated	warmup	0
+2778	347	tri-q0-2-2-f1-1-3	0	Accelerated	measured	0
+2779	347	tri-q0-2-2-f1-1-3	0	Standard	measured	0
+2780	347	tri-q0-2-2-f1-1-3	1	Standard	measured	1
+2781	347	tri-q0-2-2-f1-1-3	1	Accelerated	measured	1
+2782	347	tri-q0-2-2-f1-1-3	2	Accelerated	measured	2
+2783	347	tri-q0-2-2-f1-1-3	2	Standard	measured	2
+2784	348	tri-q0-2-2-f1-1-4	-1	Accelerated	warmup	0
+2785	348	tri-q0-2-2-f1-1-4	-1	Standard	warmup	0
+2786	348	tri-q0-2-2-f1-1-4	0	Standard	measured	0
+2787	348	tri-q0-2-2-f1-1-4	0	Accelerated	measured	0
+2788	348	tri-q0-2-2-f1-1-4	1	Accelerated	measured	1
+2789	348	tri-q0-2-2-f1-1-4	1	Standard	measured	1
+2790	348	tri-q0-2-2-f1-1-4	2	Standard	measured	2
+2791	348	tri-q0-2-2-f1-1-4	2	Accelerated	measured	2
+2792	349	tri-q0-2-2-f1-2-1	-1	Standard	warmup	0
+2793	349	tri-q0-2-2-f1-2-1	-1	Accelerated	warmup	0
+2794	349	tri-q0-2-2-f1-2-1	0	Accelerated	measured	0
+2795	349	tri-q0-2-2-f1-2-1	0	Standard	measured	0
+2796	349	tri-q0-2-2-f1-2-1	1	Standard	measured	1
+2797	349	tri-q0-2-2-f1-2-1	1	Accelerated	measured	1
+2798	349	tri-q0-2-2-f1-2-1	2	Accelerated	measured	2
+2799	349	tri-q0-2-2-f1-2-1	2	Standard	measured	2
+2800	350	tri-q0-2-2-f1-2-2	-1	Accelerated	warmup	0
+2801	350	tri-q0-2-2-f1-2-2	-1	Standard	warmup	0
+2802	350	tri-q0-2-2-f1-2-2	0	Standard	measured	0
+2803	350	tri-q0-2-2-f1-2-2	0	Accelerated	measured	0
+2804	350	tri-q0-2-2-f1-2-2	1	Accelerated	measured	1
+2805	350	tri-q0-2-2-f1-2-2	1	Standard	measured	1
+2806	350	tri-q0-2-2-f1-2-2	2	Standard	measured	2
+2807	350	tri-q0-2-2-f1-2-2	2	Accelerated	measured	2
+2808	351	tri-q0-2-2-f1-2-3	-1	Standard	warmup	0
+2809	351	tri-q0-2-2-f1-2-3	-1	Accelerated	warmup	0
+2810	351	tri-q0-2-2-f1-2-3	0	Accelerated	measured	0
+2811	351	tri-q0-2-2-f1-2-3	0	Standard	measured	0
+2812	351	tri-q0-2-2-f1-2-3	1	Standard	measured	1
+2813	351	tri-q0-2-2-f1-2-3	1	Accelerated	measured	1
+2814	351	tri-q0-2-2-f1-2-3	2	Accelerated	measured	2
+2815	351	tri-q0-2-2-f1-2-3	2	Standard	measured	2
+2816	352	tri-q0-2-2-f1-2-4	-1	Accelerated	warmup	0
+2817	352	tri-q0-2-2-f1-2-4	-1	Standard	warmup	0
+2818	352	tri-q0-2-2-f1-2-4	0	Standard	measured	0
+2819	352	tri-q0-2-2-f1-2-4	0	Accelerated	measured	0
+2820	352	tri-q0-2-2-f1-2-4	1	Accelerated	measured	1
+2821	352	tri-q0-2-2-f1-2-4	1	Standard	measured	1
+2822	352	tri-q0-2-2-f1-2-4	2	Standard	measured	2
+2823	352	tri-q0-2-2-f1-2-4	2	Accelerated	measured	2
+2824	353	tri-q0-2-2-f2-1-1	-1	Standard	warmup	0
+2825	353	tri-q0-2-2-f2-1-1	-1	Accelerated	warmup	0
+2826	353	tri-q0-2-2-f2-1-1	0	Accelerated	measured	0
+2827	353	tri-q0-2-2-f2-1-1	0	Standard	measured	0
+2828	353	tri-q0-2-2-f2-1-1	1	Standard	measured	1
+2829	353	tri-q0-2-2-f2-1-1	1	Accelerated	measured	1
+2830	353	tri-q0-2-2-f2-1-1	2	Accelerated	measured	2
+2831	353	tri-q0-2-2-f2-1-1	2	Standard	measured	2
+2832	354	tri-q0-2-2-f2-1-2	-1	Accelerated	warmup	0
+2833	354	tri-q0-2-2-f2-1-2	-1	Standard	warmup	0
+2834	354	tri-q0-2-2-f2-1-2	0	Standard	measured	0
+2835	354	tri-q0-2-2-f2-1-2	0	Accelerated	measured	0
+2836	354	tri-q0-2-2-f2-1-2	1	Accelerated	measured	1
+2837	354	tri-q0-2-2-f2-1-2	1	Standard	measured	1
+2838	354	tri-q0-2-2-f2-1-2	2	Standard	measured	2
+2839	354	tri-q0-2-2-f2-1-2	2	Accelerated	measured	2
+2840	355	tri-q0-2-2-f2-1-3	-1	Standard	warmup	0
+2841	355	tri-q0-2-2-f2-1-3	-1	Accelerated	warmup	0
+2842	355	tri-q0-2-2-f2-1-3	0	Accelerated	measured	0
+2843	355	tri-q0-2-2-f2-1-3	0	Standard	measured	0
+2844	355	tri-q0-2-2-f2-1-3	1	Standard	measured	1
+2845	355	tri-q0-2-2-f2-1-3	1	Accelerated	measured	1
+2846	355	tri-q0-2-2-f2-1-3	2	Accelerated	measured	2
+2847	355	tri-q0-2-2-f2-1-3	2	Standard	measured	2
+2848	356	tri-q0-2-2-f2-1-4	-1	Accelerated	warmup	0
+2849	356	tri-q0-2-2-f2-1-4	-1	Standard	warmup	0
+2850	356	tri-q0-2-2-f2-1-4	0	Standard	measured	0
+2851	356	tri-q0-2-2-f2-1-4	0	Accelerated	measured	0
+2852	356	tri-q0-2-2-f2-1-4	1	Accelerated	measured	1
+2853	356	tri-q0-2-2-f2-1-4	1	Standard	measured	1
+2854	356	tri-q0-2-2-f2-1-4	2	Standard	measured	2
+2855	356	tri-q0-2-2-f2-1-4	2	Accelerated	measured	2
+2856	357	tri-q0-2-2-f2-2-1	-1	Standard	warmup	0
+2857	357	tri-q0-2-2-f2-2-1	-1	Accelerated	warmup	0
+2858	357	tri-q0-2-2-f2-2-1	0	Accelerated	measured	0
+2859	357	tri-q0-2-2-f2-2-1	0	Standard	measured	0
+2860	357	tri-q0-2-2-f2-2-1	1	Standard	measured	1
+2861	357	tri-q0-2-2-f2-2-1	1	Accelerated	measured	1
+2862	357	tri-q0-2-2-f2-2-1	2	Accelerated	measured	2
+2863	357	tri-q0-2-2-f2-2-1	2	Standard	measured	2
+2864	358	tri-q0-2-2-f2-2-2	-1	Accelerated	warmup	0
+2865	358	tri-q0-2-2-f2-2-2	-1	Standard	warmup	0
+2866	358	tri-q0-2-2-f2-2-2	0	Standard	measured	0
+2867	358	tri-q0-2-2-f2-2-2	0	Accelerated	measured	0
+2868	358	tri-q0-2-2-f2-2-2	1	Accelerated	measured	1
+2869	358	tri-q0-2-2-f2-2-2	1	Standard	measured	1
+2870	358	tri-q0-2-2-f2-2-2	2	Standard	measured	2
+2871	358	tri-q0-2-2-f2-2-2	2	Accelerated	measured	2
+2872	359	tri-q0-2-2-f2-2-3	-1	Standard	warmup	0
+2873	359	tri-q0-2-2-f2-2-3	-1	Accelerated	warmup	0
+2874	359	tri-q0-2-2-f2-2-3	0	Accelerated	measured	0
+2875	359	tri-q0-2-2-f2-2-3	0	Standard	measured	0
+2876	359	tri-q0-2-2-f2-2-3	1	Standard	measured	1
+2877	359	tri-q0-2-2-f2-2-3	1	Accelerated	measured	1
+2878	359	tri-q0-2-2-f2-2-3	2	Accelerated	measured	2
+2879	359	tri-q0-2-2-f2-2-3	2	Standard	measured	2
+2880	360	tri-q0-2-2-f2-2-4	-1	Accelerated	warmup	0
+2881	360	tri-q0-2-2-f2-2-4	-1	Standard	warmup	0
+2882	360	tri-q0-2-2-f2-2-4	0	Standard	measured	0
+2883	360	tri-q0-2-2-f2-2-4	0	Accelerated	measured	0
+2884	360	tri-q0-2-2-f2-2-4	1	Accelerated	measured	1
+2885	360	tri-q0-2-2-f2-2-4	1	Standard	measured	1
+2886	360	tri-q0-2-2-f2-2-4	2	Standard	measured	2
+2887	360	tri-q0-2-2-f2-2-4	2	Accelerated	measured	2
+2888	361	tri-q1-0-1-f1-1-1	-1	Standard	warmup	0
+2889	361	tri-q1-0-1-f1-1-1	-1	Accelerated	warmup	0
+2890	361	tri-q1-0-1-f1-1-1	0	Accelerated	measured	0
+2891	361	tri-q1-0-1-f1-1-1	0	Standard	measured	0
+2892	361	tri-q1-0-1-f1-1-1	1	Standard	measured	1
+2893	361	tri-q1-0-1-f1-1-1	1	Accelerated	measured	1
+2894	361	tri-q1-0-1-f1-1-1	2	Accelerated	measured	2
+2895	361	tri-q1-0-1-f1-1-1	2	Standard	measured	2
+2896	362	tri-q1-0-1-f1-2-1	-1	Accelerated	warmup	0
+2897	362	tri-q1-0-1-f1-2-1	-1	Standard	warmup	0
+2898	362	tri-q1-0-1-f1-2-1	0	Standard	measured	0
+2899	362	tri-q1-0-1-f1-2-1	0	Accelerated	measured	0
+2900	362	tri-q1-0-1-f1-2-1	1	Accelerated	measured	1
+2901	362	tri-q1-0-1-f1-2-1	1	Standard	measured	1
+2902	362	tri-q1-0-1-f1-2-1	2	Standard	measured	2
+2903	362	tri-q1-0-1-f1-2-1	2	Accelerated	measured	2
+2904	363	tri-q1-0-2-f1-1-1	-1	Standard	warmup	0
+2905	363	tri-q1-0-2-f1-1-1	-1	Accelerated	warmup	0
+2906	363	tri-q1-0-2-f1-1-1	0	Accelerated	measured	0
+2907	363	tri-q1-0-2-f1-1-1	0	Standard	measured	0
+2908	363	tri-q1-0-2-f1-1-1	1	Standard	measured	1
+2909	363	tri-q1-0-2-f1-1-1	1	Accelerated	measured	1
+2910	363	tri-q1-0-2-f1-1-1	2	Accelerated	measured	2
+2911	363	tri-q1-0-2-f1-1-1	2	Standard	measured	2
+2912	364	tri-q1-0-2-f1-1-2	-1	Accelerated	warmup	0
+2913	364	tri-q1-0-2-f1-1-2	-1	Standard	warmup	0
+2914	364	tri-q1-0-2-f1-1-2	0	Standard	measured	0
+2915	364	tri-q1-0-2-f1-1-2	0	Accelerated	measured	0
+2916	364	tri-q1-0-2-f1-1-2	1	Accelerated	measured	1
+2917	364	tri-q1-0-2-f1-1-2	1	Standard	measured	1
+2918	364	tri-q1-0-2-f1-1-2	2	Standard	measured	2
+2919	364	tri-q1-0-2-f1-1-2	2	Accelerated	measured	2
+2920	365	tri-q1-0-2-f1-2-1	-1	Standard	warmup	0
+2921	365	tri-q1-0-2-f1-2-1	-1	Accelerated	warmup	0
+2922	365	tri-q1-0-2-f1-2-1	0	Accelerated	measured	0
+2923	365	tri-q1-0-2-f1-2-1	0	Standard	measured	0
+2924	365	tri-q1-0-2-f1-2-1	1	Standard	measured	1
+2925	365	tri-q1-0-2-f1-2-1	1	Accelerated	measured	1
+2926	365	tri-q1-0-2-f1-2-1	2	Accelerated	measured	2
+2927	365	tri-q1-0-2-f1-2-1	2	Standard	measured	2
+2928	366	tri-q1-0-2-f1-2-2	-1	Accelerated	warmup	0
+2929	366	tri-q1-0-2-f1-2-2	-1	Standard	warmup	0
+2930	366	tri-q1-0-2-f1-2-2	0	Standard	measured	0
+2931	366	tri-q1-0-2-f1-2-2	0	Accelerated	measured	0
+2932	366	tri-q1-0-2-f1-2-2	1	Accelerated	measured	1
+2933	366	tri-q1-0-2-f1-2-2	1	Standard	measured	1
+2934	366	tri-q1-0-2-f1-2-2	2	Standard	measured	2
+2935	366	tri-q1-0-2-f1-2-2	2	Accelerated	measured	2
+2936	367	tri-q1-0-2-f1-3-1	-1	Standard	warmup	0
+2937	367	tri-q1-0-2-f1-3-1	-1	Accelerated	warmup	0
+2938	367	tri-q1-0-2-f1-3-1	0	Accelerated	measured	0
+2939	367	tri-q1-0-2-f1-3-1	0	Standard	measured	0
+2940	367	tri-q1-0-2-f1-3-1	1	Standard	measured	1
+2941	367	tri-q1-0-2-f1-3-1	1	Accelerated	measured	1
+2942	367	tri-q1-0-2-f1-3-1	2	Accelerated	measured	2
+2943	367	tri-q1-0-2-f1-3-1	2	Standard	measured	2
+2944	368	tri-q1-0-2-f1-3-2	-1	Accelerated	warmup	0
+2945	368	tri-q1-0-2-f1-3-2	-1	Standard	warmup	0
+2946	368	tri-q1-0-2-f1-3-2	0	Standard	measured	0
+2947	368	tri-q1-0-2-f1-3-2	0	Accelerated	measured	0
+2948	368	tri-q1-0-2-f1-3-2	1	Accelerated	measured	1
+2949	368	tri-q1-0-2-f1-3-2	1	Standard	measured	1
+2950	368	tri-q1-0-2-f1-3-2	2	Standard	measured	2
+2951	368	tri-q1-0-2-f1-3-2	2	Accelerated	measured	2
+2952	369	tri-q1-1-0-f1-1-1	-1	Standard	warmup	0
+2953	369	tri-q1-1-0-f1-1-1	-1	Accelerated	warmup	0
+2954	369	tri-q1-1-0-f1-1-1	0	Accelerated	measured	0
+2955	369	tri-q1-1-0-f1-1-1	0	Standard	measured	0
+2956	369	tri-q1-1-0-f1-1-1	1	Standard	measured	1
+2957	369	tri-q1-1-0-f1-1-1	1	Accelerated	measured	1
+2958	369	tri-q1-1-0-f1-1-1	2	Accelerated	measured	2
+2959	369	tri-q1-1-0-f1-1-1	2	Standard	measured	2
+2960	370	tri-q1-1-0-f2-1-1	-1	Accelerated	warmup	0
+2961	370	tri-q1-1-0-f2-1-1	-1	Standard	warmup	0
+2962	370	tri-q1-1-0-f2-1-1	0	Standard	measured	0
+2963	370	tri-q1-1-0-f2-1-1	0	Accelerated	measured	0
+2964	370	tri-q1-1-0-f2-1-1	1	Accelerated	measured	1
+2965	370	tri-q1-1-0-f2-1-1	1	Standard	measured	1
+2966	370	tri-q1-1-0-f2-1-1	2	Standard	measured	2
+2967	370	tri-q1-1-0-f2-1-1	2	Accelerated	measured	2
+2968	371	tri-q1-1-1-f1-1-1	-1	Standard	warmup	0
+2969	371	tri-q1-1-1-f1-1-1	-1	Accelerated	warmup	0
+2970	371	tri-q1-1-1-f1-1-1	0	Accelerated	measured	0
+2971	371	tri-q1-1-1-f1-1-1	0	Standard	measured	0
+2972	371	tri-q1-1-1-f1-1-1	1	Standard	measured	1
+2973	371	tri-q1-1-1-f1-1-1	1	Accelerated	measured	1
+2974	371	tri-q1-1-1-f1-1-1	2	Accelerated	measured	2
+2975	371	tri-q1-1-1-f1-1-1	2	Standard	measured	2
+2976	372	tri-q1-1-1-f1-1-2	-1	Accelerated	warmup	0
+2977	372	tri-q1-1-1-f1-1-2	-1	Standard	warmup	0
+2978	372	tri-q1-1-1-f1-1-2	0	Standard	measured	0
+2979	372	tri-q1-1-1-f1-1-2	0	Accelerated	measured	0
+2980	372	tri-q1-1-1-f1-1-2	1	Accelerated	measured	1
+2981	372	tri-q1-1-1-f1-1-2	1	Standard	measured	1
+2982	372	tri-q1-1-1-f1-1-2	2	Standard	measured	2
+2983	372	tri-q1-1-1-f1-1-2	2	Accelerated	measured	2
+2984	373	tri-q1-1-1-f1-2-1	-1	Standard	warmup	0
+2985	373	tri-q1-1-1-f1-2-1	-1	Accelerated	warmup	0
+2986	373	tri-q1-1-1-f1-2-1	0	Accelerated	measured	0
+2987	373	tri-q1-1-1-f1-2-1	0	Standard	measured	0
+2988	373	tri-q1-1-1-f1-2-1	1	Standard	measured	1
+2989	373	tri-q1-1-1-f1-2-1	1	Accelerated	measured	1
+2990	373	tri-q1-1-1-f1-2-1	2	Accelerated	measured	2
+2991	373	tri-q1-1-1-f1-2-1	2	Standard	measured	2
+2992	374	tri-q1-1-1-f1-2-2	-1	Accelerated	warmup	0
+2993	374	tri-q1-1-1-f1-2-2	-1	Standard	warmup	0
+2994	374	tri-q1-1-1-f1-2-2	0	Standard	measured	0
+2995	374	tri-q1-1-1-f1-2-2	0	Accelerated	measured	0
+2996	374	tri-q1-1-1-f1-2-2	1	Accelerated	measured	1
+2997	374	tri-q1-1-1-f1-2-2	1	Standard	measured	1
+2998	374	tri-q1-1-1-f1-2-2	2	Standard	measured	2
+2999	374	tri-q1-1-1-f1-2-2	2	Accelerated	measured	2
+3000	375	tri-q1-1-1-f2-1-1	-1	Standard	warmup	0
+3001	375	tri-q1-1-1-f2-1-1	-1	Accelerated	warmup	0
+3002	375	tri-q1-1-1-f2-1-1	0	Accelerated	measured	0
+3003	375	tri-q1-1-1-f2-1-1	0	Standard	measured	0
+3004	375	tri-q1-1-1-f2-1-1	1	Standard	measured	1
+3005	375	tri-q1-1-1-f2-1-1	1	Accelerated	measured	1
+3006	375	tri-q1-1-1-f2-1-1	2	Accelerated	measured	2
+3007	375	tri-q1-1-1-f2-1-1	2	Standard	measured	2
+3008	376	tri-q1-1-1-f2-1-2	-1	Accelerated	warmup	0
+3009	376	tri-q1-1-1-f2-1-2	-1	Standard	warmup	0
+3010	376	tri-q1-1-1-f2-1-2	0	Standard	measured	0
+3011	376	tri-q1-1-1-f2-1-2	0	Accelerated	measured	0
+3012	376	tri-q1-1-1-f2-1-2	1	Accelerated	measured	1
+3013	376	tri-q1-1-1-f2-1-2	1	Standard	measured	1
+3014	376	tri-q1-1-1-f2-1-2	2	Standard	measured	2
+3015	376	tri-q1-1-1-f2-1-2	2	Accelerated	measured	2
+3016	377	tri-q1-1-1-f2-2-1	-1	Standard	warmup	0
+3017	377	tri-q1-1-1-f2-2-1	-1	Accelerated	warmup	0
+3018	377	tri-q1-1-1-f2-2-1	0	Accelerated	measured	0
+3019	377	tri-q1-1-1-f2-2-1	0	Standard	measured	0
+3020	377	tri-q1-1-1-f2-2-1	1	Standard	measured	1
+3021	377	tri-q1-1-1-f2-2-1	1	Accelerated	measured	1
+3022	377	tri-q1-1-1-f2-2-1	2	Accelerated	measured	2
+3023	377	tri-q1-1-1-f2-2-1	2	Standard	measured	2
+3024	378	tri-q1-1-1-f2-2-2	-1	Accelerated	warmup	0
+3025	378	tri-q1-1-1-f2-2-2	-1	Standard	warmup	0
+3026	378	tri-q1-1-1-f2-2-2	0	Standard	measured	0
+3027	378	tri-q1-1-1-f2-2-2	0	Accelerated	measured	0
+3028	378	tri-q1-1-1-f2-2-2	1	Accelerated	measured	1
+3029	378	tri-q1-1-1-f2-2-2	1	Standard	measured	1
+3030	378	tri-q1-1-1-f2-2-2	2	Standard	measured	2
+3031	378	tri-q1-1-1-f2-2-2	2	Accelerated	measured	2
+3032	379	tri-q1-1-2-f1-1-1	-1	Standard	warmup	0
+3033	379	tri-q1-1-2-f1-1-1	-1	Accelerated	warmup	0
+3034	379	tri-q1-1-2-f1-1-1	0	Accelerated	measured	0
+3035	379	tri-q1-1-2-f1-1-1	0	Standard	measured	0
+3036	379	tri-q1-1-2-f1-1-1	1	Standard	measured	1
+3037	379	tri-q1-1-2-f1-1-1	1	Accelerated	measured	1
+3038	379	tri-q1-1-2-f1-1-1	2	Accelerated	measured	2
+3039	379	tri-q1-1-2-f1-1-1	2	Standard	measured	2
+3040	380	tri-q1-1-2-f1-1-2	-1	Accelerated	warmup	0
+3041	380	tri-q1-1-2-f1-1-2	-1	Standard	warmup	0
+3042	380	tri-q1-1-2-f1-1-2	0	Standard	measured	0
+3043	380	tri-q1-1-2-f1-1-2	0	Accelerated	measured	0
+3044	380	tri-q1-1-2-f1-1-2	1	Accelerated	measured	1
+3045	380	tri-q1-1-2-f1-1-2	1	Standard	measured	1
+3046	380	tri-q1-1-2-f1-1-2	2	Standard	measured	2
+3047	380	tri-q1-1-2-f1-1-2	2	Accelerated	measured	2
+3048	381	tri-q1-1-2-f1-1-3	-1	Standard	warmup	0
+3049	381	tri-q1-1-2-f1-1-3	-1	Accelerated	warmup	0
+3050	381	tri-q1-1-2-f1-1-3	0	Accelerated	measured	0
+3051	381	tri-q1-1-2-f1-1-3	0	Standard	measured	0
+3052	381	tri-q1-1-2-f1-1-3	1	Standard	measured	1
+3053	381	tri-q1-1-2-f1-1-3	1	Accelerated	measured	1
+3054	381	tri-q1-1-2-f1-1-3	2	Accelerated	measured	2
+3055	381	tri-q1-1-2-f1-1-3	2	Standard	measured	2
+3056	382	tri-q1-1-2-f1-2-1	-1	Accelerated	warmup	0
+3057	382	tri-q1-1-2-f1-2-1	-1	Standard	warmup	0
+3058	382	tri-q1-1-2-f1-2-1	0	Standard	measured	0
+3059	382	tri-q1-1-2-f1-2-1	0	Accelerated	measured	0
+3060	382	tri-q1-1-2-f1-2-1	1	Accelerated	measured	1
+3061	382	tri-q1-1-2-f1-2-1	1	Standard	measured	1
+3062	382	tri-q1-1-2-f1-2-1	2	Standard	measured	2
+3063	382	tri-q1-1-2-f1-2-1	2	Accelerated	measured	2
+3064	383	tri-q1-1-2-f1-2-2	-1	Standard	warmup	0
+3065	383	tri-q1-1-2-f1-2-2	-1	Accelerated	warmup	0
+3066	383	tri-q1-1-2-f1-2-2	0	Accelerated	measured	0
+3067	383	tri-q1-1-2-f1-2-2	0	Standard	measured	0
+3068	383	tri-q1-1-2-f1-2-2	1	Standard	measured	1
+3069	383	tri-q1-1-2-f1-2-2	1	Accelerated	measured	1
+3070	383	tri-q1-1-2-f1-2-2	2	Accelerated	measured	2
+3071	383	tri-q1-1-2-f1-2-2	2	Standard	measured	2
+3072	384	tri-q1-1-2-f1-2-3	-1	Accelerated	warmup	0
+3073	384	tri-q1-1-2-f1-2-3	-1	Standard	warmup	0
+3074	384	tri-q1-1-2-f1-2-3	0	Standard	measured	0
+3075	384	tri-q1-1-2-f1-2-3	0	Accelerated	measured	0
+3076	384	tri-q1-1-2-f1-2-3	1	Accelerated	measured	1
+3077	384	tri-q1-1-2-f1-2-3	1	Standard	measured	1
+3078	384	tri-q1-1-2-f1-2-3	2	Standard	measured	2
+3079	384	tri-q1-1-2-f1-2-3	2	Accelerated	measured	2
+3080	385	tri-q1-1-2-f1-3-1	-1	Standard	warmup	0
+3081	385	tri-q1-1-2-f1-3-1	-1	Accelerated	warmup	0
+3082	385	tri-q1-1-2-f1-3-1	0	Accelerated	measured	0
+3083	385	tri-q1-1-2-f1-3-1	0	Standard	measured	0
+3084	385	tri-q1-1-2-f1-3-1	1	Standard	measured	1
+3085	385	tri-q1-1-2-f1-3-1	1	Accelerated	measured	1
+3086	385	tri-q1-1-2-f1-3-1	2	Accelerated	measured	2
+3087	385	tri-q1-1-2-f1-3-1	2	Standard	measured	2
+3088	386	tri-q1-1-2-f1-3-2	-1	Accelerated	warmup	0
+3089	386	tri-q1-1-2-f1-3-2	-1	Standard	warmup	0
+3090	386	tri-q1-1-2-f1-3-2	0	Standard	measured	0
+3091	386	tri-q1-1-2-f1-3-2	0	Accelerated	measured	0
+3092	386	tri-q1-1-2-f1-3-2	1	Accelerated	measured	1
+3093	386	tri-q1-1-2-f1-3-2	1	Standard	measured	1
+3094	386	tri-q1-1-2-f1-3-2	2	Standard	measured	2
+3095	386	tri-q1-1-2-f1-3-2	2	Accelerated	measured	2
+3096	387	tri-q1-1-2-f1-3-3	-1	Standard	warmup	0
+3097	387	tri-q1-1-2-f1-3-3	-1	Accelerated	warmup	0
+3098	387	tri-q1-1-2-f1-3-3	0	Accelerated	measured	0
+3099	387	tri-q1-1-2-f1-3-3	0	Standard	measured	0
+3100	387	tri-q1-1-2-f1-3-3	1	Standard	measured	1
+3101	387	tri-q1-1-2-f1-3-3	1	Accelerated	measured	1
+3102	387	tri-q1-1-2-f1-3-3	2	Accelerated	measured	2
+3103	387	tri-q1-1-2-f1-3-3	2	Standard	measured	2
+3104	388	tri-q1-1-2-f2-1-1	-1	Accelerated	warmup	0
+3105	388	tri-q1-1-2-f2-1-1	-1	Standard	warmup	0
+3106	388	tri-q1-1-2-f2-1-1	0	Standard	measured	0
+3107	388	tri-q1-1-2-f2-1-1	0	Accelerated	measured	0
+3108	388	tri-q1-1-2-f2-1-1	1	Accelerated	measured	1
+3109	388	tri-q1-1-2-f2-1-1	1	Standard	measured	1
+3110	388	tri-q1-1-2-f2-1-1	2	Standard	measured	2
+3111	388	tri-q1-1-2-f2-1-1	2	Accelerated	measured	2
+3112	389	tri-q1-1-2-f2-1-2	-1	Standard	warmup	0
+3113	389	tri-q1-1-2-f2-1-2	-1	Accelerated	warmup	0
+3114	389	tri-q1-1-2-f2-1-2	0	Accelerated	measured	0
+3115	389	tri-q1-1-2-f2-1-2	0	Standard	measured	0
+3116	389	tri-q1-1-2-f2-1-2	1	Standard	measured	1
+3117	389	tri-q1-1-2-f2-1-2	1	Accelerated	measured	1
+3118	389	tri-q1-1-2-f2-1-2	2	Accelerated	measured	2
+3119	389	tri-q1-1-2-f2-1-2	2	Standard	measured	2
+3120	390	tri-q1-1-2-f2-1-3	-1	Accelerated	warmup	0
+3121	390	tri-q1-1-2-f2-1-3	-1	Standard	warmup	0
+3122	390	tri-q1-1-2-f2-1-3	0	Standard	measured	0
+3123	390	tri-q1-1-2-f2-1-3	0	Accelerated	measured	0
+3124	390	tri-q1-1-2-f2-1-3	1	Accelerated	measured	1
+3125	390	tri-q1-1-2-f2-1-3	1	Standard	measured	1
+3126	390	tri-q1-1-2-f2-1-3	2	Standard	measured	2
+3127	390	tri-q1-1-2-f2-1-3	2	Accelerated	measured	2
+3128	391	tri-q1-1-2-f2-2-1	-1	Standard	warmup	0
+3129	391	tri-q1-1-2-f2-2-1	-1	Accelerated	warmup	0
+3130	391	tri-q1-1-2-f2-2-1	0	Accelerated	measured	0
+3131	391	tri-q1-1-2-f2-2-1	0	Standard	measured	0
+3132	391	tri-q1-1-2-f2-2-1	1	Standard	measured	1
+3133	391	tri-q1-1-2-f2-2-1	1	Accelerated	measured	1
+3134	391	tri-q1-1-2-f2-2-1	2	Accelerated	measured	2
+3135	391	tri-q1-1-2-f2-2-1	2	Standard	measured	2
+3136	392	tri-q1-1-2-f2-2-2	-1	Accelerated	warmup	0
+3137	392	tri-q1-1-2-f2-2-2	-1	Standard	warmup	0
+3138	392	tri-q1-1-2-f2-2-2	0	Standard	measured	0
+3139	392	tri-q1-1-2-f2-2-2	0	Accelerated	measured	0
+3140	392	tri-q1-1-2-f2-2-2	1	Accelerated	measured	1
+3141	392	tri-q1-1-2-f2-2-2	1	Standard	measured	1
+3142	392	tri-q1-1-2-f2-2-2	2	Standard	measured	2
+3143	392	tri-q1-1-2-f2-2-2	2	Accelerated	measured	2
+3144	393	tri-q1-1-2-f2-2-3	-1	Standard	warmup	0
+3145	393	tri-q1-1-2-f2-2-3	-1	Accelerated	warmup	0
+3146	393	tri-q1-1-2-f2-2-3	0	Accelerated	measured	0
+3147	393	tri-q1-1-2-f2-2-3	0	Standard	measured	0
+3148	393	tri-q1-1-2-f2-2-3	1	Standard	measured	1
+3149	393	tri-q1-1-2-f2-2-3	1	Accelerated	measured	1
+3150	393	tri-q1-1-2-f2-2-3	2	Accelerated	measured	2
+3151	393	tri-q1-1-2-f2-2-3	2	Standard	measured	2
+3152	394	tri-q1-1-2-f2-3-1	-1	Accelerated	warmup	0
+3153	394	tri-q1-1-2-f2-3-1	-1	Standard	warmup	0
+3154	394	tri-q1-1-2-f2-3-1	0	Standard	measured	0
+3155	394	tri-q1-1-2-f2-3-1	0	Accelerated	measured	0
+3156	394	tri-q1-1-2-f2-3-1	1	Accelerated	measured	1
+3157	394	tri-q1-1-2-f2-3-1	1	Standard	measured	1
+3158	394	tri-q1-1-2-f2-3-1	2	Standard	measured	2
+3159	394	tri-q1-1-2-f2-3-1	2	Accelerated	measured	2
+3160	395	tri-q1-1-2-f2-3-2	-1	Standard	warmup	0
+3161	395	tri-q1-1-2-f2-3-2	-1	Accelerated	warmup	0
+3162	395	tri-q1-1-2-f2-3-2	0	Accelerated	measured	0
+3163	395	tri-q1-1-2-f2-3-2	0	Standard	measured	0
+3164	395	tri-q1-1-2-f2-3-2	1	Standard	measured	1
+3165	395	tri-q1-1-2-f2-3-2	1	Accelerated	measured	1
+3166	395	tri-q1-1-2-f2-3-2	2	Accelerated	measured	2
+3167	395	tri-q1-1-2-f2-3-2	2	Standard	measured	2
+3168	396	tri-q1-1-2-f2-3-3	-1	Accelerated	warmup	0
+3169	396	tri-q1-1-2-f2-3-3	-1	Standard	warmup	0
+3170	396	tri-q1-1-2-f2-3-3	0	Standard	measured	0
+3171	396	tri-q1-1-2-f2-3-3	0	Accelerated	measured	0
+3172	396	tri-q1-1-2-f2-3-3	1	Accelerated	measured	1
+3173	396	tri-q1-1-2-f2-3-3	1	Standard	measured	1
+3174	396	tri-q1-1-2-f2-3-3	2	Standard	measured	2
+3175	396	tri-q1-1-2-f2-3-3	2	Accelerated	measured	2
+3176	397	tri-q1-2-0-f1-1-1	-1	Standard	warmup	0
+3177	397	tri-q1-2-0-f1-1-1	-1	Accelerated	warmup	0
+3178	397	tri-q1-2-0-f1-1-1	0	Accelerated	measured	0
+3179	397	tri-q1-2-0-f1-1-1	0	Standard	measured	0
+3180	397	tri-q1-2-0-f1-1-1	1	Standard	measured	1
+3181	397	tri-q1-2-0-f1-1-1	1	Accelerated	measured	1
+3182	397	tri-q1-2-0-f1-1-1	2	Accelerated	measured	2
+3183	397	tri-q1-2-0-f1-1-1	2	Standard	measured	2
+3184	398	tri-q1-2-0-f1-1-2	-1	Accelerated	warmup	0
+3185	398	tri-q1-2-0-f1-1-2	-1	Standard	warmup	0
+3186	398	tri-q1-2-0-f1-1-2	0	Standard	measured	0
+3187	398	tri-q1-2-0-f1-1-2	0	Accelerated	measured	0
+3188	398	tri-q1-2-0-f1-1-2	1	Accelerated	measured	1
+3189	398	tri-q1-2-0-f1-1-2	1	Standard	measured	1
+3190	398	tri-q1-2-0-f1-1-2	2	Standard	measured	2
+3191	398	tri-q1-2-0-f1-1-2	2	Accelerated	measured	2
+3192	399	tri-q1-2-0-f2-1-1	-1	Standard	warmup	0
+3193	399	tri-q1-2-0-f2-1-1	-1	Accelerated	warmup	0
+3194	399	tri-q1-2-0-f2-1-1	0	Accelerated	measured	0
+3195	399	tri-q1-2-0-f2-1-1	0	Standard	measured	0
+3196	399	tri-q1-2-0-f2-1-1	1	Standard	measured	1
+3197	399	tri-q1-2-0-f2-1-1	1	Accelerated	measured	1
+3198	399	tri-q1-2-0-f2-1-1	2	Accelerated	measured	2
+3199	399	tri-q1-2-0-f2-1-1	2	Standard	measured	2
+3200	400	tri-q1-2-0-f2-1-2	-1	Accelerated	warmup	0
+3201	400	tri-q1-2-0-f2-1-2	-1	Standard	warmup	0
+3202	400	tri-q1-2-0-f2-1-2	0	Standard	measured	0
+3203	400	tri-q1-2-0-f2-1-2	0	Accelerated	measured	0
+3204	400	tri-q1-2-0-f2-1-2	1	Accelerated	measured	1
+3205	400	tri-q1-2-0-f2-1-2	1	Standard	measured	1
+3206	400	tri-q1-2-0-f2-1-2	2	Standard	measured	2
+3207	400	tri-q1-2-0-f2-1-2	2	Accelerated	measured	2
+3208	401	tri-q1-2-0-f3-1-1	-1	Standard	warmup	0
+3209	401	tri-q1-2-0-f3-1-1	-1	Accelerated	warmup	0
+3210	401	tri-q1-2-0-f3-1-1	0	Accelerated	measured	0
+3211	401	tri-q1-2-0-f3-1-1	0	Standard	measured	0
+3212	401	tri-q1-2-0-f3-1-1	1	Standard	measured	1
+3213	401	tri-q1-2-0-f3-1-1	1	Accelerated	measured	1
+3214	401	tri-q1-2-0-f3-1-1	2	Accelerated	measured	2
+3215	401	tri-q1-2-0-f3-1-1	2	Standard	measured	2
+3216	402	tri-q1-2-0-f3-1-2	-1	Accelerated	warmup	0
+3217	402	tri-q1-2-0-f3-1-2	-1	Standard	warmup	0
+3218	402	tri-q1-2-0-f3-1-2	0	Standard	measured	0
+3219	402	tri-q1-2-0-f3-1-2	0	Accelerated	measured	0
+3220	402	tri-q1-2-0-f3-1-2	1	Accelerated	measured	1
+3221	402	tri-q1-2-0-f3-1-2	1	Standard	measured	1
+3222	402	tri-q1-2-0-f3-1-2	2	Standard	measured	2
+3223	402	tri-q1-2-0-f3-1-2	2	Accelerated	measured	2
+3224	403	tri-q1-2-1-f1-1-1	-1	Standard	warmup	0
+3225	403	tri-q1-2-1-f1-1-1	-1	Accelerated	warmup	0
+3226	403	tri-q1-2-1-f1-1-1	0	Accelerated	measured	0
+3227	403	tri-q1-2-1-f1-1-1	0	Standard	measured	0
+3228	403	tri-q1-2-1-f1-1-1	1	Standard	measured	1
+3229	403	tri-q1-2-1-f1-1-1	1	Accelerated	measured	1
+3230	403	tri-q1-2-1-f1-1-1	2	Accelerated	measured	2
+3231	403	tri-q1-2-1-f1-1-1	2	Standard	measured	2
+3232	404	tri-q1-2-1-f1-1-2	-1	Accelerated	warmup	0
+3233	404	tri-q1-2-1-f1-1-2	-1	Standard	warmup	0
+3234	404	tri-q1-2-1-f1-1-2	0	Standard	measured	0
+3235	404	tri-q1-2-1-f1-1-2	0	Accelerated	measured	0
+3236	404	tri-q1-2-1-f1-1-2	1	Accelerated	measured	1
+3237	404	tri-q1-2-1-f1-1-2	1	Standard	measured	1
+3238	404	tri-q1-2-1-f1-1-2	2	Standard	measured	2
+3239	404	tri-q1-2-1-f1-1-2	2	Accelerated	measured	2
+3240	405	tri-q1-2-1-f1-1-3	-1	Standard	warmup	0
+3241	405	tri-q1-2-1-f1-1-3	-1	Accelerated	warmup	0
+3242	405	tri-q1-2-1-f1-1-3	0	Accelerated	measured	0
+3243	405	tri-q1-2-1-f1-1-3	0	Standard	measured	0
+3244	405	tri-q1-2-1-f1-1-3	1	Standard	measured	1
+3245	405	tri-q1-2-1-f1-1-3	1	Accelerated	measured	1
+3246	405	tri-q1-2-1-f1-1-3	2	Accelerated	measured	2
+3247	405	tri-q1-2-1-f1-1-3	2	Standard	measured	2
+3248	406	tri-q1-2-1-f1-2-1	-1	Accelerated	warmup	0
+3249	406	tri-q1-2-1-f1-2-1	-1	Standard	warmup	0
+3250	406	tri-q1-2-1-f1-2-1	0	Standard	measured	0
+3251	406	tri-q1-2-1-f1-2-1	0	Accelerated	measured	0
+3252	406	tri-q1-2-1-f1-2-1	1	Accelerated	measured	1
+3253	406	tri-q1-2-1-f1-2-1	1	Standard	measured	1
+3254	406	tri-q1-2-1-f1-2-1	2	Standard	measured	2
+3255	406	tri-q1-2-1-f1-2-1	2	Accelerated	measured	2
+3256	407	tri-q1-2-1-f1-2-2	-1	Standard	warmup	0
+3257	407	tri-q1-2-1-f1-2-2	-1	Accelerated	warmup	0
+3258	407	tri-q1-2-1-f1-2-2	0	Accelerated	measured	0
+3259	407	tri-q1-2-1-f1-2-2	0	Standard	measured	0
+3260	407	tri-q1-2-1-f1-2-2	1	Standard	measured	1
+3261	407	tri-q1-2-1-f1-2-2	1	Accelerated	measured	1
+3262	407	tri-q1-2-1-f1-2-2	2	Accelerated	measured	2
+3263	407	tri-q1-2-1-f1-2-2	2	Standard	measured	2
+3264	408	tri-q1-2-1-f1-2-3	-1	Accelerated	warmup	0
+3265	408	tri-q1-2-1-f1-2-3	-1	Standard	warmup	0
+3266	408	tri-q1-2-1-f1-2-3	0	Standard	measured	0
+3267	408	tri-q1-2-1-f1-2-3	0	Accelerated	measured	0
+3268	408	tri-q1-2-1-f1-2-3	1	Accelerated	measured	1
+3269	408	tri-q1-2-1-f1-2-3	1	Standard	measured	1
+3270	408	tri-q1-2-1-f1-2-3	2	Standard	measured	2
+3271	408	tri-q1-2-1-f1-2-3	2	Accelerated	measured	2
+3272	409	tri-q1-2-1-f2-1-1	-1	Standard	warmup	0
+3273	409	tri-q1-2-1-f2-1-1	-1	Accelerated	warmup	0
+3274	409	tri-q1-2-1-f2-1-1	0	Accelerated	measured	0
+3275	409	tri-q1-2-1-f2-1-1	0	Standard	measured	0
+3276	409	tri-q1-2-1-f2-1-1	1	Standard	measured	1
+3277	409	tri-q1-2-1-f2-1-1	1	Accelerated	measured	1
+3278	409	tri-q1-2-1-f2-1-1	2	Accelerated	measured	2
+3279	409	tri-q1-2-1-f2-1-1	2	Standard	measured	2
+3280	410	tri-q1-2-1-f2-1-2	-1	Accelerated	warmup	0
+3281	410	tri-q1-2-1-f2-1-2	-1	Standard	warmup	0
+3282	410	tri-q1-2-1-f2-1-2	0	Standard	measured	0
+3283	410	tri-q1-2-1-f2-1-2	0	Accelerated	measured	0
+3284	410	tri-q1-2-1-f2-1-2	1	Accelerated	measured	1
+3285	410	tri-q1-2-1-f2-1-2	1	Standard	measured	1
+3286	410	tri-q1-2-1-f2-1-2	2	Standard	measured	2
+3287	410	tri-q1-2-1-f2-1-2	2	Accelerated	measured	2
+3288	411	tri-q1-2-1-f2-1-3	-1	Standard	warmup	0
+3289	411	tri-q1-2-1-f2-1-3	-1	Accelerated	warmup	0
+3290	411	tri-q1-2-1-f2-1-3	0	Accelerated	measured	0
+3291	411	tri-q1-2-1-f2-1-3	0	Standard	measured	0
+3292	411	tri-q1-2-1-f2-1-3	1	Standard	measured	1
+3293	411	tri-q1-2-1-f2-1-3	1	Accelerated	measured	1
+3294	411	tri-q1-2-1-f2-1-3	2	Accelerated	measured	2
+3295	411	tri-q1-2-1-f2-1-3	2	Standard	measured	2
+3296	412	tri-q1-2-1-f2-2-1	-1	Accelerated	warmup	0
+3297	412	tri-q1-2-1-f2-2-1	-1	Standard	warmup	0
+3298	412	tri-q1-2-1-f2-2-1	0	Standard	measured	0
+3299	412	tri-q1-2-1-f2-2-1	0	Accelerated	measured	0
+3300	412	tri-q1-2-1-f2-2-1	1	Accelerated	measured	1
+3301	412	tri-q1-2-1-f2-2-1	1	Standard	measured	1
+3302	412	tri-q1-2-1-f2-2-1	2	Standard	measured	2
+3303	412	tri-q1-2-1-f2-2-1	2	Accelerated	measured	2
+3304	413	tri-q1-2-1-f2-2-2	-1	Standard	warmup	0
+3305	413	tri-q1-2-1-f2-2-2	-1	Accelerated	warmup	0
+3306	413	tri-q1-2-1-f2-2-2	0	Accelerated	measured	0
+3307	413	tri-q1-2-1-f2-2-2	0	Standard	measured	0
+3308	413	tri-q1-2-1-f2-2-2	1	Standard	measured	1
+3309	413	tri-q1-2-1-f2-2-2	1	Accelerated	measured	1
+3310	413	tri-q1-2-1-f2-2-2	2	Accelerated	measured	2
+3311	413	tri-q1-2-1-f2-2-2	2	Standard	measured	2
+3312	414	tri-q1-2-1-f2-2-3	-1	Accelerated	warmup	0
+3313	414	tri-q1-2-1-f2-2-3	-1	Standard	warmup	0
+3314	414	tri-q1-2-1-f2-2-3	0	Standard	measured	0
+3315	414	tri-q1-2-1-f2-2-3	0	Accelerated	measured	0
+3316	414	tri-q1-2-1-f2-2-3	1	Accelerated	measured	1
+3317	414	tri-q1-2-1-f2-2-3	1	Standard	measured	1
+3318	414	tri-q1-2-1-f2-2-3	2	Standard	measured	2
+3319	414	tri-q1-2-1-f2-2-3	2	Accelerated	measured	2
+3320	415	tri-q1-2-1-f3-1-1	-1	Standard	warmup	0
+3321	415	tri-q1-2-1-f3-1-1	-1	Accelerated	warmup	0
+3322	415	tri-q1-2-1-f3-1-1	0	Accelerated	measured	0
+3323	415	tri-q1-2-1-f3-1-1	0	Standard	measured	0
+3324	415	tri-q1-2-1-f3-1-1	1	Standard	measured	1
+3325	415	tri-q1-2-1-f3-1-1	1	Accelerated	measured	1
+3326	415	tri-q1-2-1-f3-1-1	2	Accelerated	measured	2
+3327	415	tri-q1-2-1-f3-1-1	2	Standard	measured	2
+3328	416	tri-q1-2-1-f3-1-2	-1	Accelerated	warmup	0
+3329	416	tri-q1-2-1-f3-1-2	-1	Standard	warmup	0
+3330	416	tri-q1-2-1-f3-1-2	0	Standard	measured	0
+3331	416	tri-q1-2-1-f3-1-2	0	Accelerated	measured	0
+3332	416	tri-q1-2-1-f3-1-2	1	Accelerated	measured	1
+3333	416	tri-q1-2-1-f3-1-2	1	Standard	measured	1
+3334	416	tri-q1-2-1-f3-1-2	2	Standard	measured	2
+3335	416	tri-q1-2-1-f3-1-2	2	Accelerated	measured	2
+3336	417	tri-q1-2-1-f3-1-3	-1	Standard	warmup	0
+3337	417	tri-q1-2-1-f3-1-3	-1	Accelerated	warmup	0
+3338	417	tri-q1-2-1-f3-1-3	0	Accelerated	measured	0
+3339	417	tri-q1-2-1-f3-1-3	0	Standard	measured	0
+3340	417	tri-q1-2-1-f3-1-3	1	Standard	measured	1
+3341	417	tri-q1-2-1-f3-1-3	1	Accelerated	measured	1
+3342	417	tri-q1-2-1-f3-1-3	2	Accelerated	measured	2
+3343	417	tri-q1-2-1-f3-1-3	2	Standard	measured	2
+3344	418	tri-q1-2-1-f3-2-1	-1	Accelerated	warmup	0
+3345	418	tri-q1-2-1-f3-2-1	-1	Standard	warmup	0
+3346	418	tri-q1-2-1-f3-2-1	0	Standard	measured	0
+3347	418	tri-q1-2-1-f3-2-1	0	Accelerated	measured	0
+3348	418	tri-q1-2-1-f3-2-1	1	Accelerated	measured	1
+3349	418	tri-q1-2-1-f3-2-1	1	Standard	measured	1
+3350	418	tri-q1-2-1-f3-2-1	2	Standard	measured	2
+3351	418	tri-q1-2-1-f3-2-1	2	Accelerated	measured	2
+3352	419	tri-q1-2-1-f3-2-2	-1	Standard	warmup	0
+3353	419	tri-q1-2-1-f3-2-2	-1	Accelerated	warmup	0
+3354	419	tri-q1-2-1-f3-2-2	0	Accelerated	measured	0
+3355	419	tri-q1-2-1-f3-2-2	0	Standard	measured	0
+3356	419	tri-q1-2-1-f3-2-2	1	Standard	measured	1
+3357	419	tri-q1-2-1-f3-2-2	1	Accelerated	measured	1
+3358	419	tri-q1-2-1-f3-2-2	2	Accelerated	measured	2
+3359	419	tri-q1-2-1-f3-2-2	2	Standard	measured	2
+3360	420	tri-q1-2-1-f3-2-3	-1	Accelerated	warmup	0
+3361	420	tri-q1-2-1-f3-2-3	-1	Standard	warmup	0
+3362	420	tri-q1-2-1-f3-2-3	0	Standard	measured	0
+3363	420	tri-q1-2-1-f3-2-3	0	Accelerated	measured	0
+3364	420	tri-q1-2-1-f3-2-3	1	Accelerated	measured	1
+3365	420	tri-q1-2-1-f3-2-3	1	Standard	measured	1
+3366	420	tri-q1-2-1-f3-2-3	2	Standard	measured	2
+3367	420	tri-q1-2-1-f3-2-3	2	Accelerated	measured	2
+3368	421	tri-q1-2-2-f1-1-1	-1	Standard	warmup	0
+3369	421	tri-q1-2-2-f1-1-1	-1	Accelerated	warmup	0
+3370	421	tri-q1-2-2-f1-1-1	0	Accelerated	measured	0
+3371	421	tri-q1-2-2-f1-1-1	0	Standard	measured	0
+3372	421	tri-q1-2-2-f1-1-1	1	Standard	measured	1
+3373	421	tri-q1-2-2-f1-1-1	1	Accelerated	measured	1
+3374	421	tri-q1-2-2-f1-1-1	2	Accelerated	measured	2
+3375	421	tri-q1-2-2-f1-1-1	2	Standard	measured	2
+3376	422	tri-q1-2-2-f1-1-2	-1	Accelerated	warmup	0
+3377	422	tri-q1-2-2-f1-1-2	-1	Standard	warmup	0
+3378	422	tri-q1-2-2-f1-1-2	0	Standard	measured	0
+3379	422	tri-q1-2-2-f1-1-2	0	Accelerated	measured	0
+3380	422	tri-q1-2-2-f1-1-2	1	Accelerated	measured	1
+3381	422	tri-q1-2-2-f1-1-2	1	Standard	measured	1
+3382	422	tri-q1-2-2-f1-1-2	2	Standard	measured	2
+3383	422	tri-q1-2-2-f1-1-2	2	Accelerated	measured	2
+3384	423	tri-q1-2-2-f1-1-3	-1	Standard	warmup	0
+3385	423	tri-q1-2-2-f1-1-3	-1	Accelerated	warmup	0
+3386	423	tri-q1-2-2-f1-1-3	0	Accelerated	measured	0
+3387	423	tri-q1-2-2-f1-1-3	0	Standard	measured	0
+3388	423	tri-q1-2-2-f1-1-3	1	Standard	measured	1
+3389	423	tri-q1-2-2-f1-1-3	1	Accelerated	measured	1
+3390	423	tri-q1-2-2-f1-1-3	2	Accelerated	measured	2
+3391	423	tri-q1-2-2-f1-1-3	2	Standard	measured	2
+3392	424	tri-q1-2-2-f1-1-4	-1	Accelerated	warmup	0
+3393	424	tri-q1-2-2-f1-1-4	-1	Standard	warmup	0
+3394	424	tri-q1-2-2-f1-1-4	0	Standard	measured	0
+3395	424	tri-q1-2-2-f1-1-4	0	Accelerated	measured	0
+3396	424	tri-q1-2-2-f1-1-4	1	Accelerated	measured	1
+3397	424	tri-q1-2-2-f1-1-4	1	Standard	measured	1
+3398	424	tri-q1-2-2-f1-1-4	2	Standard	measured	2
+3399	424	tri-q1-2-2-f1-1-4	2	Accelerated	measured	2
+3400	425	tri-q1-2-2-f1-2-1	-1	Standard	warmup	0
+3401	425	tri-q1-2-2-f1-2-1	-1	Accelerated	warmup	0
+3402	425	tri-q1-2-2-f1-2-1	0	Accelerated	measured	0
+3403	425	tri-q1-2-2-f1-2-1	0	Standard	measured	0
+3404	425	tri-q1-2-2-f1-2-1	1	Standard	measured	1
+3405	425	tri-q1-2-2-f1-2-1	1	Accelerated	measured	1
+3406	425	tri-q1-2-2-f1-2-1	2	Accelerated	measured	2
+3407	425	tri-q1-2-2-f1-2-1	2	Standard	measured	2
+3408	426	tri-q1-2-2-f1-2-2	-1	Accelerated	warmup	0
+3409	426	tri-q1-2-2-f1-2-2	-1	Standard	warmup	0
+3410	426	tri-q1-2-2-f1-2-2	0	Standard	measured	0
+3411	426	tri-q1-2-2-f1-2-2	0	Accelerated	measured	0
+3412	426	tri-q1-2-2-f1-2-2	1	Accelerated	measured	1
+3413	426	tri-q1-2-2-f1-2-2	1	Standard	measured	1
+3414	426	tri-q1-2-2-f1-2-2	2	Standard	measured	2
+3415	426	tri-q1-2-2-f1-2-2	2	Accelerated	measured	2
+3416	427	tri-q1-2-2-f1-2-3	-1	Standard	warmup	0
+3417	427	tri-q1-2-2-f1-2-3	-1	Accelerated	warmup	0
+3418	427	tri-q1-2-2-f1-2-3	0	Accelerated	measured	0
+3419	427	tri-q1-2-2-f1-2-3	0	Standard	measured	0
+3420	427	tri-q1-2-2-f1-2-3	1	Standard	measured	1
+3421	427	tri-q1-2-2-f1-2-3	1	Accelerated	measured	1
+3422	427	tri-q1-2-2-f1-2-3	2	Accelerated	measured	2
+3423	427	tri-q1-2-2-f1-2-3	2	Standard	measured	2
+3424	428	tri-q1-2-2-f1-2-4	-1	Accelerated	warmup	0
+3425	428	tri-q1-2-2-f1-2-4	-1	Standard	warmup	0
+3426	428	tri-q1-2-2-f1-2-4	0	Standard	measured	0
+3427	428	tri-q1-2-2-f1-2-4	0	Accelerated	measured	0
+3428	428	tri-q1-2-2-f1-2-4	1	Accelerated	measured	1
+3429	428	tri-q1-2-2-f1-2-4	1	Standard	measured	1
+3430	428	tri-q1-2-2-f1-2-4	2	Standard	measured	2
+3431	428	tri-q1-2-2-f1-2-4	2	Accelerated	measured	2
+3432	429	tri-q1-2-2-f1-3-1	-1	Standard	warmup	0
+3433	429	tri-q1-2-2-f1-3-1	-1	Accelerated	warmup	0
+3434	429	tri-q1-2-2-f1-3-1	0	Accelerated	measured	0
+3435	429	tri-q1-2-2-f1-3-1	0	Standard	measured	0
+3436	429	tri-q1-2-2-f1-3-1	1	Standard	measured	1
+3437	429	tri-q1-2-2-f1-3-1	1	Accelerated	measured	1
+3438	429	tri-q1-2-2-f1-3-1	2	Accelerated	measured	2
+3439	429	tri-q1-2-2-f1-3-1	2	Standard	measured	2
+3440	430	tri-q1-2-2-f1-3-2	-1	Accelerated	warmup	0
+3441	430	tri-q1-2-2-f1-3-2	-1	Standard	warmup	0
+3442	430	tri-q1-2-2-f1-3-2	0	Standard	measured	0
+3443	430	tri-q1-2-2-f1-3-2	0	Accelerated	measured	0
+3444	430	tri-q1-2-2-f1-3-2	1	Accelerated	measured	1
+3445	430	tri-q1-2-2-f1-3-2	1	Standard	measured	1
+3446	430	tri-q1-2-2-f1-3-2	2	Standard	measured	2
+3447	430	tri-q1-2-2-f1-3-2	2	Accelerated	measured	2
+3448	431	tri-q1-2-2-f1-3-3	-1	Standard	warmup	0
+3449	431	tri-q1-2-2-f1-3-3	-1	Accelerated	warmup	0
+3450	431	tri-q1-2-2-f1-3-3	0	Accelerated	measured	0
+3451	431	tri-q1-2-2-f1-3-3	0	Standard	measured	0
+3452	431	tri-q1-2-2-f1-3-3	1	Standard	measured	1
+3453	431	tri-q1-2-2-f1-3-3	1	Accelerated	measured	1
+3454	431	tri-q1-2-2-f1-3-3	2	Accelerated	measured	2
+3455	431	tri-q1-2-2-f1-3-3	2	Standard	measured	2
+3456	432	tri-q1-2-2-f1-3-4	-1	Accelerated	warmup	0
+3457	432	tri-q1-2-2-f1-3-4	-1	Standard	warmup	0
+3458	432	tri-q1-2-2-f1-3-4	0	Standard	measured	0
+3459	432	tri-q1-2-2-f1-3-4	0	Accelerated	measured	0
+3460	432	tri-q1-2-2-f1-3-4	1	Accelerated	measured	1
+3461	432	tri-q1-2-2-f1-3-4	1	Standard	measured	1
+3462	432	tri-q1-2-2-f1-3-4	2	Standard	measured	2
+3463	432	tri-q1-2-2-f1-3-4	2	Accelerated	measured	2
+3464	433	tri-q1-2-2-f2-1-1	-1	Standard	warmup	0
+3465	433	tri-q1-2-2-f2-1-1	-1	Accelerated	warmup	0
+3466	433	tri-q1-2-2-f2-1-1	0	Accelerated	measured	0
+3467	433	tri-q1-2-2-f2-1-1	0	Standard	measured	0
+3468	433	tri-q1-2-2-f2-1-1	1	Standard	measured	1
+3469	433	tri-q1-2-2-f2-1-1	1	Accelerated	measured	1
+3470	433	tri-q1-2-2-f2-1-1	2	Accelerated	measured	2
+3471	433	tri-q1-2-2-f2-1-1	2	Standard	measured	2
+3472	434	tri-q1-2-2-f2-1-2	-1	Accelerated	warmup	0
+3473	434	tri-q1-2-2-f2-1-2	-1	Standard	warmup	0
+3474	434	tri-q1-2-2-f2-1-2	0	Standard	measured	0
+3475	434	tri-q1-2-2-f2-1-2	0	Accelerated	measured	0
+3476	434	tri-q1-2-2-f2-1-2	1	Accelerated	measured	1
+3477	434	tri-q1-2-2-f2-1-2	1	Standard	measured	1
+3478	434	tri-q1-2-2-f2-1-2	2	Standard	measured	2
+3479	434	tri-q1-2-2-f2-1-2	2	Accelerated	measured	2
+3480	435	tri-q1-2-2-f2-1-3	-1	Standard	warmup	0
+3481	435	tri-q1-2-2-f2-1-3	-1	Accelerated	warmup	0
+3482	435	tri-q1-2-2-f2-1-3	0	Accelerated	measured	0
+3483	435	tri-q1-2-2-f2-1-3	0	Standard	measured	0
+3484	435	tri-q1-2-2-f2-1-3	1	Standard	measured	1
+3485	435	tri-q1-2-2-f2-1-3	1	Accelerated	measured	1
+3486	435	tri-q1-2-2-f2-1-3	2	Accelerated	measured	2
+3487	435	tri-q1-2-2-f2-1-3	2	Standard	measured	2
+3488	436	tri-q1-2-2-f2-1-4	-1	Accelerated	warmup	0
+3489	436	tri-q1-2-2-f2-1-4	-1	Standard	warmup	0
+3490	436	tri-q1-2-2-f2-1-4	0	Standard	measured	0
+3491	436	tri-q1-2-2-f2-1-4	0	Accelerated	measured	0
+3492	436	tri-q1-2-2-f2-1-4	1	Accelerated	measured	1
+3493	436	tri-q1-2-2-f2-1-4	1	Standard	measured	1
+3494	436	tri-q1-2-2-f2-1-4	2	Standard	measured	2
+3495	436	tri-q1-2-2-f2-1-4	2	Accelerated	measured	2
+3496	437	tri-q1-2-2-f2-2-1	-1	Standard	warmup	0
+3497	437	tri-q1-2-2-f2-2-1	-1	Accelerated	warmup	0
+3498	437	tri-q1-2-2-f2-2-1	0	Accelerated	measured	0
+3499	437	tri-q1-2-2-f2-2-1	0	Standard	measured	0
+3500	437	tri-q1-2-2-f2-2-1	1	Standard	measured	1
+3501	437	tri-q1-2-2-f2-2-1	1	Accelerated	measured	1
+3502	437	tri-q1-2-2-f2-2-1	2	Accelerated	measured	2
+3503	437	tri-q1-2-2-f2-2-1	2	Standard	measured	2
+3504	438	tri-q1-2-2-f2-2-2	-1	Accelerated	warmup	0
+3505	438	tri-q1-2-2-f2-2-2	-1	Standard	warmup	0
+3506	438	tri-q1-2-2-f2-2-2	0	Standard	measured	0
+3507	438	tri-q1-2-2-f2-2-2	0	Accelerated	measured	0
+3508	438	tri-q1-2-2-f2-2-2	1	Accelerated	measured	1
+3509	438	tri-q1-2-2-f2-2-2	1	Standard	measured	1
+3510	438	tri-q1-2-2-f2-2-2	2	Standard	measured	2
+3511	438	tri-q1-2-2-f2-2-2	2	Accelerated	measured	2
+3512	439	tri-q1-2-2-f2-2-3	-1	Standard	warmup	0
+3513	439	tri-q1-2-2-f2-2-3	-1	Accelerated	warmup	0
+3514	439	tri-q1-2-2-f2-2-3	0	Accelerated	measured	0
+3515	439	tri-q1-2-2-f2-2-3	0	Standard	measured	0
+3516	439	tri-q1-2-2-f2-2-3	1	Standard	measured	1
+3517	439	tri-q1-2-2-f2-2-3	1	Accelerated	measured	1
+3518	439	tri-q1-2-2-f2-2-3	2	Accelerated	measured	2
+3519	439	tri-q1-2-2-f2-2-3	2	Standard	measured	2
+3520	440	tri-q1-2-2-f2-2-4	-1	Accelerated	warmup	0
+3521	440	tri-q1-2-2-f2-2-4	-1	Standard	warmup	0
+3522	440	tri-q1-2-2-f2-2-4	0	Standard	measured	0
+3523	440	tri-q1-2-2-f2-2-4	0	Accelerated	measured	0
+3524	440	tri-q1-2-2-f2-2-4	1	Accelerated	measured	1
+3525	440	tri-q1-2-2-f2-2-4	1	Standard	measured	1
+3526	440	tri-q1-2-2-f2-2-4	2	Standard	measured	2
+3527	440	tri-q1-2-2-f2-2-4	2	Accelerated	measured	2
+3528	441	tri-q1-2-2-f2-3-1	-1	Standard	warmup	0
+3529	441	tri-q1-2-2-f2-3-1	-1	Accelerated	warmup	0
+3530	441	tri-q1-2-2-f2-3-1	0	Accelerated	measured	0
+3531	441	tri-q1-2-2-f2-3-1	0	Standard	measured	0
+3532	441	tri-q1-2-2-f2-3-1	1	Standard	measured	1
+3533	441	tri-q1-2-2-f2-3-1	1	Accelerated	measured	1
+3534	441	tri-q1-2-2-f2-3-1	2	Accelerated	measured	2
+3535	441	tri-q1-2-2-f2-3-1	2	Standard	measured	2
+3536	442	tri-q1-2-2-f2-3-2	-1	Accelerated	warmup	0
+3537	442	tri-q1-2-2-f2-3-2	-1	Standard	warmup	0
+3538	442	tri-q1-2-2-f2-3-2	0	Standard	measured	0
+3539	442	tri-q1-2-2-f2-3-2	0	Accelerated	measured	0
+3540	442	tri-q1-2-2-f2-3-2	1	Accelerated	measured	1
+3541	442	tri-q1-2-2-f2-3-2	1	Standard	measured	1
+3542	442	tri-q1-2-2-f2-3-2	2	Standard	measured	2
+3543	442	tri-q1-2-2-f2-3-2	2	Accelerated	measured	2
+3544	443	tri-q1-2-2-f2-3-3	-1	Standard	warmup	0
+3545	443	tri-q1-2-2-f2-3-3	-1	Accelerated	warmup	0
+3546	443	tri-q1-2-2-f2-3-3	0	Accelerated	measured	0
+3547	443	tri-q1-2-2-f2-3-3	0	Standard	measured	0
+3548	443	tri-q1-2-2-f2-3-3	1	Standard	measured	1
+3549	443	tri-q1-2-2-f2-3-3	1	Accelerated	measured	1
+3550	443	tri-q1-2-2-f2-3-3	2	Accelerated	measured	2
+3551	443	tri-q1-2-2-f2-3-3	2	Standard	measured	2
+3552	444	tri-q1-2-2-f2-3-4	-1	Accelerated	warmup	0
+3553	444	tri-q1-2-2-f2-3-4	-1	Standard	warmup	0
+3554	444	tri-q1-2-2-f2-3-4	0	Standard	measured	0
+3555	444	tri-q1-2-2-f2-3-4	0	Accelerated	measured	0
+3556	444	tri-q1-2-2-f2-3-4	1	Accelerated	measured	1
+3557	444	tri-q1-2-2-f2-3-4	1	Standard	measured	1
+3558	444	tri-q1-2-2-f2-3-4	2	Standard	measured	2
+3559	444	tri-q1-2-2-f2-3-4	2	Accelerated	measured	2
+3560	445	tri-q1-2-2-f3-1-1	-1	Standard	warmup	0
+3561	445	tri-q1-2-2-f3-1-1	-1	Accelerated	warmup	0
+3562	445	tri-q1-2-2-f3-1-1	0	Accelerated	measured	0
+3563	445	tri-q1-2-2-f3-1-1	0	Standard	measured	0
+3564	445	tri-q1-2-2-f3-1-1	1	Standard	measured	1
+3565	445	tri-q1-2-2-f3-1-1	1	Accelerated	measured	1
+3566	445	tri-q1-2-2-f3-1-1	2	Accelerated	measured	2
+3567	445	tri-q1-2-2-f3-1-1	2	Standard	measured	2
+3568	446	tri-q1-2-2-f3-1-2	-1	Accelerated	warmup	0
+3569	446	tri-q1-2-2-f3-1-2	-1	Standard	warmup	0
+3570	446	tri-q1-2-2-f3-1-2	0	Standard	measured	0
+3571	446	tri-q1-2-2-f3-1-2	0	Accelerated	measured	0
+3572	446	tri-q1-2-2-f3-1-2	1	Accelerated	measured	1
+3573	446	tri-q1-2-2-f3-1-2	1	Standard	measured	1
+3574	446	tri-q1-2-2-f3-1-2	2	Standard	measured	2
+3575	446	tri-q1-2-2-f3-1-2	2	Accelerated	measured	2
+3576	447	tri-q1-2-2-f3-1-3	-1	Standard	warmup	0
+3577	447	tri-q1-2-2-f3-1-3	-1	Accelerated	warmup	0
+3578	447	tri-q1-2-2-f3-1-3	0	Accelerated	measured	0
+3579	447	tri-q1-2-2-f3-1-3	0	Standard	measured	0
+3580	447	tri-q1-2-2-f3-1-3	1	Standard	measured	1
+3581	447	tri-q1-2-2-f3-1-3	1	Accelerated	measured	1
+3582	447	tri-q1-2-2-f3-1-3	2	Accelerated	measured	2
+3583	447	tri-q1-2-2-f3-1-3	2	Standard	measured	2
+3584	448	tri-q1-2-2-f3-1-4	-1	Accelerated	warmup	0
+3585	448	tri-q1-2-2-f3-1-4	-1	Standard	warmup	0
+3586	448	tri-q1-2-2-f3-1-4	0	Standard	measured	0
+3587	448	tri-q1-2-2-f3-1-4	0	Accelerated	measured	0
+3588	448	tri-q1-2-2-f3-1-4	1	Accelerated	measured	1
+3589	448	tri-q1-2-2-f3-1-4	1	Standard	measured	1
+3590	448	tri-q1-2-2-f3-1-4	2	Standard	measured	2
+3591	448	tri-q1-2-2-f3-1-4	2	Accelerated	measured	2
+3592	449	tri-q1-2-2-f3-2-1	-1	Standard	warmup	0
+3593	449	tri-q1-2-2-f3-2-1	-1	Accelerated	warmup	0
+3594	449	tri-q1-2-2-f3-2-1	0	Accelerated	measured	0
+3595	449	tri-q1-2-2-f3-2-1	0	Standard	measured	0
+3596	449	tri-q1-2-2-f3-2-1	1	Standard	measured	1
+3597	449	tri-q1-2-2-f3-2-1	1	Accelerated	measured	1
+3598	449	tri-q1-2-2-f3-2-1	2	Accelerated	measured	2
+3599	449	tri-q1-2-2-f3-2-1	2	Standard	measured	2
+3600	450	tri-q1-2-2-f3-2-2	-1	Accelerated	warmup	0
+3601	450	tri-q1-2-2-f3-2-2	-1	Standard	warmup	0
+3602	450	tri-q1-2-2-f3-2-2	0	Standard	measured	0
+3603	450	tri-q1-2-2-f3-2-2	0	Accelerated	measured	0
+3604	450	tri-q1-2-2-f3-2-2	1	Accelerated	measured	1
+3605	450	tri-q1-2-2-f3-2-2	1	Standard	measured	1
+3606	450	tri-q1-2-2-f3-2-2	2	Standard	measured	2
+3607	450	tri-q1-2-2-f3-2-2	2	Accelerated	measured	2
+3608	451	tri-q1-2-2-f3-2-3	-1	Standard	warmup	0
+3609	451	tri-q1-2-2-f3-2-3	-1	Accelerated	warmup	0
+3610	451	tri-q1-2-2-f3-2-3	0	Accelerated	measured	0
+3611	451	tri-q1-2-2-f3-2-3	0	Standard	measured	0
+3612	451	tri-q1-2-2-f3-2-3	1	Standard	measured	1
+3613	451	tri-q1-2-2-f3-2-3	1	Accelerated	measured	1
+3614	451	tri-q1-2-2-f3-2-3	2	Accelerated	measured	2
+3615	451	tri-q1-2-2-f3-2-3	2	Standard	measured	2
+3616	452	tri-q1-2-2-f3-2-4	-1	Accelerated	warmup	0
+3617	452	tri-q1-2-2-f3-2-4	-1	Standard	warmup	0
+3618	452	tri-q1-2-2-f3-2-4	0	Standard	measured	0
+3619	452	tri-q1-2-2-f3-2-4	0	Accelerated	measured	0
+3620	452	tri-q1-2-2-f3-2-4	1	Accelerated	measured	1
+3621	452	tri-q1-2-2-f3-2-4	1	Standard	measured	1
+3622	452	tri-q1-2-2-f3-2-4	2	Standard	measured	2
+3623	452	tri-q1-2-2-f3-2-4	2	Accelerated	measured	2
+3624	453	tri-q1-2-2-f3-3-1	-1	Standard	warmup	0
+3625	453	tri-q1-2-2-f3-3-1	-1	Accelerated	warmup	0
+3626	453	tri-q1-2-2-f3-3-1	0	Accelerated	measured	0
+3627	453	tri-q1-2-2-f3-3-1	0	Standard	measured	0
+3628	453	tri-q1-2-2-f3-3-1	1	Standard	measured	1
+3629	453	tri-q1-2-2-f3-3-1	1	Accelerated	measured	1
+3630	453	tri-q1-2-2-f3-3-1	2	Accelerated	measured	2
+3631	453	tri-q1-2-2-f3-3-1	2	Standard	measured	2
+3632	454	tri-q1-2-2-f3-3-2	-1	Accelerated	warmup	0
+3633	454	tri-q1-2-2-f3-3-2	-1	Standard	warmup	0
+3634	454	tri-q1-2-2-f3-3-2	0	Standard	measured	0
+3635	454	tri-q1-2-2-f3-3-2	0	Accelerated	measured	0
+3636	454	tri-q1-2-2-f3-3-2	1	Accelerated	measured	1
+3637	454	tri-q1-2-2-f3-3-2	1	Standard	measured	1
+3638	454	tri-q1-2-2-f3-3-2	2	Standard	measured	2
+3639	454	tri-q1-2-2-f3-3-2	2	Accelerated	measured	2
+3640	455	tri-q1-2-2-f3-3-3	-1	Standard	warmup	0
+3641	455	tri-q1-2-2-f3-3-3	-1	Accelerated	warmup	0
+3642	455	tri-q1-2-2-f3-3-3	0	Accelerated	measured	0
+3643	455	tri-q1-2-2-f3-3-3	0	Standard	measured	0
+3644	455	tri-q1-2-2-f3-3-3	1	Standard	measured	1
+3645	455	tri-q1-2-2-f3-3-3	1	Accelerated	measured	1
+3646	455	tri-q1-2-2-f3-3-3	2	Accelerated	measured	2
+3647	455	tri-q1-2-2-f3-3-3	2	Standard	measured	2
+3648	456	tri-q1-2-2-f3-3-4	-1	Accelerated	warmup	0
+3649	456	tri-q1-2-2-f3-3-4	-1	Standard	warmup	0
+3650	456	tri-q1-2-2-f3-3-4	0	Standard	measured	0
+3651	456	tri-q1-2-2-f3-3-4	0	Accelerated	measured	0
+3652	456	tri-q1-2-2-f3-3-4	1	Accelerated	measured	1
+3653	456	tri-q1-2-2-f3-3-4	1	Standard	measured	1
+3654	456	tri-q1-2-2-f3-3-4	2	Standard	measured	2
+3655	456	tri-q1-2-2-f3-3-4	2	Accelerated	measured	2
+3656	457	tri-q2-0-1-f1-1-1	-1	Standard	warmup	0
+3657	457	tri-q2-0-1-f1-1-1	-1	Accelerated	warmup	0
+3658	457	tri-q2-0-1-f1-1-1	0	Accelerated	measured	0
+3659	457	tri-q2-0-1-f1-1-1	0	Standard	measured	0
+3660	457	tri-q2-0-1-f1-1-1	1	Standard	measured	1
+3661	457	tri-q2-0-1-f1-1-1	1	Accelerated	measured	1
+3662	457	tri-q2-0-1-f1-1-1	2	Accelerated	measured	2
+3663	457	tri-q2-0-1-f1-1-1	2	Standard	measured	2
+3664	458	tri-q2-0-1-f1-2-1	-1	Accelerated	warmup	0
+3665	458	tri-q2-0-1-f1-2-1	-1	Standard	warmup	0
+3666	458	tri-q2-0-1-f1-2-1	0	Standard	measured	0
+3667	458	tri-q2-0-1-f1-2-1	0	Accelerated	measured	0
+3668	458	tri-q2-0-1-f1-2-1	1	Accelerated	measured	1
+3669	458	tri-q2-0-1-f1-2-1	1	Standard	measured	1
+3670	458	tri-q2-0-1-f1-2-1	2	Standard	measured	2
+3671	458	tri-q2-0-1-f1-2-1	2	Accelerated	measured	2
+3672	459	tri-q2-0-1-f1-3-1	-1	Standard	warmup	0
+3673	459	tri-q2-0-1-f1-3-1	-1	Accelerated	warmup	0
+3674	459	tri-q2-0-1-f1-3-1	0	Accelerated	measured	0
+3675	459	tri-q2-0-1-f1-3-1	0	Standard	measured	0
+3676	459	tri-q2-0-1-f1-3-1	1	Standard	measured	1
+3677	459	tri-q2-0-1-f1-3-1	1	Accelerated	measured	1
+3678	459	tri-q2-0-1-f1-3-1	2	Accelerated	measured	2
+3679	459	tri-q2-0-1-f1-3-1	2	Standard	measured	2
+3680	460	tri-q2-0-1-f2-1-1	-1	Accelerated	warmup	0
+3681	460	tri-q2-0-1-f2-1-1	-1	Standard	warmup	0
+3682	460	tri-q2-0-1-f2-1-1	0	Standard	measured	0
+3683	460	tri-q2-0-1-f2-1-1	0	Accelerated	measured	0
+3684	460	tri-q2-0-1-f2-1-1	1	Accelerated	measured	1
+3685	460	tri-q2-0-1-f2-1-1	1	Standard	measured	1
+3686	460	tri-q2-0-1-f2-1-1	2	Standard	measured	2
+3687	460	tri-q2-0-1-f2-1-1	2	Accelerated	measured	2
+3688	461	tri-q2-0-1-f2-2-1	-1	Standard	warmup	0
+3689	461	tri-q2-0-1-f2-2-1	-1	Accelerated	warmup	0
+3690	461	tri-q2-0-1-f2-2-1	0	Accelerated	measured	0
+3691	461	tri-q2-0-1-f2-2-1	0	Standard	measured	0
+3692	461	tri-q2-0-1-f2-2-1	1	Standard	measured	1
+3693	461	tri-q2-0-1-f2-2-1	1	Accelerated	measured	1
+3694	461	tri-q2-0-1-f2-2-1	2	Accelerated	measured	2
+3695	461	tri-q2-0-1-f2-2-1	2	Standard	measured	2
+3696	462	tri-q2-0-1-f2-3-1	-1	Accelerated	warmup	0
+3697	462	tri-q2-0-1-f2-3-1	-1	Standard	warmup	0
+3698	462	tri-q2-0-1-f2-3-1	0	Standard	measured	0
+3699	462	tri-q2-0-1-f2-3-1	0	Accelerated	measured	0
+3700	462	tri-q2-0-1-f2-3-1	1	Accelerated	measured	1
+3701	462	tri-q2-0-1-f2-3-1	1	Standard	measured	1
+3702	462	tri-q2-0-1-f2-3-1	2	Standard	measured	2
+3703	462	tri-q2-0-1-f2-3-1	2	Accelerated	measured	2
+3704	463	tri-q2-0-2-f1-1-1	-1	Standard	warmup	0
+3705	463	tri-q2-0-2-f1-1-1	-1	Accelerated	warmup	0
+3706	463	tri-q2-0-2-f1-1-1	0	Accelerated	measured	0
+3707	463	tri-q2-0-2-f1-1-1	0	Standard	measured	0
+3708	463	tri-q2-0-2-f1-1-1	1	Standard	measured	1
+3709	463	tri-q2-0-2-f1-1-1	1	Accelerated	measured	1
+3710	463	tri-q2-0-2-f1-1-1	2	Accelerated	measured	2
+3711	463	tri-q2-0-2-f1-1-1	2	Standard	measured	2
+3712	464	tri-q2-0-2-f1-1-2	-1	Accelerated	warmup	0
+3713	464	tri-q2-0-2-f1-1-2	-1	Standard	warmup	0
+3714	464	tri-q2-0-2-f1-1-2	0	Standard	measured	0
+3715	464	tri-q2-0-2-f1-1-2	0	Accelerated	measured	0
+3716	464	tri-q2-0-2-f1-1-2	1	Accelerated	measured	1
+3717	464	tri-q2-0-2-f1-1-2	1	Standard	measured	1
+3718	464	tri-q2-0-2-f1-1-2	2	Standard	measured	2
+3719	464	tri-q2-0-2-f1-1-2	2	Accelerated	measured	2
+3720	465	tri-q2-0-2-f1-2-1	-1	Standard	warmup	0
+3721	465	tri-q2-0-2-f1-2-1	-1	Accelerated	warmup	0
+3722	465	tri-q2-0-2-f1-2-1	0	Accelerated	measured	0
+3723	465	tri-q2-0-2-f1-2-1	0	Standard	measured	0
+3724	465	tri-q2-0-2-f1-2-1	1	Standard	measured	1
+3725	465	tri-q2-0-2-f1-2-1	1	Accelerated	measured	1
+3726	465	tri-q2-0-2-f1-2-1	2	Accelerated	measured	2
+3727	465	tri-q2-0-2-f1-2-1	2	Standard	measured	2
+3728	466	tri-q2-0-2-f1-2-2	-1	Accelerated	warmup	0
+3729	466	tri-q2-0-2-f1-2-2	-1	Standard	warmup	0
+3730	466	tri-q2-0-2-f1-2-2	0	Standard	measured	0
+3731	466	tri-q2-0-2-f1-2-2	0	Accelerated	measured	0
+3732	466	tri-q2-0-2-f1-2-2	1	Accelerated	measured	1
+3733	466	tri-q2-0-2-f1-2-2	1	Standard	measured	1
+3734	466	tri-q2-0-2-f1-2-2	2	Standard	measured	2
+3735	466	tri-q2-0-2-f1-2-2	2	Accelerated	measured	2
+3736	467	tri-q2-0-2-f1-3-1	-1	Standard	warmup	0
+3737	467	tri-q2-0-2-f1-3-1	-1	Accelerated	warmup	0
+3738	467	tri-q2-0-2-f1-3-1	0	Accelerated	measured	0
+3739	467	tri-q2-0-2-f1-3-1	0	Standard	measured	0
+3740	467	tri-q2-0-2-f1-3-1	1	Standard	measured	1
+3741	467	tri-q2-0-2-f1-3-1	1	Accelerated	measured	1
+3742	467	tri-q2-0-2-f1-3-1	2	Accelerated	measured	2
+3743	467	tri-q2-0-2-f1-3-1	2	Standard	measured	2
+3744	468	tri-q2-0-2-f1-3-2	-1	Accelerated	warmup	0
+3745	468	tri-q2-0-2-f1-3-2	-1	Standard	warmup	0
+3746	468	tri-q2-0-2-f1-3-2	0	Standard	measured	0
+3747	468	tri-q2-0-2-f1-3-2	0	Accelerated	measured	0
+3748	468	tri-q2-0-2-f1-3-2	1	Accelerated	measured	1
+3749	468	tri-q2-0-2-f1-3-2	1	Standard	measured	1
+3750	468	tri-q2-0-2-f1-3-2	2	Standard	measured	2
+3751	468	tri-q2-0-2-f1-3-2	2	Accelerated	measured	2
+3752	469	tri-q2-0-2-f1-4-1	-1	Standard	warmup	0
+3753	469	tri-q2-0-2-f1-4-1	-1	Accelerated	warmup	0
+3754	469	tri-q2-0-2-f1-4-1	0	Accelerated	measured	0
+3755	469	tri-q2-0-2-f1-4-1	0	Standard	measured	0
+3756	469	tri-q2-0-2-f1-4-1	1	Standard	measured	1
+3757	469	tri-q2-0-2-f1-4-1	1	Accelerated	measured	1
+3758	469	tri-q2-0-2-f1-4-1	2	Accelerated	measured	2
+3759	469	tri-q2-0-2-f1-4-1	2	Standard	measured	2
+3760	470	tri-q2-0-2-f1-4-2	-1	Accelerated	warmup	0
+3761	470	tri-q2-0-2-f1-4-2	-1	Standard	warmup	0
+3762	470	tri-q2-0-2-f1-4-2	0	Standard	measured	0
+3763	470	tri-q2-0-2-f1-4-2	0	Accelerated	measured	0
+3764	470	tri-q2-0-2-f1-4-2	1	Accelerated	measured	1
+3765	470	tri-q2-0-2-f1-4-2	1	Standard	measured	1
+3766	470	tri-q2-0-2-f1-4-2	2	Standard	measured	2
+3767	470	tri-q2-0-2-f1-4-2	2	Accelerated	measured	2
+3768	471	tri-q2-0-2-f2-1-1	-1	Standard	warmup	0
+3769	471	tri-q2-0-2-f2-1-1	-1	Accelerated	warmup	0
+3770	471	tri-q2-0-2-f2-1-1	0	Accelerated	measured	0
+3771	471	tri-q2-0-2-f2-1-1	0	Standard	measured	0
+3772	471	tri-q2-0-2-f2-1-1	1	Standard	measured	1
+3773	471	tri-q2-0-2-f2-1-1	1	Accelerated	measured	1
+3774	471	tri-q2-0-2-f2-1-1	2	Accelerated	measured	2
+3775	471	tri-q2-0-2-f2-1-1	2	Standard	measured	2
+3776	472	tri-q2-0-2-f2-1-2	-1	Accelerated	warmup	0
+3777	472	tri-q2-0-2-f2-1-2	-1	Standard	warmup	0
+3778	472	tri-q2-0-2-f2-1-2	0	Standard	measured	0
+3779	472	tri-q2-0-2-f2-1-2	0	Accelerated	measured	0
+3780	472	tri-q2-0-2-f2-1-2	1	Accelerated	measured	1
+3781	472	tri-q2-0-2-f2-1-2	1	Standard	measured	1
+3782	472	tri-q2-0-2-f2-1-2	2	Standard	measured	2
+3783	472	tri-q2-0-2-f2-1-2	2	Accelerated	measured	2
+3784	473	tri-q2-0-2-f2-2-1	-1	Standard	warmup	0
+3785	473	tri-q2-0-2-f2-2-1	-1	Accelerated	warmup	0
+3786	473	tri-q2-0-2-f2-2-1	0	Accelerated	measured	0
+3787	473	tri-q2-0-2-f2-2-1	0	Standard	measured	0
+3788	473	tri-q2-0-2-f2-2-1	1	Standard	measured	1
+3789	473	tri-q2-0-2-f2-2-1	1	Accelerated	measured	1
+3790	473	tri-q2-0-2-f2-2-1	2	Accelerated	measured	2
+3791	473	tri-q2-0-2-f2-2-1	2	Standard	measured	2
+3792	474	tri-q2-0-2-f2-2-2	-1	Accelerated	warmup	0
+3793	474	tri-q2-0-2-f2-2-2	-1	Standard	warmup	0
+3794	474	tri-q2-0-2-f2-2-2	0	Standard	measured	0
+3795	474	tri-q2-0-2-f2-2-2	0	Accelerated	measured	0
+3796	474	tri-q2-0-2-f2-2-2	1	Accelerated	measured	1
+3797	474	tri-q2-0-2-f2-2-2	1	Standard	measured	1
+3798	474	tri-q2-0-2-f2-2-2	2	Standard	measured	2
+3799	474	tri-q2-0-2-f2-2-2	2	Accelerated	measured	2
+3800	475	tri-q2-0-2-f2-3-1	-1	Standard	warmup	0
+3801	475	tri-q2-0-2-f2-3-1	-1	Accelerated	warmup	0
+3802	475	tri-q2-0-2-f2-3-1	0	Accelerated	measured	0
+3803	475	tri-q2-0-2-f2-3-1	0	Standard	measured	0
+3804	475	tri-q2-0-2-f2-3-1	1	Standard	measured	1
+3805	475	tri-q2-0-2-f2-3-1	1	Accelerated	measured	1
+3806	475	tri-q2-0-2-f2-3-1	2	Accelerated	measured	2
+3807	475	tri-q2-0-2-f2-3-1	2	Standard	measured	2
+3808	476	tri-q2-0-2-f2-3-2	-1	Accelerated	warmup	0
+3809	476	tri-q2-0-2-f2-3-2	-1	Standard	warmup	0
+3810	476	tri-q2-0-2-f2-3-2	0	Standard	measured	0
+3811	476	tri-q2-0-2-f2-3-2	0	Accelerated	measured	0
+3812	476	tri-q2-0-2-f2-3-2	1	Accelerated	measured	1
+3813	476	tri-q2-0-2-f2-3-2	1	Standard	measured	1
+3814	476	tri-q2-0-2-f2-3-2	2	Standard	measured	2
+3815	476	tri-q2-0-2-f2-3-2	2	Accelerated	measured	2
+3816	477	tri-q2-0-2-f2-4-1	-1	Standard	warmup	0
+3817	477	tri-q2-0-2-f2-4-1	-1	Accelerated	warmup	0
+3818	477	tri-q2-0-2-f2-4-1	0	Accelerated	measured	0
+3819	477	tri-q2-0-2-f2-4-1	0	Standard	measured	0
+3820	477	tri-q2-0-2-f2-4-1	1	Standard	measured	1
+3821	477	tri-q2-0-2-f2-4-1	1	Accelerated	measured	1
+3822	477	tri-q2-0-2-f2-4-1	2	Accelerated	measured	2
+3823	477	tri-q2-0-2-f2-4-1	2	Standard	measured	2
+3824	478	tri-q2-0-2-f2-4-2	-1	Accelerated	warmup	0
+3825	478	tri-q2-0-2-f2-4-2	-1	Standard	warmup	0
+3826	478	tri-q2-0-2-f2-4-2	0	Standard	measured	0
+3827	478	tri-q2-0-2-f2-4-2	0	Accelerated	measured	0
+3828	478	tri-q2-0-2-f2-4-2	1	Accelerated	measured	1
+3829	478	tri-q2-0-2-f2-4-2	1	Standard	measured	1
+3830	478	tri-q2-0-2-f2-4-2	2	Standard	measured	2
+3831	478	tri-q2-0-2-f2-4-2	2	Accelerated	measured	2
+3832	479	tri-q2-1-0-f1-1-1	-1	Standard	warmup	0
+3833	479	tri-q2-1-0-f1-1-1	-1	Accelerated	warmup	0
+3834	479	tri-q2-1-0-f1-1-1	0	Accelerated	measured	0
+3835	479	tri-q2-1-0-f1-1-1	0	Standard	measured	0
+3836	479	tri-q2-1-0-f1-1-1	1	Standard	measured	1
+3837	479	tri-q2-1-0-f1-1-1	1	Accelerated	measured	1
+3838	479	tri-q2-1-0-f1-1-1	2	Accelerated	measured	2
+3839	479	tri-q2-1-0-f1-1-1	2	Standard	measured	2
+3840	480	tri-q2-1-0-f1-2-1	-1	Accelerated	warmup	0
+3841	480	tri-q2-1-0-f1-2-1	-1	Standard	warmup	0
+3842	480	tri-q2-1-0-f1-2-1	0	Standard	measured	0
+3843	480	tri-q2-1-0-f1-2-1	0	Accelerated	measured	0
+3844	480	tri-q2-1-0-f1-2-1	1	Accelerated	measured	1
+3845	480	tri-q2-1-0-f1-2-1	1	Standard	measured	1
+3846	480	tri-q2-1-0-f1-2-1	2	Standard	measured	2
+3847	480	tri-q2-1-0-f1-2-1	2	Accelerated	measured	2
+3848	481	tri-q2-1-0-f2-1-1	-1	Standard	warmup	0
+3849	481	tri-q2-1-0-f2-1-1	-1	Accelerated	warmup	0
+3850	481	tri-q2-1-0-f2-1-1	0	Accelerated	measured	0
+3851	481	tri-q2-1-0-f2-1-1	0	Standard	measured	0
+3852	481	tri-q2-1-0-f2-1-1	1	Standard	measured	1
+3853	481	tri-q2-1-0-f2-1-1	1	Accelerated	measured	1
+3854	481	tri-q2-1-0-f2-1-1	2	Accelerated	measured	2
+3855	481	tri-q2-1-0-f2-1-1	2	Standard	measured	2
+3856	482	tri-q2-1-0-f2-2-1	-1	Accelerated	warmup	0
+3857	482	tri-q2-1-0-f2-2-1	-1	Standard	warmup	0
+3858	482	tri-q2-1-0-f2-2-1	0	Standard	measured	0
+3859	482	tri-q2-1-0-f2-2-1	0	Accelerated	measured	0
+3860	482	tri-q2-1-0-f2-2-1	1	Accelerated	measured	1
+3861	482	tri-q2-1-0-f2-2-1	1	Standard	measured	1
+3862	482	tri-q2-1-0-f2-2-1	2	Standard	measured	2
+3863	482	tri-q2-1-0-f2-2-1	2	Accelerated	measured	2
+3864	483	tri-q2-1-0-f3-1-1	-1	Standard	warmup	0
+3865	483	tri-q2-1-0-f3-1-1	-1	Accelerated	warmup	0
+3866	483	tri-q2-1-0-f3-1-1	0	Accelerated	measured	0
+3867	483	tri-q2-1-0-f3-1-1	0	Standard	measured	0
+3868	483	tri-q2-1-0-f3-1-1	1	Standard	measured	1
+3869	483	tri-q2-1-0-f3-1-1	1	Accelerated	measured	1
+3870	483	tri-q2-1-0-f3-1-1	2	Accelerated	measured	2
+3871	483	tri-q2-1-0-f3-1-1	2	Standard	measured	2
+3872	484	tri-q2-1-0-f3-2-1	-1	Accelerated	warmup	0
+3873	484	tri-q2-1-0-f3-2-1	-1	Standard	warmup	0
+3874	484	tri-q2-1-0-f3-2-1	0	Standard	measured	0
+3875	484	tri-q2-1-0-f3-2-1	0	Accelerated	measured	0
+3876	484	tri-q2-1-0-f3-2-1	1	Accelerated	measured	1
+3877	484	tri-q2-1-0-f3-2-1	1	Standard	measured	1
+3878	484	tri-q2-1-0-f3-2-1	2	Standard	measured	2
+3879	484	tri-q2-1-0-f3-2-1	2	Accelerated	measured	2
+3880	485	tri-q2-1-1-f1-1-1	-1	Standard	warmup	0
+3881	485	tri-q2-1-1-f1-1-1	-1	Accelerated	warmup	0
+3882	485	tri-q2-1-1-f1-1-1	0	Accelerated	measured	0
+3883	485	tri-q2-1-1-f1-1-1	0	Standard	measured	0
+3884	485	tri-q2-1-1-f1-1-1	1	Standard	measured	1
+3885	485	tri-q2-1-1-f1-1-1	1	Accelerated	measured	1
+3886	485	tri-q2-1-1-f1-1-1	2	Accelerated	measured	2
+3887	485	tri-q2-1-1-f1-1-1	2	Standard	measured	2
+3888	486	tri-q2-1-1-f1-1-2	-1	Accelerated	warmup	0
+3889	486	tri-q2-1-1-f1-1-2	-1	Standard	warmup	0
+3890	486	tri-q2-1-1-f1-1-2	0	Standard	measured	0
+3891	486	tri-q2-1-1-f1-1-2	0	Accelerated	measured	0
+3892	486	tri-q2-1-1-f1-1-2	1	Accelerated	measured	1
+3893	486	tri-q2-1-1-f1-1-2	1	Standard	measured	1
+3894	486	tri-q2-1-1-f1-1-2	2	Standard	measured	2
+3895	486	tri-q2-1-1-f1-1-2	2	Accelerated	measured	2
+3896	487	tri-q2-1-1-f1-2-1	-1	Standard	warmup	0
+3897	487	tri-q2-1-1-f1-2-1	-1	Accelerated	warmup	0
+3898	487	tri-q2-1-1-f1-2-1	0	Accelerated	measured	0
+3899	487	tri-q2-1-1-f1-2-1	0	Standard	measured	0
+3900	487	tri-q2-1-1-f1-2-1	1	Standard	measured	1
+3901	487	tri-q2-1-1-f1-2-1	1	Accelerated	measured	1
+3902	487	tri-q2-1-1-f1-2-1	2	Accelerated	measured	2
+3903	487	tri-q2-1-1-f1-2-1	2	Standard	measured	2
+3904	488	tri-q2-1-1-f1-2-2	-1	Accelerated	warmup	0
+3905	488	tri-q2-1-1-f1-2-2	-1	Standard	warmup	0
+3906	488	tri-q2-1-1-f1-2-2	0	Standard	measured	0
+3907	488	tri-q2-1-1-f1-2-2	0	Accelerated	measured	0
+3908	488	tri-q2-1-1-f1-2-2	1	Accelerated	measured	1
+3909	488	tri-q2-1-1-f1-2-2	1	Standard	measured	1
+3910	488	tri-q2-1-1-f1-2-2	2	Standard	measured	2
+3911	488	tri-q2-1-1-f1-2-2	2	Accelerated	measured	2
+3912	489	tri-q2-1-1-f1-3-1	-1	Standard	warmup	0
+3913	489	tri-q2-1-1-f1-3-1	-1	Accelerated	warmup	0
+3914	489	tri-q2-1-1-f1-3-1	0	Accelerated	measured	0
+3915	489	tri-q2-1-1-f1-3-1	0	Standard	measured	0
+3916	489	tri-q2-1-1-f1-3-1	1	Standard	measured	1
+3917	489	tri-q2-1-1-f1-3-1	1	Accelerated	measured	1
+3918	489	tri-q2-1-1-f1-3-1	2	Accelerated	measured	2
+3919	489	tri-q2-1-1-f1-3-1	2	Standard	measured	2
+3920	490	tri-q2-1-1-f1-3-2	-1	Accelerated	warmup	0
+3921	490	tri-q2-1-1-f1-3-2	-1	Standard	warmup	0
+3922	490	tri-q2-1-1-f1-3-2	0	Standard	measured	0
+3923	490	tri-q2-1-1-f1-3-2	0	Accelerated	measured	0
+3924	490	tri-q2-1-1-f1-3-2	1	Accelerated	measured	1
+3925	490	tri-q2-1-1-f1-3-2	1	Standard	measured	1
+3926	490	tri-q2-1-1-f1-3-2	2	Standard	measured	2
+3927	490	tri-q2-1-1-f1-3-2	2	Accelerated	measured	2
+3928	491	tri-q2-1-1-f2-1-1	-1	Standard	warmup	0
+3929	491	tri-q2-1-1-f2-1-1	-1	Accelerated	warmup	0
+3930	491	tri-q2-1-1-f2-1-1	0	Accelerated	measured	0
+3931	491	tri-q2-1-1-f2-1-1	0	Standard	measured	0
+3932	491	tri-q2-1-1-f2-1-1	1	Standard	measured	1
+3933	491	tri-q2-1-1-f2-1-1	1	Accelerated	measured	1
+3934	491	tri-q2-1-1-f2-1-1	2	Accelerated	measured	2
+3935	491	tri-q2-1-1-f2-1-1	2	Standard	measured	2
+3936	492	tri-q2-1-1-f2-1-2	-1	Accelerated	warmup	0
+3937	492	tri-q2-1-1-f2-1-2	-1	Standard	warmup	0
+3938	492	tri-q2-1-1-f2-1-2	0	Standard	measured	0
+3939	492	tri-q2-1-1-f2-1-2	0	Accelerated	measured	0
+3940	492	tri-q2-1-1-f2-1-2	1	Accelerated	measured	1
+3941	492	tri-q2-1-1-f2-1-2	1	Standard	measured	1
+3942	492	tri-q2-1-1-f2-1-2	2	Standard	measured	2
+3943	492	tri-q2-1-1-f2-1-2	2	Accelerated	measured	2
+3944	493	tri-q2-1-1-f2-2-1	-1	Standard	warmup	0
+3945	493	tri-q2-1-1-f2-2-1	-1	Accelerated	warmup	0
+3946	493	tri-q2-1-1-f2-2-1	0	Accelerated	measured	0
+3947	493	tri-q2-1-1-f2-2-1	0	Standard	measured	0
+3948	493	tri-q2-1-1-f2-2-1	1	Standard	measured	1
+3949	493	tri-q2-1-1-f2-2-1	1	Accelerated	measured	1
+3950	493	tri-q2-1-1-f2-2-1	2	Accelerated	measured	2
+3951	493	tri-q2-1-1-f2-2-1	2	Standard	measured	2
+3952	494	tri-q2-1-1-f2-2-2	-1	Accelerated	warmup	0
+3953	494	tri-q2-1-1-f2-2-2	-1	Standard	warmup	0
+3954	494	tri-q2-1-1-f2-2-2	0	Standard	measured	0
+3955	494	tri-q2-1-1-f2-2-2	0	Accelerated	measured	0
+3956	494	tri-q2-1-1-f2-2-2	1	Accelerated	measured	1
+3957	494	tri-q2-1-1-f2-2-2	1	Standard	measured	1
+3958	494	tri-q2-1-1-f2-2-2	2	Standard	measured	2
+3959	494	tri-q2-1-1-f2-2-2	2	Accelerated	measured	2
+3960	495	tri-q2-1-1-f2-3-1	-1	Standard	warmup	0
+3961	495	tri-q2-1-1-f2-3-1	-1	Accelerated	warmup	0
+3962	495	tri-q2-1-1-f2-3-1	0	Accelerated	measured	0
+3963	495	tri-q2-1-1-f2-3-1	0	Standard	measured	0
+3964	495	tri-q2-1-1-f2-3-1	1	Standard	measured	1
+3965	495	tri-q2-1-1-f2-3-1	1	Accelerated	measured	1
+3966	495	tri-q2-1-1-f2-3-1	2	Accelerated	measured	2
+3967	495	tri-q2-1-1-f2-3-1	2	Standard	measured	2
+3968	496	tri-q2-1-1-f2-3-2	-1	Accelerated	warmup	0
+3969	496	tri-q2-1-1-f2-3-2	-1	Standard	warmup	0
+3970	496	tri-q2-1-1-f2-3-2	0	Standard	measured	0
+3971	496	tri-q2-1-1-f2-3-2	0	Accelerated	measured	0
+3972	496	tri-q2-1-1-f2-3-2	1	Accelerated	measured	1
+3973	496	tri-q2-1-1-f2-3-2	1	Standard	measured	1
+3974	496	tri-q2-1-1-f2-3-2	2	Standard	measured	2
+3975	496	tri-q2-1-1-f2-3-2	2	Accelerated	measured	2
+3976	497	tri-q2-1-1-f3-1-1	-1	Standard	warmup	0
+3977	497	tri-q2-1-1-f3-1-1	-1	Accelerated	warmup	0
+3978	497	tri-q2-1-1-f3-1-1	0	Accelerated	measured	0
+3979	497	tri-q2-1-1-f3-1-1	0	Standard	measured	0
+3980	497	tri-q2-1-1-f3-1-1	1	Standard	measured	1
+3981	497	tri-q2-1-1-f3-1-1	1	Accelerated	measured	1
+3982	497	tri-q2-1-1-f3-1-1	2	Accelerated	measured	2
+3983	497	tri-q2-1-1-f3-1-1	2	Standard	measured	2
+3984	498	tri-q2-1-1-f3-1-2	-1	Accelerated	warmup	0
+3985	498	tri-q2-1-1-f3-1-2	-1	Standard	warmup	0
+3986	498	tri-q2-1-1-f3-1-2	0	Standard	measured	0
+3987	498	tri-q2-1-1-f3-1-2	0	Accelerated	measured	0
+3988	498	tri-q2-1-1-f3-1-2	1	Accelerated	measured	1
+3989	498	tri-q2-1-1-f3-1-2	1	Standard	measured	1
+3990	498	tri-q2-1-1-f3-1-2	2	Standard	measured	2
+3991	498	tri-q2-1-1-f3-1-2	2	Accelerated	measured	2
+3992	499	tri-q2-1-1-f3-2-1	-1	Standard	warmup	0
+3993	499	tri-q2-1-1-f3-2-1	-1	Accelerated	warmup	0
+3994	499	tri-q2-1-1-f3-2-1	0	Accelerated	measured	0
+3995	499	tri-q2-1-1-f3-2-1	0	Standard	measured	0
+3996	499	tri-q2-1-1-f3-2-1	1	Standard	measured	1
+3997	499	tri-q2-1-1-f3-2-1	1	Accelerated	measured	1
+3998	499	tri-q2-1-1-f3-2-1	2	Accelerated	measured	2
+3999	499	tri-q2-1-1-f3-2-1	2	Standard	measured	2
+4000	500	tri-q2-1-1-f3-2-2	-1	Accelerated	warmup	0
+4001	500	tri-q2-1-1-f3-2-2	-1	Standard	warmup	0
+4002	500	tri-q2-1-1-f3-2-2	0	Standard	measured	0
+4003	500	tri-q2-1-1-f3-2-2	0	Accelerated	measured	0
+4004	500	tri-q2-1-1-f3-2-2	1	Accelerated	measured	1
+4005	500	tri-q2-1-1-f3-2-2	1	Standard	measured	1
+4006	500	tri-q2-1-1-f3-2-2	2	Standard	measured	2
+4007	500	tri-q2-1-1-f3-2-2	2	Accelerated	measured	2
+4008	501	tri-q2-1-1-f3-3-1	-1	Standard	warmup	0
+4009	501	tri-q2-1-1-f3-3-1	-1	Accelerated	warmup	0
+4010	501	tri-q2-1-1-f3-3-1	0	Accelerated	measured	0
+4011	501	tri-q2-1-1-f3-3-1	0	Standard	measured	0
+4012	501	tri-q2-1-1-f3-3-1	1	Standard	measured	1
+4013	501	tri-q2-1-1-f3-3-1	1	Accelerated	measured	1
+4014	501	tri-q2-1-1-f3-3-1	2	Accelerated	measured	2
+4015	501	tri-q2-1-1-f3-3-1	2	Standard	measured	2
+4016	502	tri-q2-1-1-f3-3-2	-1	Accelerated	warmup	0
+4017	502	tri-q2-1-1-f3-3-2	-1	Standard	warmup	0
+4018	502	tri-q2-1-1-f3-3-2	0	Standard	measured	0
+4019	502	tri-q2-1-1-f3-3-2	0	Accelerated	measured	0
+4020	502	tri-q2-1-1-f3-3-2	1	Accelerated	measured	1
+4021	502	tri-q2-1-1-f3-3-2	1	Standard	measured	1
+4022	502	tri-q2-1-1-f3-3-2	2	Standard	measured	2
+4023	502	tri-q2-1-1-f3-3-2	2	Accelerated	measured	2
+4024	503	tri-q2-1-2-f1-1-1	-1	Standard	warmup	0
+4025	503	tri-q2-1-2-f1-1-1	-1	Accelerated	warmup	0
+4026	503	tri-q2-1-2-f1-1-1	0	Accelerated	measured	0
+4027	503	tri-q2-1-2-f1-1-1	0	Standard	measured	0
+4028	503	tri-q2-1-2-f1-1-1	1	Standard	measured	1
+4029	503	tri-q2-1-2-f1-1-1	1	Accelerated	measured	1
+4030	503	tri-q2-1-2-f1-1-1	2	Accelerated	measured	2
+4031	503	tri-q2-1-2-f1-1-1	2	Standard	measured	2
+4032	504	tri-q2-1-2-f1-1-2	-1	Accelerated	warmup	0
+4033	504	tri-q2-1-2-f1-1-2	-1	Standard	warmup	0
+4034	504	tri-q2-1-2-f1-1-2	0	Standard	measured	0
+4035	504	tri-q2-1-2-f1-1-2	0	Accelerated	measured	0
+4036	504	tri-q2-1-2-f1-1-2	1	Accelerated	measured	1
+4037	504	tri-q2-1-2-f1-1-2	1	Standard	measured	1
+4038	504	tri-q2-1-2-f1-1-2	2	Standard	measured	2
+4039	504	tri-q2-1-2-f1-1-2	2	Accelerated	measured	2
+4040	505	tri-q2-1-2-f1-1-3	-1	Standard	warmup	0
+4041	505	tri-q2-1-2-f1-1-3	-1	Accelerated	warmup	0
+4042	505	tri-q2-1-2-f1-1-3	0	Accelerated	measured	0
+4043	505	tri-q2-1-2-f1-1-3	0	Standard	measured	0
+4044	505	tri-q2-1-2-f1-1-3	1	Standard	measured	1
+4045	505	tri-q2-1-2-f1-1-3	1	Accelerated	measured	1
+4046	505	tri-q2-1-2-f1-1-3	2	Accelerated	measured	2
+4047	505	tri-q2-1-2-f1-1-3	2	Standard	measured	2
+4048	506	tri-q2-1-2-f1-2-1	-1	Accelerated	warmup	0
+4049	506	tri-q2-1-2-f1-2-1	-1	Standard	warmup	0
+4050	506	tri-q2-1-2-f1-2-1	0	Standard	measured	0
+4051	506	tri-q2-1-2-f1-2-1	0	Accelerated	measured	0
+4052	506	tri-q2-1-2-f1-2-1	1	Accelerated	measured	1
+4053	506	tri-q2-1-2-f1-2-1	1	Standard	measured	1
+4054	506	tri-q2-1-2-f1-2-1	2	Standard	measured	2
+4055	506	tri-q2-1-2-f1-2-1	2	Accelerated	measured	2
+4056	507	tri-q2-1-2-f1-2-2	-1	Standard	warmup	0
+4057	507	tri-q2-1-2-f1-2-2	-1	Accelerated	warmup	0
+4058	507	tri-q2-1-2-f1-2-2	0	Accelerated	measured	0
+4059	507	tri-q2-1-2-f1-2-2	0	Standard	measured	0
+4060	507	tri-q2-1-2-f1-2-2	1	Standard	measured	1
+4061	507	tri-q2-1-2-f1-2-2	1	Accelerated	measured	1
+4062	507	tri-q2-1-2-f1-2-2	2	Accelerated	measured	2
+4063	507	tri-q2-1-2-f1-2-2	2	Standard	measured	2
+4064	508	tri-q2-1-2-f1-2-3	-1	Accelerated	warmup	0
+4065	508	tri-q2-1-2-f1-2-3	-1	Standard	warmup	0
+4066	508	tri-q2-1-2-f1-2-3	0	Standard	measured	0
+4067	508	tri-q2-1-2-f1-2-3	0	Accelerated	measured	0
+4068	508	tri-q2-1-2-f1-2-3	1	Accelerated	measured	1
+4069	508	tri-q2-1-2-f1-2-3	1	Standard	measured	1
+4070	508	tri-q2-1-2-f1-2-3	2	Standard	measured	2
+4071	508	tri-q2-1-2-f1-2-3	2	Accelerated	measured	2
+4072	509	tri-q2-1-2-f1-3-1	-1	Standard	warmup	0
+4073	509	tri-q2-1-2-f1-3-1	-1	Accelerated	warmup	0
+4074	509	tri-q2-1-2-f1-3-1	0	Accelerated	measured	0
+4075	509	tri-q2-1-2-f1-3-1	0	Standard	measured	0
+4076	509	tri-q2-1-2-f1-3-1	1	Standard	measured	1
+4077	509	tri-q2-1-2-f1-3-1	1	Accelerated	measured	1
+4078	509	tri-q2-1-2-f1-3-1	2	Accelerated	measured	2
+4079	509	tri-q2-1-2-f1-3-1	2	Standard	measured	2
+4080	510	tri-q2-1-2-f1-3-2	-1	Accelerated	warmup	0
+4081	510	tri-q2-1-2-f1-3-2	-1	Standard	warmup	0
+4082	510	tri-q2-1-2-f1-3-2	0	Standard	measured	0
+4083	510	tri-q2-1-2-f1-3-2	0	Accelerated	measured	0
+4084	510	tri-q2-1-2-f1-3-2	1	Accelerated	measured	1
+4085	510	tri-q2-1-2-f1-3-2	1	Standard	measured	1
+4086	510	tri-q2-1-2-f1-3-2	2	Standard	measured	2
+4087	510	tri-q2-1-2-f1-3-2	2	Accelerated	measured	2
+4088	511	tri-q2-1-2-f1-3-3	-1	Standard	warmup	0
+4089	511	tri-q2-1-2-f1-3-3	-1	Accelerated	warmup	0
+4090	511	tri-q2-1-2-f1-3-3	0	Accelerated	measured	0
+4091	511	tri-q2-1-2-f1-3-3	0	Standard	measured	0
+4092	511	tri-q2-1-2-f1-3-3	1	Standard	measured	1
+4093	511	tri-q2-1-2-f1-3-3	1	Accelerated	measured	1
+4094	511	tri-q2-1-2-f1-3-3	2	Accelerated	measured	2
+4095	511	tri-q2-1-2-f1-3-3	2	Standard	measured	2
+4096	512	tri-q2-1-2-f1-4-1	-1	Accelerated	warmup	0
+4097	512	tri-q2-1-2-f1-4-1	-1	Standard	warmup	0
+4098	512	tri-q2-1-2-f1-4-1	0	Standard	measured	0
+4099	512	tri-q2-1-2-f1-4-1	0	Accelerated	measured	0
+4100	512	tri-q2-1-2-f1-4-1	1	Accelerated	measured	1
+4101	512	tri-q2-1-2-f1-4-1	1	Standard	measured	1
+4102	512	tri-q2-1-2-f1-4-1	2	Standard	measured	2
+4103	512	tri-q2-1-2-f1-4-1	2	Accelerated	measured	2
+4104	513	tri-q2-1-2-f1-4-2	-1	Standard	warmup	0
+4105	513	tri-q2-1-2-f1-4-2	-1	Accelerated	warmup	0
+4106	513	tri-q2-1-2-f1-4-2	0	Accelerated	measured	0
+4107	513	tri-q2-1-2-f1-4-2	0	Standard	measured	0
+4108	513	tri-q2-1-2-f1-4-2	1	Standard	measured	1
+4109	513	tri-q2-1-2-f1-4-2	1	Accelerated	measured	1
+4110	513	tri-q2-1-2-f1-4-2	2	Accelerated	measured	2
+4111	513	tri-q2-1-2-f1-4-2	2	Standard	measured	2
+4112	514	tri-q2-1-2-f1-4-3	-1	Accelerated	warmup	0
+4113	514	tri-q2-1-2-f1-4-3	-1	Standard	warmup	0
+4114	514	tri-q2-1-2-f1-4-3	0	Standard	measured	0
+4115	514	tri-q2-1-2-f1-4-3	0	Accelerated	measured	0
+4116	514	tri-q2-1-2-f1-4-3	1	Accelerated	measured	1
+4117	514	tri-q2-1-2-f1-4-3	1	Standard	measured	1
+4118	514	tri-q2-1-2-f1-4-3	2	Standard	measured	2
+4119	514	tri-q2-1-2-f1-4-3	2	Accelerated	measured	2
+4120	515	tri-q2-1-2-f2-1-1	-1	Standard	warmup	0
+4121	515	tri-q2-1-2-f2-1-1	-1	Accelerated	warmup	0
+4122	515	tri-q2-1-2-f2-1-1	0	Accelerated	measured	0
+4123	515	tri-q2-1-2-f2-1-1	0	Standard	measured	0
+4124	515	tri-q2-1-2-f2-1-1	1	Standard	measured	1
+4125	515	tri-q2-1-2-f2-1-1	1	Accelerated	measured	1
+4126	515	tri-q2-1-2-f2-1-1	2	Accelerated	measured	2
+4127	515	tri-q2-1-2-f2-1-1	2	Standard	measured	2
+4128	516	tri-q2-1-2-f2-1-2	-1	Accelerated	warmup	0
+4129	516	tri-q2-1-2-f2-1-2	-1	Standard	warmup	0
+4130	516	tri-q2-1-2-f2-1-2	0	Standard	measured	0
+4131	516	tri-q2-1-2-f2-1-2	0	Accelerated	measured	0
+4132	516	tri-q2-1-2-f2-1-2	1	Accelerated	measured	1
+4133	516	tri-q2-1-2-f2-1-2	1	Standard	measured	1
+4134	516	tri-q2-1-2-f2-1-2	2	Standard	measured	2
+4135	516	tri-q2-1-2-f2-1-2	2	Accelerated	measured	2
+4136	517	tri-q2-1-2-f2-1-3	-1	Standard	warmup	0
+4137	517	tri-q2-1-2-f2-1-3	-1	Accelerated	warmup	0
+4138	517	tri-q2-1-2-f2-1-3	0	Accelerated	measured	0
+4139	517	tri-q2-1-2-f2-1-3	0	Standard	measured	0
+4140	517	tri-q2-1-2-f2-1-3	1	Standard	measured	1
+4141	517	tri-q2-1-2-f2-1-3	1	Accelerated	measured	1
+4142	517	tri-q2-1-2-f2-1-3	2	Accelerated	measured	2
+4143	517	tri-q2-1-2-f2-1-3	2	Standard	measured	2
+4144	518	tri-q2-1-2-f2-2-1	-1	Accelerated	warmup	0
+4145	518	tri-q2-1-2-f2-2-1	-1	Standard	warmup	0
+4146	518	tri-q2-1-2-f2-2-1	0	Standard	measured	0
+4147	518	tri-q2-1-2-f2-2-1	0	Accelerated	measured	0
+4148	518	tri-q2-1-2-f2-2-1	1	Accelerated	measured	1
+4149	518	tri-q2-1-2-f2-2-1	1	Standard	measured	1
+4150	518	tri-q2-1-2-f2-2-1	2	Standard	measured	2
+4151	518	tri-q2-1-2-f2-2-1	2	Accelerated	measured	2
+4152	519	tri-q2-1-2-f2-2-2	-1	Standard	warmup	0
+4153	519	tri-q2-1-2-f2-2-2	-1	Accelerated	warmup	0
+4154	519	tri-q2-1-2-f2-2-2	0	Accelerated	measured	0
+4155	519	tri-q2-1-2-f2-2-2	0	Standard	measured	0
+4156	519	tri-q2-1-2-f2-2-2	1	Standard	measured	1
+4157	519	tri-q2-1-2-f2-2-2	1	Accelerated	measured	1
+4158	519	tri-q2-1-2-f2-2-2	2	Accelerated	measured	2
+4159	519	tri-q2-1-2-f2-2-2	2	Standard	measured	2
+4160	520	tri-q2-1-2-f2-2-3	-1	Accelerated	warmup	0
+4161	520	tri-q2-1-2-f2-2-3	-1	Standard	warmup	0
+4162	520	tri-q2-1-2-f2-2-3	0	Standard	measured	0
+4163	520	tri-q2-1-2-f2-2-3	0	Accelerated	measured	0
+4164	520	tri-q2-1-2-f2-2-3	1	Accelerated	measured	1
+4165	520	tri-q2-1-2-f2-2-3	1	Standard	measured	1
+4166	520	tri-q2-1-2-f2-2-3	2	Standard	measured	2
+4167	520	tri-q2-1-2-f2-2-3	2	Accelerated	measured	2
+4168	521	tri-q2-1-2-f2-3-1	-1	Standard	warmup	0
+4169	521	tri-q2-1-2-f2-3-1	-1	Accelerated	warmup	0
+4170	521	tri-q2-1-2-f2-3-1	0	Accelerated	measured	0
+4171	521	tri-q2-1-2-f2-3-1	0	Standard	measured	0
+4172	521	tri-q2-1-2-f2-3-1	1	Standard	measured	1
+4173	521	tri-q2-1-2-f2-3-1	1	Accelerated	measured	1
+4174	521	tri-q2-1-2-f2-3-1	2	Accelerated	measured	2
+4175	521	tri-q2-1-2-f2-3-1	2	Standard	measured	2
+4176	522	tri-q2-1-2-f2-3-2	-1	Accelerated	warmup	0
+4177	522	tri-q2-1-2-f2-3-2	-1	Standard	warmup	0
+4178	522	tri-q2-1-2-f2-3-2	0	Standard	measured	0
+4179	522	tri-q2-1-2-f2-3-2	0	Accelerated	measured	0
+4180	522	tri-q2-1-2-f2-3-2	1	Accelerated	measured	1
+4181	522	tri-q2-1-2-f2-3-2	1	Standard	measured	1
+4182	522	tri-q2-1-2-f2-3-2	2	Standard	measured	2
+4183	522	tri-q2-1-2-f2-3-2	2	Accelerated	measured	2
+4184	523	tri-q2-1-2-f2-3-3	-1	Standard	warmup	0
+4185	523	tri-q2-1-2-f2-3-3	-1	Accelerated	warmup	0
+4186	523	tri-q2-1-2-f2-3-3	0	Accelerated	measured	0
+4187	523	tri-q2-1-2-f2-3-3	0	Standard	measured	0
+4188	523	tri-q2-1-2-f2-3-3	1	Standard	measured	1
+4189	523	tri-q2-1-2-f2-3-3	1	Accelerated	measured	1
+4190	523	tri-q2-1-2-f2-3-3	2	Accelerated	measured	2
+4191	523	tri-q2-1-2-f2-3-3	2	Standard	measured	2
+4192	524	tri-q2-1-2-f2-4-1	-1	Accelerated	warmup	0
+4193	524	tri-q2-1-2-f2-4-1	-1	Standard	warmup	0
+4194	524	tri-q2-1-2-f2-4-1	0	Standard	measured	0
+4195	524	tri-q2-1-2-f2-4-1	0	Accelerated	measured	0
+4196	524	tri-q2-1-2-f2-4-1	1	Accelerated	measured	1
+4197	524	tri-q2-1-2-f2-4-1	1	Standard	measured	1
+4198	524	tri-q2-1-2-f2-4-1	2	Standard	measured	2
+4199	524	tri-q2-1-2-f2-4-1	2	Accelerated	measured	2
+4200	525	tri-q2-1-2-f2-4-2	-1	Standard	warmup	0
+4201	525	tri-q2-1-2-f2-4-2	-1	Accelerated	warmup	0
+4202	525	tri-q2-1-2-f2-4-2	0	Accelerated	measured	0
+4203	525	tri-q2-1-2-f2-4-2	0	Standard	measured	0
+4204	525	tri-q2-1-2-f2-4-2	1	Standard	measured	1
+4205	525	tri-q2-1-2-f2-4-2	1	Accelerated	measured	1
+4206	525	tri-q2-1-2-f2-4-2	2	Accelerated	measured	2
+4207	525	tri-q2-1-2-f2-4-2	2	Standard	measured	2
+4208	526	tri-q2-1-2-f2-4-3	-1	Accelerated	warmup	0
+4209	526	tri-q2-1-2-f2-4-3	-1	Standard	warmup	0
+4210	526	tri-q2-1-2-f2-4-3	0	Standard	measured	0
+4211	526	tri-q2-1-2-f2-4-3	0	Accelerated	measured	0
+4212	526	tri-q2-1-2-f2-4-3	1	Accelerated	measured	1
+4213	526	tri-q2-1-2-f2-4-3	1	Standard	measured	1
+4214	526	tri-q2-1-2-f2-4-3	2	Standard	measured	2
+4215	526	tri-q2-1-2-f2-4-3	2	Accelerated	measured	2
+4216	527	tri-q2-1-2-f3-1-1	-1	Standard	warmup	0
+4217	527	tri-q2-1-2-f3-1-1	-1	Accelerated	warmup	0
+4218	527	tri-q2-1-2-f3-1-1	0	Accelerated	measured	0
+4219	527	tri-q2-1-2-f3-1-1	0	Standard	measured	0
+4220	527	tri-q2-1-2-f3-1-1	1	Standard	measured	1
+4221	527	tri-q2-1-2-f3-1-1	1	Accelerated	measured	1
+4222	527	tri-q2-1-2-f3-1-1	2	Accelerated	measured	2
+4223	527	tri-q2-1-2-f3-1-1	2	Standard	measured	2
+4224	528	tri-q2-1-2-f3-1-2	-1	Accelerated	warmup	0
+4225	528	tri-q2-1-2-f3-1-2	-1	Standard	warmup	0
+4226	528	tri-q2-1-2-f3-1-2	0	Standard	measured	0
+4227	528	tri-q2-1-2-f3-1-2	0	Accelerated	measured	0
+4228	528	tri-q2-1-2-f3-1-2	1	Accelerated	measured	1
+4229	528	tri-q2-1-2-f3-1-2	1	Standard	measured	1
+4230	528	tri-q2-1-2-f3-1-2	2	Standard	measured	2
+4231	528	tri-q2-1-2-f3-1-2	2	Accelerated	measured	2
+4232	529	tri-q2-1-2-f3-1-3	-1	Standard	warmup	0
+4233	529	tri-q2-1-2-f3-1-3	-1	Accelerated	warmup	0
+4234	529	tri-q2-1-2-f3-1-3	0	Accelerated	measured	0
+4235	529	tri-q2-1-2-f3-1-3	0	Standard	measured	0
+4236	529	tri-q2-1-2-f3-1-3	1	Standard	measured	1
+4237	529	tri-q2-1-2-f3-1-3	1	Accelerated	measured	1
+4238	529	tri-q2-1-2-f3-1-3	2	Accelerated	measured	2
+4239	529	tri-q2-1-2-f3-1-3	2	Standard	measured	2
+4240	530	tri-q2-1-2-f3-2-1	-1	Accelerated	warmup	0
+4241	530	tri-q2-1-2-f3-2-1	-1	Standard	warmup	0
+4242	530	tri-q2-1-2-f3-2-1	0	Standard	measured	0
+4243	530	tri-q2-1-2-f3-2-1	0	Accelerated	measured	0
+4244	530	tri-q2-1-2-f3-2-1	1	Accelerated	measured	1
+4245	530	tri-q2-1-2-f3-2-1	1	Standard	measured	1
+4246	530	tri-q2-1-2-f3-2-1	2	Standard	measured	2
+4247	530	tri-q2-1-2-f3-2-1	2	Accelerated	measured	2
+4248	531	tri-q2-1-2-f3-2-2	-1	Standard	warmup	0
+4249	531	tri-q2-1-2-f3-2-2	-1	Accelerated	warmup	0
+4250	531	tri-q2-1-2-f3-2-2	0	Accelerated	measured	0
+4251	531	tri-q2-1-2-f3-2-2	0	Standard	measured	0
+4252	531	tri-q2-1-2-f3-2-2	1	Standard	measured	1
+4253	531	tri-q2-1-2-f3-2-2	1	Accelerated	measured	1
+4254	531	tri-q2-1-2-f3-2-2	2	Accelerated	measured	2
+4255	531	tri-q2-1-2-f3-2-2	2	Standard	measured	2
+4256	532	tri-q2-1-2-f3-2-3	-1	Accelerated	warmup	0
+4257	532	tri-q2-1-2-f3-2-3	-1	Standard	warmup	0
+4258	532	tri-q2-1-2-f3-2-3	0	Standard	measured	0
+4259	532	tri-q2-1-2-f3-2-3	0	Accelerated	measured	0
+4260	532	tri-q2-1-2-f3-2-3	1	Accelerated	measured	1
+4261	532	tri-q2-1-2-f3-2-3	1	Standard	measured	1
+4262	532	tri-q2-1-2-f3-2-3	2	Standard	measured	2
+4263	532	tri-q2-1-2-f3-2-3	2	Accelerated	measured	2
+4264	533	tri-q2-1-2-f3-3-1	-1	Standard	warmup	0
+4265	533	tri-q2-1-2-f3-3-1	-1	Accelerated	warmup	0
+4266	533	tri-q2-1-2-f3-3-1	0	Accelerated	measured	0
+4267	533	tri-q2-1-2-f3-3-1	0	Standard	measured	0
+4268	533	tri-q2-1-2-f3-3-1	1	Standard	measured	1
+4269	533	tri-q2-1-2-f3-3-1	1	Accelerated	measured	1
+4270	533	tri-q2-1-2-f3-3-1	2	Accelerated	measured	2
+4271	533	tri-q2-1-2-f3-3-1	2	Standard	measured	2
+4272	534	tri-q2-1-2-f3-3-2	-1	Accelerated	warmup	0
+4273	534	tri-q2-1-2-f3-3-2	-1	Standard	warmup	0
+4274	534	tri-q2-1-2-f3-3-2	0	Standard	measured	0
+4275	534	tri-q2-1-2-f3-3-2	0	Accelerated	measured	0
+4276	534	tri-q2-1-2-f3-3-2	1	Accelerated	measured	1
+4277	534	tri-q2-1-2-f3-3-2	1	Standard	measured	1
+4278	534	tri-q2-1-2-f3-3-2	2	Standard	measured	2
+4279	534	tri-q2-1-2-f3-3-2	2	Accelerated	measured	2
+4280	535	tri-q2-1-2-f3-3-3	-1	Standard	warmup	0
+4281	535	tri-q2-1-2-f3-3-3	-1	Accelerated	warmup	0
+4282	535	tri-q2-1-2-f3-3-3	0	Accelerated	measured	0
+4283	535	tri-q2-1-2-f3-3-3	0	Standard	measured	0
+4284	535	tri-q2-1-2-f3-3-3	1	Standard	measured	1
+4285	535	tri-q2-1-2-f3-3-3	1	Accelerated	measured	1
+4286	535	tri-q2-1-2-f3-3-3	2	Accelerated	measured	2
+4287	535	tri-q2-1-2-f3-3-3	2	Standard	measured	2
+4288	536	tri-q2-1-2-f3-4-1	-1	Accelerated	warmup	0
+4289	536	tri-q2-1-2-f3-4-1	-1	Standard	warmup	0
+4290	536	tri-q2-1-2-f3-4-1	0	Standard	measured	0
+4291	536	tri-q2-1-2-f3-4-1	0	Accelerated	measured	0
+4292	536	tri-q2-1-2-f3-4-1	1	Accelerated	measured	1
+4293	536	tri-q2-1-2-f3-4-1	1	Standard	measured	1
+4294	536	tri-q2-1-2-f3-4-1	2	Standard	measured	2
+4295	536	tri-q2-1-2-f3-4-1	2	Accelerated	measured	2
+4296	537	tri-q2-1-2-f3-4-2	-1	Standard	warmup	0
+4297	537	tri-q2-1-2-f3-4-2	-1	Accelerated	warmup	0
+4298	537	tri-q2-1-2-f3-4-2	0	Accelerated	measured	0
+4299	537	tri-q2-1-2-f3-4-2	0	Standard	measured	0
+4300	537	tri-q2-1-2-f3-4-2	1	Standard	measured	1
+4301	537	tri-q2-1-2-f3-4-2	1	Accelerated	measured	1
+4302	537	tri-q2-1-2-f3-4-2	2	Accelerated	measured	2
+4303	537	tri-q2-1-2-f3-4-2	2	Standard	measured	2
+4304	538	tri-q2-1-2-f3-4-3	-1	Accelerated	warmup	0
+4305	538	tri-q2-1-2-f3-4-3	-1	Standard	warmup	0
+4306	538	tri-q2-1-2-f3-4-3	0	Standard	measured	0
+4307	538	tri-q2-1-2-f3-4-3	0	Accelerated	measured	0
+4308	538	tri-q2-1-2-f3-4-3	1	Accelerated	measured	1
+4309	538	tri-q2-1-2-f3-4-3	1	Standard	measured	1
+4310	538	tri-q2-1-2-f3-4-3	2	Standard	measured	2
+4311	538	tri-q2-1-2-f3-4-3	2	Accelerated	measured	2
+4312	539	tri-q2-2-0-f1-1-1	-1	Standard	warmup	0
+4313	539	tri-q2-2-0-f1-1-1	-1	Accelerated	warmup	0
+4314	539	tri-q2-2-0-f1-1-1	0	Accelerated	measured	0
+4315	539	tri-q2-2-0-f1-1-1	0	Standard	measured	0
+4316	539	tri-q2-2-0-f1-1-1	1	Standard	measured	1
+4317	539	tri-q2-2-0-f1-1-1	1	Accelerated	measured	1
+4318	539	tri-q2-2-0-f1-1-1	2	Accelerated	measured	2
+4319	539	tri-q2-2-0-f1-1-1	2	Standard	measured	2
+4320	540	tri-q2-2-0-f1-1-2	-1	Accelerated	warmup	0
+4321	540	tri-q2-2-0-f1-1-2	-1	Standard	warmup	0
+4322	540	tri-q2-2-0-f1-1-2	0	Standard	measured	0
+4323	540	tri-q2-2-0-f1-1-2	0	Accelerated	measured	0
+4324	540	tri-q2-2-0-f1-1-2	1	Accelerated	measured	1
+4325	540	tri-q2-2-0-f1-1-2	1	Standard	measured	1
+4326	540	tri-q2-2-0-f1-1-2	2	Standard	measured	2
+4327	540	tri-q2-2-0-f1-1-2	2	Accelerated	measured	2
+4328	541	tri-q2-2-0-f1-2-1	-1	Standard	warmup	0
+4329	541	tri-q2-2-0-f1-2-1	-1	Accelerated	warmup	0
+4330	541	tri-q2-2-0-f1-2-1	0	Accelerated	measured	0
+4331	541	tri-q2-2-0-f1-2-1	0	Standard	measured	0
+4332	541	tri-q2-2-0-f1-2-1	1	Standard	measured	1
+4333	541	tri-q2-2-0-f1-2-1	1	Accelerated	measured	1
+4334	541	tri-q2-2-0-f1-2-1	2	Accelerated	measured	2
+4335	541	tri-q2-2-0-f1-2-1	2	Standard	measured	2
+4336	542	tri-q2-2-0-f1-2-2	-1	Accelerated	warmup	0
+4337	542	tri-q2-2-0-f1-2-2	-1	Standard	warmup	0
+4338	542	tri-q2-2-0-f1-2-2	0	Standard	measured	0
+4339	542	tri-q2-2-0-f1-2-2	0	Accelerated	measured	0
+4340	542	tri-q2-2-0-f1-2-2	1	Accelerated	measured	1
+4341	542	tri-q2-2-0-f1-2-2	1	Standard	measured	1
+4342	542	tri-q2-2-0-f1-2-2	2	Standard	measured	2
+4343	542	tri-q2-2-0-f1-2-2	2	Accelerated	measured	2
+4344	543	tri-q2-2-0-f2-1-1	-1	Standard	warmup	0
+4345	543	tri-q2-2-0-f2-1-1	-1	Accelerated	warmup	0
+4346	543	tri-q2-2-0-f2-1-1	0	Accelerated	measured	0
+4347	543	tri-q2-2-0-f2-1-1	0	Standard	measured	0
+4348	543	tri-q2-2-0-f2-1-1	1	Standard	measured	1
+4349	543	tri-q2-2-0-f2-1-1	1	Accelerated	measured	1
+4350	543	tri-q2-2-0-f2-1-1	2	Accelerated	measured	2
+4351	543	tri-q2-2-0-f2-1-1	2	Standard	measured	2
+4352	544	tri-q2-2-0-f2-1-2	-1	Accelerated	warmup	0
+4353	544	tri-q2-2-0-f2-1-2	-1	Standard	warmup	0
+4354	544	tri-q2-2-0-f2-1-2	0	Standard	measured	0
+4355	544	tri-q2-2-0-f2-1-2	0	Accelerated	measured	0
+4356	544	tri-q2-2-0-f2-1-2	1	Accelerated	measured	1
+4357	544	tri-q2-2-0-f2-1-2	1	Standard	measured	1
+4358	544	tri-q2-2-0-f2-1-2	2	Standard	measured	2
+4359	544	tri-q2-2-0-f2-1-2	2	Accelerated	measured	2
+4360	545	tri-q2-2-0-f2-2-1	-1	Standard	warmup	0
+4361	545	tri-q2-2-0-f2-2-1	-1	Accelerated	warmup	0
+4362	545	tri-q2-2-0-f2-2-1	0	Accelerated	measured	0
+4363	545	tri-q2-2-0-f2-2-1	0	Standard	measured	0
+4364	545	tri-q2-2-0-f2-2-1	1	Standard	measured	1
+4365	545	tri-q2-2-0-f2-2-1	1	Accelerated	measured	1
+4366	545	tri-q2-2-0-f2-2-1	2	Accelerated	measured	2
+4367	545	tri-q2-2-0-f2-2-1	2	Standard	measured	2
+4368	546	tri-q2-2-0-f2-2-2	-1	Accelerated	warmup	0
+4369	546	tri-q2-2-0-f2-2-2	-1	Standard	warmup	0
+4370	546	tri-q2-2-0-f2-2-2	0	Standard	measured	0
+4371	546	tri-q2-2-0-f2-2-2	0	Accelerated	measured	0
+4372	546	tri-q2-2-0-f2-2-2	1	Accelerated	measured	1
+4373	546	tri-q2-2-0-f2-2-2	1	Standard	measured	1
+4374	546	tri-q2-2-0-f2-2-2	2	Standard	measured	2
+4375	546	tri-q2-2-0-f2-2-2	2	Accelerated	measured	2
+4376	547	tri-q2-2-0-f3-1-1	-1	Standard	warmup	0
+4377	547	tri-q2-2-0-f3-1-1	-1	Accelerated	warmup	0
+4378	547	tri-q2-2-0-f3-1-1	0	Accelerated	measured	0
+4379	547	tri-q2-2-0-f3-1-1	0	Standard	measured	0
+4380	547	tri-q2-2-0-f3-1-1	1	Standard	measured	1
+4381	547	tri-q2-2-0-f3-1-1	1	Accelerated	measured	1
+4382	547	tri-q2-2-0-f3-1-1	2	Accelerated	measured	2
+4383	547	tri-q2-2-0-f3-1-1	2	Standard	measured	2
+4384	548	tri-q2-2-0-f3-1-2	-1	Accelerated	warmup	0
+4385	548	tri-q2-2-0-f3-1-2	-1	Standard	warmup	0
+4386	548	tri-q2-2-0-f3-1-2	0	Standard	measured	0
+4387	548	tri-q2-2-0-f3-1-2	0	Accelerated	measured	0
+4388	548	tri-q2-2-0-f3-1-2	1	Accelerated	measured	1
+4389	548	tri-q2-2-0-f3-1-2	1	Standard	measured	1
+4390	548	tri-q2-2-0-f3-1-2	2	Standard	measured	2
+4391	548	tri-q2-2-0-f3-1-2	2	Accelerated	measured	2
+4392	549	tri-q2-2-0-f3-2-1	-1	Standard	warmup	0
+4393	549	tri-q2-2-0-f3-2-1	-1	Accelerated	warmup	0
+4394	549	tri-q2-2-0-f3-2-1	0	Accelerated	measured	0
+4395	549	tri-q2-2-0-f3-2-1	0	Standard	measured	0
+4396	549	tri-q2-2-0-f3-2-1	1	Standard	measured	1
+4397	549	tri-q2-2-0-f3-2-1	1	Accelerated	measured	1
+4398	549	tri-q2-2-0-f3-2-1	2	Accelerated	measured	2
+4399	549	tri-q2-2-0-f3-2-1	2	Standard	measured	2
+4400	550	tri-q2-2-0-f3-2-2	-1	Accelerated	warmup	0
+4401	550	tri-q2-2-0-f3-2-2	-1	Standard	warmup	0
+4402	550	tri-q2-2-0-f3-2-2	0	Standard	measured	0
+4403	550	tri-q2-2-0-f3-2-2	0	Accelerated	measured	0
+4404	550	tri-q2-2-0-f3-2-2	1	Accelerated	measured	1
+4405	550	tri-q2-2-0-f3-2-2	1	Standard	measured	1
+4406	550	tri-q2-2-0-f3-2-2	2	Standard	measured	2
+4407	550	tri-q2-2-0-f3-2-2	2	Accelerated	measured	2
+4408	551	tri-q2-2-0-f4-1-1	-1	Standard	warmup	0
+4409	551	tri-q2-2-0-f4-1-1	-1	Accelerated	warmup	0
+4410	551	tri-q2-2-0-f4-1-1	0	Accelerated	measured	0
+4411	551	tri-q2-2-0-f4-1-1	0	Standard	measured	0
+4412	551	tri-q2-2-0-f4-1-1	1	Standard	measured	1
+4413	551	tri-q2-2-0-f4-1-1	1	Accelerated	measured	1
+4414	551	tri-q2-2-0-f4-1-1	2	Accelerated	measured	2
+4415	551	tri-q2-2-0-f4-1-1	2	Standard	measured	2
+4416	552	tri-q2-2-0-f4-1-2	-1	Accelerated	warmup	0
+4417	552	tri-q2-2-0-f4-1-2	-1	Standard	warmup	0
+4418	552	tri-q2-2-0-f4-1-2	0	Standard	measured	0
+4419	552	tri-q2-2-0-f4-1-2	0	Accelerated	measured	0
+4420	552	tri-q2-2-0-f4-1-2	1	Accelerated	measured	1
+4421	552	tri-q2-2-0-f4-1-2	1	Standard	measured	1
+4422	552	tri-q2-2-0-f4-1-2	2	Standard	measured	2
+4423	552	tri-q2-2-0-f4-1-2	2	Accelerated	measured	2
+4424	553	tri-q2-2-0-f4-2-1	-1	Standard	warmup	0
+4425	553	tri-q2-2-0-f4-2-1	-1	Accelerated	warmup	0
+4426	553	tri-q2-2-0-f4-2-1	0	Accelerated	measured	0
+4427	553	tri-q2-2-0-f4-2-1	0	Standard	measured	0
+4428	553	tri-q2-2-0-f4-2-1	1	Standard	measured	1
+4429	553	tri-q2-2-0-f4-2-1	1	Accelerated	measured	1
+4430	553	tri-q2-2-0-f4-2-1	2	Accelerated	measured	2
+4431	553	tri-q2-2-0-f4-2-1	2	Standard	measured	2
+4432	554	tri-q2-2-0-f4-2-2	-1	Accelerated	warmup	0
+4433	554	tri-q2-2-0-f4-2-2	-1	Standard	warmup	0
+4434	554	tri-q2-2-0-f4-2-2	0	Standard	measured	0
+4435	554	tri-q2-2-0-f4-2-2	0	Accelerated	measured	0
+4436	554	tri-q2-2-0-f4-2-2	1	Accelerated	measured	1
+4437	554	tri-q2-2-0-f4-2-2	1	Standard	measured	1
+4438	554	tri-q2-2-0-f4-2-2	2	Standard	measured	2
+4439	554	tri-q2-2-0-f4-2-2	2	Accelerated	measured	2
+4440	555	tri-q2-2-1-f1-1-1	-1	Standard	warmup	0
+4441	555	tri-q2-2-1-f1-1-1	-1	Accelerated	warmup	0
+4442	555	tri-q2-2-1-f1-1-1	0	Accelerated	measured	0
+4443	555	tri-q2-2-1-f1-1-1	0	Standard	measured	0
+4444	555	tri-q2-2-1-f1-1-1	1	Standard	measured	1
+4445	555	tri-q2-2-1-f1-1-1	1	Accelerated	measured	1
+4446	555	tri-q2-2-1-f1-1-1	2	Accelerated	measured	2
+4447	555	tri-q2-2-1-f1-1-1	2	Standard	measured	2
+4448	556	tri-q2-2-1-f1-1-2	-1	Accelerated	warmup	0
+4449	556	tri-q2-2-1-f1-1-2	-1	Standard	warmup	0
+4450	556	tri-q2-2-1-f1-1-2	0	Standard	measured	0
+4451	556	tri-q2-2-1-f1-1-2	0	Accelerated	measured	0
+4452	556	tri-q2-2-1-f1-1-2	1	Accelerated	measured	1
+4453	556	tri-q2-2-1-f1-1-2	1	Standard	measured	1
+4454	556	tri-q2-2-1-f1-1-2	2	Standard	measured	2
+4455	556	tri-q2-2-1-f1-1-2	2	Accelerated	measured	2
+4456	557	tri-q2-2-1-f1-1-3	-1	Standard	warmup	0
+4457	557	tri-q2-2-1-f1-1-3	-1	Accelerated	warmup	0
+4458	557	tri-q2-2-1-f1-1-3	0	Accelerated	measured	0
+4459	557	tri-q2-2-1-f1-1-3	0	Standard	measured	0
+4460	557	tri-q2-2-1-f1-1-3	1	Standard	measured	1
+4461	557	tri-q2-2-1-f1-1-3	1	Accelerated	measured	1
+4462	557	tri-q2-2-1-f1-1-3	2	Accelerated	measured	2
+4463	557	tri-q2-2-1-f1-1-3	2	Standard	measured	2
+4464	558	tri-q2-2-1-f1-2-1	-1	Accelerated	warmup	0
+4465	558	tri-q2-2-1-f1-2-1	-1	Standard	warmup	0
+4466	558	tri-q2-2-1-f1-2-1	0	Standard	measured	0
+4467	558	tri-q2-2-1-f1-2-1	0	Accelerated	measured	0
+4468	558	tri-q2-2-1-f1-2-1	1	Accelerated	measured	1
+4469	558	tri-q2-2-1-f1-2-1	1	Standard	measured	1
+4470	558	tri-q2-2-1-f1-2-1	2	Standard	measured	2
+4471	558	tri-q2-2-1-f1-2-1	2	Accelerated	measured	2
+4472	559	tri-q2-2-1-f1-2-2	-1	Standard	warmup	0
+4473	559	tri-q2-2-1-f1-2-2	-1	Accelerated	warmup	0
+4474	559	tri-q2-2-1-f1-2-2	0	Accelerated	measured	0
+4475	559	tri-q2-2-1-f1-2-2	0	Standard	measured	0
+4476	559	tri-q2-2-1-f1-2-2	1	Standard	measured	1
+4477	559	tri-q2-2-1-f1-2-2	1	Accelerated	measured	1
+4478	559	tri-q2-2-1-f1-2-2	2	Accelerated	measured	2
+4479	559	tri-q2-2-1-f1-2-2	2	Standard	measured	2
+4480	560	tri-q2-2-1-f1-2-3	-1	Accelerated	warmup	0
+4481	560	tri-q2-2-1-f1-2-3	-1	Standard	warmup	0
+4482	560	tri-q2-2-1-f1-2-3	0	Standard	measured	0
+4483	560	tri-q2-2-1-f1-2-3	0	Accelerated	measured	0
+4484	560	tri-q2-2-1-f1-2-3	1	Accelerated	measured	1
+4485	560	tri-q2-2-1-f1-2-3	1	Standard	measured	1
+4486	560	tri-q2-2-1-f1-2-3	2	Standard	measured	2
+4487	560	tri-q2-2-1-f1-2-3	2	Accelerated	measured	2
+4488	561	tri-q2-2-1-f1-3-1	-1	Standard	warmup	0
+4489	561	tri-q2-2-1-f1-3-1	-1	Accelerated	warmup	0
+4490	561	tri-q2-2-1-f1-3-1	0	Accelerated	measured	0
+4491	561	tri-q2-2-1-f1-3-1	0	Standard	measured	0
+4492	561	tri-q2-2-1-f1-3-1	1	Standard	measured	1
+4493	561	tri-q2-2-1-f1-3-1	1	Accelerated	measured	1
+4494	561	tri-q2-2-1-f1-3-1	2	Accelerated	measured	2
+4495	561	tri-q2-2-1-f1-3-1	2	Standard	measured	2
+4496	562	tri-q2-2-1-f1-3-2	-1	Accelerated	warmup	0
+4497	562	tri-q2-2-1-f1-3-2	-1	Standard	warmup	0
+4498	562	tri-q2-2-1-f1-3-2	0	Standard	measured	0
+4499	562	tri-q2-2-1-f1-3-2	0	Accelerated	measured	0
+4500	562	tri-q2-2-1-f1-3-2	1	Accelerated	measured	1
+4501	562	tri-q2-2-1-f1-3-2	1	Standard	measured	1
+4502	562	tri-q2-2-1-f1-3-2	2	Standard	measured	2
+4503	562	tri-q2-2-1-f1-3-2	2	Accelerated	measured	2
+4504	563	tri-q2-2-1-f1-3-3	-1	Standard	warmup	0
+4505	563	tri-q2-2-1-f1-3-3	-1	Accelerated	warmup	0
+4506	563	tri-q2-2-1-f1-3-3	0	Accelerated	measured	0
+4507	563	tri-q2-2-1-f1-3-3	0	Standard	measured	0
+4508	563	tri-q2-2-1-f1-3-3	1	Standard	measured	1
+4509	563	tri-q2-2-1-f1-3-3	1	Accelerated	measured	1
+4510	563	tri-q2-2-1-f1-3-3	2	Accelerated	measured	2
+4511	563	tri-q2-2-1-f1-3-3	2	Standard	measured	2
+4512	564	tri-q2-2-1-f2-1-1	-1	Accelerated	warmup	0
+4513	564	tri-q2-2-1-f2-1-1	-1	Standard	warmup	0
+4514	564	tri-q2-2-1-f2-1-1	0	Standard	measured	0
+4515	564	tri-q2-2-1-f2-1-1	0	Accelerated	measured	0
+4516	564	tri-q2-2-1-f2-1-1	1	Accelerated	measured	1
+4517	564	tri-q2-2-1-f2-1-1	1	Standard	measured	1
+4518	564	tri-q2-2-1-f2-1-1	2	Standard	measured	2
+4519	564	tri-q2-2-1-f2-1-1	2	Accelerated	measured	2
+4520	565	tri-q2-2-1-f2-1-2	-1	Standard	warmup	0
+4521	565	tri-q2-2-1-f2-1-2	-1	Accelerated	warmup	0
+4522	565	tri-q2-2-1-f2-1-2	0	Accelerated	measured	0
+4523	565	tri-q2-2-1-f2-1-2	0	Standard	measured	0
+4524	565	tri-q2-2-1-f2-1-2	1	Standard	measured	1
+4525	565	tri-q2-2-1-f2-1-2	1	Accelerated	measured	1
+4526	565	tri-q2-2-1-f2-1-2	2	Accelerated	measured	2
+4527	565	tri-q2-2-1-f2-1-2	2	Standard	measured	2
+4528	566	tri-q2-2-1-f2-1-3	-1	Accelerated	warmup	0
+4529	566	tri-q2-2-1-f2-1-3	-1	Standard	warmup	0
+4530	566	tri-q2-2-1-f2-1-3	0	Standard	measured	0
+4531	566	tri-q2-2-1-f2-1-3	0	Accelerated	measured	0
+4532	566	tri-q2-2-1-f2-1-3	1	Accelerated	measured	1
+4533	566	tri-q2-2-1-f2-1-3	1	Standard	measured	1
+4534	566	tri-q2-2-1-f2-1-3	2	Standard	measured	2
+4535	566	tri-q2-2-1-f2-1-3	2	Accelerated	measured	2
+4536	567	tri-q2-2-1-f2-2-1	-1	Standard	warmup	0
+4537	567	tri-q2-2-1-f2-2-1	-1	Accelerated	warmup	0
+4538	567	tri-q2-2-1-f2-2-1	0	Accelerated	measured	0
+4539	567	tri-q2-2-1-f2-2-1	0	Standard	measured	0
+4540	567	tri-q2-2-1-f2-2-1	1	Standard	measured	1
+4541	567	tri-q2-2-1-f2-2-1	1	Accelerated	measured	1
+4542	567	tri-q2-2-1-f2-2-1	2	Accelerated	measured	2
+4543	567	tri-q2-2-1-f2-2-1	2	Standard	measured	2
+4544	568	tri-q2-2-1-f2-2-2	-1	Accelerated	warmup	0
+4545	568	tri-q2-2-1-f2-2-2	-1	Standard	warmup	0
+4546	568	tri-q2-2-1-f2-2-2	0	Standard	measured	0
+4547	568	tri-q2-2-1-f2-2-2	0	Accelerated	measured	0
+4548	568	tri-q2-2-1-f2-2-2	1	Accelerated	measured	1
+4549	568	tri-q2-2-1-f2-2-2	1	Standard	measured	1
+4550	568	tri-q2-2-1-f2-2-2	2	Standard	measured	2
+4551	568	tri-q2-2-1-f2-2-2	2	Accelerated	measured	2
+4552	569	tri-q2-2-1-f2-2-3	-1	Standard	warmup	0
+4553	569	tri-q2-2-1-f2-2-3	-1	Accelerated	warmup	0
+4554	569	tri-q2-2-1-f2-2-3	0	Accelerated	measured	0
+4555	569	tri-q2-2-1-f2-2-3	0	Standard	measured	0
+4556	569	tri-q2-2-1-f2-2-3	1	Standard	measured	1
+4557	569	tri-q2-2-1-f2-2-3	1	Accelerated	measured	1
+4558	569	tri-q2-2-1-f2-2-3	2	Accelerated	measured	2
+4559	569	tri-q2-2-1-f2-2-3	2	Standard	measured	2
+4560	570	tri-q2-2-1-f2-3-1	-1	Accelerated	warmup	0
+4561	570	tri-q2-2-1-f2-3-1	-1	Standard	warmup	0
+4562	570	tri-q2-2-1-f2-3-1	0	Standard	measured	0
+4563	570	tri-q2-2-1-f2-3-1	0	Accelerated	measured	0
+4564	570	tri-q2-2-1-f2-3-1	1	Accelerated	measured	1
+4565	570	tri-q2-2-1-f2-3-1	1	Standard	measured	1
+4566	570	tri-q2-2-1-f2-3-1	2	Standard	measured	2
+4567	570	tri-q2-2-1-f2-3-1	2	Accelerated	measured	2
+4568	571	tri-q2-2-1-f2-3-2	-1	Standard	warmup	0
+4569	571	tri-q2-2-1-f2-3-2	-1	Accelerated	warmup	0
+4570	571	tri-q2-2-1-f2-3-2	0	Accelerated	measured	0
+4571	571	tri-q2-2-1-f2-3-2	0	Standard	measured	0
+4572	571	tri-q2-2-1-f2-3-2	1	Standard	measured	1
+4573	571	tri-q2-2-1-f2-3-2	1	Accelerated	measured	1
+4574	571	tri-q2-2-1-f2-3-2	2	Accelerated	measured	2
+4575	571	tri-q2-2-1-f2-3-2	2	Standard	measured	2
+4576	572	tri-q2-2-1-f2-3-3	-1	Accelerated	warmup	0
+4577	572	tri-q2-2-1-f2-3-3	-1	Standard	warmup	0
+4578	572	tri-q2-2-1-f2-3-3	0	Standard	measured	0
+4579	572	tri-q2-2-1-f2-3-3	0	Accelerated	measured	0
+4580	572	tri-q2-2-1-f2-3-3	1	Accelerated	measured	1
+4581	572	tri-q2-2-1-f2-3-3	1	Standard	measured	1
+4582	572	tri-q2-2-1-f2-3-3	2	Standard	measured	2
+4583	572	tri-q2-2-1-f2-3-3	2	Accelerated	measured	2
+4584	573	tri-q2-2-1-f3-1-1	-1	Standard	warmup	0
+4585	573	tri-q2-2-1-f3-1-1	-1	Accelerated	warmup	0
+4586	573	tri-q2-2-1-f3-1-1	0	Accelerated	measured	0
+4587	573	tri-q2-2-1-f3-1-1	0	Standard	measured	0
+4588	573	tri-q2-2-1-f3-1-1	1	Standard	measured	1
+4589	573	tri-q2-2-1-f3-1-1	1	Accelerated	measured	1
+4590	573	tri-q2-2-1-f3-1-1	2	Accelerated	measured	2
+4591	573	tri-q2-2-1-f3-1-1	2	Standard	measured	2
+4592	574	tri-q2-2-1-f3-1-2	-1	Accelerated	warmup	0
+4593	574	tri-q2-2-1-f3-1-2	-1	Standard	warmup	0
+4594	574	tri-q2-2-1-f3-1-2	0	Standard	measured	0
+4595	574	tri-q2-2-1-f3-1-2	0	Accelerated	measured	0
+4596	574	tri-q2-2-1-f3-1-2	1	Accelerated	measured	1
+4597	574	tri-q2-2-1-f3-1-2	1	Standard	measured	1
+4598	574	tri-q2-2-1-f3-1-2	2	Standard	measured	2
+4599	574	tri-q2-2-1-f3-1-2	2	Accelerated	measured	2
+4600	575	tri-q2-2-1-f3-1-3	-1	Standard	warmup	0
+4601	575	tri-q2-2-1-f3-1-3	-1	Accelerated	warmup	0
+4602	575	tri-q2-2-1-f3-1-3	0	Accelerated	measured	0
+4603	575	tri-q2-2-1-f3-1-3	0	Standard	measured	0
+4604	575	tri-q2-2-1-f3-1-3	1	Standard	measured	1
+4605	575	tri-q2-2-1-f3-1-3	1	Accelerated	measured	1
+4606	575	tri-q2-2-1-f3-1-3	2	Accelerated	measured	2
+4607	575	tri-q2-2-1-f3-1-3	2	Standard	measured	2
+4608	576	tri-q2-2-1-f3-2-1	-1	Accelerated	warmup	0
+4609	576	tri-q2-2-1-f3-2-1	-1	Standard	warmup	0
+4610	576	tri-q2-2-1-f3-2-1	0	Standard	measured	0
+4611	576	tri-q2-2-1-f3-2-1	0	Accelerated	measured	0
+4612	576	tri-q2-2-1-f3-2-1	1	Accelerated	measured	1
+4613	576	tri-q2-2-1-f3-2-1	1	Standard	measured	1
+4614	576	tri-q2-2-1-f3-2-1	2	Standard	measured	2
+4615	576	tri-q2-2-1-f3-2-1	2	Accelerated	measured	2
+4616	577	tri-q2-2-1-f3-2-2	-1	Standard	warmup	0
+4617	577	tri-q2-2-1-f3-2-2	-1	Accelerated	warmup	0
+4618	577	tri-q2-2-1-f3-2-2	0	Accelerated	measured	0
+4619	577	tri-q2-2-1-f3-2-2	0	Standard	measured	0
+4620	577	tri-q2-2-1-f3-2-2	1	Standard	measured	1
+4621	577	tri-q2-2-1-f3-2-2	1	Accelerated	measured	1
+4622	577	tri-q2-2-1-f3-2-2	2	Accelerated	measured	2
+4623	577	tri-q2-2-1-f3-2-2	2	Standard	measured	2
+4624	578	tri-q2-2-1-f3-2-3	-1	Accelerated	warmup	0
+4625	578	tri-q2-2-1-f3-2-3	-1	Standard	warmup	0
+4626	578	tri-q2-2-1-f3-2-3	0	Standard	measured	0
+4627	578	tri-q2-2-1-f3-2-3	0	Accelerated	measured	0
+4628	578	tri-q2-2-1-f3-2-3	1	Accelerated	measured	1
+4629	578	tri-q2-2-1-f3-2-3	1	Standard	measured	1
+4630	578	tri-q2-2-1-f3-2-3	2	Standard	measured	2
+4631	578	tri-q2-2-1-f3-2-3	2	Accelerated	measured	2
+4632	579	tri-q2-2-1-f3-3-1	-1	Standard	warmup	0
+4633	579	tri-q2-2-1-f3-3-1	-1	Accelerated	warmup	0
+4634	579	tri-q2-2-1-f3-3-1	0	Accelerated	measured	0
+4635	579	tri-q2-2-1-f3-3-1	0	Standard	measured	0
+4636	579	tri-q2-2-1-f3-3-1	1	Standard	measured	1
+4637	579	tri-q2-2-1-f3-3-1	1	Accelerated	measured	1
+4638	579	tri-q2-2-1-f3-3-1	2	Accelerated	measured	2
+4639	579	tri-q2-2-1-f3-3-1	2	Standard	measured	2
+4640	580	tri-q2-2-1-f3-3-2	-1	Accelerated	warmup	0
+4641	580	tri-q2-2-1-f3-3-2	-1	Standard	warmup	0
+4642	580	tri-q2-2-1-f3-3-2	0	Standard	measured	0
+4643	580	tri-q2-2-1-f3-3-2	0	Accelerated	measured	0
+4644	580	tri-q2-2-1-f3-3-2	1	Accelerated	measured	1
+4645	580	tri-q2-2-1-f3-3-2	1	Standard	measured	1
+4646	580	tri-q2-2-1-f3-3-2	2	Standard	measured	2
+4647	580	tri-q2-2-1-f3-3-2	2	Accelerated	measured	2
+4648	581	tri-q2-2-1-f3-3-3	-1	Standard	warmup	0
+4649	581	tri-q2-2-1-f3-3-3	-1	Accelerated	warmup	0
+4650	581	tri-q2-2-1-f3-3-3	0	Accelerated	measured	0
+4651	581	tri-q2-2-1-f3-3-3	0	Standard	measured	0
+4652	581	tri-q2-2-1-f3-3-3	1	Standard	measured	1
+4653	581	tri-q2-2-1-f3-3-3	1	Accelerated	measured	1
+4654	581	tri-q2-2-1-f3-3-3	2	Accelerated	measured	2
+4655	581	tri-q2-2-1-f3-3-3	2	Standard	measured	2
+4656	582	tri-q2-2-1-f4-1-1	-1	Accelerated	warmup	0
+4657	582	tri-q2-2-1-f4-1-1	-1	Standard	warmup	0
+4658	582	tri-q2-2-1-f4-1-1	0	Standard	measured	0
+4659	582	tri-q2-2-1-f4-1-1	0	Accelerated	measured	0
+4660	582	tri-q2-2-1-f4-1-1	1	Accelerated	measured	1
+4661	582	tri-q2-2-1-f4-1-1	1	Standard	measured	1
+4662	582	tri-q2-2-1-f4-1-1	2	Standard	measured	2
+4663	582	tri-q2-2-1-f4-1-1	2	Accelerated	measured	2
+4664	583	tri-q2-2-1-f4-1-2	-1	Standard	warmup	0
+4665	583	tri-q2-2-1-f4-1-2	-1	Accelerated	warmup	0
+4666	583	tri-q2-2-1-f4-1-2	0	Accelerated	measured	0
+4667	583	tri-q2-2-1-f4-1-2	0	Standard	measured	0
+4668	583	tri-q2-2-1-f4-1-2	1	Standard	measured	1
+4669	583	tri-q2-2-1-f4-1-2	1	Accelerated	measured	1
+4670	583	tri-q2-2-1-f4-1-2	2	Accelerated	measured	2
+4671	583	tri-q2-2-1-f4-1-2	2	Standard	measured	2
+4672	584	tri-q2-2-1-f4-1-3	-1	Accelerated	warmup	0
+4673	584	tri-q2-2-1-f4-1-3	-1	Standard	warmup	0
+4674	584	tri-q2-2-1-f4-1-3	0	Standard	measured	0
+4675	584	tri-q2-2-1-f4-1-3	0	Accelerated	measured	0
+4676	584	tri-q2-2-1-f4-1-3	1	Accelerated	measured	1
+4677	584	tri-q2-2-1-f4-1-3	1	Standard	measured	1
+4678	584	tri-q2-2-1-f4-1-3	2	Standard	measured	2
+4679	584	tri-q2-2-1-f4-1-3	2	Accelerated	measured	2
+4680	585	tri-q2-2-1-f4-2-1	-1	Standard	warmup	0
+4681	585	tri-q2-2-1-f4-2-1	-1	Accelerated	warmup	0
+4682	585	tri-q2-2-1-f4-2-1	0	Accelerated	measured	0
+4683	585	tri-q2-2-1-f4-2-1	0	Standard	measured	0
+4684	585	tri-q2-2-1-f4-2-1	1	Standard	measured	1
+4685	585	tri-q2-2-1-f4-2-1	1	Accelerated	measured	1
+4686	585	tri-q2-2-1-f4-2-1	2	Accelerated	measured	2
+4687	585	tri-q2-2-1-f4-2-1	2	Standard	measured	2
+4688	586	tri-q2-2-1-f4-2-2	-1	Accelerated	warmup	0
+4689	586	tri-q2-2-1-f4-2-2	-1	Standard	warmup	0
+4690	586	tri-q2-2-1-f4-2-2	0	Standard	measured	0
+4691	586	tri-q2-2-1-f4-2-2	0	Accelerated	measured	0
+4692	586	tri-q2-2-1-f4-2-2	1	Accelerated	measured	1
+4693	586	tri-q2-2-1-f4-2-2	1	Standard	measured	1
+4694	586	tri-q2-2-1-f4-2-2	2	Standard	measured	2
+4695	586	tri-q2-2-1-f4-2-2	2	Accelerated	measured	2
+4696	587	tri-q2-2-1-f4-2-3	-1	Standard	warmup	0
+4697	587	tri-q2-2-1-f4-2-3	-1	Accelerated	warmup	0
+4698	587	tri-q2-2-1-f4-2-3	0	Accelerated	measured	0
+4699	587	tri-q2-2-1-f4-2-3	0	Standard	measured	0
+4700	587	tri-q2-2-1-f4-2-3	1	Standard	measured	1
+4701	587	tri-q2-2-1-f4-2-3	1	Accelerated	measured	1
+4702	587	tri-q2-2-1-f4-2-3	2	Accelerated	measured	2
+4703	587	tri-q2-2-1-f4-2-3	2	Standard	measured	2
+4704	588	tri-q2-2-1-f4-3-1	-1	Accelerated	warmup	0
+4705	588	tri-q2-2-1-f4-3-1	-1	Standard	warmup	0
+4706	588	tri-q2-2-1-f4-3-1	0	Standard	measured	0
+4707	588	tri-q2-2-1-f4-3-1	0	Accelerated	measured	0
+4708	588	tri-q2-2-1-f4-3-1	1	Accelerated	measured	1
+4709	588	tri-q2-2-1-f4-3-1	1	Standard	measured	1
+4710	588	tri-q2-2-1-f4-3-1	2	Standard	measured	2
+4711	588	tri-q2-2-1-f4-3-1	2	Accelerated	measured	2
+4712	589	tri-q2-2-1-f4-3-2	-1	Standard	warmup	0
+4713	589	tri-q2-2-1-f4-3-2	-1	Accelerated	warmup	0
+4714	589	tri-q2-2-1-f4-3-2	0	Accelerated	measured	0
+4715	589	tri-q2-2-1-f4-3-2	0	Standard	measured	0
+4716	589	tri-q2-2-1-f4-3-2	1	Standard	measured	1
+4717	589	tri-q2-2-1-f4-3-2	1	Accelerated	measured	1
+4718	589	tri-q2-2-1-f4-3-2	2	Accelerated	measured	2
+4719	589	tri-q2-2-1-f4-3-2	2	Standard	measured	2
+4720	590	tri-q2-2-1-f4-3-3	-1	Accelerated	warmup	0
+4721	590	tri-q2-2-1-f4-3-3	-1	Standard	warmup	0
+4722	590	tri-q2-2-1-f4-3-3	0	Standard	measured	0
+4723	590	tri-q2-2-1-f4-3-3	0	Accelerated	measured	0
+4724	590	tri-q2-2-1-f4-3-3	1	Accelerated	measured	1
+4725	590	tri-q2-2-1-f4-3-3	1	Standard	measured	1
+4726	590	tri-q2-2-1-f4-3-3	2	Standard	measured	2
+4727	590	tri-q2-2-1-f4-3-3	2	Accelerated	measured	2
+4728	591	tri-q2-2-2-f1-1-1	-1	Standard	warmup	0
+4729	591	tri-q2-2-2-f1-1-1	-1	Accelerated	warmup	0
+4730	591	tri-q2-2-2-f1-1-1	0	Accelerated	measured	0
+4731	591	tri-q2-2-2-f1-1-1	0	Standard	measured	0
+4732	591	tri-q2-2-2-f1-1-1	1	Standard	measured	1
+4733	591	tri-q2-2-2-f1-1-1	1	Accelerated	measured	1
+4734	591	tri-q2-2-2-f1-1-1	2	Accelerated	measured	2
+4735	591	tri-q2-2-2-f1-1-1	2	Standard	measured	2
+4736	592	tri-q2-2-2-f1-1-2	-1	Accelerated	warmup	0
+4737	592	tri-q2-2-2-f1-1-2	-1	Standard	warmup	0
+4738	592	tri-q2-2-2-f1-1-2	0	Standard	measured	0
+4739	592	tri-q2-2-2-f1-1-2	0	Accelerated	measured	0
+4740	592	tri-q2-2-2-f1-1-2	1	Accelerated	measured	1
+4741	592	tri-q2-2-2-f1-1-2	1	Standard	measured	1
+4742	592	tri-q2-2-2-f1-1-2	2	Standard	measured	2
+4743	592	tri-q2-2-2-f1-1-2	2	Accelerated	measured	2
+4744	593	tri-q2-2-2-f1-1-3	-1	Standard	warmup	0
+4745	593	tri-q2-2-2-f1-1-3	-1	Accelerated	warmup	0
+4746	593	tri-q2-2-2-f1-1-3	0	Accelerated	measured	0
+4747	593	tri-q2-2-2-f1-1-3	0	Standard	measured	0
+4748	593	tri-q2-2-2-f1-1-3	1	Standard	measured	1
+4749	593	tri-q2-2-2-f1-1-3	1	Accelerated	measured	1
+4750	593	tri-q2-2-2-f1-1-3	2	Accelerated	measured	2
+4751	593	tri-q2-2-2-f1-1-3	2	Standard	measured	2
+4752	594	tri-q2-2-2-f1-1-4	-1	Accelerated	warmup	0
+4753	594	tri-q2-2-2-f1-1-4	-1	Standard	warmup	0
+4754	594	tri-q2-2-2-f1-1-4	0	Standard	measured	0
+4755	594	tri-q2-2-2-f1-1-4	0	Accelerated	measured	0
+4756	594	tri-q2-2-2-f1-1-4	1	Accelerated	measured	1
+4757	594	tri-q2-2-2-f1-1-4	1	Standard	measured	1
+4758	594	tri-q2-2-2-f1-1-4	2	Standard	measured	2
+4759	594	tri-q2-2-2-f1-1-4	2	Accelerated	measured	2
+4760	595	tri-q2-2-2-f1-2-1	-1	Standard	warmup	0
+4761	595	tri-q2-2-2-f1-2-1	-1	Accelerated	warmup	0
+4762	595	tri-q2-2-2-f1-2-1	0	Accelerated	measured	0
+4763	595	tri-q2-2-2-f1-2-1	0	Standard	measured	0
+4764	595	tri-q2-2-2-f1-2-1	1	Standard	measured	1
+4765	595	tri-q2-2-2-f1-2-1	1	Accelerated	measured	1
+4766	595	tri-q2-2-2-f1-2-1	2	Accelerated	measured	2
+4767	595	tri-q2-2-2-f1-2-1	2	Standard	measured	2
+4768	596	tri-q2-2-2-f1-2-2	-1	Accelerated	warmup	0
+4769	596	tri-q2-2-2-f1-2-2	-1	Standard	warmup	0
+4770	596	tri-q2-2-2-f1-2-2	0	Standard	measured	0
+4771	596	tri-q2-2-2-f1-2-2	0	Accelerated	measured	0
+4772	596	tri-q2-2-2-f1-2-2	1	Accelerated	measured	1
+4773	596	tri-q2-2-2-f1-2-2	1	Standard	measured	1
+4774	596	tri-q2-2-2-f1-2-2	2	Standard	measured	2
+4775	596	tri-q2-2-2-f1-2-2	2	Accelerated	measured	2
+4776	597	tri-q2-2-2-f1-2-3	-1	Standard	warmup	0
+4777	597	tri-q2-2-2-f1-2-3	-1	Accelerated	warmup	0
+4778	597	tri-q2-2-2-f1-2-3	0	Accelerated	measured	0
+4779	597	tri-q2-2-2-f1-2-3	0	Standard	measured	0
+4780	597	tri-q2-2-2-f1-2-3	1	Standard	measured	1
+4781	597	tri-q2-2-2-f1-2-3	1	Accelerated	measured	1
+4782	597	tri-q2-2-2-f1-2-3	2	Accelerated	measured	2
+4783	597	tri-q2-2-2-f1-2-3	2	Standard	measured	2
+4784	598	tri-q2-2-2-f1-2-4	-1	Accelerated	warmup	0
+4785	598	tri-q2-2-2-f1-2-4	-1	Standard	warmup	0
+4786	598	tri-q2-2-2-f1-2-4	0	Standard	measured	0
+4787	598	tri-q2-2-2-f1-2-4	0	Accelerated	measured	0
+4788	598	tri-q2-2-2-f1-2-4	1	Accelerated	measured	1
+4789	598	tri-q2-2-2-f1-2-4	1	Standard	measured	1
+4790	598	tri-q2-2-2-f1-2-4	2	Standard	measured	2
+4791	598	tri-q2-2-2-f1-2-4	2	Accelerated	measured	2
+4792	599	tri-q2-2-2-f1-3-1	-1	Standard	warmup	0
+4793	599	tri-q2-2-2-f1-3-1	-1	Accelerated	warmup	0
+4794	599	tri-q2-2-2-f1-3-1	0	Accelerated	measured	0
+4795	599	tri-q2-2-2-f1-3-1	0	Standard	measured	0
+4796	599	tri-q2-2-2-f1-3-1	1	Standard	measured	1
+4797	599	tri-q2-2-2-f1-3-1	1	Accelerated	measured	1
+4798	599	tri-q2-2-2-f1-3-1	2	Accelerated	measured	2
+4799	599	tri-q2-2-2-f1-3-1	2	Standard	measured	2
+4800	600	tri-q2-2-2-f1-3-2	-1	Accelerated	warmup	0
+4801	600	tri-q2-2-2-f1-3-2	-1	Standard	warmup	0
+4802	600	tri-q2-2-2-f1-3-2	0	Standard	measured	0
+4803	600	tri-q2-2-2-f1-3-2	0	Accelerated	measured	0
+4804	600	tri-q2-2-2-f1-3-2	1	Accelerated	measured	1
+4805	600	tri-q2-2-2-f1-3-2	1	Standard	measured	1
+4806	600	tri-q2-2-2-f1-3-2	2	Standard	measured	2
+4807	600	tri-q2-2-2-f1-3-2	2	Accelerated	measured	2
+4808	601	tri-q2-2-2-f1-3-3	-1	Standard	warmup	0
+4809	601	tri-q2-2-2-f1-3-3	-1	Accelerated	warmup	0
+4810	601	tri-q2-2-2-f1-3-3	0	Accelerated	measured	0
+4811	601	tri-q2-2-2-f1-3-3	0	Standard	measured	0
+4812	601	tri-q2-2-2-f1-3-3	1	Standard	measured	1
+4813	601	tri-q2-2-2-f1-3-3	1	Accelerated	measured	1
+4814	601	tri-q2-2-2-f1-3-3	2	Accelerated	measured	2
+4815	601	tri-q2-2-2-f1-3-3	2	Standard	measured	2
+4816	602	tri-q2-2-2-f1-3-4	-1	Accelerated	warmup	0
+4817	602	tri-q2-2-2-f1-3-4	-1	Standard	warmup	0
+4818	602	tri-q2-2-2-f1-3-4	0	Standard	measured	0
+4819	602	tri-q2-2-2-f1-3-4	0	Accelerated	measured	0
+4820	602	tri-q2-2-2-f1-3-4	1	Accelerated	measured	1
+4821	602	tri-q2-2-2-f1-3-4	1	Standard	measured	1
+4822	602	tri-q2-2-2-f1-3-4	2	Standard	measured	2
+4823	602	tri-q2-2-2-f1-3-4	2	Accelerated	measured	2
+4824	603	tri-q2-2-2-f1-4-1	-1	Standard	warmup	0
+4825	603	tri-q2-2-2-f1-4-1	-1	Accelerated	warmup	0
+4826	603	tri-q2-2-2-f1-4-1	0	Accelerated	measured	0
+4827	603	tri-q2-2-2-f1-4-1	0	Standard	measured	0
+4828	603	tri-q2-2-2-f1-4-1	1	Standard	measured	1
+4829	603	tri-q2-2-2-f1-4-1	1	Accelerated	measured	1
+4830	603	tri-q2-2-2-f1-4-1	2	Accelerated	measured	2
+4831	603	tri-q2-2-2-f1-4-1	2	Standard	measured	2
+4832	604	tri-q2-2-2-f1-4-2	-1	Accelerated	warmup	0
+4833	604	tri-q2-2-2-f1-4-2	-1	Standard	warmup	0
+4834	604	tri-q2-2-2-f1-4-2	0	Standard	measured	0
+4835	604	tri-q2-2-2-f1-4-2	0	Accelerated	measured	0
+4836	604	tri-q2-2-2-f1-4-2	1	Accelerated	measured	1
+4837	604	tri-q2-2-2-f1-4-2	1	Standard	measured	1
+4838	604	tri-q2-2-2-f1-4-2	2	Standard	measured	2
+4839	604	tri-q2-2-2-f1-4-2	2	Accelerated	measured	2
+4840	605	tri-q2-2-2-f1-4-3	-1	Standard	warmup	0
+4841	605	tri-q2-2-2-f1-4-3	-1	Accelerated	warmup	0
+4842	605	tri-q2-2-2-f1-4-3	0	Accelerated	measured	0
+4843	605	tri-q2-2-2-f1-4-3	0	Standard	measured	0
+4844	605	tri-q2-2-2-f1-4-3	1	Standard	measured	1
+4845	605	tri-q2-2-2-f1-4-3	1	Accelerated	measured	1
+4846	605	tri-q2-2-2-f1-4-3	2	Accelerated	measured	2
+4847	605	tri-q2-2-2-f1-4-3	2	Standard	measured	2
+4848	606	tri-q2-2-2-f1-4-4	-1	Accelerated	warmup	0
+4849	606	tri-q2-2-2-f1-4-4	-1	Standard	warmup	0
+4850	606	tri-q2-2-2-f1-4-4	0	Standard	measured	0
+4851	606	tri-q2-2-2-f1-4-4	0	Accelerated	measured	0
+4852	606	tri-q2-2-2-f1-4-4	1	Accelerated	measured	1
+4853	606	tri-q2-2-2-f1-4-4	1	Standard	measured	1
+4854	606	tri-q2-2-2-f1-4-4	2	Standard	measured	2
+4855	606	tri-q2-2-2-f1-4-4	2	Accelerated	measured	2
+4856	607	tri-q2-2-2-f2-1-1	-1	Standard	warmup	0
+4857	607	tri-q2-2-2-f2-1-1	-1	Accelerated	warmup	0
+4858	607	tri-q2-2-2-f2-1-1	0	Accelerated	measured	0
+4859	607	tri-q2-2-2-f2-1-1	0	Standard	measured	0
+4860	607	tri-q2-2-2-f2-1-1	1	Standard	measured	1
+4861	607	tri-q2-2-2-f2-1-1	1	Accelerated	measured	1
+4862	607	tri-q2-2-2-f2-1-1	2	Accelerated	measured	2
+4863	607	tri-q2-2-2-f2-1-1	2	Standard	measured	2
+4864	608	tri-q2-2-2-f2-1-2	-1	Accelerated	warmup	0
+4865	608	tri-q2-2-2-f2-1-2	-1	Standard	warmup	0
+4866	608	tri-q2-2-2-f2-1-2	0	Standard	measured	0
+4867	608	tri-q2-2-2-f2-1-2	0	Accelerated	measured	0
+4868	608	tri-q2-2-2-f2-1-2	1	Accelerated	measured	1
+4869	608	tri-q2-2-2-f2-1-2	1	Standard	measured	1
+4870	608	tri-q2-2-2-f2-1-2	2	Standard	measured	2
+4871	608	tri-q2-2-2-f2-1-2	2	Accelerated	measured	2
+4872	609	tri-q2-2-2-f2-1-3	-1	Standard	warmup	0
+4873	609	tri-q2-2-2-f2-1-3	-1	Accelerated	warmup	0
+4874	609	tri-q2-2-2-f2-1-3	0	Accelerated	measured	0
+4875	609	tri-q2-2-2-f2-1-3	0	Standard	measured	0
+4876	609	tri-q2-2-2-f2-1-3	1	Standard	measured	1
+4877	609	tri-q2-2-2-f2-1-3	1	Accelerated	measured	1
+4878	609	tri-q2-2-2-f2-1-3	2	Accelerated	measured	2
+4879	609	tri-q2-2-2-f2-1-3	2	Standard	measured	2
+4880	610	tri-q2-2-2-f2-1-4	-1	Accelerated	warmup	0
+4881	610	tri-q2-2-2-f2-1-4	-1	Standard	warmup	0
+4882	610	tri-q2-2-2-f2-1-4	0	Standard	measured	0
+4883	610	tri-q2-2-2-f2-1-4	0	Accelerated	measured	0
+4884	610	tri-q2-2-2-f2-1-4	1	Accelerated	measured	1
+4885	610	tri-q2-2-2-f2-1-4	1	Standard	measured	1
+4886	610	tri-q2-2-2-f2-1-4	2	Standard	measured	2
+4887	610	tri-q2-2-2-f2-1-4	2	Accelerated	measured	2
+4888	611	tri-q2-2-2-f2-2-1	-1	Standard	warmup	0
+4889	611	tri-q2-2-2-f2-2-1	-1	Accelerated	warmup	0
+4890	611	tri-q2-2-2-f2-2-1	0	Accelerated	measured	0
+4891	611	tri-q2-2-2-f2-2-1	0	Standard	measured	0
+4892	611	tri-q2-2-2-f2-2-1	1	Standard	measured	1
+4893	611	tri-q2-2-2-f2-2-1	1	Accelerated	measured	1
+4894	611	tri-q2-2-2-f2-2-1	2	Accelerated	measured	2
+4895	611	tri-q2-2-2-f2-2-1	2	Standard	measured	2
+4896	612	tri-q2-2-2-f2-2-2	-1	Accelerated	warmup	0
+4897	612	tri-q2-2-2-f2-2-2	-1	Standard	warmup	0
+4898	612	tri-q2-2-2-f2-2-2	0	Standard	measured	0
+4899	612	tri-q2-2-2-f2-2-2	0	Accelerated	measured	0
+4900	612	tri-q2-2-2-f2-2-2	1	Accelerated	measured	1
+4901	612	tri-q2-2-2-f2-2-2	1	Standard	measured	1
+4902	612	tri-q2-2-2-f2-2-2	2	Standard	measured	2
+4903	612	tri-q2-2-2-f2-2-2	2	Accelerated	measured	2
+4904	613	tri-q2-2-2-f2-2-3	-1	Standard	warmup	0
+4905	613	tri-q2-2-2-f2-2-3	-1	Accelerated	warmup	0
+4906	613	tri-q2-2-2-f2-2-3	0	Accelerated	measured	0
+4907	613	tri-q2-2-2-f2-2-3	0	Standard	measured	0
+4908	613	tri-q2-2-2-f2-2-3	1	Standard	measured	1
+4909	613	tri-q2-2-2-f2-2-3	1	Accelerated	measured	1
+4910	613	tri-q2-2-2-f2-2-3	2	Accelerated	measured	2
+4911	613	tri-q2-2-2-f2-2-3	2	Standard	measured	2
+4912	614	tri-q2-2-2-f2-2-4	-1	Accelerated	warmup	0
+4913	614	tri-q2-2-2-f2-2-4	-1	Standard	warmup	0
+4914	614	tri-q2-2-2-f2-2-4	0	Standard	measured	0
+4915	614	tri-q2-2-2-f2-2-4	0	Accelerated	measured	0
+4916	614	tri-q2-2-2-f2-2-4	1	Accelerated	measured	1
+4917	614	tri-q2-2-2-f2-2-4	1	Standard	measured	1
+4918	614	tri-q2-2-2-f2-2-4	2	Standard	measured	2
+4919	614	tri-q2-2-2-f2-2-4	2	Accelerated	measured	2
+4920	615	tri-q2-2-2-f2-3-1	-1	Standard	warmup	0
+4921	615	tri-q2-2-2-f2-3-1	-1	Accelerated	warmup	0
+4922	615	tri-q2-2-2-f2-3-1	0	Accelerated	measured	0
+4923	615	tri-q2-2-2-f2-3-1	0	Standard	measured	0
+4924	615	tri-q2-2-2-f2-3-1	1	Standard	measured	1
+4925	615	tri-q2-2-2-f2-3-1	1	Accelerated	measured	1
+4926	615	tri-q2-2-2-f2-3-1	2	Accelerated	measured	2
+4927	615	tri-q2-2-2-f2-3-1	2	Standard	measured	2
+4928	616	tri-q2-2-2-f2-3-2	-1	Accelerated	warmup	0
+4929	616	tri-q2-2-2-f2-3-2	-1	Standard	warmup	0
+4930	616	tri-q2-2-2-f2-3-2	0	Standard	measured	0
+4931	616	tri-q2-2-2-f2-3-2	0	Accelerated	measured	0
+4932	616	tri-q2-2-2-f2-3-2	1	Accelerated	measured	1
+4933	616	tri-q2-2-2-f2-3-2	1	Standard	measured	1
+4934	616	tri-q2-2-2-f2-3-2	2	Standard	measured	2
+4935	616	tri-q2-2-2-f2-3-2	2	Accelerated	measured	2
+4936	617	tri-q2-2-2-f2-3-3	-1	Standard	warmup	0
+4937	617	tri-q2-2-2-f2-3-3	-1	Accelerated	warmup	0
+4938	617	tri-q2-2-2-f2-3-3	0	Accelerated	measured	0
+4939	617	tri-q2-2-2-f2-3-3	0	Standard	measured	0
+4940	617	tri-q2-2-2-f2-3-3	1	Standard	measured	1
+4941	617	tri-q2-2-2-f2-3-3	1	Accelerated	measured	1
+4942	617	tri-q2-2-2-f2-3-3	2	Accelerated	measured	2
+4943	617	tri-q2-2-2-f2-3-3	2	Standard	measured	2
+4944	618	tri-q2-2-2-f2-3-4	-1	Accelerated	warmup	0
+4945	618	tri-q2-2-2-f2-3-4	-1	Standard	warmup	0
+4946	618	tri-q2-2-2-f2-3-4	0	Standard	measured	0
+4947	618	tri-q2-2-2-f2-3-4	0	Accelerated	measured	0
+4948	618	tri-q2-2-2-f2-3-4	1	Accelerated	measured	1
+4949	618	tri-q2-2-2-f2-3-4	1	Standard	measured	1
+4950	618	tri-q2-2-2-f2-3-4	2	Standard	measured	2
+4951	618	tri-q2-2-2-f2-3-4	2	Accelerated	measured	2
+4952	619	tri-q2-2-2-f2-4-1	-1	Standard	warmup	0
+4953	619	tri-q2-2-2-f2-4-1	-1	Accelerated	warmup	0
+4954	619	tri-q2-2-2-f2-4-1	0	Accelerated	measured	0
+4955	619	tri-q2-2-2-f2-4-1	0	Standard	measured	0
+4956	619	tri-q2-2-2-f2-4-1	1	Standard	measured	1
+4957	619	tri-q2-2-2-f2-4-1	1	Accelerated	measured	1
+4958	619	tri-q2-2-2-f2-4-1	2	Accelerated	measured	2
+4959	619	tri-q2-2-2-f2-4-1	2	Standard	measured	2
+4960	620	tri-q2-2-2-f2-4-2	-1	Accelerated	warmup	0
+4961	620	tri-q2-2-2-f2-4-2	-1	Standard	warmup	0
+4962	620	tri-q2-2-2-f2-4-2	0	Standard	measured	0
+4963	620	tri-q2-2-2-f2-4-2	0	Accelerated	measured	0
+4964	620	tri-q2-2-2-f2-4-2	1	Accelerated	measured	1
+4965	620	tri-q2-2-2-f2-4-2	1	Standard	measured	1
+4966	620	tri-q2-2-2-f2-4-2	2	Standard	measured	2
+4967	620	tri-q2-2-2-f2-4-2	2	Accelerated	measured	2
+4968	621	tri-q2-2-2-f2-4-3	-1	Standard	warmup	0
+4969	621	tri-q2-2-2-f2-4-3	-1	Accelerated	warmup	0
+4970	621	tri-q2-2-2-f2-4-3	0	Accelerated	measured	0
+4971	621	tri-q2-2-2-f2-4-3	0	Standard	measured	0
+4972	621	tri-q2-2-2-f2-4-3	1	Standard	measured	1
+4973	621	tri-q2-2-2-f2-4-3	1	Accelerated	measured	1
+4974	621	tri-q2-2-2-f2-4-3	2	Accelerated	measured	2
+4975	621	tri-q2-2-2-f2-4-3	2	Standard	measured	2
+4976	622	tri-q2-2-2-f2-4-4	-1	Accelerated	warmup	0
+4977	622	tri-q2-2-2-f2-4-4	-1	Standard	warmup	0
+4978	622	tri-q2-2-2-f2-4-4	0	Standard	measured	0
+4979	622	tri-q2-2-2-f2-4-4	0	Accelerated	measured	0
+4980	622	tri-q2-2-2-f2-4-4	1	Accelerated	measured	1
+4981	622	tri-q2-2-2-f2-4-4	1	Standard	measured	1
+4982	622	tri-q2-2-2-f2-4-4	2	Standard	measured	2
+4983	622	tri-q2-2-2-f2-4-4	2	Accelerated	measured	2
+4984	623	tri-q2-2-2-f3-1-1	-1	Standard	warmup	0
+4985	623	tri-q2-2-2-f3-1-1	-1	Accelerated	warmup	0
+4986	623	tri-q2-2-2-f3-1-1	0	Accelerated	measured	0
+4987	623	tri-q2-2-2-f3-1-1	0	Standard	measured	0
+4988	623	tri-q2-2-2-f3-1-1	1	Standard	measured	1
+4989	623	tri-q2-2-2-f3-1-1	1	Accelerated	measured	1
+4990	623	tri-q2-2-2-f3-1-1	2	Accelerated	measured	2
+4991	623	tri-q2-2-2-f3-1-1	2	Standard	measured	2
+4992	624	tri-q2-2-2-f3-1-2	-1	Accelerated	warmup	0
+4993	624	tri-q2-2-2-f3-1-2	-1	Standard	warmup	0
+4994	624	tri-q2-2-2-f3-1-2	0	Standard	measured	0
+4995	624	tri-q2-2-2-f3-1-2	0	Accelerated	measured	0
+4996	624	tri-q2-2-2-f3-1-2	1	Accelerated	measured	1
+4997	624	tri-q2-2-2-f3-1-2	1	Standard	measured	1
+4998	624	tri-q2-2-2-f3-1-2	2	Standard	measured	2
+4999	624	tri-q2-2-2-f3-1-2	2	Accelerated	measured	2
+5000	625	tri-q2-2-2-f3-1-3	-1	Standard	warmup	0
+5001	625	tri-q2-2-2-f3-1-3	-1	Accelerated	warmup	0
+5002	625	tri-q2-2-2-f3-1-3	0	Accelerated	measured	0
+5003	625	tri-q2-2-2-f3-1-3	0	Standard	measured	0
+5004	625	tri-q2-2-2-f3-1-3	1	Standard	measured	1
+5005	625	tri-q2-2-2-f3-1-3	1	Accelerated	measured	1
+5006	625	tri-q2-2-2-f3-1-3	2	Accelerated	measured	2
+5007	625	tri-q2-2-2-f3-1-3	2	Standard	measured	2
+5008	626	tri-q2-2-2-f3-1-4	-1	Accelerated	warmup	0
+5009	626	tri-q2-2-2-f3-1-4	-1	Standard	warmup	0
+5010	626	tri-q2-2-2-f3-1-4	0	Standard	measured	0
+5011	626	tri-q2-2-2-f3-1-4	0	Accelerated	measured	0
+5012	626	tri-q2-2-2-f3-1-4	1	Accelerated	measured	1
+5013	626	tri-q2-2-2-f3-1-4	1	Standard	measured	1
+5014	626	tri-q2-2-2-f3-1-4	2	Standard	measured	2
+5015	626	tri-q2-2-2-f3-1-4	2	Accelerated	measured	2
+5016	627	tri-q2-2-2-f3-2-1	-1	Standard	warmup	0
+5017	627	tri-q2-2-2-f3-2-1	-1	Accelerated	warmup	0
+5018	627	tri-q2-2-2-f3-2-1	0	Accelerated	measured	0
+5019	627	tri-q2-2-2-f3-2-1	0	Standard	measured	0
+5020	627	tri-q2-2-2-f3-2-1	1	Standard	measured	1
+5021	627	tri-q2-2-2-f3-2-1	1	Accelerated	measured	1
+5022	627	tri-q2-2-2-f3-2-1	2	Accelerated	measured	2
+5023	627	tri-q2-2-2-f3-2-1	2	Standard	measured	2
+5024	628	tri-q2-2-2-f3-2-2	-1	Accelerated	warmup	0
+5025	628	tri-q2-2-2-f3-2-2	-1	Standard	warmup	0
+5026	628	tri-q2-2-2-f3-2-2	0	Standard	measured	0
+5027	628	tri-q2-2-2-f3-2-2	0	Accelerated	measured	0
+5028	628	tri-q2-2-2-f3-2-2	1	Accelerated	measured	1
+5029	628	tri-q2-2-2-f3-2-2	1	Standard	measured	1
+5030	628	tri-q2-2-2-f3-2-2	2	Standard	measured	2
+5031	628	tri-q2-2-2-f3-2-2	2	Accelerated	measured	2
+5032	629	tri-q2-2-2-f3-2-3	-1	Standard	warmup	0
+5033	629	tri-q2-2-2-f3-2-3	-1	Accelerated	warmup	0
+5034	629	tri-q2-2-2-f3-2-3	0	Accelerated	measured	0
+5035	629	tri-q2-2-2-f3-2-3	0	Standard	measured	0
+5036	629	tri-q2-2-2-f3-2-3	1	Standard	measured	1
+5037	629	tri-q2-2-2-f3-2-3	1	Accelerated	measured	1
+5038	629	tri-q2-2-2-f3-2-3	2	Accelerated	measured	2
+5039	629	tri-q2-2-2-f3-2-3	2	Standard	measured	2
+5040	630	tri-q2-2-2-f3-2-4	-1	Accelerated	warmup	0
+5041	630	tri-q2-2-2-f3-2-4	-1	Standard	warmup	0
+5042	630	tri-q2-2-2-f3-2-4	0	Standard	measured	0
+5043	630	tri-q2-2-2-f3-2-4	0	Accelerated	measured	0
+5044	630	tri-q2-2-2-f3-2-4	1	Accelerated	measured	1
+5045	630	tri-q2-2-2-f3-2-4	1	Standard	measured	1
+5046	630	tri-q2-2-2-f3-2-4	2	Standard	measured	2
+5047	630	tri-q2-2-2-f3-2-4	2	Accelerated	measured	2
+5048	631	tri-q2-2-2-f3-3-1	-1	Standard	warmup	0
+5049	631	tri-q2-2-2-f3-3-1	-1	Accelerated	warmup	0
+5050	631	tri-q2-2-2-f3-3-1	0	Accelerated	measured	0
+5051	631	tri-q2-2-2-f3-3-1	0	Standard	measured	0
+5052	631	tri-q2-2-2-f3-3-1	1	Standard	measured	1
+5053	631	tri-q2-2-2-f3-3-1	1	Accelerated	measured	1
+5054	631	tri-q2-2-2-f3-3-1	2	Accelerated	measured	2
+5055	631	tri-q2-2-2-f3-3-1	2	Standard	measured	2
+5056	632	tri-q2-2-2-f3-3-2	-1	Accelerated	warmup	0
+5057	632	tri-q2-2-2-f3-3-2	-1	Standard	warmup	0
+5058	632	tri-q2-2-2-f3-3-2	0	Standard	measured	0
+5059	632	tri-q2-2-2-f3-3-2	0	Accelerated	measured	0
+5060	632	tri-q2-2-2-f3-3-2	1	Accelerated	measured	1
+5061	632	tri-q2-2-2-f3-3-2	1	Standard	measured	1
+5062	632	tri-q2-2-2-f3-3-2	2	Standard	measured	2
+5063	632	tri-q2-2-2-f3-3-2	2	Accelerated	measured	2
+5064	633	tri-q2-2-2-f3-3-3	-1	Standard	warmup	0
+5065	633	tri-q2-2-2-f3-3-3	-1	Accelerated	warmup	0
+5066	633	tri-q2-2-2-f3-3-3	0	Accelerated	measured	0
+5067	633	tri-q2-2-2-f3-3-3	0	Standard	measured	0
+5068	633	tri-q2-2-2-f3-3-3	1	Standard	measured	1
+5069	633	tri-q2-2-2-f3-3-3	1	Accelerated	measured	1
+5070	633	tri-q2-2-2-f3-3-3	2	Accelerated	measured	2
+5071	633	tri-q2-2-2-f3-3-3	2	Standard	measured	2
+5072	634	tri-q2-2-2-f3-3-4	-1	Accelerated	warmup	0
+5073	634	tri-q2-2-2-f3-3-4	-1	Standard	warmup	0
+5074	634	tri-q2-2-2-f3-3-4	0	Standard	measured	0
+5075	634	tri-q2-2-2-f3-3-4	0	Accelerated	measured	0
+5076	634	tri-q2-2-2-f3-3-4	1	Accelerated	measured	1
+5077	634	tri-q2-2-2-f3-3-4	1	Standard	measured	1
+5078	634	tri-q2-2-2-f3-3-4	2	Standard	measured	2
+5079	634	tri-q2-2-2-f3-3-4	2	Accelerated	measured	2
+5080	635	tri-q2-2-2-f3-4-1	-1	Standard	warmup	0
+5081	635	tri-q2-2-2-f3-4-1	-1	Accelerated	warmup	0
+5082	635	tri-q2-2-2-f3-4-1	0	Accelerated	measured	0
+5083	635	tri-q2-2-2-f3-4-1	0	Standard	measured	0
+5084	635	tri-q2-2-2-f3-4-1	1	Standard	measured	1
+5085	635	tri-q2-2-2-f3-4-1	1	Accelerated	measured	1
+5086	635	tri-q2-2-2-f3-4-1	2	Accelerated	measured	2
+5087	635	tri-q2-2-2-f3-4-1	2	Standard	measured	2
+5088	636	tri-q2-2-2-f3-4-2	-1	Accelerated	warmup	0
+5089	636	tri-q2-2-2-f3-4-2	-1	Standard	warmup	0
+5090	636	tri-q2-2-2-f3-4-2	0	Standard	measured	0
+5091	636	tri-q2-2-2-f3-4-2	0	Accelerated	measured	0
+5092	636	tri-q2-2-2-f3-4-2	1	Accelerated	measured	1
+5093	636	tri-q2-2-2-f3-4-2	1	Standard	measured	1
+5094	636	tri-q2-2-2-f3-4-2	2	Standard	measured	2
+5095	636	tri-q2-2-2-f3-4-2	2	Accelerated	measured	2
+5096	637	tri-q2-2-2-f3-4-3	-1	Standard	warmup	0
+5097	637	tri-q2-2-2-f3-4-3	-1	Accelerated	warmup	0
+5098	637	tri-q2-2-2-f3-4-3	0	Accelerated	measured	0
+5099	637	tri-q2-2-2-f3-4-3	0	Standard	measured	0
+5100	637	tri-q2-2-2-f3-4-3	1	Standard	measured	1
+5101	637	tri-q2-2-2-f3-4-3	1	Accelerated	measured	1
+5102	637	tri-q2-2-2-f3-4-3	2	Accelerated	measured	2
+5103	637	tri-q2-2-2-f3-4-3	2	Standard	measured	2
+5104	638	tri-q2-2-2-f3-4-4	-1	Accelerated	warmup	0
+5105	638	tri-q2-2-2-f3-4-4	-1	Standard	warmup	0
+5106	638	tri-q2-2-2-f3-4-4	0	Standard	measured	0
+5107	638	tri-q2-2-2-f3-4-4	0	Accelerated	measured	0
+5108	638	tri-q2-2-2-f3-4-4	1	Accelerated	measured	1
+5109	638	tri-q2-2-2-f3-4-4	1	Standard	measured	1
+5110	638	tri-q2-2-2-f3-4-4	2	Standard	measured	2
+5111	638	tri-q2-2-2-f3-4-4	2	Accelerated	measured	2
+5112	639	tri-q2-2-2-f4-1-1	-1	Standard	warmup	0
+5113	639	tri-q2-2-2-f4-1-1	-1	Accelerated	warmup	0
+5114	639	tri-q2-2-2-f4-1-1	0	Accelerated	measured	0
+5115	639	tri-q2-2-2-f4-1-1	0	Standard	measured	0
+5116	639	tri-q2-2-2-f4-1-1	1	Standard	measured	1
+5117	639	tri-q2-2-2-f4-1-1	1	Accelerated	measured	1
+5118	639	tri-q2-2-2-f4-1-1	2	Accelerated	measured	2
+5119	639	tri-q2-2-2-f4-1-1	2	Standard	measured	2
+5120	640	tri-q2-2-2-f4-1-2	-1	Accelerated	warmup	0
+5121	640	tri-q2-2-2-f4-1-2	-1	Standard	warmup	0
+5122	640	tri-q2-2-2-f4-1-2	0	Standard	measured	0
+5123	640	tri-q2-2-2-f4-1-2	0	Accelerated	measured	0
+5124	640	tri-q2-2-2-f4-1-2	1	Accelerated	measured	1
+5125	640	tri-q2-2-2-f4-1-2	1	Standard	measured	1
+5126	640	tri-q2-2-2-f4-1-2	2	Standard	measured	2
+5127	640	tri-q2-2-2-f4-1-2	2	Accelerated	measured	2
+5128	641	tri-q2-2-2-f4-1-3	-1	Standard	warmup	0
+5129	641	tri-q2-2-2-f4-1-3	-1	Accelerated	warmup	0
+5130	641	tri-q2-2-2-f4-1-3	0	Accelerated	measured	0
+5131	641	tri-q2-2-2-f4-1-3	0	Standard	measured	0
+5132	641	tri-q2-2-2-f4-1-3	1	Standard	measured	1
+5133	641	tri-q2-2-2-f4-1-3	1	Accelerated	measured	1
+5134	641	tri-q2-2-2-f4-1-3	2	Accelerated	measured	2
+5135	641	tri-q2-2-2-f4-1-3	2	Standard	measured	2
+5136	642	tri-q2-2-2-f4-1-4	-1	Accelerated	warmup	0
+5137	642	tri-q2-2-2-f4-1-4	-1	Standard	warmup	0
+5138	642	tri-q2-2-2-f4-1-4	0	Standard	measured	0
+5139	642	tri-q2-2-2-f4-1-4	0	Accelerated	measured	0
+5140	642	tri-q2-2-2-f4-1-4	1	Accelerated	measured	1
+5141	642	tri-q2-2-2-f4-1-4	1	Standard	measured	1
+5142	642	tri-q2-2-2-f4-1-4	2	Standard	measured	2
+5143	642	tri-q2-2-2-f4-1-4	2	Accelerated	measured	2
+5144	643	tri-q2-2-2-f4-2-1	-1	Standard	warmup	0
+5145	643	tri-q2-2-2-f4-2-1	-1	Accelerated	warmup	0
+5146	643	tri-q2-2-2-f4-2-1	0	Accelerated	measured	0
+5147	643	tri-q2-2-2-f4-2-1	0	Standard	measured	0
+5148	643	tri-q2-2-2-f4-2-1	1	Standard	measured	1
+5149	643	tri-q2-2-2-f4-2-1	1	Accelerated	measured	1
+5150	643	tri-q2-2-2-f4-2-1	2	Accelerated	measured	2
+5151	643	tri-q2-2-2-f4-2-1	2	Standard	measured	2
+5152	644	tri-q2-2-2-f4-2-2	-1	Accelerated	warmup	0
+5153	644	tri-q2-2-2-f4-2-2	-1	Standard	warmup	0
+5154	644	tri-q2-2-2-f4-2-2	0	Standard	measured	0
+5155	644	tri-q2-2-2-f4-2-2	0	Accelerated	measured	0
+5156	644	tri-q2-2-2-f4-2-2	1	Accelerated	measured	1
+5157	644	tri-q2-2-2-f4-2-2	1	Standard	measured	1
+5158	644	tri-q2-2-2-f4-2-2	2	Standard	measured	2
+5159	644	tri-q2-2-2-f4-2-2	2	Accelerated	measured	2
+5160	645	tri-q2-2-2-f4-2-3	-1	Standard	warmup	0
+5161	645	tri-q2-2-2-f4-2-3	-1	Accelerated	warmup	0
+5162	645	tri-q2-2-2-f4-2-3	0	Accelerated	measured	0
+5163	645	tri-q2-2-2-f4-2-3	0	Standard	measured	0
+5164	645	tri-q2-2-2-f4-2-3	1	Standard	measured	1
+5165	645	tri-q2-2-2-f4-2-3	1	Accelerated	measured	1
+5166	645	tri-q2-2-2-f4-2-3	2	Accelerated	measured	2
+5167	645	tri-q2-2-2-f4-2-3	2	Standard	measured	2
+5168	646	tri-q2-2-2-f4-2-4	-1	Accelerated	warmup	0
+5169	646	tri-q2-2-2-f4-2-4	-1	Standard	warmup	0
+5170	646	tri-q2-2-2-f4-2-4	0	Standard	measured	0
+5171	646	tri-q2-2-2-f4-2-4	0	Accelerated	measured	0
+5172	646	tri-q2-2-2-f4-2-4	1	Accelerated	measured	1
+5173	646	tri-q2-2-2-f4-2-4	1	Standard	measured	1
+5174	646	tri-q2-2-2-f4-2-4	2	Standard	measured	2
+5175	646	tri-q2-2-2-f4-2-4	2	Accelerated	measured	2
+5176	647	tri-q2-2-2-f4-3-1	-1	Standard	warmup	0
+5177	647	tri-q2-2-2-f4-3-1	-1	Accelerated	warmup	0
+5178	647	tri-q2-2-2-f4-3-1	0	Accelerated	measured	0
+5179	647	tri-q2-2-2-f4-3-1	0	Standard	measured	0
+5180	647	tri-q2-2-2-f4-3-1	1	Standard	measured	1
+5181	647	tri-q2-2-2-f4-3-1	1	Accelerated	measured	1
+5182	647	tri-q2-2-2-f4-3-1	2	Accelerated	measured	2
+5183	647	tri-q2-2-2-f4-3-1	2	Standard	measured	2
+5184	648	tri-q2-2-2-f4-3-2	-1	Accelerated	warmup	0
+5185	648	tri-q2-2-2-f4-3-2	-1	Standard	warmup	0
+5186	648	tri-q2-2-2-f4-3-2	0	Standard	measured	0
+5187	648	tri-q2-2-2-f4-3-2	0	Accelerated	measured	0
+5188	648	tri-q2-2-2-f4-3-2	1	Accelerated	measured	1
+5189	648	tri-q2-2-2-f4-3-2	1	Standard	measured	1
+5190	648	tri-q2-2-2-f4-3-2	2	Standard	measured	2
+5191	648	tri-q2-2-2-f4-3-2	2	Accelerated	measured	2
+5192	649	tri-q2-2-2-f4-3-3	-1	Standard	warmup	0
+5193	649	tri-q2-2-2-f4-3-3	-1	Accelerated	warmup	0
+5194	649	tri-q2-2-2-f4-3-3	0	Accelerated	measured	0
+5195	649	tri-q2-2-2-f4-3-3	0	Standard	measured	0
+5196	649	tri-q2-2-2-f4-3-3	1	Standard	measured	1
+5197	649	tri-q2-2-2-f4-3-3	1	Accelerated	measured	1
+5198	649	tri-q2-2-2-f4-3-3	2	Accelerated	measured	2
+5199	649	tri-q2-2-2-f4-3-3	2	Standard	measured	2
+5200	650	tri-q2-2-2-f4-3-4	-1	Accelerated	warmup	0
+5201	650	tri-q2-2-2-f4-3-4	-1	Standard	warmup	0
+5202	650	tri-q2-2-2-f4-3-4	0	Standard	measured	0
+5203	650	tri-q2-2-2-f4-3-4	0	Accelerated	measured	0
+5204	650	tri-q2-2-2-f4-3-4	1	Accelerated	measured	1
+5205	650	tri-q2-2-2-f4-3-4	1	Standard	measured	1
+5206	650	tri-q2-2-2-f4-3-4	2	Standard	measured	2
+5207	650	tri-q2-2-2-f4-3-4	2	Accelerated	measured	2
+5208	651	tri-q2-2-2-f4-4-1	-1	Standard	warmup	0
+5209	651	tri-q2-2-2-f4-4-1	-1	Accelerated	warmup	0
+5210	651	tri-q2-2-2-f4-4-1	0	Accelerated	measured	0
+5211	651	tri-q2-2-2-f4-4-1	0	Standard	measured	0
+5212	651	tri-q2-2-2-f4-4-1	1	Standard	measured	1
+5213	651	tri-q2-2-2-f4-4-1	1	Accelerated	measured	1
+5214	651	tri-q2-2-2-f4-4-1	2	Accelerated	measured	2
+5215	651	tri-q2-2-2-f4-4-1	2	Standard	measured	2
+5216	652	tri-q2-2-2-f4-4-2	-1	Accelerated	warmup	0
+5217	652	tri-q2-2-2-f4-4-2	-1	Standard	warmup	0
+5218	652	tri-q2-2-2-f4-4-2	0	Standard	measured	0
+5219	652	tri-q2-2-2-f4-4-2	0	Accelerated	measured	0
+5220	652	tri-q2-2-2-f4-4-2	1	Accelerated	measured	1
+5221	652	tri-q2-2-2-f4-4-2	1	Standard	measured	1
+5222	652	tri-q2-2-2-f4-4-2	2	Standard	measured	2
+5223	652	tri-q2-2-2-f4-4-2	2	Accelerated	measured	2
+5224	653	tri-q2-2-2-f4-4-3	-1	Standard	warmup	0
+5225	653	tri-q2-2-2-f4-4-3	-1	Accelerated	warmup	0
+5226	653	tri-q2-2-2-f4-4-3	0	Accelerated	measured	0
+5227	653	tri-q2-2-2-f4-4-3	0	Standard	measured	0
+5228	653	tri-q2-2-2-f4-4-3	1	Standard	measured	1
+5229	653	tri-q2-2-2-f4-4-3	1	Accelerated	measured	1
+5230	653	tri-q2-2-2-f4-4-3	2	Accelerated	measured	2
+5231	653	tri-q2-2-2-f4-4-3	2	Standard	measured	2
+5232	654	tri-q2-2-2-f4-4-4	-1	Accelerated	warmup	0
+5233	654	tri-q2-2-2-f4-4-4	-1	Standard	warmup	0
+5234	654	tri-q2-2-2-f4-4-4	0	Standard	measured	0
+5235	654	tri-q2-2-2-f4-4-4	0	Accelerated	measured	0
+5236	654	tri-q2-2-2-f4-4-4	1	Accelerated	measured	1
+5237	654	tri-q2-2-2-f4-4-4	1	Standard	measured	1
+5238	654	tri-q2-2-2-f4-4-4	2	Standard	measured	2
+5239	654	tri-q2-2-2-f4-4-4	2	Accelerated	measured	2
+```
+
+#### U21-OR1 / SOURCE_FINGERPRINT.bin
+
+<!-- U21-FIXTURE SOURCE_FINGERPRINT.bin encoding=base64 bytes=1951 sha256=2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05 -->
+```text
+ZXhhY3RmcmFjLXVuaXQyMS1zb3VyY2UvMQpleGFjdGZyYWMvX19pbml0X18ucHkAZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NQpleGFjdGZyYWMvX3RlbGVtZXRyeS5weQAzYmUzY2FlNjc1N2RiOTIxYWFjZGRlN2ZiYWUyY2I1OWNmYTFiOTFiNzNiZDljMTZjMDY5NWExZjYyMGI5Y2FjCmV4YWN0ZnJhYy9icmFuY2gucHkANTg0ZDJmMjYyYzk0ZTIyN2YzODMyNTYzYWVjZWZmNjAwYzk1YzY5NDNiMDQwMWJkOGVmNjRlM2MyYTVlZjA1NwpleGFjdGZyYWMvY2VydGlmaWNhdGUucHkAY2ZmYWI2OGJmNmM5YzZjNmVmMWQ0ZjljYzE3N2I5NzE4Mjk4YmYxMmVjNWNjMTZiNGVkMzM1MzcyOGIzMThhNApleGFjdGZyYWMvY2xpLnB5ADBlNDFlOTE1YmI3OWU4ODYyMWRmODRmZTMzNTcwNmE0MGQwYTc2ZjE5NmE1ZjM1MWNlOWQ5ODk3ODYzNjQ0ZDgKZXhhY3RmcmFjL2NvcnB1cy5weQA2NGIwNDYyNWIyMTliNWRlMjYwZjA4ZTQ4MWU3NjYzNThiZGYzOWRhODI4MDg4MGY1NjMzMjBjMDUwMDBlMzY5CmV4YWN0ZnJhYy9leHBlcmltZW50cy5weQA3NzYxMGZjZjNmNzIwZmVhMjlhNmYxYzY1Njk1NzY3MTkyOGZjYzYyZDliZDMwNzVhZjM3OGFiMGYyZjc5MjNiCmV4YWN0ZnJhYy9mYW1pbGllcy5weQA5MjgzMGM3Y2FjN2E2ZjM5ZGY1ZjE2ZjMxNjI5NTM1MmRlZTllNjViYzMxZmUxMjIwYTg1MzA1Y2FjZDk4NzJiCmV4YWN0ZnJhYy9mbG93LnB5AGVlMzE4Y2NiZGZjNTljYWRjY2QwNTVkZDFiNTdlMDE2YTEyODgzODdhZmIxMjQ3OTJiNTJjZTM5YzJiNzZmY2MKZXhhY3RmcmFjL2luc3RhbmNlLnB5ADMyNjk1ZWUyMjZkMzYzNjQ1MWQyOTY0ZWU5OWJjYTBlZDRjZDljYzRhNzE1NDJmZmQ0MzU1MDRhMzkxODU1OGUKZXhhY3RmcmFjL29yYWNsZS5weQBmYTg4ODU2ODk2MDhjYzIxNmUxMzFjZGM2MzU3M2Y2OThmNjI4YjFhOWUzMTNiZGU1MjFlMWYzZmVmZjg4OTEzCmV4YWN0ZnJhYy9wYXJpdHlfY3V0LnB5AGYwY2I0YmJiMzhmODBmMDU0NTljODk2NjJkM2VlN2ZjM2UwOWI2M2UxY2E5ODVlYTM3Y2NiZmM5ZTBmODVlYzEKZXhhY3RmcmFjL3JhdGlvbmFsLnB5ADkzM2ExYjc5MTg3YmQ4YzkzZGRkYjhhOTNlOWU5MjcwODc3NWQ5ODBkMjE2MWY5NzFhNTk3YTVmNjFhMjdhNGIKZXhhY3RmcmFjL3Nob3JlLnB5ADMyM2ZhNmY1MDc0YTgzZGNlZGQxNmFjYWRmOGJjOTk5MDUzOTYyOThjNzYwOWNhY2FiODcxZjRkY2NhYjA0MTUKZXhhY3RmcmFjL3NpZ25fcm91dGluZy5weQBlMGJkNDk3YjUwMzRjZWU1NDQzMzI5MDFkOTM3ZjE5NzNhNmYzN2ZiZmZiMjgxMzM3ZTRiMDkxZGFiZGIyYmViCmV4YWN0ZnJhYy9zb2x2ZS5weQA0Njc3M2Q2ZjIyNDcwMjUyMjA3MTJlOTY3MzE1YTMzZmYzNmJlYTYwMzI4YmNjMmI5YjE0OWQ4MjRmNGQ2ZTUxCmV4YWN0ZnJhYy90ZWxlbWV0cnkucHkAYWFkY2JjZDAwZmFlM2ViYTllNjFhODQzM2I5MGRhZTQ3YWIwZTY3ZTkxZmE5MTFjZjU3ZDkwOWNlZjI0OWJkMwpleGFjdGZyYWMvd2l0bmVzcy5weQAxMjI1Mzg3NjQ0ODkwZWZlNGQ3MGU5ZWRlNjRkMDdiNjEyYjU5OWY3MGM3M2I3ZGU1Mzc4NzgxZmQxN2NlYjZhCmV4YWN0ZnJhY192ZXJpZnkvX19pbml0X18ucHkAZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NQpleGFjdGZyYWNfdmVyaWZ5L2JydXRlLnB5AGIzMWU1M2E4YjE2YTM3ZWY4ODI3MTQxYTc4MTY5ZmZlOWIwYTg0NzYyODQzYTNhZDQ1Yzg5ZDkzNDRmOThiZjYKZXhhY3RmcmFjX3ZlcmlmeS9jaGVjay5weQA1YmViOTg1MGJmN2FlYjMxMTE3OGE1ZjM1ZGYxMzU3ZDhkNGEzZTgwMWZkZTUzNDFlMjEwODE3NmJkMDFmMWFkCmV4cGVyaW1lbnRzL3JlcHJvZHVjZS5weQBmNzVkNjQ2ODE5Y2I3MTRiOTI3YTc1MjIxYmViNGExYTBhMTM0ODAzOTk5YTllMzViMzdkNDJmYTViZjRmZmYyCg==
+```
+
+#### U21-OR1 / SOURCE_FIXTURE.json
+
+<!-- U21-FIXTURE SOURCE_FIXTURE.json encoding=raw bytes=3167 sha256=852ed4cf6fa9498d5e0976ebdb0aaaa2d53f3a9ec746023a24275681d8cd2db7 -->
+```json
+{
+  "closed_entries": [
+    {
+      "path": "exactfrac/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "exactfrac/_telemetry.py",
+      "sha256": "3be3cae6757db921aacdde7fbae2cb59cfa1b91b73bd9c16c0695a1f620b9cac"
+    },
+    {
+      "path": "exactfrac/branch.py",
+      "sha256": "584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057"
+    },
+    {
+      "path": "exactfrac/certificate.py",
+      "sha256": "cffab68bf6c9c6c6ef1d4f9cc177b9718298bf12ec5cc16b4ed3353728b318a4"
+    },
+    {
+      "path": "exactfrac/cli.py",
+      "sha256": "0e41e915bb79e88621df84fe335706a40d0a76f196a5f351ce9d9897863644d8"
+    },
+    {
+      "path": "exactfrac/corpus.py",
+      "sha256": "64b04625b219b5de260f08e481e766358bdf39da8280880f563320c05000e369"
+    },
+    {
+      "path": "exactfrac/families.py",
+      "sha256": "92830c7cac7a6f39df5f16f316295352dee9e65bc31fe1220a85305cacd9872b"
+    },
+    {
+      "path": "exactfrac/flow.py",
+      "sha256": "ee318ccbdfc59cadccd055dd1b57e016a1288387afb124792b52ce39c2b76fcc"
+    },
+    {
+      "path": "exactfrac/instance.py",
+      "sha256": "32695ee226d3636451d2964ee99bca0ed4cd9cc4a71542ffd435504a3918558e"
+    },
+    {
+      "path": "exactfrac/oracle.py",
+      "sha256": "fa8885689608cc216e131cdc63573f698f628b1a9e313bde521e1f3feff88913"
+    },
+    {
+      "path": "exactfrac/parity_cut.py",
+      "sha256": "f0cb4bbb38f80f05459c89662d3ee7fc3e09b63e1ca985ea37ccbfc9e0f85ec1"
+    },
+    {
+      "path": "exactfrac/rational.py",
+      "sha256": "933a1b79187bd8c93dddb8a93e9e92708775d980d2161f971a597a5f61a27a4b"
+    },
+    {
+      "path": "exactfrac/shore.py",
+      "sha256": "323fa6f5074a83dcedd16acadf8bc99905396298c7609cacab871f4dccab0415"
+    },
+    {
+      "path": "exactfrac/sign_routing.py",
+      "sha256": "e0bd497b5034cee544332901d937f1973a6f37fbffb281337e4b091dabdb2beb"
+    },
+    {
+      "path": "exactfrac/solve.py",
+      "sha256": "46773d6f2247025220712e967315a33ff36bea60328bcc2b9b149d824f4d6e51"
+    },
+    {
+      "path": "exactfrac/telemetry.py",
+      "sha256": "aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"
+    },
+    {
+      "path": "exactfrac/witness.py",
+      "sha256": "1225387644890efe4d70e9ede64d07b612b599f70c73b7de5378781fd17ceb6a"
+    },
+    {
+      "path": "exactfrac_verify/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "exactfrac_verify/brute.py",
+      "sha256": "b31e53a8b16a37ef8827141a78169ffe9b0a84762843a3ad45c89d9344f98bf6"
+    },
+    {
+      "path": "exactfrac_verify/check.py",
+      "sha256": "5beb9850bf7aeb311178a5f35df1357d8d4a3e801fde5341e2108176bd01f1ad"
+    }
+  ],
+  "kind": "SYNTHETIC source fingerprint; two comment-only placeholders, not production sources",
+  "placeholder_text": {
+    "exactfrac/experiments.py": "# SYNTHETIC SOURCE PLACEHOLDER FOR UNIT 21 PHASE C: exactfrac/experiments.py\n",
+    "experiments/reproduce.py": "# SYNTHETIC SOURCE PLACEHOLDER FOR UNIT 21 PHASE C: experiments/reproduce.py\n"
+  },
+  "sha256": "2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05"
+}
+```
+
+#### U21-OR1 / SYNTHETIC_ALGORITHMS.json
+
+<!-- U21-FIXTURE SYNTHETIC_ALGORITHMS.json encoding=raw bytes=22900 sha256=b8bbcbbeeb159df276d3f353fb86c49bdf62c45c466cdb35fca248d47df98d19 -->
+```json
+[{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Standard","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"recipe":"edge-q01-f01-01","solver":"Standard"},{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Accelerated","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"recipe":"edge-q01-f01-01","solver":"Accelerated"},{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":2,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"recipe":"struct-cycle-n04-b00001-fdegree","solver":"Standard"},{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"recipe":"struct-cycle-n04-b00001-fdegree","solver":"Accelerated"},{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"recipe":"tri-q1-1-1-f1-1-1","solver":"Standard"},{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"recipe":"tri-q1-1-1-f1-1-1","solver":"Accelerated"}]
+```
+
+#### U21-OR1 / SYNTHETIC_CALL_SCRIPT.json
+
+<!-- U21-FIXTURE SYNTHETIC_CALL_SCRIPT.json encoding=raw bytes=7375 sha256=ad900eb250ce8be19722fb287b079479fc61bc780fc36710d40b35bfea6e2e08 -->
+```json
+{
+  "calls": [
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 960,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 961,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        1962000,
+        1962013
+      ],
+      "elapsed_ns": 13,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 962,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        1963000,
+        1963019
+      ],
+      "elapsed_ns": 19,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 963,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        1964000,
+        1964000
+      ],
+      "elapsed_ns": 0,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 964,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        1965000,
+        1965003
+      ],
+      "elapsed_ns": 3,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 965,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        1966000,
+        1966007
+      ],
+      "elapsed_ns": 7,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 966,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        1967000,
+        1967005
+      ],
+      "elapsed_ns": 5,
+      "phase": "measured",
+      "recipe": "edge-q01-f01-01",
+      "recipe_index": 120,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 967,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 2072,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 2073,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3074000,
+        3074055
+      ],
+      "elapsed_ns": 55,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 2074,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3075000,
+        3075090
+      ],
+      "elapsed_ns": 90,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 2075,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        3076000,
+        3076004
+      ],
+      "elapsed_ns": 4,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 2076,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        3077000,
+        3077009
+      ],
+      "elapsed_ns": 9,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 2077,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3078000,
+        3078018
+      ],
+      "elapsed_ns": 18,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 2078,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3079000,
+        3079021
+      ],
+      "elapsed_ns": 21,
+      "phase": "measured",
+      "recipe": "struct-cycle-n04-b00001-fdegree",
+      "recipe_index": 259,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 2079,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 2968,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [],
+      "elapsed_ns": null,
+      "phase": "warmup",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 0,
+      "round": -1,
+      "sequence": 2969,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3970000,
+        3970077
+      ],
+      "elapsed_ns": 77,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 2970,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3971000,
+        3971088
+      ],
+      "elapsed_ns": 88,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 0,
+      "round": 0,
+      "sequence": 2971,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        3972000,
+        3972006
+      ],
+      "elapsed_ns": 6,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 2972,
+      "solver": "Standard"
+    },
+    {
+      "clock_reads": [
+        3973000,
+        3973002
+      ],
+      "elapsed_ns": 2,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 1,
+      "round": 1,
+      "sequence": 2973,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3974000,
+        3974015
+      ],
+      "elapsed_ns": 15,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 2974,
+      "solver": "Accelerated"
+    },
+    {
+      "clock_reads": [
+        3975000,
+        3975020
+      ],
+      "elapsed_ns": 20,
+      "phase": "measured",
+      "recipe": "tri-q1-1-1-f1-1-1",
+      "recipe_index": 371,
+      "repeat": 2,
+      "round": 2,
+      "sequence": 2975,
+      "solver": "Standard"
+    }
+  ],
+  "kind": "SYNTHETIC SUBSET: no real solves/timings; NOT a complete unit21-v1 campaign",
+  "measured_time_vectors": {
+    "edge-q01-f01-01": {
+      "Accelerated": [
+        19,
+        0,
+        5
+      ],
+      "Standard": [
+        13,
+        3,
+        7
+      ]
+    },
+    "struct-cycle-n04-b00001-fdegree": {
+      "Accelerated": [
+        55,
+        9,
+        18
+      ],
+      "Standard": [
+        90,
+        4,
+        21
+      ]
+    },
+    "tri-q1-1-1-f1-1-1": {
+      "Accelerated": [
+        77,
+        2,
+        15
+      ],
+      "Standard": [
+        88,
+        6,
+        20
+      ]
+    }
+  },
+  "selected_ids": [
+    "edge-q01-f01-01",
+    "struct-cycle-n04-b00001-fdegree",
+    "tri-q1-1-1-f1-1-1"
+  ]
+}
+```
+
+#### U21-OR1 / SYNTHETIC_ESCAPING.json
+
+<!-- U21-FIXTURE SYNTHETIC_ESCAPING.json encoding=raw bytes=100 sha256=5417aa8ff2a761367db513804a6f7fc6e0c91c0e9c36478ca600c46f38473f51 -->
+```json
+{"cpu":"CPU \"\\\n\u00e9\uff11","flag":true,"label":"SYNTHETIC","optional":null,"wall_clock_s":0.0}
+```
+
+#### U21-OR1 / SYNTHETIC_GIANT_ROW.jsonl
+
+<!-- U21-FIXTURE SYNTHETIC_GIANT_ROW.jsonl encoding=raw bytes=19276 sha256=eacddea72459b6244c84cfcebe4ee67534646e36e3239983cb82c2043248c229 -->
+```json
+{"campaign":"unit21-v1","certificate":{"bytes":85,"path":"certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json","sha256":"d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077"},"elapsed_ns":55,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":14617,"flow_peak_generated_value":100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":14617,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":14620,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":14617,"flow_peak_generated_value":100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":14620,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":5.5e-08}},"repeat":0,"solver":"Accelerated"}
+```
+
+#### U21-OR1 / SYNTHETIC_RUNS.jsonl
+
+<!-- U21-FIXTURE SYNTHETIC_RUNS.jsonl encoding=raw bytes=83409 sha256=7a99909015625f61d009a82ba9e19cb9b39eb592b57a4e9dd47e3d890de2288b -->
+```json
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Standard.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":13,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Standard","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":1.3e-08}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Accelerated.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":19,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Accelerated","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":1.9e-08}},"repeat":0,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Accelerated.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":0,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Accelerated","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":0.0}},"repeat":1,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Standard.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":3,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Standard","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":3e-09}},"repeat":1,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Standard.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":7,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Standard","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":7e-09}},"repeat":2,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Accelerated.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":5,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"measured","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Accelerated","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":5e-09}},"repeat":2,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":85,"path":"certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json","sha256":"d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077"},"elapsed_ns":55,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":5.5e-08}},"repeat":0,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":83,"path":"certificates/struct-cycle-n04-b00001-fdegree.Standard.json","sha256":"37743820166bb85c058502f2c212d6f7a8231d6202e46325d982ca87840fdf87"},"elapsed_ns":90,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":2,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":9e-08}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":83,"path":"certificates/struct-cycle-n04-b00001-fdegree.Standard.json","sha256":"37743820166bb85c058502f2c212d6f7a8231d6202e46325d982ca87840fdf87"},"elapsed_ns":4,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":2,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":4e-09}},"repeat":1,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":85,"path":"certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json","sha256":"d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077"},"elapsed_ns":9,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":9e-09}},"repeat":1,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":85,"path":"certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json","sha256":"d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077"},"elapsed_ns":18,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":1.8e-08}},"repeat":2,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":83,"path":"certificates/struct-cycle-n04-b00001-fdegree.Standard.json","sha256":"37743820166bb85c058502f2c212d6f7a8231d6202e46325d982ca87840fdf87"},"elapsed_ns":21,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"measured","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":2,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":2.1e-08}},"repeat":2,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Accelerated.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":77,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":7.7e-08}},"repeat":0,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Standard.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":88,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":8.8e-08}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Standard.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":6,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":6e-09}},"repeat":1,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Accelerated.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":2,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":2e-09}},"repeat":1,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Accelerated.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":15,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":1.5e-08}},"repeat":2,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Standard.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":20,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"measured","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":2e-08}},"repeat":2,"solver":"Standard"}
+```
+
+#### U21-OR1 / SYNTHETIC_RUN_INFO.json
+
+<!-- U21-FIXTURE SYNTHETIC_RUN_INFO.json encoding=raw bytes=3483 sha256=52a6b2e38f74e2169bb8378f7668b9c558c52d710427f728c2f09aede0ced888 -->
+```json
+{"campaign":"unit21-v1","environment":{"clock":{"adjustable":false,"monotonic":true,"name":"perf_counter_ns","resolution_s":1e-09},"cpu":null,"hash_seed":"73","int_max_str_digits":640,"platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","recursion_limit":1000},"format":"exactfrac-experiment-info/1","inputs":{"manifest_sha256":"866541ba2ab7a4d5f2a1e6a4cb0a24da769392e8bb8747a8fe1997a8bb8640d8","recipes":655,"suite":"unit20-v1"},"protocol":{"execution":"serial-single-process","measured_repeats":3,"measured_rounds":[0,1,2],"recipe_order":"ascii","route_order":"standard-first-iff-(recipe-index+round)-even","routes":["Standard","Accelerated"],"telemetry":true,"timeout_ns":null,"timing_excludes":["input","metadata","certificates","verification","serialization","output"],"timing_interval":"solve-with-telemetry-return","warmup_round":-1,"warmups":1},"source":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","entries":[{"path":"exactfrac/__init__.py","sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"path":"exactfrac/_telemetry.py","sha256":"3be3cae6757db921aacdde7fbae2cb59cfa1b91b73bd9c16c0695a1f620b9cac"},{"path":"exactfrac/branch.py","sha256":"584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057"},{"path":"exactfrac/certificate.py","sha256":"cffab68bf6c9c6c6ef1d4f9cc177b9718298bf12ec5cc16b4ed3353728b318a4"},{"path":"exactfrac/cli.py","sha256":"0e41e915bb79e88621df84fe335706a40d0a76f196a5f351ce9d9897863644d8"},{"path":"exactfrac/corpus.py","sha256":"64b04625b219b5de260f08e481e766358bdf39da8280880f563320c05000e369"},{"path":"exactfrac/experiments.py","sha256":"77610fcf3f720fea29a6f1c656957671928fcc62d9bd3075af378ab0f2f7923b"},{"path":"exactfrac/families.py","sha256":"92830c7cac7a6f39df5f16f316295352dee9e65bc31fe1220a85305cacd9872b"},{"path":"exactfrac/flow.py","sha256":"ee318ccbdfc59cadccd055dd1b57e016a1288387afb124792b52ce39c2b76fcc"},{"path":"exactfrac/instance.py","sha256":"32695ee226d3636451d2964ee99bca0ed4cd9cc4a71542ffd435504a3918558e"},{"path":"exactfrac/oracle.py","sha256":"fa8885689608cc216e131cdc63573f698f628b1a9e313bde521e1f3feff88913"},{"path":"exactfrac/parity_cut.py","sha256":"f0cb4bbb38f80f05459c89662d3ee7fc3e09b63e1ca985ea37ccbfc9e0f85ec1"},{"path":"exactfrac/rational.py","sha256":"933a1b79187bd8c93dddb8a93e9e92708775d980d2161f971a597a5f61a27a4b"},{"path":"exactfrac/shore.py","sha256":"323fa6f5074a83dcedd16acadf8bc99905396298c7609cacab871f4dccab0415"},{"path":"exactfrac/sign_routing.py","sha256":"e0bd497b5034cee544332901d937f1973a6f37fbffb281337e4b091dabdb2beb"},{"path":"exactfrac/solve.py","sha256":"46773d6f2247025220712e967315a33ff36bea60328bcc2b9b149d824f4d6e51"},{"path":"exactfrac/telemetry.py","sha256":"aadcbcd00fae3eba9e61a8433b90dae47ab0e67e91fa911cf57d909cef249bd3"},{"path":"exactfrac/witness.py","sha256":"1225387644890efe4d70e9ede64d07b612b599f70c73b7de5378781fd17ceb6a"},{"path":"exactfrac_verify/__init__.py","sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"path":"exactfrac_verify/brute.py","sha256":"b31e53a8b16a37ef8827141a78169ffe9b0a84762843a3ad45c89d9344f98bf6"},{"path":"exactfrac_verify/check.py","sha256":"5beb9850bf7aeb311178a5f35df1357d8d4a3e801fde5341e2108176bd01f1ad"},{"path":"experiments/reproduce.py","sha256":"f75d646819cb714b927a75221beb4a1a0a134803999a9e35b37d42fa5bf4fff2"}],"sha256":"2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05"}}
+```
+
+#### U21-OR1 / SYNTHETIC_WARMUPS.jsonl
+
+<!-- U21-FIXTURE SYNTHETIC_WARMUPS.jsonl encoding=raw bytes=27795 sha256=98153f3c795f25e799e67891532aacd347b47acf71f1164e60401b24218fb8b9 -->
+```json
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Accelerated.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"warmup","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Accelerated","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":62,"path":"certificates/edge-q01-f01-01.Standard.json","sha256":"96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":1,"bytes":68,"input_integer_bits_sum":8,"m":1,"max_f_bits":1,"max_q_bits":1,"n":2,"path":"unit20-v1/edge-q01-f01-01.json","sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","suite":"unit20-v1"},"phase":"warmup","recipe":"edge-q01-f01-01","record":{"algorithm":{"branches":[],"native":{"attaining_candidate":"Empty","branch_solver":"Standard","branch_stats":[]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1},"output_denominator_bits":1,"output_numerator_bits":1,"total":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":1,"peak_integer_bits":2,"peak_numerator_bits":1}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":83,"path":"certificates/struct-cycle-n04-b00001-fdegree.Standard.json","sha256":"37743820166bb85c058502f2c212d6f7a8231d6202e46325d982ca87840fdf87"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"warmup","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":2,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":85,"path":"certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json","sha256":"d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":3,"bytes":96,"input_integer_bits_sum":30,"m":4,"max_f_bits":2,"max_q_bits":1,"n":4,"path":"unit20-v1/struct-cycle-n04-b00001-fdegree.json","sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","suite":"unit20-v1"},"phase":"warmup","recipe":"struct-cycle-n04-b00001-fdegree","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":3,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Accelerated"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Standard.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"warmup","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":1,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":12,"atomic_families_feasible":8,"augmentations":17,"bfs_scans":112,"early_returns":0,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":16,"newton_candidates":2,"newton_queries":0,"newton_terminal":0,"newton_updates":2,"oracle_calls":4,"ordinary_min_cut_calls":16,"outer_iterations":3,"parity_cut_calls":8,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":12,"atomic_families_feasible":3,"augmentations":7,"bfs_scans":42,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":6,"newton_candidates":1,"newton_queries":0,"newton_terminal":0,"newton_updates":1,"oracle_calls":3,"ordinary_min_cut_calls":6,"outer_iterations":2,"parity_cut_calls":3,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Standard","branch_stats":[{"newton_updates":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":1},{"newton_updates":2,"oracle_calls":4,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":8,"flow_augmentations":17,"flow_bfs_scans":112,"flow_peak_generated_value":257,"ordinary_min_cut_calls":16,"parity_cut_calls":8},"outer_iterations":3},{"newton_updates":1,"oracle_calls":3,"oracle_stats":{"atomic_families_examined":12,"atomic_families_feasible":3,"flow_augmentations":7,"flow_bfs_scans":42,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":6,"parity_cut_calls":3},"outer_iterations":2},{"newton_updates":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":29,"atomic_families_feasible":13,"augmentations":29,"bfs_scans":182,"early_returns":0,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":26,"newton_candidates":3,"newton_queries":0,"newton_terminal":0,"newton_updates":3,"oracle_calls":10,"ordinary_min_cut_calls":26,"outer_iterations":6,"parity_cut_calls":13,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Standard"}
+{"campaign":"unit21-v1","certificate":{"bytes":82,"path":"certificates/tri-q1-1-1-f1-1-1.Accelerated.json","sha256":"2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9"},"elapsed_ns":null,"format":"exactfrac-run/1","input":{"Q_bits":2,"bytes":86,"input_integer_bits_sum":18,"m":3,"max_f_bits":1,"max_q_bits":1,"n":3,"path":"unit20-v1/tri-q1-1-1-f1-1-1.json","sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","suite":"unit20-v1"},"phase":"warmup","recipe":"tri-q1-1-1-f1-1-1","record":{"algorithm":{"branches":[{"branch":0,"feasible":true,"work":{"atomic_families_enumerated":2,"atomic_families_examined":4,"atomic_families_feasible":2,"augmentations":5,"bfs_scans":28,"early_returns":0,"flow_peak_bits":5,"flow_peak_generated_value":17,"initialization_returns":1,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":4,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":2,"ordinary_min_cut_calls":4,"outer_iterations":0,"parity_cut_calls":2,"peak_denominator_bits":31,"peak_integer_bits":41,"peak_numerator_bits":21}},{"branch":1,"feasible":true,"work":{"atomic_families_enumerated":3,"atomic_families_examined":21,"atomic_families_feasible":14,"augmentations":29,"bfs_scans":196,"early_returns":1,"flow_peak_bits":9,"flow_peak_generated_value":257,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"lookahead_terminal":0,"max_flow_calls":28,"newton_candidates":3,"newton_queries":3,"newton_terminal":1,"newton_updates":0,"oracle_calls":7,"ordinary_min_cut_calls":28,"outer_iterations":3,"parity_cut_calls":14,"peak_denominator_bits":32,"peak_integer_bits":42,"peak_numerator_bits":22}},{"branch":2,"feasible":true,"work":{"atomic_families_enumerated":4,"atomic_families_examined":24,"atomic_families_feasible":6,"augmentations":13,"bfs_scans":84,"early_returns":1,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":0,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"lookahead_terminal":1,"max_flow_calls":12,"newton_candidates":2,"newton_queries":2,"newton_terminal":0,"newton_updates":0,"oracle_calls":6,"ordinary_min_cut_calls":12,"outer_iterations":2,"parity_cut_calls":6,"peak_denominator_bits":33,"peak_integer_bits":43,"peak_numerator_bits":23}},{"branch":3,"feasible":false,"work":{"atomic_families_enumerated":1,"atomic_families_examined":1,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":1,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":34,"peak_integer_bits":44,"peak_numerator_bits":24}}],"native":{"attaining_candidate":"Baseline","branch_solver":"Accelerated","branch_stats":[{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":2,"oracle_stats":{"atomic_families_examined":4,"atomic_families_feasible":2,"flow_augmentations":5,"flow_bfs_scans":28,"flow_peak_generated_value":17,"ordinary_min_cut_calls":4,"parity_cut_calls":2},"outer_iterations":0},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":1,"newton_queries":3,"oracle_calls":7,"oracle_stats":{"atomic_families_examined":21,"atomic_families_feasible":14,"flow_augmentations":29,"flow_bfs_scans":196,"flow_peak_generated_value":257,"ordinary_min_cut_calls":28,"parity_cut_calls":14},"outer_iterations":3},{"early_returns":1,"lookahead_accepted":1,"lookahead_queries":2,"lookahead_rejected":0,"newton_queries":2,"oracle_calls":6,"oracle_stats":{"atomic_families_examined":24,"atomic_families_feasible":6,"flow_augmentations":13,"flow_bfs_scans":84,"flow_peak_generated_value":1025,"ordinary_min_cut_calls":12,"parity_cut_calls":6},"outer_iterations":2},{"early_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"newton_queries":0,"oracle_calls":1,"oracle_stats":{"atomic_families_examined":1,"atomic_families_feasible":0,"flow_augmentations":0,"flow_bfs_scans":0,"flow_peak_generated_value":0,"ordinary_min_cut_calls":0,"parity_cut_calls":0},"outer_iterations":0}]},"nonbranch":{"atomic_families_enumerated":0,"atomic_families_examined":0,"atomic_families_feasible":0,"augmentations":0,"bfs_scans":0,"early_returns":0,"flow_peak_bits":0,"flow_peak_generated_value":0,"initialization_returns":0,"lookahead_accepted":0,"lookahead_queries":0,"lookahead_rejected":0,"lookahead_terminal":0,"max_flow_calls":0,"newton_candidates":0,"newton_queries":0,"newton_terminal":0,"newton_updates":0,"oracle_calls":0,"ordinary_min_cut_calls":0,"outer_iterations":0,"parity_cut_calls":0,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70},"output_denominator_bits":2,"output_numerator_bits":3,"total":{"atomic_families_enumerated":10,"atomic_families_examined":50,"atomic_families_feasible":22,"augmentations":47,"bfs_scans":308,"early_returns":2,"flow_peak_bits":11,"flow_peak_generated_value":1025,"initialization_returns":1,"lookahead_accepted":2,"lookahead_queries":4,"lookahead_rejected":1,"lookahead_terminal":1,"max_flow_calls":44,"newton_candidates":5,"newton_queries":5,"newton_terminal":1,"newton_updates":0,"oracle_calls":16,"ordinary_min_cut_calls":44,"outer_iterations":5,"parity_cut_calls":22,"peak_denominator_bits":80,"peak_integer_bits":90,"peak_numerator_bits":70}},"metadata":{"code_version":"exactfrac-source-sha256:2d5063b59fcebb0f413d642f4897faed4aef2db9a63470c19e395d3d2dc3aa05","cpu":null,"instance_sha256":"345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e","platform":"SYNTHETIC-PLATFORM","python_version":"SYNTHETIC-PYTHON","wall_clock_s":null}},"repeat":0,"solver":"Accelerated"}
+```
+
+#### U21-OR1 / SYNTHETIC_branches.csv
+
+<!-- U21-FIXTURE SYNTHETIC_branches.csv encoding=raw bytes=2099 sha256=fb6fd0965fb8ce71043c1c56a76e053066c14b717dd65aa661fd2a64ff1f6966 -->
+```csv
+recipe,solver,branch,feasible,outer_iterations,oracle_calls,newton_updates,newton_queries,newton_candidates,lookahead_queries,lookahead_accepted,lookahead_rejected,lookahead_terminal,newton_terminal,initialization_returns,early_returns,atomic_families_enumerated,atomic_families_examined,atomic_families_feasible,parity_cut_calls,ordinary_min_cut_calls,max_flow_calls,augmentations,bfs_scans,flow_peak_generated_value,flow_peak_bits,peak_numerator_bits,peak_denominator_bits,peak_integer_bits
+struct-cycle-n04-b00001-fdegree,Standard,0,true,1,2,0,0,0,0,0,0,0,0,0,0,2,4,2,2,4,4,5,28,17,5,21,31,41
+struct-cycle-n04-b00001-fdegree,Standard,1,true,3,4,2,0,2,0,0,0,0,0,0,0,3,12,8,8,16,16,17,112,257,9,22,32,42
+struct-cycle-n04-b00001-fdegree,Standard,2,true,2,3,1,0,1,0,0,0,0,0,0,0,4,12,3,3,6,6,7,42,1025,11,23,33,43
+struct-cycle-n04-b00001-fdegree,Standard,3,false,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,24,34,44
+struct-cycle-n04-b00001-fdegree,Accelerated,0,true,0,2,0,0,0,0,0,0,0,0,1,0,2,4,2,2,4,4,5,28,17,5,21,31,41
+struct-cycle-n04-b00001-fdegree,Accelerated,1,true,3,7,0,3,3,2,1,1,0,1,0,1,3,21,14,14,28,28,29,196,257,9,22,32,42
+struct-cycle-n04-b00001-fdegree,Accelerated,2,true,2,6,0,2,2,2,1,0,1,0,0,1,4,24,6,6,12,12,13,84,1025,11,23,33,43
+struct-cycle-n04-b00001-fdegree,Accelerated,3,false,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,24,34,44
+tri-q1-1-1-f1-1-1,Standard,0,true,1,2,0,0,0,0,0,0,0,0,0,0,2,4,2,2,4,4,5,28,17,5,21,31,41
+tri-q1-1-1-f1-1-1,Standard,1,true,3,4,2,0,2,0,0,0,0,0,0,0,3,12,8,8,16,16,17,112,257,9,22,32,42
+tri-q1-1-1-f1-1-1,Standard,2,true,2,3,1,0,1,0,0,0,0,0,0,0,4,12,3,3,6,6,7,42,1025,11,23,33,43
+tri-q1-1-1-f1-1-1,Standard,3,false,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,24,34,44
+tri-q1-1-1-f1-1-1,Accelerated,0,true,0,2,0,0,0,0,0,0,0,0,1,0,2,4,2,2,4,4,5,28,17,5,21,31,41
+tri-q1-1-1-f1-1-1,Accelerated,1,true,3,7,0,3,3,2,1,1,0,1,0,1,3,21,14,14,28,28,29,196,257,9,22,32,42
+tri-q1-1-1-f1-1-1,Accelerated,2,true,2,6,0,2,2,2,1,0,1,0,0,1,4,24,6,6,12,12,13,84,1025,11,23,33,43
+tri-q1-1-1-f1-1-1,Accelerated,3,false,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,24,34,44
+```
+
+#### U21-OR1 / SYNTHETIC_comparison.csv
+
+<!-- U21-FIXTURE SYNTHETIC_comparison.csv encoding=raw bytes=345 sha256=91f33e4f2d3c20f89d04b7c1fd5f4d1f2824228aaa67ca0beecd380b2447665a -->
+```csv
+recipe,standard_median_solve_ns,accelerated_median_solve_ns,standard_oracle_calls,accelerated_oracle_calls,standard_max_flow_calls,accelerated_max_flow_calls,standard_peak_integer_bits,accelerated_peak_integer_bits
+edge-q01-f01-01,7,5,0,0,0,0,2,2
+struct-cycle-n04-b00001-fdegree,21,18,10,16,26,44,90,90
+tri-q1-1-1-f1-1-1,20,15,10,16,26,44,90,90
+```
+
+#### U21-OR1 / SYNTHETIC_summary.csv
+
+<!-- U21-FIXTURE SYNTHETIC_summary.csv encoding=raw bytes=1367 sha256=be1630b93b7183fab134e4cf85b85fadde3e32bbfa53b5e0a0decce2549b12a8 -->
+```csv
+recipe,solver,n,m,Q_bits,max_q_bits,max_f_bits,input_integer_bits_sum,repeat_count,median_solve_ns,attaining_candidate,outer_iterations,oracle_calls,newton_updates,newton_queries,newton_candidates,lookahead_queries,lookahead_accepted,lookahead_rejected,lookahead_terminal,newton_terminal,initialization_returns,early_returns,atomic_families_enumerated,atomic_families_examined,atomic_families_feasible,parity_cut_calls,ordinary_min_cut_calls,max_flow_calls,augmentations,bfs_scans,flow_peak_generated_value,flow_peak_bits,peak_numerator_bits,peak_denominator_bits,peak_integer_bits,output_numerator_bits,output_denominator_bits
+edge-q01-f01-01,Standard,2,1,1,1,1,8,3,7,Empty,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1
+edge-q01-f01-01,Accelerated,2,1,1,1,1,8,3,5,Empty,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1
+struct-cycle-n04-b00001-fdegree,Standard,4,4,3,1,2,30,3,21,Baseline,6,10,3,0,3,0,0,0,0,0,0,0,10,29,13,13,26,26,29,182,1025,11,70,80,90,2,2
+struct-cycle-n04-b00001-fdegree,Accelerated,4,4,3,1,2,30,3,18,Baseline,5,16,0,5,5,4,2,1,1,1,1,2,10,50,22,22,44,44,47,308,1025,11,70,80,90,3,3
+tri-q1-1-1-f1-1-1,Standard,3,3,2,1,1,18,3,20,Baseline,6,10,3,0,3,0,0,0,0,0,0,0,10,29,13,13,26,26,29,182,1025,11,70,80,90,3,2
+tri-q1-1-1-f1-1-1,Accelerated,3,3,2,1,1,18,3,15,Baseline,5,16,0,5,5,4,2,1,1,1,1,2,10,50,22,22,44,44,47,308,1025,11,70,80,90,3,2
+```
+
+#### U21-OR1 / TIMING_TRAPS.json
+
+<!-- U21-FIXTURE TIMING_TRAPS.json encoding=raw bytes=754 sha256=bb7bc9932a635c3d5b1fb5ecc39457525e62723bfda37e467bb48e18a56aecff -->
+```json
+{
+  "invalid_normal_returns": [
+    "bool",
+    "float",
+    "negative int",
+    "decreasing pair"
+  ],
+  "kind": "SCRIPTED CLOCK ARITHMETIC ONLY",
+  "raised_exceptions": "same object; before/after solve clock exceptions are not translated",
+  "required_exception": "RuntimeError",
+  "vectors": [
+    {
+      "median": 7,
+      "values": [
+        13,
+        3,
+        7
+      ]
+    },
+    {
+      "median": 5,
+      "values": [
+        19,
+        0,
+        5
+      ]
+    },
+    {
+      "median": 0,
+      "values": [
+        0,
+        0,
+        8
+      ]
+    },
+    {
+      "median": 8,
+      "values": [
+        8,
+        8,
+        0
+      ]
+    },
+    {
+      "median": 9,
+      "values": [
+        9,
+        9,
+        9
+      ]
+    }
+  ]
+}
+```
+
+#### U21-OR1 / WIRE_SCHEMAS.json
+
+<!-- U21-FIXTURE WIRE_SCHEMAS.json encoding=raw bytes=4208 sha256=fbffd151e1020ebbb6a8db7b48bfceaac861e0648bf0c06889303736dcb220ef -->
+```json
+{
+  "certificate": [
+    "path",
+    "bytes",
+    "sha256"
+  ],
+  "clock": [
+    "name",
+    "monotonic",
+    "adjustable",
+    "resolution_s"
+  ],
+  "complete": [
+    "format",
+    "campaign",
+    "source_sha256",
+    "recipes",
+    "warmup_solves",
+    "measured_solves",
+    "checked_certificates",
+    "files"
+  ],
+  "environment": [
+    "python_version",
+    "platform",
+    "cpu",
+    "clock",
+    "int_max_str_digits",
+    "recursion_limit",
+    "hash_seed"
+  ],
+  "event_fields": [
+    "outer_iterations",
+    "oracle_calls",
+    "newton_updates",
+    "newton_queries",
+    "newton_candidates",
+    "lookahead_queries",
+    "lookahead_accepted",
+    "lookahead_rejected",
+    "lookahead_terminal",
+    "newton_terminal",
+    "initialization_returns",
+    "early_returns",
+    "atomic_families_enumerated",
+    "atomic_families_examined",
+    "atomic_families_feasible",
+    "parity_cut_calls",
+    "ordinary_min_cut_calls",
+    "max_flow_calls",
+    "augmentations",
+    "bfs_scans"
+  ],
+  "file_entry": [
+    "path",
+    "bytes",
+    "sha256"
+  ],
+  "headers": {
+    "branches": [
+      "recipe",
+      "solver",
+      "branch",
+      "feasible",
+      "outer_iterations",
+      "oracle_calls",
+      "newton_updates",
+      "newton_queries",
+      "newton_candidates",
+      "lookahead_queries",
+      "lookahead_accepted",
+      "lookahead_rejected",
+      "lookahead_terminal",
+      "newton_terminal",
+      "initialization_returns",
+      "early_returns",
+      "atomic_families_enumerated",
+      "atomic_families_examined",
+      "atomic_families_feasible",
+      "parity_cut_calls",
+      "ordinary_min_cut_calls",
+      "max_flow_calls",
+      "augmentations",
+      "bfs_scans",
+      "flow_peak_generated_value",
+      "flow_peak_bits",
+      "peak_numerator_bits",
+      "peak_denominator_bits",
+      "peak_integer_bits"
+    ],
+    "comparison": [
+      "recipe",
+      "standard_median_solve_ns",
+      "accelerated_median_solve_ns",
+      "standard_oracle_calls",
+      "accelerated_oracle_calls",
+      "standard_max_flow_calls",
+      "accelerated_max_flow_calls",
+      "standard_peak_integer_bits",
+      "accelerated_peak_integer_bits"
+    ],
+    "summary": [
+      "recipe",
+      "solver",
+      "n",
+      "m",
+      "Q_bits",
+      "max_q_bits",
+      "max_f_bits",
+      "input_integer_bits_sum",
+      "repeat_count",
+      "median_solve_ns",
+      "attaining_candidate",
+      "outer_iterations",
+      "oracle_calls",
+      "newton_updates",
+      "newton_queries",
+      "newton_candidates",
+      "lookahead_queries",
+      "lookahead_accepted",
+      "lookahead_rejected",
+      "lookahead_terminal",
+      "newton_terminal",
+      "initialization_returns",
+      "early_returns",
+      "atomic_families_enumerated",
+      "atomic_families_examined",
+      "atomic_families_feasible",
+      "parity_cut_calls",
+      "ordinary_min_cut_calls",
+      "max_flow_calls",
+      "augmentations",
+      "bfs_scans",
+      "flow_peak_generated_value",
+      "flow_peak_bits",
+      "peak_numerator_bits",
+      "peak_denominator_bits",
+      "peak_integer_bits",
+      "output_numerator_bits",
+      "output_denominator_bits"
+    ]
+  },
+  "info": [
+    "format",
+    "campaign",
+    "protocol",
+    "environment",
+    "source",
+    "inputs"
+  ],
+  "input": [
+    "suite",
+    "path",
+    "bytes",
+    "sha256",
+    "n",
+    "m",
+    "Q_bits",
+    "max_q_bits",
+    "max_f_bits",
+    "input_integer_bits_sum"
+  ],
+  "inputs": [
+    "suite",
+    "recipes",
+    "manifest_sha256"
+  ],
+  "peak_fields": [
+    "flow_peak_generated_value",
+    "flow_peak_bits",
+    "peak_numerator_bits",
+    "peak_denominator_bits",
+    "peak_integer_bits"
+  ],
+  "protocol": [
+    "routes",
+    "recipe_order",
+    "warmups",
+    "measured_repeats",
+    "route_order",
+    "warmup_round",
+    "measured_rounds",
+    "execution",
+    "telemetry",
+    "timeout_ns",
+    "timing_interval",
+    "timing_excludes"
+  ],
+  "run": [
+    "format",
+    "campaign",
+    "recipe",
+    "solver",
+    "phase",
+    "repeat",
+    "input",
+    "certificate",
+    "elapsed_ns",
+    "record"
+  ],
+  "source": [
+    "entries",
+    "sha256",
+    "code_version"
+  ],
+  "source_entry": [
+    "path",
+    "sha256"
+  ]
+}
+```
+
+#### U21-OR1 / certificates/edge-q01-f01-01.Accelerated.json
+
+<!-- U21-FIXTURE certificates/edge-q01-f01-01.Accelerated.json encoding=raw bytes=62 sha256=96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde -->
+```json
+{"format":"exactfrac-certificate/1","empty":true,"N":0,"D":1}
+```
+
+#### U21-OR1 / certificates/edge-q01-f01-01.Standard.json
+
+<!-- U21-FIXTURE certificates/edge-q01-f01-01.Standard.json encoding=raw bytes=62 sha256=96ecf951be97360f4e27c6a3ce9d959936807f52f0faf2d9156a77cac0d66fde -->
+```json
+{"format":"exactfrac-certificate/1","empty":true,"N":0,"D":1}
+```
+
+#### U21-OR1 / certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json
+
+<!-- U21-FIXTURE certificates/struct-cycle-n04-b00001-fdegree.Accelerated.json encoding=raw bytes=85 sha256=d44a7c4a6290567d67bb1101c91bf08a8eb5d76bf7a570e3fc375e7a782d0077 -->
+```json
+{"format":"exactfrac-certificate/1","empty":false,"N":4,"D":4,"U":[0,1],"y":[[1,1]]}
+```
+
+#### U21-OR1 / certificates/struct-cycle-n04-b00001-fdegree.Standard.json
+
+<!-- U21-FIXTURE certificates/struct-cycle-n04-b00001-fdegree.Standard.json encoding=raw bytes=83 sha256=37743820166bb85c058502f2c212d6f7a8231d6202e46325d982ca87840fdf87 -->
+```json
+{"format":"exactfrac-certificate/1","empty":false,"N":2,"D":2,"U":[0],"y":[[0,1]]}
+```
+
+#### U21-OR1 / certificates/tri-q1-1-1-f1-1-1.Accelerated.json
+
+<!-- U21-FIXTURE certificates/tri-q1-1-1-f1-1-1.Accelerated.json encoding=raw bytes=82 sha256=2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9 -->
+```json
+{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":2,"U":[0,1,2],"y":[]}
+```
+
+#### U21-OR1 / certificates/tri-q1-1-1-f1-1-1.Standard.json
+
+<!-- U21-FIXTURE certificates/tri-q1-1-1-f1-1-1.Standard.json encoding=raw bytes=82 sha256=2eb8c8cda039c0b4335d7f49a1e1722b2320253f30560647e697dd42393687a9 -->
+```json
+{"format":"exactfrac-certificate/1","empty":false,"N":6,"D":2,"U":[0,1,2],"y":[]}
+```
+
+#### U21-OR1 / inputs/edge-q01-f01-01.json
+
+<!-- U21-FIXTURE inputs/edge-q01-f01-01.json encoding=raw bytes=68 sha256=389e145ac421044db6be19237d20b2112c832610c52c4d0be523fef2ab526589 -->
+```json
+{"format":"exactfrac-instance/1","n":2,"edges":[[0,1,1]],"f":[1,1]}
+```
+
+#### U21-OR1 / inputs/struct-cycle-n04-b00001-fdegree.json
+
+<!-- U21-FIXTURE inputs/struct-cycle-n04-b00001-fdegree.json encoding=raw bytes=96 sha256=6aa50220c883136c833d8d737eef577bd2dc57e801dee88b1f5076e313e90622 -->
+```json
+{"format":"exactfrac-instance/1","n":4,"edges":[[0,1,1],[0,3,1],[1,2,1],[2,3,1]],"f":[2,2,2,2]}
+```
+
+#### U21-OR1 / inputs/tri-q1-1-1-f1-1-1.json
+
+<!-- U21-FIXTURE inputs/tri-q1-1-1-f1-1-1.json encoding=raw bytes=86 sha256=345ee6d9d1471d32bbb4c66a6ab8725618c309f6af0372c29cee3a3ccd11f70e -->
+```json
+{"format":"exactfrac-instance/1","n":3,"edges":[[0,1,1],[0,2,1],[1,2,1]],"f":[1,1,1]}
+```
+
+### Phase boundary
+
+Only this catalogue appendix is the repository change in Phase C. All source,
+consuming tests, corpus data, DESIGN, TEST_PLAN, SPEC_LOCK, CONTRACT and CONFORMANCE
+remain at their closed identities. The future experiment module, direct wrapper,
+experiment test and initial results directory remain absent. No experiment campaign,
+result table from measured execution, release, or new theorem status is created.
+Oracle staging, local commit, postcommit checks and remote closure remain separate;
+only after that closure may the consuming tests-first RED phase begin.
