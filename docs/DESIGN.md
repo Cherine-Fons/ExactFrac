@@ -3849,3 +3849,513 @@ public publication, or existing package/evidence rewrite is authorized here.
 Prospective corpus/experiment/output paths must be reviewed under D20-M3 rather than
 reintroduced into an enduring frozen-placeholder dictionary. Phase-local before/after
 hashes and historical snapshots remain mandatory and distinct from those forbidden pins.
+
+## 14. Unit 21 experiments authority — reproducible measured campaigns
+
+Status: prospective documentation-only Unit 21 Phase B authority. This appendix
+preserves every preceding byte. It explicitly activates the experiment ownership
+reserved by 4.13.9, 4.16.12 and D20-C1. The older Q4/core scheduling descriptions
+in §§1, 3 and 11 remain historical; they do not cancel this scheduled Unit 21.
+No experiment has been executed by adopting this authority. The contracts below
+are new engineering rulings, not quotations from the mathematical source.
+
+### D21-E1. Source, purpose and limits
+
+The V2.2 labels `def:instance`, `ass:active`, `def:parameter`, `def:complexities`,
+`lem:empty` and `thm:main` govern the problem, Empty case and distinction between
+operation complexity and bit complexity. DESIGN 4.12–4.16 govern the already
+closed solver, telemetry, certificate and checker interfaces. D20-C1–D20-C10
+supply the fixed input suite. These sources do not specify a repetition policy,
+clock interval, run schema, filesystem protocol or statistical estimator; E2–E16
+supply those explicitly. No result changes the active-instance input model.
+
+This unit implements a runner, versioned run records, reproducible tables and
+one fully recorded initial campaign. Both Standard and Accelerated are required.
+The in-repository exact backend is the only backend. There is no explicit-copy
+comparator, external optimizer, alternative backend, new input family, solver
+optimization, application-domain benchmark or performance promise. Unit 22 still
+owns licensing, release, privacy/public export and minimum-interpreter reproduction.
+
+A timed observation is not an operation count. An observed event count is not a
+count of all arithmetic/comparison operations. A measured integer peak is not a
+memory measurement. No finite campaign proves strong polynomiality, universal
+correctness, asymptotic growth, a practical support-size limit or favorable speedup.
+Do not convert a source bound on atomic families into an observed max-flow count.
+
+### D21-E2. Entry point, public boundary and dependency direction
+
+Adopt `exactfrac/experiments.py`, the thin direct-script entry point
+`experiments/reproduce.py`, and the consuming test `tests/test_experiments.py`.
+The experiment module's `__all__` is exactly `("main",)` and its only public
+callable is `main(argv: list[str] | None = None) -> int`. There are no new public
+record classes, callbacks, solver selectors, serializers, parsers or merger APIs.
+The callable parameter is positional-or-keyword. None means sys.argv[1:]; otherwise
+require an exact list of exact built-in strings. Other Python types raise plain
+ValueError before filesystem, clock, environment discovery or solver activity.
+
+Module import has no experiment, data access, environment discovery, clock read,
+file creation or stdout/stderr side effect. The module uses only the standard
+library and closed public ExactFrac APIs. Do not import predecessor test helpers,
+CLI private codecs, private handoff code, an oracle catalogue or canonical source
+at runtime. The checker remains independent and never imports the runner/solver.
+
+The direct script calls this same main and uses SystemExit for its normal result.
+It may arrange the repository root for imports inside its guarded invocation;
+it must not silently load a different installed ExactFrac. Code/import origins
+are bound as in E8. The script does not duplicate the experiment logic or start
+work when imported. No setuptools entry point, dependency or configuration edit
+is authorized. Private implementation functions may factor validation and execution;
+they are not extra user-facing modes or permission to change the fixed schedule.
+
+### D21-E3. Command grammar and paths
+
+Accepted invocations, and no others, are:
+
+```text
+python experiments/reproduce.py --help
+python experiments/reproduce.py --all [--instances PATH] [--output PATH]
+```
+
+The --all token occurs exactly once, first. Each optional flag occurs at most
+once, in either order, and has one nonempty operand not beginning with '-'.
+NUL, unknown flags, '--flag=value', positional extras, missing operands and
+combining help with other tokens are usage errors. A syntactically invalid argv
+writes a fixed, non-input-echoing usage message to stderr and returns 2, with no
+input/output path access or dependencies invoked. Help writes the grammar and
+brief scope to stdout and returns 0 without starting validation or discovery.
+Normal successful --all is silent and returns 0 only after completion in E12.
+Binary writes must complete positive short writes and flush; normal invalid
+write counts/flush returns raise RuntimeError. I/O exceptions propagate unchanged.
+Neither process standard stream is closed or rebound.
+
+Default instances is <source-root>/instances. Default output is
+<source-root>/results/unit21-v1. Source-root is the root containing the imported
+exactfrac source and the direct-script entry point, not the working directory.
+Explicit relative operands are interpreted against the caller's working directory.
+Resolve relative components lexically, rejecting '..' rather than following it;
+reject symlinked existing components, including an existing leaf symlink. Do not
+silently replace user paths by realpath targets. The source-root and input root
+must be real directories; the output leaf must not exist, even if empty. A fresh
+output may be inside the source tree only under its `results/` subtree and never
+inside inputs, .git, source or tests. It may also be a disjoint external directory.
+Reject overlapping output/input trees and any output ancestor of the source tree.
+Missing output parents may be created only after input validation; existing parents
+are never chmodded, removed or replaced. See E12 for safe creation and failures.
+
+--all means the exact unit21-v1 campaign below, not arbitrary current/future suites
+or every file under instances. There is no single-instance, resume, append, force,
+timeout, randomization, seed override, repeat-count or adaptive stopping option.
+Do not give a truncated subset the same campaign-complete identity.
+
+### D21-E4. Input ownership, parsing and integrity
+
+Consume all 655 Unit 20 recipe identities, including numerical/byte duplicates,
+in the ASCII order of closed recipe_ids(). The closed build_corpus() supplies the
+owned initial records and generator identity, not a new mathematical reference.
+Before any solve or output creation, strictly validate the evolving aggregate
+instances/MANIFEST against D20-C7. Reject duplicate decoded JSON keys, invalid
+numeric tokens/types, noncanonical suite/recipe/path identifiers, reordered or
+duplicate entries and invalid lengths/hashes. Do not freeze its whole-file hash
+or whitespace/key order. Syntactically valid foreign entries are ignored for
+this campaign and are not opened, deleted, run or certified by this consumer.
+
+Require exactly the registered Unit 20 projection and exactly its 655 regular,
+nonexecutable, nonsymlink payloads in instances/unit20-v1/, with no extra, nested,
+missing or redirected owned files. Read each payload, require its length/hash
+and exact bytes equal the corresponding closed build record, and bind that same
+retained byte buffer to Instance construction and certificate verification.
+Do not validate one file then silently solve a subsequently different reread.
+Closed generator inventory/return-type inconsistency is RuntimeError; malformed
+external aggregate or mismatching owned input bytes are plain ValueError.
+
+Decode input integers by bounded decimal chunks, without changing interpreter
+integer-string limits. Reject floats, exponent notation, negative zero and duplicate
+keys. Delegate graph/active schema validation to public Instance.from_dict after
+syntax decoding; do not aggregate, reorder or repair external input. Its dependency
+exceptions retain their classes/objects. Valid Empty input remains a successful
+mathematical case, never an input rejection. No copy expansion or shore enumeration
+belongs to this runner. Recheck consumed inputs and source identities before the
+completion marker; detected drift invalidates the attempt without rollback.
+These checks assume a local user-owned filesystem, not hostile concurrent kernel
+or interpreter replacement; they do not promise a filesystem snapshot transaction.
+
+### D21-E5. Finite schedule, warmup and repetitions
+
+Campaign name is `unit21-v1`. For each recipe with zero-based index i in the fixed
+655-ID list, process round r=-1,0,1,2 in that order. Round -1 is one un-timed,
+telemetry-enabled warmup per route; rounds 0,1,2 are three separately timed,
+telemetry-enabled samples per route. In a round execute Standard then Accelerated
+when (i+r) is even, otherwise Accelerated then Standard. The ordering is deterministic,
+not random sampling, and must be retained in the raw records.
+
+A complete campaign has 1,310 warmup solves, 3,930 measured solves and 5,240 total
+calls to solve_with_telemetry. Every call produces a separately verified certificate;
+there are 5,240 checker invocations for those calls. Extra independent audit solves
+must be labeled and counted separately, never incorporated as measured samples.
+No repeat may be reused from a cache. Do not deduplicate 599 distinct payloads in
+place of 655 design identities, omit Empty cases, stop when values agree, tune the
+repetition count from observed speed, or discard a slow/outlying observation.
+
+Execution is synchronous, serial and in one invocation process. There is no worker
+pool, CPU affinity change, garbage-collector change, recursion/decimal-limit change
+or warm-start state installed on closed objects. This design does not promise
+cold-cache timing or equality of machine conditions. Available host resources and
+native interruption govern runtime; lack of an internal timeout is disclosed.
+A failed or interrupted attempt is incomplete, not a completed censored campaign.
+Any later censoring/time-budget policy requires separate prior authority.
+
+### D21-E6. Timing interval and environment
+
+For each measured sample, call time.perf_counter_ns immediately before the one
+solve_with_telemetry(instance, route) call and immediately after its normal return.
+Require exact integer readings and nonnegative end-start; violated clock promises
+are RuntimeError. Dependency/clock exceptions propagate unchanged. Store elapsed_ns
+as that exact integer difference. Set RunMetadata.wall_clock_s to
+elapsed_ns / 1_000_000_000, a finite nonnegative diagnostic float. This conversion
+is explicitly outside solver arithmetic and is never used for rational comparisons,
+counters, peak measurements, ordering decisions or completion decisions.
+
+The interval includes wrapper validation, recording, global solve, and construction
+of its returned telemetry. It excludes input loading/decoding/Instance construction,
+metadata discovery, certificate construction/checking/serialization, output I/O,
+source/inventory hashing and report aggregation. Unit 16's integer-observation
+interval is narrower at its boundaries and remains unchanged. Do not call this
+uninstrumented solver time, whole-command time, verifier time or backend-only time.
+Warmups make no clock calls: elapsed_ns and wall_clock_s are null, not fake zero.
+A measured zero-nanosecond reading is retained as zero, not silently replaced.
+
+Discover once per invocation: platform.python_version(), platform.platform(), and
+platform.processor() or None when empty; require exact nonempty strings where the
+closed RunMetadata contract requires them. Record timing clock name, monotonic flag,
+adjustable flag and supplied finite positive resolution from time.get_clock_info
+for perf_counter. Record sys.get_int_max_str_digits(), sys.getrecursionlimit(),
+and the PYTHONHASHSEED environment value or null as observations, not settings to
+change. Do not gather username, hostname, home path, credentials, full environment,
+Git remotes or private handoff paths. Unknown CPU remains null. No network request.
+Code identity is E8's content fingerprint, not an invented Git commit or dirty-tree
+claim. The initial campaign may run before its final commit; record this truthfully.
+
+### D21-E7. Exact result, repeated route and dependency checks
+
+Each call is exactly solve_with_telemetry, not solve followed by a second run to
+recover counters. Require its normal response to have the exact tuple/record types
+and correct route under the closed contract; inconsistent returned promises raise
+RuntimeError. Assemble an actual RunRecord(AlgorithmStats, RunMetadata) for the call.
+Preserve every total, nonbranch, per-branch and native field without recounting,
+renaming native semantics, sum-of-peaks errors, counter zero-filling or extra
+arithmetic inserted into the measured solver path.
+
+Build and serialize a certificate using the closed public functions. Require their
+normal return types and require verify_certificate(retained_input_bytes, cert_bytes)
+to return None. Verify every warmup and measured sample before writing its successful
+row. Propagate checker exceptions; do not turn them into skipped rows or a success flag.
+For each recipe/route, require exact same-route result, AlgorithmStats and certificate
+bytes on all repeats, using its warmup as the reference. Across the two routes require
+numerical equality by positive-denominator cross multiplication; do not require tied
+witness, raw pair, certificate bytes or AlgorithmStats equality across routes.
+
+Rows record literal N,D through their certificate and native attaining_candidate.
+The runner reports checker-accepted attainment and cross-route agreement, not an
+independently proved optimum. Its separate Phase E audit compares every recipe's
+reported values with independently fixed Phase C expectations. A C0 checker alone
+is not an optimality oracle, and a passing pair of solvers is not self-certification.
+
+### D21-E8. Content identity and import origins
+
+At invocation before solving, fingerprint this fixed source set: every .py path
+under exactfrac/ or exactfrac_verify/ in the closed Unit 20 708-file tree, plus
+exactfrac/experiments.py and experiments/reproduce.py. The exact path list is the following; Phase C independently checks it against
+the committed manifest. Do not expand it by runtime filesystem glob, omit a losing
+branch module or include future unrelated modules, tests, mutable docs, .venv,
+aggregate inputs or result directories.
+
+```text
+exactfrac/__init__.py
+exactfrac/_telemetry.py
+exactfrac/branch.py
+exactfrac/certificate.py
+exactfrac/cli.py
+exactfrac/corpus.py
+exactfrac/families.py
+exactfrac/flow.py
+exactfrac/instance.py
+exactfrac/oracle.py
+exactfrac/parity_cut.py
+exactfrac/rational.py
+exactfrac/shore.py
+exactfrac/sign_routing.py
+exactfrac/solve.py
+exactfrac/telemetry.py
+exactfrac/witness.py
+exactfrac_verify/__init__.py
+exactfrac_verify/brute.py
+exactfrac_verify/check.py
+exactfrac/experiments.py
+experiments/reproduce.py
+```
+Every selected file is regular, nonexecutable and reached without symlinked parents.
+
+For ASCII-sorted relative paths p with lowercase SHA-256 h(p), fingerprint bytes
+are ASCII `exactfrac-unit21-source/1\n` followed by `p + "\0" + h(p) + "\n"`
+for each path. Let H be their SHA-256. RunMetadata.code_version is exactly
+`exactfrac-source-sha256:` followed by H. run-info.json stores the ordered path/hash
+entries and this fingerprint, allowing a later audit to associate it with a Git tree.
+It must not hash the results into their own source identity or depend on an absolute
+machine path. Changing only a permitted output location cannot change this identity.
+
+Every loaded exactfrac/exactfrac_verify module must originate at its expected
+source-root path, with bytes matching the recorded entry. Reject conflicting already
+loaded modules rather than mixing a local runner and installed solver. Arrange and
+restore any runner-controlled sys.path change in finally. In the controlled gate use
+isolated Python and disable bytecode writes. No editable install or filesystem search
+for private build evidence is part of runtime. Recheck all source files and origins
+before completion; runtime/malicious-loader security is outside this local-tool claim.
+
+### D21-E9. Versioned run-record wire contract
+
+Each UTF-8/ASCII JSON line in warmups.jsonl or runs.jsonl has exactly these keys:
+`format`, `campaign`, `recipe`, `solver`, `phase`, `repeat`, `input`, `certificate`,
+`elapsed_ns`, `record`. format is `exactfrac-run/1`, campaign is `unit21-v1`, solver
+is Standard or Accelerated. phase is warmup or measured. repeat is 0 for warmup,
+and 0,1,2 for the measured round. Raw row order is the invocation order of E5,
+filtered by phase; it is not reordered into the comparison-table order.
+
+input has exactly `suite`, `path`, `bytes`, `sha256`, `n`, `m`, `Q_bits`,
+`max_q_bits`, `max_f_bits`, `input_integer_bits_sum`. suite/path/bytes/hash identify
+the retained Unit 20 input. Define bits(x)=max(1,abs(x).bit_length()). Q_bits=bits(Q),
+max_q_bits=max bits(q), max_f_bits=max bits(f). input_integer_bits_sum is
+bits(n)+bits(m)+sum over edges of (bits(u)+bits(v)+bits(q))+sum over vertices bits(f).
+This is a disclosed scalar encoding proxy, not exactly the source's binary encoding
+length including framing, JSON bytes, memory consumption or number of copies Q.
+
+certificate has exactly `path`, `bytes`, `sha256`, with relative output path
+`certificates/{recipe}.{solver}.json`. One certificate file per recipe/route is
+written from its verified warmup and every later call must match it. record has
+exactly `algorithm`, `metadata`, the structural projection of the actual RunRecord.
+metadata has exactly the six RunMetadata dataclass fields; its instance hash and
+code_version must bind to input and E8. elapsed_ns is null only for warmup.
+
+algorithm has exactly `native`, `total`, `nonbranch`, `branches`,
+`output_numerator_bits`, `output_denominator_bits`. Each work object has all 25
+WorkStats fields of 4.13.3, with exact nonnegative integer values and unchanged names.
+branches is [] for Empty, otherwise the ordered four objects with exactly `branch`,
+`feasible`, `work`; feasible is a JSON boolean. native has exactly branch_solver,
+branch_stats, attaining_candidate from SolveStats. Each native branch object has
+all fields of its selected StandardBranchStats or AcceleratedBranchStats record;
+its oracle_stats has all seven BranchOracleStats dataclass fields. Computed properties
+are not additional serialized keys: max_flow_calls already exists in WorkStats;
+branch_solver/attaining_branch properties do not duplicate native data. Tuples become
+JSON arrays; records become objects without Python type/repr/address strings. The
+exact nested field-name registry is fixed independently in Phase C, not inferred from
+future runner output. Native route differences are retained, not coerced into fake
+uniform branch records.
+
+Generated JSON uses recursively ASCII-sorted object keys, compact separators,
+ensure_ascii string escaping, lowercase boolean/null tokens and exactly one LF.
+All integers, including enormous native peaks and counts, are ordinary canonical
+decimal integer tokens emitted via bounded chunks; never floats or quoted numbers.
+Finite environmental floats use the standard JSON finite-number spelling on the
+recorded interpreter and are not cross-version byte invariants. Reject NaN/infinity.
+No full-token huge-int str/repr/json conversion and no global digit-limit relaxation.
+No new public run-record decoder is adopted; test/audit consumers independently
+parse and challenge this schema, including duplicate keys and binding mismatches.
+
+### D21-E10. Reports and their exact derivation
+
+The completed output owns run-info.json, warmups.jsonl, runs.jsonl, summary.csv,
+branches.csv, comparison.csv, COMPLETE.json and E9's certificate files only.
+CSV is ASCII, comma-separated, one header, LF rows, no index column, blank records
+or comment preamble. Fields here need no quoting; all integer fields use canonical
+bounded-chunk decimal spelling. Timings in tables are integer nanoseconds, not rounded
+seconds or a ratio of rounded floats. Let W be the ordered 25 WorkStats names in
+4.13.3. Header expansion below is literal, not an extra W column.
+
+summary.csv has 1,310 rows in ASCII recipe order, Standard then Accelerated:
+`recipe,solver,n,m,Q_bits,max_q_bits,max_f_bits,input_integer_bits_sum,repeat_count,median_solve_ns,attaining_candidate,`
+then W, then `output_numerator_bits,output_denominator_bits`.
+repeat_count=3. median_solve_ns is the middle of exactly the three measured elapsed_ns
+values for that recipe/route. All diagnostics come from that route's repeated-identical
+AlgorithmStats.total, not the sum across trials, just the winner branch, or a theorem
+upper bound. Do not pool recipes or multiple machines into a single median.
+
+branches.csv uses `recipe,solver,branch,feasible,` then W, in recipe/route/branch order;
+feasible is literal true/false. It has four rows per nonempty recipe/route and zero
+for Empty. It reports each actual branch record, including infeasible branches, and
+no fictitious nonbranch row. Raw JSON retains nonbranch separately. For the known
+654 nonempty recipes this is 5,232 branch rows, to be checked by the independent audit,
+not inferred as a substitute for observing which calls returned Empty.
+
+comparison.csv has 655 recipe rows with header:
+`recipe,standard_median_solve_ns,accelerated_median_solve_ns,standard_oracle_calls,accelerated_oracle_calls,standard_max_flow_calls,accelerated_max_flow_calls,standard_peak_integer_bits,accelerated_peak_integer_bits`.
+Each entry is a direct join of its summary rows. There is no chosen winner, speedup
+claim, smoothed trend, significance test, confidence interval or fitted asymptotic
+model in this initial table generator. Raw timing scatter remains available.
+
+run-info.json has exactly `format`, `campaign`, `protocol`, `environment`, `source`,
+`inputs`. format is `exactfrac-experiment-info/1`. Nested keys are fixed here:
+
+- protocol: routes=["Standard","Accelerated"], recipe_order="ascii", warmups=1,
+  measured_repeats=3, route_order="standard-first-iff-(recipe-index+round)-even",
+  warmup_round=-1, measured_rounds=[0,1,2], execution="serial-single-process",
+  telemetry=true, timeout_ns=null, timing_interval="solve-with-telemetry-return",
+  timing_excludes=["input","metadata","certificates","verification","serialization","output"].
+- environment: python_version, platform, cpu from E6; clock is an object with
+  exactly name="perf_counter_ns", monotonic, adjustable, resolution_s; the last
+  three come from E6's clock_info (booleans and finite positive float). Other keys
+  are int_max_str_digits (integer), recursion_limit (integer), hash_seed (string
+  or null). No extra host identifiers or free-form path-bearing command line.
+- source: entries=[{"path":p,"sha256":h(p)},...] in E8 order,
+  sha256=H, code_version="exactfrac-source-sha256:"+H.
+- inputs: suite="unit20-v1", recipes=655, manifest_sha256 is the hash of the
+  actually read aggregate bytes. That hash is observation provenance, not a
+  whole-aggregate acceptance pin. Owned byte identities are in each raw row.
+
+All property names are literal. Discovered strings, clock readings and resolution
+are actual environmental data. No successful timing values, operating-system names,
+or speed estimates may be invented in fixtures; fake-clock examples are labeled
+synthetic. Phase C derives concrete expected bytes from these fixed schemas.
+
+### D21-E11. Failure classification and interruption
+
+Reject invalid argv types or malformed caller-controlled data with plain ValueError
+at this new public boundary, except exceptions raised by closed Instance/checker
+boundaries, which are propagated unchanged. Usage grammar failures alone return 2.
+Contradictory normal closed-dependency returns, mismatched repeated/cross-route
+results, invalid clock returns, source/input drift and internally inconsistent
+report construction raise RuntimeError. No broad catch translating all exceptions,
+retrying a failed solve, swallowing interrupts or manufacturing absent stats is allowed.
+Missing files/permissions/storage failures retain native OSError subclasses. The
+new runner must not turn a failure into an Empty certificate or encode failed work
+as a zero-duration successful row. Failed solves have no complete AlgorithmStats.
+
+Positive short writes are completed; a failed write is not retried. MemoryError,
+RecursionError and KeyboardInterrupt propagate. A process killed externally may
+leave files but cannot legitimately be treated as a completed attempt without E12.
+No user-friendly error string may stringify huge mathematical integers or echo
+untrusted input bytes. No hidden solver resource quotas, tolerance, Fraction/gcd
+normalization or monkeypatching of closed algorithm logic is introduced.
+
+### D21-E12. Output transaction boundary and completion marker
+
+Validate input inventory, source origins, arguments and output disjointness before
+creating output. Create the new leaf exclusively; never reuse an existing directory,
+follow a symlink, merge, truncate an old report, replace a file, or clean a failed run.
+Use exclusive creation for owned files and explicit checked binary writes/flushes.
+Create only the output path's missing parents and certificates/ below its new leaf.
+Where parent/leaf identities can be checked, detect redirection; do not describe
+lstat checks alone as defeating every hostile race. A local writable directory is
+a stated prerequisite. Every failure preserves the observable partial attempt.
+
+Write the info and raw rows in their specified order and retain the verified
+certificates. The table builder derives all three CSVs from the completed raw
+measured records, validating field and binding consistency, not from a second
+solver campaign. Flush and close every owned output before completion. Re-read
+and validate exact output membership, all row identities/counts, actual hashes,
+certificate bindings and table derivations, and recheck inputs and source files.
+Only after all checks succeed write COMPLETE.json last via exclusive creation.
+Its format is `exactfrac-experiment-complete/1`; its exact fields are format,
+campaign, source_sha256, recipes, warmup_solves, measured_solves, checked_certificates,
+files. Values are bound to the observed complete E5 execution, not literal success
+counters emitted without evidence. files is an ASCII-path-sorted list of objects
+with exactly path, bytes, sha256 for every owned output file except COMPLETE.json.
+It includes no self-hash, absolute paths or unrelated files.
+
+A parseable, schema-valid marker with an exact matching ledger is necessary, not
+proof against deliberate fabrication; Phase E independently audits the run. A missing,
+truncated or inconsistent marker is incomplete. Flush/close failure on the marker
+still makes the invocation fail; it is not claimed durable against power loss or
+atomic publication to concurrent readers. Completion means the successful return
+plus validated output, not simply existence of a filename. No automatic rollback.
+An alternate fresh --output is the way to rerun; there is no overwrite/resume mode.
+
+### D21-E13. Independent fixture and test obligations
+
+Phase C appends independently derived human tables for the E5 schedule/counts,
+E8 source path list, E9 nested field registry, E10 info schemas/constant strings and
+small synthetic run records/table bytes. Include deliberately differing valid tied
+raw pairs across routes; same-route determinism controls; real Empty and nonempty
+known-answer inputs; synthetic nonzero accepted/rejected/terminal look-ahead work;
+peaks aggregated by maximum, event counts by sum, and native Standard/Accelerated
+differences. Scripted dependency and clock responses are test data, never real runs.
+Preregister guard-isolated faults before writing the consumer/producer. Obtain
+mathematical expected values independently; reuse the meaning of existing registered
+Unit 20 oracle expectations without rerunning a solver to define its own answer.
+No future experiment runner output supplies its own schema or reference table.
+
+Tests may exercise private seams using controlled dependencies, filesystem scratch,
+synthetic clocks and a finite independently declared small subset. An injected test
+schedule is not a public subset mode. Tests that monkeypatch a dependency restore it;
+no monkeypatch is installed by production. The inherited regression must not execute
+the 5,240-call campaign on every test run. Test full schedule enumeration with scripted
+calls and separately execute both closed routes on registered small actual cases.
+Report synthetic and real calls distinctly. Live new collected case count is measured.
+
+### D21-E14. Phase E campaign and independent implementation audit
+
+Within the existing implementation GREEN/audit phase, test source and consumer
+contracts before the initial real campaign. Run --all once against the authenticated
+Unit 20 inputs to a fresh results/unit21-v1 using the exact candidate sources and
+pinned development interpreter. Record its actual environment, provenance, all
+observations and failure status honestly. Never supply generated container timings
+as the user's live results. A partial real attempt cannot satisfy complete GREEN;
+preserve it and issue a controlled continuation without rewriting history.
+
+The independent audit is separate from the production writer and reads its outputs.
+It must rederive all table rows from raw records, recompute hashes/identities,
+verify every stored certificate with the independent checker and match all 655
+reported values to independently registered optimum/Empty expectations. Preregister
+those expected quotients/compact recipes during Phase C from existing independent
+source definitions, not measured producer values. Witnesses across routes may differ.
+Check repeat determinism, actual solver/checker invocation accounting, source and
+input binding, totals/branch/native relationships and all declared mutation controls.
+Do not call a trace scripted inside a unit test an executed campaign observation.
+
+The fixed-schedule campaign can occur on the dirty implementation candidate because
+E8 identifies actual source content, not a nonexistent final commit. GREEN records
+its exact artifact hashes. Subsequent staged isolation and postcommit tests conserve
+those historical output bytes and validate them; they do not rerun real timings to
+force byte equality. Repeat campaigns in other fresh destinations may differ in
+environment/timing while matching deterministic results/stats/source identities.
+
+### D21-E15. Scope, path classification and non-reopening
+
+Phase B changes only docs/DESIGN.md and docs/TEST_PLAN.md by appending this authority.
+Phase C changes only docs/ORACLE_CATALOG.md by independent registration. Phase D adds
+only tests/test_experiments.py. Its first import is exactfrac.experiments; before
+source exists require ModuleNotFoundError naming that module, exit 2, one collection
+error, zero new cases executed. No dummy module, output directory or predecessor-test
+retirement is allowed. The inherited 4,512 cases and existing warning remain intact.
+
+Phase E source scope is exactfrac/experiments.py, experiments/reproduce.py and
+experiments/README.md. Its observed campaign output scope is the exact E9–E12
+results/unit21-v1 tree, captured in a live manifest after successful execution.
+Dynamic measured output bytes are evidence, not predictable constants. The phase
+may create missing experiments/ and results/ parents but owns neither parent as a
+permanently closed aggregate. No other production, test, input, README, packaging,
+dependency, CLI, LICENSE, SPEC_LOCK or CONTRACT change is authorized.
+
+Closed code, tests and Unit20 owned inputs remain byte-immutable. Do not repair the
+known pytest parametrization warning in this authority or its implementation. The
+aggregate input MANIFEST and instances/README.md remain later-extensible under D20-M3
+but this unit reads, never modifies them. A completed results/unit21-v1 is a historical
+owned run; additional campaigns use new destinations/namespaces. No permanent pin on
+the entire results/ tree, experiments/ directory or future release-owned artifacts.
+Source fingerprints and phase-local conservation manifests are not blanket future
+source/repository freezes. No public release or privacy review is asserted here.
+
+### D21-E16. Completion and claims
+
+Follow the same A–H lifecycle without an extra review service, audit approval gate,
+background job or intermediate code commit. Authority and oracle fixtures each
+close remotely before tests. GREEN requires finite tests, inherited regression,
+live Ruff, full observed initial campaign and independent audit. Phase G preserves
+all prior conformance bytes and records exactly the tested/observed engineering
+scope, separating schema tests, scientific reference comparisons and actual timings.
+No theorem-row promotion follows merely from table generation.
+
+Stage the exact code/test/docs/observed-output candidate, isolate the index tree,
+run targeted/full tests and Ruff with authenticated imports, commit that same tree,
+rerun postcommit checks, then push and remotely close. Prior measured artifacts
+remain unchanged through these transitions; closure does not mean an additional
+timing campaign ran. Private BUILD/LEARNING notes are delivered only after full
+remote closure and are never created, located or hashed by build helpers.

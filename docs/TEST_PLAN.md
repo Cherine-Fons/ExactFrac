@@ -4791,3 +4791,241 @@ same index without restaging, run postcommit regression/Ruff, and remotely close
 exact commit. Preserve all predecessor evidence including Unit 19's original GREEN,
 archive restoration and staged export. Deliver final Unit 20 BUILD/LEARNING notes only
 after unit remote closure. Their content remains outside every repository gate.
+
+## 47. Unit 21 prospective experiment obligations — EP1–EP20
+
+These obligations implement DESIGN §14, D21-E1–D21-E16. They are prospective
+engineering requirements, not mathematical authority or evidence that an experiment
+has run. All previous sections remain byte-identical. The inherited baseline is
+4,512 pytest cases, including 72 corpus cases, at the closed Unit 20 tree. Existing
+production modules, tests and the recorded parametrization warning are not reopened.
+
+### EP1 — public boundary, import purity and command grammar
+
+Require the exact __all__, callable signature and argv types in E2. Reject bool,
+str/tuple iterables, list/string subclasses and mixed token lists without I/O. Test
+None delegates to sys.argv without mutation; help and each grammar error have their
+specified 0/2 result, binary stream, fixed message and absence of input/output/clock
+or solver access. Exercise flag duplication, ordering, missing operand, NUL, empty
+operand, --flag=value and extra tokens. Source import alone does not run a campaign.
+Exercise the direct script in a fresh process; do not accept a separate implementation
+of its behavior. Spy on unwanted accesses, not just a missing result directory.
+
+### EP2 — fixed input projection and no generator self-certification
+
+Independently fix the 655 IDs and owned entry/byte identities from the Phase C
+catalogue and earlier Unit 20 authority, not future runner output. Validate actual
+payload buffers, metadata and exact generator comparison. Retain duplicate numerical
+inputs as separate recipe identities. Consumer controls must reject an altered payload
+with a self-consistently recomputed MANIFEST hash/length. Bind the buffer actually
+passed to Instance and checker; changed rereads cannot silently replace it.
+
+### EP3 — strict aggregate and instance decoding
+
+Exercise duplicate decoded keys (including escaped duplicates), extra/missing keys,
+boolean/floating/exponent/string byte counts, negative zero, invalid UTF-8/BOM,
+malformed suite/recipe/path identities, duplicates and out-of-order entries. Accept
+permitted aggregate whitespace/key-order variation. A syntactically valid foreign
+suite neither fails a global hash pin nor becomes an executed recipe. Reject owned
+projection omissions/extra entries. Delegate Instance schema/active errors unchanged.
+Test bounded huge-int parsing at interpreter limits 640 and 4300 without changing them.
+
+### EP4 — filesystem ownership and overwrite prevention
+
+Before any solve/output creation test missing inputs, extra/nested/renamed owned files,
+file/directory/parent symlinks, executable files, FIFO/nonregular input, existing output
+(even empty), relative paths, '..', overlap with input/source/.git, and disallowed
+in-repository output destinations. Guard-isolate each rejection. No test counts a
+missing-file rejection as evidence of a later hash guard. External output and the
+source-root results subtree are positive controls. Parent creation and existing-parent
+preservation must match E3/E12. No automatic cleanup or chmod of preexisting objects.
+
+### EP5 — fixed schedule and honest work counts
+
+Derive the sequence independently from i,r parity and explicit route order. A fully
+scripted traversal must execute all 655 identities, each with 1 warmup and 3 measured
+calls per route: 1,310 + 3,930 = 5,240 calls, and one certificate/checker composition
+per call. Compare ordered call identities, not only totals. Detect deduplication,
+route omission, wrong alternating order, cached repeats, missing Empty, off-by-one
+repeats, adaptive outlier deletion and use of legacy solve instead of telemetry.
+Synthetic full-schedule execution is not the actual timed campaign.
+
+### EP6 — exact timing boundaries and metadata separation
+
+Use preregistered fake-clock values to prove exactly two clock reads per successful
+measured call and none for warmups. Place spies around Instance construction, metadata,
+telemetry, certificates, verification and serialization to verify the boundary. Check
+zero elapsed time, repeated times, invalid exact types, reversed time, clock exception
+before/after solve and failure inside solve. None is unmeasured; zero is measured.
+Diagnostics and mathematical outputs cannot change when only clock/environment data
+changes. Disclose instrumentation; do not call it uninstrumented/backend-only runtime.
+
+### EP7 — closed record composition and native field preservation
+
+Fix expected field-name registries independently against closed dataclass definitions.
+Exercise actual RunRecord/RunMetadata assembly and complete AlgorithmStats projection,
+including native Standard/Accelerated differences, nonbranch peaks, four branch rows
+and Empty's absent branches. Include independently consistent scripted nonzero accepted,
+rejected, look-ahead-terminal, Newton-terminal and initialization-return cases. Total
+counts are summed, peaks maximized, output widths kept distinct. Do not infer those
+nonzero paths from n>3 or claim scripted work as observed algorithm behavior.
+
+### EP8 — checked certificates, literal pairs and ties
+
+Every successful sample/warmup must call the independent checker on its bound input
+bytes and emitted certificate, before writing a successful row. Detect missing checker,
+wrong input buffer, wrong route/type, forged None promise and subverted certificate
+binding. Closed exceptions propagate unchanged. Same-route repetition requires exact
+result/stats/certificate equality. Across routes exercise differing admissible raw
+pairs/witnesses with equal numerical values and reject genuine numerical disagreement.
+No tolerance or forced gcd/witness normalization. Real Empty retains (0,1) and no
+fake branch/witness. Checker acceptance alone is not the expected optimum.
+
+### EP9 — source-content identity and import isolation
+
+Independently enumerate E8's exact source paths from the closed manifest plus the two
+new source paths. Test ordered NUL/LF-delimited fingerprint bytes; changing source or
+wrapper changes identity, changing output path or documentation does not. Reject mixed
+installed/local origins, missing/redirected/executable source and post-run source drift.
+No Git/network/hostname/home-path lookup enters runtime metadata. Verify any temporary
+sys.path edit is restored on success/failure. Freeze no future repository-wide inventory.
+
+### EP10 — versioned raw records and integer-safe bytes
+
+Independently encode synthetic E9 rows and E10 info objects before production. Check
+exact field sets, nested records, phase/repeat identities, bool/null use, canonical
+JSON key ordering/ASCII escaping/LF, integer tokens and certificate/source/input bindings.
+Challenge duplicate keys and wrong typed values with a separate audit parser. Huge
+native flow peaks above 4,300 decimal digits must survive under a 640-digit limit.
+Only declared environmental fields may be finite floats; reject NaN/infinity and
+no quoted huge integers, entire-token conversion or limit-setting workaround.
+
+### EP11 — tables rederived from raw measured records
+
+Preregister small fake-clock tables with unsorted time samples whose middle order
+statistic differs from the mean, first sample and warmup. Assert exact CSV headers,
+canonical numeric tokens, row order, per-route diagnostic equality, per-branch rows,
+comparison joins, integer-nanosecond medians and counts. No second solver pass may
+produce reports. Reject missing/duplicated samples, cross-recipe pooling, mixed source
+identities, sum-of-peaks and summing counters across repeats. Empty creates no branch
+rows. A report auditor must detect a corrupted CSV with a recomputed ledger checksum.
+
+### EP12 — completion marker and incomplete attempts
+
+Validate exact owned output membership, all certificates/raw rows/tables, source/input
+rechecks and sorted file ledger before COMPLETE.json. Verify marker is last and never
+written on earlier failure; missing/truncated/invalid/incorrect-ledger markers do not
+mean success. Inject output open/write/flush/close errors at distinct phases, positive
+short writes, invalid normal write counts, and failure at marker publication. Preserve
+partial output and original exception; a later invocation cannot overwrite it. Do not
+claim durability/atomicity merely because a complete filename exists.
+
+### EP13 — resource errors, no partial-success masking and nonmutation
+
+Inject identical exception objects for MemoryError, RecursionError, OSError subclasses
+and KeyboardInterrupt into downstream stages, requiring unchanged propagation and no
+successful return/row/marker for failed work. Invalid normal dependency returns instead
+raise RuntimeError. Hash input/source/prior outputs before and after both success and
+failure; do not hash private user notes. Restore test monkeypatches. No hidden timeout,
+retry, file cleanup, solver limit, recursion/digit/GC modification or broad success catch.
+
+### EP14 — actual finite composition independent of synthetic tests
+
+Execute both closed telemetry routes on independently registered small real cases,
+including the known Empty and at least two nonempty cases with repeated runs. Check
+independently derived optima and each witness/certificate. Obtain expected arithmetic
+from Phase C, not those calls. Compare current telemetry with its closed semantics;
+do not substitute an entire stubbed campaign for all real integration tests. Report
+actual input/call counts separately from the scripted 5,240-call schedule.
+
+### EP15 — fresh processes and reproducibility boundary
+
+Use fresh interpreter processes with hash seeds 1 and 73 and decimal limits 640 and
+4300 to test the deterministic non-timing projections and source identity, with
+synthetic clocks for exact example bytes. Validate import origins and absence of
+unexpected repo writes. Actual environment/timings are not required byte-identical
+across machines/reruns; repeated-identical AlgorithmStats, certificate/input bytes
+and logical schedule are. No test may rely on elapsed-time thresholds or silently
+suppress the inherited pytest warning.
+
+### EP16 — prospective fault catalogue and executed adversarial audit
+
+Preregister guard-isolated cases with pristine controls for at least: bad argv access;
+deduplicated IDs; omitted route; reused repeat; wrong order; malformed aggregate;
+self-consistent altered input; symlink/executable/membership error; global input freeze;
+wrong code fingerprint; mixed import; clock interval error; warmup contamination;
+native-field loss; summing peaks; discarded nonbranch/infeasible branch; unchecked
+certificate; forced cross-route raw equality; dependency exception masking; giant-int
+string conversion; marker written early; overwrite; altered CSV with coherent ledger;
+omitted run with counts falsified; changed hash/binding; phantom success after resource
+failure; and accidental future-output/global-repository pins.
+
+Use actual production-source mutants for production faults. Filesystem/consumer/audit
+faults are separately named integration controls, not counted as production mutants.
+Verify the intended guard detects each mutation, not an unrelated syntax/import error.
+Record all attempted variants and surviving/undetected mutants; a survivor cannot be
+silently omitted from a claimed complete audit. Do not use a second model as a gate.
+
+### EP17 — complete actual campaign and independent scientific check
+
+In the existing Phase E GREEN/audit execution, run the adopted actual initial campaign
+once using exact candidate code, pinned development interpreter and all 655 owned
+inputs. Require observed 1,310 warmups, 3,930 measured solves and 5,240 per-call checker
+invocations with no omitted failures. Independent audit verifies the stored certificates,
+all rows/tables/ledgers and all 655 exact expected optimum/Empty values from Phase C.
+Audit checker calls are counted separately. Counts copied from constants are not
+execution evidence. Preserve raw timing/environment data and failures; no retiming to
+manufacture expected performance or post-hoc subset in place of the registered campaign.
+
+### EP18 — no campaign during routine regression
+
+The normal new test file uses scripted schedules plus the bounded actual integration
+set. It must not start the full real timing campaign during test collection, module
+import or a full inherited pytest run. Phase E runs the actual campaign explicitly.
+Subsequent conformance/isolation/postcommit regression preserves and validates the
+historical output instead of resampling it. Tests use temporary output directories;
+never overwrite or regenerate the committed campaign on a test run.
+
+### EP19 — tests-first RED and lifecycle scope
+
+The new test imports exactfrac.experiments before collection-time future-file access.
+With both new production paths absent, require exit 2, exactly one collection error,
+ModuleNotFoundError naming exactfrac.experiments, zero new cases/assertions executed.
+Baseline before/after remains 4,512 passing cases with the new file ignored for RED.
+Live Ruff preflights the exact new test before it is applied. No prior test edit,
+skeleton module, experiment result or configuration change belongs to Phase D.
+
+### EP20 — scoped immutable data and claim review
+
+Classify current/future paths under E15 and D20-M3 before adopting any lasting pin.
+Protect Unit20 owned data and each completed run's owned artifacts, not all future
+results, experiment tools, input aggregates or release documentation. Phase-local
+whole-tree/index/hash records remain legitimate conservation checks. Reject unearned
+optimality-from-C0, total-arithmetic-count-from-event-count, memory-from-bit-peak,
+strong-polynomiality-from-plot and favorable-performance-from-name claims. No unit
+note or private handoff location becomes a repository gate or runtime dependency.
+
+## 48. Unit 21 completion gate — measured initial campaign
+
+Use the existing A–H lifecycle; these are substantive obligations within its gates,
+not extra workflow phases. Phase B changes only DESIGN/TEST_PLAN by append and must
+close remotely before independent Phase C registration. Fix schemas, synthetic
+expected outputs, schedule and independent mathematical references before consuming
+tests/production. Phase C does not make a real timing measurement into an expected
+constant. Phase D adds only the new test and witnesses the exact missing-module RED.
+
+Phase E owns only the E15 sources/documentation and actual results/unit21-v1 output.
+The consumer image is frozen. Run targeted tests, inherited full regression, live
+Ruff, the complete actual campaign and the independent implementation/report audit;
+verify all unaffected files, import origins and previous evidence. Record observed
+new pytest count, successful/failed attempts, actual solve/checker counts, environment
+and output hashes. No table/ledger hash predicted before observation substitutes for
+successful actual execution. A failed/partial campaign is not full unit GREEN.
+
+After GREEN, Phase G appends only narrowly scoped conformance with real test/audit
+and campaign evidence; retain prior theorem statuses and disclose limitations. Stage
+the exact code/test/conformance/output set; isolated index-tree tests and Ruff must
+use that tree while leaving its historical measurements untouched. Commit that exact
+index, verify postcommit tests/Ruff and committed scope, then push the exact commit
+and verify full remote closure. No interim experiment-source commit or independent
+review approval is added. Unit22 work and final private notes wait for unit closure.
