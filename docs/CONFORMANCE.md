@@ -2112,3 +2112,234 @@ Unit 21 experimental execution, timings, comparative/operation/bit-growth result
 Unit 22 minimum-interpreter reproduction, packaging, privacy/licensing and release
 remain outside this entry. Mutable aggregates and future-owned artifacts are not
 permanently frozen by these phase-local identities.
+
+## Unit 21 — initial measured campaign: finite engineering conformance
+
+This append-only Phase G entry records the Unit 21 Phase E/F audited GREEN
+candidate under DESIGN §14 (D21-E1–D21-E16) and TEST_PLAN §§47–48
+(EP1–EP20). It adds an engineering record, not a mathematical source label.
+Every earlier byte, theorem row and status is preserved. In particular, this
+entry does not promote the historical planned invariant or `thm:main` rows.
+The mathematical labels named in D21-E1 retain their source-dependent meaning;
+the runner protocol, record schemas and timing policy are engineering contracts.
+
+The observed Mac GREEN was reported on September 22, 2026. The predecessor
+remains oracle commit `652a1d167a761b30db61192161221b78cf586f95`, tree
+`f44b26ceccd0f503e6543b0bbb015e5ce6be56e1`. Production and result additions
+are not yet committed by this entry. Authority and oracle documents retain
+their historical prospective language; this later record supplies execution
+evidence without rewriting those earlier snapshots.
+
+### Implemented surface and actual frozen-test crosswalk
+
+The new runtime surface is `exactfrac.experiments.main(argv: list[str] | None
+= None) -> int`, with the guarded direct script `experiments/reproduce.py`
+and its `experiments/README.md`. There is no new solver, backend, corpus family,
+public parser API, external optimizer, configuration change or release claim.
+The existing Standard and Accelerated solvers, telemetry, certificate builder
+and independent checker remain closed dependencies.
+
+All test names below are in `tests/test_experiments.py` at the authorized
+100,509-byte import-amended identity. Its 37 test functions and 104 assert
+statements yielded 187 collected/passing cases on the reported Mac. Function,
+assertion, collected-case and solver-call counts are different quantities.
+`green (finite)` means the stated finite engineering checks passed, not a
+proof of universal mathematical correctness or asymptotic performance.
+
+| Obligation | Implemented and exercised finite scope | Actual tests / other evidence | Status |
+|---|---|---|---|
+| EP1 | Exact main/argv boundary, pure imports, guarded script, fixed binary help/usage and stream errors. | `test_public_interface_and_runtime_dependency_direction`; `test_exact_argv_types_reject_before_access`; `test_usage_is_fixed_binary_non_echoing_and_help_is_pure`; `test_invalid_standard_binary_write_return`; `test_standard_stream_exception_identity`; `test_invalid_standard_flush_return`; `test_import_wrapper_guard_and_same_main`; `test_direct_script_fresh_process_help_and_usage_do_not_run_campaign` | green (finite) |
+| EP2 | All registered inputs and retained buffers; coherent altered input cannot certify itself. | `test_coherent_altered_payload_is_not_its_own_oracle`; `test_retained_bytes_are_not_swapped_after_input_validation`; `test_closed_generator_normal_return_promises`; `test_scripted_schedule_counters_and_exact_tables` | green (finite) |
+| EP3 | Strict aggregate/instance decoding; duplicate keys and malformed numeric tokens rejected; foreign rows preserved. | `test_manifest_rejection_precedes_solve_and_output`; `test_manifest_lexical_json_traps`; `test_valid_foreign_aggregate_and_cwd_independence`; `test_closed_instance_exception_identity`; `test_fresh_process_limits_and_hash_seeds` | green (finite) |
+| EP4 | Input/source file kinds and ownership; output overlap, redirection and overwrite rejection. | `test_input_filesystem_fail_closed`; `test_output_lexical_and_ownership_rejection`; `test_valid_external_output_and_optional_order`; `test_source_member_filesystem_rejection_before_solve` | green (finite) |
+| EP5 | Ordered 5,240-call scripted schedule, both routes and fresh repetitions; not actual timing evidence. | `test_scripted_schedule_counters_and_exact_tables` | green (finite) |
+| EP6 | Two measured clock reads, none for warmups; exact interval and diagnostic metadata separation. | `test_scripted_schedule_counters_and_exact_tables`; `test_bad_normal_return_is_runtime_error_not_failed_row`; `test_dependency_exception_object_is_not_translated`; `test_invalid_clock_information_precludes_success` | green (finite) |
+| EP7 | Actual record composition, native route fields, counters, nonbranch/infeasible branch retention and peak maxima. | `test_scripted_schedule_counters_and_exact_tables`; `test_giant_native_integer_is_unquoted_and_exact`; `test_independent_consumer_detects_coherent_corruption` | green (finite) |
+| EP8 | Per-call checked certificates, exact same-route repeats and numerical cross-route comparison without raw-pair normalization. | `test_repeat_and_cross_route_consistency_is_not_assumed`; `test_same_route_certificate_bytes_must_match_warmup`; `test_bad_normal_return_is_runtime_error_not_failed_row`; `test_bounded_actual_telemetry_integration_not_full_campaign` | green (finite) |
+| EP9 | Fixed 22-path source fingerprint, imported origins and input/source drift rejection. | `test_source_input_and_import_identity_drift`; `test_source_member_filesystem_rejection_before_solve`; `test_default_paths_use_source_root_not_cwd`; `test_scoped_fixture_and_source_identities_do_not_freeze_future_roots` | green (finite) |
+| EP10 | Versioned raw JSON and unquoted huge integers; bounded conversion without interpreter-limit changes. | `test_giant_native_integer_is_unquoted_and_exact`; `test_fresh_process_limits_and_hash_seeds`; `test_scripted_schedule_counters_and_exact_tables`; `test_independent_consumer_detects_coherent_corruption` | green (finite) |
+| EP11 | Exact three-table reconstruction from persisted measured records, correct joins and integer medians. | `test_scripted_schedule_counters_and_exact_tables`; `test_independent_consumer_detects_coherent_corruption` | green (finite) |
+| EP12 | Exclusive output and final marker; short writes, invalid returns and distinct I/O failure boundaries. | `test_output_failure_never_publishes_complete`; `test_output_bad_normal_write_return_is_runtime_error`; `test_positive_short_output_writes_are_completed`; `test_marker_io_failure_cannot_be_returned_as_success`; `test_independent_consumer_detects_coherent_corruption` | green (finite) |
+| EP13 | Dependency exception identity and invalid-normal-return distinction; no successful partial result. | `test_dependency_exception_object_is_not_translated`; `test_bad_normal_return_is_runtime_error_not_failed_row`; `test_output_failure_never_publishes_complete`; `test_fresh_process_limits_and_hash_seeds` | green (finite) |
+| EP14 | Three actual tiny inputs under both telemetry routes; repeated finite composition counted separately. | `test_bounded_actual_telemetry_integration_not_full_campaign` | green (finite) |
+| EP15 | Fresh-process synthetic-clock/non-timing checks under hash seeds 1/73 and digit limits 640/4300. | `test_fresh_process_limits_and_hash_seeds` | green (finite) |
+| EP16 | Coherent-corruption consumer tests plus materialized production-source and guard-isolated integration audit. | `test_independent_consumer_detects_coherent_corruption`; separate Phase E `SOURCE_AUDIT.result.json`: 35 source/wrapper mutants and seven other family obligations, distinguished below | green (finite) |
+| EP17 | Complete actual local initial campaign plus independent stored-output/certificate/reference validation. | `test_completed_historical_output_is_read_only_not_retimed`; explicit local campaign process and independent `CAMPAIGN_AUDIT.result.json`, not a routine test side effect | green (finite) |
+| EP18 | Routine regression does not start the full real campaign; historical owned outputs are read-only. | `test_bounded_actual_telemetry_integration_not_full_campaign`; `test_completed_historical_output_is_read_only_not_retimed`; `test_direct_script_fresh_process_help_and_usage_do_not_run_campaign` | green (finite) |
+| EP19 | Historical exact missing-module RED; no skeleton production module or campaign existed at that transition. | Historical `TESTS_RED_CHECKPOINT.txt` / `TESTS_RED_AUDIT.json`; the later import-only authorization does not rewrite this record | green (historical RED) |
+| EP20 | Scoped identities, extensible aggregates and explicit limits on empirical and theorem claims. | `test_scoped_fixture_and_source_identities_do_not_freeze_future_roots`; `test_valid_foreign_aggregate_and_cwd_independence`; `test_default_paths_use_source_root_not_cwd`; `test_completed_historical_output_is_read_only_not_retimed` | green (finite) |
+
+### Actual campaign, reference comparison and timing boundary
+
+The successful local initial invocation consumed all 655 Unit 20 recipe
+identities, preserving numerical/payload duplicates and the known Empty case.
+It executed 1,310 untimed warmups and 3,930 measured samples, for 5,240
+`solve_with_telemetry` calls. Both routes were executed for every recipe.
+Each call built and checked its certificate against the same retained input
+bytes before a successful row was written: 5,240 per-call checker invocations.
+The deterministic alternating schedule and three measured repetitions per
+route follow D21-E5; they are not random sampling or adaptive stopping.
+
+The historical `results/unit21-v1/` contains 1,317 artifacts: `run-info.json`,
+`warmups.jsonl`, `runs.jsonl`, `summary.csv`, `branches.csv`, `comparison.csv`,
+`COMPLETE.json`, and 1,310 files in `certificates/`. The three CSVs contain
+1,310 summary rows, 5,232 branch rows and 655 paired comparison rows. The
+Empty recipe produces no fictitious branch records. Each recipe/route
+certificate was stored from its verified warmup and matched by subsequent
+repetitions. A completion filename alone is not independent validation.
+
+The separate artifact auditor validated the complete raw records, table
+reductions, ordered schedule, repeated diagnostics, provenance and output
+ledger. It rechecked all 1,310 stored certificates and compared every recipe's
+reported value/Empty status with the independently fixed Phase C expectations.
+Those 1,310 checker invocations are additional audit work, not timed samples.
+The artifact audit made zero production solver calls and did not rerun the
+campaign. The expectation source is the earlier independent catalogue, not
+the producer, a second agreeing solver or C0 checker acceptance alone.
+
+C0 acceptance establishes admissibility and attainment, or the valid Empty
+case, within its existing contract. Independent finite optimum comparisons
+are distinct evidence. Same-route result, AlgorithmStats and certificate
+bytes agree across repetitions; cross-route numerical equality uses positive-
+denominator cross multiplication. Distinct admissible raw pairs/witnesses
+with equal values are permitted across routes, including the preregistered
+synthetic `2/2` versus `4/4` trap. No tolerance or silent normalization is added.
+
+Measured nanoseconds cover exactly one telemetry-enabled solve call, including
+its validation/recording and returned telemetry construction. Input decoding,
+Instance creation, source hashing, metadata discovery, certificate construction/
+checking/serialization and output/table work are outside that interval.
+Warmups contain null timing fields and no clock samples; a measured zero is
+retained. Metadata seconds and clock resolution are diagnostic floats, not
+solver arithmetic or counter values. This is instrumented-solve time, not
+whole-command, uninstrumented, backend-only or verification time.
+
+Run records preserve all route-native fields, four ordered nonempty branch
+records, nonbranch work, 25-field WorkStats objects and separate output widths.
+Counter summation and peak maximization retain their closed telemetry semantics.
+Reports are rederived from persisted measured rows without a second solver
+pass. Three-sample time medians are exact integer middle order statistics;
+structural counters are not summed over repetitions. Large integer fields
+remain canonical unquoted decimal tokens through bounded conversion chunks.
+
+### Synthetic tests, bounded real composition and adversarial scope
+
+The scripted full-schedule test exercises 5,240 call identities with synthetic
+dependency returns and clocks; it is not another measured initial campaign.
+The bounded real-integration test executes three registered tiny inputs,
+including Empty and two nonempty cases, under both routes and all four rounds:
+24 actual telemetry calls; the other 5,216 scheduled calls in that test are
+scripted. These per-test counts must not be added as unique corpus recipes or
+misreported as the initial campaign's measured samples. The giant-record and
+fresh-process tests exercise a 4,401-digit token and limit/hash-seed combinations
+without changing interpreter settings. Injected resource exceptions do not
+establish physical resource exhaustion or a measured support frontier.
+
+The independent source audit materialized and detected 35 production-source/
+wrapper mutants at their intended guards, with valid pristine controls and no
+surviving mutant. Six additional declared families are tied to actually passed
+frozen-test integration cases; a seventh independently rejects a synthetic
+three-input subset masquerading as the complete campaign. Together these
+account for all 42 preregistered fault families. This is not 42 production
+mutants. Variant files, guard reports and failed-attempt provenance remain
+private audit evidence. The source audit uses synthetic dependencies and blocks
+real optimizer calls; it supplies fault-detection evidence, not runtime data.
+
+Import provenance and candidate-byte conservation were checked throughout.
+The historical campaign source fingerprint covers the fixed 22 source paths,
+not documentation, tests, outputs or the mutable aggregate MANIFEST. Therefore
+this documentation-only append does not reidentify or retime the stored run.
+Source-content identity is not represented as an already-created implementation
+commit. Output completion is not a power-loss durability or hostile-race claim.
+
+### Observed look-ahead coverage, not a performance acceptance gate
+
+The actual Mac `summary.csv` has 276 recipes with n > 3, hence 552 solver rows.
+The independently reported grouping is:
+
+| Stratum | Recipes per route | Standard nonzero / zero rows | Accelerated nonzero / zero rows | Accelerated maximum | Sum over Accelerated summary rows |
+|---|---:|---:|---:|---:|---:|
+| `struct-*` | 120 | 0 / 120 | 0 / 120 | 0 | 0 |
+| `bits-*` | 120 | 0 / 120 | 0 / 120 | 0 | 0 |
+| `seeded-*` | 36 | 0 / 36 | 6 / 30 | 2 | 8 |
+
+Structural and bit-sweep recipes did not exercise look-ahead; their names,
+larger-than-micro n or Accelerated route label do not establish such coverage.
+The six nonzero observations are:
+
+| Recipe | Accelerated lookahead_queries | Standard oracle_calls | Accelerated oracle_calls |
+|---|---:|---:|---:|
+| `seeded-n06-b00001-falternating-s01` | 1 | 14 | 12 |
+| `seeded-n06-b00001-falternating-s73` | 1 | 14 | 12 |
+| `seeded-n06-b00008-falternating-s01` | 1 | 16 | 13 |
+| `seeded-n06-b00064-falternating-s01` | 1 | 16 | 13 |
+| `seeded-n08-b00008-falternating-s73` | 2 | 17 | 14 |
+| `seeded-n08-b00064-falternating-s73` | 2 | 17 | 14 |
+
+The eight-query sum is across summary rows, not across all repeated executions.
+The paired oracle-call differences on these six observed active recipes have
+median -3. This is an observed comparator statistic, not an engineering gate,
+a theorem, a timing conclusion or an ablation isolating look-ahead's causal
+contribution. Zero-look-ahead rows may also show fewer Accelerated oracle calls.
+All zero, unfavorable and mixed observations remain in the historical output.
+Paper-level hypothesis interpretation and additional analyses are separate
+from this conformance record; private planning material is not made governing
+source or a gate dependency. No new experiment or larger-n family is adopted here.
+
+### Exact identities, controlled recovery and remaining lifecycle
+
+| Bound artifact | SHA-256 |
+|---|---|
+| `exactfrac/experiments.py` | `f01d15aedd917c84245a6562ca26b92e76e518f4e56a860c705572e631ffaf2c` |
+| `experiments/reproduce.py` | `ccb404a25f63d34413c4a43a8512056e6195b66f824734a439da0305b03b3577` |
+| `experiments/README.md` | `f0373c42b18dcfcd6e08aae345e2f050cf58853da34044a874829c268ec219a2` |
+| `tests/test_experiments.py` (authorized import amendment) | `089e68b9f2cea523afc8c85b658ee179c9602572b5fba6c34888d62873e7c0cb` |
+| `IMPLEMENTATION_GREEN_AUDIT.json` | `caacc57840ff55326c8c288ec1359f9acba502e6f14c8089995a3e83a7bf0ce6` |
+| `IMPLEMENTATION_GREEN_CHECKPOINT.txt` | `b21ac1beff10c1da179c3724f29fc9cd27630891ac0e6b5ffa40eeff145c13cb` |
+| `LOOKAHEAD_OBSERVATIONS.json` | `3799d226f0fd56ddeb02778904cb7d62df966d18b9033f7f87c6efc4e7b80a8a` |
+
+The successful private checkpoint is
+`unit21-experiments-implementation-r1-recovery-r2/live-green-recovery.9qejw_f3/`.
+The amended test Git blob is `2fd2ffa90cad789287bbddbd91b3b6fdaa02c2f8`.
+The original R2 test hash
+`7c33b6b1080cc87996d614add94da9f9d257f2823ec22eea18e0ce76149e5679`
+remains a valid historical RED identity, not the current test identity.
+
+The original production application completed targeted tests but its helper
+rejected the recorded pytest argument expansion. Recovery R1 authenticated
+that record and stopped before the campaign at an import-grouping Ruff error.
+The author then explicitly authorized only moving the pytest import before
+the dotted first-party import with one intervening blank line. Recovery R2
+recorded the one-byte-size amendment, preserved all other test bytes and both
+failed attempts, and required fresh tests under the new identity. No production,
+configuration or predecessor change was made. The old targeted run is not
+reclassified as verification of the amended test. The deferred first-party
+classification policy remains for later authority, not a configuration change here.
+
+Fresh Mac GREEN verification was 187/187 targeted and 4,699/4,699 full cases
+(4,512 inherited plus 187 new), using Python 3.14.6, pytest 9.1.1 and Ruff
+0.16.5. The inherited corpus parametrization warning was retained, not suppressed
+or repaired. It is not evidence of compatibility with a later pytest version.
+
+Phase G changes only `docs/CONFORMANCE.md`, appending after all 189,554 prior
+bytes. Its application authenticates the original GREEN records rather than
+rewriting them against this later document. Fresh targeted/full tests and
+repository Ruff run with the appendix present. They preserve and validate
+historical output instead of starting another initial campaign. All other
+2,028 candidate files, the 708-entry index, references and prior evidence remain
+unchanged. The 2,029-file total is a phase-local snapshot, not a permanent ban
+on future authorized additions.
+
+Complete-candidate staging, mandatory staged-tree isolation, local implementation
+commit/postcommit checks and remote closure still follow. This entry is not
+Unit 21 remote closure. Final private BUILD/LEARNING notes are neither produced
+nor inspected in this phase. Unit 22 release/minimum-interpreter/privacy/licensing
+work and any separately authorized follow-up campaign remain outside its scope.
+
+Finite tests and this one campaign do not establish universal correctness,
+strong polynomiality, a finite wall-clock law, general scalability, constant
+memory, a practical tractability threshold or application-domain suitability.
+Event counters are not every arithmetic operation; integer peaks are not memory
+measurements. No external baseline, explicit-copy speedup, verification-overhead
+claim or global theorem promotion is introduced. Historical scoped run artifacts
+are preserved without freezing the entire `results/` or `experiments/` aggregate.
