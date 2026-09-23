@@ -52,3 +52,6 @@ select = [
     "SIM",
     "RUF",
 ]
+
+[tool.ruff.lint.isort]
+known-first-party = ["exactfrac", "exactfrac_verify"]

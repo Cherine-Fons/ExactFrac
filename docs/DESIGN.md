@@ -4359,3 +4359,610 @@ rerun postcommit checks, then push and remotely close. Prior measured artifacts
 remain unchanged through these transitions; closure does not mean an additional
 timing campaign ran. Private BUILD/LEARNING notes are delivered only after full
 remote closure and are never created, located or hashed by build helpers.
+
+---
+
+## 15. Unit 21B authority — separately registered irregular-instance follow-up
+
+This section is prospective authority for Unit 21B only. It follows the remotely
+closed Unit 21 implementation `df30e1a36d123e1da025097c99f327871f1a97a6` and its
+recorded successful Unit 21B Phase A. The author accepted the amendment review
+and superseding Part II brief on September 22, 2026, and separately authorized
+the single configuration-pin replacement in D21B-I2. Earlier document bytes and
+Unit 21's historical authority remain intact. This adoption does not date F7,
+claim a pilot ran, or authorize a main campaign before the pilot/author freeze.
+
+### D21B-I1. Purpose, source boundary and affirmative ownership
+
+The canonical V2.2 source remains the archive with SHA-256
+`400c4e23a7683571f7181b98bc009954d431f4ac355a247fb22327a609b4f9ce`.
+Its `def:instance`, `ass:active`, `def:parameter`, `lem:interval`,
+`lem:endpoint-difference`, `prop:endpoints`, `lem:empty`, and `thm:main` govern
+mathematics. The active regime, individually selectable positive integer
+multiplicities, raw-pair semantics, both closed solvers, and independent C0
+checker are unchanged. This section defines a new finite input family and its
+experiment, not a solver, theorem, backend, or release.
+
+Affirmatively extend the layout in section 3 with these sibling modules:
+`exactfrac/corpus_irregular.py`, `exactfrac/experiments_irregular.py`, and
+`experiments/reproduce_irregular.py`; consuming tests are
+`tests/test_corpus_irregular.py` and `tests/test_experiments_irregular.py`.
+The generator owns suite `unit21-v2` under `instances/unit21-v2/`. Recipe IDs
+start `irregular-`. Designated outputs are `results/unit21-v2-pilot/` and
+`results/unit21-v2/`. The old proposed `irregular-v1` suite and `irregular-pilot`
+output name are not alternate supported namespaces.
+
+`results/unit21-v1/` is historical, byte-frozen evidence, reported first. Never
+rerun, retime, edit, replace, or mix it with follow-up samples. Disclose in the
+paper: the 21B stratum was designed after observing that `unit21-v1` produced
+Accelerated look-ahead events on six seeded recipes and none on the structural
+or bit-sweep strata. All follow-up results, including null, unfavorable, and
+untestable outcomes, are retained and labeled as follow-up results.
+
+### D21B-I2. Exact predecessor exceptions and phase ownership
+
+Phase B appends this section to DESIGN and the matching obligations/completion
+section to TEST_PLAN. Its only other two changes are the author's coupled
+configuration/test exception:
+
+1. Append exactly these ASCII bytes to the original `pyproject.toml`:
+   `\n[tool.ruff.lint.isort]\nknown-first-party = ["exactfrac", "exactfrac_verify"]\n`.
+   The preimage is 879 bytes, SHA-256
+   `89977766c002fd79f1c75de93621062b4e7a042debe95ab9d238987fc9469da6`;
+   the postimage is 957 bytes, SHA-256
+   `13d5e442582c14e278f726cc3e5d9fecdff5a0cba224e53313a3a8cfc1a4812b`.
+   There is no dependency, packaging, pytest, rule-selection, line-length,
+   version, or other configuration change.
+2. In `tests/test_cli.py::_FROZEN_SOURCE_HASHES`, replace only the 64 hexadecimal
+   characters of the `pyproject.toml` value, old digest above to new digest above.
+   Test preimage SHA-256 is
+   `02a63b0f95000aab30405a979034bdb628e37b69c635094f4cd0e7190796f42d`;
+   postimage SHA-256 is
+   `6edf3930b3a5db998aea9a1e769b14b5af5046edd996a8b3e42022ef4d7545f0`.
+   Both are 99,824 bytes. Preserve every other test byte, every other pin and
+   all assertions. This is not a pin retirement or a standing amendment budget.
+
+This explicitly supersedes the otherwise blanket closed-test freeze for this
+one value only. Ruff first-party declaration is the selected policy; no standing
+RED-to-GREEN import-regrouping exception is adopted. Runtime solver code never
+reads this development-lint setting. Repository-context preflight and full Ruff
+must still pass; no automatic formatter or `--fix` is allowed.
+
+Phase C appends only ORACLE_CATALOG; it may hold independently derived companion
+files privately. Phase D adds only the two new tests. Phase E preserves those
+exact tests and creates the three sibling modules, all 1,200 owned payloads,
+`experiments/README_irregular.md`, and the aggregate MANIFEST extension. It also
+appends an explanatory owning-suite paragraph to `instances/README.md`, preserving
+its old prefix. The separate new experiment README avoids editing the old one.
+Pilot/main output files are subsequently created by their actual invocations,
+not shipped as supposedly observed Mac results. Phase G appends only CONFORMANCE.
+H stages the complete authorized candidate, isolates, commits, and closes remotely.
+
+Other closed source/tests/configuration, SPEC_LOCK, CONTRACT, existing payloads,
+and all historical results remain byte-frozen. Phase-local manifests bind current
+bytes without imposing enduring whole-directory or aggregate MANIFEST pins.
+Future release paths remain prospective, not asserted absent forever.
+
+### D21B-I3. Pure finite generator surface and inventory
+
+The generator has exactly the D20-C2 surface and parameter kinds:
+
+```python
+__all__ = ("build_corpus", "generate_instance", "recipe_ids")
+def recipe_ids() -> tuple[str, ...]: ...
+def generate_instance(recipe_id: str) -> bytes: ...
+def build_corpus() -> tuple[tuple[str, bytes], ...]: ...
+```
+
+It has no other public callable/class, no filesystem interface or executable
+module entry. `generate_instance` accepts only an exact built-in str in this
+version's finite registry; all other values/types raise plain ValueError without
+coercion or repair. Immutable return types, import purity and no environment,
+clock, random-state, network, subprocess or file access follow D20-C2. Imports
+are stdlib-only; no producer, verifier, test, oracle catalogue or private helper
+is imported. No deferred generation, mutable public registry, or shared buffer.
+
+The inventory is the Cartesian product of n=(6,8,12,16), tau=(64,128),
+b=(1,8,64), mode=(alternating,random), and seed tokens s01 through s20 for main
+or p01 through p05 for pilot. Each token includes its letter and two digits;
+p01 and s01 are different domains. There are 48 cells, 960 main recipes and
+240 pilot recipes, all retained even when payloads coincide.
+
+IDs are exactly `irregular-n{n:02d}-t{tau:03d}-b{b:05d}-f{mode}-{seed_token}`.
+For example `irregular-n06-t064-b00001-falternating-p01` is an ID spelling,
+not an observed graph or result. A cell ID is that ID without its final seed
+suffix. Public registry and payload order are strict ASCII ID order. Pilot and
+main schedules filter this same registry by seed letter and reindex separately.
+No extra spelling, leading sign, case variant, stripped whitespace or seed is
+accepted. No deduplication by bytes, isomorphism, digest, value or witness.
+
+### D21B-I4. Deterministic support, q, f and matched magnitude series
+
+Vertices are 0..n-1. Start with the path edges (i,i+1) and (0,n-1), giving a
+cycle spine. Visit all remaining unordered pairs (u,v), u<v, lexicographically.
+Let `H(lines)` mean SHA-256 of the ASCII lines joined by LF with one LF after
+the last line. Integer substitutions in messages are unpadded decimal. The
+first line of every message is `exactfrac-u21b-irregular/1`.
+
+For support the subsequent lines are, in exact order:
+`support`, seed_token, n, u, v. Include a nonspine pair iff digest[0] < tau.
+Do not hash the spine to decide inclusion. This digest excludes b, tau and
+mode: matched magnitude series keep the same support; the two thresholds are
+nested and the two modes share support for a fixed n/seed. These dependencies
+are intentional, not independent random replicates. The digest recipe is not
+a guarantee of uniform graph sampling or look-ahead reachability.
+
+Sort final support pairs lexicographically before assigning edge references.
+For each included pair the multiplicity message after the common tag is:
+`multiplicity`, seed_token, n, tau, mode, u, v. Let Z be the unsigned big-endian
+integer of all 32 digest bytes and set q(u,v)=1+(Z mod 2^b). The message excludes
+b, so the series uses the same digest with the stated truncation at each b.
+Here 1<=q<=2^b. b is an upper exponent, not exact bit length; an attained 2^b
+has b+1 bits. Always retain the actual `max_q_bits` alongside b.
+
+Compute d_q(v) as the incident multiplicity sum. Alternating mode sets f(v)=1
+for even v and f(v)=d_q(v) for odd v. Random mode uses a capacity digest whose
+lines after the tag are `capacity`, seed_token, n, tau, `random`, v. Let Z_v
+be its full unsigned big-endian digest integer and set f(v)=1+(Z_v mod d_q(v)).
+It excludes b; its modulus is the degree at that magnitude. Modulo reduction is
+the declared deterministic recipe, not a promise of uniform independent f.
+The spine implies positive degrees and 1<=f<=d_q. No resampling, clamp, PRNG,
+Python hash, iteration over multiplicity magnitudes or copy expansion.
+
+### D21B-I5. Exact input bytes and extensible aggregate
+
+Each payload uses D20-C6's exact `exactfrac-instance/1` object: keys format,n,
+edges,f in that order, canonical sorted (u,v,q) edges, no labels or extra
+metadata, compact ASCII separators and one trailing LF. Use a separate
+bounded-chunk integer codec with direct decimal conversions of at most nine
+digits; no change to interpreter limits and no solver arithmetic floats.
+
+`build_corpus()` returns 1,201 records: first ("MANIFEST", own_manifest_bytes),
+then the 1,200 ("unit21-v2/"+ID+".json", payload) records in ASCII path order.
+Its MANIFEST contains only its own suite using exactly D20-C7 schema and canonical
+initial encoding. It never reads or overwrites the shared aggregate.
+
+The Phase E materializer appends the new suite's independently fixed entries
+to the valid existing aggregate, keeping every existing entry's values and
+relative order and the exact Unit 20 payload bytes. New entries must follow
+D20-C7 global order/uniqueness. The resulting initial combined aggregate has
+1,855 entries, but no later consumer pins that global count/hash. Reformatting
+is not an excuse to mutate existing metadata. A future valid foreign suite is
+ignored by this consumer without opening or running its files. The `unit21-v2`
+projection must match all 1,200 independent entries and actual owned files;
+no extra/missing/nested/renamed/redirected/nonregular/executable owned leaf.
+The runner validates all owned inputs before selecting its pilot/main subset.
+
+### D21B-I6. Independent mathematical and geometric expectations
+
+Phase C derives every ID, payload, byte count/hash, construction summary, own
+MANIFEST and inventory fingerprint independently from I3-I5 before generator
+or runner exists. Two separately implemented derivations must agree on every
+payload and exact quotient; neither imports a future producer or its tests.
+
+For every nonempty vertex shore U put s=sum f over U, e=sum internal q, and
+B=sum boundary q. Feasible selected totals t have 0<=t<=B, s+t odd, s+t>=3.
+The least feasible candidate is 2 if s=1, 0 if s>=3 is odd, and 1 if s is even;
+the greatest is B when s+B is odd, otherwise B-1. When least>greatest the shore
+is infeasible. Otherwise evaluate the two endpoints of
+`2*(e+t)/(s+t-1)`, with positive denominator, or independently select the
+monotone extreme from sign(s-e-1). Equal endpoints need only one evaluation
+if that convention is reported. Compare raw pairs by exact cross multiplication.
+Enumerate every nonempty shore, not a subset, for all 1,200 recipes.
+
+Reference A visits masks 1..(2^n-1), endpoints least then greatest, retaining
+strict improvements. It records its exact raw optimum and a compact attainment
+whose boundary total is allocated greedily in canonical edge order. Reference B
+uses a separately implemented construction and monotonic-extreme route; tied
+witnesses may differ, numerical optima must agree. Label both routes
+**endpoint-reduction full-shore optimum**, never exhaustive-vector enumeration.
+Empty status follows the definition. The planned shore census for one complete
+scan is 300*(63+255+4095+65535)=20,984,400, not an already executed observation.
+
+Additionally, for exactly b=1 and n in (6,8), both tau/modes and all 25 seed
+tokens, enumerate EVERY compact boundary vector for every nonempty shore,
+including inadmissible vectors in the visited census before testing the
+admissibility rules. Interior/nonboundary coordinates are zero. Enumeration
+is ascending boundary-edge-reference mixed-radix order, last coordinate fastest;
+with no boundary there is one empty vector. This is 200 fixed recipes (160 main,
+40 pilot), labeled **exhaustive compact-vector enumeration**. Do not replace it
+by scalar-total scanning, endpoint checks, convenient workload-selected recipes,
+or an unreported partial prefix. Record vector visits and admissible counts.
+Finite bounding does not promise this enumeration is fast.
+
+Phase C independently derives the descriptor geometry of I7 for all 1,200
+inputs, both schedules, nested field registries and synthetic exact output
+examples. Actual visited/feasible shores, endpoint evaluations, enumeration
+counts and all derivation work are recorded, distinguished from planned counts.
+Reference results are private/committed oracle material as explicitly registered,
+not production look-ahead, operation traces or machine timing observations.
+
+### D21B-I7. H2-prime geometry and solve-level identities
+
+Use the fixed source atomic covers, with masks Tplus={v:f(v)+d_q(v) odd},
+Tf={v:f(v) odd}, P={v:d_q(v)>f(v)}, A={v:f(v)>=2}, W={v:f(v)=1}.
+Descriptors F(T,pi;I,O) in order are: D0=(Tplus,1;0,0); D1 for p in P and
+each support edge u<v, (Tplus,0;{p,u},{v}) then (Tplus,0;{p,v},{u}); D2 first
+(Tf,1;{a},0) for a in A, then (Tf,1;{u,v,w},0) for ascending W triples;
+D3 each edge's (Tf,0;{u},{v}) then (Tf,0;{v},{u}). Vertices/edges are in dense
+canonical order. Count even descriptors whose forced-in/out sets intersect.
+
+A descriptor is feasible iff I and O are disjoint and either
+T minus (I union O) is nonempty or |I intersect T| mod 2 equals pi. For a
+feasible descriptor let N_F=2+n-|I union O|: fixed source/sink are two classes;
+a parity anchor, when needed, is contracted into source, not a new free class.
+The reference backend makes a_F=N_F^2-3*N_F+3 ordinary cut/flow calls, from its
+(N_F-1)^2 ordered pairs minus the N_F-2 equal-free-vertex pairs. This uses the
+reduced family size, not original n. Define r_j=number of all descriptors,
+s_j=number of feasible descriptors, and A_j=sum a_F over feasible descriptors.
+Thus r=(1,2*|P|*m,|A|+binom(|W|,3),2*m); repeated descriptors are counted.
+
+For every pilot, warmup and measured nonempty solve, branch j has observed
+C_j=work.oracle_calls and must satisfy, exactly:
+
+- work.atomic_families_enumerated=r_j;
+- work.atomic_families_examined=C_j*r_j;
+- work.atomic_families_feasible=work.parity_cut_calls=C_j*s_j;
+- work.ordinary_min_cut_calls=work.max_flow_calls=C_j*A_j.
+
+All seed, initialization, Newton and look-ahead oracle queries count in C_j.
+Infeasible branches stop at their seed (C_j=1), retain r_j examinations, and
+have s_j=A_j=0. Empty has no branch records and zero branch event counts;
+nonbranch bit observations are not forced to zero. Totals sum the first 20
+WorkStats fields and maximize the last five, including nonbranch; never sum
+peaks or multiply diagnostic summary counts by repetitions.
+
+The runner may derive the finite descriptor geometry from input by these
+support-sized loops outside the measured interval; this is bookkeeping, not
+an optimizer or shore/vector enumeration. Validate it against independent
+Phase C geometry in the consuming tests and external campaign audit. It must
+not derive its expectation by dividing observed cut counts by C_j. Every
+identity disagreement is an implementation finding and stops the attempt;
+no omitted row, fake zero or best-effort success. Source big-O bounds without
+finite constants remain descriptive, never invented numeric thresholds.
+
+### D21B-I8. Runner surface, strict CLI, public dependency direction
+
+The sibling runner has exactly `__all__=("main",)` and
+`main(argv: list[str] | None = None) -> int`, positional-or-keyword, with the
+same exact-type/None behavior as D21-E2. Imports do not access data, discover
+environment, read clocks, run algorithms or write streams. Only stdlib, its
+own generator's public surface and closed public ExactFrac APIs are imported.
+Record classes may be imported for exact-type validation; solver execution is
+only `solve_with_telemetry`. No private predecessor codec/helper, handoff
+auditor, catalogue, canonical manuscript or test dependency. No import of
+`exactfrac.experiments` to reuse its implementation. The checker stays independent.
+
+Accepted argv is `["--help"]`, or first token exactly one of `--pilot`,`--all`,
+followed by optional `--instances PATH` and `--output PATH`, each at most once
+in either order. PATH is a nonempty str not beginning with '-' and containing
+no NUL. Unknown/repeated/missing tokens, help combinations, `--flag=value` and
+positional extras write the fixed usage text to stderr and return 2. Invalid
+Python argv types raise plain ValueError before I/O. Exact ASCII usage is:
+`usage: reproduce_irregular.py --help | (--pilot | --all) [--instances PATH] [--output PATH]\n`.
+Help writes that plus
+`ExactFrac irregular follow-up; fresh roots only; pilot precedes the author-frozen campaign.\n`
+to stdout and returns 0. Usage/help do not open paths or invoke dependencies.
+Successful execution is silent and returns 0 only after valid completion.
+Standard streams are not rebound/closed; positive short writes complete and
+invalid normal write/flush returns are RuntimeError; I/O exceptions propagate.
+
+The wrapper calls the same main under a guarded executable entry and SystemExit,
+not duplicated experiment logic. It can set/restore its import root inside that
+entry only. It never installs packages or loads a conflicting installed solver.
+
+### D21B-I9. Input and output path boundaries; no resume
+
+Defaults are source-root/instances and source-root/results/unit21-v2-pilot or
+unit21-v2 by selected mode, independent of cwd. Explicit relative paths are
+relative to caller cwd. Resolve lexically; reject '..', symlinks at every
+existing component, output/input overlap, output ancestors of source, and
+output under source except its results subtree. Inputs/source must be real
+directories. The output leaf must not exist even if empty. Missing parents
+are created only after complete input/source validation. Native missing-file
+and access failures are not translated into successful empty results.
+
+An explicit alternate fresh output is a complete new invocation of the same
+mode, not resume. Preserve a failed designated attempt and run anew into a
+separate fresh root; never rename away, remove, append to, or truncate that
+attempt automatically. Retries retain the same inventory/protocol, their
+own provenance and all failed-attempt evidence. Only the explicitly identified
+successful attempt is used; do not splice or pool attempts. Output location
+cannot change source identity or scientific campaign ID. A later controlled
+closure binds whichever authorized fresh root contains the retained attempt;
+no new input namespace is manufactured for a retry.
+
+Strictly parse the aggregate and validate I5's entire projection before any
+solve/output creation. Retain each verified payload buffer for Instance.from_dict
+and every checker call; no validation/reread mismatch. Strict duplicate-decoded-key,
+integer-token/type, trailing-data, UTF-8/BOM and canonical owned-byte rules follow
+D20-C7/D21-E4, implemented locally, not by private import. Malformed external
+inputs are plain ValueError; normal generator promise violations are RuntimeError;
+exceptions raised by a closed public dependency propagate unchanged.
+
+### D21B-I10. Two fixed schedules and timing boundaries
+
+Main campaign ID is `unit21-v2`. Filter s-tokens, ASCII-sort, index i=0..959.
+For each recipe run rounds r=-1,0,1,2; Standard first iff (i+r) is even,
+otherwise Accelerated first. r=-1 is one untimed warmup per route, followed
+by three measured repeats, numbered 0,1,2. Exactly 1,920 warmups and 5,760
+measured calls give 7,680 actual telemetry calls/checker invocations. No
+warmup clock read; null elapsed is not zero. No caches, deduplication,
+selection of favorable repeats, order/seed/repetition overrides or subsets.
+
+Pilot ID is `unit21-v2-pilot`. Filter p-tokens, ASCII-sort, index i=0..239;
+run each once per route at round 0 with Standard first iff i even. These
+480 calls are operational diagnostics, not main warmup/measured samples.
+Each pilot call is timed around the same telemetry-call boundary, explicitly
+labeled pilot. All 48 cells and five seeds per cell must be included.
+
+Execute serially, synchronously in one process per invocation, with no internal
+solve/cell/campaign time limit, retry loop, affinity/GC setting, recursion or
+decimal-limit change. MemoryError, RecursionError, OSError, KeyboardInterrupt
+and native failure still propagate. Unbounded duration is not failure immunity.
+
+For measured main and pilot calls take exact integer `perf_counter_ns` readings
+immediately before/after the single normal `solve_with_telemetry` call. Require
+nonnegative difference. Include only that call and its telemetry construction;
+exclude input, geometry checks, environment, certificates, verification,
+serialization, output, hashing and reporting. Retain integer elapsed_ns, plus
+finite nonnegative RunMetadata.wall_clock_s=elapsed_ns/1_000_000_000 outside
+solver arithmetic. Zero readings are retained; no tolerance or rounding in
+integer reports. Pilot time is never pooled with main time.
+
+Additionally the pilot records each cell's total elapsed_ns from immediately
+before constructing the first recipe Instance/geometry of that cell to after
+the last checked row/certificate of the cell has been written and flushed.
+These two extra clock reads include local verification/output overhead and
+are separately named `cell_elapsed_ns`, not solve time. Initial global input
+validation and final table generation are excluded. Discovery occurs once
+per invocation exactly as D21-E6; retain actual platform/python/cpu-or-null,
+clock flags/resolution, recursion and integer limits, hash seed. No host/user
+identifier, credentials, home path, environment dump, Git remote or private path.
+
+### D21B-I11. Result checks, geometry checks and retained records
+
+Require exact normal response/record types and selected route under closed
+contracts. Preserve all native branch fields and every AlgorithmStats field.
+No second solve to obtain counters. Build/serialize a certificate, require the
+independent checker of the retained input/certificate bytes to return None,
+and run the I7 geometry identities outside timing before writing the successful
+row. Every warmup, measured sample and pilot call is checked. Native dependency
+exceptions retain identity; contradictory normal returns are RuntimeError.
+
+Main repeats must match their route's warmup in exact SolveResult,
+AlgorithmStats and certificate bytes. Cross-route quotients agree by exact
+positive-denominator cross multiplication; tied witnesses/raw pairs need not
+be equal. Pilot has no same-route repeats to compare: no invented determinism
+evidence from a single call. Both modes require actual route agreement.
+A C0 acceptance is admissibility/attainment, not global optimality. Separate
+campaign audit compares reported values to the Phase C exact optima.
+
+Source fingerprint uses the fixed 22 paths of D21-E8 plus the three I1 sibling
+modules, exactly 25 paths, ASCII-sorted. Use prefix
+`exactfrac-unit21b-source/1\n` followed by each p+'\0'+sha256(p)+'\n'; record
+its hash H and `exactfrac-source-sha256:`+H. No glob-discovered extra sources,
+results, tests, docs, configuration or data inside the source fingerprint.
+Bind loaded project modules to those exact source-root paths and hashes;
+reject conflicting loaded modules. Gate-owned test sandbox copies must derive
+from authenticated source bytes and cannot escape test teardown. Recheck
+all consumed inputs, source images and origins before completion.
+
+Raw main rows retain D21-E9's exact outer field names and nested RunRecord
+schema, with campaign/suite now unit21-v2. Pilot uses the same row structure
+in `pilot.jsonl`, campaign unit21-v2-pilot, phase `pilot`, repeat 0, integer
+elapsed_ns. Main phase warmup/measured retains D21-E9's rules. All phases use
+format `exactfrac-run/1`. The input object extends D21-E9 with exactly `cell`,
+`tau`, `b`, `capacity_mode`, `seed`, `support_sha256`; seed is its complete token.
+Support fingerprint is SHA-256 of ASCII `exactfrac-unit21b-support/1\n`, then
+n+'\n', then each canonical u+','+v+'\n', unpadded. It excludes q/f/b and
+binds matched topology. Existing n,m,Q_bits,max_q_bits,max_f_bits and
+input_integer_bits_sum retain their precise D21-E9 meanings.
+
+Certificates live at `certificates/{recipe}.{solver}.json`, one per recipe/route
+from warmup (main) or the single pilot call. The raw certificate reference binds
+its actual bytes/hash. JSON uses recursive ASCII key order, compact separators,
+ensure_ascii strings, canonical integer tokens and one LF; bounded-chunk huge
+integer handling and finite environmental float spelling follow D21-E9.
+No public parser or new public result record is added.
+
+### D21B-I12. Exact tables, pilot diagnostics and honest findings
+
+Let W be the exact ordered 25 WorkStats fields in 4.13.3. Every CSV is ASCII,
+comma-separated, one header, LF endings, no index/preamble/blank rows or float
+formatting for integers. Fields defined here need no quoting. All order ties
+below use ASCII recipe/cell order only for presentation, never solver selection.
+All main tables derive from retained raw measured records, not another solve.
+
+Main `summary.csv` has 1,920 rows, recipe order then Standard,Accelerated; header
+is D21-E10's summary header with `cell,tau,b,capacity_mode,seed,support_sha256,`
+inserted immediately after `recipe,solver,`. repeat_count=3; median_solve_ns
+is the middle of exactly three integers. Work/peaks are repeated-identical
+per-call values, not sums across repeats. `branches.csv` and `comparison.csv`
+retain D21-E10's headers and derivation with 960 recipes; actual nonempty branch
+counts are verified, not assumed from a planned constant. Main comparison is
+one direct join of both summary rows per recipe.
+
+Main `coverage.csv` has 48 cell-order rows and exact header
+`cell,n,tau,b,capacity_mode,seeds,active_seeds,coverage_N,coverage_D`.
+seeds=20; active means Accelerated total.lookahead_queries>0; fraction is
+literal active_seeds/20, unreduced. Count a recipe once, not three repeats.
+Never require every seed in an active cell to be active.
+
+Main `findings.json` fields are exactly `format`,`campaign`,`h5`,
+`oracle_call_wins`,`time_wins`,`fewer_calls_not_faster`,`more_calls`,
+`slowest_ten`,`largest_integer_ten`,`h2_checked_solves`.
+format=`exactfrac-irregular-findings/1`. The h5 object has exactly `outcome`,
+`active_cells`,`total_cells`,`eligible_recipes`,`paired_difference_median`,
+`zero_event_cells`; outcome follows I13, total_cells=48, and median is null
+only for empty subset, otherwise {N,D} with D positive and gcd-reduced by
+integer arithmetic outside solver records. zero_event_cells is ASCII order.
+Each wins object has exactly `accelerated`,`tie`,`standard`, counting all 960
+recipe comparisons: smaller count or smaller median time wins its own category.
+Lists fewer_calls_not_faster and more_calls contain all matching recipe IDs in
+ASCII order; 'not faster' includes a time tie. slowest_ten contains ten
+{recipe,standard_median_solve_ns,accelerated_median_solve_ns} objects ranked
+by descending max of those two medians. largest_integer_ten has ten
+{recipe,standard_peak_integer_bits,accelerated_peak_integer_bits} objects
+ranked by descending max peak. Ties break by ASCII recipe. h2_checked_solves
+is the observed count of fully checked main calls, not an unevidenced constant.
+No H3 slopes, p-values, smoothing, regressions or significance tests in unit
+reports; separately preregistered paper analysis reads these retained values.
+
+Pilot owns `pilot.jsonl`, `pilot-solves.csv`, `pilot-cells.csv`, `run-info.json`,
+`COMPLETE.json` and 480 certificates, not main tables or an H5 support verdict.
+Pilot-solves header:
+`cell,recipe,solver,n,m,tau,b,capacity_mode,seed,max_q_bits,solve_elapsed_ns,oracle_calls,lookahead_queries,ordinary_min_cut_calls,peak_integer_bits`.
+Rows follow actual pilot call order and retain per-solve diagnostics exactly.
+Pilot-cells header: `cell,n,tau,b,capacity_mode,recipes,solver_calls,cell_elapsed_ns`;
+48 rows, five recipes and ten successful calls per completed cell. Cell totals
+are actual separately measured intervals, never a sum mislabeled as total time.
+These observations inform the author's operational review, not an added numeric
+time gate, selection rule, or a guarantee about future solve duration.
+
+### D21B-I13. Hypothesis decisions and prespecified paper analysis
+
+H5-prime is primary. Let S be all main recipes with positive Accelerated
+lookahead_queries and K the number of cells with at least one such recipe.
+If S is empty, report `untestable`. Otherwise report `supported` exactly when
+K>=24 and median over S of (Accelerated oracle_calls - Standard oracle_calls)
+is strictly negative; all other cases are `not supported`. The median is the
+middle value for odd size and the exact mean of two middle values for even
+size. Timing never overrides this decision. Report all zero cells and coverage.
+
+H2-prime requires I7's identities on 100% of calls, not approximate agreement.
+A valid discrepancy stops the attempt; don't relabel it an unfavorable H5
+finding. Passing identities is finite implementation/accounting evidence,
+not a proof of all arithmetic-operation bounds or strong polynomiality.
+
+H3-prime series are fixed (n,tau,capacity_mode,seed), main seeds only, per route
+separately. There are 320 complete series per route, each using b=1,8,64 and
+matching support_sha256. Retain zero/tied responses and every series. For y
+=`peak_integer_bits`, slope is exactly
+`(3*sum(b*y)-73*sum(y))/7154`. This is the least-squares slope with an intercept,
+not a log slope, adjacent-pair median or fit against max_q_bits. The route's
+median of its 320 slopes uses the even-size convention above and is supported
+iff strictly positive, otherwise not supported. Preserve individual slopes;
+no merging the routes into one verdict or dropping series. For wall-clock
+characterization replace y by each row's median_solve_ns with the same estimator;
+no timing support threshold. Actual max_q_bits remains a reported companion,
+not a substituted predictor. These fits belong to separate paper analysis,
+which reads files, never calls the solver, and preserves input-record identities.
+
+There is no verification-overhead, compact-versus-explicit, external-solver,
+n>16, practical frontier, universal-speedup or isolated causal look-ahead claim.
+Support describes this deterministic stratum only. Smaller oracle counts are
+not automatically shorter runtime or a causal attribution to one mechanism.
+
+### D21B-I14. Run information, transaction, resource and provenance boundaries
+
+run-info fields are format,campaign,protocol,environment,source,inputs as in
+D21-E10; format remains `exactfrac-experiment-info/1`. Environment/source rules
+are I10/I11. Inputs has exactly suite=`unit21-v2`, recipes=selected mode count,
+owned_recipes=1200, manifest_sha256=hash of actual aggregate bytes. That last
+hash is provenance, not a permanent aggregate acceptance condition.
+
+Protocol has exactly D21-E10 protocol keys plus `mode`,`pilot_cell_timing`.
+Main values are the D21-E10 values, mode=`campaign`, pilot_cell_timing=null.
+Pilot changes warmups=0, measured_repeats=0, warmup_round=null, measured_rounds=[],
+mode=`pilot`, route_order=`standard-first-iff-recipe-index-even`,
+timing_interval=`pilot-operational-solve-with-telemetry-return`, and
+pilot_cell_timing=`first-instance-construction-through-last-row-flush`.
+The pilot raw phase supplies its single pass; no fake measured repeats.
+All other common values, including timeout_ns=null, are retained.
+
+Create only fresh owned roots and files exclusively; write and flush checked
+binary bytes; never overwrite, chmod/rebind predecessor paths or remove partial
+attempts. Propagate I/O/native exceptions unchanged. A detected illegal normal
+write count/flush result, malformed normal dependency response, clock drift,
+source/input drift, inconsistent repeat/join/identity or geometry is RuntimeError.
+Usage is distinct from these failures and malformed external data is ValueError.
+No broad exception translation, swallowed interrupt, fake Empty, fabricated
+zero time or synthetic telemetry for a failed real call.
+
+Main owns exactly run-info.json,warmups.jsonl,runs.jsonl,summary.csv,branches.csv,
+comparison.csv,coverage.csv,findings.json,COMPLETE.json and its 1,920 certificates.
+Pilot owns exactly I12's files. Flush/close all earlier owned streams, re-read
+and validate exact file membership, rows, hashes, source/inputs, certificates
+and tables before writing COMPLETE.json last. Its exact keys are
+format,campaign,source_sha256,recipes,warmup_solves,measured_solves,pilot_solves,
+checked_certificates,files. Format=`exactfrac-irregular-complete/1`;
+pilot_solves=480 only for a complete pilot, zero for main; the other counts
+are actual mode-specific successful calls. files is the ASCII-sorted
+{path,bytes,sha256} ledger of every output except the marker itself.
+No self-hash, absolute path or private filename. A main complete directory has
+1,929 files; a pilot complete directory has 485. These are scoped inventories,
+not blanket pins on results/. Counts are checked against actual successful work.
+
+Successful return and the complete verified ledger are both required. A
+parseable marker left after flush/close failure is not successful completion.
+No power-loss durability/atomic-reader/hostile-concurrent-filesystem guarantee
+is made. A local user-owned writable filesystem is assumed. Never silently
+resume an incomplete marker or advance into main after a failed pilot.
+
+### D21B-I15. Phase C/D evidence and pre-freeze solve boundary
+
+Before tests/producers exist, Phase C registers independent input/geometry/optima,
+the 240/960 schedules, schemas/source lists, output examples, all decision
+boundary cases and individually guard-isolated fault declarations. Include
+synthetic no-event, 23-active-cell, 24-active-cell, zero/positive/negative median,
+even-median, time-versus-call-disagreement, Empty and tied-raw-pair cases.
+Synthetic clocks/work and fake environment strings are explicitly synthetic.
+Do not infer any real solver look-ahead coverage from recipe names or schedule.
+
+Phase D adds exactly the two consuming tests, with no dummy production file,
+payload or output directory. Targeted combined RED must have precisely two
+collection errors naming the two absent sibling modules and no new case
+execution. New case counts are observed upon GREEN, never manufactured from
+assertion/function counts. Both tests pass live candidate Ruff before applying.
+
+Before F7, new 21B tests exercise the complete main schedule only with scripted
+solver/telemetry responses. No real solve of any s-token recipe is allowed in
+new tests, benchmarks, helper probes, source-mutant controls or optional reviews.
+Independent definition-level optimum/geometry derivation is allowed: it is not
+a production performance preview. Bounded real composition uses only the two
+fixed preexisting micro inputs edge-q01-f01-01 and tri-q1-1-1-f1-1-1, both routes,
+one direct call per route per actual-composition scenario, each labeled/countable;
+these are not pilot/main recipes. Other schedule positions are scripted. The
+unchanged inherited regressions keep their historical bounded test behavior,
+never rerun the saved unit21-v1 timing campaign, and do not gain new 21B solves.
+
+After the production/tests pass under the accepted contracts, run the disjoint
+pilot exactly once per route/recipe as its own invocation, normal clocks.
+Preserve and independently audit all pilot records/certificates, optima,
+geometry, source/input bindings, schedule and operational diagnostics.
+Report per-solve and cell observations and STOP before main to obtain the
+already-required author review and F7 date. F7 is not dated by this authority,
+private receipt, elapsed time, a synthetic fixture or a helper's assumed consent.
+No numeric pilot-duration gate is added. Do not use pilot H5 outcomes to select,
+drop, reorder or reseed cells. A prospective revision needs consistent dated
+planning, authority, oracle and tests under the existing lifecycle.
+
+### D21B-I16. Main invocation, independent audit and closure
+
+Only after the pilot completes and the author explicitly reviews diagnostics,
+dates F7 and authorizes main execution may the controlled Phase E continuation
+invoke `--all` on main recipes. Private planning/BUILD/LEARNING files are not
+read or hashed by execution gates; the author statement is the sequencing record.
+The public CLI is not an access-control system enforcing human preregistration;
+controlled invocation must respect this boundary. No additional build phase,
+external reviewer gate or private-note assertion is introduced.
+
+The campaign is actual execution on the user's authenticated candidate sources,
+with normal clocks and retained raw observations, not imported container timing.
+Full GREEN additionally requires the separately implemented campaign/source
+audits. They independently parse records, reconstruct every table/finding,
+verify every stored certificate, compare every value with Phase C optima,
+check all geometry identities, inspect full source/wrapper logic and execute
+preregistered materialized mutations and integration fault controls. Producer
+output, derived tables and a completion marker do not certify themselves.
+Mutation detection must be attributable to its intended guard, not syntax/startup
+failure. No main telemetry/timing is previewed via mutation work before F7.
+
+Phase G records observed scope and exact tests without promoting finite checks
+to a theorem proof. H exports the exact staged Git tree, runs targeted/full/Ruff
+with authenticated imports, preserves pilot/main/historical campaign bytes,
+commits that tree, verifies postcommit, and pushes/closes separately. Routine
+regression, isolation and postcommit validation READ stored run evidence and
+never retime either campaign. No license, release, public export/privacy claim
+or Unit 22 work begins here. Private unit notes follow full closure only.

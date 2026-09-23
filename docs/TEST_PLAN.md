@@ -5029,3 +5029,314 @@ use that tree while leaving its historical measurements untouched. Commit that e
 index, verify postcommit tests/Ruff and committed scope, then push the exact commit
 and verify full remote closure. No interim experiment-source commit or independent
 review approval is added. Unit22 work and final private notes wait for unit closure.
+
+---
+
+## 49. Unit 21B prospective irregular-follow-up obligations — IR1–IR24
+
+These obligations consume DESIGN section 15 and the fixed canonical mathematical
+source; they do not amend the closed solver contracts. Exact assertions and
+new collected case counts belong to Phase D/E evidence, not this prospective
+plan. The inherited starting census is 4,699 cases, including the retained
+single corpus-parametrization warning. The author has authorized only I2's
+one hash-value change in the old CLI test; every other predecessor test byte
+is preserved. Private planning receipts are not runtime/build-gate inputs.
+
+### IR1 — exact authority exception and historical-prefix preservation
+
+Authenticate both original document prefixes and exact reviewed appendices.
+For pyproject.toml require the whole 879-byte preimage and unique 78-byte append,
+not a permissive TOML rewrite. Parse TOML and require the only semantic delta
+to be I2's known-first-party list. For tests/test_cli.py require the whole
+99,824-byte preimage and one unique key/value replacement, full postimage hash,
+unchanged size, every other byte unchanged, all other dictionary pins retained,
+and normalized AST equal except for that one constant. Negative controls must
+reject extra config settings, reordered values, missing/removed checks, a second
+pin change, altered assertion, wrong old/new hash and a formatter-wide rewrite.
+No automatic correction/skip/filter/force success. Live Ruff checks the exact
+candidate using the prospective configuration before application. Nonexecuted
+private source-layout import probes exercise both absent/present dotted modules;
+no prototype is installed in the repository or executed to satisfy RED.
+
+### IR2 — generator surface and strict finite identities
+
+Require exactly I3's three-callable __all__, annotations, parameter kinds and
+immutable tuple/bytes leaves. Test all registry IDs and type/grammar rejection
+including subclasses, bool/None/path objects, whitespace, case, Unicode digits,
+NUL, traversal, alternate padding, impossible cell, seed and domain aliases.
+Require exact ValueError, no normalization or data access before rejection.
+Fresh repeated output cannot share a mutable state that affects later calls.
+
+### IR3 — complete independently fixed inventory and domain separation
+
+Compare the full 1,200 IDs and owned paths with the preproducer Phase C inventory,
+not a second invocation of the new generator. Check all 48 cells, 960 s-tokens,
+240 p-tokens, strict ASCII order, exact widths, no mathematical deduplication,
+and p01 distinct from s01. Boundary controls catch dropped/extra/reordered/aliased
+IDs and payload-based deduplication. A planned 1,200 count does not establish
+1,200 distinct payloads or independently sampled graphs; measure that separately.
+
+### IR4 — digest byte contract and fixed topology
+
+Independently challenge the exact common tag, newline after the last message
+line, domain tags, seed tokens, unpadded numeric message fields, full unsigned
+big-endian interpretation and strict first-byte '< tau' threshold. Include
+first-byte equal/below/above threshold via isolated digest injection; do not
+search real campaign outcomes for a convenient case. Verify cycle spine,
+lexicographic pairs, no b dependence in support, nested tau support, and shared
+mode support exactly as I4. No Python hash, entropy, randomized retry or hidden
+salt. Establish matched support fingerprints across all b triples.
+
+### IR5 — irregular multiplicities, active capacities and encoding
+
+Independently check q=1+(Z mod 2^b), all three b values, q=2^b boundary,
+actual max_q_bits and canonical edge refs. Check both f formulas and degree
+sums without clamping; every input is active and no endpoint becomes isolated.
+Capacity/multiplicity domain/message changes must be separately caught. b is
+not mislabeled as exact bits. Require exact payload bytes and D20-C6 key/order/
+integer rules, and immutable producer state; no copy expansion or magnitude
+loops. Test digit limits 640 and 4300 without changing them and settings
+preservation across success, rejection and injected native exceptions.
+
+### IR6 — build product, aggregate projection and owning filesystem
+
+Require all 1,201 returned records, independent own-MANIFEST bytes, canonical
+schemas/lengths/hashes/order and every payload. A generator neither reads nor
+merges the live aggregate. For the materialized consumer require exactly the
+unit21-v2 projection and files, and preserve the Unit 20 projection. Positive
+foreign-suite and alternate aggregate whitespace/key-order cases must pass;
+wrong owned bytes, missing/extra/nested/renamed/executable/nonregular/symlinked
+owned files, malformed foreign entries, duplicate decoded keys, invalid suite
+syntax or path equations fail their own guard. No enduring aggregate/global
+file-count or whole-results hash pin; fixture-local hashes are not that policy.
+
+### IR7 — independent exact mathematics and exhaustive subset labeling
+
+Phase C registers exact input/geometry/optimum expectations for all 1,200 before
+production exists, with two separately implemented endpoint derivations and
+all-shore censuses. For b=1,n<=8 require the complete fixed 200-recipe vector
+subset, all nonempty shores and every boundary vector, with actual visited/
+admissible counts; no scalar or endpoint substitution. Compare exact quotients
+and independently re-evaluate retained attainment. Explicitly exercise s=1,
+even/odd s, zero boundary, infeasible shore, constant-ratio tie and endpoint
+parity boundaries using definition-level fixtures. None of these mathematical
+references previews main-recipe production telemetry or timings. Standalone
+oracle/audit work is distinguished from ordinary repeated pytest costs.
+
+### IR8 — exact geometry and non-tautological H2 checks
+
+Independently rederive Tplus,Tf,P,A,W, ordered descriptors, forced-overlap and
+free-terminal feasibility, r_j,s_j,N_F,A_j as I7. Check r1 includes duplicated
+or infeasible descriptors and reduced N counts its two forced classes only.
+Challenge wrong n-for-N, anchor counted twice, omitted queries/branches, missing
+seed/init/look-ahead queries, feasible-only enumeration and divisions of
+observed counters to fabricate expected geometry. Infeasible/Empty cases are
+explicit. Every executed successful pilot/main call must pass all exact
+identities; field/value mutations must fail without rerunning the mathematical
+solver to manufacture the expected answer. Big-O carriers remain descriptive.
+
+### IR9 — runner surface, CLI and help import purity
+
+Require exactly main(argv: list[str] | None=None)->int and the fixed I8 grammar
+and byte strings. Reject malformed Python types first; usage alone returns 2
+with no path/clock/dependency activity. Test help, None/sys.argv, both normal
+modes and optional argument permutations, bad flags/operands and no subset,
+repeat, seed, resume, overwrite or timeout mode. Positive short writes complete,
+invalid normal write/flush returns raise RuntimeError, native I/O exceptions
+propagate. Streams remain open and unmodified; import is side-effect free.
+
+### IR10 — public-only composition and source provenance
+
+The runner uses the new generator and only closed public APIs. No private
+experiments/CLI/verifier helper, handoff auditor, test or catalogue import.
+Exactly one solve_with_telemetry call per schedule position; no bare solve
+plus telemetry rerun. Verify exact normal result/record types, actual RunRecord,
+complete native fields, actual certificate bytes and None checker success.
+Verify the fixed 25-path fingerprint, exact tag/ASCII order, local origins,
+no conflicting installed/already-loaded modules and sys.path restoration.
+Fresh-process imports must not execute either campaign or discover environment.
+
+### IR11 — path validation, fresh roots and failed-attempt preservation
+
+Test relative/default/output-path semantics, lexical '..'/NUL/forbidden overlap,
+symlinked leaf/parents, existing empty/nonempty/file roots, source/input/.git/tests
+ownership, ancestor conflicts and allowed disjoint external roots. No output
+creation before complete input/source validation. Alternate retry roots contain
+a new complete invocation, not reused prefix measurements. Inject failures at
+creation/open/write/flush/close/marker stages; preserve partial bytes and native
+exceptions. Do not rename/delete/clean an old run or chmod existing parents.
+Document local filesystem/race and durability limitations without weakening
+ordinary identity/inventory validation.
+
+### IR12 — two exact schedules without premature real-main preview
+
+Compare the 480-call pilot and 7,680-call main schedules with Phase C tables,
+including per-mode indices, rounds and alternating route order. Full main
+schedule tests are scripted before F7; no s-token real solves, profiling or
+look-ahead probes in tests, mutants, optional audits or helper preparations.
+Bounded real composition is only I15's two preexisting micro inputs, both routes,
+with actual call counts separately reported. No manufactured pytest count.
+The pilot's single pass is not three repeats and is never pooled as main data.
+
+### IR13 — precise solve timing and pilot operational intervals
+
+Synthetic clock traps test exact before/after boundaries, non-int/bool/negative
+clock returns and exceptions. Warmups make zero clock calls; measured/pilot
+calls retain zero legitimately. Exclude geometry preparation/checks, input,
+metadata, certificates, verifier, hashing/output and aggregation from the solve
+interval. Test the two separately labeled pilot cell clocks and include exactly
+I10's operations between them. Distinguish cell_elapsed_ns from solve time and
+from a sum of solve times. Finite float seconds are metadata only. One discovery
+per invocation, actual limited environment fields, no privacy-bearing extras.
+
+### IR14 — complete telemetry algebra, determinism and certificates
+
+Preserve native Standard/Accelerated semantics, four ordered nonempty branches,
+Empty with no branches, and all 25 work fields. First 20 fields sum, last five
+maximize; actual absence and observed zero are not conflated. Verify every
+pilot/warmup/measured certificate against its retained input buffer. Require
+same-route raw results/stats/certificate repeat identity in main, numerical
+cross-route agreement with positive denominators, and tied-witness freedom.
+Pilot single-pass rows cannot claim measured same-route repeat determinism.
+C0 alone is not optimality; the independent fixture comparison remains separate.
+
+### IR15 — exact wire schemas and hostile record controls
+
+Independently parse every field named in I11-I14: no missing/extra/duplicate
+decoded key, repr string, quoted integer, noncanonical numeric token, false
+boolean-as-count, NaN/infinity, wrong phase/repeat/seed/suite/campaign or invalid
+source/input/certificate reference. Preserve enormous native integer fields
+with bounded conversion and unchanged settings. Preregister synthetic giant
+integer, string-escaping, tied raw pair and mixed native route examples. A
+parser/serializer pair that agrees on the same wrong schema is not evidence.
+
+### IR16 — tables from raw records, not a second producer trace
+
+Reconstruct every summary/branch/comparison row, order/header, exact median and
+per-call diagnostics from raw main measured records. Never sum counters across
+repetitions or only report the attaining branch. Reconstruct pilot-solves from
+pilot records and pilot-cells from actual separately saved cell timings. Counts
+are observed and bound, not filled from schedule constants without execution.
+Coherently mutated tables AND updated completion hashes must still be rejected
+by an independent raw-record derivation. Source/output provenance cannot hash
+the results into their own source identity.
+
+### IR17 — H5-prime boundaries, coverage and unfavorable reporting
+
+Synthetic tests require empty S=>untestable; nonempty S with 23 active cells
+cannot be supported; 24 active cells requires strictly negative pooled median;
+zero/positive medians are not supported; test even medians exactly. Active-cell
+counts do not mean 50% within-cell seed coverage. Require all 48 coverage rows,
+all zero cells, recipe-level rather than repetition-level denominators, all
+win/tie/loss counts and fewer-calls-not-faster/more-calls lists. Timing cannot
+change the primary outcome. Slowest/largest rankings include losing and tied
+recipes, are deterministic and do not influence solver ties or selection.
+
+### IR18 — H3-prime analysis contract and no fitting in unit tables
+
+Verify complete fixed (n,tau,mode,seed) series, matching support, recorded b and
+actual max_q_bits. Preserve all 320 triples per route and all zero/tied carriers.
+Register arithmetic examples validating slope denominator 7154, sign, route
+separation and exact even median. No producer fit, data-dependent predictor,
+log conversion, series filtering or significance test is allowed. Main raw
+median_solve_ns is the specified timing response for separate paper analysis.
+No claim that record generation itself completed that paper analysis.
+
+### IR19 — COMPLETE-last and honest failure classification
+
+Require exact mode-specific artifact inventories, all successful-call counts,
+source hashes and per-file hashes bound by the completion marker, with no
+self-hash. Before marker creation every other output closes and validates;
+source/input drift invalidates an attempt. A parseable marker after marker
+flush/close failure remains failed. Test dependency-exception object identity
+and no swallowed MemoryError/RecursionError/OSError/KeyboardInterrupt; invalid
+normal promises are RuntimeError, external malformed data ValueError and CLI
+usage is distinct. No artificial solve timeout or numeric pilot duration gate.
+
+### IR20 — independent source/mutation audits with isolated detection
+
+Phase C declares each fault family and intended detecting guard; implementation
+review reads every production/wrapper branch and executes materialized source
+mutants and filesystem/integration faults, recording genuine positive controls.
+Cover digest/spine/capacity mistakes, scope/seed/schedule mixing, geometry query
+multipliers, bogus source paths, timing leakage, duplicate solve, dropped stats,
+certificate input swap, altered medians/H5 boundary, premature completion,
+resume/overwrite, ignored exceptions and main-before-freeze preview. Detection
+by syntax error, missing dependency or another earlier guard is not the required
+semantic rejection. Respect I15's pre-freeze real-solve boundary in every control.
+
+### IR21 — pilot completion and author freeze sequencing
+
+After implementation tests pass, run only the 240 disjoint pilot inputs with
+480 actual route calls. Independently audit its bytes, schedule, 480 stored
+certificates, every optimum and geometry identity; report per-solve/cell
+operational data. Preserve the attempt on error. Pilot review is the author's
+existing sequencing decision, not a numeric resource/performance gate. The
+helper stops after pilot reporting until the author reviews diagnostics, dates
+F7 and explicitly authorizes main. Neither private receipt nor a blank/assumed
+F7 starts main. No preview or pilot H5 tuning of cells, seeds or thresholds.
+
+### IR22 — observed main campaign and independent raw-result audit
+
+Only after the author freeze, execute all 960 main recipes and both routes
+under I10 without imported container measurements. Bind real call/check counts,
+7,680 successful calls only when actually completed, every stored certificate,
+source/inputs, all mathematical optima, geometry, raw rows and derived tables/
+findings. Independently audit all these without a main re-solve. Unsupported,
+null, slower and untestable findings are valid scientific results, never
+engineering failures by themselves. A real correctness/identity failure is not
+paper evidence until investigated under the preserved failure record.
+
+### IR23 — historical conservation and full-suite phase discipline
+
+Full inherited tests remain, except I2's precise config pin; neither old tests
+nor the known warning are otherwise changed. Old unit21-v1 campaign bytes
+never regenerate. New full-schedule tests use scripts, not repeated 7,680-call
+campaigns; small declared real composition remains labeled. After pilot/main,
+regression/audits may read and validate their saved outputs but never retime
+or replace them. No assumptions that new case counts equal assertion counts.
+All phases authenticate exact preceding evidence, authorized scope, unchanged
+files and current state; no new gate or external-review mandate is introduced.
+
+### IR24 — conformance, release boundary and private notes
+
+Phase G preserves all previous CONFORMANCE rows/statuses and records the new
+finite input/reference/test/audit/campaign evidence with exact scope. Separate
+endpoint optima, vector enumeration, scripted traces, bounded real tests, pilot
+observations and main measurements. No theorem promotion from finite checks.
+Source strong-polynomial claims are distinct from bit costs and runtime. No
+n>16, verification-overhead, explicit-copy, external-solver or universal/causal
+performance claim. Unit 22 release is later; private BUILD/LEARNING notes are
+not inspected, located, hashed, created or asserted by any gate.
+
+## 50. Unit 21B completion gate — pilot then author-frozen follow-up
+
+Use the existing A–H lifecycle. No REVIEW_REQUEST, extra external-model approval,
+additional planning gate, mandatory second review or private-note dependency.
+
+Phase B's four-file exception and all scope/negative controls must be recorded;
+apply unstaged, test the full inherited suite and repository Ruff, conserve all
+other files, then stage/commit/postcommit/push/remote-close in separate transitions.
+No producer, reference campaign or pilot occurs during authority adoption.
+
+Phase C independently registers I6/I7 inventories, mathematical references,
+geometry, schedules, schemas and fault expectations and closes remotely before
+Phase D's two tests. The 200-recipe exhaustive-vector subset is neither optional
+nor replaced with scalar/endpoint checks. Counts/timings of reference execution
+are actual evidence, not guesses from a combinatorial range.
+
+Phase D requires exact missing-module RED and live candidate Ruff. Phase E
+preserves these tests, applies only the complete authorized implementation/input/
+document scope and establishes source/test GREEN and independent controls under
+the pre-freeze real-solve restrictions. It then runs/audits/reports the disjoint
+pilot and stops for the author's diagnostic review and dated F7. This planned
+pause is inside Phase E, not an added lifecycle gate. Main runs only on explicit
+post-pilot author authorization; complete audited GREEN includes both actual
+retained runs and all independent verification. No helper dates F7 itself.
+
+After Phase G, H stages exact code/tests/docs/input extension/observed outputs,
+exports the index tree, runs targeted/full/Ruff with authenticated imports and
+conserves both new runs and all old results. Commit that same tree, perform
+fresh postcommit tests/Ruff, then push/verify four-reference agreement and clean
+status separately. No historical timing campaign rerun in these transitions.
+Unit notes follow full remote closure; Unit 22 remains unstarted until then.
