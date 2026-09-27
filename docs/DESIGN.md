@@ -4966,3 +4966,211 @@ commits that tree, verifies postcommit, and pushes/closes separately. Routine
 regression, isolation and postcommit validation READ stored run evidence and
 never retime either campaign. No license, release, public export/privacy claim
 or Unit 22 work begins here. Private unit notes follow full closure only.
+
+## 16. Unit 21B prospective balanced main revision R2 — September 26, 2026
+
+This append implements the author's September 26, 2026 ruling under D21B-I15.
+The revision date is not F7. The completed original pilot is historical evidence;
+no pilot or historical timing rerun, main execution, or F7 date is authorized by
+this append. Earlier bytes of this document remain intact. In the explicit main-
+selection and derived-count cases below, this section supersedes the original
+48-cell/960-main-recipe settings in section 15. Unaffected mathematics, public
+interfaces, schemas, fault families, timing boundaries and lifecycle remain binding.
+
+### D21B-R2-I1. Rationale and original evidence
+
+The author selects the revised main domain on operational-cost grounds: n=16
+accounted for approximately 93.26% of recorded original pilot cell time. The
+16-fold call-count extrapolation gives conditional workload proxies of about
+20.4 days for the original main domain and 32.9 hours for the revised one. These
+are planning estimates, not timeouts, bounds, guarantees, or complete workflow
+forecasts. Do not claim a numerical F6 failure, general smooth scaling, absence
+of future pathological calls, or a performance frontier. Observed pilot outcome
+diagnostics have been disclosed; they must not be used to tune cells, seeds,
+thresholds, repetition counts or reported findings.
+
+The completed pilot archive is SHA-256
+`756c75bfef86ad6858426e431547c171039ff581b640a52c959872969ee75018`.
+Its 240 recipes, 480 calls, 48 cells and 485 output files retain the original
+pilot interpretation, source identity and observation boundaries. The maximum
+observed integer peak was 343 bits; this is neither an arithmetic-growth bound
+nor a memory measurement. The archive's completed independent review is not an
+unperformed prerequisite. Live transitions still authenticate actual predecessor
+files normally; no repeat upload or extra review gate is introduced.
+
+### D21B-R2-I2. Full owned corpus; narrower main selection
+
+Preserve D21B-I3--I6's complete 1,200-recipe registry, exact IDs, payloads,
+mathematical/geometry references and manifest projection unchanged. All 240
+p-token and all 960 s-token recipes remain owned inputs. The original 200-recipe
+exhaustive-reference subset is not reduced or re-enumerated. The original
+`corpus_irregular` public behavior is unchanged, including valid n=16 s-tokens.
+
+The revised main execution selection consists exactly of s01..s20 for:
+
+| factor | revised main values |
+|---|---|
+| n | 6, 8, 12 |
+| tau | 64, 128 |
+| b | 1, 8, 64 |
+| capacity_mode | alternating, random |
+
+There are 36 cells and 720 main recipes. The 240 n=16 s-token inputs are retained
+but not scheduled or performance-previewed. The completed pilot retains all 48
+original cells, including 60 n=16 p-token recipes and 120 n=16 route calls.
+Omission from the main selection is not omission from input validation: validate
+all owned 1,200 payloads and the permitted aggregate metadata as before.
+
+### D21B-R2-I3. Revised main schedule and unchanged invocation boundary
+
+The public CLI remains D21B-I8/I9: no subset, seed, repeat, timeout or resume flag.
+`--all` denotes the complete revised main selection after this revision is
+adopted and validated. Campaign/root names remain `unit21-v2` and
+`results/unit21-v2/`; no actual main result existed before this revision.
+`--pilot` retains the original full-domain scripted contract; it is not an
+instruction to rerun the completed real pilot. No automatic pilot-to-main chain.
+
+Filter the owned registry to the 720 selected s-token recipes, ASCII-sort, and
+index i=0..719. Run rounds r=-1,0,1,2 per recipe, with Standard first iff (i+r) is
+even. Warmup round -1 is serialized as repeat=0 with null elapsed; measured
+rounds 0,1,2 retain their repeat indices. This gives 1,440 untimed warmup calls,
+4,320 measured calls and 5,760 total telemetry/checker invocations, when actually
+successfully executed. Each route has 720 warmups and 2,160 measured calls.
+
+The selected sequence is also the first 720 recipes of the original main order;
+no retained recipe changes its old main index or route order. The separately
+registered revised schedule must verify this rather than silently assume it.
+D21B-I10's serial execution, normal clocks, no per-solve/cell/invocation deadline,
+no retry loop, exact timing exclusions and propagated exceptions are unchanged.
+Unbounded execution applies to this revised finite domain; it is not a promise
+that future calls or the full invocation will succeed.
+
+### D21B-R2-I4. Revised analysis population and exact decision rules
+
+H5-prime uses only revised-main recipes with positive Accelerated
+lookahead_queries. Let S be that eligible set and K the count of revised-main
+cells containing at least one eligible recipe. Empty S is `untestable`.
+Otherwise the outcome is `supported` exactly when K>=18 and the exact median of
+(Accelerated oracle_calls - Standard oracle_calls) over S is strictly negative;
+all other nonempty cases are `not supported`. This prospectively replaces 24/48
+by 18/36, preserving the author's at-least-half criterion but not pretending the
+two experimental populations are identical. The median of an even set is the
+exact mean of its two middle entries. One eligible seed suffices for an active
+cell; never require ten eligible seeds within each cell. Time never changes the
+verdict. Retain every coverage row, zero-event cell and unfavorable observation.
+
+H3-prime retains fixed (n,tau,capacity_mode,s-seed) matched support across
+b=(1,8,64), now 240 complete series per route. The slope remains exactly
+`(3*sum(b*y)-73*sum(y))/7154`; the two routes are analyzed separately. Preserve
+all zero, tied and negative slopes, exact even medians, predictor b and the
+companion actual max_q_bits. Peak-integer slope support is strictly positive;
+wall-clock slopes remain characterization only. Slopes/fits remain separately
+preregistered paper analysis, not new runner output fields or solver calls.
+
+H2-prime identities in I7 apply unchanged to 100% of executed revised-main
+warmup and measured calls, with complete branch/native accounting. Finite success
+is not a proof of all complexity bounds. Main conclusions are limited to the
+revised deterministic stratum, not all graphs with n<=12. Pilot conclusions
+retain their original domain. I13's exclusions on universal speedup, practical
+frontier, isolated causal look-ahead and other untested claims remain unchanged.
+
+### D21B-R2-I5. Count substitutions; wire shapes and output ownership preserved
+
+No RunRecord, native-record, RunMetadata, source roster, CSV column order, JSON
+field set, campaign name or format tag changes merely for this selection.
+The run's source fingerprint plus the adopted authority identify the revision;
+do not add an undocumented protocol field. `inputs.recipes` becomes 720 in main;
+`inputs.owned_recipes` stays 1200. Pilot inputs/counts remain original.
+
+For a successful revised main: warmups.jsonl has 1,440 rows; runs.jsonl has
+4,320; summary.csv has 1,440; comparison.csv has 720; coverage.csv has 36 with
+20 seeds in every row. `findings.h5.total_cells` is 36. Win/tie/loss objects sum
+to 720 comparisons; `h2_checked_solves` is the actual 5,760 checked calls.
+Main branches.csv is reconstructed from the actual native branches for each
+recipe/route; never substitute a planned branch count for an observed census.
+All tables retain their I12 derivation and deterministic presentation order.
+
+Exactly 1,440 distinct recipe/route certificate files are stored, while the
+checker must succeed on all 5,760 calls. Preserve their distinction. The nine
+noncertificate main files are unchanged, yielding 1,449 output files including
+COMPLETE.json and 1,448 entries in its nonself ledger. COMPLETE reports recipes
+720, warmup_solves 1440, measured_solves 4320, pilot_solves 0 and
+checked_certificates 5760 only after actual success and complete validation.
+The original pilot remains exactly 485 files; neither files nor ledger entries
+may be inserted into its closed output root. Fresh-root-only, exclusive writes,
+complete-last, exact revalidation and exception preservation remain unchanged.
+
+### D21B-R2-I6. Append-only references and controlled consumer revision
+
+Append a separately identified R2 reference bank to ORACLE_CATALOG. Preserve its
+entire original prefix, original schedules, optima, payloads, schema and fault
+records. Derive the revised schedule, selected/excluded IDs, counts, complete
+series and H5 boundary fixtures independently of future producer output.
+Use explicit synthetic cases for 17/18 cells, zero/positive/negative medians,
+empty sets, exact even medians, time/call disagreement and one-seed-per-cell
+activation. Synthetic records never stand in for actual campaign observations.
+
+Retain all U21BF001..U21BF143 family IDs. Version affected quantitative
+expectations rather than deleting historical declarations; specifically rebind
+118,119,121 and 128 from their 23/24/320 wording to 17/18/240 as appropriate.
+Other schedule, table, source and sequencing controls still need revised fixture
+bindings and fresh independent coverage; unchanged declaration wording alone is
+not proof of new execution. Every source-mutant credit must reach its intended
+guard with passing pristine controls, not a syntax/import/count mismatch.
+U21BF093 retains the original exception-object and cleanup-isolation obligation.
+
+The smallest complete authorized amendments may change the irregular runner,
+its consuming test, irregular experiment README and private independent audits.
+Retain the already-authorized `_Script.instances` observation and all unaffected
+assertions. Leave the pure generator, corpus consumer, closed solvers/verifier,
+configuration and older closed tests unchanged. No blanket literal/count replace,
+assertion deletion, fixture weakening or type relaxation is authorized.
+
+### D21B-R2-I7. Historical pilot source lineage
+
+The pilot's executed source fingerprint stays
+`01428190bdac17bbde27aba5682503ff93a57bb0925e09fd4ec392a0a517469f`.
+Preserve all 25 source images matching that roster in an inert historical source
+snapshot at `experiments/provenance/unit21-v2-pilot-r1-source.zip`, outside the
+closed 485-file pilot output root. This is archival source material, not an
+executable backend, extra source-roster member, public release or access grant.
+The archive contains the original relative source paths beneath `sources/` and
+an exact source-manifest record. No private handoff paths, host identifiers or
+BUILD/LEARNING notes enter it. Its pinned bytes are registered independently.
+
+The amended main source roster still consists of the same 25 live code paths;
+it excludes the snapshot, tests, docs, configuration and outputs. Its fingerprint
+is recomputed from its own actual source bytes. Audit original pilot bindings
+against the historical snapshot and main bindings against the amended live or
+staged source. A fingerprint difference caused by the scoped runner amendment
+is expected, not permission to relabel the pilot. Do not replace old run-info,
+certificates, completion marker, source hashes or original validation evidence.
+Preserve the historical snapshot with the complete Phase H candidate and verify
+its contents on later audits without executing its old runner or retiming data.
+
+### D21B-R2-I8. Validation and existing author-freeze pause
+
+Authority and independent reference expectations precede consuming amendments
+and producer changes. Preparation deliveries are not new gates and never alter
+live repository state. Apply only an authenticated complete package for its
+stated phase/transition; never replay completed helpers or restart closed units.
+Use the existing live-state, candidate Ruff, targeted/full, repository Ruff,
+independent-audit and conservation procedures. Observe every new collected-case
+count; inherited 2,328/7,027 counts are previous evidence, not guessed new counts.
+Private planning and BUILD/LEARNING notes are not execution-gate dependencies.
+
+Retain the documented verification-subprocess-only real TMPDIR spelling needed
+by the unchanged Mac positive-path harness; do not relax production symlink
+rejection or change a global interpreter/shell setting. Staged-tree/postcommit
+verification must carry and record the same scoped environment requirement.
+
+Before F7, new revised-main schedules in tests/audits use scripted telemetry,
+not real s-token optimization. Only the already-adopted bounded real micro
+composition and unchanged inherited regression behavior remain permitted.
+Independently audit all 143 families on the appropriate revision, preserving
+old results and actual source bindings. No new pilot, historical timing run,
+main preview, CONFORMANCE promotion or Unit 22 work follows from preparation.
+After consistent adoption and successful revision validation, STOP for the
+author's explicit F7 date and main authorization. Revision date is not F7.
+Phase G and H remain the existing later lifecycle, preserving all original pilot,
+revised main and unit21-v1 artifacts; routine validation never retimes them.

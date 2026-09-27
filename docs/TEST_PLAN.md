@@ -5340,3 +5340,153 @@ conserves both new runs and all old results. Commit that same tree, perform
 fresh postcommit tests/Ruff, then push/verify four-reference agreement and clean
 status separately. No historical timing campaign rerun in these transitions.
 Unit notes follow full remote closure; Unit 22 remains unstarted until then.
+
+## 51. Unit 21B main revision R2 — impact-scoped obligations, September 26, 2026
+
+This section supplements section 49's IR1--IR24 obligations and section 50's
+existing completion sequence for the author-selected main revision. It creates
+no new build phase, external review gate or private-note dependency. Original
+text and evidence remain intact. D21B-R2-I1--I8 control the expressly revised
+selection/count/provenance cases; all unaffected obligations continue to apply.
+
+### IRR2-1 — preserved corpus and exact revised selection
+
+Require all original 1,200 registry IDs, payload bytes, metadata, old reference
+rows and the 200-recipe exhaustive subset to remain unchanged. Main selection
+must be exactly 720 original s-token IDs at n=6,8,12, with every combination of
+both taus, all three b values, both modes and twenty seeds. All 240 n=16 s-token
+IDs remain valid owned inputs but are excluded from main execution. No seed,
+cell, bit setting or repetition may be selected from pilot route outcomes.
+Both real and scripted input-validation controls still cover all owned inputs,
+including an invalid otherwise-unselected n=16 leaf. It cannot be ignored merely
+because its solve is omitted from the main schedule.
+
+### IRR2-2 — all 5,760 scheduled positions and exact raw identities
+
+Compare the complete actual scripted invocation against the independently fixed
+R2 TSV: 720 indexed recipes, rounds -1,0,1,2, alternating route order, repeat zero
+for warmup and measured repeats 0,1,2. Require 1,440 warmup and 4,320 measured
+calls, exact once-per-position execution and no n=16 s-token call. Preserve
+both routes, same-route repeat identity and cross-route quotient equality with
+valid tied raw witnesses. The amended schedule must also match the selected
+prefix of the old independently registered schedule. Reject a missing/extra
+position or altered route/round independently of output checks.
+
+Keep all 480 scripted pilot positions across its 48 original cells unchanged.
+No production pilot rerun is a test. Preserve the pre-F7 prohibition on real
+s-token solves in tests, mutants, reference checks, helper probes or reviews.
+
+### IRR2-3 — complete revised raw-to-table and completion reconstruction
+
+Use revised complete synthetic golden output examples and separate raw-row
+reconstruction. Require 1,440 summary rows, 720 comparison rows, 36 coverage
+rows, twenty seeds per coverage denominator and all unfavourable-result lists.
+Reconstruct branch rows from actual native branch records, not a substituted
+constant. Preserve the exact nested schemas, keys, integer rules, metadata,
+source roster, CSV headers and native representation differences.
+
+Check all 5,760 certificate-verification calls independently of the 1,440
+stored certificate-file inventory. Require exactly the original nine other
+main artifacts (1,449 files total) and the 1,448 nonself completion-ledger
+entries. Test coherent omission or table alteration with updated hashes so the
+intended semantic/inventory guard, rather than an incidental hash mismatch,
+rejects it. Keep completion-last, output transaction, fresh-root-only, source/
+input conservation and same-exception controls unchanged. No existing output
+is overwritten, merged, silently resumed or relabeled.
+
+### IRR2-4 — revised H5-prime coverage and median boundaries
+
+Preserve original R1 23/24 fixtures. New separately identified R2 cases cover:
+empty subset; 17 active cells with a negative median; 18 with negative, zero or
+positive medians; exact even median -1/2; 18 active cells with oracle-call gain
+and time loss; one active cell; all 36 active with positive median; and a
+19-cell odd-median case. Each case contains all 720 synthetic comparison rows.
+One eligible seed per active cell must suffice. Require supported exactly when
+S is nonempty, K>=18 and the exact pooled paired median is negative. Keep
+untestable for empty S, and not supported for all other nonempty cases.
+
+Test recipe-level counts, all zero-event cells and outcome-independent reporting.
+A stale 24-cell threshold on the new domain must fail the 18-active positive
+control; a relaxed 17-cell threshold must fail its negative control. Elapsed
+time cannot supply or override support. Do not evaluate real pilot subsets to
+select new cutoffs or compute a main verdict from pilot data.
+
+### IRR2-5 — H3-prime complete series and unchanged H2-prime mathematics
+
+Independently enumerate the 240 complete (n,tau,mode,s-seed) bit triples for each
+route, with exact original support digests and all b=1,8,64 records. Verify the
+same estimator with denominator 7154 using separately computed exact rational
+covariance cases. Preserve zero, tied and negative slopes, route separation,
+exact even median, actual max_q_bits as companion, and the no-fitting-in-unit-
+outputs boundary. The old 320-series fixtures stay as prior-version evidence.
+No median is calculated after dropping an incomplete or unfavorable series.
+
+H2-prime descriptor, feasibility, reduced-network, query-multiplier and sum/max
+identities remain the original ones. Preserve all 1,200 independent geometry/
+optimum references and existing compact-vector reference coverage. Verify the
+identities for every revised executed call, including warmups. No fresh optimum
+enumeration or real main performance preview is needed to revise a schedule.
+
+### IRR2-6 — all 143 families and precise version attribution
+
+Retain every U21BF001..U21BF143 family. The R2 fault record array has the same
+IDs and field schema. Only the explicit 17/18 boundary wording of 118/119/121
+and the complete-240-series guard wording of 128 supersede their R1 numeric
+expectations. A separate map binds all original/revised record digests and exact
+field differences. It must not label any R2 family executed solely because its
+R1 wording or prior result was preserved. Schedule/table/native and source/
+sequencing families receive revised controlled fixtures even where their
+textual declaration is unchanged.
+
+Fresh credit requires the applicable materialized source fault, integration
+fault or declared source/claim/phase review. Retain the distinctions between
+those evidence types; never call all 143 items executable mutant kills. Each
+executed fault must have complete passing pristine controls and reach its
+intended semantic guard. U21BF093 still requires intended timing-guard firing,
+the same exception object propagated, and pristine controls before/after;
+secondary cleanup failure is not a substitute. Preserve the original evidence.
+
+### IRR2-7 — original pilot versus amended main source identities
+
+Read, never rerun, all 485 original pilot output files. Bind them to their
+original completed pilot, original source fingerprint and historical 25-source
+snapshot. Verify snapshot member identity/order and the original fingerprint
+prefix/NUL/LF encoding against the preserved pilot run-info, not against the
+new main fingerprint. No snapshot/helper/planning file enters the fixed 25-path
+live source roster. Retain n=16 pilot facts, including losing/slower results,
+separately from main; never replace main repeats with pilot rows.
+
+The amended main has the same source-roster paths but its own computed code
+fingerprint. A changed runner digest is expected; rewriting the pilot digest is
+not. Future staged-tree/postcommit audits conserve the source snapshot and both
+run lineages. Source snapshots are inert archive files and are not imported.
+
+### IRR2-8 — exact scope, observed GREEN and F7 sequencing
+
+Authenticate the completed pilot/predecessor state before any repository
+transition. Preserve its actual audit/checkpoint, source/test GREEN, original
+failure/diagnostic records and all historical results. No automatic rollback,
+completed-helper replay, rerun of closed timing campaigns, source optimization,
+new CLI override, global setting change or configuration change is permitted.
+
+Perform the existing repository-context candidate Ruff preflight before applying
+changed Python targets; preserve source/test byte identities and scoped diffs.
+Run the applicable targeted/full tests and repository Ruff and independent
+controls, recording actual collected/passed counts. Prior 2,328 and 7,027 counts
+remain historical, not unobserved future expectations. Carry the already
+recorded resolved TMPDIR spelling only into verification subprocesses; leave
+path-rejection tests, symlink guards and global settings intact.
+
+Authority/reference expectations must be fixed before the amended consumers and
+runner. Do not apply a partial source/consumer repair or manufacture a fresh
+missing-module RED by deleting installed modules. Use the existing correction
+and intended-failure discipline for the authorized semantic revision. Keep
+unchanged corpus/generator code, old closed files and all current/pilot input
+bytes fixed; do not weaken tests to make a smaller schedule pass.
+
+Successful revision GREEN does not date F7 or run main. STOP at the existing
+Phase E author-freeze boundary. Only a later explicit author F7 date and main
+execution authorization permits the revised --all invocation. Section 50's
+later conformance, exact staging, isolation, commit and remote closure continue
+under the revised scope, with all pilot/main/historical data conserved and no
+retiming. No Unit 22 work or private-note check is introduced here.
