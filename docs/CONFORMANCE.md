@@ -2343,3 +2343,232 @@ Event counters are not every arithmetic operation; integer peaks are not memory
 measurements. No external baseline, explicit-copy speedup, verification-overhead
 claim or global theorem promotion is introduced. Historical scoped run artifacts
 are preserved without freezing the entire `results/` or `experiments/` aggregate.
+
+## Unit 21B — irregular follow-up and balanced Main R2: finite engineering conformance
+
+This append records completed source/test validation and independently audited
+pilot/main execution under DESIGN §15 (D21B-I1–I16), its adopted §16 revision
+(D21B-R2-I1–I8), and TEST_PLAN §§49–51 (IR1–IR24 and IRR2-1–IRR2-8).
+It preserves every earlier byte, theorem row and status. This is an engineering
+conformance record, not a new mathematical source label, theorem promotion,
+authority amendment or assertion of Unit 21B remote closure.
+
+### Implemented scope and prospective design history
+
+`exactfrac/corpus_irregular.py` provides the pure finite `recipe_ids`,
+`generate_instance` and `build_corpus` interface. The complete owning suite
+`instances/unit21-v2/` retains all 1,200 registered inputs: 240 p-token and
+960 s-token recipes, including all n=16 inputs. The aggregate MANIFEST extension
+preserves the original 655 entries. Earlier independent mathematical references,
+including the original 200-recipe exhaustive-vector subset, are preserved;
+retained-witness checks are not a new exhaustive enumeration.
+
+`exactfrac/experiments_irregular.py` supplies the separate guarded experiment
+runner, with `experiments/reproduce_irregular.py` and
+`experiments/README_irregular.md`. The closed Standard and Accelerated solvers,
+telemetry, certificate construction and independent checker are consumed, not
+replaced. No new solver, backend, arithmetic rule or CLI subset override is added.
+
+The 21B stratum was designed after observing that `unit21-v1` produced Accelerated
+look-ahead events on six seeded recipes and none on the structural or bit-sweep
+strata. That original study is reported first and its 1,317 result files remain
+unchanged. After the complete disjoint pilot, the September 26, 2026 revision
+narrowed main execution on operational-cost grounds, not pilot route outcomes.
+The author separately dated F7 September 27, 2026 and authorized main execution.
+The revision date and the F7 authorization are distinct records.
+
+### Frozen consumers and observed validation
+
+The final Mac implementation R3 validation observed **2,333/2,333 targeted** and
+**7,032/7,032 full** cases, with no collection errors, skips, deselections or
+xfails. Both changed-Python candidate Ruff preflights and repository Ruff passed
+under Python 3.14.6, pytest 9.1.1 and Ruff 0.16.5. The single inherited corpus
+parametrization warning was retained, not suppressed or repaired. These are
+pre-CONFORMANCE validation results, not claimed post-append test results.
+
+| Frozen consumer | SHA-256 |
+|---|---|
+| `tests/test_corpus_irregular.py` | `3c083135c8321c676437ab5103ad72bd0e46bb0b2ae7eda2ab1975ae40f0a1c4` |
+| `tests/test_experiments_irregular.py` | `1112ba023339b857a7ee912843d1c2fc52ed4d973f525c90001d1db0a0c1fe57` |
+
+The historical two-module collection RED is preserved; it is not a current
+failure. Authorized consumer revisions retain their separate identities,
+including the `_Script.instances` observation and the later encoding-only
+correction. No historical result is relabeled as validation of later bytes.
+
+In the following crosswalk, **C** denotes the corpus consumer above and **R**
+the runner consumer. Named functions are evidence locations, not collected-case
+counts. Coverage is finite and remains subject to the stated audit distinctions.
+
+| Obligations | Exercised scope and actual evidence locations |
+|---|---|
+| IR2–IR6; IRR2-1 | Registry, exact payloads, digest boundaries and complete owned inventory: C `test_each_exact_payload_recipe_and_registered_input_identity`, `test_isolated_digest_overrides_consume_registered_boundary_fixtures`; R `test_r2_selection_preserves_owned_inputs_and_original_schedules`, `test_r2_excluded_n16_input_still_validated_before_main`. |
+| IR7–IR8; IRR2-5 | Independent retained mathematical references and non-tautological geometry: C `test_retained_endpoint_attainments_all_recipes_without_optimum_resolve`, `test_fixed_vector_subset_retained_censuses_and_witnesses_not_reenumeration`; R `test_all_registered_input_geometries_without_optimization`, `test_runner_rejects_native_valid_graph_dependent_h2_fault_at_actual_return`. |
+| IR9–IR11 | Public boundary, imports and path/ownership rejection: R `test_main_python_argument_types_fail_before_activity`, `test_source_import_boundaries_and_wrapper_are_separate_from_observations`, `test_forbidden_output_paths_are_not_repaired_or_overwritten`. |
+| IR12–IR13; IRR2-2 | Exact revised schedule, scripted full execution and solve/cell timing boundaries: R `test_registered_schedules_are_independently_reconstructed`, `test_full_runner_schedule_is_scripted_not_a_real_campaign`, `test_timing_observer_detects_one_excluded_operation`, `test_pilot_start_observer_rejects_only_late_start_after_pristine_control`. |
+| IR14–IR15 | Native fields, certificate semantics, strict wire records and bounded real composition: R `test_independent_nested_schema_single_faults_follow_pristine_controls`, `test_scripted_cross_route_distinct_attaining_raw_pairs_succeed`, `test_future_bounded_real_micro_composition_only`. |
+| IR16, IR19; IRR2-3 | Raw-to-table reconstruction, completion inventory and preserved failures: R `test_coherent_table_and_completion_hash_mutants_fail_independent_derivation`, `test_coherent_output_omissions_reach_mode_inventory_before_lookup`, `test_output_native_failure_preserves_failed_attempt`. |
+| IR17–IR18; IRR2-4–IRR2-5 | Revised 17/18-cell boundaries, exact median rules and complete H3 triples: R `test_h5_all_registered_boundaries_and_timing_invariance`, `test_h3_fixed_support_series_and_separate_exact_arithmetic`, `test_r2_synthetic_pilot_bytes_and_h3_series_remain_independently_bound`. |
+| IR20; IRR2-6 | All 143 versioned fault families: separate completed implementation audit on source copies, with materialized faults, integration controls and declared source/phase/claim reviews distinguished; U21BF093 evidence described below. |
+| IR1, IR21–IR24; IRR2-7–IRR2-8 | Historical prefixes, exact transition scope, full pilot/F7/main sequence and retained source lineages: completed authority/reference/implementation and campaign records; independent pilot/main lineage controls; later closure remains separate. |
+
+The 143-family implementation audit passed with zero optimizer calls. This is
+not 143 executable producer-mutant kills. Its credited cases retain intended-
+guard attribution and passing pristine controls. U21BF093 reached the intended
+timing guard, propagated the same exception object and passed pristine controls
+before and afterward; a secondary cleanup failure was not credited instead.
+Original and superseded failure evidence remains preserved.
+
+Scripted full schedules and synthetic boundary fixtures are not performance
+measurements. The bounded real micro-composition test uses only the two specified
+preexisting inputs under both routes, four actual calls per test execution.
+Those calls and inherited regression behavior are not additional irregular
+pilot/main samples. The campaign launcher authenticated the completed tests,
+Ruff and declaration audit; it did not repeat those executions as a campaign.
+
+### Completed pilot, source lineage and actual main execution
+
+The original pilot covered all 48 cells, 240 p-token recipes and 480 actual
+route calls, with 480 certificates and 485 output files retained under
+`results/unit21-v2-pilot/`. This includes all twelve n=16 cells: 60 pilot
+recipes and 120 calls. Its independent certificate, reference-value, geometry
+and table checks passed. It remains labeled pilot evidence, including
+unfavorable observations, and is never pooled into main results or rerun by
+routine validation.
+In this retained pilot evidence, Accelerated's solve time exceeded Standard's
+on 40 of the 60 n=16 recipes, as recorded in
+`results/unit21-v2-pilot/pilot-solves.csv`; these single-pass pilot
+observations are never pooled with main results.
+
+The original 25-source pilot snapshot is retained as the inert archive
+`experiments/provenance/unit21-v2-pilot-r1-source.zip`, outside the pilot output
+root and outside the live source roster. The two actual source fingerprints are:
+
+- Pilot R1: `01428190bdac17bbde27aba5682503ff93a57bb0925e09fd4ec392a0a517469f`.
+- Main R2: `9c1fea59193ac3c2772e18004a6d73abdb77c6d3bb7c8430bcde5ee55d815b26`.
+
+The same 25 live source paths identify main; the scoped runner revision changes
+its fingerprint, not the historical pilot's identity. Documentation, tests,
+outputs and the inert archive are not code-fingerprint members. This append
+therefore does not reidentify either run. Source fingerprints are not claims
+that the final implementation commit has already been created.
+
+After F7, one actual main invocation completed all 36 cells and 720 original
+s-token recipes at n=6,8,12, tau=64,128, b=1,8,64 and both capacity modes, with
+20 seeds per cell. It retained both routes, one warmup and three measured
+repetitions, the fixed ASCII order and alternating route order. All 1,200 owned
+inputs were validated; the 240 n=16 s-token inputs were not executed.
+
+| Main evidence | Observed count |
+|---|---:|
+| Warmup records / measured records | 1,440 / 4,320 |
+| Successful telemetry calls and per-call certificate checks | 5,760 |
+| Distinct recipe/route certificate files | 1,440 |
+| Summary / branch-summary / comparison / coverage rows | 1,440 / 5,760 / 720 / 36 |
+| Output files including `COMPLETE.json` | 1,449 |
+| Nonself completion-ledger entries | 1,448 |
+
+The independent result audit additionally checked 5,760 certificates against
+retained calls, compared all 5,760 values with each of the two saved Phase C
+optimum references, and checked 23,040 branch-accounting records. It verified
+4,320 same-route measured repeats against their warmup baselines, 720 cross-
+route value comparisons, all source/input bindings and the full output ledger.
+It reconstructed `summary.csv`, `branches.csv`, `comparison.csv`, `coverage.csv`
+and `findings.json` from retained records. No solver was called by that audit,
+and no optimum enumeration or timed campaign was repeated.
+
+C0 acceptance establishes admissibility and literal attainment; independent
+optimum-reference agreement is separate evidence. Distinct valid attaining
+raw pairs across routes remain permitted. Same-route result/telemetry and
+certificate consistency are required, without normalizing raw-pair semantics.
+
+Measured integer nanoseconds cover the single `solve_with_telemetry` call and
+its returned telemetry construction. Input/geometry work, metadata, certificates,
+verification, hashing, serialization, output and reporting are excluded.
+Warmup timing is null, not a zero measurement. Pilot cell intervals are separately
+defined operational measurements. Neither the planning proxy nor the sum of
+measured solve times is promoted to whole-invocation wall time. No timeout,
+retry, resume, favorable-repeat selection or interpreter-limit change was added.
+
+### Finite findings, not new acceptance rules
+
+H2-prime identities held exactly for every retained main call. This checks the
+specified descriptor, feasible-family, query-multiplier and sum/max accounting;
+it does not prove universal complexity or strong polynomiality.
+
+Under the frozen D21B-R2-I4 rule, H5-prime is **supported**: 509 eligible recipes,
+36 of 36 active cells against the threshold 18, and exact eligible paired
+oracle-call median **-1**. There are no zero-event cells. The observed outcome
+is not inferred from timing, recipe names or pilot data.
+On the 509 eligible main recipes, Accelerated used fewer, equal, and more
+oracle calls than Standard on 303, 87, and 119 recipes, respectively
+(eligible wins/ties/losses, counting each recipe once). Within-cell medians
+of (Accelerated minus Standard oracle calls), using only each cell's eligible
+recipes, are negative in 24 cells, zero in nine, and positive in three:
+`irregular-n12-t064-b00008-falternating` (+2),
+`irregular-n12-t064-b00064-frandom` (+1), and
+`irregular-n12-t128-b00008-falternating` (+1).
+The negative cell medians are concentrated at n=6,8 (21 of the 24);
+the remaining three negative-median cells have n=12 and b=1, while all eight
+n=12 cells at b=8 or 64 have nonnegative eligible medians. These descriptive
+within-cell medians are not an additional support rule; the pooled
+D21B-R2-I4 verdict remains unchanged.
+
+| Main comparison over 720 recipes | Accelerated lower | Tie | Standard lower |
+|---|---:|---:|---:|
+| Oracle calls | 514 | 87 | 119 |
+| Median of three measured solve times | 491 | 0 | 229 |
+
+All 59 recipes with fewer Accelerated oracle calls but no faster median time,
+all 119 recipes with more Accelerated oracle calls, and both ten-entry slowest/
+largest-integer lists remain retained. These are recipe-level comparisons;
+repetitions are not additional independent problems or sums of structural work.
+Unsupported or unfavorable observations are valid results, not reasons to
+repeat or select data.
+
+All 240 matched three-bit H3-prime series per route are present with matching
+support. The separately prescribed slopes and route-specific H3-prime decisions
+have not been computed by the campaign audit or this entry. Synthetic estimator
+checks and recorded integer maxima are not an empirical H3-prime verdict.
+
+### Evidence anchors and remaining lifecycle
+
+| Saved evidence record | SHA-256 |
+|---|---|
+| Main R2 implementation R3 audit | `7a6eff9a4a9c02729efb53e184b4d0dd81040abf29a207a274c3a13a2ac6aa12` |
+| Revised 143-family implementation audit | `7db59c87ff9fc578d42d605188d974ce0777700b6e8066a4f9e14e2ed2b14821` |
+| Independent main-result audit | `26f3162e8b1107d9c51df4a92db285eb7c672f404569151926e0c675699fec8b` |
+| Main R2 campaign R2 audit | `4a5f54e76bcfb68bb35ea14729e155a12fbaf1e3735db6970a6d15bf37f50503` |
+| Main R2 campaign R2 checkpoint | `3065f6726c061cd931e3e4124d10346738feab0a79dff2c6c97a537975096169` |
+
+These anchors identify saved evidence; they do not incorporate private handoff
+files into the repository. A review archive is not a complete live-state or
+historical-handoff backup. Actual predecessor records remain authenticated at
+the applicable Mac transition rather than inferred from these hashes alone.
+
+At campaign completion, HEAD remained oracle commit
+`8b9ab9d247efb2bb5500ae8c81e42a79d6059281`; its tree was
+`076dfd9589f088c07e9f67107b61a071b338ba77`. The index was unchanged, the complete
+5,170-file candidate remained unstaged, and neither a final implementation
+commit nor remote closure had occurred. These are recorded phase-local counts,
+not permanent limits on authorized future repository contents.
+
+Phase G is limited to appending after all 209,137 prior CONFORMANCE bytes.
+Its application must authenticate the successful evidence and conserve every
+other file. Fresh targeted/full tests and repository Ruff with this appendix
+present are recorded separately; no post-append validation PASS is asserted
+here. The documented resolved TMPDIR spelling remains scoped to verification
+subprocesses, including later isolation/postcommit checks, without weakening
+path guards or changing global settings.
+
+Complete-candidate staging, staged-tree isolation, local commit, postcommit
+validation and remote closure still follow under the existing lifecycle.
+Routine checks read preserved pilot/main/historical results and never retime
+them. No new gate, private-note dependency, source/test/configuration edit,
+Unit 22 work or public release is introduced.
+
+Finite results characterize this deterministic stratum, not all graphs at
+these orders. No universal correctness or speedup, asymptotic or practical
+frontier, isolated causal look-ahead effect, total-memory bound, verification-
+overhead result, explicit-copy comparison or external-solver claim is added.
+Earlier theorem statuses remain unchanged.

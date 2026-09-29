@@ -101,3 +101,26 @@ readiness. No execution path or look-ahead coverage is promised by a recipe
 name. Unit 21 owns experimental campaigns and results; Unit 22 owns release
 and minimum-interpreter reproduction. No experiment or release artifact is
 provided by this corpus.
+
+## Irregular follow-up owning suite: `unit21-v2`
+
+DESIGN D21B-I2--I6 and TEST_PLAN IR2--IR6 authorize a separate 1,200-identity
+input extension under `unit21-v2/`. The 48 fixed cells use n in {6, 8, 12, 16},
+support thresholds 64 and 128, bit parameters 1, 8 and 64, and alternating or
+random capacity rules. Each cell retains the five disjoint pilot tokens p01--p05
+and twenty main tokens s01--s20. The names encode deterministic SHA-256 recipe
+domains, not a claim of probabilistic independence. Equal payloads remain distinct
+registered identities.
+
+`exactfrac.corpus_irregular.build_corpus()` returns this suite's own initial
+MANIFEST and its 1,200 payloads. Its own MANIFEST must never overwrite the live
+aggregate. This authorized extension adds its sorted entries while preserving
+every Unit 20 entry and payload. Each consumer validates the complete metadata
+schema but opens only its own suite's files. The live aggregate remains extensible;
+the present 1,855-entry count is a phase-local inventory, not an enduring global
+limit or hash pin. All 1,200 new bytes match the independently registered Phase C
+input fixtures. Materialization does not execute a solver, pilot or campaign.
+
+`experiments/README_irregular.md` describes the separate guarded runner and its
+prospective sequencing. The original Unit 20 instructions and historical results
+remain unchanged.
