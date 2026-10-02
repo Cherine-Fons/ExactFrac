@@ -5490,3 +5490,413 @@ execution authorization permits the revised --all invocation. Section 50's
 later conformance, exact staging, isolation, commit and remote closure continue
 under the revised scope, with all pilot/main/historical data conserved and no
 retiming. No Unit 22 work or private-note check is introduced here.
+
+## 52. Unit 22 — release obligations, September 30, 2026
+
+These obligations implement DESIGN section 17 (D22-R1--R17) and section 12's
+existing release gate. They do not replace earlier tests or create a new lifecycle.
+The release consumer is `tests/test_release.py`; the new engineering auditor is
+`release_audit.py`. All earlier tests and mathematical contracts remain fixed
+except the explicitly adopted D22-R14 static metadata-pin substitutions.
+The full Unit 22 collected count is unknown until actual collection. The inherited
+starting baseline is 7,032 cases, not an invented Unit 22 completion count.
+
+### RL1 — starting authority and immutable baseline (D22-R1)
+
+Authenticate actual Phase A R2 audit/checkpoint and source identities before the
+next transition. Preserve the already-recorded failure of Phase A R1 and its
+correction: inherited CITATION was not an unauthorized release artifact. Require
+the exact recorded clean baseline, 5,170 files, commit/tree/index/ref state,
+current governing identities and source/test/result bytes. Do not replay A to
+replace its saved evidence or substitute synthetic manifests for actual Mac data.
+Use mutation controls that distinguish wrong predecessor bytes from legitimate
+later ref/index advancement. No checks on private note location, bytes or existence.
+
+### RL2 — exact unit scope and genuine tests-first RED (D22-R2, R10, R16)
+
+Verify B's diff consists only of appended DESIGN/TEST_PLAN bytes and C's diff
+only of its independently reviewed ORACLE_CATALOG supplement. Other files stay
+unchanged. Require new release test/auditor/license paths to have the actual
+recorded preapplication state; reject unexpected files without deleting them.
+
+At D, live candidate Ruff and AST checks precede application of only the new
+release consumer. Its exact missing-module failure is `ModuleNotFoundError:
+No module named 'release_audit'`; expected collection error is not a syntax error,
+wrong import, or dependency failure. Do not create a stub, remove a solver module,
+change old tests, edit metadata or instantiate a license merely to collect D.
+The inherited suite excluding the new consumer and repository Ruff must pass.
+At E, freeze this owning consumer and apply the entire authorized release set,
+including coupled old-test pin changes, in one checked transition.
+
+### RL3 — standard license, actual notices and artifact inclusion (D22-R3)
+
+Before E, independently register the exact MIT text and author copyright line.
+Test all required grant/notice/disclaimer text, exact copyright identity and
+absence of inserted noncommercial, compulsory-citation or approval conditions.
+Inspect the actual source distribution and wheel for the intended license and
+notices rather than accepting pyproject's MIT string as proof of inclusion.
+Applicable third-party notices are explicitly reviewed and retained.
+
+Materialized faults include missing LICENSE, altered grant/disclaimer, wrong
+holder, omitted permission notice, conflicting metadata and a rebuilt archive
+that omits required notices. A PASS must not imply legal-clearance, patentability
+or publication approval. No external attorney dependency is part of these tests.
+
+### RL4 — inherited citation, actual schema and metadata consistency (D22-R4)
+
+Authenticate the inherited 899-byte citation preimage and treat any replacement
+as an explicit metadata amendment. Match canonical author identity, title,
+version, MIT and actual references against the fixed Phase C expectations.
+Retain a direct software citation separately from the theorem-paper references.
+Record any deliberate preferred-citation override; reject accidental disappearance
+of the software citation. No invented DOI, affiliation, accepted status or date.
+
+Validate with an independently identified CFF schema/validator outside the frozen
+runtime environment. Deterministic tests consume fixed schema/examples, not live
+web responses. Negative controls include missing/duplicate author, inconsistent
+versions, malformed schema, fabricated status, substituted identifier and an
+accidental override. Live public-source verification is a separately recorded
+section 12 review, not simulated by the fixture's text.
+
+### RL5 — contribution-account, verification-design and production-provenance review (D22-R5)
+
+Review the README semantically against the controlling D22-R5 contribution
+account. Preserve the account's technical specificity and chronological
+structure, not merely its keywords. Faithful editorial reflow is permitted;
+replacing the work with a generic supervision or oversight statement is not.
+The required substance is the author's detailed mathematical, pre-build,
+verification, experimental and governance contribution together with the
+production-provenance paragraph.
+
+**Mathematics and independently authored pre-build foundation.** Credit the
+author with proving the underlying theorem, designing the strongly polynomial
+algorithm and authoring the mathematical specification. Retain the separate
+214-commit, test-gated pre-build codebase containing no AI-written code; the
+fundamental computational objects; the from-first-principles brute-force checker
+implementing the manuscript's definitions directly; its hand-proved independent
+oracle lemma; and the timed mock assessment and Exit Test. Explain that this
+foundation established the computational command from which she subsequently
+specified, reviewed and judged the production implementation. Keep this
+pre-build codebase and the production repository distinct.
+
+**Proof-to-code and invariant architecture.** Credit her freezing and governing
+the versioned, hash-pinned mathematical source; translating its hypotheses and
+proof objects into interface contracts; preserving compact witnesses, raw
+unreduced pairs and specified Empty semantics; and designing representations
+that make exactness and literal attainment externally inspectable. Preserve
+proof-aligned decomposition through branch domains, atomic families, sign
+routing, parity cuts, the residual oracle, branch solvers, global selection and
+witness/certificate construction. Credit the design and enforcement of the
+invariants, not merely the later checking of them.
+
+**Test authorship, independent expectations and personal adjudication.** Credit
+the author with writing the preregistered `TEST_PLAN` obligations before the
+corresponding production code, deriving the independent oracle expectations,
+requiring reference-route agreement before use and forbidding production output
+as its own oracle. Preserve her design of the adversarial failure-mode catalogue:
+parity/feasibility boundaries, Empty and infeasible families, ties, endpoint
+monotonicity, malformed inputs and dependency failures. Explicitly retain the
+143 declared fault families within their registered scope, RED-before-GREEN as
+a binding gate, personal execution of every gate, reading every RED and GREEN,
+and every acceptance ruling. Retain the Exit Test non-waiver after a clean mock.
+Test design, execution, inspection and acceptance are separate author contributions.
+
+**Certificates, complexity evidence and scientific interpretation.** Preserve
+the nonempty compact witness, two-input certificate contract and checker that
+imports nothing from the solver. Credit admissibility and literal attainment
+to the certificate and keep mathematical correctness and independent reference
+comparisons in their proper roles. Retain geometry-derived `r_j`, `s_j`, `A_j`
+and comparisons with observed oracle calls as finite evidence about realized
+execution structure, not a universal complexity proof. Credit the conformance
+map and her distinction between finite computational evidence and the theorem.
+
+**Authority administration, failure diagnosis and corrective rulings.** Credit
+her adjudication before repository admission, architectural corrections,
+dedicated authority/oracle commits and personal handling of RED, GREEN,
+conformance, staging, staged-tree isolation, commit and push transitions actually
+achieved. Retain the specified STOP examples: live-context lint, tracking-reference
+mismatch, preloaded-module collision and the helper's erroneous absence assumption.
+Credit diagnosis, routing for review, authorization of corrections and execution
+of only permitted continuations. Preserve the author's rulings on exclusive
+live-gate authority, the Accelerated solver, exercising both branch solvers,
+future-populated files, fresh-root campaigns without timeout and preservation of
+failed attempts.
+
+**Multi-system project and evidence governance.** Credit continuation protocols,
+state blocks, model-tier routing, data budgets, authenticated upload ledgers,
+private audit/checkpoint evidence, byte-pinned authorities, append-only records,
+source fingerprints and controlled one-value amendments. Retain her corrections
+of an unauthorized protocol step, a misstated commit sequence and a helper's
+repository-state error. Describe separate drafting and reviewing models,
+independent recomputation and the Mac's authoritative gate/campaign role without
+conflating those with assistant preparation checks.
+
+**Empirical design, interpretation and release decisions.** Credit the author
+with prospective experimental design and authorization, pilot review, the dated
+cost-based main-scope revision before F7, dating F7 and authorizing/executing the
+campaign. Preserve the tested-stratum boundaries, no pilot/main pooling,
+unfavorable results and the distinction between a certified fractional lower
+bound and an exact block count. Credit the release terms and the truthfulness
+standards she determined. Do not convert these historical contributions into
+a Unit 22 completion or publication authorization.
+
+**Current production provenance.** Preserve the account that an AI system
+generated the production implementation and supporting infrastructure to the
+author's specification, and a separate AI system reviewed the generated packages
+and independently recomputed oracles and campaign results. Retain admission
+only against her theorem, under her specification and at her gate. The earlier
+six-module/twelve-module production-handwriting requirements and the old
+mandatory author-implemented-first audit sequence are superseded; do not restore
+them by merging prior drafts into this account. This does not dilute the direct
+pre-build coding or the detailed production specification, judgment, verification,
+execution and governance credit required above.
+
+**Presentation and achieved lifecycle state.** Carry the inline-math GitHub
+render item as Phase E UNVERIFIED until an actual candidate render is inspected.
+Check the witness/pair and branch/telemetry notation for literal delimiters or
+doubled parentheses in the rendered output. Record the evidence against the
+actual candidate; apply any needed correction only through the existing exact
+reference and coordinated metadata/pin revision process. Do not move the Phase C
+freeze or mark this presentation review passed from source inspection. Read
+"Across all twenty-two units" against achieved checkpoints, and ensure the final
+README's tense does not assert unperformed Unit 22 transitions.
+
+Review against the author's account and the relevant available records, recording
+which source supports which statement. Preserve the distinction between the
+pre-build and production histories and between author-provided contribution
+statements and artifact corroboration. These are source/contribution and
+presentation reviews, not executable semantic-proof tests or new acceptance
+gates. No private BUILD/LEARNING note inspection, replay of a completed unit,
+new source execution or historical-commit rewrite follows from RL5. Preserve
+inherited-method citations and accurate provider attribution. Use "the author"
+in narrative and the actual name for copyright, citation and scholarly attribution.
+
+### RL6 — mathematical/verification claims and source status (D22-R6)
+
+Map README mathematical descriptions to DESIGN section 0, SPEC_LOCK and CONTRACT:
+active capacities, compact positive multiplicities, raw exact parameter value,
+compact witness and Empty semantics. Preserve the fractional-lower-bound
+application meaning without replacing the exact parameter description or claiming
+an integral block count, schedule or colouring. Test reviewed prohibited-claim
+examples and manual checks for qualifications attached to the right statement.
+
+Separate attainment verification, independent optimum-reference comparison and
+the universal mathematical argument. Reject unsupported formal-verification,
+universal-correctness, theorem-domain restriction from benchmark sizes, or
+peer-reviewed/accepted assertions. The public-version crosswalk includes exact
+source identity, retrieved/verified status and limits; missing evidence remains
+unresolved. Never package the private governing manuscript to fill that gap.
+
+### RL7 — empirical reporting, metrics and no performance replay (D22-R7)
+
+Check original-study-first reporting, follow-up design history, the cost-based
+pre-F7 revision, and strict pilot/main separation. Bind empirical figures to
+retained records. No fabricated causal effect, universal speedup or frontier.
+Do not omit unfavorable recipes/cells or treat repeated measurements as new
+independent instances. H5-prime uses the unchanged pooled D21B-R2-I4 rule.
+No H3-prime slopes or decisions are calculated by release code/tests/reports.
+
+Preserve ordinary-use, tests, retained-evidence checking and optional full rerun
+as separate documentation paths. Verify the 5,760-call workload, hardware-dependent
+cost, fresh-root-only and no-timeout semantics. Refuse to promote summed measured
+intervals or an approximate statement into instrumented whole-run time. Publication
+of a 31/33-hour figure requires its actual basis and correct label. Test commands
+never silently call either campaign wrapper or re-time the retained experiments.
+
+### RL8 — exact inventory, order and conservation (D22-R8)
+
+Use independently enumerated positive tree/archive examples. Require exact member
+names, types, modes, lengths, SHA values and canonical ordering, not count-only
+agreement. Reject missing/extra/duplicate entries and coherent wrong-content
+manifests with recomputed hashes. Preserve the canonical 1,200 inputs, 1,317
+original results, 485 pilot files and 1,449 main files and their old identities.
+Bind each build/audit result to its inspected artifact, not an earlier tree.
+
+Check all historical source snapshots as inert data. A new distribution version
+must not change the original pilot or main fingerprint or reinterpret old version
+fields. The current 5,170 count may grow only by the explicitly authorized new
+files; never use a wildcard freeze that exempts future files from inventory.
+
+### RL9 — Git-history coverage and privacy disposition (D22-R9)
+
+Independent tiny Git fixtures include historical-only sensitive text, author/
+committer identities, commit messages, tag targets and renamed/deleted paths.
+Compare the observed ref/object coverage to a separately derived enumeration.
+Require incomplete status for truncated/shallow/inaccessible scope; distinguish
+current-tree-only from full stated history. No proof of remote-only absence is
+inferred from a local read. Block any fetch, checkout, reset, object/index write,
+force-push or history cleanup by the inspection API.
+
+Flag and classify synthetic private paths, credentials, private keys, personal/
+contact names and tool references. A legitimate author citation or truthful AI
+statement has a content-bound disposition, not automatic deletion. Reject blanket
+allowlists, unclassified findings, findings dropped after a rename/re-hash and
+sensitive contexts copied into a public summary. Scan failure is not clean.
+No real secret or user-private-note path is used as a test fixture.
+
+### RL10 — strict tree/archive safety and complete coverage (D22-R10)
+
+Materialize safe and adversarial ZIP/tar/nested examples before the auditor exists.
+Cover traversal, absolute/backslash/NUL names, duplicate/ambiguous paths, symlink
+ancestors, member links, FIFO/device/sockets, wrong regular-file mode, malformed
+UTF-8 and unsupported compression/container forms. No link target is followed;
+no special file is opened as a byte stream; inspection writes no extracted file
+into the candidate or source repository. Validate actual decoded bytes and lengths.
+
+Exercise resource ceilings using small constructed limit-boundary fixtures.
+Require exactly the declared incomplete result or rejection, never partial clean
+coverage. Missing/unreadable member and interrupted-history examples must retain
+their coverage gaps. No hidden cleanup or repair is acceptable after a fault.
+
+### RL11 — import purity, public errors and dependency propagation (D22-R10)
+
+Import the release auditor in fresh processes with filesystem/network/subprocess
+tripwires; no activity occurs at import. It imports neither solver nor verifier,
+pytest, external scanner SDK, packaging backend or optional runtime dependency.
+Exercise exact argument types (including bool, subclasses and None), relative/
+nonexistent/unsafe paths and conflicting output arrangements where applicable.
+Wrong public arguments fail before reads/commands with exact ValueError.
+
+Inject true dependency exceptions and require object identity to propagate.
+Violated valid dependency promises are RuntimeError, not mathematical Empty or
+an invented clean inspection. Validate unchanged current working directory,
+environment, decimal limits, hash-seed setting, inspected files and Git state.
+Keep private orchestration's writes outside repository content and record actual
+allowed commands. Separate tree inspection from history acquisition and artifact
+creation; no scan may import or execute the code it is meant to inspect.
+
+### RL12 — report schemas and independent reconstruction (D22-R10, R11, R15)
+
+Phase C freezes exact report keys/wire examples and finite rule/resource settings
+consistent with D22-R10's fields and outcomes. Require exact integers, supported
+kinds and coverage states, unique canonical inventory/findings, subject bindings
+and no discarded failure details. Independent reader reconstruction must reject
+coherently rehashed false coverage and summaries. Missing fields, duplicate keys,
+wrong type, unsupported format, fabricated subject and false PASS are distinct
+registered controls. No report can authorize public release.
+
+Pristine controls pass before and after every credited materialized fault.
+Registered IDs, collected tests, passing cases and manual reviews remain separate
+counts. No production-generated output defines its own oracle expectations.
+All saved predecessor audits are authenticated, not credited as newly executed
+release tests. Counterfeit saved execution summaries must not pass a live gate.
+
+### RL13 — source distribution, wheel and installation (D22-R12)
+
+Freeze source/wheel membership profiles before generation. Independently inspect
+the produced archives, including generated metadata and notices. Reject private
+handoffs/notes/manuscripts, .git, .venv, caches, build leftovers and escaped or
+extra files; retain legitimate fixtures needed to reproduce the full suite.
+A profile omission requiring a frozen-file change is an explicit unresolved
+scope conflict, not a silent test exemption or automatic history rewrite.
+
+Build outside the canonical checkout. Preserve source identities and record
+backend/build versions and artifact hashes. Run the wheel's public interfaces
+on fixed tiny cases in clean environments outside the repository and authenticate
+installed import origins. Test wrong/editable installation and checkout shadowing.
+The wheel need not carry the full research corpus; the source-distribution
+validation cannot rely on files missing from its own inventory. Do not claim
+bit-identical builds unless separately demonstrated. No build or smoke publishes.
+
+### RL14 — actual Python 3.11 and 3.14.6 validation (D22-R13)
+
+Use separate fresh environments with exact base interpreter identities and recorded
+compatible dependency versions. Run the entire applicable source-distribution
+suite on each interpreter; counts come from actual collection and execution.
+All inherited baseline tests remain, plus observed new release cases; no
+silently skipped or xfailed compatibility failures. Record warnings rather than
+suppression and distinguish full-source tests from installed-wheel smoke calls.
+
+Authenticate import roots at collection and completion and for installation
+smokes. Reject wrong interpreter, user-site/editable contamination, fake archived
+PASS, truncated outputs and unrecorded dependency substitutions. A missing
+interpreter or incompatible dependency is reported, not bypassed by changing
+requires-python. Do not mutate the closed development .venv or global Software
+Update settings. Scope any necessary acquisition separately. Repository-context
+candidate Ruff, full Ruff and existing H isolation/postcommit checks remain.
+
+### RL15 — literal metadata and three-key CLI-pin preservation (D22-R14)
+
+Treat `0.1.0` as the confirmed release-candidate artifact version, not a public
+release already performed. Verify the pyproject reference is exactly the 957-byte
+old image with its unique version literal replaced by the 952-byte reviewed
+image and fixed new SHA-256. Require all TOML values other than project.version
+unchanged, including existing license and minimum Python. No metadata reformat.
+
+All three pin exceptions are explicitly adopted by the author's R2 instruction;
+the earlier pyproject-only permission is not their sole authority. Before D, independently
+register complete reviewed README/CITATION images and the resulting 99,824-byte
+CLI-test postimage. Replace only the three 64-byte intervals named in R14, with
+static lowercase digests of their exact corresponding metadata. Require all 41
+keys, the other 38 values, all closed-path members, imports, assertions and every
+other byte unchanged; check AST equality except those three values as an extra
+check, not a substitute for byte comparison.
+
+Test wrong file/hash coupling, changed assertion, reordered line, changed quote,
+removed key, dynamically computed digest, silent extra substitution and metadata
+changed without its pin. B/C/D leave all four live preimages unchanged. E applies
+the whole reviewed metadata/pin set together after new-consumer RED; no transient
+known-bad mixture receives a GREEN verdict. An absent, stale or changed Phase C
+freeze stops application; the adopted exceptions never permit deleting pins.
+
+### RL16 — no-circularity, publication control and later closure (D22-R15--R17)
+
+The final readiness conclusion requires all applicable section 12 evidence and
+resolved dispositions for the exact artifact; no claim from a marker alone.
+A truthful INCOMPLETE or unresolved finding is not readiness PASS. Bind external
+final artifact/commit hashes after their existence without editing immutable
+release metadata merely to include its own hash. Preserve all prior evidence.
+
+Require no public visibility flip, public repository/tag creation, external
+upload, credential mutation, force-push or automatic cleanup. A separately
+authorized clean public repository remains an option, not an action by this
+unit. Author approval identifies artifact/version/destination at publication.
+No private-note path/hash check, H3-prime computation or campaign replay is
+introduced by release reports or unit-completion helpers.
+
+## 53. Unit 22 — release completion within the existing A--H lifecycle
+
+This is a completion specification, not a record that future work passed.
+No Unit 22 release, minimum-interpreter, privacy, artifact or publication verdict
+is inherited from Phase A's development baseline or from Unit 21B closure.
+
+A: preserve the actual completed R2 starting checkpoint. Its 7,032-case result,
+Ruff and imports are baseline evidence only. Do not repeat completed helpers.
+B: submit append-only DESIGN/TEST_PLAN postimages for the author's requested
+review. No review gate is invented beyond that request and the existing process.
+After explicit adoption, apply the exact authority pair unstaged, authenticate
+scope and regression/Ruff, then stage, commit and close remotely separately.
+C: independently register all release fixture/schema/profile/metadata expectations
+before tests and producer; preserve the entire prior ORACLE_CATALOG. Authenticate,
+audit, regress, stage, commit and close its exact append under the usual sequence.
+D: apply only the new release consumer after live target-filename Ruff and syntax
+checks; observe its exact missing `release_audit` collection RED and unchanged
+inherited-suite pass with that file excluded. No old test or metadata edit yet.
+E/F: after authenticated RED, apply the complete adopted release implementation/
+artifacts/metadata/static-pin set. Freeze every unrelated file and the new owning
+test. Run actual targeted/full/Ruff, independent fixtures/fault/review controls,
+privacy/history/notices/claims/inventory work, both clean-interpreter suites and
+installed-artifact smokes with authenticated origins. Preserve all evidence and
+failures. Produce only a scoped readiness conclusion supported by those results.
+G: append only observed engineering evidence to CONFORMANCE; preserve prior
+statuses and distinguish source-test counts, release-audit coverage and actual
+installed/interpreter results. No new theorem, benchmark or H3-prime claim.
+H: stage the exact complete candidate, export/test its index-tree blobs with
+correct imports, commit that tree, validate postcommit and close the existing
+private remote. Authenticate previously completed artifact/interpreter evidence
+only if its exact input identities remain unchanged; any relevant content change
+requires the affected validation to be refreshed, not a blanket inherited PASS.
+Routine regression and result readers never retime either archived campaign.
+
+Completion requires every adopted RL obligation to be satisfied at its stated
+scope, current source/metadata/result and all applicable saved-evidence bindings
+intact, no hidden skip/deselection/xfail credit, and the exact final commit/ref/
+clean-state checks. File-count changes are explained by the final authorized
+inventory rather than a stale hard-coded baseline count. Publication remains a
+separate author act; the canonical repository does not become public in H.
+
+Only after full private remote closure deliver the two complete private BUILD/
+LEARNING note entries in order and wait for the author's saved confirmation.
+No helper inspects them. Their saved state is not evidence of a release audit,
+and Unit 22 closure does not silently begin H3-prime paper analysis or publish
+any software, archive or manuscript.

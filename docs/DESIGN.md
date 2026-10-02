@@ -5174,3 +5174,614 @@ After consistent adoption and successful revision validation, STOP for the
 author's explicit F7 date and main authorization. Revision date is not F7.
 Phase G and H remain the existing later lifecycle, preserving all original pilot,
 revised main and unit21-v1 artifacts; routine validation never retimes them.
+
+## 17. Unit 22 — private release preparation and release-gate evidence, September 30, 2026
+
+This section makes section 12's release gate operational under the unchanged
+A--H master lifecycle. It introduces release-engineering obligations, not a new
+optimization problem, theorem, benchmark stratum or permission to publish.
+All preceding DESIGN bytes and all earlier mathematical contracts remain intact.
+This authority takes effect only after its normal review, author adoption,
+application, documentation commit and remote closure. Drafting it is not adoption.
+
+### D22-R1. Starting state, evidence and scope boundary
+
+The author supplied a successful Unit 22 Phase A R2 transcript from the closed
+Unit 21B baseline: commit `939e2c5950b9123fe5165b5232310aa33ebd4080`, parent
+`8b9ab9d247efb2bb5500ae8c81e42a79d6059281`, tree
+`06f15ebfc22488cf7d4bd312024924fd20a9ab1a`, 5,170 tracked/live files,
+clean index/worktree and divergence 0 0. The fresh development baseline observed
+7,032 collected/passed cases, repository Ruff PASS and authenticated project
+imports; it did not run minimum-interpreter or release-artifact validation.
+The single inherited pytest parametrization warning was not suppressed.
+
+Phase A audit SHA-256:
+`7c671c2ee33e8db77acf754f147edbe63869a98484061773756c1da7106b7d78`.
+Phase A checkpoint SHA-256:
+`5346a2ece1b587fe5bda2e2ce8928dc213039c584f181e7faf0bf84f737ff01c`.
+These identify actual Mac records for later authentication, not embedded substitutes
+for those records. A transcript and a source archive are not a full live-state audit.
+
+No closed source, mathematical test, input, certificate, historical result or
+source fingerprint changes in Unit 22. The only proposed exception to an old
+consumer is the literal metadata-pin substitution specified in D22-R14; no
+behavioral assertion is removed. SPEC_LOCK, CONTRACT and the historical
+GOVERNING_SHA256SUMS baseline remain unchanged. H3-prime fits remain paper work.
+
+### D22-R2. Exact unit deliverables and phase-local file scope
+
+Phase B changes only `docs/DESIGN.md` and `docs/TEST_PLAN.md`, by append-only
+postimages. No README, citation, configuration, test, license, release artifact
+or audit implementation is installed with this authority.
+
+The later unit scope, subject to the tests-first lifecycle, is:
+
+| File | Phase and permitted purpose |
+|---|---|
+| `docs/ORACLE_CATALOG.md` | C: append independently fixed release fixtures/rules/expected records; retain its entire current prefix. |
+| `tests/test_release.py` | D: new owning consumer for release artifact integrity, reports and rejection controls. |
+| `release_audit.py` | E: new standard-library-only offline release inventory/scan/report implementation; not a solver module. |
+| `LICENSE` | E: create standard MIT license under D22-R3. |
+| `README.md` | E: reviewed release-candidate presentation, usage, attribution, evidence and limits under R5--R7. |
+| `CITATION.cff` | E: review/update the existing tracked citation under R4, never assume it is absent. |
+| `pyproject.toml` | E: only the exact proposed version substitution in R14; no license/dependency/backend change. |
+| `tests/test_cli.py` | E: only R14's coupled static digest-value substitutions, atomically with the metadata. |
+| `MANIFEST.in` | E: explicit source-distribution membership under R12; no production packaging backend replacement. |
+| `docs/RELEASE.md` | E: candidate identity, verified public-source crosswalk, audit scope, interpreter evidence and limitations; no secrets/private paths. |
+| `docs/CONFORMANCE.md` | G: append observed Unit 22 engineering scope only; preserve every earlier byte and theorem status. |
+
+New-path absence and all existing preimages are authenticated on the Mac before
+application; this proposal does not infer live absence from old archive membership.
+An unexpected existing path stops the transition rather than being deleted.
+No additional persistent repository files or package directories are authorized.
+Private build helpers, raw scan reports, environment locks, candidate wheels,
+source distributions and review artifacts stay outside the repository. They are
+not private BUILD/LEARNING notes, whose paths/bytes remain outside every gate.
+
+`release_audit.py` and `tests/test_release.py` are retained as committed release
+engineering deliverables: readers can reproduce the scoped offline checks rather
+than depend solely on private gate helpers. Neither changes
+the existing 25-path executed-source roster or either run's fingerprint. The
+source distribution includes the release auditor; the runtime wheel continues
+to contain the two existing package trees only, with packaging/license metadata.
+
+### D22-R3. MIT decision, notices and nonpublication
+
+R7 is re-confirmed: use the standard unmodified MIT license text with
+`Copyright (c) 2026 Cherine Fons`. Preserve applicable third-party notices;
+retain both copyright and permission notices. A scholarly citation request is
+not an additional condition on MIT reuse. Phase C fixes the exact license bytes
+from the identified standard text before consuming tests or artifact production.
+
+The author elects MIT for this release and is not pursuing a patent-protection
+path for it. No patent investigation, filing, or attorney-sign-off dependency
+is introduced. This is a release decision, not a conclusion about all possible
+legal rights, third-party rights or legal clearance. The existing project
+metadata already says `license = "MIT"`; do not replace or reserialize it.
+A private LICENSE file or a passing audit is not a publication act.
+
+### D22-R4. Existing citation and version-specific attribution
+
+`CITATION.cff` is inherited, not missing: 899 bytes, SHA-256
+`8892be71dfb141b10be30b6d0683bfcff9167ac9dff7a8b0d99ea1b47f2fdbae`,
+with development version `0.1.0.dev0`. Preserve that preimage and lineage.
+Its update must use canonical author identity Cherine Fons, accurate title,
+MIT identifier and the same prospective version as packaging. Keep the software
+citation distinct from citations for the author's mathematical manuscripts and
+inherited algorithmic ingredients. Narrative prose uses "the author"; names
+remain where copyright, citation and scholarly attribution require them.
+
+Validate the actual CFF against its declared schema in an isolated validation
+environment and record the validator/schema versions. Do not infer validity
+from a filename, hand-written YAML parser or a generated badge. Do not invent
+DOIs, affiliation, accepted-paper status, publication dates or a public release
+URL. A preferred-citation override, if used, must be explicit and must not hide
+the direct software citation. Current public-source status and destination
+metadata must be checked before final release-candidate content is frozen.
+No network lookup occurs inside deterministic tests.
+
+### D22-R5. Mathematical authorship, pre-build implementation, verification design and author-controlled production
+
+Lead with the author's mathematics and the detailed technical work she performed.
+The required substance below is the author's controlling contribution account for
+this revision. Preserve its distinction between the independently authored
+pre-build foundation and the subsequent AI-generated production implementation.
+Credit the author's specification, invariant and test design, mathematical
+judgment, personal gate execution, corrective rulings, scientific interpretation
+and multi-system governance at the specificity given here. The final provenance
+paragraph is part of the same account, not a replacement for that technical credit.
+
+**Required contribution account — the author's role in ExactFrac**
+
+<!-- BEGIN REQUIRED CONTRIBUTION ACCOUNT -->
+
+ExactFrac originates in the author’s mathematics. The author proved the underlying
+theorem, designed the strongly polynomial algorithm, and authored the mathematical
+specification against which the implementation was required to conform. Before the
+production build commenced, the author implemented the problem’s fundamental
+computational objects within a 214-commit, test-gated codebase containing no AI-written
+code. This pre-build foundation included a from-first-principles brute-force checker
+implementing the manuscript’s definitions directly, with a hand-proved lemma serving as
+its independent oracle, and culminated in a timed mock assessment and exit test. The
+resulting codebase established the author's independently authored command of the
+problem's computational objects which serves as the basis on which she subsequently
+specified, reviewed and judged the ExactFrac implementation.
+
+The author then designed and administered the formal regime under which the production
+system was constructed. The mathematical source was frozen as a versioned, hash-pinned
+authority containing explicitly identified definitions, lemmas, and theorems, so that
+implementation decisions could be traced to fixed mathematical statements rather than to
+recollection or informal interpretation of the proof. She translated those statements
+into explicit interface contracts: the active hypothesis became a precondition;
+witnesses were represented compactly as \((U,y)\); outputs retained raw, unreduced
+\((N,D)\) pairs; and the Empty case was assigned a specified value. Representation
+choices were made so that the relevant invariants remained externally inspectable, with
+exact arithmetic throughout and an explicit prohibition against normalization whenever
+such reduction would destroy literal attainment. The implementation architecture was, in
+turn, decomposed along the structural joints of the proof itself: branch domains
+\(D_0\)–\(D_3\), atomic families, sign routing, parity cuts, the exact residual oracle,
+branch solvers, global selection, and witness and certificate construction, so that each
+mathematical operation was isolated behind its own contract and could be audited
+independently.
+
+Around those invariants, she constructed the project’s verification discipline. Expected
+behavior was derived before the corresponding production implementation existed, using
+hand-derived cases and independently implemented reference routes that were required to
+agree before either could be used to judge production code; production output was never
+permitted to serve as its own oracle. Acceptance criteria were preregistered and
+adversarial. For each invariant, the relevant failure modes, including parity and
+feasibility boundaries, Empty and infeasible families, ties, endpoint monotonicity,
+malformed inputs, and dependency failures, were fixed in advance in a preregistered test
+plan, and a registered RED state was required before any GREEN implementation could be
+accepted. Every nonempty result was required to carry a compact witness checkable
+through a two-input certificate contract and by a checker importing nothing from the
+solver itself. The certificate establishes admissibility and literal attainment; the
+independent reference comparisons and the mathematical argument provide the remaining
+basis of validation. She likewise made the algorithm’s complexity structure observable
+by defining telemetry whose identities are derived from the geometry of each instance:
+\(r_j\), \(s_j\), and \(A_j\) compared against observed oracle calls, so that the
+implementation could be examined not only for the value returned, but also for whether
+its realized execution structure matched the work prescribed by the proof. That
+telemetry was treated expressly as finite evidence about execution structure, not as a
+proof of universal complexity bounds.
+
+Across all twenty-two units, she adjudicated each authority before it entered the
+repository, correcting architectural defects where necessary and closing each authority
+and oracle set in a dedicated commit. She personally executed every RED gate and
+inspected the exact collection failure; executed every implementation gate and inspected
+the resulting GREEN census; and carried out every conformance, staging, isolated
+staged-tree, commit, and push transition. When a gate produced a STOP, whether because
+of lint findings invisible to the drafting container, a tracking-reference mismatch, a
+preloaded-module collision, or a helper whose logic incorrectly assumed that a file was
+absent, she adjudicated the failure, routed the package for independent review,
+authorized the corrective revision, and reran only those operations permitted by the
+governing rules. Her rulings established the operative discipline of the build: the only
+gates are hers; the Accelerated solver is part of the core system; the global solver
+must be exercised under both branch solvers; no file intended for population by a later
+unit may be prematurely frozen by hash; experimental campaigns must execute from a fresh
+root without timeout; and failed attempts are preserved in the record rather than
+replayed as though they had not occurred.
+
+As the system became increasingly intricate, she managed it as a controlled multi-system
+research project. A drafting model produced implementation packages; a separate
+reviewing model recomputed oracles and campaign results through an independent route;
+her Mac remained the sole execution environment; and a private evidence tree bound
+repository transitions to hashed audits and checkpoints. She established continuation
+protocols and state blocks to preserve rulings across sessions, set model-tier routing
+and data budgets, maintained upload ledgers so that artifacts could not move between
+systems without authentication, and imposed byte-pinned authorities, append-only
+governing documents, source fingerprints, and controlled one-value amendments. These
+mechanisms made the development history reconstructible from the first commit forward.
+She also identified and corrected errors introduced by the surrounding systems
+themselves, including a reviewer that inserted an unauthorized step into her protocol, a
+reviewer that misstated a commit sequence, and a drafting helper that misread repository
+state, preserving the governing lifecycle in each instance.
+
+She retained control of the scientific interpretation of the project. She maintained the
+conformance map linking source obligations to implementation, tests, and recorded
+status, while enforcing the distinction between computational evidence and mathematical
+proof: a passing test was treated as evidence of conformance on the tested instances,
+never as a proof of the universal theorem. She fixed the project’s technical language
+accordingly: a certified fractional lower bound, never an exact block count; no claim
+extending beyond the tested stratum; no pooling of pilot and main-campaign data; and no
+removal of unfavorable results from the record. She ruled the experimental designs
+before measurement, authorized the pilot, examined its diagnostics, revised the scope of
+the main campaign on cost grounds through a dated authority before fixing F7, dated F7,
+executed the campaign to completion, and determined both the release terms and the
+standards governing the truthfulness of this contribution account.
+
+Within this regime, an AI system generated the production implementation and supporting
+infrastructure to the author’s specification and a separate AI system reviewed the
+generated packages and independently recomputed oracles and campaign results. Every
+resulting artifact was nevertheless admitted only through her acceptance: against her
+theorem, under her specification, and at a gate that only she operated.
+
+<!-- END REQUIRED CONTRIBUTION ACCOUNT -->
+
+**Retained test-design and acceptance credit.** The author authored the
+preregistered `TEST_PLAN` obligations and the oracle expectations before the
+corresponding production code, designed the failure-mode catalogue and the
+143 declared fault families, and imposed RED-before-GREEN as a binding gate.
+She personally ran every gate, read every RED and GREEN result, and made every
+acceptance ruling. The Exit Test was not waived after a clean mock: she held
+the required gate even against her own preference. Credit test design,
+execution, interpretation and adjudication distinctly; retain the preregistered
+scope of the 143 fault families rather than relabeling them as 143 test cases.
+
+**Current-state reading of the contribution account.** The account describes
+work across the twenty-two-unit programme; completed-action language refers to
+transitions actually achieved by the current checkpoint. At this revision,
+Unit 22 Phase A R2 is complete and Phase B is still a reviewer proposal. The
+phrase "Across all twenty-two units" does not record completion of pending
+Unit 22 authorities, oracles, gates, release checks or closure. In the eventual
+README, express the achieved extent at its freeze point using the actual
+record. Likewise, "her Mac remained the sole execution environment" identifies
+the authoritative build-gate and campaign environment, distinct from assistant
+package-preparation checks and separate reviewer recomputation. This preserves
+the supplied contribution account without promoting preparation into execution.
+
+**Presentation — Phase E, UNVERIFIED.** Retain the author's open rendering
+item for inline `\((U,y)\)` and the corresponding mathematical notation.
+Inspect one actual GitHub render of the candidate contribution text at Phase E
+before final README acceptance; source inspection or a local Markdown render
+is not evidence that the GitHub render passed. Record the candidate identity,
+rendering surface and result. This is a presentation review within the existing
+README review, not a new lifecycle gate. It neither edits the current README
+nor moves the D22-R14/RL15 Phase C exact-byte freeze into Phase E. If the render
+requires a delimiter correction after C, use a reviewed, explicit revision of
+the affected exact references and the existing coordinated E metadata/pin
+process; never silently alter a frozen README or substitute a digest. No public
+upload or repository visibility change is authorized by this presentation item.
+
+**Contribution-review basis and scope.** Use the author's current contribution
+account and the actual source, authority, test-plan, commit, audit and campaign
+records for their respective claims. Keep the 214-commit pre-build foundation
+and its independently authored checker distinct from the production repository's
+implementation history. The earlier six-module and twelve-module production
+handwriting formulations are superseded by this account; preserve prior review
+packages as historical records rather than importing their wording as current
+requirements. Reviewers identify what each available artifact corroborates and
+what is stated in the author's account. Inherited-method citations and accurate
+provider provenance remain intact. Use "the author" narratively, with the actual
+name retained for copyright, citation and scholarly attribution. This remains
+an existing contribution/source review: it adds no authorship gate, historical
+replay, private-note inspection or historical-commit rewrite.
+
+### D22-R6. Mathematical, verification and publication-status language
+
+README review against section 0 must distinguish exact computation of the
+modified set-pair density under the active hypothesis from its application-level
+interpretation as a certified fractional lower bound. Retain compact witnesses,
+raw-pair semantics and the Empty case. Never call the output an exact integral
+block count, an integral colouring or a deployable schedule.
+
+Keep theorem statements/hypotheses, finite software checks and empirical timing
+separate. C0 acceptance is admissibility and literal attainment; global optimality
+is not certified by attainment alone. Separate reference comparisons and the
+mathematical correctness argument supply different evidence. A test count is
+not a proof of universal correctness or strong polynomiality.
+
+Identify the exact public manuscript versions underlying theorem claims, with
+verified title/author/identifier/status and a private hash-bound crosswalk to
+the governing source where appropriate. The pinned private mathematical source
+is not committed or copied into release artifacts. No inferred peer review,
+acceptance, publication priority or endorsement. Missing public-source evidence
+is reported as unresolved; it cannot be replaced by a plausible citation.
+
+### D22-R7. Experimental reporting and reproduction cost
+
+Present the original `unit21-v1` study before the irregular follow-up. Preserve
+the follow-up's design history and the September 26 cost-based scope revision,
+separately from F7 of September 27, 2026. Main performance observations concern
+the frozen 36-cell deterministic n={6,8,12} stratum; the full 48-cell pilot,
+including n=16 and unfavorable observations, remains separately labeled.
+Do not reinterpret finite sample size as a restriction on a source theorem.
+
+Any empirical headline retains the observed metric and denominator. H5-prime
+support uses the frozen pooled rule, not a cell vote or timing threshold.
+The 303/87/119 eligible outcomes, 24/9/3 cell-median signs and the three positive
+cells stay visible in the retained conformance/evidence; marketing text may not
+turn support into universal acceleration or an isolated causal look-ahead claim.
+No new H3-prime slope, route verdict or adjusted benchmark is produced here.
+
+Distinguish small ordinary usage, regression, reading/checking retained results,
+and optional fresh experimental re-execution. The full irregular `--all`
+workload is 720 recipes, both routes, 1,440 warmups plus 4,320 measured calls,
+with the original fresh-root-only/no-timeout behavior. It is optional for users,
+not a release acceptance rerun. Do not present 31 or 33 hours as measured total
+runtime without a matching elapsed-time record: warmup timings are null, and
+summed measured solve intervals exclude other work. Hardware-dependent planning
+or author-reported approximations must be labeled and sourced as such.
+
+### D22-R8. Complete inventory and retained-evidence conservation
+
+Inventory the exact candidate source tree and each distribution independently.
+Record path, object type, mode, byte length and SHA-256, with canonical path
+order and duplicate rejection; bind the report to the artifact hash and source
+snapshot identity. Archive and directory inventories are separate claims.
+Use exact expected membership, not just file counts or successful extraction.
+The 5,170-file baseline is phase-local, not a permanent cap on Unit 22 additions.
+
+Preserve all 1,200 irregular input identities, 1,317 original-study results,
+485 pilot results and 1,449 main results in the canonical repository. Preserve
+all current source, certificate, reference and run fingerprints. A new release
+version identifies distribution metadata, not a rerun or rebinding of the
+historical experiments. Historical snapshots are inert files, not imported
+alternatives. Packaging omission is not permission to modify canonical bytes.
+
+Baseline SHA-256 identities are maintained in a private phase manifest read from
+actual authenticated files at application; no generated example manifest may
+substitute for that Mac record. Recursively inspect embedded archives under R10;
+for example the original-pilot source ZIP is not cleared by scanning its filename.
+
+### D22-R9. Privacy, history, secrets and disposition records
+
+The section 12 scan covers current candidate paths/content, relevant Git history
+and metadata, and candidate archive members. History acquisition is read-only:
+record the ref set and inspected commit/tree/blob/tag identities and scan author/
+committer metadata, messages and historical paths/content. Record any inaccessible
+or omitted history explicitly; a shallow or failed scan is not a complete PASS.
+Do not pretend a local scan authenticates unavailable remote-only content.
+
+Flag credential/private-key candidates, private user or handoff paths, contact
+information, personal names and tool/provider references for explicit disposition.
+A match is a finding, not automatic evidence of a secret and not permission to
+delete it. Retain legitimate author attribution, scientific citations and truthful
+AI/tool provenance. Dispositions bind rule, location and exact content identity;
+no blanket exemption for every occurrence of a name, directory or extension.
+Raw findings may contain sensitive context and remain private; publish only
+reviewed summaries without echoing credentials or private absolute paths.
+
+A scan failure, unreadable object, unsupported encoding/container or resource
+limit leaves affected scope INCOMPLETE. Missing coverage cannot be relabeled
+clean. Tests use only unmistakably synthetic credential examples, never live
+secrets. Scanner output alone cannot guarantee absence of all sensitive material;
+manual review of scope, unclassified findings and content is part of section 12.
+No scan opens, locates or hashes the author's private BUILD/LEARNING files.
+A prohibited note filename found inside the candidate artifact may be rejected
+without making private-note existence elsewhere a gate condition.
+
+### D22-R10. Release auditor interface and nonmutation
+
+The new `release_audit.py` is an offline, stdlib-only engineering auditor outside
+`exactfrac` and `exactfrac_verify`. Its import has no I/O, command execution,
+project imports, network access, environment change or interpreter-setting change.
+Its owning tests import `release_audit`; its absence provides genuine Phase D
+missing-module RED. No solver module is deleted to manufacture that state.
+
+The public functions are `inspect_tree(root)`, `inspect_archive(path)` and
+`inspect_history(repository)`, each taking an exact `str` naming an absolute
+existing path. Tree/repository roots and archive parents must be real directories;
+the archive itself must be a regular nonexecutable file. A symlink in the accepted
+path or an unsupported root is rejected, not resolved into a different input.
+`inspect_history` may invoke only explicitly enumerated read-only Git commands,
+without shell interpolation, fetch, index refresh/write, object writes or hooks.
+An incorrect public argument raises exact ValueError before activity; violated
+validated dependency promises raise RuntimeError; actual dependency exceptions
+are propagated unchanged. No repair, chmod, deletion, network or installer call.
+
+Each function returns a fresh JSON-compatible record with format
+`exactfrac-release-inspection/1`, kind `tree`, `archive` or `history`, inspected
+subject identities, coverage, sorted inventory and sorted findings. Integer
+counts are exact, never bool; bytes/hashes and safe relative names are preserved.
+`coverage` is `complete` or `incomplete`; inspection outcome is `no-findings`,
+`findings` or `incomplete`, never a public-release authorization or unconditional
+privacy/legal certification. Actual paths and diagnostic context in raw records
+are private. No API returns a final release PASS merely because findings are empty.
+The exact closed record keys and wire examples are fixed independently in Phase C
+under this interface before tests; they may not remove these fields or meanings.
+
+Tree reads never follow symlink entries or open FIFOs/devices/sockets as ordinary
+files. Report such entries and non-UTF-8 paths as unsafe/incomplete as appropriate.
+Archive inspection supports ZIP and tar source distributions, including nested
+supported archives, without writing extracted content into the candidate tree.
+Reject absolute/traversal/backslash/NUL names, duplicate or ambiguous normalized
+names, links, device/FIFO entries and escaping paths. Actual decoded membership
+and actual bytes, not untrusted length fields alone, determine completeness.
+Resource bounds are explicit, recorded inspection parameters fixed in Phase C;
+hitting one gives incomplete coverage, never a silently truncated clean result.
+No user path can be substituted into a shell command or followed outside scope.
+
+This unit does not require a new installed CLI or daemon. Private orchestration
+may call these APIs and save their returned records outside the repository. That
+orchestration is itself reviewed and negative-tested before live use; helpers
+are not run merely because they are packaged. Artifact creation is separate from
+inspection, and inspection never installs or executes inspected source/archive code.
+
+### D22-R11. Independent fixtures, tests and audit independence
+
+Phase C appends versioned release expectations to ORACLE_CATALOG: exact metadata
+reference bytes/digests; standard license; source/wheel profiles; scan rules and
+finite limits; record examples; positive and negative trees/history/archives;
+and scope/publication decision examples. Construct small finite synthetic Git
+histories and archives independently of future release-auditor output. No solver,
+main/pilot invocation or private-note fixture path is needed to derive expectations.
+
+Test the auditor with materialized faults and passing pristine controls before
+and after each fault. Intended semantic, membership, provenance and coverage
+errors must reach their registered guard; syntax/import failures are not credited
+as their kills. Include coherent metadata/table/report alterations with updated
+hashes so a stale hash is not the only protection. Separately implement the
+artifact inventory/report cross-check; the release producer must not be the sole
+oracle for its own output. Record case count, explicit review types and executed
+controls separately; no presumed count or "all cases" claim from a list of IDs.
+
+The completed 21B campaign audit remains closed. Authenticate its retained
+records; do not regenerate inputs, reenumerate optima, retime experiments or
+replay the 143-family lifecycle simply to perform release inspection.
+
+### D22-R12. Private distribution artifacts and clean-install evidence
+
+Prepare a versioned source distribution and wheel from the exact authorized
+candidate in private fresh build directories. `MANIFEST.in` explicitly includes
+the source-validation profile: the two package trees, unchanged owning tests and
+needed fixtures/docs, all existing instance/result evidence, the release auditor,
+README, CITATION, LICENSE and packaging metadata. It does not include .git,
+virtual environments, caches, build/dist leftovers, private handoffs/notes or
+the private governing manuscript. Preserve legitimate reference files required
+by the full suite; do not omit them to make an inventory look cleaner.
+
+The wheel contains only the existing solver/verifier packages and declared build/
+license metadata; it is not advertised as containing the full research corpus or
+auditor. Independently enumerate both archive profiles, generated metadata and
+license notices. Bind builds to source-manifest and interpreter/tool identities.
+Byte-for-byte rebuild reproducibility is not assumed from one successful build;
+compare content and separately record any nondeterministic archive metadata.
+No release tag, external upload or index registration is created by building.
+
+In fresh environments outside the checkout, install the candidate wheel and
+exercise the actual public solver/verifier entry points on predeclared tiny
+examples. Verify imports originate from that installed artifact, not editable
+installs, PYTHONPATH or a repository directory. These are bounded correctness
+smokes, not new benchmarks. The source distribution must separately support the
+full applicable tests from its exact extracted content under R13. Record any
+metadata or membership incompatibility; never silently change closed code/tests.
+
+A candidate containing unresolved sensitive data is not cleared for publication.
+If privacy-safe full source/reproduction packaging requires omitting or changing
+frozen material, record the conflict and obtain a separately scoped authorization;
+do not weaken the source-distribution validation or rewrite historical evidence.
+The canonical private repository remains intact regardless of release profile.
+
+### D22-R13. Minimum and development interpreters; genuine reproduction
+
+Run the full applicable suite, including Unit 22 consumers, on an actual Python
+3.11.x interpreter and on Python 3.14.6 in separately created clean environments.
+Record exact interpreter executable/version, platform, validation/build dependency
+versions and acquisition identities, commands, root and import origins, actual
+collected/passed/error/skip/xfail counts, warnings and complete failure streams.
+The current Phase A 7,032 pass is a development starting result only; it does
+not establish minimum-version compatibility or candidate-wheel correctness.
+
+Keep the authenticated existing .venv unchanged. Use available verified base
+interpreters; if a required interpreter is absent, report the missing requirement
+and obtain any necessary installation authorization. Do not alter global Software
+Update settings or install into system/closed environments. Fresh-environment
+dependency acquisition is scoped and recorded, not an upgrade of the baseline.
+Resolve compatible tooling within the existing declared constraints, then pin
+and preserve actual validation versions. An unavailable dependency is not a test
+PASS or a reason to silently raise requires-python. Actual failures stop the
+transition; source/test/config fixes require separate scoped review.
+
+Run candidate Ruff preflights for every changed Python target before application
+with the repository's authoritative Ruff and correct target filename; no detached
+lint result substitutes for that gate. Run repository Ruff and the unchanged
+applicable regression at the normal B--H checkpoints. Tests and test identities
+are preserved except R14. Carry the authenticated resolved TMPDIR spelling only
+into verification subprocesses, leaving path guards and global settings intact.
+Retain all raw observations; never suppress an inherited warning or skip a
+failing test merely to claim cross-version support. Test counts are observed.
+
+### D22-R14. Confirmed release version and adopted metadata-pin exceptions
+
+The selected release-candidate artifact version is `0.1.0`, confirmed for this
+R2 authority; it is not an already-published release, publication date or claim
+of wider compatibility. The only pyproject edit is
+`version = "0.1.0.dev0"` to `version = "0.1.0"`, preserving every other byte.
+The existing MIT identifier, >=3.11 requirement, build backend, dependency bounds,
+package selection, pytest and Ruff configuration all remain unchanged.
+
+| pyproject image | Bytes | SHA-256 |
+|---|---:|---|
+| Current | 957 | `13d5e442582c14e278f726cc3e5d9fecdff5a0cba224e53313a3a8cfc1a4812b` |
+| Selected candidate | 952 | `8fed90272a28374a421dd48323a81b41b27ee80790d40e6bfa6f57a0b370d256` |
+
+The complete old `tests/test_cli.py` is 99,824 bytes, SHA-256
+`6edf3930b3a5db998aea9a1e769b14b5af5046edd996a8b3e42022ef4d7545f0`.
+Its `_FROZEN_SOURCE_HASHES` dictionary pins README and CITATION as well as
+pyproject. The author has now explicitly adopted all three digest-value
+exceptions below, using the D20-M1/D21B-I2 controlled-exception pattern. This is
+the recorded permission for the README/CITATION exceptions as well as pyproject;
+it is not inferred from the earlier pyproject-only permission:
+
+| Dictionary key | Old digest | Zero-based half-open digest-byte interval |
+|---|---|---|
+| `CITATION.cff` | `8892be71dfb141b10be30b6d0683bfcff9167ac9dff7a8b0d99ea1b47f2fdbae` | [31512,31576) |
+| `README.md` | `05ff99bd562eaed86fe55e7eb2902255dacb4bddcbcb14943b21e2be7b51c09f` | [31697,31761) |
+| `pyproject.toml` | `13d5e442582c14e278f726cc3e5d9fecdff5a0cba224e53313a3a8cfc1a4812b` | [33561,33625) |
+
+Each substitute is the static 64-character lowercase SHA-256 of that file's
+exact reviewed E postimage, never a dynamic digest read by the test. The pyproject
+substitute is the fixed value above. Freeze README/CITATION full postimages and
+the resulting full CLI-test postimage in the independently identified Phase C
+reference supplement before Phase D; report both lengths, full SHA/blob values
+and these three slices. References document expected bytes, not application.
+All 41 dictionary keys remain; the other 38 values, quote style, ordering,
+whitespace, imports, `_CLOSED_PATHS`, tests and assertions are byte-identical.
+Require exact equality outside the three allowed slices, not just AST equivalence.
+A reference byte change after freeze needs a reviewed new revision; no arbitrary
+replacement hash, ignored key, deleted pin or broader exception is permitted.
+
+Keep the old CLI consumer and all three old metadata files unchanged during
+B, C and D. Only the complete E implementation/metadata package substitutes the
+three digest tokens atomically with their corresponding reviewed file changes.
+This narrowly scoped consumer amendment avoids running a knowingly inconsistent
+old metadata/new pin mixture. The new owning release consumer is already frozen
+from D, and no other test byte changes at E. The adopted exceptions do not
+permit application before normal B closure, independent C freeze and D RED;
+missing or changed frozen values stop E rather than bypassing the hash loop.
+
+### D22-R15. Release readiness evidence and noncircular result records
+
+The section 12 conclusion is assembled from separately identified inventory,
+scan/disposition, notices, README/theory/benchmark, artifact build/install and
+interpreter results. The report binds actual input hashes and outcome scope;
+no timestamp, package number, assumed author consent, generated completion marker
+or historical test pass supplies missing evidence. Unresolved/failed/incomplete
+requirements preclude release-readiness PASS but do not invalidate closed 21B
+science. A private-history exclusion can support a separately audited clean
+artifact only when its exact profile and exception are expressly authorized.
+
+`docs/RELEASE.md` records evidence already observed at its review point, not
+its own future commit hash or self-hash. Later staged/committed artifact identities
+and final postcommit audits are private external records bound to that immutable
+candidate; do not edit the report after testing to claim it tested itself.
+Final release metadata contains no fabricated publication date or DOI. New
+metadata does not rewrite pilot/main run-info or old source/version fields.
+
+### D22-R16. Phase sequencing, preservation and controlled failure
+
+A remains closed at the supplied R2 checkpoint. B is review-only until the author
+accepts the complete two-document authority; then apply unstaged, validate,
+stage, commit and close remotely under the existing lifecycle. C independently
+registers expectations before the new owning test or auditor exists. D applies
+only `tests/test_release.py` after repository-context candidate Ruff; require
+exact ModuleNotFoundError for `release_audit`, with the old suite passing when
+that new file is excluded. LICENSE and the future auditor remain absent; the
+inherited README/CITATION/pyproject/CLI test remain byte-exact.
+
+E applies the complete authorized auditor, release documents/metadata and
+coupled CLI-pin amendment only after D and C evidence authenticate. No partial
+metadata/pin installation. Run targeted/full/Ruff, independent release checks,
+clean-environment and bounded install validations and required conservation.
+F's source/import/nonmutation review remains part of E's checkpoint, not a new
+phase. G appends only observed CONFORMANCE scope after genuine GREEN. H stages
+the exact candidate, tests its actual index-tree export with authenticated
+imports, commits that same tree, validates postcommit and closes the private
+remote separately. No step silently creates a public tag or upload.
+
+Every transition authenticates its actual predecessor and all out-of-scope
+files before/after. Preserve failures and prior revisions; never reset, clean,
+restore, overwrite evidence, auto-retry or replay a completed helper. Slow
+validation has no invented timeout. Correct a helper in a separately identified
+package without weakening the production/acceptance contracts. Any environment
+acquisition or compatibility problem is reported explicitly, not concealed by
+an unrelated new test or a different imported installation.
+
+### D22-R17. Publication boundary, private notes and final claim
+
+The canonical repository stays private through Unit 22. No visibility change,
+public repository creation, package-index upload, release upload, external deposit,
+force-push or history rewrite is authorized here. A passing section 12 audit
+establishes only the readiness of its exact reviewed candidate and stated scope.
+A separate explicit author act must identify artifact/version/destination before
+publication. Reconfirm privacy scope if that act changes the artifact or history.
+Preserve section 12's separate clean-public-repository option; do not flip private
+research history to public merely because a source ZIP passed a content scan.
+
+Helpers never alter global Software Update settings. The author's existing
+settings remain author-controlled. Private BUILD/LEARNING notes are delivered
+only after full private remote closure, remain outside the repository and every
+gate, and are saved only by the author. Their prior saved confirmation is not
+reauthenticated by probing the filesystem. Unit 22 closure is not an H3-prime
+paper-analysis verdict, universal software guarantee or a completed public release.
