@@ -2,19 +2,18 @@ cff-version: 1.2.0
 message: "If you use ExactFrac, please cite the software using the metadata in this file."
 title: "ExactFrac"
 type: software
-version: "0.1.0.dev0"
+version: "0.1.0"
 
 authors:
   - family-names: "Fons"
     given-names: "Cherine"
 
 abstract: >-
-  ExactFrac is a research-software development project for an exact,
-  certificate-producing implementation of the compact positive-integer-multiplicity
-  modified set-pair density problem under the active hypothesis f(v) <= d_q(v).
-  The project combines an exact solver architecture with an independent verifier,
-  hand-derived oracle cases, adversarial testing, and independently checkable
-  witnesses.
+  ExactFrac is an exact, certificate-producing implementation of the compact
+  positive-integer-multiplicity modified set-pair density problem under the active
+  condition f(v) <= d_q(v). The project combines a strongly polynomial exact solver
+  architecture with an independent verifier, preregistered oracle expectations,
+  adversarial testing, and independently checkable compact witnesses.
 
 repository-code: "https://github.com/Cherine-Fons/ExactFrac"
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "exactfrac"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Exact certificate-producing algorithms for compact-multiplicity modified set-pair density."
 readme = "README.md"
 requires-python = ">=3.11"

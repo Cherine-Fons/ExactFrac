@@ -2572,3 +2572,214 @@ these orders. No universal correctness or speedup, asymptotic or practical
 frontier, isolated causal look-ahead effect, total-memory bound, verification-
 overhead result, explicit-copy comparison or external-solver claim is added.
 Earlier theorem statuses remain unchanged.
+
+## Unit 22 — observed private release-engineering conformance, October 6, 2026
+
+This append records the implemented and observed engineering scope under DESIGN
+D22-R1--R17 and TEST_PLAN RL1--RL16. It adds no mathematical theorem row and
+changes no earlier row, status, source hypothesis or empirical conclusion.
+Finite tests, release inspections, manual reviews and artifact observations
+are separate forms of evidence. None supplies a universal mathematical proof,
+legal clearance or permission to publish.
+
+### Implemented scope and fixed source boundaries
+
+The standard-library release auditor supplies the registered read-only tree,
+archive and accessible-history inspections. Its owning R6 consumer contains
+54 top-level test functions and collected 188 parametrized cases in the
+reported native GREEN runs. These 188 cases are additional to the 7,032
+inherited cases; each full candidate run therefore collected 7,220 cases.
+Repeated executions do not create additional distinct tests or experiments.
+
+The implemented release scope also includes the standard MIT license, reviewed
+README and citation, source-distribution manifest and evidence report. The
+packaging version is 0.1.0. The pyproject transition changed only its version
+literal; the CLI consumer changed only the three adopted static digest slices
+for README, CITATION and pyproject. The other 38 values, all 41 dictionary keys
+and all other CLI-consumer bytes were preserved. The solver/verifier code,
+mathematical contracts, corpus, retained experiment outputs and executed-source
+fingerprints are unchanged by this unit's release implementation.
+
+| Exact implemented or adopted object | SHA-256 |
+|---|---|
+| `release_audit.py` | `d2a6ee5391292aedcdeb36e2d098956dc56aaf62d77faa212719ea269903c9fa` |
+| R6 `tests/test_release.py` | `87474f5c91943203cc8ae615d91705dc4da8e8b22b76efa56236c779c99220cc` |
+| Current `docs/ORACLE_CATALOG.md` | `f258c45a1b405e89de3e8704dab6bc8d0474126dcad49defe2f2ea0a4df54661` |
+| Adopted and applied notice report `docs/RELEASE.md` | `47ba7161c30ab629b86583bfac42e094a57a61523dd0bcf2f720621bda24f178` |
+| Private 195-row disposition ledger | `6fd5427f3c7734e098df4795d07f72d37c2ffb129ccf6501cfdc7343557e2924` |
+
+These identities name already-existing objects, not a future commit or this
+append's own identity. The private ledger and raw execution records are not
+added to the repository. Their complete bytes and the saved predecessor
+records remain subject to authentication in each later controlled transition.
+
+### Independent references and the tests-first boundary
+
+The consumer authenticates the 30 objects in the committed U22-C-CORR2 namespace
+and its 29-entry reference index. It selects the owned catalogue span, reads
+payloads by marker byte count and digest, decodes base64 payloads, and rejects
+span damage rather than consuming later appendices. Earlier reference versions
+remain preserved as history. The corrected nested-depth constructions, source
+profile, manifest and generated setup.cfg allowance are the adopted references;
+no archive member was removed and no packaging backend was patched to obtain
+acceptance. Provenance-positive test bytes are constructed at run time from
+the registered encoded value, not stored as an added plaintext fixture.
+
+The completed R5-to-R6 consumer transition observed the required direct
+`import release_audit` failure at line 37: ModuleNotFoundError naming
+release_audit, exit 2, one collection error, and zero new cases collected.
+The inherited suite passed with that absent-producer consumer excluded.
+Only the subsequent implemented candidate provides producer-dependent GREEN.
+
+R6 preserves the real invalid-byte filename construction when it succeeds.
+Only an observed EILSEQ construction failure selects a controlled directory
+entry on a real directory; the auditor still executes, and unsafe target reads
+remain prohibited. The non-UTF-8-name case passed in the native E5 candidate
+runs. Their recorded census does not identify which construction route was
+taken, so this entry does not infer the route from the host name or platform.
+
+### Engineering obligations and their evidence
+
+All test references below are in the exact R6 `tests/test_release.py` unless
+a different path is stated. Named tests identify bounded executable checks;
+manual or artifact observations are not replaced by synthetic test fixtures.
+
+| Obligation | Implemented check or separate evidence | Recorded scope |
+|---|---|---|
+| RL1; D22-R1 | Saved baseline, authority, reference and successive application records authenticated by the controlled transitions | Phase A's 7,032-case result remains starting evidence, not a minimum-interpreter or final-artifact verdict. |
+| RL2; D22-R2/R10/R16 | Actual missing-owner RED, followed by the implemented R6 targeted/full runs | Tests-first ordering observed; no conditional import or producer stub supplied the RED. |
+| RL3; D22-R3 | `test_reviewable_copyright_is_reported_and_not_silently_removed`; inspected license identities; adopted bounded source/notice review | Existing MIT notice and mathematical citations retained; no additional notice identified within the adopted review scope. |
+| RL4; D22-R4 | Recorded isolated CFF validation accepted by the author; metadata identities and version cross-checks | Schema/content review is distinct from the exact-byte consumer checks; no new DOI, publication date or public-release claim. |
+| RL5; D22-R5 | Adopted README contribution-account review | Scope and provenance follow the controlling account; the pre-build Exit Test and Unit 21B fault-family scope remain distinguished. |
+| RL6; D22-R6 | Adopted source-status and claim crosswalk review, including the author's recorded recheck | Source/theorem wording is traceable to its authority; a consistency review is not a new proof. |
+| RL7; D22-R7 | Adopted original-study and Unit 21B reporting review | Pilot and main remain separate; no retiming, pooled claim or new H3-prime result. |
+| RL8; D22-R8 | `test_exact_frozen_records_and_repeat_determinism`; `test_tree_records_reconstructed_from_raw_fixture_bytes`; source inventories and conservation | Ordered records and independent reconstruction checked; current-state conservation is separately observed by the application gates. |
+| RL9; D22-R9 | `test_history_frozen_examples_match_independent_loose_objects`; `test_history_uses_only_registered_read_only_git_commands`; actual history inspection and manual dispositions | Accessible-history coverage was complete for the inspected predecessor; no history rewrite or blanket scanner exemption. |
+| RL10; D22-R10 | `test_registered_archive_structural_cases`; `test_tar_unsafe_names_and_types_are_never_extracted`; `test_tree_nonregular_entries_retain_coverage_without_reading_targets`; `test_registered_finite_limit_cases` | Unsafe paths/types, nonregular entries, nested containers and finite resource ceilings are explicitly represented; incomplete coverage cannot become a clean result. |
+| RL11; D22-R10 | `test_fresh_process_import_has_no_io_commands_or_nonstdlib_imports`; `test_native_read_exception_keeps_object_identity`; `test_native_subprocess_exception_keeps_object_identity`; `test_no_filesystem_write_network_or_execution_during_inspection` | Import purity, errors, dependency propagation and nonmutation checked within the registered interface. |
+| RL12; D22-R10/R11/R15 | `test_independent_record_reader_rejects_schema_and_accounting_faults`; `test_coherently_rehashed_false_records_fail_independent_ground_truth`; `test_strict_reference_json_rejects_duplicate_decoded_keys_and_nonfinite_tokens` | Record syntax, accounting and independently derived expectations checked; hashes alone are not the reference oracle. |
+| RL13; D22-R12 | `test_independent_distribution_profile_checker_rejects_false_inventory`; actual E5 sdist/wheel builds, archive checks and installed-wheel smokes | Observations apply to their exact historical source manifest and artifacts; later report-bearing artifacts require their own binding. |
+| RL14; D22-R13 | Actual clean-source runs under Python 3.11.17 and 3.14.6, plus installed-origin observations | Both targeted/full native runs passed at the E5 source identity; relevant later source changes are not silently included in that result. |
+| RL15; D22-R14 | `test_frozen_metadata_pin_transition_and_pyproject_single_literal`; `test_metadata_and_static_pin_mismatches_cannot_be_accepted`; `test_installed_release_metadata_is_the_coupled_frozen_postimage`; `test_static_pin_dictionary_rejects_an_actually_computed_value` | Exactly three static pin substitutions and the single version literal; no broader test or metadata rewrite. |
+| RL16; D22-R15--R17 | `test_review_references_and_report_template_do_not_claim_future_execution`; adopted report and external execution records | Noncircular evidence and publication boundaries retained; final candidate/artifact, H and committed-render obligations remain incomplete. |
+
+### Observed native validation and bounded install evidence
+
+The successful E5 execution used native arm64/macOS 27.0, actual CPython
+3.11.17 and 3.14.6, pytest 9.1.1, and repository Ruff 0.16.5. Locked acquisition
+and separately created environments were outside the canonical checkout;
+the development .venv was conserved. The dependency probes checked the actual
+locked artifacts and installed metadata. The following are execution results,
+not predictions from interpreter version declarations or fixture-only tests.
+
+| Execution context | Targeted release cases | Full source cases |
+|---|---:|---:|
+| E5 external source, Python 3.11.17 | 188 passed | 7,220 passed |
+| E5 external source, Python 3.14.6 | 188 passed | 7,220 passed |
+| E5 applied development candidate | 188 passed | 7,220 passed |
+| E5 populated-report development candidate | 188 passed | 7,220 passed |
+| Subsequent applied R3 report | 188 passed | 7,220 passed |
+| Subsequent applied notice-report R2 | 188 passed | 7,220 passed |
+
+All eight complete E5 census records report no failures, skips, deselections,
+xfails, collection errors or worker-guard errors. The later report gates
+recorded the same targeted/full counts with their exact-roster acceptance
+checks. Their supplied completion excerpts are not substitutes for reading
+the saved full censuses in a subsequent controlled application. Full runs
+retain the inherited parametrization deprecation warning from test_corpus.py;
+that warning was not suppressed. These are repeated validation runs, not new
+benchmark measurements or additional independent problem instances.
+
+E5 built the sdist first and the wheel from a fresh extraction of that exact
+sdist. It ran both registered examples, triangle-nonempty and single-edge-empty,
+under both Standard and Accelerated in each of the two installed-wheel
+interpreter environments, including silent certificate verification and import-
+origin checks. These eight case/route/environment combinations are correctness
+smokes, not performance experiments or a full wheel-contained research suite.
+
+The historical E5 validation artifacts are:
+
+- Source distribution: `952892bd031e5651cc9d2218d4db54f9f9107eb99bc003f299ec9ad14c3f3bc3`.
+- Wheel: `e9853df49bdf0d8d13d2bd92cae2060b9e1744779a619b79c077191bfaca42de`.
+- Source manifest: `e3553ad3c63e1d8b6440e50a19c0290154a425b6a6aa44029e0aa6ab303a6ff0`.
+
+That sdist contains the frozen report template, not the later populated,
+reviewed notice report or this CONFORMANCE append. Its identities and test
+results remain historical and are not relabeled as final report-bearing
+artifact evidence. Byte-identical rebuild reproducibility is not asserted.
+
+### Inspection, manual disposition and notice scope
+
+The E5 bundle records complete coverage and 195 review-level findings: 13 in
+the candidate tree, 162 in accessible history, 17 in the sdist, and three in
+the wheel. The author adopted all 195 full-identity decisions: 93 retained
+for author attribution, 74 for approved contact, 11 for truthful provenance,
+and 17 false positives. The exact private ledger remains unchanged; raw
+sensitive context and named manual-review records are not copied here.
+
+Both subsequent report applications recorded the same 13 complete tree-finding
+records and zero new findings. A retained finding is not an uninspected object,
+and resolved dispositions do not erase original scan results. No result is
+extended automatically to an uninspected new blob, archive or future commit.
+
+The eleven report-entry texts and the bounded distributed-source provenance
+and notice conclusion are adopted. The review identified no additional
+third-party notice within its stated scope; the author supplied the bounded
+known-origin confirmation, with known exceptions requiring identification.
+The standard MIT notice and mathematical citations remain. This is not an
+exclusive handwritten-origin assertion, an applicable-notice waiver or legal
+clearance. The review's stated limits and inherited observations remain intact.
+The contribution account, original-study reporting and Unit 21B interpretation
+are not rewritten by this release-engineering append.
+
+### Preserved corrections and evidence anchors
+
+The original Phase C reference-application failure remains STOP and its
+one-LF separator correction remains a separate accepted transition. The later
+reference corrections fixed depth/sdist membership and the allowed generated
+setup.cfg member without rewriting original objects. The E2 dependency-probe
+STOP and E4 filename-construction STOP remain separately preserved. Their
+reviewed helper and consumer corrections precede successful E5; they are not
+silently replayed, removed or converted into historical successes.
+
+| Saved evidence record | SHA-256 |
+|---|---|
+| Successful E5 application audit | `438debddf88fea9c6471c64c495652056dd5b78cec134163fa7b262ba044ab00` |
+| Successful E5 application checkpoint | `e9228f318599b0e4d1414689e172694709e3662b28954138d927c4844d32ab6b` |
+| Applied R3 report audit | `ab06a3f5a8e5fe39c5a772950df35095d55684c79f7ada93c55772e2d9082960` |
+| Applied R3 report checkpoint | `c3fa5db00a0c62dc63d3821552cc6b015bac059732b2c4ac67f2e50f4c27e4f9` |
+| Applied notice-report R2 audit | `0d491e088e2e68803c32e2304ca6a966d2b4c85b9abd5f737d8feb1eeef87142` |
+| Applied notice-report R2 checkpoint | `3f93902df651e8519edab4ae427c6187d776a3ca6b45af47bb52f99040244a96` |
+| Preserved E2 STOP | `8441e1bfa03359157801008966e2ee291c073bf1e9bb9e10be467b79ef333bfa` |
+| Preserved E4 STOP | `72df7624bd5c8d0a9daea39578d19352b14f0cc85c329ededac3f3032b1b0065` |
+
+These anchors identify already-recorded evidence. This append does not claim
+a new read of the live private records or substitute a displayed digest for
+their authentication. At the latest reported completion, HEAD remained
+`65e9d6289671e670bc41b37983579fde9a925694`, with committed tree
+`db04e8accc701bd53aff74b7ec6fd65d7e0c31a1`, 5,170 tracked files and the
+five intended untracked release/test files; the complete 5,175-file candidate
+remained unstaged. These are phase-local counts, not permanent file limits.
+
+### Remaining lifecycle and non-promotion
+
+Phase G is limited to appending after all 224,956 existing CONFORMANCE bytes.
+Its later application must authenticate the actual completed notice-report
+checkpoint and current state, conserve every out-of-scope file, and record
+fresh targeted/full/Ruff, import and applicable inspection observations with
+this appendix present. No post-append validation result is asserted here.
+
+F's source/import/nonmutation review remains part of E's checkpoint, not a new
+phase. H retains separate exact-candidate staging, index-tree export and
+isolation, same-tree commit, postcommit validation and private remote closure.
+The affected final source-distribution/interpreter evidence must be refreshed
+for the exact report-and-conformance-bearing source; a prior hash or successful
+run does not cover relevant source changes. Final artifact and commit bindings
+are recorded externally under D22-R15, without editing a tested report to
+claim its own future identity or endlessly relabeling older archives.
+
+The eventual committed-README front-page observation remains pending; the
+October 3 candidate Preview is not substituted for it. Readiness remains
+INCOMPLETE until the remaining applicable obligations are actually satisfied.
+No stage, commit, push, new tag, visibility change, publication, campaign replay,
+H3-prime analysis or private-note inspection is authorized by this entry.

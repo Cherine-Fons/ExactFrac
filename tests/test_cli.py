@@ -495,9 +495,9 @@ _CLOSED_PATHS = ('.gitignore',
 
 _FROZEN_SOURCE_HASHES = {
     '.gitignore': '5e8a2bb82c22d2c30a6d918e1f90e0b5d54112621aa45180d8ab2ff2b96f9ed9',
-    'CITATION.cff': '8892be71dfb141b10be30b6d0683bfcff9167ac9dff7a8b0d99ea1b47f2fdbae',
+    'CITATION.cff': '6d93ede309e0f854e42e6698778721d5f2f9ee7aaeca5adbde1ce8c3c51ec3a2',
     'GOVERNING_SHA256SUMS.txt': 'acc833e15e249d01fb8996507c80f9185c4cd49e5ff341960973fe051e4f46dd',
-    'README.md': '05ff99bd562eaed86fe55e7eb2902255dacb4bddcbcb14943b21e2be7b51c09f',
+    'README.md': '957a98c5c7989a3d38512140df80b6033501d606c60203b4ed06d84ff147d3e9',
     'exactfrac/__init__.py': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
     'exactfrac/_telemetry.py': '3be3cae6757db921aacdde7fbae2cb59cfa1b91b73bd9c16c0695a1f620b9cac',
     'exactfrac/branch.py': '584d2f262c94e227f3832563aeceff600c95c6943b0401bd8ef64e3c2a5ef057',
@@ -518,7 +518,7 @@ _FROZEN_SOURCE_HASHES = {
     ),
     'exactfrac_verify/brute.py': 'b31e53a8b16a37ef8827141a78169ffe9b0a84762843a3ad45c89d9344f98bf6',
     'exactfrac_verify/check.py': '5beb9850bf7aeb311178a5f35df1357d8d4a3e801fde5341e2108176bd01f1ad',
-    'pyproject.toml': '13d5e442582c14e278f726cc3e5d9fecdff5a0cba224e53313a3a8cfc1a4812b',
+    'pyproject.toml': '8fed90272a28374a421dd48323a81b41b27ee80790d40e6bfa6f57a0b370d256',
     'tests/_telemetry_source_audit.py': (
         '7d737818adfb193c8335a123b4fdc38735260dd0006c4a0cdb9b5def945e1d77'
     ),
