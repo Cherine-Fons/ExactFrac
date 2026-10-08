@@ -5375,7 +5375,7 @@ initial_path = list(sys.path)
 scope = runpy.run_path(str(root / "tests/test_experiments_irregular.py"),
     run_name="consumer_giant_fresh")
 with tempfile.TemporaryDirectory(prefix="u21b-giant-scripted.") as temporary:
-    observed = scope["_execute_scripted_case"](Path(temporary), "main", giant=True)
+    observed = scope["_execute_scripted_case"](Path(temporary).resolve(), "main", giant=True)
 assert observed["scripted_calls"] == len(scope["_schedule"]("main"))
 assert observed["actual_c0_checks"] == observed["scripted_calls"]
 assert observed["real_solver_calls"] == 0

@@ -2783,3 +2783,127 @@ October 3 candidate Preview is not substituted for it. Readiness remains
 INCOMPLETE until the remaining applicable obligations are actually satisfied.
 No stage, commit, push, new tag, visibility change, publication, campaign replay,
 H3-prime analysis or private-note inspection is authorized by this entry.
+
+## Unit 22 post-closure portability correction — D22-M1 (2026-10-08)
+
+### Scope and recorded application state
+
+D22-M1 in DESIGN and M1-1 through M1-5 in TEST_PLAN govern this bounded
+post-closure correction. Their documentation-only authority commit
+`3025f9bdfde70059c4c4b7e74f5033cf239eb023`, tree
+`15baf135764f5222ff3a3ab7c22cfe8a3ad90421`, was privately remotely closed
+before the manual application. The original release candidate, its closures,
+the stopped authority application and its separately completed permission
+restoration remain historical records; no previous result is overwritten.
+
+On 2026-10-08 the author confirmed the manual insertion of exactly ten ASCII
+bytes, `.resolve()`, at old zero-based offset 260598 in
+`tests/test_experiments_irregular.py`, inside `_GIANT_PROGRAM`. The helper
+subsequently authenticated the complete file and unchanged bytes outside the
+slice. This is byte observation and author confirmation, not keystroke tracking.
+
+| Complete test identity | Before | Observed after |
+|---|---|---|
+| SHA-256 | `1112ba023339b857a7ee912843d1c2fc52ed4d973f525c90001d1db0a0c1fe57` | `65ea3e35bdf9e4406c4356a7b5697cd3cd155516becde9ec82dad308efbbc8e9` |
+| Git blob | `9aa5a6ecfcf2495a7c45e9841c624a72cd29161e` | `19542148642d22f28989089d5f56e2fa85c125f4` |
+| Bytes | 272,656 | 272,666 |
+| LF lines | 5,592 | 5,592 |
+
+The sole changed expression is `Path(temporary).resolve()` in the existing
+`_execute_scripted_case` call. The full-module AST outside that raw-string value,
+the child's substantive assertions and the two existing digit-limit cases
+remain unchanged. The production runner, including `_parents()` and `_lexical()`,
+retains SHA-256
+`61c4c62d95d72c2fb89596f6de09f216064012ea2a526b14fd645fe5b7d71e30`.
+The CLI consumer retains SHA-256
+`f2dc6a084030fba3aff1a2de490dc910c01d267db6860844452c338ac8b10c48`;
+its 41 frozen pins contain no irregular-test pin, and none was changed.
+
+### Observed validation and conformance
+
+The recorded development environment used Python 3.14.6, pytest 9.1.1 and the
+preserved Ruff tool. Repository-context Ruff checked the exact adopted postimage
+via stdin before the manual-edit point. Fresh full-suite executions followed
+the exact edit, then repository Ruff and complete import probes in A and B.
+
+| Obligation | Observed evidence | Scope of result |
+|---|---|---|
+| M1-1; D22-M1a | Full preimage/postimage identities, one exact insertion, source-manifest and worktree-diff checks | Only the adopted ten-byte test correction; no second source edit. |
+| M1-2; D22-M1b | All 5,175 tracked source entries checked against the expected candidate; source-mode map conserved | Runner, other consumers, metadata, corpus and scientific result bytes unchanged. |
+| M1-3; D22-M1c — A | 7,220 collected and passed; 188 release cases within that roster; both `[640]` and `[4300]` cases present | Existing temporary directory supplied with its real-path spelling. |
+| M1-3; D22-M1c — B | 7,220 collected and passed; the same 188 release cases and both digit-limit cases present | Original ordinary-shell default TMPDIR retained through both observed giant subprocess launches. |
+| M1-3 — Ruff, imports, conservation | Pre-application candidate Ruff PASS; post-validation repository Ruff PASS; full-suite import checkpoints and complete post-Ruff imports checked in both environments | Exact corrected worktree and existing index/refs/configuration conserved through validation; saved environment and specified historical evidence conserved. |
+| M1-3 onward; M1-4/M1-5 | This entry reports the completed manual A/B execution only | CONFORMANCE-bearing validation, staging/isolation, correction commit/closure, new distributions/bindings and final readiness review remain subsequent work. |
+
+A supplied the existing temporary directory under `/private/var/folders/...`.
+B retained its original `/var/folders/...` spelling and trailing separator;
+`/var` was observed as a symlink to `private/var`, with both spellings naming
+the same directory. The recorded A/B environments differ only in TMPDIR.
+The full lexical and resolved paths are retained in private execution evidence,
+not abbreviated inputs passed to the tests.
+
+The unchanged validation worker has SHA-256
+`e23649d8d8041b8581baabb38eed12bd4d706083dd1b877c72b9790a73ed7bd7`.
+Its read-only observer records the worker environment and the actual Popen
+arguments/environment for both giant-program launches. Each run records exactly
+two such launches, one per digit limit 640 and 4300. Both B launch records retain
+the default TMPDIR value; no observer or wrapper normalized it into A, rewrote
+the child program or replaced subprocess. Integer-string and recursion limits
+remain unchanged within the recorded checks.
+
+Each complete census contains 7,220 passing setup, call and teardown records,
+with no collection error, exception, guard error, skip, deselection or xfail
+credit. Both runs retain the single inherited PytestRemovedIn10Warning from
+`test_corpus.py`; no warning suppression or unrelated warning repair occurred.
+These are the same 7,220 test cases executed in two environments, not 14,440
+distinct tests, a new benchmark campaign or evidence of universal platform
+compatibility. B preserves the default TMPDIR under the recorded validation
+controls; it is not a claim about every unwrapped shell/plugin configuration.
+
+### Engineering interpretation and saved evidence
+
+The positive fixture creates its temporary directory before passing it to the
+runner. Resolving that argument makes the fixture satisfy the existing real-path
+precondition. The runner's rejection of symlinked ancestors is not weakened.
+This result addresses the two identified digit-limit regression cases in the
+recorded Mac environments; it attributes no unidentified third failure to the
+same cause and changes no mathematical, arithmetic or solver guarantee.
+
+At completion, only the test was modified and unstaged. HEAD and the index
+still identified the authority commit/tree above, divergence was 0 0, and the
+index SHA-256 remained
+`5e205f8e58b57b2c8896be4257a8d978922cb151d686e98b536b84984791f017`.
+The corrected pre-CONFORMANCE source manifest is
+`791bcdf15a27e6f364df2793c1599ee1192c2dd593563c83ea3e7be1d78f0cd2`;
+its worktree-tree projection is
+`5eac94af26ee2af011c7fb6e07186ccdb4aeec33`.
+These identify the tested worktree, not a newly created Git commit or the future
+CONFORMANCE-bearing candidate. The full-index diff was 871 bytes and 13 lines,
+SHA-256 `57b42218e132e12427ae6fd84247bb40d0c4321fe6c1633e3c5ebd788a884b3f`.
+
+| Saved record | SHA-256 |
+|---|---|
+| Authority remote-closure audit | `9c0aeedc35b4eb75d986c2eec0cf89e6b25fb1dfe18e911d886b075f2db87775` |
+| Authority remote-closure checkpoint | `f1be12ecb7abb5d22d424696cbaf0cb44863810878c4d7c4b9d1e2d2fca1538b` |
+| Manual correction A/B audit | `ede2fb9ab92c3e13c826beeae08d8cb1dd3f908cadeeb4e6f737a1cf6e2f32a7` |
+| Manual correction A/B checkpoint | `36657617dd86dc466db99263fb56aa2d60c31df47b4987fa1863aaea244e7973` |
+| A raw full-command stream | `52b4a72aa07c5070717a95e13322c5bf21a132b043d176ced437c1d17317c63f` |
+| B raw full-command stream | `9064f40fb16671b04d02ec4c9bb1a1861559589ffaaf16424084713f07c7f3b2` |
+
+The two uploaded audit/checkpoint files were byte-authenticated and their
+embedded records assessed against the issued helper, adopted source references
+and prior closure. Separate raw streams and complete Mac evidence directories
+were not uploaded in that assessment; their identities above are linked saved
+records, not a claim of independently rereading every original here. Subsequent
+controlled application authenticates the actual preceding evidence in place.
+
+This append preserves all 241,424 preexisting CONFORMANCE bytes as an unchanged
+prefix. It describes observations before this append's own application and
+claims no future post-append validation, staged tree, commit or artifact hash.
+No test correction is reapplied by the documentation transition. The original
+release artifacts/report and all stopped/successful evidence remain unchanged.
+Both new distributions must still be built and validated from the finalized
+corrected tree under D22-M1d; current artifacts are not rebound by this entry.
+Readiness remains INCOMPLETE. Publication requires its separate exact-artifact,
+version and destination authorization. No publication or scientific-campaign
+replay is performed or authorized by this conformance record.
