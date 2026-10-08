@@ -5785,3 +5785,188 @@ only after full private remote closure, remain outside the repository and every
 gate, and are saved only by the author. Their prior saved confirmation is not
 reauthenticated by probing the filesystem. Unit 22 closure is not an H3-prime
 paper-analysis verdict, universal software guarantee or a completed public release.
+
+### D22-M1. Post-closure test-path correction and corrected-source artifact selection
+
+This bounded maintenance authority follows private remote closure of candidate
+`c11d3063c68265a31ee378982bd181b3107136b9`, tree
+`58070430af4fecbc10e41f57437c741948a44582`. That closure and its original
+source/distribution evidence remain historical facts, not operations to repeat.
+This amendment uses D20-M1's exact-preimage, exact-slice and exact-postimage
+control pattern; it does not reuse D20-M1's former CLI-pin permission.
+
+#### D22-M1a. One exact insertion in the closed positive test fixture
+
+The sole test correction is in `tests/test_experiments_irregular.py`, inside
+its `_GIANT_PROGRAM` raw string. At the existing line 5378, replace exactly:
+
+```python
+    observed = scope["_execute_scripted_case"](Path(temporary), "main", giant=True)
+```
+
+with exactly:
+
+```python
+    observed = scope["_execute_scripted_case"](Path(temporary).resolve(), "main", giant=True)
+```
+
+Preserve the four leading spaces and existing LF. No wrapping, reformatting,
+newline conversion, assertion change or second insertion is permitted.
+
+| Complete test identity | Preimage | Required postimage |
+|---|---|---|
+| SHA-256 | `1112ba023339b857a7ee912843d1c2fc52ed4d973f525c90001d1db0a0c1fe57` | `65ea3e35bdf9e4406c4356a7b5697cd3cd155516becde9ec82dad308efbbc8e9` |
+| Git blob | `9aa5a6ecfcf2495a7c45e9841c624a72cd29161e` | `19542148642d22f28989089d5f56e2fa85c125f4` |
+| Bytes | 272,656 | 272,666 |
+| LF lines | 5,592 | 5,592 |
+| Git mode | 100644 | 100644 |
+
+For the complete authenticated old bytes, require:
+
+```text
+new == old[:260598] + b".resolve()" + old[260598:]
+```
+
+The insertion is ten ASCII bytes at zero-based offset 260598; it occupies
+[260598,260608) in the postimage. The offset and line number are locators only.
+The exact old line must be unique and belong to `_GIANT_PROGRAM`; authenticate
+both complete hashes, lengths and blobs and require byte equality outside the
+insertion. AST equality outside that single string value is supplementary,
+never a substitute for byte conservation. Reject any additional difference.
+
+The fixture creates the temporary directory before this call. The correction
+passes that existing directory's resolved spelling to `_execute_scripted_case`.
+It changes neither the test's scheduled work nor its success criteria. The
+identified regression consists of the existing parameter values 640 and 4300
+of `test_fresh_process_scripted_main_giant_native_records_at_unchanged_digit_limit`;
+this authority does not attribute an unidentified third failure to this cause.
+
+#### D22-M1b. Production, consumer and historical boundaries
+
+The production runner `exactfrac/experiments_irregular.py` stays byte-identical
+at SHA-256 `61c4c62d95d72c2fb89596f6de09f216064012ea2a526b14fd645fe5b7d71e30`,
+including `_parents()` and `_lexical()`. Its symlink rejection remains correct
+and unchanged. No production path repair, relaxed guard, digit-limit change,
+solver modification or new arithmetic/tie-breaking rule is authorized.
+
+`tests/test_cli.py` stays byte-identical at SHA-256
+`f2dc6a084030fba3aff1a2de490dc910c01d267db6860844452c338ac8b10c48`.
+Its 41-entry `_FROZEN_SOURCE_HASHES` dictionary does not pin the irregular test;
+no CLI-pin exception is needed or granted for this correction. Its README,
+CITATION and pyproject pins remain intact. The owning release consumer remains
+unchanged. No optional README sentence, metadata/version change, new fixture
+bank, scanner change, corpus change or campaign execution is part of this scope.
+
+The only immediate authority application paths are `docs/DESIGN.md` and
+`docs/TEST_PLAN.md`, each append-only. The test remains at its old hash during
+that documentation-only transition and authority closure. After that authority
+has been reviewed, adopted and closed under the ordinary Phase B sequence,
+the author performs the exact manual insertion at the controlled correction
+application point; a helper authenticates the result rather than silently
+substituting another edit. All unrelated source, tests, metadata and recorded
+experimental inputs/outputs remain frozen. Any real additional consuming
+conflict must be reported and separately ruled, not guessed or bypassed.
+
+#### D22-M1c. Two genuine validation environments
+
+Retain the last recorded development toolchain, Python 3.14.6 / pytest 9.1.1 /
+Ruff 0.16.5, unless a separately recorded and adopted environment change is
+required. Helpers do not upgrade the development environment or alter global
+settings. Use the established real-path TMPDIR condition for documentation-only
+authority validation while the old test is still present; do not turn the known
+pre-correction default-path failure into an invented authority regression.
+
+After the manual edit, validate the corrected candidate in both the gate
+environment (A) and the ordinary-shell default-TMPDIR environment (B), with the
+same recorded interpreter and dependencies. A supplies the existing temporary
+directory's real-path spelling. B retains the actual default macOS TMPDIR
+spelling that crosses `/var` to `/private/var`, including in the fresh child;
+neither the launcher nor a test wrapper may normalize TMPDIR for B. The only
+new normalization is the reviewed expression at the positive fixture call site.
+Record the raw TMPDIR, its resolution and the observed symlink condition;
+a B run whose input is already a real path does not demonstrate this regression.
+
+Require actual collection and passing of the same complete 7,220-case roster,
+including both named digit-limit cases and the 188 release cases, in both
+environments. These counts are expected from the prior census, not fabricated
+results. Record actual setup/call/teardown outcomes, errors, skips, deselections,
+xfails, warnings, return codes, commands, interpreter and import origins. No
+exclusion, xfail credit, warning suppression, environment repair or changed
+integer/recursion limit may conceal a failure. Keep the fresh child's substantive
+assertions and inherited symlink rejection coverage unchanged. Retain failed
+attempts; do not auto-repair or auto-retry.
+
+Repository-context candidate Ruff precedes the manual application point, and
+repository Ruff follows validation under the ordinary controls. The standard
+source/import/nonmutation review, observed-only CONFORMANCE append, exact
+staging, staged-tree isolation, same-tree commit, postcommit verification and
+separately authorized non-force remote closure remain applicable. They use the
+new candidate's identities; the completed original gates are not replayed.
+No missing-module RED, extra numbered unit or new process gate is invented for
+this bounded correction of an existing test.
+
+#### D22-M1d. Finalized corrected tree and new artifact pair
+
+The author selects the finalized corrected source tree, not the original
+candidate, for publication preparation. Preserve both original distributions,
+all original bindings and all stopped/successful evidence unchanged. In
+particular, retain the original sdist SHA-256
+`43c3cddb411814eb85e47eda1790d102c1d9f68282c40db5f0527e4e61712164`
+and wheel SHA-256
+`2d209d30da742f5e135ff60f7fe5406ad63c0753f1e57f9a9e60309d8c8a3118`
+as historical artifacts of the original source identity. No overwrite, deletion,
+retroactive relabeling or rebinding of those bytes is authorized.
+
+After the authorized authority/test/CONFORMANCE work is finalized and the
+correction is closed, identify the actual final commit, Git tree and complete
+source manifest. Build BOTH a new source distribution and a new wheel from
+exports of that same exact tree in fresh separate private build locations.
+The documentation-only authority commit is not the final corrected candidate.
+Keep the selected version 0.1.0 and all packaging configuration unchanged; any
+version or profile change needs a separate exact exception. Even if a rebuilt
+wheel has identical bytes, record its new build execution and provenance rather
+than carrying forward the old build verdict. Compare instead of assuming
+byte-identical rebuilds.
+
+Apply D22-R12/R13 and RL13/RL14 to the new pair: enumerate each complete archive
+and generated metadata, verify source membership and clean import origins,
+run the complete applicable sdist suite on actual Python 3.11.x and Python 3.14.6
+in fresh environments, and perform the predeclared installed-wheel public
+solver/checker smokes. The corrected macOS default-TMPDIR obligation remains
+explicit and is not replaced by successful controlled-environment validation.
+Dependency/interpreter acquisition, if needed, requires its own bounded
+permission; no system or closed-environment upgrade is implied.
+
+MANIFEST includes tests and documentation; their changed bytes must occur in
+the new sdist. The wheel excludes these test/doc trees, but its content and
+metadata still require fresh validation and binding. No optional README edit
+is included. Use new external evidence to bind actual final commit/tree/source,
+build tools, artifact bytes and validation/inspection results. Do not insert
+future artifact hashes or self-hashes into already-tested source documents.
+If source changes after building, the old build cannot be described as a build
+of the later tree; refresh the affected candidate work before selecting a pair.
+
+#### D22-M1e. Readiness, findings and publication
+
+Refresh the applicable source, distribution and new-commit history inspections
+and release-claim reconciliation for the selected corrected candidate. Preserve
+the historical disposition ledger; prior dispositions are not automatic approval
+of new or changed findings, and previous commit-metadata acceptance does not
+approve metadata of future commits. Carry unchanged evidence forward only with
+its explicit input identities and scope. Do not rerun scientific campaigns.
+The existing release report remains a historical reviewed report; current
+readiness is reconciled through new external bindings and review, not a
+self-referential rewrite of that report or its old findings.
+
+The author's completed README observation applies to the unchanged README
+identity; it is not a claim about future edits or a retroactive change to the
+old closure checkpoint. Private notes are outside all helpers and gates. The
+lifting of closure-specific operational holds does not permit mutation of
+historical evidence or automatic package execution. Every new execution follows
+review, explicit adoption and controlled placement/execution; Downloads is the
+arrival location, not the permanent execution home.
+
+Readiness remains INCOMPLETE until the corrected-source, artifact and final
+readiness obligations are satisfied and reviewed. Publication remains a
+separate explicit author act naming exact artifact(s), version and destination.
+This authority itself performs no test edit, build, remote action or publication.

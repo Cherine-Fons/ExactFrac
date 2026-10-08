@@ -5900,3 +5900,125 @@ LEARNING note entries in order and wait for the author's saved confirmation.
 No helper inspects them. Their saved state is not evidence of a release audit,
 and Unit 22 closure does not silently begin H3-prime paper analysis or publish
 any software, archive or manuscript.
+
+### Unit 22 post-closure amendment obligations — D22-M1
+
+This append applies the existing controlled authority/correction/conformance/
+closure and release-validation lifecycle to D22-M1. It does not relabel the
+completed original candidate, replay a completed helper, create a new unit,
+or grant publication permission. The original §52/§53 text remains unchanged;
+D22-M1 is the exact, bounded additional test-file exception to its frozen-test
+boundary, not a generalized permission to update tests.
+
+#### M1-1 — exact source exception and phase-local file scope
+
+Authenticate the original closed commit, tree, complete source manifest and
+saved remote-closure records. The immediate authority patch appends only
+DESIGN and TEST_PLAN; require every byte of both existing documents as an
+unchanged prefix and all other files at their original identities. In
+particular, the irregular test stays at
+`1112ba023339b857a7ee912843d1c2fc52ed4d973f525c90001d1db0a0c1fe57`
+through authority application and closure. Validate the documentation-only
+candidate in the established real-path gate environment before using the
+new exception. Do not replay the old §5 or old commit/closure entrypoints.
+
+At the later controlled author-edit point, require the unique D22-M1a old
+line inside `_GIANT_PROGRAM`, a ten-byte `.resolve()` insertion at old byte
+offset 260598 and no other change. Verify the 272,656-byte old file and
+272,666-byte new file, both 5,592 LF lines, complete SHA/blob pairs, Git mode
+100644 and equality outside the slice. Require the resulting SHA-256
+`65ea3e35bdf9e4406c4356a7b5697cd3cd155516becde9ec82dad308efbbc8e9`.
+Supplement with full-module AST agreement outside `_GIANT_PROGRAM` and unchanged
+substantive fresh-child assertions. Reject wrong site, extra byte, duplicate
+insertion, changed assertion, altered newline or weakened guard. A reference
+postimage is not an applied change or a passing execution.
+
+#### M1-2 — frozen runner, pins and existing test semantics
+
+Require the entire production runner at
+`61c4c62d95d72c2fb89596f6de09f216064012ea2a526b14fd645fe5b7d71e30`,
+and the complete CLI test at
+`f2dc6a084030fba3aff1a2de490dc910c01d267db6860844452c338ac8b10c48`.
+The CLI dictionary has 41 entries and no irregular-test pin; no entry is added,
+removed, changed or ignored. Preserve the release consumer, all metadata,
+README, packaging configuration, other test modules, source and archived
+science. No third failing case or wider platform guarantee is inferred from
+the two identified digit-limit cases. Keep negative symlink tests and the
+runner's rejection behavior intact.
+
+#### M1-3 — changed-candidate validation in A and B
+
+In A, use the recorded real-path TMPDIR gate environment. In B, run from the
+ordinary Mac shell with its unmodified default symlink-crossing TMPDIR and
+preserve that value into the fresh child. Use the same authenticated toolchain;
+record any actual toolchain drift and stop for its disposition rather than
+silently substituting tools. No subprocess wrapper may turn B into A.
+
+Record lexical and resolved temporary paths and establish the B symlink
+condition. Require a full 7,220-case collection/pass roster in each environment,
+with complete per-phase reports and no skipped/deselected/xfail credit. Require
+both existing `[640]` and `[4300]` nodes and the 188 release cases within the
+full roster. Separately run/record any ordinary targeted selection using its
+actual observed count, never adding subset counts to the full total. Retain
+warnings, raw outputs, failures, return codes and authenticated import roots.
+A passing A run alone cannot satisfy B. No exact runtime is promised and no
+arbitrary execution timeout or new scientific experiment is introduced.
+
+Run repository-context candidate Ruff before the author edit and repository
+Ruff after validation. Preserve outside-scope bytes, modes, index and saved
+evidence before/after the relevant steps. Append only actually observed results
+to CONFORMANCE after GREEN; the old Unit 21B/22 rows remain historical. Stage
+the exact candidate, test the actual staged-tree export, commit that tree,
+perform the ordinary postcommit checks, and close that exact correction commit
+remotely only after separate authorization. Applicable A/B evidence is bound
+to its exact source inputs and refreshed when those inputs change; a controlled
+temporary-directory run cannot replace the promised ordinary-shell observation.
+
+#### M1-4 — rebuild BOTH distributions from the final corrected tree
+
+Do not begin accepted candidate builds from the authority-only commit or from
+an unstaged working copy. After correction closure, identify the selected final
+commit/tree/source manifest and produce a fresh sdist and wheel from that same
+Git tree, preserving all source bytes and the original artifact pair. Use
+new separate private output/evidence locations even when distribution filenames
+are unchanged. Neither an old artifact nor its old build record is overwritten.
+
+Under existing RL13/RL14, independently validate both member profiles, mapped
+source bytes, generated metadata and notices. Require actual fresh sdist
+full-suite runs on Python 3.11.x and 3.14.6 and installed-wheel public-interface
+smokes with authenticated installed origins. Preserve the corrected test's
+A/B portability evidence; add the relevant default-TMPDIR sdist check to the
+reviewed new-artifact execution specification rather than normalizing its
+input away. Record dependency versions and any authorized acquisition. A
+same-hash wheel is permitted only as an observed fresh-build result, not an
+assumed inherited success. No replay of pilot/main performance campaigns.
+
+Bind both new artifacts externally to the same selected source tree, actual
+build/validation environments and results. The final source identity remains
+unknown until finalization; do not invent future commits/hashes or edit source
+after building to insert them. A later relevant source change requires the
+affected builds/validation and bindings to be refreshed for the newly selected
+candidate. Preserve the old report and bindings as records of their old scope.
+
+#### M1-5 — final review, carry-forward and authorization boundaries
+
+Refresh exact-candidate source/artifact/history inspections, new commit metadata
+review and affected claim checks. Compare findings to the historical ledger
+without claiming that its 195 old dispositions automatically authorize new
+findings. Keep independent oracle expectations and scientific results unchanged;
+carry them forward only with authenticated identities and stated scope.
+
+The original README observation is author evidence for its unchanged SHA-256
+`957a98c5c7989a3d38512140df80b6033501d606c60203b4ed06d84ff147d3e9`.
+Do not overwrite the old closure's pending-observation field or infer a new
+observation date. The author's private-notes confirmation is not a filesystem
+or release check; helpers must not inspect those notes.
+
+Final readiness review reconciles the corrected closed source, both rebuilt
+artifacts, new external bindings, dispositions, unchanged/updated evidence
+scope and actual observations. Readiness stays INCOMPLETE until that review
+is satisfied. Publication still requires its own explicit artifact/version/
+destination authorization; no build, successful test, closure or adopted
+maintenance authority grants it. Permanent placement precedes any later
+helper execution; nothing is inserted into authenticated historical package
+or evidence directories. Preserve all failures; no auto-retry or rollback.
